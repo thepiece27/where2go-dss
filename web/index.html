@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vietnam POI Explorer</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">Vietnam POI Explorer</p>
+            <h1>Dữ liệu điểm đến</h1>
+          </div>
+          <button id="resetFilters" class="icon-button" title="Reset filters" aria-label="Reset filters">↻</button>
+        </header>
+
+        <section class="stats-grid" aria-label="Dataset summary">
+          <div>
+            <span id="totalCount">0</span>
+            <label>Tổng POI</label>
+          </div>
+          <div>
+            <span id="visibleCount">0</span>
+            <label>Đang hiển thị</label>
+          </div>
+          <div>
+            <span id="avgRating">0.0</span>
+            <label>Rating TB</label>
+          </div>
+        </section>
+
+        <section class="filters" aria-label="Filters">
+          <label>
+            <span>Tìm kiếm</span>
+            <input id="searchInput" type="search" placeholder="Tên, mô tả, từ khóa..." autocomplete="off" />
+          </label>
+
+          <div class="filter-row">
+            <label>
+              <span>Tỉnh/Thành</span>
+              <select id="locationFilter"></select>
+            </label>
+            <label>
+              <span>Loại</span>
+              <select id="typeFilter"></select>
+            </label>
+          </div>
+
+          <div class="filter-row">
+            <label>
+              <span>Rating tối thiểu</span>
+              <input id="ratingFilter" type="range" min="0" max="5" step="0.1" value="0" />
+            </label>
+            <label>
+              <span>Sắp xếp</span>
+              <select id="sortSelect">
+                <option value="quality">Quality</option>
+                <option value="reviews">Reviews</option>
+                <option value="rating">Rating</option>
+                <option value="name">Tên A-Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <label>
+              <input id="hasReviews" type="checkbox" />
+              <span>Có review</span>
+            </label>
+            <label>
+              <input id="hasHours" type="checkbox" />
+              <span>Có giờ mở cửa</span>
+            </label>
+          </div>
+        </section>
+
+        <section id="poiList" class="poi-list" aria-label="POI list"></section>
+      </aside>
+
+      <section class="map-panel">
+        <div id="map"></div>
+        <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
