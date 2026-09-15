@@ -2,7 +2,6 @@ const state = {
   pois: [],
   filtered: [],
   selectedId: null,
-  markers: new Map(),
 };
 
 const els = {
@@ -162,7 +161,6 @@ function markerIcon(poi) {
 
 function renderMap() {
   markerLayer.clearLayers();
-  state.markers.clear();
 
   const visible = state.filtered.slice(0, 650);
   const bounds = [];
@@ -170,7 +168,6 @@ function renderMap() {
     const marker = L.marker([poi.lat, poi.lng], { icon: markerIcon(poi), title: poi.name });
     marker.on("click", () => selectPoi(poi.id, true));
     marker.addTo(markerLayer);
-    state.markers.set(poi.id, marker);
     bounds.push([poi.lat, poi.lng]);
   });
 
@@ -211,10 +208,6 @@ function selectPoi(id, pan = false) {
   renderDetail(poi);
   renderList();
 
-  const marker = state.markers.get(id);
-  if (marker) {
-    marker.openPopup();
-  }
   if (pan && poi) {
     map.setView([poi.lat, poi.lng], Math.max(map.getZoom(), 12), { animate: true });
   }

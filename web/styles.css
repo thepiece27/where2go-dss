@@ -7,7 +7,6 @@
   --wash: #f5f7fa;
   --accent: #0f766e;
   --accent-2: #b45309;
-  --danger: #b91c1c;
   --shadow: 0 12px 30px rgba(24, 32, 41, 0.12);
 }
 
@@ -163,7 +162,6 @@ input[type="range"] {
 
 .toggle-row label {
   display: inline-flex;
-  grid-template-columns: auto auto;
   align-items: center;
   gap: 8px;
 }

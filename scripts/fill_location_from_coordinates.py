@@ -174,18 +174,6 @@ def point_in_ring(lng, lat, ring):
     return inside
 
 
-def point_in_polygon(lng, lat, polygon):
-    outer = polygon[0]
-    if not bbox_contains(ring_bbox(outer), lng, lat):
-        return False
-    if not point_in_ring(lng, lat, outer):
-        return False
-    for hole in polygon[1:]:
-        if bbox_contains(ring_bbox(hole), lng, lat) and point_in_ring(lng, lat, hole):
-            return False
-    return True
-
-
 def prepare_geometry(geometry):
     prepared = []
     for polygon in iter_rings(geometry):
@@ -224,44 +212,6 @@ def point_in_prepared_polygon(lng, lat, prepared_polygon):
     return True
 
 
-def point_to_segment_km(lat, lng, lat1, lng1, lat2, lng2):
-    km_per_lat = 110.574
-    km_per_lng = 111.320 * math.cos(math.radians(lat))
-    x = lng * km_per_lng
-    y = lat * km_per_lat
-    x1 = lng1 * km_per_lng
-    y1 = lat1 * km_per_lat
-    x2 = lng2 * km_per_lng
-    y2 = lat2 * km_per_lat
-
-    dx = x2 - x1
-    dy = y2 - y1
-    if dx == 0 and dy == 0:
-        return math.hypot(x - x1, y - y1)
-    t = max(0.0, min(1.0, ((x - x1) * dx + (y - y1) * dy) / (dx * dx + dy * dy)))
-    projected_x = x1 + t * dx
-    projected_y = y1 + t * dy
-    return math.hypot(x - projected_x, y - projected_y)
-
-
-def distance_to_ring_km(lat, lng, ring):
-    if len(ring) < 2:
-        return float("inf")
-    best = float("inf")
-    for index in range(len(ring) - 1):
-        lng1, lat1 = ring[index][0], ring[index][1]
-        lng2, lat2 = ring[index + 1][0], ring[index + 1][1]
-        best = min(best, point_to_segment_km(lat, lng, lat1, lng1, lat2, lng2))
-    return best
-
-
-def distance_to_prepared_geometry_km(lat, lng, prepared_polygons):
-    best = float("inf")
-    for polygon in prepared_polygons:
-        best = min(best, distance_to_ring_km(lat, lng, polygon["outer"]))
-    return best
-
-
 def distance_to_bbox_km(lat, lng, bbox):
     min_lng, min_lat, max_lng, max_lat = bbox
     clamped_lng = min(max(lng, min_lng), max_lng)
@@ -274,16 +224,6 @@ def flatten_points(geometry):
         for ring in polygon:
             for lng, lat, *_ in ring:
                 yield lng, lat
-
-
-def centroid_from_geometry(geometry):
-    points = list(flatten_points(geometry))
-    if not points:
-        return None
-    return (
-        sum(point[0] for point in points) / len(points),
-        sum(point[1] for point in points) / len(points),
-    )
 
 
 def haversine_km(lat1, lng1, lat2, lng2):
@@ -318,11 +258,8 @@ def load_provinces(cache_path):
                 provinces.append({
                     "name": properties.get("name"),
                     "full_name": properties.get("fullName") or properties.get("full_name"),
-                    "code": properties.get("code"),
-                    "geometry": geometry,
                     "prepared_polygons": prepare_geometry(geometry),
                     "bbox": (min(lngs), min(lats), max(lngs), max(lats)),
-                    "centroid": centroid_from_geometry(geometry),
                 })
     if not provinces:
         raise ValueError("No province GeoJSON features found in boundary cache.")

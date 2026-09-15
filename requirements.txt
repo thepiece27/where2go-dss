@@ -1,4 +1,7 @@
 pandas
+numpy
+scikit-learn
+ipython
 openpyxl
 requests
 playwright
