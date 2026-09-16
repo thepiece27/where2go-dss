@@ -1,6 +1,6 @@
 # Google Maps Browser Scraper
 
-This project currently keeps only one script in `/scripts`:
+The Google Maps enrichment script is:
 
 ```text
 scripts/scrape_google_maps_browser.py
@@ -27,7 +27,7 @@ When rerun on the current workbook, the scraper writes only these missing fields
 - `maps_destination_type`
 - `maps_review_count`
 
-It may read other values from the page internally, but it does not overwrite existing workbook values for name, coordinates, rating, image, opening hours, URL, status, or error fields.
+It reads the place heading, type, and review label from the page. Rating, image, and opening-hour collection has been removed because these results were discarded. Existing workbook values for coordinates, opening hours, URL, status, and error fields are preserved. Duplicate rating/image columns are still merged before processing.
 
 If `maps_review_count` is missing but `maps_review_label` already exists, the script parses the count from the existing label before opening the browser for that row.
 

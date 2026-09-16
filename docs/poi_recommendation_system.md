@@ -135,14 +135,6 @@ If all values are equal or invalid:
 minmax(x_i) = 0
 ```
 
-### Ramp Up
-
-```text
-ramp_up(x, low, high) = 0, if x <= low
-ramp_up(x, low, high) = 1, if x >= high
-ramp_up(x, low, high) = (x - low) / (high - low), otherwise
-```
-
 ### Ramp Down
 
 ```text
@@ -312,7 +304,6 @@ user_profile = {
     "current_lat": 12.2388,
     "current_lng": 109.1967,
     "max_distance_km": 120,
-    "min_rating": 4.0,
 }
 ```
 

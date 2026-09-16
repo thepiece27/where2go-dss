@@ -21,8 +21,6 @@ DEFAULT_OUTPUT = "data/vietnam_destinations_google_maps_browser.xlsx"
 DEFAULT_NAME_COL = "Tên địa điểm"
 RATING_COLUMN_NAME = "Đánh giá"
 IMAGE_COLUMN_NAME = "Ảnh"
-RATING_RESULT_KEY = "_rating"
-IMAGE_RESULT_KEY = "_image"
 
 RESULT_COLUMNS = [
     "maps_match_status",
@@ -46,7 +44,7 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description=(
             "Open Google Maps in a browser, search destination names from an Excel/CSV "
-            "file, and collect rating, image, place type, and review count."
+            "file, and fill missing place type and review count."
         )
     )
     parser.add_argument("--input", default=DEFAULT_INPUT, help="Input Excel/CSV file.")
@@ -199,21 +197,6 @@ async def wait_for_place_loaded(page, timeout_ms):
     return False
 
 
-async def find_search_input(page, timeout_ms):
-    selectors = [
-        "#searchboxinput",
-        "xpath=(//input)[1]",
-    ]
-    for selector in selectors:
-        locator = page.locator(selector).first
-        try:
-            await locator.wait_for(state="visible", timeout=timeout_ms)
-            return locator
-        except PlaywrightTimeoutError:
-            continue
-    raise PlaywrightTimeoutError("Could not find Google Maps search input")
-
-
 async def click_named_result_if_present(page, destination_name, timeout_ms):
     escaped_name = xpath_literal(destination_name)
     result_link = page.locator(f"xpath=(//a[contains(@aria-label,{escaped_name})])[1]")
@@ -287,97 +270,6 @@ async def collect_review_label(page):
     return None
 
 
-async def collect_rating_label(page):
-    locator = page.locator('xpath=(//span[contains(@aria-label,"stars")][@role="img"])[1]')
-    try:
-        rating = await locator.get_attribute("aria-label", timeout=500)
-    except Exception:
-        rating = None
-    if rating:
-        return " ".join(rating.split())
-    return None
-
-
-async def collect_image_url(page):
-    images = page.locator('xpath=//img[contains(@src,"googleapis") or contains(@src,"lh3")]')
-    try:
-        count = await images.count()
-    except Exception:
-        return None
-
-    for index in range(count):
-        try:
-            src = await images.nth(index).get_attribute("src", timeout=300)
-        except Exception:
-            src = None
-        if src:
-            return src
-    return None
-
-
-async def click_open_hours_if_present(page, timeout_ms=1000):
-    selectors = [
-        'xpath=(//*[@aria-label="Show open hours for the week"])[1]',
-        'xpath=(//span[@aria-label="Show open hours for the week"])[1]',
-        'xpath=(//button[.//span[@aria-label="Show open hours for the week"]])[1]',
-        'xpath=(//span[contains(@aria-label,"Show open hours")])[1]',
-        'xpath=(//*[contains(@aria-label,"Show open hours")])[1]',
-        'xpath=(//*[contains(@aria-label,"Show opening hours")])[1]',
-        'xpath=(//button[.//span[contains(@aria-label,"Show open hours")]])[1]',
-    ]
-
-    deadline = time.monotonic() + (timeout_ms / 1000)
-    while time.monotonic() < deadline:
-        for selector in selectors:
-            locator = page.locator(selector).first
-            try:
-                if await locator.count() > 0:
-                    await locator.click(timeout=500, force=True)
-                    await page.wait_for_timeout(100)
-                    return True
-            except Exception:
-                continue
-        await page.wait_for_timeout(100)
-    return False
-
-
-async def collect_open_hours(page, timeout_ms=500):
-    await click_open_hours_if_present(page)
-
-    selectors = [
-        'xpath=//li[contains(text(),"AM")]',
-        'xpath=//li[contains(text(),"PM")]',
-        'xpath=//li[contains(.,"AM") or contains(.,"PM")]',
-        'xpath=//*[contains(@aria-label,"AM") or contains(@aria-label,"PM")]',
-    ]
-    hours = []
-    deadline = time.monotonic() + (timeout_ms / 1000)
-    while time.monotonic() < deadline:
-        for selector in selectors:
-            rows = page.locator(selector)
-            try:
-                count = await rows.count()
-            except Exception:
-                continue
-
-            for index in range(count):
-                text = await safe_text(rows.nth(index), timeout_ms=100)
-                if not text:
-                    try:
-                        text = await rows.nth(index).get_attribute("aria-label", timeout=100)
-                    except Exception:
-                        text = None
-                if text:
-                    text = " ".join(text.split())
-                if text and text not in hours:
-                    hours.append(text)
-
-        if hours:
-            return hours
-        await page.wait_for_timeout(100)
-
-    return hours
-
 async def scrape_destination(page, destination_name, timeout_ms):
     search_url = f"https://www.google.com/maps/search/{quote_plus(destination_name)}"
     await page.goto(search_url, timeout=timeout_ms, wait_until="domcontentloaded")
@@ -393,23 +285,12 @@ async def scrape_destination(page, destination_name, timeout_ms):
     result_name = await safe_text(page.locator("xpath=(//h1)[1]").first)
     type_candidates = await collect_type_candidates(page)
     review_label = await collect_review_label(page)
-    rating_label = await collect_rating_label(page)
-    image_url = await collect_image_url(page)
-    open_hours = await collect_open_hours(page)
 
     status = "matched" if place_loaded or result_name else "not_found"
     return {
         "maps_match_status": status,
-        "maps_result_name": result_name,
         "maps_destination_type": type_candidates[0] if type_candidates else None,
         "maps_review_count": parse_review_count(review_label),
-        "maps_review_label": review_label,
-        RATING_RESULT_KEY: rating_label,
-        IMAGE_RESULT_KEY: image_url,
-        "maps_first_open_hours": open_hours[0] if open_hours else None,
-        "maps_open_hours": " | ".join(open_hours),
-        "maps_url": page.url,
-        "maps_error": None,
     }
 
 
@@ -443,10 +324,6 @@ def merge_duplicate_target_columns(df, expected_name):
     return primary_column
 
 
-def should_skip(row, rating_column, image_column):
-    return value_present(row.get(rating_column)) and value_present(row.get(image_column))
-
-
 def value_present(value):
     if pd.isna(value):
         return False
@@ -468,8 +345,6 @@ async def scrape_worker(
     df_lock,
     save_state,
     args,
-    rating_column,
-    image_column,
     total,
 ):
     while True:
@@ -482,19 +357,11 @@ async def scrape_worker(
             print(f"[{ordinal}/{total}] Tab {worker_id}: Searching {destination_name}", flush=True)
             try:
                 result = await scrape_destination(page, destination_name, args.timeout_ms)
-            except Exception as error:
+            except Exception:
                 result = {
                     "maps_match_status": "error",
-                    "maps_result_name": None,
                     "maps_destination_type": None,
                     "maps_review_count": None,
-                    "maps_review_label": None,
-                    RATING_RESULT_KEY: None,
-                    IMAGE_RESULT_KEY: None,
-                    "maps_first_open_hours": None,
-                    "maps_open_hours": None,
-                    "maps_url": page.url if not page.is_closed() else None,
-                    "maps_error": str(error),
                 }
 
             async with df_lock:
@@ -543,8 +410,8 @@ async def main_async():
     df = read_table(args.input)
     if args.name_col not in df.columns:
         raise KeyError(f"Input file does not contain required column: {args.name_col}")
-    rating_column = merge_duplicate_target_columns(df, RATING_COLUMN_NAME)
-    image_column = merge_duplicate_target_columns(df, IMAGE_COLUMN_NAME)
+    merge_duplicate_target_columns(df, RATING_COLUMN_NAME)
+    merge_duplicate_target_columns(df, IMAGE_COLUMN_NAME)
 
     for column in RESULT_COLUMNS:
         if column not in df.columns:
@@ -618,8 +485,6 @@ async def main_async():
                         df_lock,
                         save_state,
                         args,
-                        rating_column,
-                        image_column,
                         total,
                     )
                 )
@@ -640,8 +505,7 @@ async def main_async():
                     pass
             await context.close()
 
-    final_saved_path = save_state.get("last_save_path") if "save_state" in locals() else args.output
-    print(f"Saved: {final_saved_path}")
+    print(f"Saved: {save_state['last_save_path']}")
 
 
 def main():
