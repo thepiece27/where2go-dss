@@ -91,9 +91,11 @@ def parse_coordinates_from_maps_url(url):
     if place_matches:
         lat, lng = place_matches[-1]
         return float(lat), float(lng)
-    viewport_match = re.search(r"@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),", text)
-    if viewport_match:
-        return float(viewport_match.group(1)), float(viewport_match.group(2))
+    # An @lat,lng value in a Google Maps *search* URL is usually the
+    # viewport center, not the selected destination.  Using it moves many
+    # POIs to a city/country center or even offshore.  Keep only exact place
+    # coordinates (the !3d...!4d... pair) here and let the caller use the
+    # source spreadsheet coordinates when no exact pair is present.
     return None
 
 
@@ -148,9 +150,19 @@ def main():
 
         location = clean_text(row.get("Vị trí"), "Việt Nam")
         if provinces and valid_vietnam_coordinate(lat, lng):
-            province, _ = province_for_point(float(lat), float(lng), provinces, nearest_max_km=25.0)
+            # Require the coordinate to be inside a Vietnam boundary.  A
+            # nearest-province fallback can label points in Laos, Cambodia,
+            # China, or offshore as Vietnamese when source coordinates are
+            # inaccurate.
+            province, _ = province_for_point(
+                float(lat), float(lng), provinces,
+                use_nearest_fallback=False,
+                nearest_max_km=0,
+            )
             if province and province.get("name"):
                 location = province["name"]
+            elif provinces:
+                continue
 
         rating = ratings[index] if index < len(ratings) else None
         review_count = reviews[index] if index < len(reviews) else None

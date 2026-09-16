@@ -422,7 +422,8 @@ function bindEvents() {
 }
 
 async function init() {
-  const response = await fetch("./data/pois.json");
+  // Always load the latest generated coordinates during local development.
+  const response = await fetch("./data/pois.json", { cache: "no-store" });
   const data = await response.json();
   state.pois = data.pois.map((poi) => ({ ...poi, _search: poiSearchText(poi) }));
   state.interactions = loadInteractions();
