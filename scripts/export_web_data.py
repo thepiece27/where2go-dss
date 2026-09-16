@@ -168,6 +168,7 @@ def main():
 
         pois.append({
             "id": int(row.get("STT")) if value_present(row.get("STT")) else int(index + 1),
+            "poiId": f"POI-{len(pois) + 1:05d}",
             "name": clean_text(row.get("Tên địa điểm"), "Không rõ tên"),
             "resultName": clean_text(row.get("maps_result_name")),
             "location": location,

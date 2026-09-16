@@ -9,27 +9,36 @@ This document explains the current implementation in `poi_recommendation_system.
 - Cleaned recommendation dataset: `data/poi_recommendation_cleaned.xlsx`
 - Sample recommendation result: `data/poi_sample_recommendations.xlsx`
 - Evaluation metrics: `data/poi_evaluation_metrics.xlsx`
+- Synthetic behavior: `data/synthetic_user_behavior.xlsx`
+- Chronological metrics: `data/chronological_metrics.xlsx`, `data/chronological_summary.xlsx`
 - Method reference: `docs/fuzzy_ahp.md`
 
 ## Current Modeling Decision
 
-The final ranking model is **Fuzzy AHP only**.
-
-The notebook still uses TF-IDF, fuzzy string matching, distance, ratings, reviews, image availability, and opening-hour availability. These are not separate final models. They are input criteria for Fuzzy AHP.
-
-Final score:
+The final notebook path is a hybrid recommender:
 
 ```text
-final_score = fuzzy_ahp_norm
+mock behavior
+  -> popularity / association rules / item-based CF
+  -> behavior_score
+  -> behavior/content candidate generation
+  -> distance_score + quality_score + type_context_score
+  -> Fuzzy AHP weights and fuzzy evaluation
+  -> H = A x W
+  -> defuzzification
+  -> TOPSIS
+  -> Top-K next POIs
 ```
 
-If raw defuzzified scores are used directly in another experiment, the equivalent non-normalized form is:
+For a known `user_id`, behavior and TF-IDF content are blended for candidate generation. For a new user, TF-IDF content is used as the candidate model. Both paths use the same contextual Fuzzy AHP + TOPSIS ranker.
+
+The final score is:
 
 ```text
-final_score = fuzzy_ahp_score
+final_score = topsis_score
 ```
 
-In the current notebook, `fuzzy_ahp_score` is normalized first, so `fuzzy_ahp_norm` is used.
+The returned recommendation rows expose `candidate_score`, `behavior_score`, `content_score`, `distance_score`, `quality_score`, `type_context_score`, `contextual_score`, `fuzzy_h_score`, and `topsis_score` for inspection.
 
 ## Data Fields Used
 
@@ -144,13 +153,13 @@ ramp_down(x, low, high) = (high - x) / (high - low), otherwise
 
 ## Phase 5: Criteria Features
 
-The Fuzzy AHP model uses five criteria:
+The final Fuzzy AHP + TOPSIS model uses five criteria:
 
 ```text
-content, type, location, distance, quality
+behavior, content, distance, quality, context
 ```
 
-Content is separated from type and location to avoid double-counting.
+`context` is a transparent combination of type, location, and content matching. The raw type/location scores remain available in the criteria helper for diagnostics.
 
 Content text contains:
 
@@ -240,7 +249,7 @@ quality_score_i =
   + 0.05 * has_hours_i
 ```
 
-## Phase 7: Fuzzy AHP Ranking
+## Phase 7: Fuzzy AHP + TOPSIS Ranking
 
 Full mathematical details are in `docs/fuzzy_ahp.md`.
 
@@ -255,8 +264,9 @@ expert/user pairwise matrix
   -> fuzzy evaluation matrix
   -> H = A x W aggregation
   -> centroid defuzzification
-  -> min-max normalization
-  -> final ranking
+  -> TOPSIS ideal best/worst distances
+  -> closeness coefficient
+  -> Top-K
 ```
 
 Pairwise input:
@@ -271,10 +281,10 @@ EXPERT_PAIRWISE_MATRIX = np.array([
 ])
 ```
 
-Criteria order:
+Final criteria order:
 
 ```text
-content, type, location, distance, quality
+behavior, content, distance, quality, context
 ```
 
 Consistency:
@@ -286,7 +296,7 @@ CR = 0.002964 <= 0.10
 Final score:
 
 ```text
-final_score_i = fuzzy_ahp_norm_i
+final_score_i = topsis_score_i
 ```
 
 ## User Profile Format
@@ -306,15 +316,23 @@ user_profile = {
 }
 ```
 
-Run:
+Cold-start run:
 
 ```python
 recommend_pois(user_profile, top_k=15)
 ```
 
+Known-user run:
+
+```python
+recommend_pois(user_profile, user_id="user_0001", top_k=15)
+```
+
 ## Evaluation And Metrics
 
-The workbook does not contain real user-click or user-rating labels. Evaluation therefore uses pseudo relevance labels generated from held-out user profiles.
+The workbook does not contain real user-click or user-rating labels. The notebook retains the original pseudo-profile diagnostics and adds chronological evaluation over the synthetic event table. For each user, the last event is held out and all earlier events are training history.
+
+The chronological evaluator compares popularity, association rules, item-based CF, behavioral hybrid, and content cold-start models.
 
 The pseudo-relevance oracle is only for evaluation:
 
@@ -409,6 +427,8 @@ Catalog coverage@K:
 catalog_coverage@K = unique_recommended_items_across_profiles / total_items
 ```
 
+Chronological metrics are exported with the exact names `HitRate@K`, `Recall@K`, `MRR@K`, `NDCG@K`, `Coverage@K`, and `Diversity@K`.
+
 ## Outputs
 
 `data/poi_recommendation_cleaned.xlsx` contains cleaned recommendation data.
@@ -420,6 +440,14 @@ catalog_coverage@K = unique_recommended_items_across_profiles / total_items
 - `summary`: averaged metrics by model
 - `by_profile`: metrics per evaluation profile
 - `fuzzy_ahp_weights`: crisp AHP and fuzzy weights from the expert pairwise matrix
+
+Additional files:
+
+- `data/synthetic_user_behavior.xlsx`: `user_id`, `poi_id`, `timestamp`, `action`
+- `data/chronological_metrics.xlsx`: per-user chronological results
+- `data/chronological_summary.xlsx`: model-level averages
+
+The browser explorer uses `web/data/pois.json`. Its recommendation panel stores local demo actions and provides a lightweight client-side version of candidate generation, contextual scoring, and TOPSIS. The notebook remains the full reference implementation for model training and evaluation.
 
 ## Limitations
 

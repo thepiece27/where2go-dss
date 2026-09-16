@@ -3,7 +3,11 @@ const state = {
   filtered: [],
   selectedId: null,
   markers: new Map(),
+  interactions: [],
 };
+
+const ACTION_WEIGHTS = { view: 1, click: 2, save: 3, like: 4, visit: 5 };
+const INTERACTION_STORAGE_KEY = "vietnam-poi-interactions-v1";
 
 const els = {
   totalCount: document.querySelector("#totalCount"),
@@ -19,6 +23,11 @@ const els = {
   resetFilters: document.querySelector("#resetFilters"),
   poiList: document.querySelector("#poiList"),
   detailPanel: document.querySelector("#detailPanel"),
+  userMode: document.querySelector("#userMode"),
+  recommendationMode: document.querySelector("#recommendationMode"),
+  recommendationQuery: document.querySelector("#recommendationQuery"),
+  recommendButton: document.querySelector("#recommendButton"),
+  recommendationList: document.querySelector("#recommendationList"),
 };
 
 const map = L.map("map", { zoomControl: false }).setView([15.9, 106.8], 6);
@@ -83,6 +92,139 @@ function poiSearchText(poi) {
     poi.description,
     ...(poi.keywords || []),
   ].join(" "));
+}
+
+function loadInteractions() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(INTERACTION_STORAGE_KEY) || "[]");
+    return Array.isArray(saved) ? saved : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function saveInteractions() {
+  localStorage.setItem(INTERACTION_STORAGE_KEY, JSON.stringify(state.interactions));
+}
+
+function ensureDemoInteractions() {
+  if (state.interactions.some((event) => event.userId === "user_demo")) return;
+  state.pois.slice(0, 4).forEach((poi, index) => {
+    state.interactions.push({
+      userId: "user_demo",
+      poiId: poi.id,
+      action: index === 0 ? "save" : "click",
+      timestamp: Date.now() - (4 - index) * 86400000,
+    });
+  });
+  saveInteractions();
+}
+
+function userHistory(userId) {
+  if (userId === "new") return [];
+  return state.interactions
+    .filter((event) => event.userId === userId)
+    .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+}
+
+function tokenSet(value) {
+  return new Set(normalize(value).split(/\s+/).filter(Boolean));
+}
+
+function overlapScore(left, right) {
+  const a = tokenSet(left);
+  const b = tokenSet(right);
+  if (!a.size || !b.size) return 0;
+  let shared = 0;
+  a.forEach((token) => { if (b.has(token)) shared += 1; });
+  return shared / Math.max(a.size, b.size);
+}
+
+function minMaxValues(values) {
+  const numeric = values.map((value) => Number(value) || 0);
+  const low = Math.min(...numeric);
+  const high = Math.max(...numeric);
+  if (high === low) return numeric.map(() => 0);
+  return numeric.map((value) => (value - low) / (high - low));
+}
+
+function behaviorScoreMap(userId) {
+  const history = userHistory(userId);
+  const globalCounts = new Map();
+  state.interactions.forEach((event) => {
+    globalCounts.set(event.poiId, (globalCounts.get(event.poiId) || 0) + (ACTION_WEIGHTS[event.action] || 1));
+  });
+  const personalCounts = new Map();
+  history.forEach((event) => {
+    personalCounts.set(event.poiId, (personalCounts.get(event.poiId) || 0) + (ACTION_WEIGHTS[event.action] || 1));
+  });
+  const lastPoi = state.pois.find((poi) => poi.id === history[0]?.poiId);
+  const raw = state.pois.map((poi) => {
+    const personal = personalCounts.get(poi.id) || 0;
+    const global = globalCounts.get(poi.id) || 0;
+    const transition = lastPoi ? Math.max(overlapScore(poi.type, lastPoi.type), overlapScore(poi.keywords.join(" "), lastPoi.keywords.join(" "))) : 0;
+    return 0.60 * personal + 0.15 * global + 0.25 * transition;
+  });
+  const normalized = minMaxValues(raw);
+  return new Map(state.pois.map((poi, index) => [poi.id, normalized[index]]));
+}
+
+function recommendationRows() {
+  const userId = els.userMode.value;
+  const query = els.recommendationQuery.value;
+  const history = userHistory(userId);
+  const historyIds = new Set(history.map((event) => event.poiId));
+  const behavior = behaviorScoreMap(userId);
+  const knownUser = userId !== "new" && history.length > 0;
+  const rawRows = state.pois
+    .filter((poi) => !historyIds.has(poi.id))
+    .map((poi) => {
+      const content = query ? overlapScore(query, poiSearchText(poi)) : poi.quality || 0;
+      const behaviorScore = knownUser ? behavior.get(poi.id) || 0 : 0;
+      const candidateScore = knownUser ? 0.65 * behaviorScore + 0.35 * content : content;
+      const typeContext = query ? overlapScore(query, `${poi.type} ${poi.location}`) : 0.5;
+      const distanceScore = 1;
+      const qualityScore = poi.quality || 0;
+      const contextualScore = 0.35 * behaviorScore + 0.20 * distanceScore + 0.20 * qualityScore + 0.25 * typeContext;
+      return { poi, candidateScore, behaviorScore, contentScore: content, distanceScore, qualityScore, typeContext, contextualScore };
+    })
+    .sort((a, b) => b.candidateScore - a.candidateScore)
+    .slice(0, 80);
+
+  if (!rawRows.length) return [];
+  const criteria = rawRows.map((row) => [row.behaviorScore, row.contentScore, row.distanceScore, row.qualityScore, row.typeContext]);
+  const columnNorms = [0, 1, 2, 3, 4].map((column) => Math.sqrt(criteria.reduce((sum, row) => sum + row[column] ** 2, 0)) || 1);
+  const weights = [0.30, 0.20, 0.15, 0.20, 0.15];
+  const weighted = criteria.map((row) => row.map((value, column) => value / columnNorms[column] * weights[column]));
+  const best = [0, 1, 2, 3, 4].map((column) => Math.max(...weighted.map((row) => row[column])));
+  const worst = [0, 1, 2, 3, 4].map((column) => Math.min(...weighted.map((row) => row[column])));
+  return rawRows.map((row, index) => {
+    const toBest = Math.sqrt(weighted[index].reduce((sum, value, column) => sum + (value - best[column]) ** 2, 0));
+    const toWorst = Math.sqrt(weighted[index].reduce((sum, value, column) => sum + (value - worst[column]) ** 2, 0));
+    return { ...row, topsisScore: toWorst / (toBest + toWorst || 1) };
+  }).sort((a, b) => b.topsisScore - a.topsisScore).slice(0, 8);
+}
+
+function renderRecommendations() {
+  if (!els.recommendationList) return;
+  const knownUser = els.userMode.value !== "new";
+  els.recommendationMode.textContent = knownUser ? "Behavior + context" : "Cold-start";
+  const rows = recommendationRows();
+  els.recommendationList.innerHTML = rows.length ? rows.map((row, index) => `
+    <button class="recommendation-item" data-id="${row.poi.id}" type="button">
+      <span class="recommendation-rank">${index + 1}</span>
+      <span><strong>${escapeHtml(row.poi.name)}</strong><small>${escapeHtml(row.poi.location)} · ${escapeHtml(row.poi.type || "Unknown")}</small></span>
+      <span class="recommendation-score">${(row.topsisScore * 100).toFixed(0)}%</span>
+    </button>
+  `).join("") : `<div class="empty-state">Chưa có gợi ý.</div>`;
+}
+
+function recordInteraction(poiId, action) {
+  const userId = els.userMode?.value;
+  if (!userId || userId === "new") return;
+  state.interactions.push({ userId, poiId, action, timestamp: Date.now() });
+  saveInteractions();
+  renderRecommendations();
 }
 
 function filterPois() {
@@ -200,6 +342,8 @@ function renderDetail(poi) {
       ${(poi.keywords || []).map((keyword) => `<span class="tag">${escapeHtml(keyword)}</span>`).join("")}
     </div>
     <div class="detail-actions">
+      <button class="action-button" data-action="save" type="button">Lưu</button>
+      <button class="action-button" data-action="visit" type="button">Đã ghé</button>
       ${poi.url ? `<a href="${escapeHtml(poi.url)}" target="_blank" rel="noreferrer">Mở Google Maps</a>` : ""}
     </div>
   `;
@@ -259,15 +403,34 @@ function bindEvents() {
     if (!card) return;
     selectPoi(Number(card.dataset.id), true);
   });
+
+  els.recommendButton.addEventListener("click", renderRecommendations);
+  els.userMode.addEventListener("change", renderRecommendations);
+  els.recommendationQuery.addEventListener("input", renderRecommendations);
+  els.recommendationList.addEventListener("click", (event) => {
+    const item = event.target.closest(".recommendation-item");
+    if (!item) return;
+    selectPoi(Number(item.dataset.id), true);
+    recordInteraction(Number(item.dataset.id), "click");
+  });
+  els.detailPanel.addEventListener("click", (event) => {
+    const actionButton = event.target.closest("[data-action]");
+    if (!actionButton) return;
+    const poi = state.pois.find((item) => item.id === state.selectedId);
+    if (poi) recordInteraction(poi.id, actionButton.dataset.action);
+  });
 }
 
 async function init() {
   const response = await fetch("./data/pois.json");
   const data = await response.json();
   state.pois = data.pois.map((poi) => ({ ...poi, _search: poiSearchText(poi) }));
+  state.interactions = loadInteractions();
+  ensureDemoInteractions();
   populateFilters(data.meta);
   bindEvents();
   filterPois();
+  renderRecommendations();
 }
 
 init().catch((error) => {

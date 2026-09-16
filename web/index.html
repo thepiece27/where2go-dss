@@ -79,6 +79,31 @@
           </div>
         </section>
 
+        <section class="recommendation-panel" aria-label="Recommendations">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Next POIs</p>
+              <h2>Gợi ý tiếp theo</h2>
+            </div>
+            <span id="recommendationMode" class="mode-badge">Cold-start</span>
+          </div>
+          <div class="recommendation-controls">
+            <label>
+              <span>Người dùng</span>
+              <select id="userMode">
+                <option value="new">Người dùng mới</option>
+                <option value="user_demo">user_demo</option>
+              </select>
+            </label>
+            <label>
+              <span>Ngữ cảnh</span>
+              <input id="recommendationQuery" type="search" placeholder="biển, văn hóa, ngắm cảnh..." autocomplete="off" />
+            </label>
+          </div>
+          <button id="recommendButton" class="primary-button" type="button">Tạo gợi ý</button>
+          <div id="recommendationList" class="recommendation-list" aria-live="polite"></div>
+        </section>
+
         <section id="poiList" class="poi-list" aria-label="POI list"></section>
       </aside>
 

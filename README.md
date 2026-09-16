@@ -1,6 +1,6 @@
 # Vietnam POI Recommendation System
 
-This project builds a Vietnam point-of-interest dataset, enriches it with Google Maps fields, shows it in a local web explorer, and implements a POI recommendation system with **Fuzzy AHP**.
+This project builds a Vietnam point-of-interest dataset, enriches it with Google Maps fields, shows it in a local web explorer, and implements a hybrid POI recommendation system with behavioral signals, content similarity, contextual reranking, Fuzzy AHP, and TOPSIS.
 
 ## Main Features
 
@@ -9,8 +9,9 @@ This project builds a Vietnam point-of-interest dataset, enriches it with Google
 - Correct province/city names from latitude and longitude.
 - Export POIs to a static web app.
 - Explore POIs on a map with search and filters.
-- Recommend POIs in `poi_recommendation_system.ipynb` using Fuzzy AHP.
-- Evaluate the recommendation model against baseline models.
+- Generate deterministic mock user behavior for development and evaluation.
+- Recommend POIs with popularity, association rules, item-based CF, TF-IDF cold-start, hybrid scoring, contextual reranking, Fuzzy AHP, and TOPSIS.
+- Evaluate chronological holdouts with HitRate@K, Recall@K, MRR@K, NDCG@K, coverage, and diversity.
 
 ## Project Structure
 
@@ -21,6 +22,9 @@ data/
   poi_recommendation_cleaned.xlsx
   poi_sample_recommendations.xlsx
   poi_evaluation_metrics.xlsx
+  synthetic_user_behavior.xlsx
+  chronological_metrics.xlsx
+  chronological_summary.xlsx
   vietnam_provinces_wards_geojson.zip
 
 docs/
@@ -157,6 +161,9 @@ The web app supports:
 - filters by province/city, type, rating, reviews, and opening hours;
 - sorting by quality, review count, rating, or name;
 - detail panel with image and Google Maps link.
+- cold-start recommendations from the search context;
+- an existing `user_demo` mode using saved/clicked/visited POIs;
+- local behavior capture in browser storage and contextual Top-K reranking.
 
 ## Recommendation Notebook
 
@@ -168,24 +175,40 @@ poi_recommendation_system.ipynb
 
 The notebook pipeline:
 
-1. Inspect input data.
-2. Clean rows and coordinates.
-3. Fill missing values.
-4. Normalize rating/review signals.
-5. Build separate criteria: content, type, location, distance, quality.
-6. Compute Fuzzy AHP ranking.
-7. Generate recommendations.
-8. Evaluate against baseline models.
-9. Export cleaned data, sample recommendations, and metrics.
+```text
+Phần A  POI preprocessing + TF-IDF
+   ↓
+Phần B  mock user behavior
+   ↓
+Phần C  popularity / association rules / item-based CF
+   ↓
+Phần D  TF-IDF content model for cold-start
+   ↓
+Phần E  behavior/content hybrid candidate generation
+   ↓
+Phần F  behavior + distance + quality + context scores
+   ↓
+Phần G  Fuzzy AHP → H = A × W → defuzzify → TOPSIS → Top-K
+   ↓
+Phần H  chronological evaluation
+```
 
-## Fuzzy AHP Model
+The production API is:
 
-The final ranking model is **Fuzzy AHP only**.
+```python
+recommend_pois(profile, user_id=None, top_k=20)
+```
+
+With a known user, behavior and content generate the candidate pool. Without a known user, TF-IDF content generates the candidate pool. Both paths then use the same contextual Fuzzy AHP + TOPSIS ranker.
+
+## Fuzzy AHP + TOPSIS Model
+
+Fuzzy AHP computes the criteria weights and fuzzy decision matrix. TOPSIS converts the defuzzified weighted matrix into the final closeness score.
 
 Criteria:
 
 ```text
-content, type, location, distance, quality
+behavior, content, distance, quality, context
 ```
 
 The pairwise comparison matrix is expert/user input. The notebook does not create this matrix from preset weights.
@@ -193,7 +216,7 @@ The pairwise comparison matrix is expert/user input. The notebook does not creat
 Main formula:
 
 ```text
-final_score = fuzzy_ahp_norm
+final_score = topsis_score
 ```
 
 Full math reference:
@@ -210,7 +233,7 @@ docs/poi_recommendation_system.md
 
 ## Evaluation
 
-The dataset does not contain real user-click labels, so evaluation uses pseudo relevance labels from held-out profiles.
+The dataset does not contain real user-click labels. The notebook therefore provides two evaluation views: the original profile-based weak-label diagnostics and a chronological holdout over deterministic mock events. The final recommendation path is evaluated with the chronological split.
 
 Baseline models:
 
@@ -232,6 +255,15 @@ Metrics:
 - type diversity@10
 - catalog coverage@10
 
+Chronological event metrics:
+
+- `HitRate@10`
+- `Recall@10`
+- `MRR@10`
+- `NDCG@10`
+- `Coverage@10`
+- `Diversity@10`
+
 ## Generated Outputs
 
 Recommendation outputs:
@@ -240,6 +272,9 @@ Recommendation outputs:
 data/poi_recommendation_cleaned.xlsx
 data/poi_sample_recommendations.xlsx
 data/poi_evaluation_metrics.xlsx
+data/synthetic_user_behavior.xlsx
+data/chronological_metrics.xlsx
+data/chronological_summary.xlsx
 ```
 
 Web output:

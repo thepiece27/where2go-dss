@@ -2,7 +2,7 @@
 
 This document records the Fuzzy AHP method used by `poi_recommendation_system.ipynb`.
 
-The current project uses **Fuzzy AHP only** for the final ranking.
+The current project uses Fuzzy AHP to weight a contextual hybrid decision matrix, then uses TOPSIS for the final ranking.
 
 ## 1. Decision Hierarchy
 
@@ -13,11 +13,11 @@ Goal
   Recommend the best point of interest (POI)
 
 Criteria
-  C1 = content
-  C2 = type
-  C3 = location
-  C4 = distance
-  C5 = quality
+  C1 = behavior
+  C2 = content
+  C3 = distance
+  C4 = quality
+  C5 = context
 
 Alternatives
   A1, A2, ..., Am = cleaned POIs
@@ -25,11 +25,11 @@ Alternatives
 
 The criteria are intentionally separated:
 
-- `content`: name, description, keywords
-- `type`: Google Maps destination type
-- `location`: city/province/address text
+- `behavior`: popularity, association-rule, and item-CF score for known users; neutral for cold-start users
+- `content`: TF-IDF + cosine score used for candidate generation and semantic preference matching
 - `distance`: distance from the user's current coordinates
 - `quality`: rating, reviews, image availability, opening-hour availability
+- `context`: type, location, and content matching combined into `type_context_score`
 
 This avoids double-counting type/location inside the content criterion.
 
@@ -77,7 +77,7 @@ EXPERT_PAIRWISE_MATRIX = np.array([
 Criteria order:
 
 ```text
-content, type, location, distance, quality
+behavior, content, distance, quality, context
 ```
 
 Important: the notebook does **not** create the pairwise matrix from preset weights. The pairwise matrix is the expert/user input, then AHP computes the weights.
@@ -503,33 +503,41 @@ The fuzzy aggregate score is converted into one crisp score using centroid defuz
 fuzzy_ahp_score_i = (H_i.l + H_i.m + H_i.u) / 3
 ```
 
-This raw score is then normalized across candidate POIs:
+This raw score is retained as the defuzzified weighted matrix input to TOPSIS.
 
 ```text
-fuzzy_ahp_norm_i =
-  (fuzzy_ahp_score_i - min(fuzzy_ahp_score))
-  /
-  (max(fuzzy_ahp_score) - min(fuzzy_ahp_score))
+TOPSIS computes the ideal best and ideal worst vectors:
+
+```text
+D_i+ = distance from the ideal best
+D_i- = distance from the ideal worst
 ```
 
-If all scores are equal or invalid, the notebook returns `0.0` for the normalized score.
+The final closeness coefficient is:
+
+```text
+topsis_score_i = D_i- / (D_i+ + D_i-)
+```
+```
+
+If all scores are equal or invalid, the notebook returns `0.0` for the TOPSIS score.
 
 ## 13. Final Ranking Formula
 
-The final score is exactly:
+The final score is:
 
 ```text
-final_score_i = fuzzy_ahp_norm_i
+final_score_i = topsis_score_i
 ```
 
 POIs are ranked by:
 
 ```text
 final_score descending
-quality_criterion descending as tie-breaker
+contextual_score descending as tie-breaker
 ```
 
-There is no extra post-ranking model in the final implementation.
+The final implementation ranks a behavior/content candidate pool after contextual scoring, rather than ranking the entire catalog with Fuzzy AHP alone.
 
 ## 14. Why This Is Fuzzy AHP
 
@@ -545,7 +553,8 @@ Hierarchy
   -> fuzzy evaluation matrix
   -> aggregation H = A x W
   -> defuzzification
-  -> normalized ranking
+  -> TOPSIS ideal distances
+  -> Top-K ranking
 ```
 
 It is not just a manually weighted sum. The weights are computed from the pairwise comparison matrix, and the ranking uses fuzzy weights plus fuzzy evaluation scores before defuzzification.
@@ -564,7 +573,7 @@ Use this checklist to verify the notebook:
 [x] Builds fuzzy evaluation matrix
 [x] Aggregates with H = A x W
 [x] Defuzzifies fuzzy aggregate scores
-[x] Normalizes defuzzified scores
-[x] Sets final_score = fuzzy_ahp_norm
+[x] Computes TOPSIS ideal best/worst distances
+[x] Sets final_score = topsis_score
 [x] Ranks POIs by final_score
 ```
