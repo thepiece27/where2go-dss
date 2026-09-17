@@ -7,7 +7,7 @@ def metrics(ranked_ids, relevance, k=10):
         raise ValueError("k must be positive")
     if len(ranked_ids) != len(set(ranked_ids)):
         raise ValueError("Duplicate recommendation IDs")
-    if any(not math.isfinite(v) or v < 0 for v in relevance.values()):
+    if any(not isinstance(v, (int, float)) or not math.isfinite(v) or not 0 <= v <= 3 for v in relevance.values()):
         raise ValueError("Invalid relevance labels")
     top = ranked_ids[:k]
     relevant = sum(v > 0 for v in relevance.values())

@@ -33,6 +33,8 @@ class OSRM:
         try:
             response = httpx.get(f"{self.url}/{service}/v1/driving/{coords}", params=params, timeout=20)
             data = response.json()
+            if not isinstance(data, dict):
+                raise ValueError("OSRM response must be an object")
             if data.get("code") not in ("NoRoute", "NoTable", "NoSegment"):
                 response.raise_for_status()
             if data.get("code") not in ("Ok", "NoRoute", "NoTable", "NoSegment"):

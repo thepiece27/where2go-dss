@@ -2,6 +2,7 @@
 import argparse
 import csv
 import hashlib
+import inspect
 import json
 import math
 import os
@@ -207,7 +208,9 @@ def build(args):
     reader = osmium.io.Reader(str(args.pbf), osmium.osm.NOTHING)
     timestamp = reader.header().get("osmosis_replication_timestamp")
     reader.close()
-    cache = ROOT / "data/cache" / (pbf_hash[:16] + boundary_hash[:16] + "-import-v1.json")
+    importer_hash = hashlib.sha256((inspect.getsource(Importer) + inspect.getsource(Boundaries) + inspect.getsource(category)
+                                   + inspect.getsource(parse_week) + digest(ROOT / "where2go/config.py")).encode()).hexdigest()[:12]
+    cache = ROOT / "data/cache" / (pbf_hash[:16] + boundary_hash[:16] + "-" + importer_hash + ".json")
     if cache.exists():
         cached = json.loads(cache.read_text(encoding="utf-8"))
         pois, import_errors = cached["pois"], cached["errors"]

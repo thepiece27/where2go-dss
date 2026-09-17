@@ -29,12 +29,18 @@ def main():
     pois,manifest=load_catalog()
     router=OSRM()
     judgments=json.loads(args.judgments.read_text(encoding="utf-8")) if args.judgments else {}
+    if args.judgments and (not isinstance(judgments, dict) or set(judgments) != {s[0] for s in SCENARIOS}):
+        raise ValueError("File nhãn phải chứa đủ bốn kịch bản và không có tên kịch bản lạ")
     results=[]
     for name,city,lat,lon,interests in SCENARIOS:
         request=ItineraryRequest(start={"latitude":lat,"longitude":lon},date="2026-09-20",location=city,interests=interests)
+        fixed_pool = None
         for method in ("nearby","equal_sum","crisp","fuzzy"):
             result=plan_itinerary(pois,manifest,request,router,method)
             ids=[p["poi_id"] for p in result.get("ranked_candidates",[])]
+            if fixed_pool is not None and set(ids) != fixed_pool:
+                raise ValueError("Candidate pool changed across methods")
+            fixed_pool = set(ids)
             if name in judgments and not set(ids).issubset(judgments[name]):
                 raise ValueError(f"{name}: cần nhãn độc lập cho toàn bộ pool ứng viên; không coi điểm chưa chấm là không liên quan")
             evaluation=metrics(ids,judgments[name]) if name in judgments else None

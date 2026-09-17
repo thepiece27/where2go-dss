@@ -22,6 +22,8 @@ def main():
         assert len(page.evaluate("JSON.parse(localStorage.getItem('where2go-saved-v2'))"))==1
         page.locator("#locationFilter").select_option(label="Đà Nẵng")
         page.wait_for_function("document.querySelector('#detailPanel').textContent.includes('Đà Nẵng')")
+        page.locator("#savePoi").click()
+        assert len(page.evaluate("JSON.parse(localStorage.getItem('where2go-saved-v2'))"))==2
         page.locator("#tripDate").fill("2026-09-20")
         page.locator("#interests").fill("văn hóa, lịch sử")
         page.locator("#planButton").click()
@@ -36,7 +38,26 @@ def main():
         safe=page.evaluate("""() => {const x=imageElement('https://upload.wikimedia.org/a.jpg\\" onerror=\\"alert(1)');return !x.getAttribute('onerror');}""")
         assert safe
         assert not errors,errors
-        print(json.dumps({"status":"PASS","stops":page.locator('#itinerary .stop').count(),"page_errors":errors}))
+        report={"status":"PASS","stops":page.locator('#itinerary .stop').count(),"page_errors":errors,
+                "map_tiles_loaded":page.locator('.leaflet-tile').evaluate_all('(xs)=>xs.filter(x=>x.naturalWidth>0).length'),
+                "map_warning":page.locator('#mapStatus').inner_text()}
+        page.locator("#typeFilter").select_option("museum")
+        page.wait_for_function("state.pois.length>0 && state.pois.every(p=>p.category==='museum')")
+        assert page.locator('#itinerary .stop').count()==0
+        page.locator("#planButton").click()
+        page.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
+        assert page.locator('#itinerary .stop').count()>=2
+        assert page.evaluate("state.pois.every(p=>p.location==='Đà Nẵng')")
+        report['filter_regression']='PASS'
+        # Simulate only loss of external tiles; local route/API remain real.
+        page.route("https://tile.openstreetmap.org/**",lambda route:route.abort())
+        page.reload(wait_until="networkidle")
+        page.wait_for_function("!document.querySelector('#mapStatus').hidden")
+        assert "Không tải được" in page.locator('#mapStatus').inner_text()
+        report['tile_failure_message']='PASS'
+        assert not errors,errors
+        Path("artifacts/web-smoke.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
+        print(json.dumps(report))
         browser.close()
 
 

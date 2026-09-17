@@ -90,6 +90,7 @@ def test_hours():
     assert parse_week("Mo-Fr 08:00-12:00,13:00-17:00; Sa-Su off")[6]==[]
     assert parse_week("Directions | 8 AM–5 PM") is None
     assert parse_week("Mo-Fr 08:00-25:00") is None
+    assert parse_week("Mo--Fr 08:00-17:00") is None
     assert intervals_on("Mo-Su 22:00-02:00", date(2026,9,20))==[(0,120),(1320,1440)]
     assert intervals_on("Mo-Su 08:00-17:00",date(2026,9,2)) is None
     assert intervals_on("24/7",date(2026,9,2))==[(0,1440)]
@@ -125,6 +126,14 @@ def test_wait_and_cap():
 def test_reject_request():
     for override in [dict(end_time="07:00"),dict(start={"latitude":float("nan"),"longitude":105}),dict(categories=["bad"])]:
         with pytest.raises(ValueError): request(**override)
+
+
+def test_invalid_catalog_coordinates_are_excluded():
+    from where2go.catalog import candidates
+    rows=[poi(1,latitude=float("nan")),poi(2,longitude=200),poi(3,latitude=None),poi(4)]
+    pool, counts=candidates(rows,request(),40)
+    assert [p["poi_id"] for p in pool]==["osm:node:4"]
+    assert counts["invalid_coordinates"]==3
 
 
 def test_metrics_missing_relevant():

@@ -39,8 +39,16 @@ def test_live_probe_does_not_hide_offline_and_rejects_bad_geometry(monkeypatch):
     monkeypatch.setattr(httpx, "get", offline)
     with pytest.raises(RoutingUnavailable):
         router.route(COORDS, use_cache=False)
+
+
     bad = deepcopy(route)
     bad["geometry"]["coordinates"] = [[999, 999]]
     monkeypatch.setattr(httpx, "get", lambda *a, **k: mock_response({"code": "Ok", "routes": [bad]}))
     with pytest.raises(RoutingUnavailable):
         router.route(COORDS, use_cache=False)
+
+
+def test_malformed_osrm_payload_is_service_error(monkeypatch):
+    monkeypatch.setattr(httpx,"get",lambda *a,**k:mock_response([]))
+    with pytest.raises(RoutingUnavailable):
+        OSRM(manifest={"pbf_sha256":"fixture"}).table(COORDS)

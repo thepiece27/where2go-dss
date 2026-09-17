@@ -30,6 +30,8 @@ def parse_week(raw):
         chosen = []
         try:
             for group in daytext.split(","):
+                if not re.fullmatch(r"(?:Mo|Tu|We|Th|Fr|Sa|Su)(?:-(?:Mo|Tu|We|Th|Fr|Sa|Su))?", group.strip()):
+                    return None
                 ends = group.strip().split("-")
                 start = DAYS.index(ends[0])
                 end = DAYS.index(ends[-1])

@@ -35,7 +35,12 @@ def filter_pois(pois, location="", categories=(), query=""):
 def candidates(pois, request, limit):
     filtered = filter_pois(pois, request.location, request.categories, request.query)
     near = []
+    invalid_coordinates = 0
     for p in filtered:
+        lat, lon = p.get("latitude"), p.get("longitude")
+        if not all(isinstance(v, (int, float)) and math.isfinite(v) for v in (lat, lon)) or not (-90 <= lat <= 90 and -180 <= lon <= 180):
+            invalid_coordinates += 1
+            continue
         km = haversine((request.start.latitude, request.start.longitude), (p["latitude"], p["longitude"]))
         if km <= request.radius_km:
             near.append(dict(p, straight_distance_km=km))
@@ -47,6 +52,7 @@ def candidates(pois, request, limit):
             if len(chosen) < limit:
                 chosen.setdefault(p["poi_id"], p)
     return list(chosen.values()), {"catalog": len(pois), "hard_filter": len(filtered),
+                                  "invalid_coordinates": invalid_coordinates,
                                   "within_radius": len(near), "shortlist": len(chosen)}
 
 

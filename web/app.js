@@ -106,11 +106,12 @@ function renderPlan(data) {
       node("p",stop.hours_status==="known" ? "Lịch mở cửa có dữ liệu cho ngày chọn" : "Cần kiểm tra giờ mở cửa"));
     panel.append(card);
   }
-  if(data.return_time) panel.append(node("p","Quay về: "+data.return_time+" · Tổng lái xe: "+Math.ceil(data.drive_seconds/60)+" phút"));
+  if(data.return_time) panel.append(node("p","Quay về: "+data.return_time+" · Chặng về: "+Math.ceil(data.legs.at(-1).duration_seconds/60)+" phút · Tổng lái xe: "+Math.ceil(data.drive_seconds/60)+" phút"));
   if(data.ranking) {
     const details=node("details");details.append(node("summary","Vì sao có kết quả này?"));
     details.append(node("p","Fuzzy AHP + TOPSIS · CR="+data.ranking.cr.toFixed(3)+" · Điểm tương đối trong tập ứng viên"));
-    details.append(node("p","Trọng số: "+Object.entries(data.ranking.weights).map(([k,v])=>k+" "+v.toFixed(3)).join(" · ")));
+    const criteriaLabels={preference_match:"Sở thích",drive_time:"Thời gian lái xe",data_confidence:"Độ tin cậy dữ liệu"};
+    details.append(node("p","Trọng số: "+Object.entries(data.ranking.weights).map(([k,v])=>(criteriaLabels[k]||k)+" "+v.toFixed(3)).join(" · ")));
     panel.append(details);
   }
   if(data.geometry && map) {routeLayer=L.geoJSON(data.geometry,{style:{color:"#b45309",weight:5}}).addTo(map);map.fitBounds(routeLayer.getBounds(),{padding:[30,30],animate:false});}

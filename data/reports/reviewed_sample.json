@@ -1,7 +1,7 @@
 {
-  "dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-acdb0b4f",
+  "dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-e118cf0e",
   "routing_version": "1e1d2ec5e5a86240",
-  "checked_at": "2026-09-17T01:26:04.975464+00:00",
+  "checked_at": "2026-09-17T06:06:51.813755+00:00",
   "method": "automated_OSRM_and_assisted_source_review_not_fieldwork",
   "summary": [
     {
@@ -30,6 +30,7 @@
       "hours_raw": "",
       "snap_distance_meters": 8.807199969,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:445345255",
         "reviewed_at": "2026-09-17",
@@ -61,6 +62,7 @@
       "hours_raw": "",
       "snap_distance_meters": 18.349598537,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:relation:16640104",
         "reviewed_at": "2026-09-17",
@@ -92,6 +94,7 @@
       "hours_raw": "",
       "snap_distance_meters": 62.289309184,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:relation:17877970",
         "reviewed_at": "2026-09-17",
@@ -123,6 +126,7 @@
       "hours_raw": "",
       "snap_distance_meters": 57.693958738,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:relation:19179452",
         "reviewed_at": "2026-09-17",
@@ -154,6 +158,7 @@
       "hours_raw": "",
       "snap_distance_meters": 30.429963138,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:relation:21390321",
         "reviewed_at": "2026-09-17",
@@ -185,6 +190,7 @@
       "hours_raw": "",
       "snap_distance_meters": 21.032036064,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1019050231",
         "reviewed_at": "2026-09-17",
@@ -216,6 +222,7 @@
       "hours_raw": "24/7",
       "snap_distance_meters": 36.520439849,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1103182086",
         "reviewed_at": "2026-09-17",
@@ -247,6 +254,7 @@
       "hours_raw": "",
       "snap_distance_meters": 37.324678306,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1118494921",
         "reviewed_at": "2026-09-17",
@@ -278,6 +286,7 @@
       "hours_raw": "",
       "snap_distance_meters": 22.265280372,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1140667038",
         "reviewed_at": "2026-09-17",
@@ -309,6 +318,7 @@
       "hours_raw": "Mo-Su 08:00-11:00,13:00-16:00; Fr off",
       "snap_distance_meters": 2.689559725,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1219524639",
         "reviewed_at": "2026-09-17",
@@ -340,6 +350,7 @@
       "hours_raw": "Mo-Su 08:00-20:00",
       "snap_distance_meters": 75.993068534,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1481550721",
         "reviewed_at": "2026-09-17",
@@ -371,6 +382,7 @@
       "hours_raw": "Mo-Fr 07:00-18:00",
       "snap_distance_meters": 110.215612514,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:178995262",
         "reviewed_at": "2026-09-17",
@@ -402,6 +414,7 @@
       "hours_raw": "",
       "snap_distance_meters": 46.014882209,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:185540946",
         "reviewed_at": "2026-09-17",
@@ -433,6 +446,7 @@
       "hours_raw": "",
       "snap_distance_meters": 30.790656703,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:207178320",
         "reviewed_at": "2026-09-17",
@@ -464,6 +478,7 @@
       "hours_raw": "Tu-Su 08:00-11:30,13:30-17:00",
       "snap_distance_meters": 68.707605859,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:208255133",
         "reviewed_at": "2026-09-17",
@@ -495,6 +510,7 @@
       "hours_raw": "",
       "snap_distance_meters": 63.669003012,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:220302249",
         "reviewed_at": "2026-09-17",
@@ -526,6 +542,7 @@
       "hours_raw": "",
       "snap_distance_meters": 16.319950904,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:28912942",
         "reviewed_at": "2026-09-17",
@@ -557,6 +574,7 @@
       "hours_raw": "Tu-Su 08:30-17:30",
       "snap_distance_meters": 91.817731285,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:339936730",
         "reviewed_at": "2026-09-17",
@@ -593,6 +611,7 @@
       "hours_raw": "Mo-Su 08:00-17:00",
       "snap_distance_meters": 16.435488079,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:340128580",
         "reviewed_at": "2026-09-17",
@@ -629,6 +648,7 @@
       "hours_raw": "Mo off; Tu-Su 08:00-12:00,13:30-17:00",
       "snap_distance_meters": 3.076527116,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:37933256",
         "reviewed_at": "2026-09-17",
@@ -660,6 +680,7 @@
       "hours_raw": "Mo-Su 08:30-17:00",
       "snap_distance_meters": 29.498989585,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:700145152",
         "reviewed_at": "2026-09-17",
@@ -691,6 +712,7 @@
       "hours_raw": "Tu-Su 08:00-11:00, 14:00-17:00",
       "snap_distance_meters": 11.613510491,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:700840711",
         "reviewed_at": "2026-09-17",
@@ -722,6 +744,7 @@
       "hours_raw": "",
       "snap_distance_meters": 38.360432774,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:704134588",
         "reviewed_at": "2026-09-17",
@@ -753,6 +776,7 @@
       "hours_raw": "Mo-Su 08:00-17:00",
       "snap_distance_meters": 17.623691277,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:704147278",
         "reviewed_at": "2026-09-17",
@@ -789,6 +813,7 @@
       "hours_raw": "24/7",
       "snap_distance_meters": 29.696509981,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:879841441",
         "reviewed_at": "2026-09-17",
@@ -820,6 +845,7 @@
       "hours_raw": "",
       "snap_distance_meters": 9.225559782,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:941901613",
         "reviewed_at": "2026-09-17",
@@ -851,6 +877,7 @@
       "hours_raw": "",
       "snap_distance_meters": 28.171284356,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:947089943",
         "reviewed_at": "2026-09-17",
@@ -882,6 +909,7 @@
       "hours_raw": "Mo-Su 08:00-20:00",
       "snap_distance_meters": 15.875596394,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:12344125229",
         "reviewed_at": "2026-09-17",
@@ -913,6 +941,7 @@
       "hours_raw": "",
       "snap_distance_meters": 5.652666714,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:2076855866",
         "reviewed_at": "2026-09-17",
@@ -944,6 +973,7 @@
       "hours_raw": "",
       "snap_distance_meters": 7.239060869,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:2076855954",
         "reviewed_at": "2026-09-17",
@@ -975,6 +1005,7 @@
       "hours_raw": "",
       "snap_distance_meters": 5.289466576,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:2076856032",
         "reviewed_at": "2026-09-17",
@@ -1006,6 +1037,7 @@
       "hours_raw": "",
       "snap_distance_meters": 6.42616707,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:3189923484",
         "reviewed_at": "2026-09-17",
@@ -1037,6 +1069,7 @@
       "hours_raw": "",
       "snap_distance_meters": 9.853749046,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:4279640089",
         "reviewed_at": "2026-09-17",
@@ -1068,6 +1101,7 @@
       "hours_raw": "",
       "snap_distance_meters": 49.749485516,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:4537530289",
         "reviewed_at": "2026-09-17",
@@ -1099,6 +1133,7 @@
       "hours_raw": "Mo-Su 08:30-17:30",
       "snap_distance_meters": 24.366520039,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:5513474821",
         "reviewed_at": "2026-09-17",
@@ -1130,6 +1165,7 @@
       "hours_raw": "",
       "snap_distance_meters": 7.183420232,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:5674096859",
         "reviewed_at": "2026-09-17",
@@ -1161,6 +1197,7 @@
       "hours_raw": "",
       "snap_distance_meters": 17.566266186,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:5817580453",
         "reviewed_at": "2026-09-17",
@@ -1192,6 +1229,7 @@
       "hours_raw": "Mo-Su 07:00-11:00",
       "snap_distance_meters": 3.144342919,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:7127464285",
         "reviewed_at": "2026-09-17",
@@ -1223,6 +1261,7 @@
       "hours_raw": "",
       "snap_distance_meters": 50.640480042,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:7520818185",
         "reviewed_at": "2026-09-17",
@@ -1254,6 +1293,7 @@
       "hours_raw": "",
       "snap_distance_meters": 19.201974274,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:7523625285",
         "reviewed_at": "2026-09-17",
@@ -1285,6 +1325,7 @@
       "hours_raw": "Mo-Su 09:00-17:00",
       "snap_distance_meters": 12.850985943,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:node:8474743417",
         "reviewed_at": "2026-09-17",
@@ -1316,6 +1357,7 @@
       "hours_raw": "",
       "snap_distance_meters": 33.641976366,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1077108382",
         "reviewed_at": "2026-09-17",
@@ -1347,6 +1389,7 @@
       "hours_raw": "",
       "snap_distance_meters": 65.253638617,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:118609193",
         "reviewed_at": "2026-09-17",
@@ -1378,6 +1421,7 @@
       "hours_raw": "",
       "snap_distance_meters": 26.57256928,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:118691767",
         "reviewed_at": "2026-09-17",
@@ -1409,6 +1453,7 @@
       "hours_raw": "",
       "snap_distance_meters": 17.525522653,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1254909519",
         "reviewed_at": "2026-09-17",
@@ -1440,6 +1485,7 @@
       "hours_raw": "Mo-Su 08:00-17:00",
       "snap_distance_meters": 38.685871381,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:1368599361",
         "reviewed_at": "2026-09-17",
@@ -1476,6 +1522,7 @@
       "hours_raw": "Mo-Su 07:30-17:00",
       "snap_distance_meters": 34.017716074,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:302872188",
         "reviewed_at": "2026-09-17",
@@ -1512,6 +1559,7 @@
       "hours_raw": "",
       "snap_distance_meters": 19.490635923,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:303341669",
         "reviewed_at": "2026-09-17",
@@ -1543,6 +1591,7 @@
       "hours_raw": "Mo-Su 07:30-11:30,13:30-17:30",
       "snap_distance_meters": 25.316663244,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:565592419",
         "reviewed_at": "2026-09-17",
@@ -1574,6 +1623,7 @@
       "hours_raw": "",
       "snap_distance_meters": 17.270859566,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:584941415",
         "reviewed_at": "2026-09-17",
@@ -1605,6 +1655,7 @@
       "hours_raw": "",
       "snap_distance_meters": 11.28756371,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:595299310",
         "reviewed_at": "2026-09-17",
@@ -1636,6 +1687,7 @@
       "hours_raw": "Mo-Su 08:00-17:00",
       "snap_distance_meters": 73.846070162,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:595471597",
         "reviewed_at": "2026-09-17",
@@ -1672,6 +1724,7 @@
       "hours_raw": "Mo-Su 06:00-17:00",
       "snap_distance_meters": 26.89014966,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:627379326",
         "reviewed_at": "2026-09-17",
@@ -1703,6 +1756,7 @@
       "hours_raw": "",
       "snap_distance_meters": 34.81037235,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:675604354",
         "reviewed_at": "2026-09-17",
@@ -1734,6 +1788,7 @@
       "hours_raw": "",
       "snap_distance_meters": 38.411731888,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:759913076",
         "reviewed_at": "2026-09-17",
@@ -1765,6 +1820,7 @@
       "hours_raw": "",
       "snap_distance_meters": 8.890695351,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:961973763",
         "reviewed_at": "2026-09-17",
@@ -1796,6 +1852,7 @@
       "hours_raw": "",
       "snap_distance_meters": 17.366852345,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:962129075",
         "reviewed_at": "2026-09-17",
@@ -1827,6 +1884,7 @@
       "hours_raw": "",
       "snap_distance_meters": 51.922464888,
       "round_trip_routable": true,
+      "routing_reason": "passed",
       "source_review": {
         "poi_id": "osm:way:962130353",
         "reviewed_at": "2026-09-17",
