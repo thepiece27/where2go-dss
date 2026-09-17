@@ -1,5 +1,7 @@
 # Prompt triển khai Where2Go DSS: dữ liệu trọng tâm và lịch trình trong ngày
 
+> **Cập nhật 17/09/2026:** Hướng dữ liệu đa nguồn, category ưu tiên, thời lượng riêng và lịch trình 1–5 điểm được thay thế bởi [kế hoạch v2](ke_hoach_nang_cap_du_lieu_va_lich_trinh_v2.md). Tài liệu này giữ để truy vết giai đoạn v1; không dùng các giới hạn cũ để triển khai v2.
+
 **Căn cứ:** [Báo cáo review dự án](bao_cao_review_du_an_where2go_dss.md)  
 **Trọng tâm dữ liệu:** Hà Nội và Đà Nẵng mới, bao gồm địa bàn Quảng Nam trước sáp nhập theo phạm vi đã thống nhất  
 **Mốc dự kiến:** 7 ngày làm việc; nghiệm thu theo kết quả thực tế
