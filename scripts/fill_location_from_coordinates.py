@@ -306,9 +306,7 @@ def parse_coordinates_from_maps_url(url):
         lat, lng = place_matches[-1]
         return float(lat), float(lng)
 
-    viewport_match = re.search(r"@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),", text)
-    if viewport_match:
-        return float(viewport_match.group(1)), float(viewport_match.group(2))
+    # @lat,lng is the viewport, not evidence of an entity's coordinates.
     return None
 
 
@@ -412,8 +410,4 @@ def main():
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as error:
-        print(f"Error: {error}", file=sys.stderr)
-        sys.exit(1)
+    raise SystemExit("Legacy workbook mutation disabled. Use scripts/build_catalog.py; source workbooks remain immutable.")

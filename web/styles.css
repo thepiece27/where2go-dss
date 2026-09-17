@@ -10,6 +10,25 @@
   --shadow: 0 12px 30px rgba(24, 32, 41, 0.12);
 }
 
+.sidebar { overflow-y: auto; }
+.sidebar > * { flex-shrink: 0; }
+.intro, #systemStatus { margin: 0; padding: 8px 22px; font-size: 13px; }
+#systemStatus { color: var(--muted); overflow-wrap: anywhere; }
+.filters { padding: 16px 22px; border-top: 1px solid var(--line); }
+.filters label { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+.filters input, .filters select { width: 100%; min-height: 38px; padding: 6px; }
+.filters h2 { font-size: 18px; margin-top: 0; }
+.filters p { font-size: 13px; line-height: 1.5; }
+.poi-button { display: block; width: 100%; text-align: left; padding: 10px; margin: 4px 0; border: 1px solid var(--line); border-radius: 8px; background: white; cursor: pointer; color: var(--ink); }
+.poi-button:hover { border-color: var(--accent); }
+.warning { padding: 10px; background: #fff4d6; border-left: 3px solid var(--accent-2); }
+.stop { padding: 8px 0; border-bottom: 1px solid var(--line); }
+button:disabled { opacity: .55; cursor: wait; }
+summary { cursor: pointer; }
+.map-status { position: absolute; z-index: 800; top: 8px; left: 62px; right: 18px; margin: 0; padding: 10px 14px; border-radius: 8px; background: #fff4d6; color: #5b4109; font-size: 13px; box-shadow: var(--shadow); }
+#itinerary { display: block; padding-top: 16px; }
+#itinerary p { margin: 8px 0; }
+
 * {
   box-sizing: border-box;
 }

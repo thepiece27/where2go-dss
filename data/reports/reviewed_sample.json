@@ -1,0 +1,1850 @@
+{
+  "dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-acdb0b4f",
+  "routing_version": "1e1d2ec5e5a86240",
+  "checked_at": "2026-09-17T01:26:04.975464+00:00",
+  "method": "automated_OSRM_and_assisted_source_review_not_fieldwork",
+  "summary": [
+    {
+      "location": "Hà Nội",
+      "tested": 1317,
+      "routable": 1313,
+      "reviewed_and_routable": 27
+    },
+    {
+      "location": "Đà Nẵng",
+      "tested": 328,
+      "routable": 302,
+      "reviewed_and_routable": 31
+    }
+  ],
+  "pois": [
+    {
+      "poi_id": "osm:node:445345255",
+      "name": "Nhà 48 phố Hàng Ngang",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/445345255",
+      "latitude": 21.0343278,
+      "longitude": 105.8504388,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 8.807199969,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:445345255",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/445345255"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:relation:16640104",
+      "name": "Đền Bà Kiệu",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/relation/16640104",
+      "latitude": 21.03115965,
+      "longitude": 105.8536002,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 18.349598537,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:relation:16640104",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/relation/16640104"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:relation:17877970",
+      "name": "Đài tưởng niệm các Anh hùng liệt sĩ",
+      "location": "Hà Nội",
+      "category": "historic",
+      "source_url": "https://www.openstreetmap.org/relation/17877970",
+      "latitude": 21.0360376,
+      "longitude": 105.83869174406043,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 62.289309184,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:relation:17877970",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/relation/17877970"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:relation:19179452",
+      "name": "Đền Hai Bà Trưng",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/relation/19179452",
+      "latitude": 21.0121985,
+      "longitude": 105.85518243956656,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 57.693958738,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:relation:19179452",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/relation/19179452"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:relation:21390321",
+      "name": "Vườn hoa Lý Thái Tổ",
+      "location": "Hà Nội",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/relation/21390321",
+      "latitude": 21.02746485,
+      "longitude": 105.85474948997958,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 30.429963138,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:relation:21390321",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/relation/21390321"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1019050231",
+      "name": "Bảo tàng Chiến thắng B52",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/1019050231",
+      "latitude": 21.0355466,
+      "longitude": 105.82609515205144,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 21.032036064,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1019050231",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1019050231"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1103182086",
+      "name": "Công viên Võ Thị Sáu",
+      "location": "Hà Nội",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/1103182086",
+      "latitude": 21.0055661,
+      "longitude": 105.85695349767632,
+      "hours_status": "known",
+      "hours_raw": "24/7",
+      "snap_distance_meters": 36.520439849,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1103182086",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1103182086"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1118494921",
+      "name": "Chùa Hà",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/1118494921",
+      "latitude": 21.0371673,
+      "longitude": 105.7951808651609,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 37.324678306,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1118494921",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1118494921"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1140667038",
+      "name": "Chùa Phúc Khánh",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/1140667038",
+      "latitude": 21.00442585,
+      "longitude": 105.8211646488508,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 22.265280372,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1140667038",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1140667038"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1219524639",
+      "name": "Bảo tàng Phòng không - Không quân",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/1219524639",
+      "latitude": 20.99954075,
+      "longitude": 105.82924209574325,
+      "hours_status": "unknown",
+      "hours_raw": "Mo-Su 08:00-11:00,13:00-16:00; Fr off",
+      "snap_distance_meters": 2.689559725,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1219524639",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1219524639"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1481550721",
+      "name": "Đền Voi Phục",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/1481550721",
+      "latitude": 21.03001975,
+      "longitude": 105.80481563823562,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:00-20:00",
+      "snap_distance_meters": 75.993068534,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1481550721",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1481550721"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:178995262",
+      "name": "Đền Ngọc Sơn",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/178995262",
+      "latitude": 21.0307272,
+      "longitude": 105.85237633402963,
+      "hours_status": "known",
+      "hours_raw": "Mo-Fr 07:00-18:00",
+      "snap_distance_meters": 110.215612514,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:178995262",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/178995262"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:185540946",
+      "name": "Công viên Lê-nin",
+      "location": "Hà Nội",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/185540946",
+      "latitude": 21.03183055,
+      "longitude": 105.83936962866082,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 46.014882209,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:185540946",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/185540946"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:207178320",
+      "name": "Đền Quán Thánh",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/207178320",
+      "latitude": 21.04300585,
+      "longitude": 105.8365874325718,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 30.790656703,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:207178320",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/207178320"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:208255133",
+      "name": "Bảo tàng Hà Nội",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/208255133",
+      "latitude": 21.010013049999998,
+      "longitude": 105.78630904389652,
+      "hours_status": "known",
+      "hours_raw": "Tu-Su 08:00-11:30,13:30-17:00",
+      "snap_distance_meters": 68.707605859,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:208255133",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/208255133"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:220302249",
+      "name": "Chùa Trấn Quốc",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/220302249",
+      "latitude": 21.0478837,
+      "longitude": 105.8368374555966,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 63.669003012,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:220302249",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/220302249"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:28912942",
+      "name": "Nhà thờ Lớn",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/28912942",
+      "latitude": 21.0286483,
+      "longitude": 105.84885664697529,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 16.319950904,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:28912942",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/28912942"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:339936730",
+      "name": "Bảo tàng Dân tộc học Việt Nam",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/339936730",
+      "latitude": 21.04007745,
+      "longitude": 105.79884026629223,
+      "hours_status": "known",
+      "hours_raw": "Tu-Su 08:30-17:30",
+      "snap_distance_meters": 91.817731285,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:339936730",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/339936730",
+          "https://www.vme.org.vn/vi/p/thoi-gian-mo-cua-22930.html"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence",
+          "hours_source_crosscheck"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung.",
+        "overrides": {
+          "hours_raw": "Tu-Su 08:30-17:30"
+        }
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:340128580",
+      "name": "Nhà tù Hoả Lò",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/340128580",
+      "latitude": 21.02542215,
+      "longitude": 105.84650929170047,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:00-17:00",
+      "snap_distance_meters": 16.435488079,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:340128580",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/340128580",
+          "https://hoalo.vn/Articles/4/gioi-thieu"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence",
+          "hours_source_crosscheck"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung.",
+        "overrides": {
+          "hours_raw": "Mo-Su 08:00-17:00"
+        }
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:37933256",
+      "name": "Viện Bảo tàng Lịch sử Việt Nam",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/37933256",
+      "latitude": 21.02413995,
+      "longitude": 105.85975990051139,
+      "hours_status": "known",
+      "hours_raw": "Mo off; Tu-Su 08:00-12:00,13:30-17:00",
+      "snap_distance_meters": 3.076527116,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:37933256",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/37933256"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:700145152",
+      "name": "Bảo tàng Mỹ thuật Việt Nam",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/700145152",
+      "latitude": 21.03064175,
+      "longitude": 105.83703600260962,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:30-17:00",
+      "snap_distance_meters": 29.498989585,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:700145152",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/700145152"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:700840711",
+      "name": "Đền Bạch Mã",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/700840711",
+      "latitude": 21.035934400000002,
+      "longitude": 105.85098754596936,
+      "hours_status": "known",
+      "hours_raw": "Tu-Su 08:00-11:00, 14:00-17:00",
+      "snap_distance_meters": 11.613510491,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:700840711",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/700840711"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:704134588",
+      "name": "Chùa Quán Sứ",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/704134588",
+      "latitude": 21.0244671,
+      "longitude": 105.84541894356802,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 38.360432774,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:704134588",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/704134588"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:704147278",
+      "name": "Bảo tàng Phụ nữ Việt Nam",
+      "location": "Hà Nội",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/704147278",
+      "latitude": 21.023350649999998,
+      "longitude": 105.85159581561891,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:00-17:00",
+      "snap_distance_meters": 17.623691277,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:704147278",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/704147278",
+          "https://baotangphunu.org.vn/phong-kham-pha/"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence",
+          "hours_source_crosscheck"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung.",
+        "overrides": {
+          "hours_raw": "Mo-Su 08:00-17:00"
+        }
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:879841441",
+      "name": "Vườn hoa Diên Hồng",
+      "location": "Hà Nội",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/879841441",
+      "latitude": 21.0264781,
+      "longitude": 105.8559750910072,
+      "hours_status": "known",
+      "hours_raw": "24/7",
+      "snap_distance_meters": 29.696509981,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:879841441",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/879841441"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:941901613",
+      "name": "Phủ Tây Hồ",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/941901613",
+      "latitude": 21.0557278,
+      "longitude": 105.8196419125835,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 9.225559782,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:941901613",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/941901613"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:947089943",
+      "name": "Đền Kim Liên",
+      "location": "Hà Nội",
+      "category": "temple",
+      "source_url": "https://www.openstreetmap.org/way/947089943",
+      "latitude": 21.0106804,
+      "longitude": 105.8381394309297,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 28.171284356,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:947089943",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/947089943"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:12344125229",
+      "name": "Di San Vô Giá",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/12344125229",
+      "latitude": 15.8771754,
+      "longitude": 108.3342411,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:00-20:00",
+      "snap_distance_meters": 15.875596394,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:12344125229",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/12344125229"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:2076855866",
+      "name": "Nhà cổ Đức An",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/2076855866",
+      "latitude": 15.8770533,
+      "longitude": 108.3273582,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 5.652666714,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:2076855866",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/2076855866"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:2076855954",
+      "name": "Nhà cổ Quân Thắng",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/2076855954",
+      "latitude": 15.8770968,
+      "longitude": 108.3292876,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 7.239060869,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:2076855954",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/2076855954"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:2076856032",
+      "name": "Boa tang gom su mau dich",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/2076856032",
+      "latitude": 15.8772671,
+      "longitude": 108.329548,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 5.289466576,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:2076856032",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/2076856032"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:3189923484",
+      "name": "Sa Huynh",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/3189923484",
+      "latitude": 15.8770347,
+      "longitude": 108.3264247,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 6.42616707,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:3189923484",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/3189923484"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:4279640089",
+      "name": "Nhà cổ Phùng Hưng",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/4279640089",
+      "latitude": 15.8772193,
+      "longitude": 108.3257902,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 9.853749046,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:4279640089",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/4279640089"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:4537530289",
+      "name": "Tháp Chiên Đàn",
+      "location": "Đà Nẵng",
+      "category": "historic",
+      "source_url": "https://www.openstreetmap.org/node/4537530289",
+      "latitude": 15.6158093,
+      "longitude": 108.442489,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 49.749485516,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:4537530289",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/4537530289"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:5513474821",
+      "name": "Terracotta Park",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/5513474821",
+      "latitude": 15.8778967,
+      "longitude": 108.3001365,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:30-17:30",
+      "snap_distance_meters": 24.366520039,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:5513474821",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/5513474821"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:5674096859",
+      "name": "Diep Dong Nguyen",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/5674096859",
+      "latitude": 15.8766285,
+      "longitude": 108.3285601,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 7.183420232,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:5674096859",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/5674096859"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:5817580453",
+      "name": "Art in Paradise Da Nang 3D Museum",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/5817580453",
+      "latitude": 16.0953807,
+      "longitude": 108.2430769,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 17.566266186,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:5817580453",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/5817580453"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:7127464285",
+      "name": "Hoi An Museum of Traditional Medicine",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/7127464285",
+      "latitude": 15.8766492,
+      "longitude": 108.3298384,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 07:00-11:00",
+      "snap_distance_meters": 3.144342919,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:7127464285",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/7127464285"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:7520818185",
+      "name": "Tháp Bằng An",
+      "location": "Đà Nẵng",
+      "category": "historic",
+      "source_url": "https://www.openstreetmap.org/node/7520818185",
+      "latitude": 15.8845159,
+      "longitude": 108.2326904,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 50.640480042,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:7520818185",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/7520818185"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:7523625285",
+      "name": "Tháp Khương Mỹ",
+      "location": "Đà Nẵng",
+      "category": "historic",
+      "source_url": "https://www.openstreetmap.org/node/7523625285",
+      "latitude": 15.5478107,
+      "longitude": 108.5056326,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 19.201974274,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:7523625285",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/7523625285"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:node:8474743417",
+      "name": "Bảo tàng Phật giáo",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/node/8474743417",
+      "latitude": 15.9994308,
+      "longitude": 108.2545831,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 09:00-17:00",
+      "snap_distance_meters": 12.850985943,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:node:8474743417",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/node/8474743417"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1077108382",
+      "name": "Công viên Hội An",
+      "location": "Đà Nẵng",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/1077108382",
+      "latitude": 15.88022145,
+      "longitude": 108.33409755776162,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 33.641976366,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1077108382",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1077108382"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:118609193",
+      "name": "Thành Điện Hải",
+      "location": "Đà Nẵng",
+      "category": "historic",
+      "source_url": "https://www.openstreetmap.org/way/118609193",
+      "latitude": 16.076325349999998,
+      "longitude": 108.22176080170689,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 65.253638617,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:118609193",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/118609193"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:118691767",
+      "name": "Bảo tàng Quân khu 5",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/118691767",
+      "latitude": 16.04784955,
+      "longitude": 108.21736029574272,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 26.57256928,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:118691767",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/118691767"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1254909519",
+      "name": "Công viên Nguyễn Văn Linh",
+      "location": "Đà Nẵng",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/1254909519",
+      "latitude": 16.06136925,
+      "longitude": 108.21997788865056,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 17.525522653,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1254909519",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1254909519"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:1368599361",
+      "name": "Bảo tàng Đà Nẵng",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/1368599361",
+      "latitude": 16.0750129,
+      "longitude": 108.22393469245961,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:00-17:00",
+      "snap_distance_meters": 38.685871381,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:1368599361",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/1368599361",
+          "https://danangfantasticity.com/cn/kham-pha/diem-danh-cac-san-pham-du-lich-moi-tai-da-nang-2026"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence",
+          "hours_source_crosscheck"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung.",
+        "overrides": {
+          "hours_raw": "Mo-Su 08:00-17:00"
+        }
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:302872188",
+      "name": "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/302872188",
+      "latitude": 16.06012085,
+      "longitude": 108.22308403997005,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 07:30-17:00",
+      "snap_distance_meters": 34.017716074,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:302872188",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/302872188",
+          "https://danangfantasticity.com/en/bao-tang-lich-su-va-van-hoa/bao-tang-dieu-khac-cham-da-nang"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence",
+          "hours_source_crosscheck"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung.",
+        "overrides": {
+          "hours_raw": "Mo-Su 07:30-17:00"
+        }
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:303341669",
+      "name": "Bảo tàng Hồ Chí Minh",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/303341669",
+      "latitude": 16.046445050000003,
+      "longitude": 108.21824705334258,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 19.490635923,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:303341669",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/303341669"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:565592419",
+      "name": "Bảo tàng Hội An",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/565592419",
+      "latitude": 15.880301549999999,
+      "longitude": 108.32946746079631,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 07:30-11:30,13:30-17:30",
+      "snap_distance_meters": 25.316663244,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:565592419",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/565592419"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:584941415",
+      "name": "Bảo tàng Điện Bàn",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/584941415",
+      "latitude": 15.88742105,
+      "longitude": 108.25506137689874,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 17.270859566,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:584941415",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/584941415"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:595299310",
+      "name": "Tan Ky",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/595299310",
+      "latitude": 15.8764553,
+      "longitude": 108.32783105,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 11.28756371,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:595299310",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/595299310"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:595471597",
+      "name": "Bảo tàng Đà Nẵng (cơ sở 2)",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/595471597",
+      "latitude": 15.579491749999999,
+      "longitude": 108.47581319569812,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 08:00-17:00",
+      "snap_distance_meters": 73.846070162,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:595471597",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/595471597",
+          "https://danangfantasticity.com/cn/kham-pha/diem-danh-cac-san-pham-du-lich-moi-tai-da-nang-2026"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence",
+          "hours_source_crosscheck"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung.",
+        "overrides": {
+          "hours_raw": "Mo-Su 08:00-17:00"
+        }
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:627379326",
+      "name": "My Son Museum",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/627379326",
+      "latitude": 15.7723562,
+      "longitude": 108.10927905418927,
+      "hours_status": "known",
+      "hours_raw": "Mo-Su 06:00-17:00",
+      "snap_distance_meters": 26.89014966,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:627379326",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/627379326"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:675604354",
+      "name": "Công Viên APEC",
+      "location": "Đà Nẵng",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/675604354",
+      "latitude": 16.05875315,
+      "longitude": 108.22351227103643,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 34.81037235,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:675604354",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/675604354"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:759913076",
+      "name": "Bảo tàng Mỹ thuật Đà Nẵng",
+      "location": "Đà Nẵng",
+      "category": "museum",
+      "source_url": "https://www.openstreetmap.org/way/759913076",
+      "latitude": 16.0713664,
+      "longitude": 108.21768617893152,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 38.411731888,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:759913076",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/759913076"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:961973763",
+      "name": "Công viên Đầm Rong",
+      "location": "Đà Nẵng",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/961973763",
+      "latitude": 16.0836496,
+      "longitude": 108.21792916978188,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 8.890695351,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:961973763",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/961973763"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:962129075",
+      "name": "Công viên Hà Thân",
+      "location": "Đà Nẵng",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/962129075",
+      "latitude": 16.064907249999997,
+      "longitude": 108.23182447297484,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 17.366852345,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:962129075",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/962129075"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    },
+    {
+      "poi_id": "osm:way:962130353",
+      "name": "Công viên Hồ Nghinh",
+      "location": "Đà Nẵng",
+      "category": "park",
+      "source_url": "https://www.openstreetmap.org/way/962130353",
+      "latitude": 16.0761981,
+      "longitude": 108.24240329478714,
+      "hours_status": "unknown",
+      "hours_raw": "",
+      "snap_distance_meters": 51.922464888,
+      "round_trip_routable": true,
+      "source_review": {
+        "poi_id": "osm:way:962130353",
+        "reviewed_at": "2026-09-17",
+        "reviewer": "Codex - assisted digital-source review",
+        "method": "OSM snapshot inspection; boundary and category consistency. Road accessibility checked separately by audit_focus.py.",
+        "evidence_urls": [
+          "https://www.openstreetmap.org/way/962130353"
+        ],
+        "fields_checked": [
+          "name_source",
+          "category_source",
+          "coordinate_provenance",
+          "boundary_assignment",
+          "hours_presence"
+        ],
+        "limits": "Không khảo sát thực địa; tọa độ đại diện không xác minh lối vào; giờ OSM chưa được kiểm chứng độc lập nếu không có nguồn bổ sung."
+      },
+      "field_verified": false
+    }
+  ]
+}

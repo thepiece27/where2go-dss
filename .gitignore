@@ -1,3 +1,10 @@
 data/google_maps_browser_profile/
 .venv/
 __pycache__/
+data/raw/
+data/routing/
+data/catalog.sqlite*
+data/cache/
+.pytest_cache/
+artifacts/
+data/private/

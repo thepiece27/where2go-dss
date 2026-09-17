@@ -513,8 +513,4 @@ def main():
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("Stopped by user.", file=sys.stderr)
-        sys.exit(130)
+    raise SystemExit("Legacy Google browser scraper disabled. Use scripts/build_catalog.py and source-reviewed curation.")

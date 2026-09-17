@@ -1,291 +1,73 @@
-# Vietnam POI Recommendation System
+# Where2Go DSS — gợi ý lịch trình trong ngày
 
-This project builds a Vietnam point-of-interest dataset, enriches it with Google Maps fields, shows it in a local web explorer, and implements a hybrid POI recommendation system with behavioral signals, content similarity, contextual reranking, Fuzzy AHP, and TOPSIS.
+Where2Go giúp chọn 2–5 điểm tham quan, sắp xếp giờ ghé và quay về điểm xuất phát bằng ô tô. Hệ thống dùng **Fuzzy AHP + TOPSIS** để xếp hạng và thuật toán chèn tham lam để tạo lịch trình; không giải bài toán tối ưu tuyến toàn cục.
 
-## Main Features
+Dữ liệu tập trung **Hà Nội** và **Đà Nẵng mới, bao gồm Quảng Nam cũ**. Người dùng có thể chọn điểm xuất phát ở địa phương khác, nhưng mức độ đầy đủ dữ liệu không được bảo đảm. Thiếu dữ liệu/không có đường được trả thành trạng thái rõ ràng. Giờ chưa biết tạo lịch trình **tạm tính**, không được tự coi là mở cả ngày.
 
-- Clean and inspect Vietnam POI data from Excel.
-- Fill missing Google Maps fields with a browser scraper.
-- Correct province/city names from latitude and longitude.
-- Export POIs to a static web app.
-- Explore POIs on a map with search and filters.
-- Generate deterministic mock user behavior for development and evaluation.
-- Recommend POIs with popularity, association rules, item-based CF, TF-IDF cold-start, hybrid scoring, contextual reranking, Fuzzy AHP, and TOPSIS.
-- Evaluate chronological holdouts with HitRate@K, Recall@K, MRR@K, NDCG@K, coverage, and diversity.
+## Chạy ứng dụng
 
-## Project Structure
+Yêu cầu Python 3.13, Docker Desktop dùng Linux containers/WSL2; dành khoảng 8 GB RAM cho Docker khi dựng mạng đường toàn quốc và đủ dung lượng lưu snapshot/graph. Môi trường đã kiểm tra: Windows, Python 3.13.15, Docker 29.7.2, OSRM 5.27.1.
 
-```text
-data/
-  vietnam_destinations.xlsx
-  vietnam_destinations_google_maps_browser_hotosm.xlsx
-  poi_recommendation_cleaned.xlsx
-  poi_sample_recommendations.xlsx
-  poi_evaluation_metrics.xlsx
-  synthetic_user_behavior.xlsx
-  chronological_metrics.xlsx
-  chronological_summary.xlsx
-  vietnam_provinces_wards_geojson.zip
-
-docs/
-  fuzzy_ahp.md
-  poi_recommendation_system.md
-  google_places_enrichment.md
-  location_from_coordinates.md
-  osm_hotosm_enrichment.md
-
-scripts/
-  scrape_google_maps_browser.py
-  fill_location_from_coordinates.py
-  export_web_data.py
-
-web/
-  index.html
-  styles.css
-  app.js
-  data/pois.json
-
-poi_recommendation_system.ipynb
-requirements.txt
-```
-
-## Setup
-
-Install dependencies:
+Từ thư mục gốc trong PowerShell:
 
 ```powershell
-pip install -r requirements.txt
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements-app.lock.txt
+.venv\Scripts\python.exe scripts/setup_osrm.py --download
+.venv\Scripts\python.exe scripts/build_catalog.py
+.venv\Scripts\python.exe -m uvicorn where2go.api:app --host 127.0.0.1 --port 8000
 ```
 
-If you run the Google Maps browser scraper, install Playwright browser support if needed:
+Mở **http://127.0.0.1:8000**. API tương tác: **http://127.0.0.1:8000/docs**. Khi catalog thay đổi, khởi động lại API để nạp phiên bản mới. OSRM phục vụ trên cổng 5001, chỉ bind localhost; script không sửa container của dự án khác.
+
+Snapshot mặc định là `vietnam-260915.osm.pbf`. Nếu Geofabrik ngừng lưu bản này, cần lấy bản lưu có đúng SHA256 hoặc chủ động tạo phiên bản dữ liệu mới và dựng lại cả catalog lẫn graph. Không đổi tên snapshot mới để giả làm bản cũ.
+
+## Sử dụng
+
+1. Chọn thành phố, tìm tên hoặc loại hình; bộ lọc được dùng cho cả danh sách và lịch trình.
+2. Nhấp bản đồ để đặt điểm xuất phát, hoặc nhập tọa độ. Chọn ngày, giờ bắt đầu/kết thúc, bán kính và sở thích.
+3. Có thể sửa ba phán đoán AHP. Mặc định bằng nhau là lựa chọn thiết kế, không phải kết quả khảo sát chuyên gia. CR vượt 0,1 sẽ bị từ chối.
+4. Tạo lịch trình; đọc timeline, giờ quay về và cảnh báo. Lưu địa điểm bằng ID canonical.
+
+OSRM không có giao thông trực tiếp. Thời lượng ghé là ước lượng, chưa tính tìm bãi đỗ/đi bộ từ đường tới cổng. Đây là công cụ hỗ trợ lập kế hoạch theo dữ liệu, không phải bảo đảm khả thi ngoài thực địa.
+
+## Kiểm tra và tái lập kết quả
 
 ```powershell
-python -m playwright install
+.venv\Scripts\python.exe -m pytest -q
+.venv\Scripts\python.exe scripts/audit_focus.py
+.venv\Scripts\python.exe scripts/evaluate_itineraries.py
+.venv\Scripts\python.exe -m playwright install chromium
+.venv\Scripts\python.exe scripts/smoke_web.py
 ```
 
-The scraper can also use Microsoft Edge with `--browser-channel msedge`.
+Ba lệnh cuối liên quan routing/web cần OSRM và, riêng smoke web, API đang chạy. Fixture trong pytest không thay thế nghiệm thu tuyến thật. Báo cáo nằm trong `data/reports/`, ảnh kiểm tra web nằm trong `artifacts/`.
 
-## Current Main Dataset
+## Cấu trúc và tài liệu
 
-The main workbook is:
+| Đường dẫn | Vai trò |
+|---|---|
+| `where2go/` | Lõi chung: catalog, AHP/TOPSIS, giờ mở cửa, OSRM, planner, API, metrics |
+| `scripts/build_catalog.py` | Import OSM, kiểm kê workbook cũ, đối soát và xuất SQLite/CSV/manifest |
+| `data/curation/` | Biên bản đối soát nguồn và registry ID bền vững |
+| `data/reports/` | Coverage, hàng kiểm duyệt, kiểm tra đường bộ, kết quả nghiên cứu tình huống |
+| `web/` | Giao diện gọi API Python; không tính xếp hạng độc lập |
+| `tests/` | Kiểm thử hồi quy với dữ liệu fixture được gắn nhãn |
+| `poi_recommendation_system.ipynb` | Notebook gọi đúng lõi sản phẩm |
+| `notebooks/archive/`, `docs/archive/` | Tài liệu/mô hình lịch sử; không đại diện hệ thống hiện tại |
 
-```text
-data/vietnam_destinations_google_maps_browser_hotosm.xlsx
-```
+- [Phương pháp và công thức](docs/fuzzy_ahp.md)
+- [Hướng dẫn triển khai, dữ liệu và demo](docs/huong_dan_trien_khai.md)
+- [Kết quả kiểm tra và giới hạn](docs/ket_qua_trien_khai.md)
+- [Kế hoạch đã thống nhất](docs/ke_hoach_hoan_thien_where2go_dss.md)
+- [Review nền tảng ban đầu](docs/bao_cao_review_du_an_where2go_dss.md)
 
-Important columns:
+Các tài liệu cũ về Google/HOTOSM và mô hình hybrid được giữ để truy vết lịch sử. Notebook lưu trữ và workbook đánh giá cũ không dùng làm bằng chứng cho phiên bản hiện tại. Entry point scraper Google và sửa workbook legacy đã vô hiệu hóa; nguồn Excel gốc được giữ nguyên.
 
-- `Tên địa điểm`
-- `Vị trí`
-- `Mô tả`
-- `Đánh giá `
-- `Ảnh`
-- `Từ Khóa`
-- `maps_latitude`
-- `maps_longitude`
-- `maps_destination_type`
-- `maps_review_count`
-- `maps_review_label`
-- `maps_first_open_hours`
-- `maps_open_hours`
-- `maps_url`
+## Nguồn dữ liệu và ghi công
 
-## Fill Missing Google Maps Type And Review Count
+© [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), dữ liệu theo ODbL 1.0; snapshot từ [Geofabrik](https://download.geofabrik.de/asia/vietnam.html). Manifest chứa ngày nguồn, checksum, phiên bản pipeline và registry. Khi công bố cơ sở dữ liệu phái sinh, cần giữ attribution, thông tin ODbL và thực hiện nghĩa vụ cung cấp dữ liệu theo giấy phép.
 
-The scraper currently preserves existing values and only fills missing cells in:
+Địa giới dùng snapshot đã có trong repo từ [vietnamese-provinces-database](https://github.com/thanglequoc/vietnamese-provinces-database). Giờ bổ sung có URL nguồn trong từng biên bản. Không sao chép bài viết/ảnh của địa điểm để lấp thiếu dữ liệu. Dữ liệu Google cũ được audit riêng, không phục vụ mặc định qua API.
 
-```text
-maps_destination_type
-maps_review_count
-```
-
-Run:
-
-```powershell
-python -X utf8 .\scripts\scrape_google_maps_browser.py --input data\vietnam_destinations_google_maps_browser_hotosm.xlsx --output data\vietnam_destinations_google_maps_browser_hotosm.xlsx --browser-channel msedge --timeout-ms 25000 --sleep 1 --workers 3 --save-every 10
-```
-
-Small test run:
-
-```powershell
-python -X utf8 .\scripts\scrape_google_maps_browser.py --input data\vietnam_destinations_google_maps_browser_hotosm.xlsx --output data\vietnam_destinations_google_maps_browser_hotosm.xlsx --browser-channel msedge --limit 50 --timeout-ms 25000 --sleep 1 --workers 3 --save-every 10
-```
-
-## Correct `Vị trí` From Coordinates
-
-Dry run first:
-
-```powershell
-python -X utf8 .\scripts\fill_location_from_coordinates.py --input data\vietnam_destinations_google_maps_browser_hotosm.xlsx --dry-run
-```
-
-Apply correction:
-
-```powershell
-python -X utf8 .\scripts\fill_location_from_coordinates.py --input data\vietnam_destinations_google_maps_browser_hotosm.xlsx
-```
-
-The script:
-
-- parses better coordinates from `maps_url` when available;
-- maps coordinates to Vietnam province/city GeoJSON polygons;
-- writes the corrected province/city name to `Vị trí`;
-- creates a timestamped backup before overwriting the workbook.
-
-More details: `docs/location_from_coordinates.md`.
-
-## Run The Web Explorer
-
-Export the Excel workbook to JSON:
-
-```powershell
-python -X utf8 .\scripts\export_web_data.py
-```
-
-Start the local web server:
-
-```powershell
-python -m http.server 8000 --directory web
-```
-
-Open:
-
-```text
-http://localhost:8000
-```
-
-The web app supports:
-
-- map markers;
-- search by name, description, location, type, and keywords;
-- filters by province/city, type, rating, reviews, and opening hours;
-- sorting by quality, review count, rating, or name;
-- detail panel with image and Google Maps link.
-- cold-start recommendations from the search context;
-- an existing `user_demo` mode using saved/clicked/visited POIs;
-- local behavior capture in browser storage and contextual Top-K reranking.
-
-## Recommendation Notebook
-
-Open:
-
-```text
-poi_recommendation_system.ipynb
-```
-
-The notebook pipeline:
-
-```text
-Phần A  POI preprocessing + TF-IDF
-   ↓
-Phần B  mock user behavior
-   ↓
-Phần C  popularity / association rules / item-based CF
-   ↓
-Phần D  TF-IDF content model for cold-start
-   ↓
-Phần E  behavior/content hybrid candidate generation
-   ↓
-Phần F  behavior + distance + quality + context scores
-   ↓
-Phần G  Fuzzy AHP → H = A × W → defuzzify → TOPSIS → Top-K
-   ↓
-Phần H  chronological evaluation
-```
-
-The production API is:
-
-```python
-recommend_pois(profile, user_id=None, top_k=20)
-```
-
-With a known user, behavior and content generate the candidate pool. Without a known user, TF-IDF content generates the candidate pool. Both paths then use the same contextual Fuzzy AHP + TOPSIS ranker.
-
-## Fuzzy AHP + TOPSIS Model
-
-Fuzzy AHP computes the criteria weights and fuzzy decision matrix. TOPSIS converts the defuzzified weighted matrix into the final closeness score.
-
-Criteria:
-
-```text
-behavior, content, distance, quality, context
-```
-
-The pairwise comparison matrix is expert/user input. The notebook does not create this matrix from preset weights.
-
-Main formula:
-
-```text
-final_score = topsis_score
-```
-
-Full math reference:
-
-```text
-docs/fuzzy_ahp.md
-```
-
-System details:
-
-```text
-docs/poi_recommendation_system.md
-```
-
-## Evaluation
-
-The dataset does not contain real user-click labels. The notebook therefore provides two evaluation views: the original profile-based weak-label diagnostics and a chronological holdout over deterministic mock events. The final recommendation path is evaluated with the chronological split.
-
-Baseline models:
-
-- `popularity_baseline`
-- `distance_baseline`
-- `content_baseline`
-- `type_location_baseline`
-- `equal_weight_baseline`
-- `crisp_ahp_weighted_baseline`
-- `fuzzy_ahp`
-
-Metrics:
-
-- Precision@10
-- Recall@10
-- MAP@10
-- MRR@10
-- NDCG@10
-- type diversity@10
-- catalog coverage@10
-
-Chronological event metrics:
-
-- `HitRate@10`
-- `Recall@10`
-- `MRR@10`
-- `NDCG@10`
-- `Coverage@10`
-- `Diversity@10`
-
-## Generated Outputs
-
-Recommendation outputs:
-
-```text
-data/poi_recommendation_cleaned.xlsx
-data/poi_sample_recommendations.xlsx
-data/poi_evaluation_metrics.xlsx
-data/synthetic_user_behavior.xlsx
-data/chronological_metrics.xlsx
-data/chronological_summary.xlsx
-```
-
-Web output:
-
-```text
-web/data/pois.json
-```
-
-## Notes
-
-- Close the Excel workbook before scripts write to it.
-- If the scraper cannot write to the original workbook, it may save an `_autosave.xlsx` file.
-- Google Maps scraping can produce wrong matches, so suspicious rows should be reviewed.
-- The location correction uses current Vietnam province/city boundaries; old province names may be mapped to newer merged units.
+Chưa có nhãn người dùng độc lập: kết quả so sánh hiện tại là **kiểm thử và nghiên cứu tình huống**, không chứng minh Fuzzy AHP + TOPSIS vượt baseline.

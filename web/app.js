@@ -1,439 +1,161 @@
-const state = {
-  pois: [],
-  filtered: [],
-  selectedId: null,
-  markers: new Map(),
-  interactions: [],
-};
-
-const ACTION_WEIGHTS = { view: 1, click: 2, save: 3, like: 4, visit: 5 };
-const INTERACTION_STORAGE_KEY = "vietnam-poi-interactions-v1";
-
-const els = {
-  totalCount: document.querySelector("#totalCount"),
-  visibleCount: document.querySelector("#visibleCount"),
-  avgRating: document.querySelector("#avgRating"),
-  searchInput: document.querySelector("#searchInput"),
-  locationFilter: document.querySelector("#locationFilter"),
-  typeFilter: document.querySelector("#typeFilter"),
-  ratingFilter: document.querySelector("#ratingFilter"),
-  sortSelect: document.querySelector("#sortSelect"),
-  hasReviews: document.querySelector("#hasReviews"),
-  hasHours: document.querySelector("#hasHours"),
-  resetFilters: document.querySelector("#resetFilters"),
-  poiList: document.querySelector("#poiList"),
-  detailPanel: document.querySelector("#detailPanel"),
-  userMode: document.querySelector("#userMode"),
-  recommendationMode: document.querySelector("#recommendationMode"),
-  recommendationQuery: document.querySelector("#recommendationQuery"),
-  recommendButton: document.querySelector("#recommendButton"),
-  recommendationList: document.querySelector("#recommendationList"),
-};
-
-const map = L.map("map", { zoomControl: false }).setView([15.9, 106.8], 6);
-L.control.zoom({ position: "bottomleft" }).addTo(map);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution: "&copy; OpenStreetMap contributors",
-}).addTo(map);
-
-const markerLayer = L.layerGroup().addTo(map);
-
-function formatNumber(value) {
-  return new Intl.NumberFormat("vi-VN").format(value || 0);
+"use strict";
+const $ = (id) => document.getElementById(id);
+const state = {pois: [], selectedId: null, saved: new Set(), listVersion: 0, planVersion: 0};
+try { state.saved = new Set(JSON.parse(localStorage.getItem("where2go-saved-v2") || "[]")); } catch {}
+const labels = {museum:"Bảo tàng", historic:"Di tích", attraction:"Tham quan", viewpoint:"Ngắm cảnh", park:"Công viên", beach:"Bãi biển", temple:"Đền/chùa", gallery:"Triển lãm", zoo:"Vườn thú", theme_park:"Khu vui chơi"};
+const map = window.L ? L.map("map").setView([21.0285,105.8542],12) : null;
+let markerLayer, startMarker, routeLayer;
+if (map) {
+  const tiles=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  let tileFailures=0;
+  tiles.on("loading",()=>{tileFailures=0;});
+  tiles.on("tileerror",()=>{tileFailures++;$("mapStatus").hidden=false;$("mapStatus").textContent="Không tải được một phần hoặc toàn bộ nền bản đồ. Hãy kiểm tra kết nối mạng; lịch trình và đường từ OSRM vẫn hiển thị.";});
+  tiles.on("load",()=>{if(!tileFailures) $("mapStatus").hidden=true;});
+  tiles.addTo(map);
+  markerLayer = L.layerGroup().addTo(map);
+  map.on("click", (event) => { $("latitude").value=event.latlng.lat.toFixed(6); $("longitude").value=event.latlng.lng.toFixed(6); updateStart(); invalidatePlan(); });
 }
-
-function normalize(value) {
-  return String(value || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .replace(/Đ/g, "D")
-    .toLowerCase();
-}
-
-function option(label, value = label) {
-  const item = document.createElement("option");
-  item.value = value;
-  item.textContent = label;
+else {$("mapStatus").hidden=false;$("mapStatus").textContent="Chưa tải được thư viện bản đồ. Bạn vẫn có thể nhập tọa độ và đọc lịch trình.";}
+function node(tag, text, className) {
+  const item=document.createElement(tag);
+  if(text !== undefined) item.textContent=text;
+  if(className) item.className=className;
   return item;
 }
-
-function populateFilters(meta) {
-  els.locationFilter.replaceChildren(option("Tất cả", ""));
-  meta.locations.forEach((location) => els.locationFilter.appendChild(option(location)));
-
-  els.typeFilter.replaceChildren(option("Tất cả", ""));
-  meta.types.forEach((type) => els.typeFilter.appendChild(option(type)));
-}
-
-function imageMarkup(poi, className) {
-  if (!poi.image) {
-    return `<div class="${className}" role="img" aria-label="No image"></div>`;
-  }
-  return `<img class="${className}" src="${poi.image}" alt="${escapeHtml(poi.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: '${className}'}))" />`;
-}
-
-function escapeHtml(value) {
-  return String(value || "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function poiSearchText(poi) {
-  return normalize([
-    poi.name,
-    poi.resultName,
-    poi.location,
-    poi.type,
-    poi.description,
-    ...(poi.keywords || []),
-  ].join(" "));
-}
-
-function loadInteractions() {
+function safeLink(url, text) {
   try {
-    const saved = JSON.parse(localStorage.getItem(INTERACTION_STORAGE_KEY) || "[]");
-    return Array.isArray(saved) ? saved : [];
-  } catch (error) {
-    return [];
+    const parsed=new URL(url);
+    if(!["https:","http:"].includes(parsed.protocol) || parsed.username || parsed.password) return node("span",text);
+    const a=node("a",text); a.href=parsed.href; a.target="_blank"; a.rel="noopener noreferrer"; return a;
+  } catch { return node("span",text); }
+}
+function imageElement(url) {
+  const fallback=node("div","Ảnh chưa có nguồn được kiểm chứng");
+  try {
+    const parsed=new URL(url);
+    if(parsed.protocol!=="https:" || parsed.hostname!=="upload.wikimedia.org") return fallback;
+    const img=document.createElement("img"); img.src=parsed.href; img.alt="Ảnh địa điểm"; img.loading="lazy";
+    img.addEventListener("error",()=>img.replaceWith(fallback)); return img;
+  } catch { return fallback; }
+}
+async function api(path, options) {
+  const response=await fetch(path, options);
+  const data=await response.json();
+  if(!response.ok) {
+    const errors=Array.isArray(data.detail) ? data.detail.map(e=>e.msg).join("; ") : data.detail;
+    throw new Error(errors || "Không đọc được phản hồi");
   }
+  return data;
 }
-
-function saveInteractions() {
-  localStorage.setItem(INTERACTION_STORAGE_KEY, JSON.stringify(state.interactions));
+function updateStart() {
+  const coords=[Number($("latitude").value),Number($("longitude").value)];
+  if(!map || !coords.every(Number.isFinite)) return;
+  if(startMarker) startMarker.setLatLng(coords); else startMarker=L.marker(coords).addTo(map).bindPopup("Điểm xuất phát và quay về");
 }
-
-function ensureDemoInteractions() {
-  if (state.interactions.some((event) => event.userId === "user_demo")) return;
-  state.pois.slice(0, 4).forEach((poi, index) => {
-    state.interactions.push({
-      userId: "user_demo",
-      poiId: poi.id,
-      action: index === 0 ? "save" : "click",
-      timestamp: Date.now() - (4 - index) * 86400000,
-    });
-  });
-  saveInteractions();
+function showDetail(poi) {
+  state.selectedId=poi.poi_id;
+  const panel=$("detailPanel");
+  const save=node("button",state.saved.has(poi.poi_id) ? "Đã lưu" : "Lưu địa điểm","action-button");
+  save.id="savePoi";
+  save.onclick=()=>{
+    if(state.saved.has(poi.poi_id)) state.saved.delete(poi.poi_id); else state.saved.add(poi.poi_id);
+    try { localStorage.setItem("where2go-saved-v2",JSON.stringify([...state.saved])); } catch {}
+    showDetail(poi);
+  };
+  panel.replaceChildren(node("h2",poi.name),node("p",(labels[poi.category]||poi.category)+" · "+poi.location),
+    node("p",poi.description || "Chưa có mô tả trải nghiệm được kiểm chứng."),
+    node("p","Giờ nguồn: "+(poi.hours_raw || "Chưa biết")),
+    node("p","Tham quan dự kiến: "+poi.visit_duration_minutes+" phút (ước lượng)"),
+    safeLink(poi.source_url,"Xem nguồn địa điểm"),save);
+  if(poi.image) panel.append(imageElement(poi.image));
 }
-
-function userHistory(userId) {
-  if (userId === "new") return [];
-  return state.interactions
-    .filter((event) => event.userId === userId)
-    .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+function invalidatePlan() {
+  state.planVersion++;
+  $("itinerary").replaceChildren();
+  if(routeLayer && map) {map.removeLayer(routeLayer);routeLayer=null;}
 }
-
-function tokenSet(value) {
-  return new Set(normalize(value).split(/\s+/).filter(Boolean));
+async function loadPois() {
+  const version=++state.listVersion;
+  const params=new URLSearchParams({location:$("locationFilter").value,category:$("typeFilter").value,query:$("searchInput").value,limit:"1000"});
+  try {
+    const data=await api("/api/pois?"+params);
+    if(version!==state.listVersion) return;
+    state.pois=data.pois; $("listTitle").textContent="Địa điểm ("+data.total+")";
+    const list=$("poiList");list.replaceChildren(); if(markerLayer) markerLayer.clearLayers();
+    for(const poi of data.pois) {
+      const button=node("button",poi.name+" · "+(labels[poi.category]||poi.category),"poi-button");
+      button.onclick=()=>{showDetail(poi);if(map) map.setView([poi.latitude,poi.longitude],15);};
+      list.append(button);
+      if(markerLayer) L.circleMarker([poi.latitude,poi.longitude],{radius:5,color:"#0f766e"}).addTo(markerLayer).on("click",()=>showDetail(poi)).bindTooltip(node("span",poi.name));
+    }
+    if(data.total>data.pois.length) list.append(node("p","Đang hiển thị "+data.pois.length+" điểm. Hãy lọc để xem cụ thể hơn."));
+    if(data.pois.length) showDetail(data.pois.find(p=>p.poi_id===state.selectedId)||data.pois[0]);
+    else {state.selectedId=null;$("detailPanel").replaceChildren(node("p","Không có địa điểm phù hợp."));}
+  } catch(error) {$("systemStatus").textContent=error.message;}
 }
-
-function overlapScore(left, right) {
-  const a = tokenSet(left);
-  const b = tokenSet(right);
-  if (!a.size || !b.size) return 0;
-  let shared = 0;
-  a.forEach((token) => { if (b.has(token)) shared += 1; });
-  return shared / Math.max(a.size, b.size);
-}
-
-function minMaxValues(values) {
-  const numeric = values.map((value) => Number(value) || 0);
-  const low = Math.min(...numeric);
-  const high = Math.max(...numeric);
-  if (high === low) return numeric.map(() => 0);
-  return numeric.map((value) => (value - low) / (high - low));
-}
-
-function behaviorScoreMap(userId) {
-  const history = userHistory(userId);
-  const globalCounts = new Map();
-  state.interactions.forEach((event) => {
-    globalCounts.set(event.poiId, (globalCounts.get(event.poiId) || 0) + (ACTION_WEIGHTS[event.action] || 1));
-  });
-  const personalCounts = new Map();
-  history.forEach((event) => {
-    personalCounts.set(event.poiId, (personalCounts.get(event.poiId) || 0) + (ACTION_WEIGHTS[event.action] || 1));
-  });
-  const lastPoi = state.pois.find((poi) => poi.id === history[0]?.poiId);
-  const raw = state.pois.map((poi) => {
-    const personal = personalCounts.get(poi.id) || 0;
-    const global = globalCounts.get(poi.id) || 0;
-    const transition = lastPoi ? Math.max(overlapScore(poi.type, lastPoi.type), overlapScore(poi.keywords.join(" "), lastPoi.keywords.join(" "))) : 0;
-    return 0.60 * personal + 0.15 * global + 0.25 * transition;
-  });
-  const normalized = minMaxValues(raw);
-  return new Map(state.pois.map((poi, index) => [poi.id, normalized[index]]));
-}
-
-function recommendationRows() {
-  const userId = els.userMode.value;
-  const query = els.recommendationQuery.value;
-  const history = userHistory(userId);
-  const historyIds = new Set(history.map((event) => event.poiId));
-  const behavior = behaviorScoreMap(userId);
-  const knownUser = userId !== "new" && history.length > 0;
-  const rawRows = state.pois
-    .filter((poi) => !historyIds.has(poi.id))
-    .map((poi) => {
-      const content = query ? overlapScore(query, poiSearchText(poi)) : poi.quality || 0;
-      const behaviorScore = knownUser ? behavior.get(poi.id) || 0 : 0;
-      const candidateScore = knownUser ? 0.65 * behaviorScore + 0.35 * content : content;
-      const typeContext = query ? overlapScore(query, `${poi.type} ${poi.location}`) : 0.5;
-      const distanceScore = 1;
-      const qualityScore = poi.quality || 0;
-      const contextualScore = 0.35 * behaviorScore + 0.20 * distanceScore + 0.20 * qualityScore + 0.25 * typeContext;
-      return { poi, candidateScore, behaviorScore, contentScore: content, distanceScore, qualityScore, typeContext, contextualScore };
-    })
-    .sort((a, b) => b.candidateScore - a.candidateScore)
-    .slice(0, 80);
-
-  if (!rawRows.length) return [];
-  const criteria = rawRows.map((row) => [row.behaviorScore, row.contentScore, row.distanceScore, row.qualityScore, row.typeContext]);
-  const columnNorms = [0, 1, 2, 3, 4].map((column) => Math.sqrt(criteria.reduce((sum, row) => sum + row[column] ** 2, 0)) || 1);
-  const weights = [0.30, 0.20, 0.15, 0.20, 0.15];
-  const weighted = criteria.map((row) => row.map((value, column) => value / columnNorms[column] * weights[column]));
-  const best = [0, 1, 2, 3, 4].map((column) => Math.max(...weighted.map((row) => row[column])));
-  const worst = [0, 1, 2, 3, 4].map((column) => Math.min(...weighted.map((row) => row[column])));
-  return rawRows.map((row, index) => {
-    const toBest = Math.sqrt(weighted[index].reduce((sum, value, column) => sum + (value - best[column]) ** 2, 0));
-    const toWorst = Math.sqrt(weighted[index].reduce((sum, value, column) => sum + (value - worst[column]) ** 2, 0));
-    return { ...row, topsisScore: toWorst / (toBest + toWorst || 1) };
-  }).sort((a, b) => b.topsisScore - a.topsisScore).slice(0, 8);
-}
-
-function renderRecommendations() {
-  if (!els.recommendationList) return;
-  const knownUser = els.userMode.value !== "new";
-  els.recommendationMode.textContent = knownUser ? "Behavior + context" : "Cold-start";
-  const rows = recommendationRows();
-  els.recommendationList.innerHTML = rows.length ? rows.map((row, index) => `
-    <button class="recommendation-item" data-id="${row.poi.id}" type="button">
-      <span class="recommendation-rank">${index + 1}</span>
-      <span><strong>${escapeHtml(row.poi.name)}</strong><small>${escapeHtml(row.poi.location)} · ${escapeHtml(row.poi.type || "Unknown")}</small></span>
-      <span class="recommendation-score">${(row.topsisScore * 100).toFixed(0)}%</span>
-    </button>
-  `).join("") : `<div class="empty-state">Chưa có gợi ý.</div>`;
-}
-
-function recordInteraction(poiId, action) {
-  const userId = els.userMode?.value;
-  if (!userId || userId === "new") return;
-  state.interactions.push({ userId, poiId, action, timestamp: Date.now() });
-  saveInteractions();
-  renderRecommendations();
-}
-
-function filterPois() {
-  const query = normalize(els.searchInput.value);
-  const location = els.locationFilter.value;
-  const type = els.typeFilter.value;
-  const minRating = Number(els.ratingFilter.value || 0);
-  const requireReviews = els.hasReviews.checked;
-  const requireHours = els.hasHours.checked;
-
-  state.filtered = state.pois.filter((poi) => {
-    if (query && !poi._search.includes(query)) return false;
-    if (location && poi.location !== location) return false;
-    if (type && poi.type !== type) return false;
-    if ((poi.rating || 0) < minRating) return false;
-    if (requireReviews && !poi.reviewCount) return false;
-    if (requireHours && !poi.hours) return false;
-    return true;
-  });
-
-  const sort = els.sortSelect.value;
-  state.filtered.sort((a, b) => {
-    if (sort === "reviews") return (b.reviewCount || 0) - (a.reviewCount || 0);
-    if (sort === "rating") return (b.rating || 0) - (a.rating || 0);
-    if (sort === "name") return a.name.localeCompare(b.name, "vi");
-    return (b.quality || 0) - (a.quality || 0);
-  });
-
-  render();
-}
-
-function renderStats() {
-  els.totalCount.textContent = formatNumber(state.pois.length);
-  els.visibleCount.textContent = formatNumber(state.filtered.length);
-  const ratings = state.filtered.map((poi) => poi.rating).filter(Boolean);
-  const average = ratings.length ? ratings.reduce((sum, value) => sum + value, 0) / ratings.length : 0;
-  els.avgRating.textContent = average.toFixed(1);
-}
-
-function renderList() {
-  const visible = state.filtered.slice(0, 120);
-  if (!visible.length) {
-    els.poiList.innerHTML = `<div class="empty-state">Không có địa điểm phù hợp.</div>`;
-    return;
+function renderPlan(data) {
+  const panel=$("itinerary");panel.replaceChildren();
+  const status={ready:"Lịch trình theo dữ liệu hiện có",provisional:"Lịch trình tạm tính",insufficient_data:"Chưa tạo được lịch trình",routing_unavailable:"Chưa có dịch vụ tuyến đường"};
+  panel.append(node("h2",status[data.status]||data.status),node("p",data.reason));
+  for(const warning of data.warnings||[]) panel.append(node("p",warning,"warning"));
+  for(const [index,stop] of (data.stops||[]).entries()) {
+    const card=node("article",undefined,"stop");
+    const title=node("button",(index+1)+". "+stop.name,"poi-button");title.onclick=()=>showDetail(stop);
+    card.append(title,node("p",stop.arrival_time+" đến · "+stop.visit_start_time+" tham quan · "+stop.departure_time+" rời"),
+      node("p","Lái xe tới điểm: "+Math.ceil(data.legs[index].duration_seconds/60)+" phút · Chờ: "+Math.ceil(stop.wait_minutes)+" phút"),
+      node("p",stop.hours_status==="known" ? "Lịch mở cửa có dữ liệu cho ngày chọn" : "Cần kiểm tra giờ mở cửa"));
+    panel.append(card);
   }
-
-  els.poiList.innerHTML = visible.map((poi) => `
-    <button class="poi-card ${poi.id === state.selectedId ? "active" : ""}" data-id="${poi.id}">
-      ${imageMarkup(poi, "thumb")}
-      <span>
-        <h2>${escapeHtml(poi.name)}</h2>
-        <p class="meta-line">
-          <span>${escapeHtml(poi.location)}</span>
-          <span>${escapeHtml(poi.type || "Unknown")}</span>
-        </p>
-        <p class="meta-line">
-          <span>${poi.rating ? `${poi.rating.toFixed(1)} sao` : "Chưa có rating"}</span>
-          <span>${formatNumber(poi.reviewCount)} reviews</span>
-        </p>
-        <span class="tag-row">
-          ${(poi.keywords || []).slice(0, 3).map((keyword) => `<span class="tag">${escapeHtml(keyword)}</span>`).join("")}
-        </span>
-      </span>
-    </button>
-  `).join("");
-}
-
-function markerIcon(poi) {
-  const isHot = (poi.reviewCount || 0) > 1000 || (poi.rating || 0) >= 4.7;
-  return L.divIcon({
-    className: "",
-    html: `<div class="marker-dot ${isHot ? "hot" : ""}"></div>`,
-    iconSize: [13, 13],
-    iconAnchor: [6, 6],
-  });
-}
-
-function renderMap() {
-  markerLayer.clearLayers();
-  state.markers.clear();
-
-  const visible = state.filtered.slice(0, 650);
-  const bounds = [];
-  visible.forEach((poi) => {
-    const marker = L.marker([poi.lat, poi.lng], { icon: markerIcon(poi), title: poi.name });
-    marker.on("click", () => selectPoi(poi.id, true));
-    marker.addTo(markerLayer);
-    state.markers.set(poi.id, marker);
-    bounds.push([poi.lat, poi.lng]);
-  });
-
-  if (bounds.length && !state.selectedId) {
-    map.fitBounds(bounds, { padding: [30, 30], maxZoom: 8 });
+  if(data.return_time) panel.append(node("p","Quay về: "+data.return_time+" · Tổng lái xe: "+Math.ceil(data.drive_seconds/60)+" phút"));
+  if(data.ranking) {
+    const details=node("details");details.append(node("summary","Vì sao có kết quả này?"));
+    details.append(node("p","Fuzzy AHP + TOPSIS · CR="+data.ranking.cr.toFixed(3)+" · Điểm tương đối trong tập ứng viên"));
+    details.append(node("p","Trọng số: "+Object.entries(data.ranking.weights).map(([k,v])=>k+" "+v.toFixed(3)).join(" · ")));
+    panel.append(details);
   }
+  if(data.geometry && map) {routeLayer=L.geoJSON(data.geometry,{style:{color:"#b45309",weight:5}}).addTo(map);map.fitBounds(routeLayer.getBounds(),{padding:[30,30],animate:false});}
+  if(data.stops?.length) showDetail(data.stops[0]);
 }
-
-function renderDetail(poi) {
-  if (!poi) {
-    els.detailPanel.innerHTML = "";
-    return;
-  }
-
-  els.detailPanel.innerHTML = `
-    ${imageMarkup(poi, "detail-image")}
-    <h2>${escapeHtml(poi.name)}</h2>
-    <p class="meta-line">
-      <span>${escapeHtml(poi.location)}</span>
-      <span>${escapeHtml(poi.type || "Unknown")}</span>
-      <span>${poi.rating ? `${poi.rating.toFixed(1)} sao` : "Chưa có rating"}</span>
-      <span>${formatNumber(poi.reviewCount)} reviews</span>
-    </p>
-    ${poi.description ? `<p>${escapeHtml(poi.description)}</p>` : ""}
-    ${poi.hours ? `<p><strong>Giờ mở cửa:</strong> ${escapeHtml(poi.hours)}</p>` : ""}
-    <div class="tag-row">
-      ${(poi.keywords || []).map((keyword) => `<span class="tag">${escapeHtml(keyword)}</span>`).join("")}
-    </div>
-    <div class="detail-actions">
-      <button class="action-button" data-action="save" type="button">Lưu</button>
-      <button class="action-button" data-action="visit" type="button">Đã ghé</button>
-      ${poi.url ? `<a href="${escapeHtml(poi.url)}" target="_blank" rel="noreferrer">Mở Google Maps</a>` : ""}
-    </div>
-  `;
+$("planForm").onsubmit=async event=>{
+  event.preventDefault();invalidatePlan();const version=state.planVersion;
+  $("planButton").disabled=true;$("itinerary").replaceChildren(node("p","Đang kiểm tra tuyến đường và giờ mở cửa…"));
+  const payload={start:{latitude:Number($("latitude").value),longitude:Number($("longitude").value)},date:$("tripDate").value,
+    start_time:$("startTime").value,end_time:$("endTime").value,radius_km:Number($("radius").value),
+    location:$("locationFilter").value,query:$("searchInput").value,
+    categories:$("typeFilter").value?[$("typeFilter").value]:[],interests:$("interests").value.split(",").map(x=>x.trim()).filter(Boolean),
+    pairwise_preferences:{preference_over_drive_time:Number($("prefDrive").value),preference_over_data_confidence:Number($("prefData").value),drive_time_over_data_confidence:Number($("driveData").value)}};
+  try {const data=await api("/api/itineraries",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});if(version===state.planVersion) renderPlan(data);}
+  catch(error) {if(version===state.planVersion) $("itinerary").replaceChildren(node("p",error.message,"warning"));}
+  finally {$("planButton").disabled=false;}
+};
+for(const id of ["prefDrive","prefData","driveData"]) {
+  for(const value of [1/9,1/5,1/3,1,3,5,9]) {const opt=node("option",value<1?"1/"+Math.round(1/value):String(value));opt.value=value;$(id).append(opt);}
+  $(id).value="1";
 }
-
-function selectPoi(id, pan = false) {
-  state.selectedId = id;
-  const poi = state.pois.find((item) => item.id === id);
-  renderDetail(poi);
-  renderList();
-
-  const marker = state.markers.get(id);
-  if (marker) {
-    marker.openPopup();
-  }
-  if (pan && poi) {
-    map.setView([poi.lat, poi.lng], Math.max(map.getZoom(), 12), { animate: true });
-  }
-}
-
-function render() {
-  renderStats();
-  renderList();
-  renderMap();
-  const selected = state.filtered.find((poi) => poi.id === state.selectedId);
-  renderDetail(selected || state.filtered[0]);
-}
-
-function bindEvents() {
-  [
-    els.searchInput,
-    els.locationFilter,
-    els.typeFilter,
-    els.ratingFilter,
-    els.sortSelect,
-    els.hasReviews,
-    els.hasHours,
-  ].forEach((input) => input.addEventListener("input", () => {
-    state.selectedId = null;
-    filterPois();
-  }));
-
-  els.resetFilters.addEventListener("click", () => {
-    els.searchInput.value = "";
-    els.locationFilter.value = "";
-    els.typeFilter.value = "";
-    els.ratingFilter.value = "0";
-    els.sortSelect.value = "quality";
-    els.hasReviews.checked = false;
-    els.hasHours.checked = false;
-    state.selectedId = null;
-    filterPois();
-  });
-
-  els.poiList.addEventListener("click", (event) => {
-    const card = event.target.closest(".poi-card");
-    if (!card) return;
-    selectPoi(Number(card.dataset.id), true);
-  });
-
-  els.recommendButton.addEventListener("click", renderRecommendations);
-  els.userMode.addEventListener("change", renderRecommendations);
-  els.recommendationQuery.addEventListener("input", renderRecommendations);
-  els.recommendationList.addEventListener("click", (event) => {
-    const item = event.target.closest(".recommendation-item");
-    if (!item) return;
-    selectPoi(Number(item.dataset.id), true);
-    recordInteraction(Number(item.dataset.id), "click");
-  });
-  els.detailPanel.addEventListener("click", (event) => {
-    const actionButton = event.target.closest("[data-action]");
-    if (!actionButton) return;
-    const poi = state.pois.find((item) => item.id === state.selectedId);
-    if (poi) recordInteraction(poi.id, actionButton.dataset.action);
-  });
-}
-
-async function init() {
-  // Always load the latest generated coordinates during local development.
-  const response = await fetch("./data/pois.json", { cache: "no-store" });
-  const data = await response.json();
-  state.pois = data.pois.map((poi) => ({ ...poi, _search: poiSearchText(poi) }));
-  state.interactions = loadInteractions();
-  ensureDemoInteractions();
-  populateFilters(data.meta);
-  bindEvents();
-  filterPois();
-  renderRecommendations();
-}
-
-init().catch((error) => {
-  els.poiList.innerHTML = `<div class="empty-state">Không tải được dữ liệu: ${escapeHtml(error.message)}</div>`;
-});
+$("tripDate").value=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Ho_Chi_Minh",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+$("planForm").addEventListener("change",()=>{updateStart();invalidatePlan();});
+let searchTimer;
+$("searchInput").oninput=()=>{invalidatePlan();clearTimeout(searchTimer);searchTimer=setTimeout(loadPois,250);};
+$("typeFilter").onchange=()=>{invalidatePlan();loadPois();};
+$("locationFilter").onchange=()=>{
+  const centers={"Hà Nội":[21.0285,105.8542],"Đà Nẵng":[16.0544,108.2022]};
+  const center=centers[$("locationFilter").value];
+  if(center){$("latitude").value=center[0];$("longitude").value=center[1];if(map)map.setView(center,12);}
+  updateStart();invalidatePlan();loadPois();
+};
+(async()=>{
+  try {
+    const data=await api("/api/pois?limit=1");
+    for(const location of data.locations) {const opt=node("option",location);opt.value=location;$("locationFilter").append(opt);}
+    for(const category of data.categories) {const opt=node("option",labels[category]||category);opt.value=category;$("typeFilter").append(opt);}
+    $("locationFilter").value="Hà Nội";
+    const cov=await api("/api/coverage");
+    for(const row of cov.locations.filter(r=>["Hà Nội","Đà Nẵng"].includes(r.location))) {
+      $("coverage").append(node("p",row.location+": "+row.usable+" điểm đủ điều kiện dữ liệu; "+row.hours_parsed+" có giờ phân tích được; "+row.source_checked+" có biên bản đối soát nguồn."));
+    }
+    $("systemStatus").textContent="Dữ liệu có nguồn · Chọn điểm xuất phát và thời gian để bắt đầu.";
+    $("coverage").append(node("p","Phiên bản dữ liệu: "+cov.dataset_version));
+    for(const row of cov.road_audit||[]) $("coverage").append(node("p",row.location+": "+row.routable+"/"+row.tested+" điểm qua kiểm tra đường đi và khoảng cách tới đường ô tô. Chưa xác minh lối vào thực địa."));
+    updateStart();await loadPois();
+  }catch(error){$("systemStatus").textContent=error.message;}
+})();

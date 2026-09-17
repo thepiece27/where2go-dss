@@ -1,0 +1,3553 @@
+[
+  {
+    "poi_id": "osm:node:10133138818",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1016630582",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:10223608917",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037736905",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037737078",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037737131",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037737163",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037737181",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037737215",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1037737395",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:10635540903",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:10758119407",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:10793078957",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:10821152105",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:10988967691",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11140223636",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11140223637",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:11140223636"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11140223638",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11140224953",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11140224954",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11140224955",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:11140224954"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11358233673",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11387521567",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11425582714",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11443521788",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11527179496",
+    "reasons": [
+      "duplicate_of:osm:node:11527158960"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11618566160",
+    "reasons": [
+      "duplicate_of:osm:node:11581700332"
+    ]
+  },
+  {
+    "poi_id": "osm:node:11817668586",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12104269171",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12104285788",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12105535245",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:11140223636"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12105554156",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:11140224954"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12105554157",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:11140224954"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12128958634",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12299561533",
+    "reasons": [
+      "duplicate_of:osm:node:12299561532"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12382639867",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12480444201",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12483905101",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12492312473",
+    "reasons": [
+      "duplicate_of:osm:node:12492312457"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12617745001",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12647208262",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12736464457",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1276258120",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12818429487",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:12848915702",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1336401464",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13420414198",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13484040419",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13505854889",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13513865301",
+    "reasons": [
+      "duplicate_of:osm:node:13513865201"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13516003942",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949246",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949250",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949252",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949253",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949254",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949257",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949259",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13539949272",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13566332701",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13587412402",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13633061400",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13633061401",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13657735001",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13690101102",
+    "reasons": [
+      "duplicate_of:osm:node:13685861301"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13690101201",
+    "reasons": [
+      "duplicate_of:osm:node:13685861401"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13690260201",
+    "reasons": [
+      "duplicate_of:osm:node:13684278301"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13690260203",
+    "reasons": [
+      "duplicate_of:osm:node:13685861401"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13690260401",
+    "reasons": [
+      "duplicate_of:osm:node:13685861301"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13707121732",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13800462101",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:13947197664",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:14095849703",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:14095860513",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:14131078101",
+    "reasons": [
+      "duplicate_of:osm:node:14131061102"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1527934285",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1552566836",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1636134793",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:1636139793",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919707",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919708",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919709",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919710",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919712",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919713",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919714",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919715",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919716",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919717",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919719",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919721",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919723",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919725",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919726",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919727",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919728",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919729",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919730",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919731",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919732",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919734",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919735",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919736",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2088919737",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2273284563",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2337865303",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2707025319",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2708085525",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:2749636616",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:3482735052",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:3516472422",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:3619562896",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:3690121742",
+    "reasons": [
+      "duplicate_of:osm:node:3690121740"
+    ]
+  },
+  {
+    "poi_id": "osm:node:3889096567",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4124936891",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4139586001",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4172034499",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4172081938",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4259837989",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4290014490",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4346714789",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4347089780",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4472600793",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4472642290",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4496334590",
+    "reasons": [
+      "duplicate_of:osm:node:13388919549"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4600449293",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4682352213",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4713142090",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4715422690",
+    "reasons": [
+      "duplicate_of:osm:node:4715404591"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4716178797",
+    "reasons": [
+      "duplicate_of:osm:node:12492265366"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4741642219",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4884705621",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4898430958",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4924323121",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4956619832",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:4959124022",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5047534424",
+    "reasons": [
+      "duplicate_of:osm:node:12805852194"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5048543821",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5112158121",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5147203123",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5202498021",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5207506722",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5233871122",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5316382623",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5325163021",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5336416675",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5336909223",
+    "reasons": [
+      "duplicate_of:osm:node:12121873209"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5361071925",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5507108925",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5575320483",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5736659006",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5792111781",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5826260261",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5922616535",
+    "reasons": [
+      "duplicate_of:osm:node:4695553190"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5922616536",
+    "reasons": [
+      "duplicate_of:osm:node:4695553190"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5984618285",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:5984618286",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6052212185",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6076276485",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6084021486",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6084023486",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6202400186",
+    "reasons": [
+      "duplicate_of:osm:node:6202400185"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6232955923",
+    "reasons": [
+      "duplicate_of:osm:node:3690121740"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6232955942",
+    "reasons": [
+      "duplicate_of:osm:node:10820761946"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6232955943",
+    "reasons": [
+      "duplicate_of:osm:node:3690121740"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6274092945",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6293770430",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6314254009",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6445886190",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6507010263",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6806979085",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6816894511",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6861462485",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6892187773",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6895804352",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6897629528",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6899808319",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:6920066882",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7005393785",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7113815237",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7113815246",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7113815247",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7123826687",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7123826688",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7130126788",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7142747685",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7248365886",
+    "reasons": [
+      "duplicate_of:osm:node:11929829169"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7300993186",
+    "reasons": [
+      "duplicate_of:osm:node:6366523385"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7300993488",
+    "reasons": [
+      "duplicate_of:osm:node:7298324386"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7331558785",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7495819111",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7540666285",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7645040503",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7947228151",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:7979567014",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:8226929918",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:8226951017",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:8422278717",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:849300563",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:8581608679",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9107994481",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:5792111781"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9412029952",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9694344769",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9946489226",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9959105917",
+    "reasons": [
+      "duplicate_of:osm:node:9959092217"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9959751217",
+    "reasons": [
+      "duplicate_of:osm:node:9959749517"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9960625540",
+    "reasons": [
+      "duplicate_of:osm:node:9960625535"
+    ]
+  },
+  {
+    "poi_id": "osm:node:9960625544",
+    "reasons": [
+      "duplicate_of:osm:node:9960625535"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:10356027",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:15662995",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:17576987",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:17877171",
+    "reasons": [
+      "duplicate_of:osm:node:5661470624"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:18542793",
+    "reasons": [
+      "duplicate_of:osm:node:4172408414"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:19000664",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:19191948",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:19465353",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:19902805",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:19916018",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:20057203",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:relation:20402110",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1025088296",
+    "reasons": [
+      "duplicate_of:osm:way:1025088295"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1035569969",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1036030791",
+    "reasons": [
+      "duplicate_of:osm:way:1036030790"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1050684699",
+    "reasons": [
+      "duplicate_of:osm:node:9518711737"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1064303922",
+    "reasons": [
+      "duplicate_of:osm:way:1064303921"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1075986223",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1081410188",
+    "reasons": [
+      "duplicate_of:osm:node:9911660993"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1082227920",
+    "reasons": [
+      "duplicate_of:osm:node:6282134029"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1094011834",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1106866558",
+    "reasons": [
+      "duplicate_of:osm:way:1002535124"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1108263300",
+    "reasons": [
+      "duplicate_of:osm:node:10932654353"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1108273912",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1108274659",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1108275573",
+    "reasons": [
+      "duplicate_of:osm:way:1108275551"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1108576027",
+    "reasons": [
+      "duplicate_of:osm:way:1108576026"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1108576028",
+    "reasons": [
+      "duplicate_of:osm:way:1108576026"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1110288264",
+    "reasons": [
+      "duplicate_of:osm:way:1110288163"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1120491145",
+    "reasons": [
+      "duplicate_of:osm:way:1120491144"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1120513537",
+    "reasons": [
+      "duplicate_of:osm:node:2477239340"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1122899912",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1126747039",
+    "reasons": [
+      "duplicate_of:osm:way:1123723059"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1134510624",
+    "reasons": [
+      "duplicate_of:osm:node:10574519041"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1134520817",
+    "reasons": [
+      "duplicate_of:osm:node:10574606584"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1148275990",
+    "reasons": [
+      "duplicate_of:osm:node:13083692966"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1153950441",
+    "reasons": [
+      "duplicate_of:osm:way:1108261874"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1158936961",
+    "reasons": [
+      "duplicate_of:osm:way:1107308686"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1158936962",
+    "reasons": [
+      "duplicate_of:osm:way:1107308686"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1159104315",
+    "reasons": [
+      "duplicate_of:osm:node:1814474846"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1159104318",
+    "reasons": [
+      "duplicate_of:osm:node:1814474832"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1159194091",
+    "reasons": [
+      "duplicate_of:osm:way:1159194090"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1167382429",
+    "reasons": [
+      "duplicate_of:osm:node:10856178304"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176733780",
+    "reasons": [
+      "duplicate_of:osm:way:1176733779"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176733782",
+    "reasons": [
+      "duplicate_of:osm:node:7915869485"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176733783",
+    "reasons": [
+      "duplicate_of:osm:node:9991869767"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176733792",
+    "reasons": [
+      "duplicate_of:osm:node:9963236669"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176733807",
+    "reasons": [
+      "duplicate_of:osm:node:9963236668"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176733808",
+    "reasons": [
+      "duplicate_of:osm:node:10932765436"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1176760615",
+    "reasons": [
+      "duplicate_of:osm:node:1812082284"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1189393346",
+    "reasons": [
+      "duplicate_of:osm:node:7234681285"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1189743735",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1192418438",
+    "reasons": [
+      "duplicate_of:osm:way:1192418437"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1193057654",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1195550420",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1201583390",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:11140224953"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1204900824",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1205391949",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1205391950",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1215596734",
+    "reasons": [
+      "duplicate_of:osm:node:9593196276"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1216840362",
+    "reasons": [
+      "duplicate_of:osm:node:5568791023"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1221371378",
+    "reasons": [
+      "duplicate_of:osm:node:9585091204"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1225233356",
+    "reasons": [
+      "duplicate_of:osm:node:9585091201"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1228058639",
+    "reasons": [
+      "duplicate_of:osm:node:11091242593"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1234926600",
+    "reasons": [
+      "duplicate_of:osm:way:1234926599"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1234939217",
+    "reasons": [
+      "duplicate_of:osm:way:1234926599"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1235472350",
+    "reasons": [
+      "duplicate_of:osm:node:9587309958"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1239290934",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1241794322",
+    "reasons": [
+      "duplicate_of:osm:node:11538581577"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1245997779",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1252183181",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop",
+      "duplicate_of:osm:node:1037737131"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1256790915",
+    "reasons": [
+      "duplicate_of:osm:way:1256790914"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1272644832",
+    "reasons": [
+      "duplicate_of:osm:way:1272644787"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1276298011",
+    "reasons": [
+      "duplicate_of:osm:way:1276298008"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1291950403",
+    "reasons": [
+      "duplicate_of:osm:node:8322238172"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1301971669",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1306372812",
+    "reasons": [
+      "duplicate_of:osm:node:4531908000"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1306624189",
+    "reasons": [
+      "duplicate_of:osm:node:9587204850"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1306624222",
+    "reasons": [
+      "duplicate_of:osm:node:9587618754"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1308615194",
+    "reasons": [
+      "duplicate_of:osm:node:11058996842"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1308835021",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1308839165",
+    "reasons": [
+      "duplicate_of:osm:node:4527079991"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1309219514",
+    "reasons": [
+      "duplicate_of:osm:way:1171510655"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1313916526",
+    "reasons": [
+      "duplicate_of:osm:node:11054448200"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1314396510",
+    "reasons": [
+      "duplicate_of:osm:node:9593386625"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1322063205",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1324009704",
+    "reasons": [
+      "duplicate_of:osm:node:12313213499"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1331423729",
+    "reasons": [
+      "duplicate_of:osm:node:12319043888"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1339199613",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1346312053",
+    "reasons": [
+      "duplicate_of:osm:node:12452511544"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1347307012",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1348698157",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1349608594",
+    "reasons": [
+      "duplicate_of:osm:way:1349608593"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1349733149",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1351205680",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1360680180",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1360680181",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1360680182",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1363787954",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1376695093",
+    "reasons": [
+      "duplicate_of:osm:node:12747321063"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1383217347",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1383798860",
+    "reasons": [
+      "duplicate_of:osm:node:9956193980"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1384066075",
+    "reasons": [
+      "duplicate_of:osm:node:12814525335"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1384656098",
+    "reasons": [
+      "duplicate_of:osm:node:12819732620"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1395631573",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1402174620",
+    "reasons": [
+      "duplicate_of:osm:node:4713519694"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1411603032",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1415072215",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1415072216",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1415343216",
+    "reasons": [
+      "duplicate_of:osm:node:12733263316"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1425961484",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1429183246",
+    "reasons": [
+      "duplicate_of:osm:node:13137758093"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1429436252",
+    "reasons": [
+      "duplicate_of:osm:node:13140314973"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1429645056",
+    "reasons": [
+      "duplicate_of:osm:way:1429645007"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1436325301",
+    "reasons": [
+      "duplicate_of:osm:node:1806798967"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1448152374",
+    "reasons": [
+      "duplicate_of:osm:node:13286851705"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1456837244",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1458350583",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1462254702",
+    "reasons": [
+      "duplicate_of:osm:node:1777889652"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1468661195",
+    "reasons": [
+      "duplicate_of:osm:way:1396507642"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1468661196",
+    "reasons": [
+      "duplicate_of:osm:way:1396507642"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1468661197",
+    "reasons": [
+      "duplicate_of:osm:way:1396507642"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1468661198",
+    "reasons": [
+      "duplicate_of:osm:way:1396507642"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1468661199",
+    "reasons": [
+      "duplicate_of:osm:way:1396507642"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1468661200",
+    "reasons": [
+      "duplicate_of:osm:way:1396507642"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1469438352",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1469438377",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1469438378",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1474583779",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1477812280",
+    "reasons": [
+      "duplicate_of:osm:node:13556032881"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1477812293",
+    "reasons": [
+      "duplicate_of:osm:node:13556032966"
+    ]
+  },
+  {
+    "poi_id": "osm:way:148033230",
+    "reasons": [
+      "duplicate_of:osm:way:148033228"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1489846032",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1490517090",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1490517091",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1490517097",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:way:1490517091"
+    ]
+  },
+  {
+    "poi_id": "osm:way:149699484",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1498699579",
+    "reasons": [
+      "duplicate_of:osm:way:1498699577"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1498699582",
+    "reasons": [
+      "duplicate_of:osm:way:1498699580"
+    ]
+  },
+  {
+    "poi_id": "osm:way:150859298",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:150876064",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:150876066",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:150876067",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1521115214",
+    "reasons": [
+      "duplicate_of:osm:node:13657036294"
+    ]
+  },
+  {
+    "poi_id": "osm:way:152287771",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:152288136",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1540771314",
+    "reasons": [
+      "duplicate_of:osm:node:14014006893"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1545639453",
+    "reasons": [
+      "duplicate_of:osm:way:1545639452"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1545957575",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1546195288",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1547591319",
+    "reasons": [
+      "duplicate_of:osm:node:14075933898"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1552224971",
+    "reasons": [
+      "duplicate_of:osm:way:1552224970"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1552224972",
+    "reasons": [
+      "duplicate_of:osm:way:1552224970"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1557987423",
+    "reasons": [
+      "duplicate_of:osm:node:9671017353"
+    ]
+  },
+  {
+    "poi_id": "osm:way:1559048467",
+    "reasons": [
+      "duplicate_of:osm:node:14182622490"
+    ]
+  },
+  {
+    "poi_id": "osm:way:166553255",
+    "reasons": [
+      "duplicate_of:osm:node:5256988878"
+    ]
+  },
+  {
+    "poi_id": "osm:way:166671405",
+    "reasons": [
+      "duplicate_of:osm:node:5177654983"
+    ]
+  },
+  {
+    "poi_id": "osm:way:178995269",
+    "reasons": [
+      "island_monument_no_verified_car_access"
+    ]
+  },
+  {
+    "poi_id": "osm:way:185937855",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:192214961",
+    "reasons": [
+      "duplicate_of:osm:way:1474294608"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804448",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804451",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804453",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804455",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804459",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804461",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804463",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:198804465",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:207742943",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:221906193",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:222004462",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:225533933",
+    "reasons": [
+      "duplicate_of:osm:node:4407485889"
+    ]
+  },
+  {
+    "poi_id": "osm:way:231779290",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:231784653",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:231894919",
+    "reasons": [
+      "duplicate_of:osm:node:11784634071"
+    ]
+  },
+  {
+    "poi_id": "osm:way:233875809",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:234800751",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:235097274",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:240539264",
+    "reasons": [
+      "duplicate_of:osm:relation:19474639"
+    ]
+  },
+  {
+    "poi_id": "osm:way:240539265",
+    "reasons": [
+      "duplicate_of:osm:relation:19474639"
+    ]
+  },
+  {
+    "poi_id": "osm:way:256675637",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:259375905",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:261042873",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:261250072",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:261250221",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:261881688",
+    "reasons": [
+      "duplicate_of:osm:node:7108856826"
+    ]
+  },
+  {
+    "poi_id": "osm:way:262963870",
+    "reasons": [
+      "duplicate_of:osm:node:9587618724"
+    ]
+  },
+  {
+    "poi_id": "osm:way:272268190",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:272274254",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:300672242",
+    "reasons": [
+      "duplicate_of:osm:node:1532249206"
+    ]
+  },
+  {
+    "poi_id": "osm:way:316834301",
+    "reasons": [
+      "duplicate_of:osm:node:2995947269"
+    ]
+  },
+  {
+    "poi_id": "osm:way:321991608",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:323745730",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:327447647",
+    "reasons": [
+      "duplicate_of:osm:node:9593240655"
+    ]
+  },
+  {
+    "poi_id": "osm:way:328191705",
+    "reasons": [
+      "duplicate_of:osm:relation:4589744"
+    ]
+  },
+  {
+    "poi_id": "osm:way:336053459",
+    "reasons": [
+      "duplicate_of:osm:way:336053458"
+    ]
+  },
+  {
+    "poi_id": "osm:way:360972817",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:360972818",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:366069915",
+    "reasons": [
+      "duplicate_of:osm:node:9593386625"
+    ]
+  },
+  {
+    "poi_id": "osm:way:369966234",
+    "reasons": [
+      "duplicate_of:osm:node:3737011402"
+    ]
+  },
+  {
+    "poi_id": "osm:way:370138210",
+    "reasons": [
+      "duplicate_of:osm:node:3738797066"
+    ]
+  },
+  {
+    "poi_id": "osm:way:384652651",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:387271617",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:387272522",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:403017309",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:406136497",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:407604909",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:409741436",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:415184594",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:420287581",
+    "reasons": [
+      "duplicate_of:osm:node:9584599328"
+    ]
+  },
+  {
+    "poi_id": "osm:way:440611802",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:451452489",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:455038118",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:474279709",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:475133353",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:478007377",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:480056722",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:481823401",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:486566779",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:486703057",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:487559102",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:487559108",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:489019402",
+    "reasons": [
+      "duplicate_of:osm:node:4813074210"
+    ]
+  },
+  {
+    "poi_id": "osm:way:493251141",
+    "reasons": [
+      "duplicate_of:osm:node:6539155592"
+    ]
+  },
+  {
+    "poi_id": "osm:way:495698484",
+    "reasons": [
+      "duplicate_of:osm:way:495697589"
+    ]
+  },
+  {
+    "poi_id": "osm:way:497979523",
+    "reasons": [
+      "duplicate_of:osm:way:497979471"
+    ]
+  },
+  {
+    "poi_id": "osm:way:508243736",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:541543886",
+    "reasons": [
+      "duplicate_of:osm:node:2673080246"
+    ]
+  },
+  {
+    "poi_id": "osm:way:543238431",
+    "reasons": [
+      "duplicate_of:osm:way:543238430"
+    ]
+  },
+  {
+    "poi_id": "osm:way:544361624",
+    "reasons": [
+      "duplicate_of:osm:way:1388911940"
+    ]
+  },
+  {
+    "poi_id": "osm:way:550384193",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:554587648",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:554587649",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:556942842",
+    "reasons": [
+      "duplicate_of:osm:node:5373874858"
+    ]
+  },
+  {
+    "poi_id": "osm:way:557175763",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:557175765",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:way:557175763"
+    ]
+  },
+  {
+    "poi_id": "osm:way:557276629",
+    "reasons": [
+      "duplicate_of:osm:way:557276626"
+    ]
+  },
+  {
+    "poi_id": "osm:way:557276631",
+    "reasons": [
+      "duplicate_of:osm:way:557276626"
+    ]
+  },
+  {
+    "poi_id": "osm:way:565275128",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:565593787",
+    "reasons": [
+      "duplicate_of:osm:way:565583657"
+    ]
+  },
+  {
+    "poi_id": "osm:way:569352562",
+    "reasons": [
+      "duplicate_of:osm:way:259046009"
+    ]
+  },
+  {
+    "poi_id": "osm:way:588322161",
+    "reasons": [
+      "duplicate_of:osm:node:5628801046"
+    ]
+  },
+  {
+    "poi_id": "osm:way:589315585",
+    "reasons": [
+      "duplicate_of:osm:node:3230436393"
+    ]
+  },
+  {
+    "poi_id": "osm:way:590074862",
+    "reasons": [
+      "duplicate_of:osm:way:589969496"
+    ]
+  },
+  {
+    "poi_id": "osm:way:591475526",
+    "reasons": [
+      "duplicate_of:osm:node:5641363079"
+    ]
+  },
+  {
+    "poi_id": "osm:way:591475533",
+    "reasons": [
+      "duplicate_of:osm:node:5641365646"
+    ]
+  },
+  {
+    "poi_id": "osm:way:591480162",
+    "reasons": [
+      "duplicate_of:osm:node:5641363079"
+    ]
+  },
+  {
+    "poi_id": "osm:way:605281192",
+    "reasons": [
+      "duplicate_of:osm:node:9593386633"
+    ]
+  },
+  {
+    "poi_id": "osm:way:605281193",
+    "reasons": [
+      "duplicate_of:osm:node:9593386621"
+    ]
+  },
+  {
+    "poi_id": "osm:way:624223367",
+    "reasons": [
+      "duplicate_of:osm:node:5894538758"
+    ]
+  },
+  {
+    "poi_id": "osm:way:627379348",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:627379365",
+    "reasons": [
+      "internal_site_component_not_separate_trip_stop"
+    ]
+  },
+  {
+    "poi_id": "osm:way:649534603",
+    "reasons": [
+      "duplicate_of:osm:node:13324564232"
+    ]
+  },
+  {
+    "poi_id": "osm:way:651631885",
+    "reasons": [
+      "duplicate_of:osm:node:4573262427"
+    ]
+  },
+  {
+    "poi_id": "osm:way:666407653",
+    "reasons": [
+      "duplicate_of:osm:way:666407652"
+    ]
+  },
+  {
+    "poi_id": "osm:way:666407654",
+    "reasons": [
+      "duplicate_of:osm:way:666407652"
+    ]
+  },
+  {
+    "poi_id": "osm:way:666407655",
+    "reasons": [
+      "duplicate_of:osm:way:666407652"
+    ]
+  },
+  {
+    "poi_id": "osm:way:666407656",
+    "reasons": [
+      "duplicate_of:osm:way:666407652"
+    ]
+  },
+  {
+    "poi_id": "osm:way:666407659",
+    "reasons": [
+      "duplicate_of:osm:way:666407652"
+    ]
+  },
+  {
+    "poi_id": "osm:way:668869864",
+    "reasons": [
+      "duplicate_of:osm:node:3867252201"
+    ]
+  },
+  {
+    "poi_id": "osm:way:669125008",
+    "reasons": [
+      "duplicate_of:osm:way:669124973"
+    ]
+  },
+  {
+    "poi_id": "osm:way:669630370",
+    "reasons": [
+      "duplicate_of:osm:way:261181197"
+    ]
+  },
+  {
+    "poi_id": "osm:way:669955460",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:672856185",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:673096992",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:675572227",
+    "reasons": [
+      "duplicate_of:osm:node:6319111467"
+    ]
+  },
+  {
+    "poi_id": "osm:way:675609214",
+    "reasons": [
+      "duplicate_of:osm:node:6816894516"
+    ]
+  },
+  {
+    "poi_id": "osm:way:675609221",
+    "reasons": [
+      "duplicate_of:osm:way:675609220"
+    ]
+  },
+  {
+    "poi_id": "osm:way:677227553",
+    "reasons": [
+      "duplicate_of:osm:way:252581207"
+    ]
+  },
+  {
+    "poi_id": "osm:way:677618844",
+    "reasons": [
+      "duplicate_of:osm:node:6344700974"
+    ]
+  },
+  {
+    "poi_id": "osm:way:680054170",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:680261892",
+    "reasons": [
+      "duplicate_of:osm:node:6369688515"
+    ]
+  },
+  {
+    "poi_id": "osm:way:680569931",
+    "reasons": [
+      "duplicate_of:osm:node:5430822321"
+    ]
+  },
+  {
+    "poi_id": "osm:way:681175689",
+    "reasons": [
+      "duplicate_of:osm:node:6423768508"
+    ]
+  },
+  {
+    "poi_id": "osm:way:681362120",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:681368693",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:682073307",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:684861251",
+    "reasons": [
+      "duplicate_of:osm:way:684861250"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470978",
+    "reasons": [
+      "duplicate_of:osm:node:6423768396"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470979",
+    "reasons": [
+      "duplicate_of:osm:node:6423768403"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470985",
+    "reasons": [
+      "duplicate_of:osm:node:6423768436"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470986",
+    "reasons": [
+      "duplicate_of:osm:node:6423768445"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470987",
+    "reasons": [
+      "duplicate_of:osm:node:6423768452"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470988",
+    "reasons": [
+      "duplicate_of:osm:node:6423768461"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470996",
+    "reasons": [
+      "duplicate_of:osm:node:6423768502"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470997",
+    "reasons": [
+      "duplicate_of:osm:node:6423768507"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685470998",
+    "reasons": [
+      "duplicate_of:osm:node:6423768514"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685471004",
+    "reasons": [
+      "duplicate_of:osm:node:6423768537"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685471006",
+    "reasons": [
+      "duplicate_of:osm:node:6423768559"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685471008",
+    "reasons": [
+      "duplicate_of:osm:node:6423768568"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685471009",
+    "reasons": [
+      "duplicate_of:osm:node:6423768568"
+    ]
+  },
+  {
+    "poi_id": "osm:way:685664963",
+    "reasons": [
+      "duplicate_of:osm:way:685664950"
+    ]
+  },
+  {
+    "poi_id": "osm:way:686296020",
+    "reasons": [
+      "duplicate_of:osm:node:1276747548"
+    ]
+  },
+  {
+    "poi_id": "osm:way:693082790",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:693903041",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:693903044",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:694352946",
+    "reasons": [
+      "duplicate_of:osm:way:694352945"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695039562",
+    "reasons": [
+      "duplicate_of:osm:way:695039561"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695039564",
+    "reasons": [
+      "duplicate_of:osm:way:695039563"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260211",
+    "reasons": [
+      "duplicate_of:osm:way:695260210"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260215",
+    "reasons": [
+      "duplicate_of:osm:way:695260214"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260216",
+    "reasons": [
+      "duplicate_of:osm:way:695260214"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260218",
+    "reasons": [
+      "duplicate_of:osm:way:695260214"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260223",
+    "reasons": [
+      "duplicate_of:osm:way:695260222"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260224",
+    "reasons": [
+      "duplicate_of:osm:way:695260222"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260225",
+    "reasons": [
+      "duplicate_of:osm:way:695260222"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260227",
+    "reasons": [
+      "duplicate_of:osm:way:695260226"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260228",
+    "reasons": [
+      "duplicate_of:osm:way:695260226"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695260229",
+    "reasons": [
+      "duplicate_of:osm:way:695260226"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695775607",
+    "reasons": [
+      "duplicate_of:osm:way:118541971"
+    ]
+  },
+  {
+    "poi_id": "osm:way:695810789",
+    "reasons": [
+      "duplicate_of:osm:way:617944738"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698299",
+    "reasons": [
+      "duplicate_of:osm:way:696698294"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698305",
+    "reasons": [
+      "duplicate_of:osm:way:696698304"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698306",
+    "reasons": [
+      "duplicate_of:osm:way:696698304"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698309",
+    "reasons": [
+      "duplicate_of:osm:way:696698308"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698310",
+    "reasons": [
+      "duplicate_of:osm:way:696698308"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698311",
+    "reasons": [
+      "duplicate_of:osm:way:696698308"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698312",
+    "reasons": [
+      "duplicate_of:osm:way:696698308"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696698313",
+    "reasons": [
+      "duplicate_of:osm:way:695260221"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696705911",
+    "reasons": [
+      "duplicate_of:osm:way:696705910"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696705914",
+    "reasons": [
+      "duplicate_of:osm:way:696705913"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696705915",
+    "reasons": [
+      "duplicate_of:osm:way:696705913"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696705917",
+    "reasons": [
+      "duplicate_of:osm:way:694296716"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696752473",
+    "reasons": [
+      "duplicate_of:osm:way:695260226"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931901",
+    "reasons": [
+      "duplicate_of:osm:way:696931900"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931902",
+    "reasons": [
+      "duplicate_of:osm:way:694327317"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931903",
+    "reasons": [
+      "duplicate_of:osm:way:694351743"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931904",
+    "reasons": [
+      "duplicate_of:osm:way:694351743"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931906",
+    "reasons": [
+      "duplicate_of:osm:way:694351744"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931907",
+    "reasons": [
+      "duplicate_of:osm:way:694351744"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931908",
+    "reasons": [
+      "duplicate_of:osm:way:694351744"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931912",
+    "reasons": [
+      "duplicate_of:osm:way:696931911"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931913",
+    "reasons": [
+      "duplicate_of:osm:way:696931911"
+    ]
+  },
+  {
+    "poi_id": "osm:way:696931914",
+    "reasons": [
+      "duplicate_of:osm:way:696931911"
+    ]
+  },
+  {
+    "poi_id": "osm:way:700853379",
+    "reasons": [
+      "duplicate_of:osm:way:1507957173"
+    ]
+  },
+  {
+    "poi_id": "osm:way:724654960",
+    "reasons": [
+      "duplicate_of:osm:way:596819406"
+    ]
+  },
+  {
+    "poi_id": "osm:way:732283659",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:736670006",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:736723352",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:736723391",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:750745981",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:751029497",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:751042597",
+    "reasons": [
+      "duplicate_of:osm:way:751042596"
+    ]
+  },
+  {
+    "poi_id": "osm:way:751056510",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:751056562",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:751261585",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:753496272",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:753880884",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:755508145",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:757223924",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:764092577",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:764092578",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:770242619",
+    "reasons": [
+      "duplicate_of:osm:node:7324276966"
+    ]
+  },
+  {
+    "poi_id": "osm:way:775773134",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:776811000",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:777200332",
+    "reasons": [
+      "duplicate_of:osm:way:777200131"
+    ]
+  },
+  {
+    "poi_id": "osm:way:777891294",
+    "reasons": [
+      "duplicate_of:osm:way:777891293"
+    ]
+  },
+  {
+    "poi_id": "osm:way:780440511",
+    "reasons": [
+      "category_name_conflict"
+    ]
+  },
+  {
+    "poi_id": "osm:way:780440810",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:788324533",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:788721493",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:788741938",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:792920113",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:806860786",
+    "reasons": [
+      "duplicate_of:osm:node:9587486349"
+    ]
+  },
+  {
+    "poi_id": "osm:way:806860835",
+    "reasons": [
+      "duplicate_of:osm:node:9584838627"
+    ]
+  },
+  {
+    "poi_id": "osm:way:816359263",
+    "reasons": [
+      "duplicate_of:osm:node:4425212173"
+    ]
+  },
+  {
+    "poi_id": "osm:way:816359264",
+    "reasons": [
+      "duplicate_of:osm:node:4425212173"
+    ]
+  },
+  {
+    "poi_id": "osm:way:826481390",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:826481393",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:838400065",
+    "reasons": [
+      "duplicate_of:osm:way:377422765"
+    ]
+  },
+  {
+    "poi_id": "osm:way:843094659",
+    "reasons": [
+      "duplicate_of:osm:way:842688454"
+    ]
+  },
+  {
+    "poi_id": "osm:way:863228732",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:871112696",
+    "reasons": [
+      "duplicate_of:osm:node:5114065530"
+    ]
+  },
+  {
+    "poi_id": "osm:way:871576679",
+    "reasons": [
+      "outside_boundary_needs_review",
+      "duplicate_of:osm:node:5048543821"
+    ]
+  },
+  {
+    "poi_id": "osm:way:888793494",
+    "reasons": [
+      "duplicate_of:osm:node:9028513689"
+    ]
+  },
+  {
+    "poi_id": "osm:way:895209247",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:906984455",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:926942273",
+    "reasons": [
+      "outside_boundary_needs_review"
+    ]
+  },
+  {
+    "poi_id": "osm:way:934549622",
+    "reasons": [
+      "duplicate_of:osm:node:6542793086"
+    ]
+  },
+  {
+    "poi_id": "osm:way:934549623",
+    "reasons": [
+      "duplicate_of:osm:node:6542793085"
+    ]
+  },
+  {
+    "poi_id": "osm:way:962675095",
+    "reasons": [
+      "duplicate_of:osm:node:8904957855"
+    ]
+  },
+  {
+    "poi_id": "osm:way:970449051",
+    "reasons": [
+      "duplicate_of:osm:node:8980937102"
+    ]
+  }
+]

@@ -1,119 +1,57 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vietnam POI Explorer</title>
-    <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="app-shell">
-      <aside class="sidebar">
-        <header class="app-header">
-          <div>
-            <p class="eyebrow">Vietnam POI Explorer</p>
-            <h1>Dữ liệu điểm đến</h1>
-          </div>
-          <button id="resetFilters" class="icon-button" title="Reset filters" aria-label="Reset filters">↻</button>
-        </header>
-
-        <section class="stats-grid" aria-label="Dataset summary">
-          <div>
-            <span id="totalCount">0</span>
-            <label>Tổng POI</label>
-          </div>
-          <div>
-            <span id="visibleCount">0</span>
-            <label>Đang hiển thị</label>
-          </div>
-          <div>
-            <span id="avgRating">0.0</span>
-            <label>Rating TB</label>
-          </div>
-        </section>
-
-        <section class="filters" aria-label="Filters">
-          <label>
-            <span>Tìm kiếm</span>
-            <input id="searchInput" type="search" placeholder="Tên, mô tả, từ khóa..." autocomplete="off" />
-          </label>
-
-          <div class="filter-row">
-            <label>
-              <span>Tỉnh/Thành</span>
-              <select id="locationFilter"></select>
-            </label>
-            <label>
-              <span>Loại</span>
-              <select id="typeFilter"></select>
-            </label>
-          </div>
-
-          <div class="filter-row">
-            <label>
-              <span>Rating tối thiểu</span>
-              <input id="ratingFilter" type="range" min="0" max="5" step="0.1" value="0" />
-            </label>
-            <label>
-              <span>Sắp xếp</span>
-              <select id="sortSelect">
-                <option value="quality">Quality</option>
-                <option value="reviews">Reviews</option>
-                <option value="rating">Rating</option>
-                <option value="name">Tên A-Z</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="toggle-row">
-            <label>
-              <input id="hasReviews" type="checkbox" />
-              <span>Có review</span>
-            </label>
-            <label>
-              <input id="hasHours" type="checkbox" />
-              <span>Có giờ mở cửa</span>
-            </label>
-          </div>
-        </section>
-
-        <section class="recommendation-panel" aria-label="Recommendations">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Next POIs</p>
-              <h2>Gợi ý tiếp theo</h2>
-            </div>
-            <span id="recommendationMode" class="mode-badge">Cold-start</span>
-          </div>
-          <div class="recommendation-controls">
-            <label>
-              <span>Người dùng</span>
-              <select id="userMode">
-                <option value="new">Người dùng mới</option>
-                <option value="user_demo">user_demo</option>
-              </select>
-            </label>
-            <label>
-              <span>Ngữ cảnh</span>
-              <input id="recommendationQuery" type="search" placeholder="biển, văn hóa, ngắm cảnh..." autocomplete="off" />
-            </label>
-          </div>
-          <button id="recommendButton" class="primary-button" type="button">Tạo gợi ý</button>
-          <div id="recommendationList" class="recommendation-list" aria-live="polite"></div>
-        </section>
-
-        <section id="poiList" class="poi-list" aria-label="POI list"></section>
-      </aside>
-
-      <section class="map-panel">
-        <div id="map"></div>
-        <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
-      </section>
-    </main>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where2Go — Lịch trình trong ngày</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="app-shell">
+  <aside class="sidebar">
+    <header class="app-header"><div><p class="eyebrow">Where2Go DSS</p><h1>Đi đâu hôm nay?</h1></div></header>
+    <p class="intro">Gợi ý lịch trình ô tô trong ngày, quay về điểm xuất phát. Dữ liệu trọng tâm: Hà Nội và Đà Nẵng mới.</p>
+    <p id="systemStatus" role="status">Đang tải dữ liệu…</p>
+    <section class="filters">
+      <div class="filter-row">
+        <label>Thành phố<select id="locationFilter"><option value="">Tất cả</option></select></label>
+        <label>Loại hình<select id="typeFilter"><option value="">Tất cả</option></select></label>
+      </div>
+      <label>Tìm địa điểm<input id="searchInput" type="search" placeholder="Tên hoặc mô tả"></label>
+    </section>
+    <form id="planForm" class="filters">
+      <h2>Lịch trình của bạn</h2>
+      <p>Nhấn bản đồ để chọn điểm xuất phát hoặc nhập tọa độ.</p>
+      <div class="filter-row">
+        <label>Vĩ độ<input id="latitude" type="number" step="any" min="-90" max="90" value="21.0285" required></label>
+        <label>Kinh độ<input id="longitude" type="number" step="any" min="-180" max="180" value="105.8542" required></label>
+      </div>
+      <div class="filter-row">
+        <label>Ngày đi<input id="tripDate" type="date" required></label>
+        <label>Bán kính tìm (km)<input id="radius" type="number" min="1" max="80" value="30" required></label>
+      </div>
+      <div class="filter-row">
+        <label>Khởi hành<input id="startTime" type="time" value="08:00" required></label>
+        <label>Về trước<input id="endTime" type="time" value="18:00" required></label>
+      </div>
+      <label>Sở thích<input id="interests" placeholder="văn hóa, lịch sử, thiên nhiên"></label>
+      <details><summary>Tùy chỉnh mức quan trọng</summary>
+        <p>1 = quan trọng bằng nhau; 3 = ưu tiên tiêu chí trước gấp 3. Đây là lựa chọn của bạn, không phải trọng số chuyên gia.</p>
+        <label>Sở thích / thời gian lái xe<select id="prefDrive"></select></label>
+        <label>Sở thích / độ tin cậy dữ liệu<select id="prefData"></select></label>
+        <label>Thời gian lái xe / độ tin cậy dữ liệu<select id="driveData"></select></label>
+      </details>
+      <button id="planButton" class="primary-button" type="submit">Tạo lịch trình</button>
+    </form>
+    <section id="itinerary" class="filters" aria-live="polite"></section>
+    <details class="filters"><summary>Độ phủ và nguồn dữ liệu</summary><div id="coverage"></div>
+      <p>© OpenStreetMap contributors · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">ODbL 1.0</a>. Giờ có dữ liệu chưa đồng nghĩa được xác minh thực địa.</p>
+    </details>
+    <section class="filters"><h2 id="listTitle">Địa điểm</h2><div id="poiList"></div></section>
+  </aside>
+  <section class="map-panel"><div id="map"></div><p id="mapStatus" class="map-status" hidden role="status"></p><article id="detailPanel" class="detail-panel" aria-live="polite"></article></section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/app.js"></script>
+</body>
 </html>
