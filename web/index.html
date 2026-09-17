@@ -35,11 +35,26 @@
         <label>Về trước<input id="endTime" type="time" value="18:00" required></label>
       </div>
       <label>Sở thích<input id="interests" placeholder="văn hóa, lịch sử, thiên nhiên"></label>
+      <fieldset class="choice-field"><legend>Chủ đề ưu tiên cho lịch trình</legend><div id="tripCategories" class="choice-grid"></div></fieldset>
+      <label>Loại không muốn ghé<select id="excludedCategories" multiple size="4"></select></label>
+      <div class="toggle-row">
+        <label><input id="onlyCategories" type="checkbox"> Chỉ đi các chủ đề đã chọn</label>
+        <label><input id="includeMeals" type="checkbox" checked> Thêm bữa ăn</label>
+        <label><input id="includeCoffee" type="checkbox"> Thêm nghỉ/cà phê</label>
+      </div>
+      <fieldset class="choice-field"><legend>Nhịp đi</legend><div class="pace-control">
+        <label><input type="radio" name="pace" value="quick"> Nhanh</label>
+        <label><input type="radio" name="pace" value="balanced" checked> Cân bằng</label>
+        <label><input type="radio" name="pace" value="relaxed"> Thư thả</label>
+      </div></fieldset>
       <details><summary>Tùy chỉnh mức quan trọng</summary>
-        <p>1 = quan trọng bằng nhau; 3 = ưu tiên tiêu chí trước gấp 3. Đây là lựa chọn của bạn, không phải trọng số chuyên gia.</p>
-        <label>Sở thích / thời gian lái xe<select id="prefDrive"></select></label>
-        <label>Sở thích / độ tin cậy dữ liệu<select id="prefData"></select></label>
-        <label>Thời gian lái xe / độ tin cậy dữ liệu<select id="driveData"></select></label>
+        <p>Nhập sáu so sánh cặp trong [1/9, 9]. Mặc định được tạo từ trọng số thiết kế 0,40 / 0,30 / 0,20 / 0,10.</p>
+        <label>Sở thích / đánh giá<input id="prefQuality" type="number" min="0.111111" max="9" step="any" value="1.333333"></label>
+        <label>Sở thích / thời gian lái xe<input id="prefDrive" type="number" min="0.111111" max="9" step="any" value="2"></label>
+        <label>Sở thích / độ tin cậy<input id="prefData" type="number" min="0.111111" max="9" step="any" value="4"></label>
+        <label>Đánh giá / thời gian lái xe<input id="qualityDrive" type="number" min="0.111111" max="9" step="any" value="1.5"></label>
+        <label>Đánh giá / độ tin cậy<input id="qualityData" type="number" min="0.111111" max="9" step="any" value="3"></label>
+        <label>Thời gian lái xe / độ tin cậy<input id="driveData" type="number" min="0.111111" max="9" step="any" value="2"></label>
       </details>
       <button id="planButton" class="primary-button" type="submit">Tạo lịch trình</button>
     </form>

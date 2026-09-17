@@ -1,0 +1,34 @@
+[
+  {
+    "location": "Hà Nội",
+    "total": 4488,
+    "usable": 4474,
+    "attractions": 1497,
+    "food_rest": 2977,
+    "with_rating_pair": 58,
+    "with_structured_hours": 609,
+    "with_specific_duration": 0,
+    "targets": {
+      "attractions": 50,
+      "food_rest": 20,
+      "hours_percent": 80,
+      "specific_duration_percent": 80
+    }
+  },
+  {
+    "location": "Đà Nẵng",
+    "total": 2741,
+    "usable": 2680,
+    "attractions": 416,
+    "food_rest": 2264,
+    "with_rating_pair": 22,
+    "with_structured_hours": 410,
+    "with_specific_duration": 0,
+    "targets": {
+      "attractions": 50,
+      "food_rest": 20,
+      "hours_percent": 80,
+      "specific_duration_percent": 80
+    }
+  }
+]

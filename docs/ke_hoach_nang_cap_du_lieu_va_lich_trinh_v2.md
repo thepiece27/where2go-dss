@@ -481,7 +481,9 @@ wrong_location, excluded_category, thematic_filter, entity_unconfirmed,
 business_closed, duplicate_or_child_overlap, outside_radius,
 missing_access_point, no_outbound_route, no_return_route, snap_too_far,
 closed_on_date, time_window_conflict, duration_conflict, stop_limit,
-same_category_limit, required_poi_conflict, routing_unavailable
+same_category_limit, required_poi_conflict, routing_unavailable,
+weak_or_generic_name, insufficient_service_evidence
+category_name_conflict
 ```
 
 Chuỗi hiển thị tiếng Việt thuộc lớp web/explanation; evaluator lưu mã ổn định.

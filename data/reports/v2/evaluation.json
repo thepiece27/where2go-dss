@@ -1,0 +1,3660 @@
+{
+  "dataset_version": "v2-b082a4875a4b349a",
+  "scenario_sha256": "d04664c76d1f4a27ccdb3e3f7a80a9ce17574fbcd8f4096c6f5ee4b94c403235",
+  "methods": [
+    "nearby",
+    "equal",
+    "crisp",
+    "fuzzy"
+  ],
+  "note": "Case study; owner grading is NOT RUN until worksheet is completed.",
+  "results": [
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "nearby",
+      "runtime_seconds": 1.8227,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:node:4499978190",
+        "osm:way:1234036432",
+        "osm:way:879841441"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery",
+        "Vườn hoa Diên Hồng"
+      ],
+      "categories": [
+        "temple",
+        "museum",
+        "gallery",
+        "park"
+      ],
+      "drive_minutes": 6.94,
+      "return_time": "13:32",
+      "reserve_minutes": 15,
+      "objective": 4.197419500103552,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "equal",
+      "runtime_seconds": 0.5423,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:way:700840711",
+        "osm:way:37933256",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Đền Bạch Mã",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "temple",
+        "temple",
+        "museum",
+        "historic"
+      ],
+      "drive_minutes": 16.59,
+      "return_time": "13:12",
+      "reserve_minutes": 15,
+      "objective": 3.8882524084264545,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "crisp",
+      "runtime_seconds": 0.5267,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:700840711",
+        "osm:way:696913691",
+        "osm:way:37933256",
+        "osm:way:178995262"
+      ],
+      "selected_names": [
+        "Đền Bạch Mã",
+        "Hoàng thành Thăng Long",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đền Ngọc Sơn"
+      ],
+      "categories": [
+        "temple",
+        "historic",
+        "museum",
+        "temple"
+      ],
+      "drive_minutes": 15.4,
+      "return_time": "13:11",
+      "reserve_minutes": 15,
+      "objective": 3.8740746515313127,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "fuzzy",
+      "runtime_seconds": 0.5185,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:700840711",
+        "osm:way:696913691",
+        "osm:way:37933256",
+        "osm:way:178995262"
+      ],
+      "selected_names": [
+        "Đền Bạch Mã",
+        "Hoàng thành Thăng Long",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đền Ngọc Sơn"
+      ],
+      "categories": [
+        "temple",
+        "historic",
+        "museum",
+        "temple"
+      ],
+      "drive_minutes": 15.4,
+      "return_time": "13:11",
+      "reserve_minutes": 15,
+      "objective": 3.8740746515313127,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "nearby",
+      "runtime_seconds": 1.0172,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:way:340128580",
+        "osm:way:704147278",
+        "osm:way:700145152"
+      ],
+      "selected_names": [
+        "Nhà tù Hoả Lò",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Mỹ thuật Việt Nam"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 12.31,
+      "return_time": "15:43",
+      "reserve_minutes": 15,
+      "objective": 2.7513256986588743,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 13,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "equal",
+      "runtime_seconds": 0.4382,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:way:340128580",
+        "osm:way:704147278",
+        "osm:way:700145152"
+      ],
+      "selected_names": [
+        "Nhà tù Hoả Lò",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Mỹ thuật Việt Nam"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 12.31,
+      "return_time": "15:43",
+      "reserve_minutes": 15,
+      "objective": 2.7418373425412703,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 13,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "crisp",
+      "runtime_seconds": 0.4434,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:way:340128580",
+        "osm:way:704147278",
+        "osm:way:700145152"
+      ],
+      "selected_names": [
+        "Nhà tù Hoả Lò",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Mỹ thuật Việt Nam"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 12.31,
+      "return_time": "15:43",
+      "reserve_minutes": 15,
+      "objective": 2.655861136523498,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 13,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "fuzzy",
+      "runtime_seconds": 0.4598,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:way:340128580",
+        "osm:way:704147278",
+        "osm:way:700145152"
+      ],
+      "selected_names": [
+        "Nhà tù Hoả Lò",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Mỹ thuật Việt Nam"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 12.31,
+      "return_time": "15:43",
+      "reserve_minutes": 15,
+      "objective": 2.655861136523498,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 13,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.3651,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:node:6801247419",
+        "osm:way:880260998",
+        "osm:way:1286509450"
+      ],
+      "selected_names": [
+        "Bảo tàng Thiên nhiên Việt Nam",
+        "Chợ Nghĩa Tân",
+        "Đình Kim Mã Thượng"
+      ],
+      "categories": [
+        "museum",
+        "market",
+        "temple"
+      ],
+      "drive_minutes": 19.54,
+      "return_time": "15:20",
+      "reserve_minutes": 15,
+      "objective": 3.072637598675834,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.5409,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:223798542",
+        "osm:way:1304386629",
+        "osm:way:28945667"
+      ],
+      "selected_names": [
+        "Vườn hoa Lý Tự Trọng",
+        "Khu khảo cổ học 18 Hoàng Diệu",
+        "Công viên Thủ Lệ"
+      ],
+      "categories": [
+        "park",
+        "park",
+        "zoo"
+      ],
+      "drive_minutes": 23.12,
+      "return_time": "17:24",
+      "reserve_minutes": 15,
+      "objective": 2.4289673198867217,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.5765,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:223798542",
+        "osm:way:1304386629",
+        "osm:way:1305895368"
+      ],
+      "selected_names": [
+        "Vườn hoa Lý Tự Trọng",
+        "Khu khảo cổ học 18 Hoàng Diệu",
+        "Vườn hoa Kính Thiên"
+      ],
+      "categories": [
+        "park",
+        "park",
+        "park"
+      ],
+      "drive_minutes": 28.38,
+      "return_time": "16:29",
+      "reserve_minutes": 15,
+      "objective": 2.6253263731992322,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.4793,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:223798542",
+        "osm:way:1304386629",
+        "osm:way:1305895368"
+      ],
+      "selected_names": [
+        "Vườn hoa Lý Tự Trọng",
+        "Khu khảo cổ học 18 Hoàng Diệu",
+        "Vườn hoa Kính Thiên"
+      ],
+      "categories": [
+        "park",
+        "park",
+        "park"
+      ],
+      "drive_minutes": 28.38,
+      "return_time": "16:29",
+      "reserve_minutes": 15,
+      "objective": 2.6253263731992322,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.2139,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:way:879841441",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Vườn hoa Diên Hồng",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "temple",
+        "park",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 8.15,
+      "return_time": "13:34",
+      "reserve_minutes": 15,
+      "objective": 4.1613780586501985,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.478,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:way:700840711",
+        "osm:way:37933256",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Đền Bạch Mã",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "temple",
+        "temple",
+        "museum",
+        "historic"
+      ],
+      "drive_minutes": 16.59,
+      "return_time": "13:12",
+      "reserve_minutes": 15,
+      "objective": 3.774027729158119,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.4957,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:37933256",
+        "osm:way:700840711",
+        "osm:way:178995262",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đền Bạch Mã",
+        "Đền Ngọc Sơn",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "museum",
+        "temple",
+        "temple",
+        "historic"
+      ],
+      "drive_minutes": 16.46,
+      "return_time": "13:12",
+      "reserve_minutes": 15,
+      "objective": 3.7013272811573477,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.5132,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:37933256",
+        "osm:way:700840711",
+        "osm:way:178995262",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đền Bạch Mã",
+        "Đền Ngọc Sơn",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "museum",
+        "temple",
+        "temple",
+        "historic"
+      ],
+      "drive_minutes": 16.46,
+      "return_time": "13:12",
+      "reserve_minutes": 15,
+      "objective": 3.7013272811573477,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.3284,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:1246953700",
+        "osm:way:1296795442",
+        "osm:node:12876453886",
+        "osm:way:1307631429"
+      ],
+      "selected_names": [
+        "Đình Ngọc Động",
+        "Vietgangz Farm",
+        "Đền Thiên Vương Thịnh",
+        "Vườn hoa Nghè Ngô"
+      ],
+      "categories": [
+        "temple",
+        "zoo",
+        "temple",
+        "park"
+      ],
+      "drive_minutes": 52.37,
+      "return_time": "15:03",
+      "reserve_minutes": 15,
+      "objective": 3.5589265121934517,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.5098,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:1207063057",
+        "osm:way:37933256",
+        "osm:way:1234036432",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Abandoned Van",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đông Phong Art Gallery",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "gallery",
+        "historic"
+      ],
+      "drive_minutes": 52.91,
+      "return_time": "14:18",
+      "reserve_minutes": 15,
+      "objective": 2.804779876127779,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.5166,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:1207063057",
+        "osm:way:37933256",
+        "osm:way:1234036432",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Abandoned Van",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đông Phong Art Gallery",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "gallery",
+        "historic"
+      ],
+      "drive_minutes": 52.91,
+      "return_time": "14:18",
+      "reserve_minutes": 15,
+      "objective": 2.9433443406495523,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.4926,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:1207063057",
+        "osm:way:37933256",
+        "osm:way:1234036432",
+        "osm:way:696913691"
+      ],
+      "selected_names": [
+        "Abandoned Van",
+        "Viện Bảo tàng Lịch sử Việt Nam",
+        "Đông Phong Art Gallery",
+        "Hoàng thành Thăng Long"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "gallery",
+        "historic"
+      ],
+      "drive_minutes": 52.91,
+      "return_time": "14:18",
+      "reserve_minutes": 15,
+      "objective": 2.9433443406495527,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.3301,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:880260998",
+        "osm:way:339936730",
+        "osm:way:1118494921",
+        "osm:way:28945667",
+        "osm:node:5406262022"
+      ],
+      "selected_names": [
+        "Chợ Nghĩa Tân",
+        "Bảo tàng Dân tộc học Việt Nam",
+        "Chùa Hà",
+        "Công viên Thủ Lệ",
+        "Đài quan sát Lotte Skywalk"
+      ],
+      "categories": [
+        "market",
+        "museum",
+        "temple",
+        "zoo",
+        "attraction"
+      ],
+      "drive_minutes": 14.22,
+      "return_time": "12:55",
+      "reserve_minutes": 15,
+      "objective": 5.263204511529751,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.6924,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:28945667",
+        "osm:way:223798542",
+        "osm:way:1305895368",
+        "osm:way:1087731715",
+        "osm:way:37933849"
+      ],
+      "selected_names": [
+        "Công viên Thủ Lệ",
+        "Vườn hoa Lý Tự Trọng",
+        "Vườn hoa Kính Thiên",
+        "Vườn hoa Tao Đàn",
+        "Công viên Thống Nhất"
+      ],
+      "categories": [
+        "zoo",
+        "park",
+        "park",
+        "park",
+        "park"
+      ],
+      "drive_minutes": 30.65,
+      "return_time": "13:21",
+      "reserve_minutes": 15,
+      "objective": 4.028452243705474,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.6513,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:223798542",
+        "osm:way:1304386629",
+        "osm:way:1305895368",
+        "osm:way:29133247",
+        "osm:way:28945667"
+      ],
+      "selected_names": [
+        "Vườn hoa Lý Tự Trọng",
+        "Khu khảo cổ học 18 Hoàng Diệu",
+        "Vườn hoa Kính Thiên",
+        "Gò Đống Đa",
+        "Công viên Thủ Lệ"
+      ],
+      "categories": [
+        "park",
+        "park",
+        "park",
+        "park",
+        "zoo"
+      ],
+      "drive_minutes": 23.53,
+      "return_time": "13:14",
+      "reserve_minutes": 15,
+      "objective": 4.281677943332514,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.702,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:223798542",
+        "osm:way:1304386629",
+        "osm:way:1305895368",
+        "osm:way:29133247",
+        "osm:way:28945667"
+      ],
+      "selected_names": [
+        "Vườn hoa Lý Tự Trọng",
+        "Khu khảo cổ học 18 Hoàng Diệu",
+        "Vườn hoa Kính Thiên",
+        "Gò Đống Đa",
+        "Công viên Thủ Lệ"
+      ],
+      "categories": [
+        "park",
+        "park",
+        "park",
+        "park",
+        "zoo"
+      ],
+      "drive_minutes": 23.53,
+      "return_time": "13:14",
+      "reserve_minutes": 15,
+      "objective": 4.2816779433325145,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.2999,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:way:879841441",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Vườn hoa Diên Hồng",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "temple",
+        "park",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 7.72,
+      "return_time": "13:03",
+      "reserve_minutes": 15,
+      "objective": 4.040408340152755,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.407,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:way:704147278",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "temple",
+        "museum",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 7.77,
+      "return_time": "13:03",
+      "reserve_minutes": 15,
+      "objective": 3.6479250326816732,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.3157,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:node:12090398186",
+        "osm:way:704147278",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Lunet Art Galerie",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "gallery",
+        "museum",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 12.07,
+      "return_time": "13:23",
+      "reserve_minutes": 15,
+      "objective": 3.733188611162214,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.3082,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:node:12090398186",
+        "osm:way:704147278",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Lunet Art Galerie",
+        "Bảo tàng Phụ nữ Việt Nam",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "gallery",
+        "museum",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 12.07,
+      "return_time": "13:23",
+      "reserve_minutes": 15,
+      "objective": 3.733188611162214,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.0564,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:178995262",
+        "osm:way:700853412",
+        "osm:way:879841441",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Đền Ngọc Sơn",
+        "Đền Hàng Tre",
+        "Vườn hoa Diên Hồng",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "temple",
+        "temple",
+        "park",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 8.22,
+      "return_time": "12:31",
+      "reserve_minutes": 15,
+      "objective": 4.832855905619203,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.3824,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:879841441",
+        "osm:way:178995262",
+        "osm:way:1212230635",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Vườn hoa Diên Hồng",
+        "Đền Ngọc Sơn",
+        "Chợ Đồng Xuân",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "park",
+        "temple",
+        "market",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 11.52,
+      "return_time": "12:31",
+      "reserve_minutes": 15,
+      "objective": 4.803497408203023,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.3425,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:879841441",
+        "osm:way:178995262",
+        "osm:way:1212230635",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Vườn hoa Diên Hồng",
+        "Đền Ngọc Sơn",
+        "Chợ Đồng Xuân",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "park",
+        "temple",
+        "market",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 11.52,
+      "return_time": "12:31",
+      "reserve_minutes": 15,
+      "objective": 4.747330457588313,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.3725,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:879841441",
+        "osm:way:178995262",
+        "osm:way:1212230635",
+        "osm:node:4499978190",
+        "osm:way:1234036432"
+      ],
+      "selected_names": [
+        "Vườn hoa Diên Hồng",
+        "Đền Ngọc Sơn",
+        "Chợ Đồng Xuân",
+        "Bảo tàng Địa chất Việt Nam",
+        "Đông Phong Art Gallery"
+      ],
+      "categories": [
+        "park",
+        "temple",
+        "market",
+        "museum",
+        "gallery"
+      ],
+      "drive_minutes": 11.52,
+      "return_time": "12:31",
+      "reserve_minutes": 15,
+      "objective": 4.747330457588313,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "nearby",
+      "runtime_seconds": 1.0741,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:1326233277",
+        "osm:node:5273998823",
+        "osm:way:302872188",
+        "osm:node:5216168822"
+      ],
+      "selected_names": [
+        "Chợ Hòa Cường",
+        "Cầu Trần Thị Lý",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Thánh thất Cao Đài"
+      ],
+      "categories": [
+        "market",
+        "attraction",
+        "museum",
+        "temple"
+      ],
+      "drive_minutes": 18.69,
+      "return_time": "13:44",
+      "reserve_minutes": 15,
+      "objective": 4.16019147319651,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "equal",
+      "runtime_seconds": 0.3771,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:5273998823",
+        "osm:node:13040467529",
+        "osm:way:694831926"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Cầu Trần Thị Lý",
+        "Bãi Đá",
+        "Cầu Rồng"
+      ],
+      "categories": [
+        "park",
+        "attraction",
+        "beach",
+        "attraction"
+      ],
+      "drive_minutes": 51.06,
+      "return_time": "15:02",
+      "reserve_minutes": 15,
+      "objective": 2.515465211850385,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "crisp",
+      "runtime_seconds": 0.314,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:5273998823",
+        "osm:node:13040467529",
+        "osm:way:694831926"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Cầu Trần Thị Lý",
+        "Bãi Đá",
+        "Cầu Rồng"
+      ],
+      "categories": [
+        "park",
+        "attraction",
+        "beach",
+        "attraction"
+      ],
+      "drive_minutes": 51.06,
+      "return_time": "15:02",
+      "reserve_minutes": 15,
+      "objective": 2.4137568645238794,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "fuzzy",
+      "runtime_seconds": 0.5041,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:5273998823",
+        "osm:node:13040467529",
+        "osm:way:694831926"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Cầu Trần Thị Lý",
+        "Bãi Đá",
+        "Cầu Rồng"
+      ],
+      "categories": [
+        "park",
+        "attraction",
+        "beach",
+        "attraction"
+      ],
+      "drive_minutes": 51.06,
+      "return_time": "15:02",
+      "reserve_minutes": 15,
+      "objective": 2.4137568645238803,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "nearby",
+      "runtime_seconds": 0.8446,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:way:35952591",
+        "osm:node:2617007574"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Chợ vải Hội An",
+        "Kazimierz Kwiatkowski"
+      ],
+      "categories": [
+        "museum",
+        "attraction",
+        "historic"
+      ],
+      "drive_minutes": 5.04,
+      "return_time": "15:21",
+      "reserve_minutes": 15,
+      "objective": 3.2378535104288297,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 25,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "equal",
+      "runtime_seconds": 0.4273,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:way:210931546",
+        "osm:node:2617007574"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Chợ Bà Lê",
+        "Kazimierz Kwiatkowski"
+      ],
+      "categories": [
+        "museum",
+        "market",
+        "historic"
+      ],
+      "drive_minutes": 9.02,
+      "return_time": "14:55",
+      "reserve_minutes": 15,
+      "objective": 2.1746402225405324,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 25,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "crisp",
+      "runtime_seconds": 0.3282,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:node:2617007574",
+        "osm:way:565186618"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Kazimierz Kwiatkowski",
+        "Đình Cẩm Phô"
+      ],
+      "categories": [
+        "museum",
+        "historic",
+        "temple"
+      ],
+      "drive_minutes": 5.54,
+      "return_time": "14:51",
+      "reserve_minutes": 15,
+      "objective": 2.0543926430141677,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 25,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "fuzzy",
+      "runtime_seconds": 0.3615,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:node:2617007574",
+        "osm:way:565186618"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Kazimierz Kwiatkowski",
+        "Đình Cẩm Phô"
+      ],
+      "categories": [
+        "museum",
+        "historic",
+        "temple"
+      ],
+      "drive_minutes": 5.54,
+      "return_time": "14:51",
+      "reserve_minutes": 15,
+      "objective": 2.0543926430141677,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 25,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.1328,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:relation:8552348",
+        "osm:node:8474743417",
+        "osm:node:4280016689",
+        "osm:way:1076716243"
+      ],
+      "selected_names": [
+        "Ngũ Hành Sơn",
+        "Bảo tàng Phật giáo",
+        "Chùa Giác Hoàng Viên",
+        "Chợ Khuê Mỹ"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "temple",
+        "market"
+      ],
+      "drive_minutes": 20.18,
+      "return_time": "13:46",
+      "reserve_minutes": 15,
+      "objective": 4.025357335435318,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.485,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:relation:8552348",
+        "osm:node:8474743417",
+        "osm:node:4280016689",
+        "osm:way:1386932720"
+      ],
+      "selected_names": [
+        "Ngũ Hành Sơn",
+        "Bảo tàng Phật giáo",
+        "Chùa Giác Hoàng Viên",
+        "Tượng Phật Quan Âm - Chùa Mỹ Khê"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "temple",
+        "temple"
+      ],
+      "drive_minutes": 26.18,
+      "return_time": "13:37",
+      "reserve_minutes": 15,
+      "objective": 2.868317460467296,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.4817,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:relation:8552348",
+        "osm:node:4280016689",
+        "osm:node:5273998823",
+        "osm:way:1386932720"
+      ],
+      "selected_names": [
+        "Ngũ Hành Sơn",
+        "Chùa Giác Hoàng Viên",
+        "Cầu Trần Thị Lý",
+        "Tượng Phật Quan Âm - Chùa Mỹ Khê"
+      ],
+      "categories": [
+        "attraction",
+        "temple",
+        "attraction",
+        "temple"
+      ],
+      "drive_minutes": 26.37,
+      "return_time": "13:37",
+      "reserve_minutes": 15,
+      "objective": 2.850892960988358,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.4771,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:relation:8552348",
+        "osm:node:4280016689",
+        "osm:node:5273998823",
+        "osm:way:1386932720"
+      ],
+      "selected_names": [
+        "Ngũ Hành Sơn",
+        "Chùa Giác Hoàng Viên",
+        "Cầu Trần Thị Lý",
+        "Tượng Phật Quan Âm - Chùa Mỹ Khê"
+      ],
+      "categories": [
+        "attraction",
+        "temple",
+        "attraction",
+        "temple"
+      ],
+      "drive_minutes": 26.37,
+      "return_time": "13:37",
+      "reserve_minutes": 15,
+      "objective": 2.850892960988358,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 0.9062,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:way:759913076",
+        "osm:way:1368599361",
+        "osm:way:302872188"
+      ],
+      "selected_names": [
+        "Bảo tàng Mỹ thuật Đà Nẵng",
+        "Bảo tàng Đà Nẵng",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 13.83,
+      "return_time": "12:44",
+      "reserve_minutes": 15,
+      "objective": 2.714534180955552,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 4,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.4258,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:759913076",
+        "osm:way:1368599361",
+        "osm:way:302872188",
+        "osm:node:8474743417"
+      ],
+      "selected_names": [
+        "Bảo tàng Mỹ thuật Đà Nẵng",
+        "Bảo tàng Đà Nẵng",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Bảo tàng Phật giáo"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 34.0,
+      "return_time": "14:14",
+      "reserve_minutes": 15,
+      "objective": 2.7740674771123555,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 4,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.4022,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:759913076",
+        "osm:way:1368599361",
+        "osm:way:302872188",
+        "osm:node:8474743417"
+      ],
+      "selected_names": [
+        "Bảo tàng Mỹ thuật Đà Nẵng",
+        "Bảo tàng Đà Nẵng",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Bảo tàng Phật giáo"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 34.0,
+      "return_time": "14:14",
+      "reserve_minutes": 15,
+      "objective": 2.7454299110023612,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 4,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.4007,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:759913076",
+        "osm:way:1368599361",
+        "osm:way:302872188",
+        "osm:node:8474743417"
+      ],
+      "selected_names": [
+        "Bảo tàng Mỹ thuật Đà Nẵng",
+        "Bảo tàng Đà Nẵng",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Bảo tàng Phật giáo"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "museum",
+        "museum"
+      ],
+      "drive_minutes": 34.0,
+      "return_time": "14:14",
+      "reserve_minutes": 15,
+      "objective": 2.7454299110023612,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 4,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.0687,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:way:35952591",
+        "osm:node:2617007574",
+        "osm:way:565186618"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Chợ vải Hội An",
+        "Kazimierz Kwiatkowski",
+        "Đình Cẩm Phô"
+      ],
+      "categories": [
+        "museum",
+        "attraction",
+        "historic",
+        "temple"
+      ],
+      "drive_minutes": 5.95,
+      "return_time": "13:16",
+      "reserve_minutes": 15,
+      "objective": 4.336879063745457,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.5376,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:node:12344125229",
+        "osm:node:11896339273",
+        "osm:node:2617007574"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Di San Vô Giá",
+        "CSO Gallery",
+        "Kazimierz Kwiatkowski"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "gallery",
+        "historic"
+      ],
+      "drive_minutes": 9.67,
+      "return_time": "13:35",
+      "reserve_minutes": 15,
+      "objective": 3.668617995354411,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.5352,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:node:12344125229",
+        "osm:node:11896339273",
+        "osm:node:2617007574"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Di San Vô Giá",
+        "CSO Gallery",
+        "Kazimierz Kwiatkowski"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "gallery",
+        "historic"
+      ],
+      "drive_minutes": 9.67,
+      "return_time": "13:35",
+      "reserve_minutes": 15,
+      "objective": 3.666879027323516,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.4994,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 4,
+      "block_count": 5,
+      "selected_poi_ids": [
+        "osm:way:565592419",
+        "osm:node:12344125229",
+        "osm:node:11896339273",
+        "osm:node:2617007574"
+      ],
+      "selected_names": [
+        "Bảo tàng Hội An",
+        "Di San Vô Giá",
+        "CSO Gallery",
+        "Kazimierz Kwiatkowski"
+      ],
+      "categories": [
+        "museum",
+        "museum",
+        "gallery",
+        "historic"
+      ],
+      "drive_minutes": 9.67,
+      "return_time": "13:35",
+      "reserve_minutes": 15,
+      "objective": 3.666879027323516,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.0751,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:node:6422678433",
+        "osm:way:627379326",
+        "osm:way:198804483"
+      ],
+      "selected_names": [
+        "Chợ Nam Phước market",
+        "My Son Museum",
+        "Thánh địa Mỹ Sơn"
+      ],
+      "categories": [
+        "market",
+        "museum",
+        "attraction"
+      ],
+      "drive_minutes": 64.36,
+      "return_time": "16:05",
+      "reserve_minutes": 15,
+      "objective": 2.4877545971709716,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category.",
+        "Có khối ăn/nghỉ tự túc vì chưa chọn được địa điểm đủ dữ liệu trong cửa sổ giờ."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.5625,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:way:627379326",
+        "osm:node:3775971223",
+        "osm:node:2617007574"
+      ],
+      "selected_names": [
+        "My Son Museum",
+        "Trại gà Đông Tảo - 2 Lúa",
+        "Kazimierz Kwiatkowski"
+      ],
+      "categories": [
+        "museum",
+        "historic",
+        "historic"
+      ],
+      "drive_minutes": 141.44,
+      "return_time": "16:22",
+      "reserve_minutes": 15,
+      "objective": 1.914126755747262,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category.",
+        "Có khối ăn/nghỉ tự túc vì chưa chọn được địa điểm đủ dữ liệu trong cửa sổ giờ."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.4762,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:node:3775971223",
+        "osm:node:2617007574",
+        "osm:node:12344125229"
+      ],
+      "selected_names": [
+        "Trại gà Đông Tảo - 2 Lúa",
+        "Kazimierz Kwiatkowski",
+        "Di San Vô Giá"
+      ],
+      "categories": [
+        "historic",
+        "historic",
+        "museum"
+      ],
+      "drive_minutes": 143.48,
+      "return_time": "16:24",
+      "reserve_minutes": 15,
+      "objective": 2.1268374716073244,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.6034,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 3,
+      "block_count": 4,
+      "selected_poi_ids": [
+        "osm:node:3775971223",
+        "osm:node:2617007574",
+        "osm:node:12344125229"
+      ],
+      "selected_names": [
+        "Trại gà Đông Tảo - 2 Lúa",
+        "Kazimierz Kwiatkowski",
+        "Di San Vô Giá"
+      ],
+      "categories": [
+        "historic",
+        "historic",
+        "museum"
+      ],
+      "drive_minutes": 143.48,
+      "return_time": "16:24",
+      "reserve_minutes": 15,
+      "objective": 2.1268374716073244,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 1.1358,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:5216168822",
+        "osm:way:302872188",
+        "osm:way:1326233277",
+        "osm:node:5273998823"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Thánh thất Cao Đài",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Chợ Hòa Cường",
+        "Cầu Trần Thị Lý"
+      ],
+      "categories": [
+        "park",
+        "temple",
+        "museum",
+        "market",
+        "attraction"
+      ],
+      "drive_minutes": 26.56,
+      "return_time": "12:37",
+      "reserve_minutes": 15,
+      "objective": 5.370142654179677,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.5653,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:4807957148",
+        "osm:way:694831926",
+        "osm:node:13040467529",
+        "osm:way:302872188"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Trung tâm Giải trí Phức hợp Helio Center",
+        "Cầu Rồng",
+        "Bãi Đá",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng"
+      ],
+      "categories": [
+        "park",
+        "theme_park",
+        "attraction",
+        "beach",
+        "museum"
+      ],
+      "drive_minutes": 54.08,
+      "return_time": "16:00",
+      "reserve_minutes": 15,
+      "objective": 3.9201275521544763,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.5376,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:4807957148",
+        "osm:way:694831926",
+        "osm:node:13040467529",
+        "osm:way:302872188"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Trung tâm Giải trí Phức hợp Helio Center",
+        "Cầu Rồng",
+        "Bãi Đá",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng"
+      ],
+      "categories": [
+        "park",
+        "theme_park",
+        "attraction",
+        "beach",
+        "museum"
+      ],
+      "drive_minutes": 54.08,
+      "return_time": "16:00",
+      "reserve_minutes": 15,
+      "objective": 3.808184371673868,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.5227,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:846695791",
+        "osm:node:4807957148",
+        "osm:way:694831926",
+        "osm:node:13040467529",
+        "osm:way:302872188"
+      ],
+      "selected_names": [
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê",
+        "Trung tâm Giải trí Phức hợp Helio Center",
+        "Cầu Rồng",
+        "Bãi Đá",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng"
+      ],
+      "categories": [
+        "park",
+        "theme_park",
+        "attraction",
+        "beach",
+        "museum"
+      ],
+      "drive_minutes": 54.08,
+      "return_time": "16:00",
+      "reserve_minutes": 15,
+      "objective": 3.808184371673868,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 40,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "nearby",
+      "runtime_seconds": 0.9957,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:way:1326233277",
+        "osm:node:5273998823",
+        "osm:way:302872188",
+        "osm:node:5216168822",
+        "osm:way:846695791"
+      ],
+      "selected_names": [
+        "Chợ Hòa Cường",
+        "Cầu Trần Thị Lý",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Thánh thất Cao Đài",
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê"
+      ],
+      "categories": [
+        "market",
+        "attraction",
+        "museum",
+        "temple",
+        "park"
+      ],
+      "drive_minutes": 27.13,
+      "return_time": "12:38",
+      "reserve_minutes": 15,
+      "objective": 5.145845419675638,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 31,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "nearby",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "equal",
+      "runtime_seconds": 0.5464,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:node:5273998823",
+        "osm:way:302872188",
+        "osm:way:204885903",
+        "osm:node:5216168822",
+        "osm:way:846695791"
+      ],
+      "selected_names": [
+        "Cầu Trần Thị Lý",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Chợ Hàn",
+        "Thánh thất Cao Đài",
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "market",
+        "temple",
+        "park"
+      ],
+      "drive_minutes": 25.07,
+      "return_time": "12:36",
+      "reserve_minutes": 15,
+      "objective": 5.067998407221608,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 31,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "equal",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.25,
+          "place_quality": 0.25,
+          "drive_time": 0.25,
+          "data_confidence": 0.25
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "crisp",
+      "runtime_seconds": 0.5516,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:node:5273998823",
+        "osm:way:302872188",
+        "osm:way:204885903",
+        "osm:node:5216168822",
+        "osm:way:846695791"
+      ],
+      "selected_names": [
+        "Cầu Trần Thị Lý",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Chợ Hàn",
+        "Thánh thất Cao Đài",
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "market",
+        "temple",
+        "park"
+      ],
+      "drive_minutes": 25.07,
+      "return_time": "12:36",
+      "reserve_minutes": 15,
+      "objective": 5.014194654726601,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 31,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "crisp",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.39999999999999997,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.19999999999999998,
+          "data_confidence": 0.09999999999999999
+        },
+        "cr": 0.0
+      }
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "fuzzy",
+      "runtime_seconds": 0.5581,
+      "status": "provisional",
+      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
+      "attraction_count": 5,
+      "block_count": 6,
+      "selected_poi_ids": [
+        "osm:node:5273998823",
+        "osm:way:302872188",
+        "osm:way:204885903",
+        "osm:node:5216168822",
+        "osm:way:846695791"
+      ],
+      "selected_names": [
+        "Cầu Trần Thị Lý",
+        "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng",
+        "Chợ Hàn",
+        "Thánh thất Cao Đài",
+        "Trung tâm Văn hóa - Thể thao quận Thanh Khê"
+      ],
+      "categories": [
+        "attraction",
+        "museum",
+        "market",
+        "temple",
+        "park"
+      ],
+      "drive_minutes": 25.07,
+      "return_time": "12:36",
+      "reserve_minutes": 15,
+      "objective": 5.014194654726601,
+      "warnings": [
+        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
+        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
+        "Một số thời lượng tham quan vẫn dùng fallback theo category."
+      ],
+      "candidate_counts": {
+        "attractions": 31,
+        "food_rest": 20
+      },
+      "ranking": {
+        "method": "fuzzy",
+        "criteria_order": [
+          "preference_match",
+          "place_quality",
+          "drive_time",
+          "data_confidence"
+        ],
+        "weights": {
+          "preference_match": 0.4,
+          "place_quality": 0.29999999999999993,
+          "drive_time": 0.2,
+          "data_confidence": 0.10000000000000002
+        },
+        "cr": 0.0
+      }
+    }
+  ]
+}

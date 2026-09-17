@@ -1,0 +1,77 @@
+{
+  "version": "v2-7038194e782aa951",
+  "created_at": "2026-09-17T15:45:55.952130+00:00",
+  "schema_version": "2.0",
+  "model_version": "where2go-v2.0.0",
+  "input_hash": "7038194e782aa95106e3f6a3698756c349aaf030168ddea156c3ed082a2d4df6",
+  "v1_dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-e118cf0e",
+  "osm": {
+    "sha256": "4f7244d59895803a521b8f6ef0b86629bf4470565ad329ed5d3336676db047e7",
+    "filename": "vietnam-260915.osm.pbf",
+    "url": "https://download.geofabrik.de/asia/vietnam-260915.osm.pbf",
+    "source_timestamp": "2026-09-15T20:20:37Z",
+    "license": "ODbL-1.0"
+  },
+  "stats": {
+    "poi_count": 15711,
+    "osm_supplement": {
+      "Hà Nội:cafe": 1188,
+      "inserted": 5509,
+      "Hà Nội:restaurant": 1789,
+      "Đà Nẵng:cafe": 1147,
+      "Đà Nẵng:restaurant": 1117,
+      "linked_existing": 100,
+      "Đà Nẵng:nature_area": 23,
+      "Hà Nội:market": 153,
+      "Hà Nội:nature_area": 27,
+      "Đà Nẵng:market": 65
+    },
+    "google": {
+      "unmatched": 25302,
+      "confirmed": 303,
+      "ambiguous": 16
+    },
+    "manual": {
+      "seed_only": 60
+    },
+    "review_queue": 25318,
+    "focus_coverage": [
+      {
+        "location": "Hà Nội",
+        "total": 4488,
+        "usable": 4474,
+        "attractions": 1497,
+        "food_rest": 2977,
+        "with_rating_pair": 58,
+        "with_structured_hours": 609,
+        "with_specific_duration": 0,
+        "targets": {
+          "attractions": 50,
+          "food_rest": 20,
+          "hours_percent": 80,
+          "specific_duration_percent": 80
+        }
+      },
+      {
+        "location": "Đà Nẵng",
+        "total": 2741,
+        "usable": 2680,
+        "attractions": 416,
+        "food_rest": 2264,
+        "with_rating_pair": 22,
+        "with_structured_hours": 410,
+        "with_specific_duration": 0,
+        "targets": {
+          "attractions": 50,
+          "food_rest": 20,
+          "hours_percent": 80,
+          "specific_duration_percent": 80
+        }
+      }
+    ]
+  },
+  "rights": {
+    "Google Maps": "restricted_internal",
+    "OpenStreetMap": "ODbL-1.0"
+  }
+}

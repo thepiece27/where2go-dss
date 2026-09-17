@@ -4,7 +4,10 @@ __pycache__/
 data/raw/
 data/routing/
 data/catalog.sqlite*
+data/catalog_v2.sqlite*
 data/cache/
 .pytest_cache/
 artifacts/
 data/private/
+data/manual/*.xlsx
+data/google-pilot/

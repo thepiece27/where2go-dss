@@ -26,11 +26,21 @@ def main():
         assert len(page.evaluate("JSON.parse(localStorage.getItem('where2go-saved-v2'))"))==2
         page.locator("#tripDate").fill("2026-09-20")
         page.locator("#interests").fill("văn hóa, lịch sử")
+        page.locator('#tripCategories input[value="historic"]').check()
         page.locator("#planButton").click()
         page.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
         text=page.locator("#itinerary").inner_text()
         assert "Quay về:" in text,text
         assert page.locator("#itinerary .stop").count()>=2
+        attraction=page.locator('#itinerary .stop').filter(has=page.locator('.duration-editor')).first
+        duration=attraction.locator('input[type="number"]')
+        required_id=page.evaluate("state.lastPlan.blocks.find(b=>b.role==='attraction').poi_id")
+        page.evaluate("id=>state.required.add(id)",required_id)
+        requested=min(720,int(duration.input_value())+5)
+        duration.fill(str(requested))
+        attraction.get_by_role("button",name="Tính lại").click()
+        page.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
+        assert page.locator('#itinerary .duration-editor input').first.input_value()==str(requested)
         page.locator("#itinerary").scroll_into_view_if_needed()
         page.wait_for_timeout(1200)
         page.screenshot(path="artifacts/web-itinerary.png",full_page=True)
@@ -38,6 +48,7 @@ def main():
         safe=page.evaluate("""() => {const x=imageElement('https://upload.wikimedia.org/a.jpg\\" onerror=\\"alert(1)');return !x.getAttribute('onerror');}""")
         assert safe
         assert not errors,errors
+        page.evaluate("()=>{state.required.clear();state.durationOverrides={};}")
         report={"status":"PASS","stops":page.locator('#itinerary .stop').count(),"page_errors":errors,
                 "map_tiles_loaded":page.locator('.leaflet-tile').evaluate_all('(xs)=>xs.filter(x=>x.naturalWidth>0).length'),
                 "map_warning":page.locator('#mapStatus').inner_text()}
@@ -48,7 +59,13 @@ def main():
         page.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
         assert page.locator('#itinerary .stop').count()>=2
         assert page.evaluate("state.pois.every(p=>p.location==='Đà Nẵng')")
-        report['filter_regression']='PASS'
+        assert page.evaluate("state.lastPlan.blocks.filter(b=>b.role==='attraction').some(b=>b.category!=='museum')")
+        report['list_filter_separate_from_trip_preference']='PASS'
+        page.locator('#onlyCategories').check()
+        page.locator("#planButton").click()
+        page.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
+        assert page.evaluate("state.lastPlan.blocks.filter(b=>b.role==='attraction').every(b=>b.category==='historic')")
+        report['thematic_mode']='PASS'
         # Simulate only loss of external tiles; local route/API remain real.
         page.route("https://tile.openstreetmap.org/**",lambda route:route.abort())
         page.reload(wait_until="networkidle")

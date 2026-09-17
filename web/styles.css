@@ -28,6 +28,14 @@ summary { cursor: pointer; }
 .map-status { position: absolute; z-index: 800; top: 8px; left: 62px; right: 18px; margin: 0; padding: 10px 14px; border-radius: 8px; background: #fff4d6; color: #5b4109; font-size: 13px; box-shadow: var(--shadow); }
 #itinerary { display: block; padding-top: 16px; }
 #itinerary p { margin: 8px 0; }
+.choice-field { min-width: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; padding: 10px; }
+.choice-field legend { padding: 0 5px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 10px; }
+.choice-grid label, .pace-control label { display: flex; flex-direction: row; align-items: center; gap: 6px; margin: 0; font-size: 12px; }
+.choice-grid input, .pace-control input { width: 15px; min-height: 15px; margin: 0; }
+.pace-control { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.duration-editor { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: end; }
+.duration-editor input { min-width: 0; }
 
 * {
   box-sizing: border-box;

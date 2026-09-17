@@ -1,0 +1,307 @@
+{
+  "schema_version": "2.0",
+  "created_at": "2026-09-17T13:29:50.977377+00:00",
+  "root": "data",
+  "files": [
+    {
+      "logical_path": "data/cache/4f7244d59895803a7ea9ed33d6b17fff-e5cac39d7101.json",
+      "size_bytes": 29958183,
+      "sha256": "9577e108a224a9a9f48de28402e54f170452474b182250fc88625039a6d783db",
+      "modified_at": "2026-09-17T06:04:45.294493+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/cache/4f7244d59895803a7ea9ed33d6b17fff-import-v1.json",
+      "size_bytes": 29958183,
+      "sha256": "573592b91f0348adc66091f8329ccef9e0ce3c62b1ef54987716a4b1432eb1d7",
+      "modified_at": "2026-09-17T01:01:22.337963+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/cache/osm_supplement_v2.json",
+      "size_bytes": 4139583,
+      "sha256": "3bdde8b5445dbcf28fb049c75a85cf8f56b32c9f319fb388e5ce00387c0e0971",
+      "modified_at": "2026-09-17T13:25:34.192310+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/catalog.sqlite",
+      "size_bytes": 42205184,
+      "sha256": "5f437b093a2c5b1403fc5de28276f2673112aa167ed8dda6a29cb96eb0a8d563",
+      "modified_at": "2026-09-17T06:06:45.119519+00:00",
+      "role": "generated_catalog",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/catalog_v2.sqlite",
+      "size_bytes": 174473216,
+      "sha256": "eb68bbd447662283a300c1bf7b820b462ff77269184bbf996e533cb4af53a7fc",
+      "modified_at": "2026-09-17T13:26:10.401866+00:00",
+      "role": "generated_catalog",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/chronological_metrics.xlsx",
+      "size_bytes": 18848,
+      "sha256": "5f6242a402f855ac256a8082bcb618b7de0ec9d1f2bd49df507f6a4d5ca8816f",
+      "modified_at": "2026-09-16T15:24:23.116676+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/chronological_summary.xlsx",
+      "size_bytes": 5273,
+      "sha256": "66b02299a545d074e72254774b0a6970ed790e2216e28ca74f709155f09de5ec",
+      "modified_at": "2026-09-16T15:24:23.125046+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/curation/id_registry.json",
+      "size_bytes": 482820,
+      "sha256": "b1bcda8b68b7cdb0d20a28fed0bef7e5de24c323cea71e176cfa18563fdff17c",
+      "modified_at": "2026-09-17T06:06:44.231799+00:00",
+      "role": "curation_input",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/curation/reviews.json",
+      "size_bytes": 42064,
+      "sha256": "390f398ebb71f021b873fca5ffd3753e3dd17d6635e97836493661daed5b1924",
+      "modified_at": "2026-09-17T01:03:25.063481+00:00",
+      "role": "curation_input",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/manual/poi_enrichment_v2.xlsx",
+      "size_bytes": 14699,
+      "sha256": "982b74c6ba06f8bbdc5aa97386742088dca5cd7912d074e6e8908ff1a6fc041c",
+      "modified_at": "2026-09-17T13:29:37.023030+00:00",
+      "role": "manual_observation",
+      "use_status": "manual_fact_with_source"
+    },
+    {
+      "logical_path": "data/poi_evaluation_metrics.xlsx",
+      "size_bytes": 8433,
+      "sha256": "6853a3ad00e2384e2a8954248cdf1d92a46cc92ef04d09ffe0e4bd3330cd5c77",
+      "modified_at": "2026-09-16T15:24:23.133734+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/poi_recommendation_cleaned.xlsx",
+      "size_bytes": 2619847,
+      "sha256": "36f92e0c4bdcd19c5d25c4de0e18e6be5ee109b2cceac281abdc48234b5c90b6",
+      "modified_at": "2026-09-16T15:24:23.155469+00:00",
+      "role": "derived_crosscheck",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/poi_sample_recommendations.xlsx",
+      "size_bytes": 9002,
+      "sha256": "802e5a1c7704b0f201221106c4d54a855afb61c67f4db67f388065f5f3b68ed5",
+      "modified_at": "2026-09-16T15:24:23.167011+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/private/legacy_review.csv",
+      "size_bytes": 1064863,
+      "sha256": "4b529eaa33e43357521b97932b467cc4cc18c1f8d69b892b078cf2bb4ba77ea4",
+      "modified_at": "2026-09-17T06:06:43.485163+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/raw/vietnam-260915.osm.pbf",
+      "size_bytes": 328810151,
+      "sha256": "4f7244d59895803a521b8f6ef0b86629bf4470565ad329ed5d3336676db047e7",
+      "modified_at": "2026-09-17T00:45:56.078793+00:00",
+      "role": "spatial_source",
+      "use_status": "license_check_required"
+    },
+    {
+      "logical_path": "data/reports/catalog.csv",
+      "size_bytes": 1562146,
+      "sha256": "aede8d5f6da7777dc2765fad76e8b555943f411fcf1b9c536a17f3be19113f93",
+      "modified_at": "2026-09-17T06:06:45.297707+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/coverage.json",
+      "size_bytes": 12555,
+      "sha256": "862cccd98ea5388c57d165ea64f163232938f08c139f0735573680f01c39fc0d",
+      "modified_at": "2026-09-17T06:06:45.194897+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/enrichment_queue.csv",
+      "size_bytes": 342967,
+      "sha256": "d7dd299de00e79a68cd6ff8caab155374f9c5b9d81a8443182c3415661353c1c",
+      "modified_at": "2026-09-17T06:06:51.938522+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/evaluation.json",
+      "size_bytes": 875267,
+      "sha256": "7c46e11a7f1d63b319ea9c1b38452efea48ee8dd20d33b244afd976ad58c6d1b",
+      "modified_at": "2026-09-17T06:07:01.748085+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/manifest.json",
+      "size_bytes": 1792,
+      "sha256": "c5380fe23928eb7eacd6d26cc374f772811fe28250bef02d7a5115d2ee90cd1e",
+      "modified_at": "2026-09-17T06:06:45.171609+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/review_queue.json",
+      "size_bytes": 68131,
+      "sha256": "97d58f73c728b7ee4fc79b00d763837905767d35a163fd52bc9644e4c3d8b3e6",
+      "modified_at": "2026-09-17T06:06:45.204247+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/reviewed_sample.json",
+      "size_bytes": 78147,
+      "sha256": "f8b81777c4aa72627ffd279fefba61294b3b285a4e72321e9f45f9787593f140",
+      "modified_at": "2026-09-17T06:06:51.833476+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/routing_audit.json",
+      "size_bytes": 921427,
+      "sha256": "de924deb055d69858147c50e47b0391b079f458c582f9440aec9721f4793d64b",
+      "modified_at": "2026-09-17T06:06:51.830404+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/catalog/coverage.json",
+      "size_bytes": 748,
+      "sha256": "f3aee6a3eabdb5038eca68a03ed859a8fc08273f840954540391a7f0b6f03573",
+      "modified_at": "2026-09-17T13:26:12.100973+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/catalog/manifest.json",
+      "size_bytes": 2199,
+      "sha256": "78cb368701ed866e8cebb78651b275ea76722b6f9c1573f8b2f75fbe8d4c679b",
+      "modified_at": "2026-09-17T13:26:12.100973+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/catalog/review_queue.json",
+      "size_bytes": 10120684,
+      "sha256": "df32da8e4bb99d09c51838b5753ff6cae9b7628ed13bfcfe7d56443e36ca4cc6",
+      "modified_at": "2026-09-17T13:26:12.301566+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/manual_validation.json",
+      "size_bytes": 297,
+      "sha256": "42a4cbcb90130746f6cfded8afcfb4a81e4b088c6eb0152bc37ac09ce5d99ed5",
+      "modified_at": "2026-09-17T13:29:50.773403+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/priority_set.csv",
+      "size_bytes": 28203,
+      "sha256": "672c08bf3d12b37a492a9dcd3a2a1fa60f2b85acb4a4fc8e378f6d3fa6d4d68b",
+      "modified_at": "2026-09-17T13:27:39.750639+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/source_manifest.json",
+      "size_bytes": 9293,
+      "sha256": "5a1c7b90b1b9fd23093551c461641942c5f1325ddcc95add3cb988c4ee2a05c7",
+      "modified_at": "2026-09-17T13:19:31.095885+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/routing/manifest.json",
+      "size_bytes": 257,
+      "sha256": "a90c3c40324bbb2286ea06e6988133ff9c464f50a50b7ecddda3ef36027a17aa",
+      "modified_at": "2026-09-17T01:05:08.553006+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/synthetic_user_behavior.xlsx",
+      "size_bytes": 36930,
+      "sha256": "83103331fefe85cabd44f897c4570a8a803817aed2cb75331a2b6f0f5d974286",
+      "modified_at": "2026-09-16T15:24:23.180034+00:00",
+      "role": "synthetic_fixture",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/vietnam_destinations.xlsx",
+      "size_bytes": 69891,
+      "sha256": "39e659f3d280329fa44573c9c8ef3783e67c1f6f1cc00560d7b901978742bf32",
+      "modified_at": "2026-09-15T10:29:38.057868+00:00",
+      "role": "source_observation",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/vietnam_destinations_google_maps_browser_hotosm.xlsx",
+      "size_bytes": 3007261,
+      "sha256": "9ac0a4e69d99d3da7d1ffb45cf3100d0385539c3c6317e3faa6124ecf2940744",
+      "modified_at": "2026-09-16T15:24:23.203048+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
+      "size_bytes": 2757522,
+      "sha256": "398e36c3f34b4f67034cbd6cf76dea8da5bbd6b8f17f1a8ea78195e491567580",
+      "modified_at": "2026-09-15T10:29:38.103353+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
+      "size_bytes": 2737581,
+      "sha256": "a9f3c7dad98a5f4c850fabd28d342150b0a73d6376c74aa2adcd596487d32876",
+      "modified_at": "2026-09-16T15:24:23.225540+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/vietnam_provinces_wards_geojson.zip",
+      "size_bytes": 49943325,
+      "sha256": "7ea9ed33d6b17fff5bdaa249b7edcb6546a39d397442104cb3d0ad2f683b9469",
+      "modified_at": "2026-09-15T10:29:38.519864+00:00",
+      "role": "spatial_source",
+      "use_status": "license_check_required"
+    }
+  ],
+  "counts_by_role": {
+    "curation_input": 2,
+    "derived_crosscheck": 1,
+    "generated_catalog": 2,
+    "generated_report": 18,
+    "manual_observation": 1,
+    "runtime_or_private": 5,
+    "source_observation": 1,
+    "source_observation_restricted": 3,
+    "spatial_source": 2,
+    "synthetic_fixture": 1
+  }
+}
