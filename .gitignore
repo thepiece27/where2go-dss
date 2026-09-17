@@ -11,3 +11,6 @@ artifacts/
 data/private/
 data/manual/*.xlsx
 data/google-pilot/
+data/google-focus/
+data/google-focus-resolved/
+data/google-focus-missing/

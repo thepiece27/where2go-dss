@@ -1,0 +1,12 @@
+child_poi_id,parent_poi_id,relation,notes
+osm:node:10154412164,osm:way:359114064,contained_experience,Fantasy Park nằm trong khu Bà Nà Hills
+osm:way:1511011826,osm:way:359114064,contained_experience,Louvre nằm trong khu Bà Nà Hills
+osm:way:1109970009,osm:way:359114064,contained_experience,Nhà thờ Saint Denis nằm trong khu Bà Nà Hills
+osm:way:1109970012,osm:way:359114064,contained_experience,Trú Vũ Trà Quán nằm trong khu Bà Nà Hills
+osm:way:1109970004,osm:way:359114064,contained_experience,Đền Lĩnh Chúa Linh Từ nằm trong khu Bà Nà Hills
+osm:node:13687068650,osm:way:359114064,contained_experience,Linh Phong Bảo Tháp nằm trong khu Bà Nà Hills
+osm:way:542867598,osm:way:359114064,contained_experience,Luna Castle nằm trong khu Bà Nà Hills
+osm:way:1109970072,osm:way:359114064,contained_experience,Linh Phong Thiền Tự nằm trong khu Bà Nà Hills
+osm:way:746227054,osm:way:359114064,contained_experience,Chùa Linh Ứng Bà Nà nằm trong khu Bà Nà Hills
+osm:way:1109970002,osm:way:359114064,contained_experience,Le Jardin d'Amour nằm trong khu Bà Nà Hills
+osm:way:746227058,osm:way:359114064,contained_experience,Vườn Địa Đàng nằm trong khu Bà Nà Hills

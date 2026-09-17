@@ -1,0 +1,34 @@
+poi_id,short_minutes,typical_minutes,long_minutes,method,source_url,notes
+osm:way:37625751,45,90,150,curated_planning_estimate,,ước lượng theo quy mô quần thể và thủ tục tiếp cận
+osm:way:696913691,90,150,240,curated_planning_estimate,,ước lượng riêng cho khu di sản lớn
+osm:way:339936730,90,150,240,curated_planning_estimate,,ước lượng riêng cho bảo tàng có khu trong và ngoài trời
+osm:way:340128580,60,90,150,curated_planning_estimate,,ước lượng riêng cho tuyến trưng bày
+osm:way:697326496,20,35,60,curated_planning_estimate,,ước lượng riêng cho công trình nhỏ
+osm:way:704147278,60,90,150,curated_planning_estimate,,ước lượng riêng cho bảo tàng
+osm:way:1148571536,90,150,240,curated_planning_estimate,,ước lượng riêng cho bảo tàng quy mô lớn
+osm:way:178995262,30,60,90,curated_planning_estimate,,ước lượng riêng cho đền và cầu tiếp cận
+osm:way:220302249,30,60,90,curated_planning_estimate,,ước lượng riêng cho chùa
+osm:way:28912942,20,40,60,curated_planning_estimate,,ước lượng riêng cho công trình tôn giáo
+osm:way:208255133,60,120,180,curated_planning_estimate,,ước lượng riêng cho bảo tàng
+osm:node:5406262022,45,75,120,curated_planning_estimate,,ước lượng riêng cho đài quan sát
+osm:way:1212230635,45,90,150,curated_planning_estimate,,ước lượng riêng cho chợ
+osm:relation:17148894,240,360,480,curated_planning_estimate,,ước lượng riêng cho điểm thiên nhiên xa trung tâm
+osm:way:37933050,30,90,180,curated_planning_estimate,,phụ thuộc việc chỉ xem ngoài hay tham dự chương trình
+osm:way:359114064,300,480,600,curated_planning_estimate,,điểm lớn có thể chiếm trọn ngày
+osm:relation:8552348,120,180,300,curated_planning_estimate,,ước lượng riêng cho cụm núi và hang động
+osm:way:302872188,60,90,150,curated_planning_estimate,,ước lượng riêng cho bảo tàng
+osm:way:198804483,180,300,420,curated_planning_estimate,,bao gồm thời gian tham quan khu di sản rộng
+osm:way:694831926,30,60,120,curated_planning_estimate,,phụ thuộc xem ban ngày hay chờ chương trình tối
+osm:relation:7055216,180,300,420,curated_planning_estimate,,ước lượng riêng cho bán đảo và các điểm dừng
+osm:way:486703049,45,90,150,curated_planning_estimate,,ước lượng riêng cho chùa và điểm ngắm cảnh ở Sơn Trà
+osm:way:14131302,180,300,420,curated_planning_estimate,,bao gồm khu trải nghiệm và thời gian chương trình
+osm:way:782381624,300,480,600,curated_planning_estimate,,điểm lớn có thể chiếm trọn ngày
+osm:way:1368599361,60,90,150,curated_planning_estimate,,ước lượng riêng cho bảo tàng
+osm:way:204885903,45,90,150,curated_planning_estimate,,ước lượng riêng cho chợ
+osm:way:204790989,60,120,180,curated_planning_estimate,,ước lượng riêng cho chợ và ăn uống
+osm:node:4171964390,90,180,300,curated_planning_estimate,,ước lượng riêng cho làng nghề
+osm:node:4171971289,90,180,300,curated_planning_estimate,,ước lượng riêng cho làng nghề
+osm:node:10709724107,60,120,240,curated_planning_estimate,,ước lượng riêng cho làng nghề
+osm:relation:19000664,60,120,240,curated_planning_estimate,,ước lượng riêng cho bãi biển đô thị
+poi-google:3aac3427ee25b18a817027e9,120,240,360,curated_planning_estimate,,ước lượng riêng cho khối đi bộ Phố cổ Hội An
+poi-google:270efa89c4fa1b1bdeb4cdcd,20,40,75,curated_planning_estimate,,ước lượng riêng cho Chùa Cầu

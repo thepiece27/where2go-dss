@@ -11,6 +11,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from where2go.catalog import load_catalog
 from where2go.config import CATALOG, ROOT
 from where2go.v2.catalog import CATALOG_V2, load_catalog as load_catalog_v2
+from where2go.v2.dataset import select_priority
 from where2go.v2.taxonomy import FOOD_CATEGORIES
 
 
@@ -59,6 +60,11 @@ def select_seed(pois, per_city=30, food_per_city=10):
     """Round-robin categories to avoid a pilot made only of the largest class."""
     selected = []
     for location in ("Hà Nội", "Đà Nẵng"):
+        if all("serving_quality" in poi for poi in pois):
+            food_target = min(food_per_city, per_city // 3)
+            selected.extend(select_priority(pois, location, False, per_city - food_target))
+            selected.extend(select_priority(pois, location, True, food_target))
+            continue
         eligible = [poi for poi in pois if poi.get("location") == location and poi.get("data_status") == "usable"]
         food = [poi for poi in eligible if poi.get("category") in FOOD_CATEGORIES]
         attractions = [poi for poi in eligible if poi.get("category") not in FOOD_CATEGORIES]
@@ -95,7 +101,7 @@ def create(output, catalog_path, per_city=30, force=False):
     for index, poi in enumerate(seeds, 1):
         places.append([
             f"pilot-{index:03d}", poi["poi_id"], poi["name"], "", "", "", "", "",
-            poi["location"], poi["category"], "", "", "", "", "", poi.get("website", ""),
+            poi["location"], "", "", "", "", "", "", poi.get("website", ""),
             "", "", "", "Đối soát pilot; không dùng tọa độ OSM làm dữ liệu Google nhập tay.",
         ])
     style_sheet(places, {"A": 16, "B": 26, "C": 34, "D": 34, "E": 48, "H": 34, "T": 48})
@@ -115,7 +121,7 @@ def create(output, catalog_path, per_city=30, force=False):
     values = {
         "A": ["Hà Nội", "Đà Nẵng"],
         "B": ["open", "temporarily_closed", "permanently_closed", "unknown"],
-        "C": ["confirmed", "ambiguous", "unmatched", "blocked", "closed"],
+        "C": ["confirmed", "tool_confirmed", "ambiguous", "unmatched", "blocked", "closed"],
         "D": ["open", "closed", "unknown"],
         "E": ["TRUE", "FALSE"],
         "F": ["source_program", "reported_time_spent", "manual_estimate", "category_default"],

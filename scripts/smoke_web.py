@@ -73,6 +73,34 @@ def main():
         assert "Không tải được" in page.locator('#mapStatus').inner_text()
         report['tile_failure_message']='PASS'
         assert not errors,errors
+
+        mobile=browser.new_page(viewport={"width":390,"height":844})
+        mobile_errors=[]
+        mobile.on("pageerror",lambda error:mobile_errors.append(str(error)))
+        mobile.goto(args.url,wait_until="networkidle",timeout=60000)
+        mobile.locator("#savePoi").wait_for()
+        mobile.locator("#locationFilter").select_option(label="Hà Nội")
+        mobile.locator("#tripDate").fill("2026-09-20")
+        mobile.locator("#interests").fill("văn hóa, lịch sử")
+        mobile.locator("#planButton").click()
+        mobile.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
+        assert mobile.locator("#itinerary .stop").count()>=2
+        layout=mobile.evaluate("""() => {
+          const sidebar=document.querySelector('.sidebar').getBoundingClientRect();
+          const map=document.querySelector('.map-panel').getBoundingClientRect();
+          return {viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,
+                  sidebarRight:sidebar.right,sidebarBottom:sidebar.bottom,mapTop:map.top,mapRight:map.right};
+        }""")
+        assert layout["scrollWidth"]<=layout["viewport"]+1,layout
+        assert layout["sidebarRight"]<=layout["viewport"]+1 and layout["mapRight"]<=layout["viewport"]+1,layout
+        assert layout["sidebarBottom"]<=layout["mapTop"]+1,layout
+        mobile.locator("#itinerary").scroll_into_view_if_needed()
+        mobile.screenshot(path="artifacts/web-mobile.png",full_page=True)
+        assert not mobile_errors,mobile_errors
+        report['mobile_layout']='PASS'
+        report['mobile_stops']=mobile.locator('#itinerary .stop').count()
+        mobile.close()
+
         Path("artifacts/web-smoke.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
         print(json.dumps(report))
         browser.close()

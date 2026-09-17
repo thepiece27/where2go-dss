@@ -56,9 +56,10 @@ def use_status(file_role):
     }.get(file_role, "project_internal")
 
 
-def inventory(data_dir):
+def inventory(data_dir, exclude=()):
+    excluded = {Path(path).resolve() for path in exclude}
     rows = []
-    for path in sorted(p for p in data_dir.rglob("*") if p.is_file()):
+    for path in sorted(p for p in data_dir.rglob("*") if p.is_file() and p.resolve() not in excluded):
         if path.name.startswith("~$") or path.suffix.lower() in {".tmp", ".lock", ".pyc"}:
             continue
         file_role = role(path)
@@ -81,7 +82,9 @@ def main():
     parser.add_argument("--data", type=Path, default=ROOT / "data")
     parser.add_argument("--output", type=Path, default=ROOT / "data/reports/v2/source_manifest.json")
     args = parser.parse_args()
-    rows = inventory(args.data)
+    # A manifest cannot contain its own stable checksum. Exclude the output so
+    # two inventories over unchanged source files produce the same file list.
+    rows = inventory(args.data, exclude=(args.output,))
     args.output.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "schema_version": "2.0",

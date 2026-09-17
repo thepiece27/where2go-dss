@@ -39,10 +39,13 @@ def poi(ident, category):
     }
 
 
-def client():
+def client(v2_export_dir=None):
     rows = [poi("museum-a", "museum"), poi("historic-a", "historic")]
     manifest = {"version": "api-test-v2", "osm": {"sha256": OSM_HASH}}
-    return TestClient(create_app(router=Router(), v2_data=(rows, manifest)))
+    kwargs = {"router": Router(), "v2_data": (rows, manifest)}
+    if v2_export_dir is not None:
+        kwargs["v2_export_dir"] = v2_export_dir
+    return TestClient(create_app(**kwargs))
 
 
 def test_v2_pois_and_coverage_use_v2_catalog():
@@ -53,6 +56,36 @@ def test_v2_pois_and_coverage_use_v2_catalog():
         coverage = api.get("/api/v2/coverage").json()
         assert coverage["dataset_version"] == "api-test-v2"
         assert coverage["locations"][0]["attractions"] == 2
+
+
+def test_v2_pois_hide_unserviceable_rows_by_default():
+    rows = [poi("museum-a", "museum")]
+    blocked = poi("1-km", "attraction")
+    blocked["serving_quality"] = {
+        "eligible": False,
+        "reasons": ["weak_or_generic_name"],
+        "components": {},
+    }
+    rows.append(blocked)
+    manifest = {"version": "api-test-v2", "osm": {"sha256": OSM_HASH}}
+    with TestClient(create_app(router=Router(), v2_data=(rows, manifest))) as api:
+        assert api.get("/api/v2/pois").json()["total"] == 1
+        response = api.get("/api/v2/pois", params={"include_unserviceable": True}).json()
+        assert response["total"] == 2
+
+
+def test_health_reports_the_active_v2_catalog():
+    with client() as api:
+        health = api.get("/api/health")
+        assert health.status_code == 200
+        assert health.json() == {
+            "catalog": "ready",
+            "catalog_api_version": "v2",
+            "poi_count": 2,
+            "routing": "ready",
+            "dataset_version": "api-test-v2",
+            "routing_version": "api-test-router",
+        }
 
 
 def test_v2_itinerary_contract_and_v1_endpoint_both_exist():
@@ -80,3 +113,15 @@ def test_v2_rejects_inconsistent_ahp():
         assert response.status_code == 422
         assert "CR=" in response.text
 
+
+def test_v2_dataset_summary_and_download(tmp_path):
+    (tmp_path / "pois.csv").write_text("poi_id,name\n1,Test\n", encoding="utf-8")
+    with client(tmp_path) as api:
+        summary = api.get("/api/v2/dataset")
+        assert summary.status_code == 200
+        assert summary.json()["poi_count"] == 2
+        assert summary.json()["locations"][0]["priority_set"]["selected"] == 2
+        download = api.get("/api/v2/dataset/pois.csv")
+        assert download.status_code == 200
+        assert "poi_id,name" in download.text
+        assert api.get("/api/v2/dataset/secret.txt").status_code == 404

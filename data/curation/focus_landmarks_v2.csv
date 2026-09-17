@@ -1,0 +1,41 @@
+record_id,canonical_poi_id,seed_name,location_expected,expected_category,priority,reason
+focus-hn-001,osm:way:37625751,Lăng Chủ tịch Hồ Chí Minh,Hà Nội,historic,1,điểm biểu tượng cần dữ liệu hiện hành
+focus-hn-002,osm:way:696913691,Hoàng thành Thăng Long,Hà Nội,historic,1,di sản lớn
+focus-hn-003,osm:way:339936730,Bảo tàng Dân tộc học Việt Nam,Hà Nội,museum,1,bảo tàng trọng điểm
+focus-hn-004,osm:way:340128580,Di tích Nhà tù Hỏa Lò,Hà Nội,museum,1,bảo tàng trọng điểm
+focus-hn-005,osm:way:697326496,Chùa Một Cột,Hà Nội,temple,1,POI nổi bật hiện thiếu bằng chứng phục vụ
+focus-hn-006,osm:way:704147278,Bảo tàng Phụ nữ Việt Nam,Hà Nội,museum,1,bảo tàng trọng điểm
+focus-hn-007,osm:way:1148571536,Bảo tàng Lịch sử Quân sự Việt Nam,Hà Nội,museum,1,bảo tàng trọng điểm
+focus-hn-008,osm:way:178995262,Đền Ngọc Sơn,Hà Nội,temple,1,cụm Hồ Hoàn Kiếm
+focus-hn-009,osm:way:220302249,Chùa Trấn Quốc,Hà Nội,temple,1,POI nổi bật hiện thiếu bằng chứng phục vụ
+focus-hn-010,osm:way:28912942,Nhà thờ Lớn Hà Nội,Hà Nội,temple,1,POI nổi bật hiện thiếu bằng chứng phục vụ
+focus-hn-011,osm:way:208255133,Bảo tàng Hà Nội,Hà Nội,museum,2,bảo tàng trọng điểm
+focus-hn-012,osm:node:5406262022,Lotte Observation Deck,Hà Nội,viewpoint,2,điểm quan sát
+focus-hn-013,osm:way:1212230635,Chợ Đồng Xuân,Hà Nội,market,2,chợ và ẩm thực
+focus-hn-014,osm:relation:17148894,Vườn quốc gia Ba Vì,Hà Nội,nature_area,2,điểm thiên nhiên lớn
+focus-hn-015,osm:way:37933050,Nhà hát Lớn Hà Nội,Hà Nội,performance_venue,2,biểu diễn văn hóa
+focus-hn-016,,Văn Miếu Quốc Tử Giám,Hà Nội,historic,1,thiếu canonical rõ trong catalog
+focus-hn-017,,Khu phố cổ Hà Nội,Hà Nội,old_quarter,1,khối tham quan đi bộ
+focus-hn-018,,Hồ Hoàn Kiếm,Hà Nội,park,1,cụm trung tâm
+focus-hn-019,,Làng gốm Bát Tràng,Hà Nội,craft_village,2,làng nghề
+focus-hn-020,,Nhà hát Múa rối Thăng Long,Hà Nội,performance_venue,2,biểu diễn văn hóa
+focus-dn-001,osm:way:359114064,Sun World Bà Nà Hills,Đà Nẵng,theme_park,1,điểm lớn có thể chiếm cả ngày
+focus-dn-002,osm:relation:8552348,Ngũ Hành Sơn,Đà Nẵng,nature_area,1,điểm tham quan trọng điểm
+focus-dn-003,osm:way:302872188,Bảo tàng Điêu khắc Chăm Đà Nẵng,Đà Nẵng,museum,1,bảo tàng trọng điểm
+focus-dn-004,osm:way:198804483,Thánh địa Mỹ Sơn,Đà Nẵng,historic,1,di sản trên địa bàn ưu tiên mở rộng
+focus-dn-005,osm:way:694831926,Cầu Rồng Đà Nẵng,Đà Nẵng,attraction,1,điểm biểu tượng
+focus-dn-006,osm:relation:7055216,Bán đảo Sơn Trà,Đà Nẵng,nature_area,1,khu thiên nhiên lớn
+focus-dn-007,osm:way:486703049,Chùa Linh Ứng Sơn Trà,Đà Nẵng,temple,1,điểm tâm linh trọng điểm
+focus-dn-008,osm:way:14131302,Hoi An Memories Land,Đà Nẵng,theme_park,2,biểu diễn và điểm lớn
+focus-dn-009,osm:way:782381624,VinWonders Nam Hội An,Đà Nẵng,theme_park,2,điểm lớn có thể chiếm cả ngày
+focus-dn-010,osm:way:1368599361,Bảo tàng Đà Nẵng,Đà Nẵng,museum,2,bảo tàng trọng điểm
+focus-dn-011,osm:way:204885903,Chợ Hàn,Đà Nẵng,market,2,chợ và ẩm thực
+focus-dn-012,osm:way:204790989,Chợ Cồn,Đà Nẵng,market,2,POI nổi bật hiện thiếu bằng chứng phục vụ
+focus-dn-013,osm:node:4171964390,Làng gốm Thanh Hà,Đà Nẵng,craft_village,2,làng nghề trên địa bàn mới
+focus-dn-014,osm:node:4171971289,Làng mộc Kim Bồng,Đà Nẵng,craft_village,2,làng nghề trên địa bàn mới
+focus-dn-015,osm:node:10709724107,Làng đá mỹ nghệ Non Nước,Đà Nẵng,craft_village,2,làng nghề
+focus-dn-016,osm:relation:19000664,Bãi biển Mỹ Khê,Đà Nẵng,beach,1,gán địa phương bằng kiểm duyệt không gian cho quan hệ bãi biển OSM
+focus-dn-017,poi-google:3aac3427ee25b18a817027e9,Phố cổ Hội An,Đà Nẵng,old_quarter,1,khối tham quan đi bộ đã liên kết Google place cụ thể
+focus-dn-018,poi-google:270efa89c4fa1b1bdeb4cdcd,Chùa Cầu Hội An,Đà Nẵng,historic,1,điểm di sản đã liên kết Google place cụ thể
+focus-dn-019,,Cù Lao Chàm,Đà Nẵng,nature_area,2,cụm đảo cần kiểm tra tiếp cận
+focus-dn-020,,Bãi biển An Bàng,Đà Nẵng,beach,2,điểm biển trên địa bàn mới

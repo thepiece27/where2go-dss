@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "created_at": "2026-09-17T13:29:50.977377+00:00",
+  "created_at": "2026-09-17T19:25:09.580173+00:00",
   "root": "data",
   "files": [
     {
@@ -37,9 +37,9 @@
     },
     {
       "logical_path": "data/catalog_v2.sqlite",
-      "size_bytes": 174473216,
-      "sha256": "eb68bbd447662283a300c1bf7b820b462ff77269184bbf996e533cb4af53a7fc",
-      "modified_at": "2026-09-17T13:26:10.401866+00:00",
+      "size_bytes": 174731264,
+      "sha256": "7fe473f859216e6418a0f17900042e422648605b10e7fc7c961da1d1091621f6",
+      "modified_at": "2026-09-17T19:15:04.540611+00:00",
       "role": "generated_catalog",
       "use_status": "project_internal"
     },
@@ -60,10 +60,42 @@
       "use_status": "project_internal"
     },
     {
+      "logical_path": "data/curation/focus_duration_profiles_v2.csv",
+      "size_bytes": 3613,
+      "sha256": "d7d2894077afbcee50c9df9cee2a96aeb8871f45400dc8dd2924f789b863beb5",
+      "modified_at": "2026-09-17T18:16:05.978882+00:00",
+      "role": "curation_input",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/curation/focus_landmarks_v2.csv",
+      "size_bytes": 4578,
+      "sha256": "4f5a0c6ca424424f5c50bfff457306480d1430848c31ccc38faeb740a8878d6f",
+      "modified_at": "2026-09-17T18:16:05.977879+00:00",
+      "role": "curation_input",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/curation/google_query_overrides_v2.csv",
+      "size_bytes": 180,
+      "sha256": "84a548087472ddc74067f8046147f2e85658d0d61eafe5ef3f0a1ad3717dea90",
+      "modified_at": "2026-09-17T18:16:43.916205+00:00",
+      "role": "curation_input",
+      "use_status": "project_internal"
+    },
+    {
       "logical_path": "data/curation/id_registry.json",
       "size_bytes": 482820,
       "sha256": "b1bcda8b68b7cdb0d20a28fed0bef7e5de24c323cea71e176cfa18563fdff17c",
       "modified_at": "2026-09-17T06:06:44.231799+00:00",
+      "role": "curation_input",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/curation/poi_relations_v2.csv",
+      "size_bytes": 1227,
+      "sha256": "9bce16d6406009cada9531383b1771a78845916bfd6b3a0254c9469a92829380",
+      "modified_at": "2026-09-17T17:51:27.320499+00:00",
       "role": "curation_input",
       "use_status": "project_internal"
     },
@@ -76,10 +108,258 @@
       "use_status": "project_internal"
     },
     {
+      "logical_path": "data/evaluation/v2_scenarios.json",
+      "size_bytes": 4750,
+      "sha256": "d04664c76d1f4a27ccdb3e3f7a80a9ce17574fbcd8f4096c6f5ee4b94c403235",
+      "modified_at": "2026-09-17T13:51:36.860891+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus/queries.txt",
+      "size_bytes": 2676,
+      "sha256": "05bb0e758b5175735aad6e51d26dc7eefad18408382f6dec980365ef5cc9445e",
+      "modified_at": "2026-09-17T18:17:00.399718+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus/results.json",
+      "size_bytes": 39497,
+      "sha256": "e36f87bd5a6fe3a496b312df463faa632b656b320f0c4b98e86667d1ef82c2a3",
+      "modified_at": "2026-09-17T17:48:06.085121+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus/review.csv",
+      "size_bytes": 7929,
+      "sha256": "fda44dd0f4d01de7b8faf7372a920f5753db7476977a39d8ab7cc484406d1f42",
+      "modified_at": "2026-09-17T17:49:12.334551+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus/review_summary.json",
+      "size_bytes": 283,
+      "sha256": "1448db8c22fa2a7cfdad48a3e78f2ae4859bd3784512c1f60b1305cfb24eda8d",
+      "modified_at": "2026-09-17T17:49:12.334551+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus/seeds.csv",
+      "size_bytes": 5194,
+      "sha256": "08a50b9e17f3b7e73f6c81a4e698b115a611d7925ecc9b4fbc352278baed075a",
+      "modified_at": "2026-09-17T18:17:00.399718+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-missing/resolution_report.json",
+      "size_bytes": 2015,
+      "sha256": "d8b639fc5d00f57d6450ac3c46e78506ab90ba7dd8c6ca94594c071e02ab98b8",
+      "modified_at": "2026-09-17T18:17:18.731896+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-missing/results.json",
+      "size_bytes": 4134,
+      "sha256": "b4dcb14cf2fbc698906899e59aa6574730504017ea4cc0913bf7eb029a8da65e",
+      "modified_at": "2026-09-17T18:19:07.817533+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-missing/review.csv",
+      "size_bytes": 1242,
+      "sha256": "10970e67d049c8c1bbb617034eddf222997e0b10a79aaa7b4b7f0bc8e12c69c1",
+      "modified_at": "2026-09-17T18:19:27.608710+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-missing/review_summary.json",
+      "size_bytes": 282,
+      "sha256": "8d65ec3c1e4eb0d31ccfaf6b0e1de924d4542357ce703bfcb03f77a316db7d87",
+      "modified_at": "2026-09-17T18:19:27.608710+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-missing/seeds.csv",
+      "size_bytes": 1005,
+      "sha256": "6536c4a0d2148bd78e9badd5eb9166c2b93438c4070939f6c3cd46a867c8ff55",
+      "modified_at": "2026-09-17T18:17:18.731896+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-resolved/resolution_report.json",
+      "size_bytes": 19742,
+      "sha256": "c4ba64c8c52714a07da986f607f67dd9816d34fdcb45963ee2941ef9e34a8971",
+      "modified_at": "2026-09-17T18:04:56.121742+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-resolved/results.json",
+      "size_bytes": 42883,
+      "sha256": "e8846bd62dc35a9e88482054eb09424fae4246bbf516fd1dcd3d2d37e5def227",
+      "modified_at": "2026-09-17T18:07:46.210540+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-resolved/review.csv",
+      "size_bytes": 9312,
+      "sha256": "df98ab25bb3d38919b00d3627c206b48b6fa046effdedf1f1662ba8d642d601a",
+      "modified_at": "2026-09-17T18:08:11.287580+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-resolved/review_summary.json",
+      "size_bytes": 285,
+      "sha256": "5e794c753b03951514c8961b957824bd760a238d3028a1020bd7abb63b70bbea",
+      "modified_at": "2026-09-17T18:08:11.287580+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-focus-resolved/seeds.csv",
+      "size_bytes": 7913,
+      "sha256": "c06c6bd35082b73dd8f5ce6f43a8319fdf5f26da718e779dbce74e98b7f72015",
+      "modified_at": "2026-09-17T18:04:56.121742+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/diagnostic/page.json",
+      "size_bytes": 2968,
+      "sha256": "a4af168d4c8edece8969e772d8773efeb8583c27fcdfcc73727ec9f2775c17ee",
+      "modified_at": "2026-09-17T17:29:52.271379+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/diagnostic/page.png",
+      "size_bytes": 275585,
+      "sha256": "e485baad7fc65c5e5b425e72de599b43ad8e8b77a5847de820ec1ad2cbe533ce",
+      "modified_at": "2026-09-17T17:29:52.391107+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/queries.txt",
+      "size_bytes": 3654,
+      "sha256": "ec24483c339642c2dc266f9d00d31a8d62458807a9cd24227a052615de2cc7b6",
+      "modified_at": "2026-09-17T17:22:33.753437+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/queries_validation.txt",
+      "size_bytes": 355,
+      "sha256": "deedde6e44dad90ee4dfade2f27904ac111144d52c12de86f7e7f488066d3986",
+      "modified_at": "2026-09-17T17:27:07.505007+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/query_ascii.txt",
+      "size_bytes": 48,
+      "sha256": "2cd4b4d93878290f03f6d5d370a0ad21bffcbf43b61548e87f278fceee6f565b",
+      "modified_at": "2026-09-17T17:30:04.645766+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/README.md",
+      "size_bytes": 468,
+      "sha256": "be3c13092ef696506d1f91d1159255e09b926b37b7662cdfc43561e4001784be",
+      "modified_at": "2026-09-17T17:22:33.755437+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/result_ascii.csv",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified_at": "2026-09-17T17:30:04.699342+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/results.json",
+      "size_bytes": 123094,
+      "sha256": "ce7963eec56e827d179d876b5a3a8e66d0c2e7ae3244e36baf81babe52edf1a8",
+      "modified_at": "2026-09-17T17:43:34.312422+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/results_validation.csv",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified_at": "2026-09-17T17:27:07.536999+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/review.csv",
+      "size_bytes": 27705,
+      "sha256": "551cb6d82565beaa42aefabb00f5e7c6b2e9e6e39c5dee73834a222e403232d6",
+      "modified_at": "2026-09-17T17:49:10.319394+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/review_summary.json",
+      "size_bytes": 284,
+      "sha256": "c4ae5807bace95aa849e3bf0ac27691956cd29efe57bdfcd658eaf7a80d5e9d3",
+      "modified_at": "2026-09-17T17:49:10.319394+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/seeds.csv",
+      "size_bytes": 6897,
+      "sha256": "31392b477e4a97c78e939724c581e678f5217e84bd53debba0e3523029508f07",
+      "modified_at": "2026-09-17T17:22:33.755437+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/google-pilot/tool_manifest.json",
+      "size_bytes": 540,
+      "sha256": "b561632f51f5373994295b19e2f5314bf77f637e21b56a3d7e1f376e5080e94a",
+      "modified_at": "2026-09-17T17:26:58.301487+00:00",
+      "role": "unclassified",
+      "use_status": "project_internal"
+    },
+    {
       "logical_path": "data/manual/poi_enrichment_v2.xlsx",
+      "size_bytes": 41109,
+      "sha256": "98fd67394b182b4c550a83a99a9e1c1cc72efd3300b73c59c8297918ad69245c",
+      "modified_at": "2026-09-17T18:22:35.453206+00:00",
+      "role": "manual_observation",
+      "use_status": "manual_fact_with_source"
+    },
+    {
+      "logical_path": "data/manual/poi_enrichment_v2_seed_only_backup_20260918_002230.xlsx",
       "size_bytes": 14699,
       "sha256": "982b74c6ba06f8bbdc5aa97386742088dca5cd7912d074e6e8908ff1a6fc041c",
       "modified_at": "2026-09-17T13:29:37.023030+00:00",
+      "role": "manual_observation",
+      "use_status": "manual_fact_with_source"
+    },
+    {
+      "logical_path": "data/manual/v2_owner_grading.xlsx",
+      "size_bytes": 10118,
+      "sha256": "e2eaee0849a6a7280830bb9a91078a2c854ab15720ffe2212d7ed5d9019f32cb",
+      "modified_at": "2026-09-17T19:18:06.827571+00:00",
       "role": "manual_observation",
       "use_status": "manual_fact_with_source"
     },
@@ -106,6 +386,22 @@
       "modified_at": "2026-09-16T15:24:23.167011+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/private/google_enrichment_v2.csv",
+      "size_bytes": 27452,
+      "sha256": "3feed68b1015b9002948a5d955c5c599a0669a4bcd3a8a42299cda6633c3992c",
+      "modified_at": "2026-09-17T19:15:10.884583+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/private/google_opening_hours_v2.csv",
+      "size_bytes": 78999,
+      "sha256": "4c0f34ca644b0c495b8a0f9f19b2ffcd07944e899f5b7433e0b0be9ff99fa79c",
+      "modified_at": "2026-09-17T19:15:10.899175+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
     },
     {
       "logical_path": "data/private/legacy_review.csv",
@@ -189,49 +485,129 @@
     },
     {
       "logical_path": "data/reports/v2/catalog/coverage.json",
-      "size_bytes": 748,
-      "sha256": "f3aee6a3eabdb5038eca68a03ed859a8fc08273f840954540391a7f0b6f03573",
-      "modified_at": "2026-09-17T13:26:12.100973+00:00",
+      "size_bytes": 682,
+      "sha256": "b66dbe51c8c4ab39d05f2b8cfc02957f1ccfa8e1a13613cb187ec5c70e31fd8a",
+      "modified_at": "2026-09-17T19:15:05.462218+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/catalog/manifest.json",
-      "size_bytes": 2199,
-      "sha256": "78cb368701ed866e8cebb78651b275ea76722b6f9c1573f8b2f75fbe8d4c679b",
-      "modified_at": "2026-09-17T13:26:12.100973+00:00",
+      "size_bytes": 2637,
+      "sha256": "3af3f9bf914d90f58a62b51abf868ebf75aeba4b741664b1c5723e78507132eb",
+      "modified_at": "2026-09-17T19:15:05.461216+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/catalog/review_queue.json",
-      "size_bytes": 10120684,
-      "sha256": "df32da8e4bb99d09c51838b5753ff6cae9b7628ed13bfcfe7d56443e36ca4cc6",
-      "modified_at": "2026-09-17T13:26:12.301566+00:00",
+      "size_bytes": 10123628,
+      "sha256": "e6939bab583f26ec87b1594385c0d483e29fafdca46564b0c1c6d20c3fb1c41d",
+      "modified_at": "2026-09-17T19:15:05.577960+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/access_points.csv",
+      "size_bytes": 2394956,
+      "sha256": "f65aa0a20e72dc8d6507dd706d73dcb2c80ff7a12bc1d9c393e40214bbabecce",
+      "modified_at": "2026-09-17T19:15:10.573350+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/duration_profiles.csv",
+      "size_bytes": 766572,
+      "sha256": "41f885f3939795b8f3fab21d0ec92a712a841824d6b9a9291a663a72d472441a",
+      "modified_at": "2026-09-17T19:15:10.464252+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/opening_hours.csv",
+      "size_bytes": 893610,
+      "sha256": "895ea33d488341e9479f0acf96785af613ef5a1f260feac3373a5692ddc31596",
+      "modified_at": "2026-09-17T19:15:10.408195+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/pois.csv",
+      "size_bytes": 6285381,
+      "sha256": "e66685a1d1b6ce85e78027d6368ed1ee75a207d3832af06bbf95a25b1831a980",
+      "modified_at": "2026-09-17T19:15:10.360102+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/ratings.csv",
+      "size_bytes": 29342,
+      "sha256": "ed21eb166c567d94068f13bfb8f68ccf4ff4ba18fe27711608576a9690530dc2",
+      "modified_at": "2026-09-17T19:15:10.411195+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/README.md",
+      "size_bytes": 1185,
+      "sha256": "31ca856f70ede2548ab90779fd28442bf864ff200f9d1e93780f4895e875cb61",
+      "modified_at": "2026-09-17T19:15:10.900190+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/sources.csv",
+      "size_bytes": 2306,
+      "sha256": "3f94e6f392075e8652498bbf27bb1588eb5c88f004f5d7936399bdf9a915a359",
+      "modified_at": "2026-09-17T19:15:10.576377+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/summary.json",
+      "size_bytes": 4718,
+      "sha256": "e5f2f217bc04dd30fc0fee1a9c88e4e13ee8d3cf4ac62c05358302f9142cb898",
+      "modified_at": "2026-09-17T19:15:10.900190+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/evaluation.json",
+      "size_bytes": 109292,
+      "sha256": "5efb12f4e958eecbb4bdc40911fae91bbf6c4886698f4dbfea27fb4c17dfc4ac",
+      "modified_at": "2026-09-17T19:18:06.800102+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/evaluation_method_key.json",
+      "size_bytes": 1615,
+      "sha256": "395800be1122707ceaf84a41aad3924dbdd5f69ebb4eec1e08ce7c1782f0cd68",
+      "modified_at": "2026-09-17T19:18:06.800627+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/manual_validation.json",
-      "size_bytes": 297,
-      "sha256": "42a4cbcb90130746f6cfded8afcfb4a81e4b088c6eb0152bc37ac09ce5d99ed5",
-      "modified_at": "2026-09-17T13:29:50.773403+00:00",
+      "size_bytes": 389,
+      "sha256": "c10dd1f846738a25e18b8f23c2d36c191bb0edbe60c081402dab126bcf59f945",
+      "modified_at": "2026-09-17T19:25:08.500362+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/priority_set.csv",
-      "size_bytes": 28203,
-      "sha256": "672c08bf3d12b37a492a9dcd3a2a1fa60f2b85acb4a4fc8e378f6d3fa6d4d68b",
-      "modified_at": "2026-09-17T13:27:39.750639+00:00",
+      "size_bytes": 27940,
+      "sha256": "be5679311360d9a28dcfbcf931a9f3fcaa001f45f2c661014889b27d2b479e8d",
+      "modified_at": "2026-09-17T19:15:08.591476+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
-      "logical_path": "data/reports/v2/source_manifest.json",
-      "size_bytes": 9293,
-      "sha256": "5a1c7b90b1b9fd23093551c461641942c5f1325ddcc95add3cb988c4ee2a05c7",
-      "modified_at": "2026-09-17T13:19:31.095885+00:00",
+      "logical_path": "data/reports/v2/quality_queue.csv",
+      "size_bytes": 922284,
+      "sha256": "a68983802b7433077f1bcfe77e3ecf01e5eee69bb1ed9e90a26e75628dc0a3e1",
+      "modified_at": "2026-09-17T19:15:07.012085+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -293,15 +669,16 @@
     }
   ],
   "counts_by_role": {
-    "curation_input": 2,
+    "curation_input": 6,
     "derived_crosscheck": 1,
     "generated_catalog": 2,
-    "generated_report": 18,
-    "manual_observation": 1,
-    "runtime_or_private": 5,
+    "generated_report": 28,
+    "manual_observation": 3,
+    "runtime_or_private": 7,
     "source_observation": 1,
     "source_observation_restricted": 3,
     "spatial_source": 2,
-    "synthetic_fixture": 1
+    "synthetic_fixture": 1,
+    "unclassified": 29
   }
 }

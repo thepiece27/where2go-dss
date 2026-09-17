@@ -1,9 +1,9 @@
 {
-  "version": "v2-7038194e782aa951",
-  "created_at": "2026-09-17T15:45:55.952130+00:00",
+  "version": "v2-c829c8f3e2414108",
+  "created_at": "2026-09-17T19:15:04.533113+00:00",
   "schema_version": "2.0",
   "model_version": "where2go-v2.0.0",
-  "input_hash": "7038194e782aa95106e3f6a3698756c349aaf030168ddea156c3ed082a2d4df6",
+  "input_hash": "c829c8f3e2414108578142485182bb54bd321ec41dd7a935d66f7e5b1b302830",
   "v1_dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-e118cf0e",
   "osm": {
     "sha256": "4f7244d59895803a521b8f6ef0b86629bf4470565ad329ed5d3336676db047e7",
@@ -13,7 +13,7 @@
     "license": "ODbL-1.0"
   },
   "stats": {
-    "poi_count": 15711,
+    "poi_count": 15713,
     "osm_supplement": {
       "Hà Nội:cafe": 1188,
       "inserted": 5509,
@@ -32,9 +32,29 @@
       "ambiguous": 16
     },
     "manual": {
-      "seed_only": 60
+      "pending_verification": 12,
+      "seed_only": 48,
+      "confirmed": 20,
+      "tool_confirmed": 20,
+      "new_pois": 2,
+      "invalid_google_rating_precision": 1,
+      "hours_skipped_unconfirmed": 56,
+      "hours_sources_replaced": 13,
+      "opening_rows": 91
     },
-    "review_queue": 25318,
+    "duration_curation": {
+      "imported": 33
+    },
+    "poi_relations": {
+      "imported": 11
+    },
+    "focus_category_curation": {
+      "unchanged": 29,
+      "category_updated": 3,
+      "missing_or_new_poi": 7,
+      "location_updated": 1
+    },
+    "review_queue": 25330,
     "focus_coverage": [
       {
         "location": "Hà Nội",
@@ -42,31 +62,25 @@
         "usable": 4474,
         "attractions": 1497,
         "food_rest": 2977,
-        "with_rating_pair": 58,
-        "with_structured_hours": 609,
-        "with_specific_duration": 0,
-        "targets": {
-          "attractions": 50,
-          "food_rest": 20,
-          "hours_percent": 80,
-          "specific_duration_percent": 80
-        }
+        "with_rating_pair": 67,
+        "with_structured_hours": 611,
+        "with_specific_duration": 15,
+        "with_verified_duration": 0,
+        "with_curated_duration_estimate": 15,
+        "with_verified_access": 0
       },
       {
         "location": "Đà Nẵng",
-        "total": 2741,
-        "usable": 2680,
-        "attractions": 416,
+        "total": 2744,
+        "usable": 2682,
+        "attractions": 418,
         "food_rest": 2264,
-        "with_rating_pair": 22,
-        "with_structured_hours": 410,
-        "with_specific_duration": 0,
-        "targets": {
-          "attractions": 50,
-          "food_rest": 20,
-          "hours_percent": 80,
-          "specific_duration_percent": 80
-        }
+        "with_rating_pair": 30,
+        "with_structured_hours": 415,
+        "with_specific_duration": 18,
+        "with_verified_duration": 0,
+        "with_curated_duration_estimate": 18,
+        "with_verified_access": 0
       }
     ]
   },

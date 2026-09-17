@@ -43,6 +43,38 @@ function safeLink(url,text) {
     const link=node("a",text);link.href=parsed.href;link.target="_blank";link.rel="noopener noreferrer";return link;
   } catch {return node("span",text);}
 }
+function downloadLink(href,text) {
+  const link=node("a",text,"dataset-link");link.href=href;link.download="";return link;
+}
+function percent(value) {
+  return `${Number(value||0).toLocaleString("vi-VN",{maximumFractionDigits:2})}%`;
+}
+function renderCoverage(data) {
+  const panel=$("coverage");panel.replaceChildren();
+  panel.append(node("p",`Catalog ${data.poi_count.toLocaleString("vi-VN")} POI \u00b7 phi\u00ean b\u1ea3n ${data.dataset_version}.`));
+  for(const row of data.locations) {
+    const card=node("article",undefined,"coverage-card");
+    const priority=row.priority_set||{};const target=priority.target_status||{};
+    card.append(node("h3",row.location));
+    card.append(node("p",`${row.usable.toLocaleString("vi-VN")} POI usable; ${row.serviceable.toLocaleString("vi-VN")} \u0111\u1ee7 c\u1ed5ng ph\u1ee5c v\u1ee5 hi\u1ec7n t\u1ea1i.`));
+    card.append(node("p",`To\u00e0n catalog: gi\u1edd c\u1ea5u tr\u00fac ${row.with_structured_hours.toLocaleString("vi-VN")} (${percent(row.coverage_percent?.structured_hours)}); h\u1ed3 s\u01a1 th\u1eddi l\u01b0\u1ee3ng ri\u00eang ${row.with_specific_duration.toLocaleString("vi-VN")} (${percent(row.coverage_percent?.specific_duration)}), \u0111\u00e3 x\u00e1c minh ${row.with_verified_duration.toLocaleString("vi-VN")} (${percent(row.coverage_percent?.verified_duration)}); \u0111i\u1ec3m ti\u1ebfp c\u1eadn x\u00e1c minh ${row.with_verified_access.toLocaleString("vi-VN")} (${percent(row.coverage_percent?.verified_access)}).`));
+    card.append(node("p",`T\u1eadp \u01b0u ti\u00ean ${priority.selected||0}/70: ${priority.attractions||0}/50 tham quan, ${priority.food_rest||0}/20 \u0103n/ngh\u1ec9; gi\u1edd ${percent(priority.hours_percent)}; h\u1ed3 s\u01a1 th\u1eddi l\u01b0\u1ee3ng ri\u00eang ${percent(priority.specific_duration_percent)}, \u0111\u00e3 x\u00e1c minh ${percent(priority.verified_duration_percent)}.`));
+    const flags=node("p",undefined,"coverage-flags");
+    for(const [label,ok] of [["S\u1ed1 POI",target.attractions&&target.food_rest],["Gi\u1edd \u226580%",target.hours],["Th\u1eddi l\u01b0\u1ee3ng \u0111\u00e3 x\u00e1c minh \u226580%",target.verified_duration??target.specific_duration]]) {
+      flags.append(node("span",`${ok?"PASS":"CH\u01afA \u0110\u1ea0T"}: ${label}`,ok?"status-ok":"status-gap"));
+    }
+    card.append(flags);panel.append(card);
+  }
+  const downloads=$("datasetDownloads");downloads.replaceChildren(node("h3","File dataset d\u1ec5 \u0111\u1ecdc"));
+  const files=[
+    ["pois.csv","POI h\u1ee3p nh\u1ea5t"],["opening_hours.csv","Gi\u1edd m\u1edf c\u1eeda"],
+    ["ratings.csv","Rating v\u00e0 s\u1ed1 review"],["duration_profiles.csv","H\u1ed3 s\u01a1 th\u1eddi l\u01b0\u1ee3ng"],
+    ["access_points.csv","\u0110i\u1ec3m ti\u1ebfp c\u1eadn"],["sources.csv","Ngu\u1ed3n v\u00e0 quy\u1ec1n s\u1eed d\u1ee5ng"],
+    ["summary.json","B\u00e1o c\u00e1o coverage"],
+  ];
+  for(const [file,label] of files) downloads.append(downloadLink(`/api/v2/dataset/${file}`,`${label} (${file})`));
+  downloads.append(node("p","Catalog chu\u1ea9n: data/catalog_v2.sqlite. C\u00e1c CSV n\u1eb1m t\u1ea1i data/reports/v2/dataset/. D\u1eef li\u1ec7u Google Maps \u0111\u01b0\u1ee3c \u0111\u00e1nh d\u1ea5u restricted_internal."));
+}
 function imageElement(url) {
   const fallback=node("div","Ảnh chưa có nguồn được kiểm chứng");
   try {
@@ -179,8 +211,7 @@ $("locationFilter").onchange=()=>{const centers={"Hà Nội":[21.0285,105.8542],
     for(const category of data.categories){const option=node("option",labels[category]||category);option.value=category;$("typeFilter").append(option.cloneNode(true));$("excludedCategories").append(option);if(!foodCategories.has(category)){const label=node("label");const input=document.createElement("input");input.type="checkbox";input.value=category;label.append(input,node("span",labels[category]||category));$("tripCategories").append(label);}}
     $("locationFilter").value="Hà Nội";
     const coverage=await api("/api/v2/coverage");
-    for(const row of coverage.locations){$("coverage").append(node("p",`${row.location}: ${row.attractions} điểm tham quan, ${row.food_rest} điểm ăn/nghỉ; ${row.with_structured_hours} có giờ cấu trúc; ${row.with_specific_duration} có thời lượng riêng; ${row.with_verified_access} có điểm tiếp cận đã xác minh.`));}
-    $("coverage").append(node("p","Phiên bản dữ liệu: "+coverage.dataset_version));
+    renderCoverage(coverage);
     $("systemStatus").textContent="Catalog v2 đa nguồn · Chọn điểm xuất phát, chủ đề và thời gian.";updateStart();await loadPois();
   }catch(error){$("systemStatus").textContent=error.message;}
 })();

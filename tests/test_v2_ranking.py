@@ -67,10 +67,11 @@ def test_rank_handles_constant_columns_and_drive_is_cost():
     assert tuple(info["criteria_order"]) == ("preference_match", "place_quality", "drive_time", "data_confidence")
 
 
-def test_missing_rating_is_not_displayed_as_invented_observation():
+def test_missing_rating_is_neutral_and_not_displayed_as_invented_observation():
     rows = [poi("rated", rating=4.5, count=100), poi("missing")]
     context = RankingContext(rows)
-    _, detail = context.adjusted_quality(rows[1])
-    assert detail["method"] == "provider_prior_missing_rating"
+    score, detail = context.adjusted_quality(rows[1])
+    assert score == 0.5
+    assert detail["method"] == "neutral_missing_rating"
+    assert detail["prior"] == 4.5
     assert detail["observation"] is None
-

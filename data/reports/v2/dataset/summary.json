@@ -1,0 +1,148 @@
+{
+  "dataset_version": "v2-c829c8f3e2414108",
+  "schema_version": "2.0",
+  "created_at": "2026-09-17T19:15:04.533113+00:00",
+  "poi_count": 15713,
+  "locations": [
+    {
+      "location": "Hà Nội",
+      "total": 4488,
+      "usable": 4474,
+      "attractions": 1497,
+      "food_rest": 2977,
+      "serviceable": 802,
+      "serviceable_attractions": 113,
+      "serviceable_food_rest": 689,
+      "with_rating_pair": 67,
+      "with_structured_hours": 611,
+      "with_full_week_hours": 580,
+      "with_specific_duration": 15,
+      "with_verified_duration": 0,
+      "with_curated_duration_estimate": 15,
+      "with_verified_access": 0,
+      "coverage_percent": {
+        "rating_pair": 1.5,
+        "structured_hours": 13.66,
+        "full_week_hours": 12.96,
+        "specific_duration": 0.34,
+        "verified_duration": 0.0,
+        "verified_access": 0.0
+      },
+      "priority_set": {
+        "selected": 70,
+        "attractions": 50,
+        "food_rest": 20,
+        "serviceable": 70,
+        "with_structured_hours": 46,
+        "with_full_week_hours": 40,
+        "with_specific_duration": 15,
+        "with_verified_duration": 0,
+        "with_curated_duration_estimate": 15,
+        "with_rating_pair": 25,
+        "with_verified_access": 0,
+        "hours_percent": 65.71,
+        "specific_duration_percent": 30.0,
+        "verified_duration_percent": 0.0,
+        "targets": {
+          "attractions": 50,
+          "food_rest": 20,
+          "hours_percent": 80,
+          "verified_duration_percent": 80
+        },
+        "target_status": {
+          "attractions": true,
+          "food_rest": true,
+          "hours": false,
+          "specific_duration": false,
+          "verified_duration": false
+        }
+      }
+    },
+    {
+      "location": "Đà Nẵng",
+      "total": 2744,
+      "usable": 2682,
+      "attractions": 418,
+      "food_rest": 2264,
+      "serviceable": 504,
+      "serviceable_attractions": 69,
+      "serviceable_food_rest": 435,
+      "with_rating_pair": 29,
+      "with_structured_hours": 414,
+      "with_full_week_hours": 392,
+      "with_specific_duration": 17,
+      "with_verified_duration": 0,
+      "with_curated_duration_estimate": 17,
+      "with_verified_access": 0,
+      "coverage_percent": {
+        "rating_pair": 1.08,
+        "structured_hours": 15.44,
+        "full_week_hours": 14.62,
+        "specific_duration": 0.63,
+        "verified_duration": 0.0,
+        "verified_access": 0.0
+      },
+      "priority_set": {
+        "selected": 70,
+        "attractions": 50,
+        "food_rest": 20,
+        "serviceable": 70,
+        "with_structured_hours": 44,
+        "with_full_week_hours": 42,
+        "with_specific_duration": 17,
+        "with_verified_duration": 0,
+        "with_curated_duration_estimate": 17,
+        "with_rating_pair": 24,
+        "with_verified_access": 0,
+        "hours_percent": 62.86,
+        "specific_duration_percent": 34.0,
+        "verified_duration_percent": 0.0,
+        "targets": {
+          "attractions": 50,
+          "food_rest": 20,
+          "hours_percent": 80,
+          "verified_duration_percent": 80
+        },
+        "target_status": {
+          "attractions": true,
+          "food_rest": true,
+          "hours": false,
+          "specific_duration": false,
+          "verified_duration": false
+        }
+      }
+    }
+  ],
+  "rights": {
+    "Google Maps": "restricted_internal",
+    "OpenStreetMap": "ODbL-1.0"
+  },
+  "files": {
+    "database": "data/catalog_v2.sqlite",
+    "pois": "data/reports/v2/dataset/pois.csv",
+    "opening_hours": "data/reports/v2/dataset/opening_hours.csv",
+    "ratings": "data/reports/v2/dataset/ratings.csv",
+    "duration_profiles": "data/reports/v2/dataset/duration_profiles.csv",
+    "access_points": "data/reports/v2/dataset/access_points.csv",
+    "sources": "data/reports/v2/dataset/sources.csv"
+  },
+  "notes": [
+    "Google Maps observations are restricted_internal and are not a public redistribution dataset.",
+    "category_default duration values are design fallbacks, not verified visit durations.",
+    "Structured hours do not imply field verification or holiday accuracy."
+  ],
+  "export_counts": {
+    "pois.csv": 15713,
+    "opening_hours.csv": 8954,
+    "ratings.csv": 222,
+    "duration_profiles.csv": 15713,
+    "access_points.csv": 15731,
+    "sources.csv": 9
+  },
+  "private_enrichment": {
+    "google_enrichment": "data/private/google_enrichment_v2.csv",
+    "google_opening_hours": "data/private/google_opening_hours_v2.csv",
+    "enrichment_rows": 32,
+    "opening_rows": 147
+  }
+}

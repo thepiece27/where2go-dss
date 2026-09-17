@@ -13,11 +13,13 @@ GENERIC_PATTERNS = (
     r"^(group )?[a-k]\d*$",
     r"^diem \d+$",
     r"^point \d+$",
+    r"^\d+(?:\s+\d+)?\s*km$",
     r"^unnamed",
 )
 
 CATEGORY_CONFLICTS = {
     "historic": ("trai ga", "chicken farm", "poultry"),
+    "park": ("trung tam van hoa", "the thao", "cultural center", "sports center"),
     "zoo": ("tiem cay", "plant shop", "design"),
     "viewpoint": ("rao chan", "barrier", "hard to climb"),
 }

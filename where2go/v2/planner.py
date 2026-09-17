@@ -8,7 +8,7 @@ from where2go.routing import RoutingUnavailable
 from . import MODEL_VERSION
 from .durations import choose_duration
 from .hours import intervals_on_date
-from .ranking import confidence, rank
+from .ranking import confidence, rank, valid_rating
 from .taxonomy import FOOD_CATEGORIES
 
 
@@ -99,7 +99,7 @@ def filter_candidates(pois, request):
 
 def shortlist(attractions, food, request, attraction_limit=40, food_limit=20):
     def evidence(poi):
-        return (3 * bool(poi.get("ratings")) + 2 * (poi.get("hours_weekly") is not None)
+        return (3 * bool(valid_rating(poi)) + 2 * (poi.get("hours_weekly") is not None)
                 + bool(poi.get("website")) + bool(poi["chosen_access"].get("verified")))
     required = set(request.required_poi_ids)
     attraction_sorted = sorted(attractions, key=lambda poi: (

@@ -1,0 +1,3 @@
+# Optional, isolated data-collection dependency. Install only for the v2 pilot.
+google-maps-scraper @ git+https://github.com/noworneverev/google-maps-scraper.git@283f50c179da23f36f2df5bb638df5ba5ab9a15b
+tqdm>=4.66,<5

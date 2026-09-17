@@ -88,7 +88,10 @@ class RankingContext:
             score = (current["review_count"] * current["rating"] + m * prior) / (current["review_count"] + m)
             method = "bayesian_adjusted"
         else:
-            score, method = prior, "provider_prior_missing_rating"
+            # Missing data is not evidence that a place has average quality.
+            # Keep the criterion neutral while retaining the provider prior in
+            # the explanation for audit/debugging.
+            score, method = 2.5, "neutral_missing_rating"
         return score / 5, {"method": method, "prior": prior, "m": m, "observation": current}
 
     def preference_scores(self, pool, request):

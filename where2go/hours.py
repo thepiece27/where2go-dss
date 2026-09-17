@@ -19,7 +19,8 @@ def parse_week(raw):
         return [[(0, 1440)] for _ in DAYS]
     if not raw:
         return None
-    week = [[] for _ in DAYS]
+    # An omitted weekday is unknown. Only an explicit off/closed rule is [].
+    week = [None for _ in DAYS]
     assigned = set()
     for rule in raw.split(";"):
         match = re.fullmatch(r"\s*(?:(Mo|Tu|We|Th|Fr|Sa|Su)([^0-9]*?)\s+)?(off|closed|[0-9:,\- ]+)\s*", rule)
@@ -62,8 +63,12 @@ def intervals_on(raw, day):
     # Explicit 24/7 is date independent; otherwise holidays need date-specific evidence.
     if raw.strip() != "24/7" and day in holidays.country_holidays("VN", years=day.year):
         return None
-    current = [(a, min(b, 1440)) for a, b in week[day.weekday()]]
-    for a, b in week[(day-timedelta(days=1)).weekday()]:
+    day_intervals = week[day.weekday()]
+    if day_intervals is None:
+        return None
+    current = [(a, min(b, 1440)) for a, b in day_intervals]
+    previous = week[(day-timedelta(days=1)).weekday()]
+    for a, b in previous or []:
         if b > 1440:
             current.append((0, b-1440))
     return sorted(current)

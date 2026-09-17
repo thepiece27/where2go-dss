@@ -2,6 +2,7 @@ from functools import lru_cache
 from pathlib import Path
 import json
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse
 from .catalog import load_catalog, coverage, filter_pois
 from .config import CATALOG, ROOT
 from .models import ItineraryRequest
@@ -11,9 +12,18 @@ from .ranking import normalize
 from .v2.catalog import CATALOG_V2, load_catalog as load_catalog_v2, coverage as coverage_v2
 from .v2.models import ItineraryRequestV2
 from .v2.service import ItineraryService
+from .v2.dataset import dataset_summary
 
 
-def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2_data=None):
+DATASET_EXPORT_DIR = ROOT / "data/reports/v2/dataset"
+DATASET_EXPORT_FILES = {
+    "pois.csv", "opening_hours.csv", "ratings.csv", "duration_profiles.csv",
+    "access_points.csv", "sources.csv", "summary.json", "README.md",
+}
+
+
+def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2_data=None,
+               v2_export_dir=DATASET_EXPORT_DIR):
     app = FastAPI(title="Where2Go DSS", version="2.0.0")
     app.state.router = router or OSRM()
 
@@ -50,15 +60,21 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
 
     @app.get("/api/health")
     def health():
-        rows, meta = catalog()
+        service = v2_service()
         route = app.state.router
         try:
             route.route([(21.03, 105.85), (21.04, 105.84)], use_cache=False)
-            ok = route.manifest.get("pbf_sha256") == meta["osm"]["sha256"]
+            ok = route.manifest.get("pbf_sha256") == service.manifest["osm"]["sha256"]
         except RoutingUnavailable:
             ok = False
-        return {"catalog": "ready", "poi_count": len(rows), "routing": "ready" if ok else "unavailable",
-                "dataset_version": meta["version"], "routing_version": route.version}
+        return {
+            "catalog": "ready",
+            "catalog_api_version": "v2",
+            "poi_count": len(service.pois),
+            "routing": "ready" if ok else "unavailable",
+            "dataset_version": service.manifest["version"],
+            "routing_version": route.version,
+        }
 
     @app.post("/api/itineraries")
     def itineraries(request: ItineraryRequest):
@@ -67,11 +83,13 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
 
     @app.get("/api/v2/pois")
     def pois_v2(location: str = "", category: str = "", query: str = "",
+                include_unserviceable: bool = False,
                 limit: int = Query(500, ge=1, le=20000)):
         service = v2_service()
         text = normalize(query)
         selected = [poi for poi in service.pois
                     if poi["data_status"] == "usable"
+                    and (include_unserviceable or poi.get("serving_quality", {}).get("eligible", True))
                     and (not location or poi["location"] == location)
                     and (not category or poi["category"] == category)
                     and (not text or text in normalize(poi["name"] + " " + poi.get("description", "")))]
@@ -86,8 +104,24 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
     @app.get("/api/v2/coverage")
     def data_coverage_v2():
         service = v2_service()
-        return {"dataset_version": service.manifest["version"],
-                "locations": coverage_v2(service.pois), "manifest": service.manifest}
+        summary = dataset_summary(service.pois, service.manifest)
+        summary["manifest"] = service.manifest
+        return summary
+
+    @app.get("/api/v2/dataset")
+    def dataset_v2():
+        service = v2_service()
+        return dataset_summary(service.pois, service.manifest)
+
+    @app.get("/api/v2/dataset/{filename}")
+    def dataset_file_v2(filename: str):
+        if filename not in DATASET_EXPORT_FILES:
+            raise HTTPException(404, "File dataset không tồn tại")
+        path = Path(v2_export_dir) / filename
+        if not path.is_file():
+            raise HTTPException(404, "Chưa xuất dataset; chạy scripts/export_dataset_v2.py")
+        media = "text/csv" if filename.endswith(".csv") else ("application/json" if filename.endswith(".json") else "text/markdown")
+        return FileResponse(path, media_type=media, filename=filename)
 
     @app.post("/api/v2/itineraries")
     def itineraries_v2(request: ItineraryRequestV2):
@@ -96,12 +130,10 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
     # Mount only frontend assets; legacy scraped web/data is deliberately not public.
     @app.get("/")
     def index():
-        from fastapi.responses import FileResponse
         return FileResponse(ROOT / "web/index.html")
 
     def asset_handler(filename, media):
         def asset():
-            from fastapi.responses import FileResponse
             return FileResponse(ROOT / "web" / filename, media_type=media)
         return asset
 

@@ -2,10 +2,13 @@
   "workbook": "D:\\Desktop\\NHAP\\DSS_NGUYENVANHIEU\\GKI-Project\\where2go-dss\\data\\manual\\poi_enrichment_v2.xlsx",
   "status": "PASS",
   "stats": {
-    "places": 60,
-    "canonical_ids": 60,
-    "opening_rows": 0,
-    "verification_rows": 0
+    "places": 80,
+    "canonical_ids": 76,
+    "opening_rows": 147,
+    "duration_rows": 0,
+    "verification_rows": 80,
+    "confirmed_records": 0,
+    "tool_confirmed_records": 20
   },
   "errors": [],
   "warnings": []

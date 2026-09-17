@@ -1,6 +1,6 @@
 # Kế hoạch triển khai Where2Go DSS v2: dữ liệu đa nguồn và lịch trình tham quan hợp lý
 
-**Trạng thái:** Đặc tả chuẩn bị triển khai, cập nhật ngày 17/09/2026. Chưa bắt đầu coding v2; các chỉ tiêu dưới đây là mục tiêu, chưa phải kết quả nghiệm thu.  
+**Trạng thái:** Đã triển khai bản v2 đến mốc kiểm thử ngày 18/09/2026. Các chỉ tiêu dưới đây vẫn là tiêu chí nghiệm thu; kết quả thực tế, phần đã đạt và phần còn thiếu được ghi tại [kết quả triển khai v2](ket_qua_trien_khai_v2.md).  
 **Thời gian:** 7 ngày làm việc.  
 **Địa bàn:** Hà Nội và Đà Nẵng mới, bao gồm Quảng Nam cũ.  
 **Ngân sách:** Công cụ miễn phí trước, Docker/WSL và máy hiện có.  

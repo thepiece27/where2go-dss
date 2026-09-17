@@ -1,5 +1,6 @@
 """Build the v2 observation database and conservative merged catalog."""
 import argparse
+import csv
 from collections import Counter, defaultdict
 from contextlib import closing
 from datetime import datetime, timezone
@@ -14,10 +15,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import pandas as pd
 from openpyxl import load_workbook
 
-from scripts.create_manual_template_v2 import PLACES
+from scripts.create_manual_template_v2 import PLACES, OPENING, DURATION, VERIFICATION
 from scripts.inventory_sources_v2 import digest, inventory
 from where2go.catalog import haversine, load_catalog
 from where2go.config import CATALOG, ROOT
+from where2go.hours import parse_week
 from where2go.ranking import normalize
 from where2go.v2 import MODEL_VERSION
 from where2go.v2.durations import fallback_profile
@@ -117,9 +119,11 @@ def import_base(db, catalog_path, build_version):
             stable_id("access", poi["poi_id"], "base"), poi["poi_id"], poi["latitude"], poi["longitude"],
             "poi_coordinate", 10, 0, poi.get("coordinate_status", "v1_coordinate"), observations["latitude"],
         ))
-        weekly = poi.get("hours_intervals")
+        weekly = parse_week(poi.get("hours_raw"))
         if weekly is not None:
             for weekday, intervals in enumerate(weekly):
+                if intervals is None:
+                    continue
                 if not intervals:
                     db.execute("INSERT INTO opening_intervals VALUES (?,?,?,?,?,?,?,?,?)", (
                         stable_id("hours", poi["poi_id"], weekday, "closed"), poi["poi_id"], observations["hours_raw"],
@@ -180,9 +184,11 @@ def import_osm_supplement(db, pbf_path, supplement_path, name_index, build_versi
             stable_id("access", poi_id, "base"), poi_id, row["latitude"], row["longitude"],
             "poi_coordinate", 10, 0, row["coordinate_method"], observations["latitude"],
         ))
-        weekly = row.get("hours_intervals")
+        weekly = parse_week(row.get("hours_raw"))
         if weekly is not None:
             for weekday, intervals in enumerate(weekly):
+                if intervals is None:
+                    continue
                 if not intervals:
                     db.execute("INSERT INTO opening_intervals VALUES (?,?,?,?,?,?,?,?,?)", (
                         stable_id("hours", poi_id, weekday, "closed"), poi_id, observations["hours_raw"],
@@ -277,33 +283,379 @@ def import_google(db, paths, name_index, queue):
     return counters
 
 
-def import_manual(db, path, queue):
+def import_manual(db, path, queue, build_version):
     if not path.exists():
         return Counter(missing=1)
     workbook = load_workbook(path, read_only=True, data_only=True)
-    headers = [cell.value for cell in workbook["places"][1]]
-    if headers != PLACES:
-        raise ValueError("Manual workbook headers do not match v2 schema")
+    expected = {
+        "places": PLACES, "opening_hours": OPENING,
+        "visit_duration": DURATION, "verification": VERIFICATION,
+    }
+    for sheet_name, columns in expected.items():
+        if sheet_name not in workbook.sheetnames:
+            raise ValueError(f"Manual workbook is missing sheet {sheet_name}")
+        headers = [cell.value for cell in workbook[sheet_name][1]]
+        if headers != columns:
+            raise ValueError(f"Manual workbook headers do not match v2 schema: {sheet_name}")
+
+    def sheet_rows(sheet_name, columns):
+        for row_number, values in enumerate(
+                workbook[sheet_name].iter_rows(min_row=2, values_only=True), 2):
+            if not any(value not in (None, "") for value in values):
+                continue
+            yield row_number, dict(zip(columns, values))
+
+    verification = {}
+    for _, raw in sheet_rows("verification", VERIFICATION):
+        row = {key: scalar(value) for key, value in raw.items()}
+        verification[str(row.get("record_id") or "").strip()] = row
+
     source_id = add_source(db, path, "manual_observation", "manual_fact_with_source", "manual workbook")
     counters = Counter()
-    for row_number, values in enumerate(workbook["places"].iter_rows(min_row=2, values_only=True), 2):
-        row = {key: scalar(value) for key, value in zip(headers, values)}
-        if not any(value not in (None, "") for value in row.values()):
-            continue
+    records = {}
+    confirmed = {}
+    for row_number, raw in sheet_rows("places", PLACES):
+        row = {key: scalar(value) for key, value in raw.items()}
         record_id = add_record(db, source_id, row["record_id"], row, row.get("observed_at"))
+        records[str(row["record_id"])] = record_id
         poi_id = str(row.get("canonical_poi_id") or "").strip()
         exists = poi_id and db.execute("SELECT 1 FROM pois WHERE poi_id=?", (poi_id,)).fetchone()
-        if exists and row.get("maps_name") and row.get("maps_url"):
+        decision = verification.get(str(row["record_id"]), {})
+        identity_status = decision.get("identity_status")
+        created_new = False
+        identity_confirmed = identity_status in ("confirmed", "tool_confirmed")
+        if not exists and identity_confirmed:
+            latitude, longitude = row.get("latitude"), row.get("longitude")
+            category = canonical_category(row.get("category_raw"), row.get("maps_name") or row.get("seed_name"))
+            identity_key = row.get("place_id") or row.get("cid") or row.get("maps_url")
+            complete = (
+                row.get("maps_name") and row.get("maps_url") and identity_key and category
+                and isinstance(latitude, (int, float)) and isinstance(longitude, (int, float))
+            )
+            if complete:
+                poi_id = stable_id("poi-google", identity_key)
+                business = str(row.get("business_status_raw") or "unknown").strip()
+                if business not in ("open", "temporarily_closed", "permanently_closed", "unknown"):
+                    business = "unknown"
+                db.execute("INSERT INTO pois VALUES (?,?,?,?,?,?)", (
+                    poi_id, "usable", row["maps_name"], row.get("location_expected"), None, business,
+                ))
+                exists = True
+                created_new = True
+                counters["new_pois"] += 1
+            else:
+                queue.append({
+                    "source_file": path.name, "source_key": row["record_id"], "status": "ambiguous",
+                    "candidate_poi_ids": [],
+                    "reasons": ["confirmed_new_poi_requires_name_url_category_coordinates"],
+                })
+                counters["incomplete_new_poi"] += 1
+        if exists and identity_confirmed:
             db.execute("INSERT INTO source_links VALUES (?,?,?,?,?,?,?)", (
-                poi_id, record_id, "manual_workbook_pending_verification", None, row.get("reviewer"),
-                "ambiguous", "Verification sheet must confirm identity",
+                poi_id, record_id,
+                "tool_cross_source_identity_verification" if identity_status == "tool_confirmed" else "manual_identity_verification",
+                1.0,
+                decision.get("reviewer") or row.get("reviewer"), "confirmed",
+                decision.get("notes") or "Identity confirmed in verification sheet",
             ))
-            counters["pending_verification"] += 1
+            confirmed[str(row["record_id"])] = (poi_id, row, decision)
+            counters["confirmed"] += 1
+            if identity_status == "tool_confirmed":
+                counters["tool_confirmed"] += 1
+            observed_at = row.get("observed_at") or decision.get("reviewed_at")
+            verified_at = decision.get("reviewed_at")
+            fields = {
+                "google_maps_url": row.get("maps_url"), "name": row.get("maps_name"),
+                "website": row.get("website"), "address_raw": row.get("address_raw"),
+                "google_category_raw": row.get("category_raw"),
+                "google_place_id": row.get("place_id"), "google_cid": row.get("cid"),
+            }
+            observations = {}
+            for field, value in fields.items():
+                if value in (None, ""):
+                    continue
+                observation = observe(
+                    db, poi_id, record_id, field, value, observed_at,
+                    "manual_fact_with_source", "manual_verified_observation",
+                    verified_at, decision.get("evidence_url"),
+                )
+                observations[field] = observation
+                if field == "website" or (created_new and field == "name"):
+                    select(db, poi_id, field, observation, value,
+                           "confirmed manual observation", build_version)
+
+            business = str(row.get("business_status_raw") or "").strip()
+            if business in ("open", "temporarily_closed", "permanently_closed", "unknown"):
+                db.execute("UPDATE pois SET business_status=? WHERE poi_id=?", (business, poi_id))
+
+            category = canonical_category(row.get("category_raw"), row.get("maps_name"))
+            if created_new:
+                latitude, longitude = row["latitude"], row["longitude"]
+                for field, value in (("latitude", latitude), ("longitude", longitude),
+                                     ("location", row.get("location_expected")), ("category", category),
+                                     ("source_url", row.get("maps_url"))):
+                    observation = observe(
+                        db, poi_id, record_id, field, value, observed_at,
+                        "restricted_internal" if field != "location" else "manual_fact_with_source",
+                        "manual_verified_observation", verified_at, decision.get("evidence_url"),
+                    )
+                    observations[field] = observation
+                    select(db, poi_id, field, observation, value, "confirmed new manual POI", build_version)
+                db.execute("INSERT INTO poi_categories VALUES (?,?,1,?)", (
+                    poi_id, category, observations["category"],
+                ))
+                for tag in tags_for(category):
+                    db.execute("INSERT INTO poi_categories VALUES (?,?,0,?)", (
+                        poi_id, "tag:" + tag, observations["category"],
+                    ))
+                profile = fallback_profile(category)
+                db.execute("INSERT INTO duration_profiles VALUES (?,?,?,?,?,?,?)", (
+                    poi_id, profile["short_minutes"], profile["typical_minutes"], profile["long_minutes"],
+                    profile["method"], None, None,
+                ))
+            elif category:
+                current_category = db.execute(
+                    "SELECT category FROM poi_categories WHERE poi_id=? AND is_primary=1", (poi_id,)
+                ).fetchone()
+                if current_category and current_category[0] == "attraction" and category != "attraction":
+                    observation = observe(
+                        db, poi_id, record_id, "category", category, observed_at,
+                        "manual_fact_with_source", "manual_verified_google_category",
+                        verified_at, decision.get("evidence_url"),
+                    )
+                    db.execute("DELETE FROM poi_categories WHERE poi_id=? AND is_primary=1", (poi_id,))
+                    db.execute("INSERT OR IGNORE INTO poi_categories VALUES (?,?,1,?)", (poi_id, category, observation))
+                    select(db, poi_id, "category", observation, category,
+                           "refined broad category from confirmed observation", build_version)
+
+            rating = parse_rating(row.get("rating_raw"))
+            count = parse_review_count(row.get("review_count_raw"))
+            if rating is not None and not math.isclose(rating * 10, round(rating * 10), abs_tol=1e-8):
+                rating = None
+                counters["invalid_google_rating_precision"] += 1
+            if rating is not None or count is not None:
+                observation = observe(
+                    db, poi_id, record_id, "rating_pair",
+                    {"rating": rating, "review_count": count, "provider": "Google Maps"},
+                    observed_at, "restricted_internal", "manual_same_source_page",
+                    verified_at, decision.get("evidence_url"),
+                )
+                db.execute("INSERT OR REPLACE INTO ratings VALUES (?,?,?,?,?,?,?,?)", (
+                    stable_id("rating", record_id), poi_id, "Google Maps", rating, count,
+                    observed_at, int(rating is not None and count is not None), observation,
+                ))
+
+            lat, lon = row.get("latitude"), row.get("longitude")
+            if isinstance(lat, (int, float)) and isinstance(lon, (int, float)):
+                method = row.get("coordinate_method") or "manual_map_selection"
+                access_verified = str(method).lower() in (
+                    "verified_entrance", "verified_access", "manual_verified_entrance",
+                )
+                observation = observe(
+                    db, poi_id, record_id, "access_coordinate", {"latitude": lat, "longitude": lon},
+                    observed_at, "manual_fact_with_source", method,
+                    verified_at, decision.get("evidence_url"),
+                )
+                db.execute("INSERT OR REPLACE INTO access_points VALUES (?,?,?,?,?,?,?,?,?)", (
+                    stable_id("access", poi_id, "manual", row["record_id"]), poi_id, lat, lon,
+                    "verified_entrance" if access_verified else "poi_coordinate", 0,
+                    int(access_verified), method,
+                    observation,
+                ))
         else:
-            counters["seed_only"] += 1
-        if row.get("maps_name") or row.get("maps_url"):
-            queue.append({"source_file": path.name, "source_key": row["record_id"], "status": "ambiguous",
-                          "candidate_poi_ids": [poi_id] if exists else [], "reasons": ["manual_verification_required"]})
+            if exists and (row.get("maps_name") or row.get("maps_url")):
+                db.execute("INSERT INTO source_links VALUES (?,?,?,?,?,?,?)", (
+                    poi_id, record_id, "manual_workbook_pending_verification", None,
+                    row.get("reviewer"), "ambiguous", "Verification sheet must confirm identity",
+                ))
+                counters["pending_verification"] += 1
+            else:
+                counters["seed_only"] += 1
+            if row.get("maps_name") or row.get("maps_url"):
+                queue.append({"source_file": path.name, "source_key": row["record_id"], "status": "ambiguous",
+                              "candidate_poi_ids": [poi_id] if exists else [],
+                              "reasons": ["manual_verification_required"]})
+
+    day_numbers = {"Mo": 0, "Tu": 1, "We": 2, "Th": 3, "Fr": 4, "Sa": 5, "Su": 6}
+    cleared_hours = set()
+    for _, raw in sheet_rows("opening_hours", OPENING):
+        key = str(raw.get("record_id") or "").strip()
+        if key not in confirmed:
+            counters["hours_skipped_unconfirmed"] += 1
+            continue
+        poi_id, place, decision = confirmed[key]
+        if poi_id not in cleared_hours:
+            db.execute("DELETE FROM opening_intervals WHERE poi_id=?", (poi_id,))
+            cleared_hours.add(poi_id)
+            counters["hours_sources_replaced"] += 1
+        record_id = records[key]
+        status = str(raw.get("status") or "").strip()
+        observed_at = scalar(raw.get("observed_at")) or place.get("observed_at")
+        payload = {field: scalar(value) for field, value in raw.items()}
+        observation = observe(
+            db, poi_id, record_id, "opening_hours", payload, observed_at,
+            "manual_fact_with_source", "manual_structured_hours",
+            decision.get("reviewed_at"), scalar(raw.get("source_url")),
+        )
+        day = day_numbers.get(raw.get("day_of_week"))
+        specific = raw.get("specific_date")
+        specific_date = scalar(specific) if specific else None
+        opens = raw.get("open_time")
+        closes = raw.get("close_time")
+        open_minute = opens.hour * 60 + opens.minute if hasattr(opens, "hour") else None
+        close_minute = closes.hour * 60 + closes.minute if hasattr(closes, "hour") else None
+        next_day = str(raw.get("closes_next_day") or "").strip().lower() in ("true", "1", "yes")
+        db.execute("INSERT OR REPLACE INTO opening_intervals VALUES (?,?,?,?,?,?,?,?,?)", (
+            stable_id("hours", record_id, day, specific_date, status, open_minute, close_minute, next_day),
+            poi_id, observation, day, specific_date, status,
+            open_minute if status == "open" else None,
+            close_minute if status == "open" else None, int(next_day),
+        ))
+        counters["opening_rows"] += 1
+
+    for _, raw in sheet_rows("visit_duration", DURATION):
+        key = str(raw.get("record_id") or "").strip()
+        if key not in confirmed:
+            counters["duration_skipped_unconfirmed"] += 1
+            continue
+        poi_id, place, decision = confirmed[key]
+        record_id = records[key]
+        observed_at = scalar(raw.get("observed_at")) or place.get("observed_at")
+        payload = {field: scalar(value) for field, value in raw.items()}
+        observation = observe(
+            db, poi_id, record_id, "visit_duration", payload, observed_at,
+            "manual_fact_with_source", raw.get("duration_method"),
+            decision.get("reviewed_at"), scalar(raw.get("source_url")),
+        )
+        db.execute("INSERT OR REPLACE INTO duration_profiles VALUES (?,?,?,?,?,?,?)", (
+            poi_id, int(raw["short_minutes"]), int(raw["typical_minutes"]),
+            int(raw["long_minutes"]), str(raw["duration_method"]), observation,
+            decision.get("reviewed_at"),
+        ))
+        counters["duration_profiles"] += 1
+    return counters
+
+
+def import_duration_curation(db, path, build_version):
+    counters = Counter()
+    if not path.exists():
+        return counters
+    source_id = add_source(
+        db, path, "planning_assumption", "internal_design_data",
+        "data/curation/focus_duration_profiles_v2.csv",
+    )
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        poi_id = str(row.get("poi_id") or "").strip()
+        if not db.execute("SELECT 1 FROM pois WHERE poi_id=?", (poi_id,)).fetchone():
+            counters["missing_poi"] += 1
+            continue
+        try:
+            short = int(row["short_minutes"])
+            typical = int(row["typical_minutes"])
+            long = int(row["long_minutes"])
+        except (TypeError, ValueError):
+            counters["invalid"] += 1
+            continue
+        if not (0 < short <= typical <= long <= 1440):
+            counters["invalid"] += 1
+            continue
+        record_id = add_record(db, source_id, poi_id, row, None)
+        payload = {
+            "short_minutes": short, "typical_minutes": typical, "long_minutes": long,
+            "method": row.get("method") or "curated_planning_estimate",
+            "source_url": row.get("source_url") or None, "notes": row.get("notes") or None,
+        }
+        observation = observe(
+            db, poi_id, record_id, "visit_duration", payload, None,
+            "internal_design_data", payload["method"], None, payload["source_url"],
+        )
+        db.execute("INSERT OR REPLACE INTO duration_profiles VALUES (?,?,?,?,?,?,?)", (
+            poi_id, short, typical, long, payload["method"], observation, None,
+        ))
+        counters["imported"] += 1
+    return counters
+
+
+def import_poi_relations(db, path, build_version):
+    counters = Counter()
+    if not path.exists():
+        return counters
+    source_id = add_source(
+        db, path, "entity_relation_curation", "open_data_derived",
+        "data/curation/poi_relations_v2.csv",
+    )
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        child = str(row.get("child_poi_id") or "").strip()
+        parent = str(row.get("parent_poi_id") or "").strip()
+        if child == parent or not db.execute("SELECT 1 FROM pois WHERE poi_id=?", (child,)).fetchone() \
+                or not db.execute("SELECT 1 FROM pois WHERE poi_id=?", (parent,)).fetchone():
+            counters["invalid_or_missing"] += 1
+            continue
+        record_id = add_record(db, source_id, child, row, None)
+        observation = observe(
+            db, child, record_id, "parent_poi_id", parent, None,
+            "open_data_derived", row.get("relation") or "contained_experience",
+            None, row.get("notes"),
+        )
+        db.execute("UPDATE pois SET parent_poi_id=? WHERE poi_id=?", (parent, child))
+        select(db, child, "parent_poi_id", observation, parent, "curated contained experience", build_version)
+        counters["imported"] += 1
+    return counters
+
+
+def import_focus_category_curation(db, path, build_version):
+    counters = Counter()
+    if not path.exists():
+        return counters
+    source_id = add_source(
+        db, path, "focus_taxonomy_curation", "internal_design_data",
+        "data/curation/focus_landmarks_v2.csv",
+    )
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        poi_id = str(row.get("canonical_poi_id") or "").strip()
+        category = str(row.get("expected_category") or "").strip()
+        if not poi_id or not category or not db.execute("SELECT 1 FROM pois WHERE poi_id=?", (poi_id,)).fetchone():
+            counters["missing_or_new_poi"] += 1
+            continue
+        current = db.execute(
+            "SELECT category FROM poi_categories WHERE poi_id=? AND is_primary=1", (poi_id,)
+        ).fetchone()
+        poi_row = db.execute("SELECT location FROM pois WHERE poi_id=?", (poi_id,)).fetchone()
+        expected_location = str(row.get("location_expected") or "").strip()
+        update_location = bool(expected_location and not poi_row[0])
+        update_category = not current or current[0] != category
+        if not update_category and not update_location:
+            counters["unchanged"] += 1
+            continue
+        record_id = add_record(db, source_id, poi_id, row, None)
+        if update_category:
+            observation = observe(
+                db, poi_id, record_id, "category", category, None,
+                "internal_design_data", "curated_focus_taxonomy", None, row.get("reason"),
+            )
+            db.execute("DELETE FROM poi_categories WHERE poi_id=?", (poi_id,))
+            db.execute("INSERT OR REPLACE INTO poi_categories VALUES (?,?,1,?)", (poi_id, category, observation))
+            for tag in tags_for(category):
+                db.execute("INSERT OR IGNORE INTO poi_categories VALUES (?,?,0,?)", (
+                    poi_id, "tag:" + tag, observation,
+                ))
+            select(db, poi_id, "category", observation, category, "curated focus taxonomy", build_version)
+            counters["category_updated"] += 1
+        if update_location:
+            observation = observe(
+                db, poi_id, record_id, "location", expected_location, None,
+                "open_data_derived", "curated_spatial_assignment", None, row.get("reason"),
+            )
+            db.execute("UPDATE pois SET location=? WHERE poi_id=?", (expected_location, poi_id))
+            select(db, poi_id, "location", observation, expected_location,
+                   "curated focus spatial assignment", build_version)
+            counters["location_updated"] += 1
     return counters
 
 
@@ -316,10 +668,16 @@ def coverage(db):
         hours = db.execute("SELECT count(DISTINCT h.poi_id) FROM opening_intervals h JOIN pois p ON p.poi_id=h.poi_id WHERE p.location=?", (location,)).fetchone()[0]
         food = db.execute("SELECT count(DISTINCT p.poi_id) FROM pois p JOIN poi_categories c ON c.poi_id=p.poi_id AND c.is_primary=1 WHERE p.location=? AND p.status='usable' AND c.category IN ('restaurant','cafe','food_street')", (location,)).fetchone()[0]
         attractions = usable - food
+        durations = db.execute("SELECT count(DISTINCT d.poi_id) FROM duration_profiles d JOIN pois p ON p.poi_id=d.poi_id WHERE p.location=? AND d.method<>'category_default'", (location,)).fetchone()[0]
+        verified_durations = db.execute("SELECT count(DISTINCT d.poi_id) FROM duration_profiles d JOIN pois p ON p.poi_id=d.poi_id WHERE p.location=? AND d.verified_at IS NOT NULL", (location,)).fetchone()[0]
+        curated_durations = db.execute("SELECT count(DISTINCT d.poi_id) FROM duration_profiles d JOIN pois p ON p.poi_id=d.poi_id WHERE p.location=? AND d.method='curated_planning_estimate'", (location,)).fetchone()[0]
+        verified_access = db.execute("SELECT count(DISTINCT a.poi_id) FROM access_points a JOIN pois p ON p.poi_id=a.poi_id WHERE p.location=? AND a.verified=1", (location,)).fetchone()[0]
         result.append({"location": location, "total": total, "usable": usable,
                        "attractions": attractions, "food_rest": food, "with_rating_pair": ratings,
-                       "with_structured_hours": hours, "with_specific_duration": 0,
-                       "targets": {"attractions": 50, "food_rest": 20, "hours_percent": 80, "specific_duration_percent": 80}})
+                       "with_structured_hours": hours, "with_specific_duration": durations,
+                       "with_verified_duration": verified_durations,
+                       "with_curated_duration_estimate": curated_durations,
+                       "with_verified_access": verified_access})
     return result
 
 
@@ -332,11 +690,23 @@ def pipeline_hash(paths):
 
 
 def build(args):
-    input_paths = [args.v1_catalog, args.pbf, args.supplement, *args.google]
+    input_paths = [args.v1_catalog, args.pbf, args.supplement, args.duration_curation,
+                   args.poi_relations, args.focus_curation, *args.google]
     if args.manual.exists():
         input_paths.append(args.manual)
-    code_paths = [Path(__file__), ROOT / "where2go/v2/storage.py", ROOT / "where2go/v2/observations.py",
-                  ROOT / "where2go/v2/taxonomy.py", ROOT / "where2go/v2/durations.py"]
+    code_paths = [
+        Path(__file__),
+        ROOT / "where2go/hours.py",
+        ROOT / "where2go/v2/storage.py",
+        ROOT / "where2go/v2/observations.py",
+        ROOT / "where2go/v2/taxonomy.py",
+        ROOT / "where2go/v2/durations.py",
+        ROOT / "where2go/v2/google_hours.py",
+        ROOT / "where2go/v2/catalog.py",
+        ROOT / "where2go/v2/quality.py",
+        ROOT / "where2go/v2/dataset.py",
+        ROOT / "scripts/export_dataset_v2.py",
+    ]
     input_hash = pipeline_hash(input_paths + code_paths)
     build_version = "v2-" + input_hash[:16]
     create_database(args.output)
@@ -345,10 +715,16 @@ def build(args):
         pois, v1_manifest, name_index = import_base(db, args.v1_catalog, build_version)
         supplement_stats = import_osm_supplement(db, args.pbf, args.supplement, name_index, build_version)
         google_stats = import_google(db, args.google, name_index, review_queue)
-        manual_stats = import_manual(db, args.manual, review_queue)
+        manual_stats = import_manual(db, args.manual, review_queue, build_version)
+        duration_stats = import_duration_curation(db, args.duration_curation, build_version)
+        relation_stats = import_poi_relations(db, args.poi_relations, build_version)
+        category_stats = import_focus_category_curation(db, args.focus_curation, build_version)
         stats = {
             "poi_count": db.execute("SELECT count(*) FROM pois").fetchone()[0],
             "osm_supplement": dict(supplement_stats), "google": dict(google_stats), "manual": dict(manual_stats),
+            "duration_curation": dict(duration_stats),
+            "poi_relations": dict(relation_stats),
+            "focus_category_curation": dict(category_stats),
             "review_queue": len(review_queue), "focus_coverage": coverage(db),
         }
         db.execute("INSERT INTO builds VALUES (?,?,?,?,?)", (
@@ -381,6 +757,9 @@ def main():
     parser.add_argument("--supplement", type=Path, default=ROOT / "data/cache/osm_supplement_v2.json")
     parser.add_argument("--google", type=Path, nargs="*", default=[ROOT / "data" / name for name in GOOGLE_FILES])
     parser.add_argument("--manual", type=Path, default=ROOT / "data/manual/poi_enrichment_v2.xlsx")
+    parser.add_argument("--duration-curation", type=Path, default=ROOT / "data/curation/focus_duration_profiles_v2.csv")
+    parser.add_argument("--poi-relations", type=Path, default=ROOT / "data/curation/poi_relations_v2.csv")
+    parser.add_argument("--focus-curation", type=Path, default=ROOT / "data/curation/focus_landmarks_v2.csv")
     parser.add_argument("--output", type=Path, default=ROOT / "data/catalog_v2.sqlite")
     parser.add_argument("--report-dir", type=Path, default=ROOT / "data/reports/v2/catalog")
     build(parser.parse_args())

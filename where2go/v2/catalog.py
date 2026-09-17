@@ -89,6 +89,26 @@ def coverage(pois):
             poi for poi in usable
             if (poi.get("serving_quality") or serving_quality(poi))["eligible"]
         ]
+        with_rating = sum(any(r["same_observation"] for r in poi["ratings"]) for poi in usable)
+        with_hours = sum(poi["hours_weekly"] is not None for poi in usable)
+        with_full_hours = sum(
+            poi["hours_weekly"] is not None and all(day is not None for day in poi["hours_weekly"])
+            for poi in usable
+        )
+        with_duration = sum(
+            poi["duration_profile"] and poi["duration_profile"]["method"] != "category_default"
+            for poi in usable
+        )
+        with_verified_duration = sum(
+            poi["duration_profile"] and bool(poi["duration_profile"].get("verified_at"))
+            for poi in usable
+        )
+        with_curated_duration = sum(
+            poi["duration_profile"] and poi["duration_profile"].get("method") == "curated_planning_estimate"
+            for poi in usable
+        )
+        with_access = sum(any(a["verified"] for a in poi["access_points"]) for poi in usable)
+        denominator = len(usable) or 1
         rows.append({
             "location": location,
             "total": len(group),
@@ -98,9 +118,20 @@ def coverage(pois):
             "serviceable": len(serviceable),
             "serviceable_attractions": sum(not poi["is_food"] for poi in serviceable),
             "serviceable_food_rest": sum(poi["is_food"] for poi in serviceable),
-            "with_rating_pair": sum(any(r["same_observation"] for r in poi["ratings"]) for poi in usable),
-            "with_structured_hours": sum(poi["hours_weekly"] is not None for poi in usable),
-            "with_specific_duration": sum(poi["duration_profile"] and poi["duration_profile"]["method"] != "category_default" for poi in usable),
-            "with_verified_access": sum(any(a["verified"] for a in poi["access_points"]) for poi in usable),
+            "with_rating_pair": with_rating,
+            "with_structured_hours": with_hours,
+            "with_full_week_hours": with_full_hours,
+            "with_specific_duration": with_duration,
+            "with_verified_duration": with_verified_duration,
+            "with_curated_duration_estimate": with_curated_duration,
+            "with_verified_access": with_access,
+            "coverage_percent": {
+                "rating_pair": round(100 * with_rating / denominator, 2),
+                "structured_hours": round(100 * with_hours / denominator, 2),
+                "full_week_hours": round(100 * with_full_hours / denominator, 2),
+                "specific_duration": round(100 * with_duration / denominator, 2),
+                "verified_duration": round(100 * with_verified_duration / denominator, 2),
+                "verified_access": round(100 * with_access / denominator, 2),
+            },
         })
     return rows

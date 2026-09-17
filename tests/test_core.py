@@ -88,6 +88,8 @@ def test_topsis_cost_and_degenerate():
 
 def test_hours():
     assert parse_week("Mo-Fr 08:00-12:00,13:00-17:00; Sa-Su off")[6]==[]
+    assert parse_week("Mo-Fr 08:00-17:00")[5] is None
+    assert intervals_on("Mo-Fr 08:00-17:00", date(2026,9,20)) is None
     assert parse_week("Directions | 8 AM–5 PM") is None
     assert parse_week("Mo-Fr 08:00-25:00") is None
     assert parse_week("Mo--Fr 08:00-17:00") is None

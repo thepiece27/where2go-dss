@@ -25,6 +25,10 @@ def blank(value):
     return value is None or (isinstance(value, str) and not value.strip())
 
 
+def truthy(value):
+    return value is True or str(value or "").strip().lower() in ("true", "1", "yes")
+
+
 def rows(sheet):
     headers = [cell.value for cell in sheet[1]]
     for row_number, values in enumerate(sheet.iter_rows(min_row=2, values_only=True), 2):
@@ -91,6 +95,12 @@ def validate(path):
             errors.append({"sheet": "opening_hours", "row": row_number, "field": "open_time", "message": "open cần giờ mở"})
         if status == "open" and not isinstance(end, time):
             errors.append({"sheet": "opening_hours", "row": row_number, "field": "close_time", "message": "open cần giờ đóng"})
+        if status == "open" and isinstance(start, time) and isinstance(end, time):
+            start_minute = start.hour * 60 + start.minute
+            end_minute = end.hour * 60 + end.minute
+            next_day = truthy(item.get("closes_next_day"))
+            if end_minute <= start_minute and not next_day:
+                errors.append({"sheet": "opening_hours", "row": row_number, "field": "closes_next_day", "message": "Giờ đóng không sau giờ mở; chọn closes_next_day=TRUE cho qua nửa đêm hoặc 24/7"})
         if status in ("closed", "unknown") and (not blank(start) or not blank(end)):
             errors.append({"sheet": "opening_hours", "row": row_number, "field": "time", "message": "closed/unknown không được có khoảng giờ"})
         key = (ident, day, str(specific), status, str(start), str(end))
@@ -98,8 +108,10 @@ def validate(path):
             errors.append({"sheet": "opening_hours", "row": row_number, "field": "row", "message": "Khoảng giờ bị lặp"})
         opening_keys.add(key)
 
+    duration_ids = set()
     for row_number, item in rows(workbook["visit_duration"]):
         ident = str(item.get("record_id") or "").strip()
+        duration_ids.add(ident)
         if ident not in place_ids:
             errors.append({"sheet": "visit_duration", "row": row_number, "field": "record_id", "message": "Không tồn tại trong places"})
         values = [item.get(name) for name in ("short_minutes", "typical_minutes", "long_minutes")]
@@ -118,14 +130,23 @@ def validate(path):
         if ident in verification_ids:
             errors.append({"sheet": "verification", "row": row_number, "field": "record_id", "message": "Mỗi record chỉ có một kết luận hiện hành"})
         verification_ids.add(ident)
-        if item.get("identity_status") not in ("confirmed", "ambiguous", "unmatched", "blocked", "closed"):
+        if item.get("identity_status") not in ("confirmed", "tool_confirmed", "ambiguous", "unmatched", "blocked", "closed"):
             errors.append({"sheet": "verification", "row": row_number, "field": "identity_status", "message": "Trạng thái không hợp lệ"})
-        if item.get("identity_status") == "confirmed" and (blank(item.get("reviewer")) or blank(item.get("evidence_url"))):
+        if item.get("identity_status") in ("confirmed", "tool_confirmed") and (blank(item.get("reviewer")) or blank(item.get("evidence_url"))):
             errors.append({"sheet": "verification", "row": row_number, "field": "evidence", "message": "confirmed cần reviewer và evidence URL"})
 
     stats = {
         "places": len(place_ids), "canonical_ids": len(canonical_ids),
-        "opening_rows": len(opening_keys), "verification_rows": len(verification_ids),
+        "opening_rows": len(opening_keys), "duration_rows": len(duration_ids),
+        "verification_rows": len(verification_ids),
+        "confirmed_records": sum(
+            1 for _, item in rows(workbook["verification"])
+            if item.get("identity_status") == "confirmed"
+        ),
+        "tool_confirmed_records": sum(
+            1 for _, item in rows(workbook["verification"])
+            if item.get("identity_status") == "tool_confirmed"
+        ),
     }
     return errors, warnings, stats
 

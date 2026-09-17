@@ -521,4 +521,62 @@ input[type="range"] {
   .recommendation-controls {
     grid-template-columns: 1fr;
   }
+
+  .detail-panel {
+    right: 10px;
+    bottom: 10px;
+    left: 56px;
+    width: auto;
+    max-height: calc(44vh - 84px);
+  }
 }
+.dataset-downloads {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dataset-link {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 8px 10px;
+  color: var(--accent);
+  background: #fff;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.coverage-card {
+  margin: 10px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: #f8fafc;
+}
+
+.coverage-card h3,
+.dataset-downloads h3 {
+  margin: 0 0 7px;
+}
+
+.coverage-card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.coverage-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.coverage-flags span {
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.status-ok { color: #166534; background: #dcfce7; }
+.status-gap { color: #991b1b; background: #fee2e2; }

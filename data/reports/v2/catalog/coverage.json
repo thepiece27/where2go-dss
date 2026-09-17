@@ -5,30 +5,24 @@
     "usable": 4474,
     "attractions": 1497,
     "food_rest": 2977,
-    "with_rating_pair": 58,
-    "with_structured_hours": 609,
-    "with_specific_duration": 0,
-    "targets": {
-      "attractions": 50,
-      "food_rest": 20,
-      "hours_percent": 80,
-      "specific_duration_percent": 80
-    }
+    "with_rating_pair": 67,
+    "with_structured_hours": 611,
+    "with_specific_duration": 15,
+    "with_verified_duration": 0,
+    "with_curated_duration_estimate": 15,
+    "with_verified_access": 0
   },
   {
     "location": "Đà Nẵng",
-    "total": 2741,
-    "usable": 2680,
-    "attractions": 416,
+    "total": 2744,
+    "usable": 2682,
+    "attractions": 418,
     "food_rest": 2264,
-    "with_rating_pair": 22,
-    "with_structured_hours": 410,
-    "with_specific_duration": 0,
-    "targets": {
-      "attractions": 50,
-      "food_rest": 20,
-      "hours_percent": 80,
-      "specific_duration_percent": 80
-    }
+    "with_rating_pair": 30,
+    "with_structured_hours": 415,
+    "with_specific_duration": 18,
+    "with_verified_duration": 0,
+    "with_curated_duration_estimate": 18,
+    "with_verified_access": 0
   }
 ]

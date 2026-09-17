@@ -331016,5 +331016,137 @@
     "reasons": [
       "outside_focus_or_unknown_location"
     ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-001",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:12090398186"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-024",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:10082412846"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-025",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:10098130619"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-027",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:10098130620"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-028",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:10269656431"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-029",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:10098130621"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-030",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:10651129981"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-033",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:way:198804483"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-039",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:way:846695791"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-040",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:2617007574"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-042",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:12333995781"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
+  },
+  {
+    "source_file": "poi_enrichment_v2.xlsx",
+    "source_key": "pilot-051",
+    "status": "ambiguous",
+    "candidate_poi_ids": [
+      "osm:node:4389441895"
+    ],
+    "reasons": [
+      "manual_verification_required"
+    ]
   }
 ]

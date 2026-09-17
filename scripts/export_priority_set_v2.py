@@ -7,6 +7,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from where2go.config import ROOT
 from where2go.v2.catalog import CATALOG_V2, load_catalog
+from where2go.v2.dataset import evidence_score, select_priority
 
 
 def latest_rating(poi):
@@ -14,32 +15,9 @@ def latest_rating(poi):
     return max(rows, key=lambda row: row.get("observed_at") or "") if rows else None
 
 
-def evidence_score(poi):
-    rating = latest_rating(poi)
-    access = poi["access_points"][0] if poi["access_points"] else None
-    score = 0
-    score += 4 if rating else 0
-    score += 3 if poi["hours_weekly"] is not None else 0
-    score += 2 if poi.get("website") else 0
-    score += 1 if access and access["method"] == "osm_point" else 0
-    score += 1 if poi.get("description") else 0
-    return score
-
 
 def select(pois, location, food, limit):
-    pool = [poi for poi in pois if poi["location"] == location and poi["data_status"] == "usable"
-            and poi["serving_quality"]["eligible"] and poi["is_food"] == food]
-    pool.sort(key=lambda poi: (-evidence_score(poi), poi["category"], poi["poi_id"]))
-    selected, category_counts = [], {}
-    while len(selected) < min(limit, len(pool)):
-        remaining = [poi for poi in pool if poi not in selected]
-        if not remaining:
-            break
-        poi = min(remaining, key=lambda item: (category_counts.get(item["category"], 0), -evidence_score(item), item["poi_id"]))
-        selected.append(poi)
-        category_counts[poi["category"]] = category_counts.get(poi["category"], 0) + 1
-    return selected
-
+    return select_priority(pois, location, food, limit)
 
 def export(catalog, output):
     pois, manifest = load_catalog(catalog)
