@@ -201,7 +201,8 @@ def build(args):
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     now = datetime.now(timezone.utc).isoformat()
-    reports = ROOT / "data/reports"
+    reports = ROOT / "data/reports/v1/catalog"
+    reports.mkdir(parents=True, exist_ok=True)
     legacy = legacy_audit(args.legacy, ROOT / "data/private/legacy_review.csv")
     boundary_hash = digest(args.boundaries)
     pbf_hash = digest(args.pbf)

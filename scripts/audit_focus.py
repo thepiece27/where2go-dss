@@ -43,8 +43,10 @@ def main():
     report = {"dataset_version": manifest["version"], "routing_version": router.version,
               "checked_at": datetime.now(timezone.utc).isoformat(), "method": "automated_OSRM_and_assisted_source_review_not_fieldwork",
               "summary": summaries, "pois": rows}
-    write_json(ROOT / "data/reports/routing_audit.json", report)
-    write_json(ROOT / "data/reports/reviewed_sample.json", {**{k:v for k,v in report.items() if k != "pois"},
+    report_dir = ROOT / "data/reports/v1"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    write_json(report_dir / "routing_audit.json", report)
+    write_json(report_dir / "reviewed_sample.json", {**{k:v for k,v in report.items() if k != "pois"},
                                                            "pois": [r for r in rows if r["source_review"]]})
     # This work queue prioritizes evidence gathering; no missing value is invented.
     by_id = {p["poi_id"]: p for p in pois}
@@ -67,7 +69,7 @@ def main():
                           "poi_id": p["poi_id"], "name": p["name"], "location": p["location"], "category": p["category"],
                           "latitude": p["latitude"], "longitude": p["longitude"], "fields_to_check": "|".join(fields), "source_url": p["source_url"]})
     tasks.sort(key=lambda r: (r["priority"], r["location"], r["poi_id"]))
-    with (ROOT / "data/reports/enrichment_queue.csv").open("w", encoding="utf-8-sig", newline="") as f:
+    with (report_dir / "enrichment_queue.csv").open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["priority","poi_id","name","location","category","latitude","longitude","fields_to_check","source_url"])
         writer.writeheader()
         writer.writerows(tasks)

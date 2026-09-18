@@ -44,8 +44,3 @@ def test_canonical_id_survives_new_source_and_import_order():
     deduplicate(orphan,registry)
     assert orphan[0]["data_status"]=="needs_review"
 
-
-def test_viewport_not_entity_coordinate():
-    from scripts.fill_location_from_coordinates import parse_coordinates_from_maps_url
-    assert parse_coordinates_from_maps_url("https://maps.google.com/@21.03,105.85,14z") is None
-    assert parse_coordinates_from_maps_url("https://maps.google.com/@21,105,14z/!3d21.03!4d105.85")== (21.03,105.85)

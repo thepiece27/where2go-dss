@@ -18,7 +18,18 @@ from .v2.dataset import dataset_summary
 DATASET_EXPORT_DIR = ROOT / "data/reports/v2/dataset"
 DATASET_EXPORT_FILES = {
     "pois.csv", "opening_hours.csv", "ratings.csv", "duration_profiles.csv",
-    "access_points.csv", "sources.csv", "summary.json", "README.md",
+    "access_points.csv", "sources.csv", "summary.json", "audit.json", "README.md",
+}
+FRONTEND_ASSETS = {
+    "app.js": ("app.js", "text/javascript"),
+    "styles.css": ("styles.css", "text/css"),
+    "vendor/leaflet.js": ("vendor/leaflet.js", "text/javascript"),
+    "vendor/leaflet.css": ("vendor/leaflet.css", "text/css"),
+    "vendor/images/layers.png": ("vendor/images/layers.png", "image/png"),
+    "vendor/images/layers-2x.png": ("vendor/images/layers-2x.png", "image/png"),
+    "vendor/images/marker-icon.png": ("vendor/images/marker-icon.png", "image/png"),
+    "vendor/images/marker-icon-2x.png": ("vendor/images/marker-icon-2x.png", "image/png"),
+    "vendor/images/marker-shadow.png": ("vendor/images/marker-shadow.png", "image/png"),
 }
 
 
@@ -53,7 +64,7 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
     @app.get("/api/coverage")
     def data_coverage():
         rows, meta = catalog()
-        audit_path = ROOT / "data/reports/routing_audit.json"
+        audit_path = ROOT / "data/reports/v1/routing_audit.json"
         audit = json.loads(audit_path.read_text(encoding="utf-8")) if audit_path.exists() else {}
         road = audit.get("summary", []) if audit.get("dataset_version") == meta["version"] else []
         return {"dataset_version": meta["version"], "locations": coverage(rows), "manifest": meta, "road_audit": road}
@@ -87,19 +98,30 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
                 limit: int = Query(500, ge=1, le=20000)):
         service = v2_service()
         text = normalize(query)
-        selected = [poi for poi in service.pois
-                    if poi["data_status"] == "usable"
-                    and (include_unserviceable or poi.get("serving_quality", {}).get("eligible", True))
-                    and (not location or poi["location"] == location)
+        visible = [
+            poi for poi in service.pois
+            if poi["data_status"] == "usable"
+            and (include_unserviceable or poi.get("serving_quality", {}).get("eligible", True))
+        ]
+        selected = [poi for poi in visible
+                    if (not location or poi["location"] == location)
                     and (not category or poi["category"] == category)
                     and (not text or text in normalize(poi["name"] + " " + poi.get("description", "")))]
         selected.sort(key=lambda poi: (poi["location"] or "", poi["name"], poi["poi_id"]))
         return {
             "pois": selected[:limit], "total": len(selected),
             "dataset_version": service.manifest["version"],
-            "locations": sorted({poi["location"] for poi in service.pois if poi.get("location")}),
-            "categories": sorted({poi["category"] for poi in service.pois if poi.get("category")}),
+            "locations": sorted({poi["location"] for poi in visible if poi.get("location")}),
+            "categories": sorted({poi["category"] for poi in visible if poi.get("category")}),
         }
+
+    @app.get("/api/v2/pois/{poi_id}")
+    def poi_v2(poi_id: str):
+        service = v2_service()
+        poi = next((item for item in service.pois if item["poi_id"] == poi_id), None)
+        if poi is None or poi["data_status"] != "usable" or not poi.get("serving_quality", {}).get("eligible", True):
+            raise HTTPException(404, "POI không tồn tại hoặc chưa đủ điều kiện phục vụ")
+        return {"poi": poi, "dataset_version": service.manifest["version"]}
 
     @app.get("/api/v2/coverage")
     def data_coverage_v2():
@@ -137,9 +159,9 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             return FileResponse(ROOT / "web" / filename, media_type=media)
         return asset
 
-    for filename, media in (("app.js", "text/javascript"), ("styles.css", "text/css")):
+    for route, (filename, media) in FRONTEND_ASSETS.items():
         asset = asset_handler(filename, media)
-        app.add_api_route("/" + filename, asset, methods=["GET"], include_in_schema=False)
+        app.add_api_route("/" + route, asset, methods=["GET"], include_in_schema=False)
     return app
 
 

@@ -5,6 +5,7 @@ from openpyxl import Workbook, load_workbook
 from scripts.create_manual_template_v2 import create, PLACES, OPENING, DURATION, VERIFICATION
 from scripts import build_catalog_v2, inventory_sources_v2
 from scripts.validate_manual_data_v2 import validate
+from scripts.inventory_sources_v2 import role, use_status
 from where2go.config import CATALOG
 from where2go.v2.durations import choose_duration, fallback_profile
 from where2go.v2.hours import intervals_on_date
@@ -130,6 +131,31 @@ def test_cultural_sports_facility_misclassified_as_park_is_not_serviceable():
     quality = serving_quality(row)
     assert not quality["eligible"]
     assert "category_name_conflict" in quality["reasons"]
+
+
+def test_closed_business_is_not_serviceable():
+    row = {
+        "name": "Bảo tàng đã đóng",
+        "category": "museum",
+        "business_status": "permanently_closed",
+        "ratings": [],
+        "hours_weekly": [[(480, 1020)]] * 7,
+        "website": "",
+        "description": "",
+        "duration_profile": {"method": "category_default"},
+        "access_points": [{"verified": False}],
+    }
+    quality = serving_quality(row)
+    assert not quality["eligible"]
+    assert "business_closed" in quality["reasons"]
+
+
+def test_source_inventory_separates_restricted_observations_and_fixtures():
+    root = inventory_sources_v2.ROOT / "data"
+    assert role(root / "private/google_enrichment_v2.csv") == "source_observation_restricted"
+    assert role(root / "google-pilot/results.json") == "source_observation_restricted"
+    assert role(root / "evaluation/v2_scenarios.json") == "evaluation_fixture"
+    assert use_status("source_observation_restricted") == "restricted_internal"
 
 
 def test_priority_duration_target_requires_verified_profiles():

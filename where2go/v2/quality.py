@@ -60,6 +60,8 @@ def serving_quality(poi):
     name = normalize(poi.get("name", ""))
     if weak_name(poi.get("name", "")):
         reasons.append("weak_or_generic_name")
+    if poi.get("business_status") in ("temporarily_closed", "permanently_closed"):
+        reasons.append("business_closed")
     if any(token in name for token in CATEGORY_CONFLICTS.get(poi.get("category"), ())):
         reasons.append("category_name_conflict")
     weights = {"rating_pair": 2, "structured_hours": 2, "website": 2, "description": 1,

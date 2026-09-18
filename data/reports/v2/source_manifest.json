@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "created_at": "2026-09-17T19:25:09.580173+00:00",
+  "created_at": "2026-09-18T03:16:33.700413+00:00",
   "root": "data",
   "files": [
     {
@@ -8,14 +8,6 @@
       "size_bytes": 29958183,
       "sha256": "9577e108a224a9a9f48de28402e54f170452474b182250fc88625039a6d783db",
       "modified_at": "2026-09-17T06:04:45.294493+00:00",
-      "role": "runtime_or_private",
-      "use_status": "not_for_publication"
-    },
-    {
-      "logical_path": "data/cache/4f7244d59895803a7ea9ed33d6b17fff-import-v1.json",
-      "size_bytes": 29958183,
-      "sha256": "573592b91f0348adc66091f8329ccef9e0ce3c62b1ef54987716a4b1432eb1d7",
-      "modified_at": "2026-09-17T01:01:22.337963+00:00",
       "role": "runtime_or_private",
       "use_status": "not_for_publication"
     },
@@ -38,25 +30,9 @@
     {
       "logical_path": "data/catalog_v2.sqlite",
       "size_bytes": 174731264,
-      "sha256": "7fe473f859216e6418a0f17900042e422648605b10e7fc7c961da1d1091621f6",
-      "modified_at": "2026-09-17T19:15:04.540611+00:00",
+      "sha256": "f9729154a5afcc7c1938898f1f5aaf682d3694dd189f6e5a8c5228ea74b929eb",
+      "modified_at": "2026-09-18T03:15:44.668602+00:00",
       "role": "generated_catalog",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/chronological_metrics.xlsx",
-      "size_bytes": 18848,
-      "sha256": "5f6242a402f855ac256a8082bcb618b7de0ec9d1f2bd49df507f6a4d5ca8816f",
-      "modified_at": "2026-09-16T15:24:23.116676+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/chronological_summary.xlsx",
-      "size_bytes": 5273,
-      "sha256": "66b02299a545d074e72254774b0a6970ed790e2216e28ca74f709155f09de5ec",
-      "modified_at": "2026-09-16T15:24:23.125046+00:00",
-      "role": "generated_report",
       "use_status": "project_internal"
     },
     {
@@ -112,246 +88,150 @@
       "size_bytes": 4750,
       "sha256": "d04664c76d1f4a27ccdb3e3f7a80a9ce17574fbcd8f4096c6f5ee4b94c403235",
       "modified_at": "2026-09-17T13:51:36.860891+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "evaluation_fixture",
+      "use_status": "project_test_fixture"
     },
     {
       "logical_path": "data/google-focus/queries.txt",
       "size_bytes": 2676,
       "sha256": "05bb0e758b5175735aad6e51d26dc7eefad18408382f6dec980365ef5cc9445e",
       "modified_at": "2026-09-17T18:17:00.399718+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus/results.json",
       "size_bytes": 39497,
       "sha256": "e36f87bd5a6fe3a496b312df463faa632b656b320f0c4b98e86667d1ef82c2a3",
       "modified_at": "2026-09-17T17:48:06.085121+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus/review.csv",
       "size_bytes": 7929,
       "sha256": "fda44dd0f4d01de7b8faf7372a920f5753db7476977a39d8ab7cc484406d1f42",
       "modified_at": "2026-09-17T17:49:12.334551+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus/review_summary.json",
       "size_bytes": 283,
       "sha256": "1448db8c22fa2a7cfdad48a3e78f2ae4859bd3784512c1f60b1305cfb24eda8d",
       "modified_at": "2026-09-17T17:49:12.334551+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus/seeds.csv",
       "size_bytes": 5194,
       "sha256": "08a50b9e17f3b7e73f6c81a4e698b115a611d7925ecc9b4fbc352278baed075a",
       "modified_at": "2026-09-17T18:17:00.399718+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-focus-missing/resolution_report.json",
-      "size_bytes": 2015,
-      "sha256": "d8b639fc5d00f57d6450ac3c46e78506ab90ba7dd8c6ca94594c071e02ab98b8",
-      "modified_at": "2026-09-17T18:17:18.731896+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-focus-missing/results.json",
-      "size_bytes": 4134,
-      "sha256": "b4dcb14cf2fbc698906899e59aa6574730504017ea4cc0913bf7eb029a8da65e",
-      "modified_at": "2026-09-17T18:19:07.817533+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-focus-missing/review.csv",
-      "size_bytes": 1242,
-      "sha256": "10970e67d049c8c1bbb617034eddf222997e0b10a79aaa7b4b7f0bc8e12c69c1",
-      "modified_at": "2026-09-17T18:19:27.608710+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-focus-missing/review_summary.json",
-      "size_bytes": 282,
-      "sha256": "8d65ec3c1e4eb0d31ccfaf6b0e1de924d4542357ce703bfcb03f77a316db7d87",
-      "modified_at": "2026-09-17T18:19:27.608710+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-focus-missing/seeds.csv",
-      "size_bytes": 1005,
-      "sha256": "6536c4a0d2148bd78e9badd5eb9166c2b93438c4070939f6c3cd46a867c8ff55",
-      "modified_at": "2026-09-17T18:17:18.731896+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus-resolved/resolution_report.json",
       "size_bytes": 19742,
       "sha256": "c4ba64c8c52714a07da986f607f67dd9816d34fdcb45963ee2941ef9e34a8971",
       "modified_at": "2026-09-17T18:04:56.121742+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus-resolved/results.json",
       "size_bytes": 42883,
       "sha256": "e8846bd62dc35a9e88482054eb09424fae4246bbf516fd1dcd3d2d37e5def227",
       "modified_at": "2026-09-17T18:07:46.210540+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus-resolved/review.csv",
       "size_bytes": 9312,
       "sha256": "df98ab25bb3d38919b00d3627c206b48b6fa046effdedf1f1662ba8d642d601a",
       "modified_at": "2026-09-17T18:08:11.287580+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus-resolved/review_summary.json",
       "size_bytes": 285,
       "sha256": "5e794c753b03951514c8961b957824bd760a238d3028a1020bd7abb63b70bbea",
       "modified_at": "2026-09-17T18:08:11.287580+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-focus-resolved/seeds.csv",
       "size_bytes": 7913,
       "sha256": "c06c6bd35082b73dd8f5ce6f43a8319fdf5f26da718e779dbce74e98b7f72015",
       "modified_at": "2026-09-17T18:04:56.121742+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-pilot/diagnostic/page.json",
-      "size_bytes": 2968,
-      "sha256": "a4af168d4c8edece8969e772d8773efeb8583c27fcdfcc73727ec9f2775c17ee",
-      "modified_at": "2026-09-17T17:29:52.271379+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-pilot/diagnostic/page.png",
-      "size_bytes": 275585,
-      "sha256": "e485baad7fc65c5e5b425e72de599b43ad8e8b77a5847de820ec1ad2cbe533ce",
-      "modified_at": "2026-09-17T17:29:52.391107+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/queries.txt",
       "size_bytes": 3654,
       "sha256": "ec24483c339642c2dc266f9d00d31a8d62458807a9cd24227a052615de2cc7b6",
       "modified_at": "2026-09-17T17:22:33.753437+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-pilot/queries_validation.txt",
-      "size_bytes": 355,
-      "sha256": "deedde6e44dad90ee4dfade2f27904ac111144d52c12de86f7e7f488066d3986",
-      "modified_at": "2026-09-17T17:27:07.505007+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-pilot/query_ascii.txt",
-      "size_bytes": 48,
-      "sha256": "2cd4b4d93878290f03f6d5d370a0ad21bffcbf43b61548e87f278fceee6f565b",
-      "modified_at": "2026-09-17T17:30:04.645766+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/README.md",
       "size_bytes": 468,
       "sha256": "be3c13092ef696506d1f91d1159255e09b926b37b7662cdfc43561e4001784be",
       "modified_at": "2026-09-17T17:22:33.755437+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-pilot/result_ascii.csv",
-      "size_bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "modified_at": "2026-09-17T17:30:04.699342+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/results.json",
       "size_bytes": 123094,
       "sha256": "ce7963eec56e827d179d876b5a3a8e66d0c2e7ae3244e36baf81babe52edf1a8",
       "modified_at": "2026-09-17T17:43:34.312422+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/google-pilot/results_validation.csv",
-      "size_bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "modified_at": "2026-09-17T17:27:07.536999+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/review.csv",
       "size_bytes": 27705,
       "sha256": "551cb6d82565beaa42aefabb00f5e7c6b2e9e6e39c5dee73834a222e403232d6",
       "modified_at": "2026-09-17T17:49:10.319394+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/review_summary.json",
       "size_bytes": 284,
       "sha256": "c4ae5807bace95aa849e3bf0ac27691956cd29efe57bdfcd658eaf7a80d5e9d3",
       "modified_at": "2026-09-17T17:49:10.319394+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/seeds.csv",
       "size_bytes": 6897,
       "sha256": "31392b477e4a97c78e939724c581e678f5217e84bd53debba0e3523029508f07",
       "modified_at": "2026-09-17T17:22:33.755437+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/google-pilot/tool_manifest.json",
       "size_bytes": 540,
       "sha256": "b561632f51f5373994295b19e2f5314bf77f637e21b56a3d7e1f376e5080e94a",
       "modified_at": "2026-09-17T17:26:58.301487+00:00",
-      "role": "unclassified",
-      "use_status": "project_internal"
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/manual/poi_enrichment_v2.xlsx",
       "size_bytes": 41109,
       "sha256": "98fd67394b182b4c550a83a99a9e1c1cc72efd3300b73c59c8297918ad69245c",
       "modified_at": "2026-09-17T18:22:35.453206+00:00",
-      "role": "manual_observation",
-      "use_status": "manual_fact_with_source"
-    },
-    {
-      "logical_path": "data/manual/poi_enrichment_v2_seed_only_backup_20260918_002230.xlsx",
-      "size_bytes": 14699,
-      "sha256": "982b74c6ba06f8bbdc5aa97386742088dca5cd7912d074e6e8908ff1a6fc041c",
-      "modified_at": "2026-09-17T13:29:37.023030+00:00",
       "role": "manual_observation",
       "use_status": "manual_fact_with_source"
     },
@@ -364,52 +244,20 @@
       "use_status": "manual_fact_with_source"
     },
     {
-      "logical_path": "data/poi_evaluation_metrics.xlsx",
-      "size_bytes": 8433,
-      "sha256": "6853a3ad00e2384e2a8954248cdf1d92a46cc92ef04d09ffe0e4bd3330cd5c77",
-      "modified_at": "2026-09-16T15:24:23.133734+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/poi_recommendation_cleaned.xlsx",
-      "size_bytes": 2619847,
-      "sha256": "36f92e0c4bdcd19c5d25c4de0e18e6be5ee109b2cceac281abdc48234b5c90b6",
-      "modified_at": "2026-09-16T15:24:23.155469+00:00",
-      "role": "derived_crosscheck",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/poi_sample_recommendations.xlsx",
-      "size_bytes": 9002,
-      "sha256": "802e5a1c7704b0f201221106c4d54a855afb61c67f4db67f388065f5f3b68ed5",
-      "modified_at": "2026-09-16T15:24:23.167011+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
       "logical_path": "data/private/google_enrichment_v2.csv",
       "size_bytes": 27452,
       "sha256": "3feed68b1015b9002948a5d955c5c599a0669a4bcd3a8a42299cda6633c3992c",
-      "modified_at": "2026-09-17T19:15:10.884583+00:00",
-      "role": "runtime_or_private",
-      "use_status": "not_for_publication"
+      "modified_at": "2026-09-18T03:16:11.822083+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/private/google_opening_hours_v2.csv",
       "size_bytes": 78999,
       "sha256": "4c0f34ca644b0c495b8a0f9f19b2ffcd07944e899f5b7433e0b0be9ff99fa79c",
-      "modified_at": "2026-09-17T19:15:10.899175+00:00",
-      "role": "runtime_or_private",
-      "use_status": "not_for_publication"
-    },
-    {
-      "logical_path": "data/private/legacy_review.csv",
-      "size_bytes": 1064863,
-      "sha256": "4b529eaa33e43357521b97932b467cc4cc18c1f8d69b892b078cf2bb4ba77ea4",
-      "modified_at": "2026-09-17T06:06:43.485163+00:00",
-      "role": "runtime_or_private",
-      "use_status": "not_for_publication"
+      "modified_at": "2026-09-18T03:16:11.839831+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/raw/vietnam-260915.osm.pbf",
@@ -420,82 +268,18 @@
       "use_status": "license_check_required"
     },
     {
-      "logical_path": "data/reports/catalog.csv",
-      "size_bytes": 1562146,
-      "sha256": "aede8d5f6da7777dc2765fad76e8b555943f411fcf1b9c536a17f3be19113f93",
-      "modified_at": "2026-09-17T06:06:45.297707+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/coverage.json",
-      "size_bytes": 12555,
-      "sha256": "862cccd98ea5388c57d165ea64f163232938f08c139f0735573680f01c39fc0d",
-      "modified_at": "2026-09-17T06:06:45.194897+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/enrichment_queue.csv",
-      "size_bytes": 342967,
-      "sha256": "d7dd299de00e79a68cd6ff8caab155374f9c5b9d81a8443182c3415661353c1c",
-      "modified_at": "2026-09-17T06:06:51.938522+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/evaluation.json",
-      "size_bytes": 875267,
-      "sha256": "7c46e11a7f1d63b319ea9c1b38452efea48ee8dd20d33b244afd976ad58c6d1b",
-      "modified_at": "2026-09-17T06:07:01.748085+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/manifest.json",
-      "size_bytes": 1792,
-      "sha256": "c5380fe23928eb7eacd6d26cc374f772811fe28250bef02d7a5115d2ee90cd1e",
-      "modified_at": "2026-09-17T06:06:45.171609+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/review_queue.json",
-      "size_bytes": 68131,
-      "sha256": "97d58f73c728b7ee4fc79b00d763837905767d35a163fd52bc9644e4c3d8b3e6",
-      "modified_at": "2026-09-17T06:06:45.204247+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/reviewed_sample.json",
-      "size_bytes": 78147,
-      "sha256": "f8b81777c4aa72627ffd279fefba61294b3b285a4e72321e9f45f9787593f140",
-      "modified_at": "2026-09-17T06:06:51.833476+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
-      "logical_path": "data/reports/routing_audit.json",
-      "size_bytes": 921427,
-      "sha256": "de924deb055d69858147c50e47b0391b079f458c582f9440aec9721f4793d64b",
-      "modified_at": "2026-09-17T06:06:51.830404+00:00",
-      "role": "generated_report",
-      "use_status": "project_internal"
-    },
-    {
       "logical_path": "data/reports/v2/catalog/coverage.json",
       "size_bytes": 682,
       "sha256": "b66dbe51c8c4ab39d05f2b8cfc02957f1ccfa8e1a13613cb187ec5c70e31fd8a",
-      "modified_at": "2026-09-17T19:15:05.462218+00:00",
+      "modified_at": "2026-09-18T03:15:45.881106+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/catalog/manifest.json",
       "size_bytes": 2637,
-      "sha256": "3af3f9bf914d90f58a62b51abf868ebf75aeba4b741664b1c5723e78507132eb",
-      "modified_at": "2026-09-17T19:15:05.461216+00:00",
+      "sha256": "4a0e9f7cb1d6b61f19363d3e7f1b0484c218c5504435d14fef6772b7b26afaa8",
+      "modified_at": "2026-09-18T03:15:45.881106+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -503,7 +287,7 @@
       "logical_path": "data/reports/v2/catalog/review_queue.json",
       "size_bytes": 10123628,
       "sha256": "e6939bab583f26ec87b1594385c0d483e29fafdca46564b0c1c6d20c3fb1c41d",
-      "modified_at": "2026-09-17T19:15:05.577960+00:00",
+      "modified_at": "2026-09-18T03:15:46.048329+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -511,7 +295,15 @@
       "logical_path": "data/reports/v2/dataset/access_points.csv",
       "size_bytes": 2394956,
       "sha256": "f65aa0a20e72dc8d6507dd706d73dcb2c80ff7a12bc1d9c393e40214bbabecce",
-      "modified_at": "2026-09-17T19:15:10.573350+00:00",
+      "modified_at": "2026-09-18T03:16:11.456269+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/audit.json",
+      "size_bytes": 6559,
+      "sha256": "5a6b7fc1b307d1dbab752b22b072e1d6d2dc3970e9f3f3b123a86dcd661040d4",
+      "modified_at": "2026-09-18T03:16:27.489221+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -519,7 +311,7 @@
       "logical_path": "data/reports/v2/dataset/duration_profiles.csv",
       "size_bytes": 766572,
       "sha256": "41f885f3939795b8f3fab21d0ec92a712a841824d6b9a9291a663a72d472441a",
-      "modified_at": "2026-09-17T19:15:10.464252+00:00",
+      "modified_at": "2026-09-18T03:16:11.338300+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -527,15 +319,15 @@
       "logical_path": "data/reports/v2/dataset/opening_hours.csv",
       "size_bytes": 893610,
       "sha256": "895ea33d488341e9479f0acf96785af613ef5a1f260feac3373a5692ddc31596",
-      "modified_at": "2026-09-17T19:15:10.408195+00:00",
+      "modified_at": "2026-09-18T03:16:11.267434+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/pois.csv",
       "size_bytes": 6285381,
-      "sha256": "e66685a1d1b6ce85e78027d6368ed1ee75a207d3832af06bbf95a25b1831a980",
-      "modified_at": "2026-09-17T19:15:10.360102+00:00",
+      "sha256": "9b6c9ff1318bc9314342fad3a8f57b4734b26ee33bd711c4ce2c8e5e6cc3901d",
+      "modified_at": "2026-09-18T03:16:11.211312+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -543,15 +335,15 @@
       "logical_path": "data/reports/v2/dataset/ratings.csv",
       "size_bytes": 29342,
       "sha256": "ed21eb166c567d94068f13bfb8f68ccf4ff4ba18fe27711608576a9690530dc2",
-      "modified_at": "2026-09-17T19:15:10.411195+00:00",
+      "modified_at": "2026-09-18T03:16:11.270458+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/README.md",
       "size_bytes": 1185,
-      "sha256": "31ca856f70ede2548ab90779fd28442bf864ff200f9d1e93780f4895e875cb61",
-      "modified_at": "2026-09-17T19:15:10.900190+00:00",
+      "sha256": "0677cb5418b521782d551042778904cb1430f9248ab1d0e62bbe1bd2fe53cfdf",
+      "modified_at": "2026-09-18T03:16:11.840844+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -559,15 +351,15 @@
       "logical_path": "data/reports/v2/dataset/sources.csv",
       "size_bytes": 2306,
       "sha256": "3f94e6f392075e8652498bbf27bb1588eb5c88f004f5d7936399bdf9a915a359",
-      "modified_at": "2026-09-17T19:15:10.576377+00:00",
+      "modified_at": "2026-09-18T03:16:11.459266+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/summary.json",
       "size_bytes": 4718,
-      "sha256": "e5f2f217bc04dd30fc0fee1a9c88e4e13ee8d3cf4ac62c05358302f9142cb898",
-      "modified_at": "2026-09-17T19:15:10.900190+00:00",
+      "sha256": "cbaac036a9b807acaa43d646211445aa13dd7b8de5f4d612fb4f6d8121314dd5",
+      "modified_at": "2026-09-18T03:16:11.839831+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -591,23 +383,23 @@
       "logical_path": "data/reports/v2/manual_validation.json",
       "size_bytes": 389,
       "sha256": "c10dd1f846738a25e18b8f23c2d36c191bb0edbe60c081402dab126bcf59f945",
-      "modified_at": "2026-09-17T19:25:08.500362+00:00",
+      "modified_at": "2026-09-18T03:15:13.868118+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/priority_set.csv",
       "size_bytes": 27940,
-      "sha256": "be5679311360d9a28dcfbcf931a9f3fcaa001f45f2c661014889b27d2b479e8d",
-      "modified_at": "2026-09-17T19:15:08.591476+00:00",
+      "sha256": "33cbab45eab5f25d32b0d9a4b818d97c88e524aa55ddca3ff4945b93828eb063",
+      "modified_at": "2026-09-18T03:16:01.745239+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/quality_queue.csv",
       "size_bytes": 922284,
-      "sha256": "a68983802b7433077f1bcfe77e3ecf01e5eee69bb1ed9e90a26e75628dc0a3e1",
-      "modified_at": "2026-09-17T19:15:07.012085+00:00",
+      "sha256": "00fdcbb5268b863b08624bfbd53671827411789518c145ee1880df0bad8a014e",
+      "modified_at": "2026-09-18T03:15:54.145667+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -618,14 +410,6 @@
       "modified_at": "2026-09-17T01:05:08.553006+00:00",
       "role": "runtime_or_private",
       "use_status": "not_for_publication"
-    },
-    {
-      "logical_path": "data/synthetic_user_behavior.xlsx",
-      "size_bytes": 36930,
-      "sha256": "83103331fefe85cabd44f897c4570a8a803817aed2cb75331a2b6f0f5d974286",
-      "modified_at": "2026-09-16T15:24:23.180034+00:00",
-      "role": "synthetic_fixture",
-      "use_status": "project_internal"
     },
     {
       "logical_path": "data/vietnam_destinations.xlsx",
@@ -670,15 +454,13 @@
   ],
   "counts_by_role": {
     "curation_input": 6,
-    "derived_crosscheck": 1,
+    "evaluation_fixture": 1,
     "generated_catalog": 2,
-    "generated_report": 28,
-    "manual_observation": 3,
-    "runtime_or_private": 7,
+    "generated_report": 17,
+    "manual_observation": 2,
+    "runtime_or_private": 3,
     "source_observation": 1,
-    "source_observation_restricted": 3,
-    "spatial_source": 2,
-    "synthetic_fixture": 1,
-    "unclassified": 29
+    "source_observation_restricted": 22,
+    "spatial_source": 2
   }
 }

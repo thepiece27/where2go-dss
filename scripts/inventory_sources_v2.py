@@ -10,12 +10,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from where2go.config import ROOT
 
 
-OUTPUT_NAMES = {
-    "chronological_metrics.xlsx", "chronological_summary.xlsx",
-    "poi_evaluation_metrics.xlsx", "poi_sample_recommendations.xlsx",
-}
-
-
 def digest(path):
     with path.open("rb") as handle:
         return hashlib.file_digest(handle, "sha256").hexdigest()
@@ -28,22 +22,24 @@ def role(path):
         return "spatial_source"
     if relative.startswith("curation/"):
         return "curation_input"
+    if relative.startswith("evaluation/"):
+        return "evaluation_fixture"
+    if relative.startswith("manual/"):
+        return "manual_observation"
+    if relative.startswith(("google-pilot/", "google-focus/", "google-focus-resolved/", "google-focus-missing/")):
+        return "source_observation_restricted"
+    if relative.startswith("private/") and name.startswith("google_"):
+        return "source_observation_restricted"
     if relative.startswith(("raw/", "routing/", "cache/", "private/")):
         return "runtime_or_private"
-    if relative.startswith("reports/") or name in OUTPUT_NAMES:
+    if relative.startswith("reports/"):
         return "generated_report"
-    if "synthetic_user_behavior" in name:
-        return "synthetic_fixture"
-    if "cleaned" in name:
-        return "derived_crosscheck"
     if "google_maps" in name or "hotosm" in name:
         return "source_observation_restricted"
     if name == "vietnam_destinations.xlsx":
         return "source_observation"
     if name.startswith("catalog") and path.suffix == ".sqlite":
         return "generated_catalog"
-    if relative.startswith("manual/"):
-        return "manual_observation"
     return "unclassified"
 
 
@@ -51,6 +47,7 @@ def use_status(file_role):
     return {
         "source_observation_restricted": "restricted_internal",
         "manual_observation": "manual_fact_with_source",
+        "evaluation_fixture": "project_test_fixture",
         "spatial_source": "license_check_required",
         "runtime_or_private": "not_for_publication",
     }.get(file_role, "project_internal")

@@ -53,6 +53,9 @@ def test_v2_pois_and_coverage_use_v2_catalog():
         response = api.get("/api/v2/pois", params={"location": "Hà Nội", "category": "museum"})
         assert response.status_code == 200
         assert response.json()["total"] == 1
+        detail = api.get("/api/v2/pois/museum-a")
+        assert detail.status_code == 200
+        assert detail.json()["poi"]["poi_id"] == "museum-a"
         coverage = api.get("/api/v2/coverage").json()
         assert coverage["dataset_version"] == "api-test-v2"
         assert coverage["locations"][0]["attractions"] == 2
@@ -72,6 +75,7 @@ def test_v2_pois_hide_unserviceable_rows_by_default():
         assert api.get("/api/v2/pois").json()["total"] == 1
         response = api.get("/api/v2/pois", params={"include_unserviceable": True}).json()
         assert response["total"] == 2
+        assert api.get("/api/v2/pois/1-km").status_code == 404
 
 
 def test_health_reports_the_active_v2_catalog():
@@ -125,3 +129,10 @@ def test_v2_dataset_summary_and_download(tmp_path):
         assert download.status_code == 200
         assert "poi_id,name" in download.text
         assert api.get("/api/v2/dataset/secret.txt").status_code == 404
+
+
+def test_frontend_uses_local_leaflet_assets():
+    with client() as api:
+        assert api.get("/vendor/leaflet.js").status_code == 200
+        assert api.get("/vendor/leaflet.css").status_code == 200
+        assert api.get("/vendor/images/marker-icon.png").status_code == 200

@@ -1,9 +1,118 @@
 {
+  "status": "PASS",
+  "created_at": "2026-09-18T03:16:27.488524+00:00",
   "dataset_version": "v2-54f6cfdfb5d1038c",
-  "schema_version": "2.0",
-  "created_at": "2026-09-18T03:15:44.665364+00:00",
+  "catalog_path": "data/catalog_v2.sqlite",
   "poi_count": 15713,
-  "locations": [
+  "serviceable_count": 1559,
+  "hard_error_count": 0,
+  "warning_count": 4945,
+  "errors": [],
+  "warnings": [
+    {
+      "code": "duplicate_serviceable_attraction_name_in_location",
+      "count": 3,
+      "examples": [
+        [
+          "('Huế', 'boi tran garden')",
+          [
+            "osm:node:9518711737",
+            "osm:way:1050684699"
+          ]
+        ],
+        [
+          "('Đà Nẵng', 'chua linh ung')",
+          [
+            "osm:way:486703049",
+            "osm:way:746227054"
+          ]
+        ],
+        [
+          "('An Giang', 'cong vien binh khanh')",
+          [
+            "osm:way:777891292",
+            "osm:way:777891293",
+            "osm:way:777891294"
+          ]
+        ]
+      ]
+    },
+    {
+      "code": "serviceable_hours_unknown",
+      "count": 358,
+      "examples": [
+        "osm:node:10029093147",
+        "osm:node:10225121259",
+        "osm:node:10295139993",
+        "osm:node:10295259298",
+        "osm:node:10298273478",
+        "osm:node:10304520225",
+        "osm:node:10709724107",
+        "osm:node:10709724414",
+        "osm:node:10736205276",
+        "osm:node:10784775351"
+      ]
+    },
+    {
+      "code": "serviceable_rating_missing",
+      "count": 1462,
+      "examples": [
+        "osm:node:10011953034",
+        "osm:node:10029093147",
+        "osm:node:10082412846",
+        "osm:node:10098130619",
+        "osm:node:10098130620",
+        "osm:node:10098130621",
+        "osm:node:10098130622",
+        "osm:node:10103088449",
+        "osm:node:10111546117",
+        "osm:node:10114776452"
+      ]
+    },
+    {
+      "code": "serviceable_duration_unverified",
+      "count": 1559,
+      "examples": [
+        "osm:node:10011953034",
+        "osm:node:10029093147",
+        "osm:node:10082412846",
+        "osm:node:10098130619",
+        "osm:node:10098130620",
+        "osm:node:10098130621",
+        "osm:node:10098130622",
+        "osm:node:10103088449",
+        "osm:node:10111546117",
+        "osm:node:10114776452"
+      ]
+    },
+    {
+      "code": "serviceable_access_unverified",
+      "count": 1559,
+      "examples": [
+        "osm:node:10011953034",
+        "osm:node:10029093147",
+        "osm:node:10082412846",
+        "osm:node:10098130619",
+        "osm:node:10098130620",
+        "osm:node:10098130621",
+        "osm:node:10098130622",
+        "osm:node:10103088449",
+        "osm:node:10111546117",
+        "osm:node:10114776452"
+      ]
+    },
+    {
+      "code": "priority_target_not_met",
+      "count": 4,
+      "examples": [
+        "Hà Nội:hours",
+        "Hà Nội:verified_duration",
+        "Đà Nẵng:hours",
+        "Đà Nẵng:verified_duration"
+      ]
+    }
+  ],
+  "coverage": [
     {
       "location": "Hà Nội",
       "total": 4488,
@@ -113,36 +222,9 @@
       }
     }
   ],
-  "rights": {
-    "Google Maps": "restricted_internal",
-    "OpenStreetMap": "ODbL-1.0"
-  },
-  "files": {
-    "database": "data/catalog_v2.sqlite",
-    "pois": "data/reports/v2/dataset/pois.csv",
-    "opening_hours": "data/reports/v2/dataset/opening_hours.csv",
-    "ratings": "data/reports/v2/dataset/ratings.csv",
-    "duration_profiles": "data/reports/v2/dataset/duration_profiles.csv",
-    "access_points": "data/reports/v2/dataset/access_points.csv",
-    "sources": "data/reports/v2/dataset/sources.csv"
-  },
   "notes": [
-    "Google Maps observations are restricted_internal and are not a public redistribution dataset.",
-    "category_default duration values are design fallbacks, not verified visit durations.",
-    "Structured hours do not imply field verification or holiday accuracy."
-  ],
-  "export_counts": {
-    "pois.csv": 15713,
-    "opening_hours.csv": 8954,
-    "ratings.csv": 222,
-    "duration_profiles.csv": 15713,
-    "access_points.csv": 15731,
-    "sources.csv": 9
-  },
-  "private_enrichment": {
-    "google_enrichment": "data/private/google_enrichment_v2.csv",
-    "google_opening_hours": "data/private/google_opening_hours_v2.csv",
-    "enrichment_rows": 32,
-    "opening_rows": 147
-  }
+    "Unknown opening hours are allowed and are not treated as an error.",
+    "Warnings identify enrichment and review work; they do not mean the SQLite catalog is corrupt.",
+    "Google Maps observations remain restricted_internal."
+  ]
 }

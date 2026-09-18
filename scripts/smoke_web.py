@@ -16,12 +16,16 @@ def main():
         errors=[]
         page.on("pageerror",lambda error:errors.append(str(error)))
         page.goto(args.url,wait_until="networkidle",timeout=60000)
+        page.locator("#poiList .poi-button").first.wait_for()
+        page.locator("#poiList .poi-button").first.click()
         page.locator("#savePoi").wait_for()
         page.locator("#savePoi").click()
         assert page.locator("#savePoi").inner_text()=="Đã lưu"
         assert len(page.evaluate("JSON.parse(localStorage.getItem('where2go-saved-v2'))"))==1
         page.locator("#locationFilter").select_option(label="Đà Nẵng")
-        page.wait_for_function("document.querySelector('#detailPanel').textContent.includes('Đà Nẵng')")
+        page.wait_for_function("state.pois.length>0 && state.pois.every(p=>p.location==='Đà Nẵng')")
+        page.locator("#poiList .poi-button").first.click()
+        page.locator("#savePoi").wait_for()
         page.locator("#savePoi").click()
         assert len(page.evaluate("JSON.parse(localStorage.getItem('where2go-saved-v2'))"))==2
         page.locator("#tripDate").fill("2026-09-20")
@@ -78,7 +82,7 @@ def main():
         mobile_errors=[]
         mobile.on("pageerror",lambda error:mobile_errors.append(str(error)))
         mobile.goto(args.url,wait_until="networkidle",timeout=60000)
-        mobile.locator("#savePoi").wait_for()
+        mobile.locator("#poiList .poi-button").first.wait_for()
         mobile.locator("#locationFilter").select_option(label="Hà Nội")
         mobile.locator("#tripDate").fill("2026-09-20")
         mobile.locator("#interests").fill("văn hóa, lịch sử")
