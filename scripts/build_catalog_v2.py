@@ -12,7 +12,6 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import pandas as pd
 from openpyxl import load_workbook
 
 from scripts.create_manual_template_v2 import PLACES, OPENING, DURATION, VERIFICATION
@@ -21,10 +20,10 @@ from where2go.catalog import haversine, load_catalog
 from where2go.config import CATALOG, ROOT
 from where2go.hours import parse_week
 from where2go.ranking import normalize
-from where2go.v2 import MODEL_VERSION
+from where2go.v2 import MODEL_VERSION, SCHEMA_VERSION
 from where2go.v2.durations import fallback_profile
 from where2go.v2.observations import (
-    entity_coordinate, focus_location, normalized_entity_name, parse_rating,
+    parse_rating,
     parse_review_count, scalar, stable_id,
 )
 from where2go.v2.storage import connect, create_database, json_text
@@ -38,18 +37,11 @@ GOOGLE_FILES = (
 )
 
 
-def source_time(path):
-    match = __import__("re").search(r"_(\d{8})_(\d{6})", path.stem)
-    if match:
-        return datetime.strptime("".join(match.groups()), "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc).isoformat()
-    return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat()
-
-
 def add_source(db, path, role, use_status, tool):
     sha = digest(path)
     ident = stable_id("source", path.relative_to(ROOT).as_posix(), sha)
     db.execute("INSERT INTO source_files VALUES (?,?,?,?,?,?,?)", (
-        ident, path.relative_to(ROOT).as_posix(), sha, role, source_time(path), tool, use_status,
+        ident, path.relative_to(ROOT).as_posix(), sha, role, None, tool, use_status,
     ))
     return ident
 
@@ -96,6 +88,7 @@ def import_base(db, catalog_path, build_version):
             "location": poi.get("location"), "category": effective_category,
             "description": poi.get("description", ""), "hours_raw": poi.get("hours_raw", ""),
             "website": poi.get("website", ""), "source_url": poi.get("source_url", ""),
+            "review_reasons": poi.get("review_reason", []),
         }
         observations = {}
         for field, value in fields.items():
@@ -134,8 +127,7 @@ def import_base(db, catalog_path, build_version):
                         stable_id("hours", poi["poi_id"], weekday, start, end), poi["poi_id"], observations["hours_raw"],
                         weekday, None, "open", start, end if end <= 1440 else end - 1440, int(end > 1440),
                     ))
-        if poi.get("location") in ("Hà Nội", "Đà Nẵng"):
-            name_index[(normalize(poi["name"]), poi["location"])].append(dict(poi, category=effective_category))
+        name_index[(normalize(poi["name"]), poi.get("location"))].append(dict(poi, category=effective_category))
     return pois, manifest, name_index
 
 
@@ -207,79 +199,6 @@ def import_osm_supplement(db, pbf_path, supplement_path, name_index, build_versi
         name_index[(row["name_normalized"], row["location"])].append(canonical)
         counters[row["location"] + ":" + row["category"]] += 1
         counters["inserted"] += 1
-    return counters
-
-
-def google_rows(path):
-    frame = pd.read_excel(path, dtype=object)
-    for index, series in frame.iterrows():
-        row = {str(key): scalar(value) for key, value in series.items()}
-        yield index + 2, row
-
-
-def import_google(db, paths, name_index, queue):
-    counters = Counter()
-    seen_ratings = set()
-    for path in paths:
-        source_id = add_source(db, path, "source_observation_restricted", "restricted_internal", "legacy browser collector")
-        observed_at = source_time(path)
-        for row_number, row in google_rows(path):
-            source_key = row.get("STT") if row.get("STT") not in (None, "") else f"row:{row_number}"
-            record_id = add_record(db, source_id, source_key, row, observed_at)
-            location = focus_location(row.get("Vị trí"))
-            name = normalized_entity_name(row)
-            coordinate = entity_coordinate(row.get("maps_url"))
-            reasons = []
-            if row.get("maps_match_status") not in ("matched", "match", True, 1):
-                reasons.append("source_not_marked_matched")
-            if not location:
-                reasons.append("outside_focus_or_unknown_location")
-            if not name:
-                reasons.append("search_results_not_entity")
-            if not coordinate:
-                reasons.append("missing_entity_coordinate")
-            candidates = name_index.get((name, location), []) if name and location else []
-            if coordinate:
-                candidates = [p for p in candidates if haversine(coordinate, (p["latitude"], p["longitude"])) <= .3]
-            category = canonical_category(row.get("maps_destination_type"), row.get("maps_result_name"))
-            if category:
-                compatible = [p for p in candidates if p["category"] == category or p["category"] == "attraction"]
-                candidates = compatible or candidates
-            if not reasons and len(candidates) == 1:
-                poi = candidates[0]
-                db.execute("INSERT INTO source_links VALUES (?,?,?,?,?,?,?)", (
-                    poi["poi_id"], record_id, "exact_name_location_entity_coordinate", 1.0, None,
-                    "confirmed", None,
-                ))
-                counters["confirmed"] += 1
-                for field, value in (("google_category_raw", row.get("maps_destination_type")),
-                                     ("google_hours_raw", row.get("maps_first_open_hours")),
-                                     ("google_maps_url", row.get("maps_url"))):
-                    if value not in (None, ""):
-                        observe(db, poi["poi_id"], record_id, field, value, observed_at,
-                                "restricted_internal", "legacy_google_observation")
-                rating = parse_rating(row.get("Đánh giá "))
-                count = parse_review_count(row.get("maps_review_count"))
-                rating_key = (poi["poi_id"], rating, count, observed_at)
-                if (rating is not None or count is not None) and rating_key not in seen_ratings:
-                    observation = observe(db, poi["poi_id"], record_id, "rating_pair",
-                                          {"rating": rating, "review_count": count, "provider": "Google Maps"},
-                                          observed_at, "restricted_internal", "same_source_row")
-                    db.execute("INSERT INTO ratings VALUES (?,?,?,?,?,?,?,?)", (
-                        stable_id("rating", *rating_key), poi["poi_id"], "Google Maps", rating, count,
-                        observed_at, int(rating is not None and count is not None), observation,
-                    ))
-                    seen_ratings.add(rating_key)
-            else:
-                status = "ambiguous" if len(candidates) > 1 else "unmatched"
-                counters[status] += 1
-                queue.append({
-                    "source_file": path.name, "source_key": str(source_key),
-                    "seed_name": row.get("Tên địa điểm"), "result_name": row.get("maps_result_name"),
-                    "location": location, "status": status,
-                    "candidate_poi_ids": [p["poi_id"] for p in candidates],
-                    "reasons": reasons or (["multiple_candidates"] if candidates else ["no_conservative_match"]),
-                })
     return counters
 
 
@@ -362,8 +281,8 @@ def import_manual(db, path, queue, build_version):
             counters["confirmed"] += 1
             if identity_status == "tool_confirmed":
                 counters["tool_confirmed"] += 1
-            observed_at = row.get("observed_at") or decision.get("reviewed_at")
-            verified_at = decision.get("reviewed_at")
+            observed_at = row.get("observed_at")
+            verified_at = decision.get("reviewed_at") if identity_status == "confirmed" else None
             fields = {
                 "google_maps_url": row.get("maps_url"), "name": row.get("maps_name"),
                 "website": row.get("website"), "address_raw": row.get("address_raw"),
@@ -380,6 +299,10 @@ def import_manual(db, path, queue, build_version):
                     verified_at, decision.get("evidence_url"),
                 )
                 observations[field] = observation
+                if field == "google_place_id":
+                    db.execute("INSERT OR IGNORE INTO external_ids VALUES ('Google Maps',?,?,?)", (value, poi_id, observation))
+                if field == "name":
+                    db.execute("INSERT OR IGNORE INTO poi_aliases VALUES (?,?,?,?)", (poi_id, value, normalize(value), observation))
                 if field == "website" or (created_new and field == "name"):
                     select(db, poi_id, field, observation, value,
                            "confirmed manual observation", build_version)
@@ -690,14 +613,20 @@ def pipeline_hash(paths):
 
 
 def build(args):
+    from scripts.merge_sources_v2 import import_legacy, import_collected, apply_images, reconcile_status
+    geometry_path = ROOT / "data/cache/poi_geometries_v2.json"
+    image_checks = ROOT / "data/cache/image_checks_v2.json"
+    collected_paths = sorted((ROOT / "data/enrichment").glob("accepted*.json"))
     input_paths = [args.v1_catalog, args.pbf, args.supplement, args.duration_curation,
                    args.poi_relations, args.focus_curation, *args.google]
     if args.manual.exists():
         input_paths.append(args.manual)
+    input_paths.extend(path for path in [geometry_path, image_checks, *collected_paths] if path.exists())
     code_paths = [
         Path(__file__),
         ROOT / "where2go/hours.py",
         ROOT / "where2go/v2/storage.py",
+        ROOT / "where2go/v2/__init__.py",
         ROOT / "where2go/v2/observations.py",
         ROOT / "where2go/v2/taxonomy.py",
         ROOT / "where2go/v2/durations.py",
@@ -706,25 +635,35 @@ def build(args):
         ROOT / "where2go/v2/quality.py",
         ROOT / "where2go/v2/dataset.py",
         ROOT / "scripts/export_dataset_v2.py",
+        ROOT / "scripts/merge_sources_v2.py",
+        ROOT / "where2go/v2/google_collector.py",
     ]
     input_hash = pipeline_hash(input_paths + code_paths)
     build_version = "v2-" + input_hash[:16]
-    create_database(args.output)
+    staging_output = args.output.with_suffix(".building.sqlite")
+    create_database(staging_output)
     review_queue = []
-    with closing(connect(args.output)) as db:
+    with closing(connect(staging_output)) as db:
         pois, v1_manifest, name_index = import_base(db, args.v1_catalog, build_version)
         supplement_stats = import_osm_supplement(db, args.pbf, args.supplement, name_index, build_version)
-        google_stats = import_google(db, args.google, name_index, review_queue)
         manual_stats = import_manual(db, args.manual, review_queue, build_version)
         duration_stats = import_duration_curation(db, args.duration_curation, build_version)
         relation_stats = import_poi_relations(db, args.poi_relations, build_version)
         category_stats = import_focus_category_curation(db, args.focus_curation, build_version)
+        geometry_cache = json.loads(geometry_path.read_text(encoding="utf-8")) if geometry_path.exists() else {}
+        if geometry_cache and geometry_cache.get("pbf_sha256") != v1_manifest["osm"]["sha256"]:
+            raise ValueError("Geometry cache does not match the OSM snapshot")
+        collected_stats = import_collected(db, collected_paths, review_queue, build_version)
+        google_stats = import_legacy(db, args.google, review_queue, build_version, geometry_cache.get("geometries"))
+        image_stats = apply_images(db, image_checks, build_version)
+        resolved_statuses = reconcile_status(db)
         stats = {
             "poi_count": db.execute("SELECT count(*) FROM pois").fetchone()[0],
             "osm_supplement": dict(supplement_stats), "google": dict(google_stats), "manual": dict(manual_stats),
             "duration_curation": dict(duration_stats),
             "poi_relations": dict(relation_stats),
             "focus_category_curation": dict(category_stats),
+            "collected": collected_stats, "images": image_stats, "resolved_spatial_statuses": resolved_statuses,
             "review_queue": len(review_queue), "focus_coverage": coverage(db),
         }
         db.execute("INSERT INTO builds VALUES (?,?,?,?,?)", (
@@ -732,7 +671,7 @@ def build(args):
         ))
         manifest = {
             "version": build_version, "created_at": datetime.now(timezone.utc).isoformat(),
-            "schema_version": "2.0", "model_version": MODEL_VERSION, "input_hash": input_hash,
+            "schema_version": SCHEMA_VERSION, "model_version": MODEL_VERSION, "input_hash": input_hash,
             "v1_dataset_version": v1_manifest["version"], "osm": v1_manifest["osm"], "stats": stats,
             "rights": {"Google Maps": "restricted_internal", "OpenStreetMap": "ODbL-1.0"},
         }
@@ -741,6 +680,7 @@ def build(args):
         foreign = db.execute("PRAGMA foreign_key_check").fetchall()
         if foreign:
             raise RuntimeError(f"Foreign key errors: {foreign[:5]}")
+    staging_output.replace(args.output)
     args.report_dir.mkdir(parents=True, exist_ok=True)
     (args.report_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     (args.report_dir / "coverage.json").write_text(json.dumps(stats["focus_coverage"], ensure_ascii=False, indent=2), encoding="utf-8")

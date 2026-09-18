@@ -1,8 +1,8 @@
 # Dataset Where2Go DSS v2
 
-Phiên bản: `v2-91f833f05c8c7ef8`
+Phiên bản: `v2-ae66988a1053d0de`
 
-Sinh lúc: `2026-09-18T03:37:13.896186+00:00`
+Sinh lúc: `2026-09-18T08:05:16.805404+00:00`
 
 - `pois.csv`: catalog phẳng, một dòng cho mỗi POI.
 - `opening_hours.csv`: các khoảng giờ cấu trúc; `day_of_week` dùng 0=Thứ Hai đến 6=Chủ Nhật.

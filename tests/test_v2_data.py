@@ -71,7 +71,7 @@ def test_storage_schema_enforces_foreign_keys(tmp_path):
     path = tmp_path / "v2.sqlite"
     create_database(path)
     with connect(path) as db:
-        assert db.execute("SELECT value FROM metadata WHERE key='schema_version'").fetchone()[0] == "2.0"
+        assert db.execute("SELECT value FROM metadata WHERE key='schema_version'").fetchone()[0] == "2.1"
         try:
             db.execute("INSERT INTO source_records VALUES ('r','missing','1',NULL,'{}')")
         except sqlite3.IntegrityError:

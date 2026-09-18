@@ -12,7 +12,7 @@ from where2go.v2.catalog import CATALOG_V2, load_catalog
 from where2go.v2.dataset import dataset_summary, json_cell
 from where2go.v2.quality import latest_rating_pair
 from where2go.v2.storage import connect
-from openpyxl import load_workbook
+from openpyxl import load_workbook, Workbook
 
 
 def write_csv(path, fieldnames, rows):
@@ -87,6 +87,9 @@ def export(catalog, output_dir, workbook_path=None, private_dir=None):
             "business_status": poi.get("business_status"), "latitude": poi.get("latitude"),
             "longitude": poi.get("longitude"), "website": poi.get("website") or "",
             "source_url": poi.get("source_url") or "", "description": poi.get("description") or "",
+            "aliases": "|".join(poi.get("aliases") or []),
+            "image": poi.get("image") or "", "image_metadata": json_cell(poi.get("image_metadata")),
+            "explorable": bool(poi.get("explorable")),
             "hours_raw": poi.get("hours_raw") or "", "has_structured_hours": weekly is not None,
             "has_full_week_hours": weekly is not None and all(day is not None for day in weekly),
             "opening_hours_json": json_cell(weekly),
@@ -123,6 +126,52 @@ def export(catalog, output_dir, workbook_path=None, private_dir=None):
             rows = [dict(row) for row in db.execute(f"SELECT {','.join(fields)} FROM {table}")]
             write_csv(output_dir / filename, fields, rows)
             counts[filename] = len(rows)
+
+        images = [dict(row) for row in db.execute("SELECT * FROM poi_images ORDER BY poi_id,image_id")]
+        image_fields = [r[1] for r in db.execute("PRAGMA table_info(poi_images)")]
+        write_csv(output_dir / "images.csv", image_fields, images)
+        provenance = [dict(row) for row in db.execute("""SELECT s.poi_id,s.field_name,s.value_json,s.selection_reason,
+            o.observed_at,o.verification_method,o.use_status,r.source_key,f.logical_path
+            FROM selected_fields s LEFT JOIN field_observations o USING(observation_id)
+            LEFT JOIN source_records r USING(source_record_id) LEFT JOIN source_files f USING(source_file_id)
+            ORDER BY s.poi_id,s.field_name""")]
+        write_csv(output_dir / "field_provenance.csv", list(provenance[0]) if provenance else [], provenance)
+        counts.update({"images.csv": len(images), "field_provenance.csv": len(provenance)})
+
+    workbook = Workbook(write_only=True)
+    def worksheet(name, fields, values):
+        sheet = workbook.create_sheet(name)
+        sheet.append(fields)
+        for row in values:
+            cells = []
+            for field in fields:
+                value = row.get(field)
+                if isinstance(value, (dict, list)):
+                    value = json_cell(value)
+                # Text from external sources is never an executable spreadsheet formula.
+                if isinstance(value, str):
+                    value = value[:32760]
+                    if value.startswith(("=", "+", "-", "@")):
+                        value = "'" + value
+                cells.append(value)
+            sheet.append(cells)
+    worksheet("POI", poi_fields, flat)
+    worksheet("Nguon_tung_truong", list(provenance[0]) if provenance else [], provenance)
+    worksheet("Anh", image_fields, images)
+    with closing(connect(catalog, readonly=True)) as db:
+        sources = [dict(row) for row in db.execute("SELECT * FROM source_files")]
+    worksheet("Nguon_du_lieu", list(sources[0]) if sources else [], sources)
+    missing = [{"poi_id": p["poi_id"], "name": p["name"], "location": p.get("location"),
+                "missing": "|".join(key for key, present in {
+                    "image": bool(p.get("image")), "hours": p.get("hours_weekly") is not None,
+                    "rating_pair": bool(latest_rating_pair(p)), "verified_access": any(a.get("verified") for a in p.get("access_points", [])),
+                    "verified_duration": bool((p.get("duration_profile") or {}).get("verified_at"))}.items() if not present)} for p in pois]
+    worksheet("Can_bo_sung", ["poi_id", "name", "location", "missing"], missing)
+    queue_path = output_dir.parent / "catalog/review_queue.json"
+    if queue_path.exists():
+        queue = json.loads(queue_path.read_text(encoding="utf-8"))
+        worksheet("Can_kiem_tra", ["source_file", "source_key", "seed_name", "result_name", "candidate_poi_ids", "reasons"], queue)
+    workbook.save(output_dir / "merged_dataset.xlsx")
 
     summary = dataset_summary(pois, manifest)
     summary["export_counts"] = counts

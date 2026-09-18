@@ -1,0 +1,16 @@
+{
+  "unique_results": 129,
+  "accepted": 70,
+  "needs_review": 59,
+  "accepted_percent": 54.26,
+  "with_image": 69,
+  "status_counts": {
+    "needs_review": 31,
+    "complete": 57,
+    "partial": 24,
+    "unresolved": 17
+  },
+  "human_verified": 0,
+  "expansion_gate": "NOT_APPLICABLE",
+  "method": "Tool cross-check against OSM plus explicit source decisions; not field verification"
+}

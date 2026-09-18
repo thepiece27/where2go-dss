@@ -164,10 +164,13 @@ def test_v2_dataset_summary_and_download(tmp_path):
         assert summary.status_code == 200
         assert summary.json()["poi_count"] == 2
         assert summary.json()["locations"][0]["priority_set"]["selected"] == 2
+        (tmp_path / "summary.json").write_text(json.dumps({"dataset_version": summary.json()["dataset_version"]}), encoding="utf-8")
         download = api.get("/api/v2/dataset/pois.csv")
         assert download.status_code == 200
         assert "poi_id,name" in download.text
         assert api.get("/api/v2/dataset/secret.txt").status_code == 404
+        (tmp_path / ".publishing").touch()
+        assert api.get("/api/v2/dataset/pois.csv").status_code == 503
 
 
 def test_frontend_uses_local_leaflet_assets():
@@ -176,5 +179,7 @@ def test_frontend_uses_local_leaflet_assets():
         assert api.get("/vendor/leaflet.css").status_code == 200
         assert api.get("/vendor/images/marker-icon.png").status_code == 200
         app_js = api.get("/app.js").text
-        assert "/api/v2/basemaps/" in app_js
+        map_js = api.get("/map.js").text
+        assert "/api/v2/basemaps/" in map_js
+        assert "tile.openstreetmap.de" in map_js
         assert "tile.openstreetmap.org" not in app_js

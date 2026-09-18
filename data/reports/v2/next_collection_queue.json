@@ -1,0 +1,1893 @@
+[
+  {
+    "record_id": "landmark-pham-van-dong",
+    "canonical_poi_id": "poi-google:9f6b613e52c6d0f34461666b",
+    "seed_name": "Bãi tắm Phạm Văn Đồng",
+    "aliases": [
+      "Pham Van Dong Beach",
+      "Bãi biển Phạm Văn Đồng"
+    ],
+    "location_expected": "Đà Nẵng",
+    "expected_category": "beach",
+    "query": "Bãi tắm Phạm Văn Đồng Đà Nẵng Việt Nam",
+    "latitude": 16.0732782,
+    "longitude": 108.2468342,
+    "missing_fields": [
+      "weekly_hours",
+      "rating_pair",
+      "website"
+    ]
+  },
+  {
+    "record_id": "focus-dn-016",
+    "canonical_poi_id": "osm:relation:19000664",
+    "seed_name": "Bãi biển Mỹ Khê",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "beach",
+    "query": "Bãi biển Mỹ Khê, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Bãi biển Mỹ Khê",
+      "My Khe Beach"
+    ],
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "latitude": 16.0756254,
+    "longitude": 108.24687837443167,
+    "maps_url": "https://www.google.com/maps/place/My+Khe+Beach/@16.0619421,108.247174,16z/data=!3m1!4b1!4m6!3m5!1s0x31421782f7fa0ee3:0xeafb8ba272ee55ac!8m2!3d16.0616944!4d108.2469346!16s%2Fg%2F1223wyjj?hl=en&entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D",
+    "expected_place_id": "0x31421782f7fa0ee3:0xeafb8ba272ee55ac"
+  },
+  {
+    "record_id": "focus-dn-004",
+    "canonical_poi_id": "osm:way:198804483",
+    "seed_name": "Thánh địa Mỹ Sơn",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "historic",
+    "query": "Thánh địa Mỹ Sơn, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Thánh địa Mỹ Sơn"
+    ],
+    "missing_fields": [
+      "address"
+    ],
+    "latitude": 15.76552015,
+    "longitude": 108.12345311287017,
+    "maps_url": "https://www.google.com/maps/place/Th%C3%A1nh+%C4%91%E1%BB%8Ba+M%E1%BB%B9+S%C6%A1n,+Thu+Bon,+Da+Nang,+Vietnam/@15.7651411,108.1229567,16z/data=!3m1!4b1!4m6!3m5!1s0x314200a30f3839eb:0xe7c8b131ea5e90b2!8m2!3d15.764812!4d108.1221146!16s%2Fg%2F1tflph6t?hl=en&entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D",
+    "expected_place_id": "0x314200a30f3839eb:0xe7c8b131ea5e90b2"
+  },
+  {
+    "record_id": "focus-dn-005",
+    "canonical_poi_id": "osm:way:694831926",
+    "seed_name": "Cầu Rồng Đà Nẵng",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "attraction",
+    "query": "Cầu Rồng Đà Nẵng, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Cầu Rồng",
+      "Cầu Rồng Đà Nẵng"
+    ],
+    "missing_fields": [
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": 16.061168199999997,
+    "longitude": 108.22789676392529,
+    "maps_url": "https://www.google.com/maps/place/C%E1%BA%A7u+R%E1%BB%93ng,+%C4%90%C3%A0+N%E1%BA%B5ng+550000,+Vietnam/@16.0611042,108.2276926,17z/data=!3m1!4b1!4m6!3m5!1s0x314219d2f38ce45d:0xbfa47dd116d4db88!8m2!3d16.0611042!4d108.2276926!16s%2Fg%2F1jkz6cxjc?hl=en&entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D",
+    "expected_place_id": "0x314219d2f38ce45d:0xbfa47dd116d4db88"
+  },
+  {
+    "record_id": "focus-dn-006",
+    "canonical_poi_id": "osm:relation:7055216",
+    "seed_name": "Bán đảo Sơn Trà",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "nature_area",
+    "query": "Bán đảo Sơn Trà, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Bán đảo Sơn Trà"
+    ],
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "latitude": 16.1256366,
+    "longitude": 108.2604341866466,
+    "maps_url": "https://www.google.com/maps/place/B%C3%A1n+%C4%91%E1%BA%A3o+S%C6%A1n+Tr%C3%A0/@16.1266563,108.2756956,13z/data=!3m1!4b1!4m6!3m5!1s0x31423d72d1be522d:0x1e7339a6534e4e7!8m2!3d16.1159837!4d108.273341!16s%2Fg%2F1q5brp4kh?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D&hl=en",
+    "expected_place_id": "0x31423d72d1be522d:0x1e7339a6534e4e7"
+  },
+  {
+    "record_id": "focus-dn-011",
+    "canonical_poi_id": "osm:way:204885903",
+    "seed_name": "Chợ Hàn",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "market",
+    "query": "Chợ Hàn, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Chợ Hàn",
+      "Han Market"
+    ],
+    "missing_fields": [
+      "website"
+    ],
+    "latitude": 16.06835245,
+    "longitude": 108.22428299031967,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-dn-012",
+    "canonical_poi_id": "osm:way:204790989",
+    "seed_name": "Chợ Cồn",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "market",
+    "query": "Chợ Cồn, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Chợ Cồn",
+      "Con Market"
+    ],
+    "missing_fields": [
+      "website"
+    ],
+    "latitude": 16.06812745,
+    "longitude": 108.21452127507146,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-dn-014",
+    "canonical_poi_id": "osm:node:4171971289",
+    "seed_name": "Làng mộc Kim Bồng",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "craft_village",
+    "query": "Làng mộc Kim Bồng, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Làng mộc Kim Bồng"
+    ],
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "latitude": 15.865593,
+    "longitude": 108.3256188,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-dn-017",
+    "canonical_poi_id": "poi-google:3aac3427ee25b18a817027e9",
+    "seed_name": "Phố cổ Hội An",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "old_quarter",
+    "query": "Phố cổ Hội An, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Phố Cổ Hội An",
+      "Phố cổ Hội An"
+    ],
+    "missing_fields": [
+      "website"
+    ],
+    "latitude": 15.8786082,
+    "longitude": 108.3326924,
+    "maps_url": "https://www.google.com/maps/place/Ph%E1%BB%91+C%E1%BB%95+H%E1%BB%99i+An/data=!4m7!3m6!1s0x31420f0062ae7c13:0xdea0701c8330039c!8m2!3d15.8786082!4d108.3326924!16s%2Fg%2F11m_62jvyq!19sChIJE3yuYgAPQjERnAMwgxxwoN4?authuser=0&hl=en&g_ep=EgoyMDI2MDkxNC4wIJJjKgBIAVAD&rclk=1",
+    "expected_place_id": "0x31420f0062ae7c13:0xdea0701c8330039c"
+  },
+  {
+    "record_id": "focus-dn-018",
+    "canonical_poi_id": "poi-google:270efa89c4fa1b1bdeb4cdcd",
+    "seed_name": "Chùa Cầu Hội An",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "historic",
+    "query": "Chùa Cầu Hội An, Đà Nẵng, Việt Nam",
+    "aliases": [
+      "Chùa Cầu",
+      "Chùa Cầu Hội An"
+    ],
+    "missing_fields": [
+      "website"
+    ],
+    "latitude": 15.8770873,
+    "longitude": 108.3260704,
+    "maps_url": "https://www.google.com/maps/place/Ch%C3%B9a+C%E1%BA%A7u/@15.8770873,108.3260704,17z/data=!3m1!4b1!4m6!3m5!1s0x31420e7c2d02ec59:0x765864d6697d4846!8m2!3d15.8770873!4d108.3260704!16s%2Fg%2F122xw9sk?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D&hl=en",
+    "expected_place_id": "0x31420e7c2d02ec59:0x765864d6697d4846"
+  },
+  {
+    "record_id": "focus-dn-019",
+    "canonical_poi_id": "",
+    "seed_name": "Cù Lao Chàm",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "nature_area",
+    "query": "Cù Lao Chàm, Đà Nẵng, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-dn-020",
+    "canonical_poi_id": "",
+    "seed_name": "Bãi biển An Bàng",
+    "location_expected": "Đà Nẵng",
+    "expected_category": "beach",
+    "query": "Bãi biển An Bàng, Đà Nẵng, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-002",
+    "canonical_poi_id": "osm:way:696913691",
+    "seed_name": "Hoàng thành Thăng Long",
+    "location_expected": "Hà Nội",
+    "expected_category": "historic",
+    "query": "Hoàng thành Thăng Long, Hà Nội, Việt Nam",
+    "aliases": [
+      "Hoàng thành Thăng Long",
+      "Imperial Citadel of Thang Long"
+    ],
+    "missing_fields": [
+      "image",
+      "address"
+    ],
+    "latitude": 21.03839025,
+    "longitude": 105.84062373806327,
+    "maps_url": "https://www.google.com/maps/place/Imperial+Citadel+of+Thang+Long/@21.0352231,105.8402594,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba3381d7c49:0xb521a7d98f582937!8m2!3d21.0352231!4d105.8402594!16s%2Fm%2F05zw9vk?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D&hl=en",
+    "expected_place_id": "0x3135aba3381d7c49:0xb521a7d98f582937"
+  },
+  {
+    "record_id": "focus-hn-007",
+    "canonical_poi_id": "osm:way:1148571536",
+    "seed_name": "Bảo tàng Lịch sử Quân sự Việt Nam",
+    "location_expected": "Hà Nội",
+    "expected_category": "museum",
+    "query": "Bảo tàng Lịch sử Quân sự Việt Nam, Hà Nội, Việt Nam",
+    "aliases": [
+      "Bảo tàng Lịch sử Quân sự Việt Nam",
+      "Vietnam Military History Museum"
+    ],
+    "missing_fields": [
+      "image",
+      "address"
+    ],
+    "latitude": 21.01158675,
+    "longitude": 105.7547058599987,
+    "maps_url": "https://www.google.com/maps/place/Vietnam+Military+History+Museum/@21.0085128,105.7557735,17z/data=!3m1!4b1!4m6!3m5!1s0x3135aba2b73d5d13:0xa6a0ef366328a0b1!8m2!3d21.0085128!4d105.7557735!16s%2Fm%2F05f8zck?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D&hl=en",
+    "expected_place_id": "0x3135aba2b73d5d13:0xa6a0ef366328a0b1"
+  },
+  {
+    "record_id": "focus-hn-008",
+    "canonical_poi_id": "osm:way:178995262",
+    "seed_name": "Đền Ngọc Sơn",
+    "location_expected": "Hà Nội",
+    "expected_category": "temple",
+    "query": "Đền Ngọc Sơn, Hà Nội, Việt Nam",
+    "aliases": [
+      "Đền Ngọc Sơn"
+    ],
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "latitude": 21.0307272,
+    "longitude": 105.85237633402963,
+    "maps_url": "https://www.google.com/maps/place/%C4%90%E1%BB%81n+Ng%E1%BB%8Dc+S%C6%A1n/@21.0306875,105.8524375,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ac9d5d79dee7:0xea6e4a6e9ca9abfd!8m2!3d21.0306875!4d105.8524375!16s%2Fg%2F1jkw2ldrv?hl=en&entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D",
+    "expected_place_id": "0x3135ac9d5d79dee7:0xea6e4a6e9ca9abfd"
+  },
+  {
+    "record_id": "focus-hn-009",
+    "canonical_poi_id": "osm:way:220302249",
+    "seed_name": "Chùa Trấn Quốc",
+    "location_expected": "Hà Nội",
+    "expected_category": "temple",
+    "query": "Chùa Trấn Quốc, Hà Nội, Việt Nam",
+    "aliases": [
+      "Chùa Trấn Quốc",
+      "Tran Quoc Pagoda"
+    ],
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "latitude": 21.0478837,
+    "longitude": 105.8368374555966,
+    "maps_url": "https://www.google.com/maps/place/Tran+Quoc+Pagoda/@21.047871,105.8368738,17z/data=!3m1!4b1!4m6!3m5!1s0x3135abaf1da7b7af:0x767aa83a09e92b6e!8m2!3d21.047871!4d105.8368738!16s%2Fm%2F05sz65z?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D&hl=en",
+    "expected_place_id": "0x3135abaf1da7b7af:0x767aa83a09e92b6e"
+  },
+  {
+    "record_id": "focus-hn-010",
+    "canonical_poi_id": "osm:way:28912942",
+    "seed_name": "Nhà thờ Lớn Hà Nội",
+    "location_expected": "Hà Nội",
+    "expected_category": "temple",
+    "query": "Nhà thờ Lớn Hà Nội, Hà Nội, Việt Nam",
+    "aliases": [
+      "Nhà thờ Lớn Hà Nội",
+      "St. Joseph Cathedral"
+    ],
+    "missing_fields": [
+      "weekly_hours"
+    ],
+    "latitude": 21.0286483,
+    "longitude": 105.84885664697529,
+    "maps_url": "https://www.google.com/maps/place/St.+Joseph+Cathedral/@21.0285957,105.8488606,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab945034b945:0x90b57620787fd98e!8m2!3d21.0285957!4d105.8488606!16s%2Fm%2F02rwkq5?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D&hl=en",
+    "expected_place_id": "0x3135ab945034b945:0x90b57620787fd98e"
+  },
+  {
+    "record_id": "focus-hn-013",
+    "canonical_poi_id": "osm:way:1212230635",
+    "seed_name": "Chợ Đồng Xuân",
+    "location_expected": "Hà Nội",
+    "expected_category": "market",
+    "query": "Chợ Đồng Xuân, Hà Nội, Việt Nam",
+    "aliases": [
+      "Chợ Đồng Xuân",
+      "Đồng Xuân Market"
+    ],
+    "missing_fields": [
+      "rating_pair",
+      "website"
+    ],
+    "latitude": 21.0382556,
+    "longitude": 105.84967103908363,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-014",
+    "canonical_poi_id": "osm:relation:17148894",
+    "seed_name": "Vườn quốc gia Ba Vì",
+    "location_expected": "Hà Nội",
+    "expected_category": "nature_area",
+    "query": "Vườn quốc gia Ba Vì, Hà Nội, Việt Nam",
+    "aliases": [
+      "Vườn quốc gia Ba Vì"
+    ],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "latitude": 21.0184475,
+    "longitude": 105.39302555526783,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-015",
+    "canonical_poi_id": "osm:way:37933050",
+    "seed_name": "Nhà hát Lớn Hà Nội",
+    "location_expected": "Hà Nội",
+    "expected_category": "performance_venue",
+    "query": "Nhà hát Lớn Hà Nội, Hà Nội, Việt Nam",
+    "aliases": [
+      "Nhà hát Lớn"
+    ],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": 21.02420215,
+    "longitude": 105.85783435097258,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-016",
+    "canonical_poi_id": "",
+    "seed_name": "Văn Miếu Quốc Tử Giám",
+    "location_expected": "Hà Nội",
+    "expected_category": "historic",
+    "query": "Văn Miếu Quốc Tử Giám, Hà Nội, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-017",
+    "canonical_poi_id": "",
+    "seed_name": "Khu phố cổ Hà Nội",
+    "location_expected": "Hà Nội",
+    "expected_category": "old_quarter",
+    "query": "Khu phố cổ Hà Nội, Hà Nội, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-018",
+    "canonical_poi_id": "",
+    "seed_name": "Hồ Hoàn Kiếm",
+    "location_expected": "Hà Nội",
+    "expected_category": "park",
+    "query": "Hồ Hoàn Kiếm, Hà Nội, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-019",
+    "canonical_poi_id": "",
+    "seed_name": "Làng gốm Bát Tràng",
+    "location_expected": "Hà Nội",
+    "expected_category": "craft_village",
+    "query": "Làng gốm Bát Tràng, Hà Nội, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "focus-hn-020",
+    "canonical_poi_id": "",
+    "seed_name": "Nhà hát Múa rối Thăng Long",
+    "location_expected": "Hà Nội",
+    "expected_category": "performance_venue",
+    "query": "Nhà hát Múa rối Thăng Long, Hà Nội, Việt Nam",
+    "aliases": [],
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "expected_place_id": null
+  },
+  {
+    "record_id": "missing:osm:node:5747015021",
+    "canonical_poi_id": "osm:node:5747015021",
+    "seed_name": "Đỉnh Quế",
+    "aliases": [
+      "Đỉnh Quế"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "viewpoint",
+    "latitude": 15.8364454,
+    "longitude": 107.3820824,
+    "query": "Đỉnh Quế, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:8883385553",
+    "canonical_poi_id": "osm:node:8883385553",
+    "seed_name": "TASY STUDIO",
+    "aliases": [
+      "TASY STUDIO"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "gallery",
+    "latitude": 15.9256934,
+    "longitude": 108.2939032,
+    "query": "TASY STUDIO, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:relation:2836882",
+    "canonical_poi_id": "osm:relation:2836882",
+    "seed_name": "Chùa Chúc Thánh",
+    "aliases": [
+      "Chùa Chúc Thánh"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 15.888974900000001,
+    "longitude": 108.32703739759617,
+    "query": "Chùa Chúc Thánh, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11934169470",
+    "canonical_poi_id": "osm:node:11934169470",
+    "seed_name": "Queen Cobra",
+    "aliases": [
+      "Queen Cobra"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "attraction",
+    "latitude": 16.0432987,
+    "longitude": 108.22599,
+    "query": "Queen Cobra, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:13040467529",
+    "canonical_poi_id": "osm:node:13040467529",
+    "seed_name": "Bãi Đá",
+    "aliases": [
+      "Bãi Đá",
+      "obama beach - son tra, danang"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "beach",
+    "latitude": 16.0988527,
+    "longitude": 108.3012745,
+    "query": "Bãi Đá, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11896339273",
+    "canonical_poi_id": "osm:node:11896339273",
+    "seed_name": "CSO Gallery",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "gallery",
+    "latitude": 15.8855958,
+    "longitude": 108.3505685,
+    "query": "CSO Gallery, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1076716243",
+    "canonical_poi_id": "osm:way:1076716243",
+    "seed_name": "Chợ Khuê Mỹ",
+    "aliases": [
+      "Chợ Khuê Mỹ"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 16.024993350000003,
+    "longitude": 108.24824730157488,
+    "query": "Chợ Khuê Mỹ, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1422444084",
+    "canonical_poi_id": "osm:way:1422444084",
+    "seed_name": "Chùa Thuận Thành",
+    "aliases": [
+      "Chùa Thuận Thành"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 16.07439565,
+    "longitude": 108.20859771532461,
+    "query": "Chùa Thuận Thành, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:14078442086",
+    "canonical_poi_id": "osm:node:14078442086",
+    "seed_name": "Hoi An Hideout Fishing Barbecue Tour",
+    "aliases": [
+      "Hoi An Hideout Fishing Barbecue Tour",
+      "Hoi An Hideout Fishing Barbeque Tour"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "weekly_hours"
+    ],
+    "expected_category": "attraction",
+    "latitude": 15.8696196,
+    "longitude": 108.3670063,
+    "query": "Hoi An Hideout Fishing Barbecue Tour, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:2617007574",
+    "canonical_poi_id": "osm:node:2617007574",
+    "seed_name": "Kazimierz Kwiatkowski",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "historic",
+    "latitude": 15.8772786,
+    "longitude": 108.3277903,
+    "query": "Kazimierz Kwiatkowski, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:relation:17140360",
+    "canonical_poi_id": "osm:relation:17140360",
+    "seed_name": "Vườn quốc gia Sông Thanh",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "nature_area",
+    "latitude": 15.4878173,
+    "longitude": 107.58934534422269,
+    "query": "Vườn quốc gia Sông Thanh, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1181242323",
+    "canonical_poi_id": "osm:way:1181242323",
+    "seed_name": "Chợ Bắc Trà My",
+    "aliases": [
+      "Chợ Bắc Trà My"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 15.33796665,
+    "longitude": 108.21612474352727,
+    "query": "Chợ Bắc Trà My, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:302944359",
+    "canonical_poi_id": "osm:way:302944359",
+    "seed_name": "Chùa Trung Lương",
+    "aliases": [
+      "Chùa Trung Lương"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 16.002578900000003,
+    "longitude": 108.21522810044202,
+    "query": "Chùa Trung Lương, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:5273998823",
+    "canonical_poi_id": "osm:node:5273998823",
+    "seed_name": "Cầu Trần Thị Lý",
+    "aliases": [
+      "Cầu Trần Thị Lý"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "attraction",
+    "latitude": 16.050179,
+    "longitude": 108.2293814,
+    "query": "Cầu Trần Thị Lý, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:7127464285",
+    "canonical_poi_id": "osm:node:7127464285",
+    "seed_name": "Hoi An Museum of Traditional Medicine",
+    "aliases": [
+      "Hoi An Museum of Traditional Medicine",
+      "Museum of Traditional Medicine"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "museum",
+    "latitude": 15.8766492,
+    "longitude": 108.3298384,
+    "query": "Hoi An Museum of Traditional Medicine, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10154412164",
+    "canonical_poi_id": "osm:node:10154412164",
+    "seed_name": "Fantasy Park",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "theme_park",
+    "latitude": 15.9968339,
+    "longitude": 107.9888036,
+    "query": "Fantasy Park, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:118672509",
+    "canonical_poi_id": "osm:way:118672509",
+    "seed_name": "Chợ Đầu mối Hoà Cường",
+    "aliases": [
+      "Chợ Đầu mối Hoà Cường"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 16.030599350000003,
+    "longitude": 108.21972344652067,
+    "query": "Chợ Đầu mối Hoà Cường, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:565186618",
+    "canonical_poi_id": "osm:way:565186618",
+    "seed_name": "Đình Cẩm Phô",
+    "aliases": [
+      "Đình Cẩm Phô"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 15.87832575,
+    "longitude": 108.32419246567608,
+    "query": "Đình Cẩm Phô, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:8474743417",
+    "canonical_poi_id": "osm:node:8474743417",
+    "seed_name": "Bảo tàng Phật giáo",
+    "aliases": [
+      "Bảo tàng Phật giáo",
+      "Bảo Tàng Văn Hóa Phật Giáo"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "museum",
+    "latitude": 15.9994308,
+    "longitude": 108.2545831,
+    "query": "Bảo tàng Phật giáo, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:35952591",
+    "canonical_poi_id": "osm:way:35952591",
+    "seed_name": "Chợ vải Hội An",
+    "aliases": [
+      "Chợ vải Hội An"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "attraction",
+    "latitude": 15.8769216,
+    "longitude": 108.33258309269983,
+    "query": "Chợ vải Hội An, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:4807957148",
+    "canonical_poi_id": "osm:node:4807957148",
+    "seed_name": "Trung tâm Giải trí Phức hợp Helio Center",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "theme_park",
+    "latitude": 16.0364559,
+    "longitude": 108.2246715,
+    "query": "Trung tâm Giải trí Phức hợp Helio Center, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1326219930",
+    "canonical_poi_id": "osm:way:1326219930",
+    "seed_name": "Chợ Kỳ Đồng",
+    "aliases": [
+      "Chợ Kỳ Đồng"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 16.06969065,
+    "longitude": 108.18705859408011,
+    "query": "Chợ Kỳ Đồng, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:12344125229",
+    "canonical_poi_id": "osm:node:12344125229",
+    "seed_name": "Di San Vô Giá",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "museum",
+    "latitude": 15.8771754,
+    "longitude": 108.3342411,
+    "query": "Di San Vô Giá, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:1819451633",
+    "canonical_poi_id": "osm:node:1819451633",
+    "seed_name": "Chùa Hải Tạng",
+    "aliases": [
+      "Chùa Hải Tạng"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 15.9606674,
+    "longitude": 108.5065176,
+    "query": "Chùa Hải Tạng, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:7328902486",
+    "canonical_poi_id": "osm:node:7328902486",
+    "seed_name": "Graffiti village",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "attraction",
+    "latitude": 15.623757,
+    "longitude": 108.5225217,
+    "query": "Graffiti village, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1556362196",
+    "canonical_poi_id": "osm:way:1556362196",
+    "seed_name": "Chợ Đêm Sơn Trà",
+    "aliases": [
+      "Chợ Đêm Sơn Trà"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 16.0607228,
+    "longitude": 108.23151581352488,
+    "query": "Chợ Đêm Sơn Trà, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:4280016689",
+    "canonical_poi_id": "osm:node:4280016689",
+    "seed_name": "Chùa Giác Hoàng Viên",
+    "aliases": [
+      "Chùa Giác Hoàng Viên"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 16.0056157,
+    "longitude": 108.2546345,
+    "query": "Chùa Giác Hoàng Viên, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:565592419",
+    "canonical_poi_id": "osm:way:565592419",
+    "seed_name": "Bảo tàng Hội An",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "museum",
+    "latitude": 15.880301549999999,
+    "longitude": 108.32946746079631,
+    "query": "Bảo tàng Hội An, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:13687068650",
+    "canonical_poi_id": "osm:node:13687068650",
+    "seed_name": "Linh Phong Bảo Tháp",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "attraction",
+    "latitude": 15.9980969,
+    "longitude": 107.985969,
+    "query": "Linh Phong Bảo Tháp, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11888483369",
+    "canonical_poi_id": "osm:node:11888483369",
+    "seed_name": "Chợ Phước Mỹ",
+    "aliases": [
+      "Chợ Phước Mỹ"
+    ],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 16.0665465,
+    "longitude": 108.2422676,
+    "query": "Chợ Phước Mỹ, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:5216168822",
+    "canonical_poi_id": "osm:node:5216168822",
+    "seed_name": "Thánh thất Cao Đài",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 16.0719495,
+    "longitude": 108.2170919,
+    "query": "Thánh thất Cao Đài, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11276780187",
+    "canonical_poi_id": "osm:node:11276780187",
+    "seed_name": "La Cabana - House of BBQ",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 16.0629394,
+    "longitude": 108.2302972,
+    "query": "La Cabana - House of BBQ, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:4260382168",
+    "canonical_poi_id": "osm:node:4260382168",
+    "seed_name": "The Amazing Taco | Tại Đà Nẵng",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 16.0485168,
+    "longitude": 108.2369175,
+    "query": "The Amazing Taco | Tại Đà Nẵng, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:4520093589",
+    "canonical_poi_id": "osm:node:4520093589",
+    "seed_name": "Lapin Ca Phe",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 15.8821498,
+    "longitude": 108.3280967,
+    "query": "Lapin Ca Phe, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:616910526",
+    "canonical_poi_id": "osm:way:616910526",
+    "seed_name": "Thom's Sourdough Bakery & Coffee - An Bang Beach",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 15.9117198,
+    "longitude": 108.3411656,
+    "query": "Thom's Sourdough Bakery & Coffee - An Bang Beach, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10312895500",
+    "canonical_poi_id": "osm:node:10312895500",
+    "seed_name": "Cardi Pizzeria",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 16.0677525,
+    "longitude": 108.2248496,
+    "query": "Cardi Pizzeria, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10537046604",
+    "canonical_poi_id": "osm:node:10537046604",
+    "seed_name": "Carol Lounge",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 16.0823478,
+    "longitude": 108.2203289,
+    "query": "Carol Lounge, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10601191015",
+    "canonical_poi_id": "osm:node:10601191015",
+    "seed_name": "Tiệm cà phê Mandala",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 15.5802354,
+    "longitude": 108.509925,
+    "query": "Tiệm cà phê Mandala, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10736260563",
+    "canonical_poi_id": "osm:node:10736260563",
+    "seed_name": "Chickpea Eatery",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 15.8789738,
+    "longitude": 108.3253333,
+    "query": "Chickpea Eatery, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11074810731",
+    "canonical_poi_id": "osm:node:11074810731",
+    "seed_name": "Bro's Kafe",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 16.0472109,
+    "longitude": 108.2431257,
+    "query": "Bro's Kafe, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10768346405",
+    "canonical_poi_id": "osm:node:10768346405",
+    "seed_name": "Bo De Tam;Bodhicitta",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 16.0512699,
+    "longitude": 108.2407887,
+    "query": "Bo De Tam;Bodhicitta, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11795856089",
+    "canonical_poi_id": "osm:node:11795856089",
+    "seed_name": "Nghé Coffee Hội An",
+    "aliases": [],
+    "location_expected": "Đà Nẵng",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 15.8977156,
+    "longitude": 108.3452752,
+    "query": "Nghé Coffee Hội An, Đà Nẵng, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1510802054",
+    "canonical_poi_id": "osm:way:1510802054",
+    "seed_name": "Phố Sách Hà Nội",
+    "aliases": [
+      "Phố Sách Hà Nội"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 21.02488975,
+    "longitude": 105.84784835773819,
+    "query": "Phố Sách Hà Nội, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1103182086",
+    "canonical_poi_id": "osm:way:1103182086",
+    "seed_name": "Công viên Võ Thị Sáu",
+    "aliases": [
+      "Công viên Võ Thị Sáu"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 21.0055661,
+    "longitude": 105.85695349767632,
+    "query": "Công viên Võ Thị Sáu, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10709724414",
+    "canonical_poi_id": "osm:node:10709724414",
+    "seed_name": "Đình làng Tự Nhiên",
+    "aliases": [
+      "Đình làng Tự Nhiên"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "attraction",
+    "latitude": 20.8634559,
+    "longitude": 105.9185044,
+    "query": "Đình làng Tự Nhiên, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:28945667",
+    "canonical_poi_id": "osm:way:28945667",
+    "seed_name": "Công viên Thủ Lệ",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "zoo",
+    "latitude": 21.03054045,
+    "longitude": 105.80670201528105,
+    "query": "Công viên Thủ Lệ, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:relation:16109340",
+    "canonical_poi_id": "osm:relation:16109340",
+    "seed_name": "Làng Văn hóa - Du lịch các Dân tộc Việt Nam",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "theme_park",
+    "latitude": 21.04159645,
+    "longitude": 105.46268166148069,
+    "query": "Làng Văn hóa - Du lịch các Dân tộc Việt Nam, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:12814113704",
+    "canonical_poi_id": "osm:node:12814113704",
+    "seed_name": "Chợ Cốm Mễ Trì Hạ",
+    "aliases": [
+      "Chợ Cốm Mễ Trì Hạ"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 21.0136877,
+    "longitude": 105.7801751,
+    "query": "Chợ Cốm Mễ Trì Hạ, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1307631429",
+    "canonical_poi_id": "osm:way:1307631429",
+    "seed_name": "Vườn hoa Nghè Ngô",
+    "aliases": [
+      "Vườn hoa Nghè Ngô"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 21.014901199999997,
+    "longitude": 105.90554183054314,
+    "query": "Vườn hoa Nghè Ngô, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:4489385889",
+    "canonical_poi_id": "osm:node:4489385889",
+    "seed_name": "Chợ Đêm Hàng Đào – Đồng Xuân",
+    "aliases": [
+      "chợ đêm đồng xuân",
+      "Chợ Đêm Hàng Đào – Đồng Xuân"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "rating_pair",
+      "website"
+    ],
+    "expected_category": "attraction",
+    "latitude": 21.0335078,
+    "longitude": 105.8509571,
+    "query": "Chợ Đêm Hàng Đào – Đồng Xuân, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1474970180",
+    "canonical_poi_id": "osm:way:1474970180",
+    "seed_name": "Lệ Mật Snake Kingdom",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "zoo",
+    "latitude": 21.0563239,
+    "longitude": 105.90340215004021,
+    "query": "Lệ Mật Snake Kingdom, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:13449384383",
+    "canonical_poi_id": "osm:node:13449384383",
+    "seed_name": "Chợ Quỳnh Đô",
+    "aliases": [
+      "Chợ Quỳnh Đô"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 20.9358446,
+    "longitude": 105.8379739,
+    "query": "Chợ Quỳnh Đô, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:9498047319",
+    "canonical_poi_id": "osm:node:9498047319",
+    "seed_name": "Khu Sinh Thái Thiên Phú Lâm",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 21.2904347,
+    "longitude": 105.7897608,
+    "query": "Khu Sinh Thái Thiên Phú Lâm, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:228075195",
+    "canonical_poi_id": "osm:way:228075195",
+    "seed_name": "Cung Văn hóa Lao động Hữu nghị Việt Xô",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "attraction",
+    "latitude": 21.022373950000002,
+    "longitude": 105.84428670114653,
+    "query": "Cung Văn hóa Lao động Hữu nghị Việt Xô, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:9237323772",
+    "canonical_poi_id": "osm:node:9237323772",
+    "seed_name": "Chợ Tư Đình",
+    "aliases": [
+      "Chợ Tư Đình"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 21.0273881,
+    "longitude": 105.8871527,
+    "query": "Chợ Tư Đình, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1087731715",
+    "canonical_poi_id": "osm:way:1087731715",
+    "seed_name": "Vườn hoa Tao Đàn",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 21.02161435,
+    "longitude": 105.85775066102521,
+    "query": "Vườn hoa Tao Đàn, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:12876453886",
+    "canonical_poi_id": "osm:node:12876453886",
+    "seed_name": "Đền Thiên Vương Thịnh",
+    "aliases": [
+      "Đền Thiên Vương Thịnh"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 20.992428,
+    "longitude": 105.908065,
+    "query": "Đền Thiên Vương Thịnh, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1114927597",
+    "canonical_poi_id": "osm:way:1114927597",
+    "seed_name": "Chợ Thượng Thanh",
+    "aliases": [
+      "Chợ Thượng Thanh"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 21.0696863,
+    "longitude": 105.89064605,
+    "query": "Chợ Thượng Thanh, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:37629143",
+    "canonical_poi_id": "osm:way:37629143",
+    "seed_name": "Bảo tàng Hồ Chí Minh",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "museum",
+    "latitude": 21.035616750000003,
+    "longitude": 105.83262940117086,
+    "query": "Bảo tàng Hồ Chí Minh, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1223384698",
+    "canonical_poi_id": "osm:way:1223384698",
+    "seed_name": "Tonkin's park",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 20.99736545,
+    "longitude": 105.7388959337834,
+    "query": "Tonkin's park, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1185629560",
+    "canonical_poi_id": "osm:way:1185629560",
+    "seed_name": "Chợ Dục Tú",
+    "aliases": [
+      "Chợ Dục Tú"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 21.11699215,
+    "longitude": 105.89613615944859,
+    "query": "Chợ Dục Tú, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10855443206",
+    "canonical_poi_id": "osm:node:10855443206",
+    "seed_name": "Chùa Tranh Khúc",
+    "aliases": [
+      "Chùa Tranh Khúc"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 20.9249559,
+    "longitude": 105.8887657,
+    "query": "Chùa Tranh Khúc, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:700145152",
+    "canonical_poi_id": "osm:way:700145152",
+    "seed_name": "Bảo tàng Mỹ thuật Việt Nam",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "museum",
+    "latitude": 21.03064175,
+    "longitude": 105.83703600260962,
+    "query": "Bảo tàng Mỹ thuật Việt Nam, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1253839879",
+    "canonical_poi_id": "osm:way:1253839879",
+    "seed_name": "Công viên hồ Cần",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 20.99669,
+    "longitude": 105.8753214764285,
+    "query": "Công viên hồ Cần, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:1192808464",
+    "canonical_poi_id": "osm:way:1192808464",
+    "seed_name": "Chợ Vồi",
+    "aliases": [
+      "Chợ Vồi"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 20.8656441,
+    "longitude": 105.86750671418145,
+    "query": "Chợ Vồi, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:13352652760",
+    "canonical_poi_id": "osm:node:13352652760",
+    "seed_name": "Đình Thuận Quang",
+    "aliases": [
+      "Đình Thuận Quang"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 21.0012824,
+    "longitude": 105.9709392,
+    "query": "Đình Thuận Quang, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:4499978190",
+    "canonical_poi_id": "osm:node:4499978190",
+    "seed_name": "Bảo tàng Địa chất Việt Nam",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "museum",
+    "latitude": 21.0235524,
+    "longitude": 105.8587723,
+    "query": "Bảo tàng Địa chất Việt Nam, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:way:136176176",
+    "canonical_poi_id": "osm:way:136176176",
+    "seed_name": "Công viên hồ Đền Lừ",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address",
+      "website"
+    ],
+    "expected_category": "park",
+    "latitude": 20.98508365,
+    "longitude": 105.85568849742782,
+    "query": "Công viên hồ Đền Lừ, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:3794435557",
+    "canonical_poi_id": "osm:node:3794435557",
+    "seed_name": "Đình Làng Quảng Bá",
+    "aliases": [
+      "Đình Làng Quảng Bá"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "temple",
+    "latitude": 21.0668682,
+    "longitude": 105.8230321,
+    "query": "Đình Làng Quảng Bá, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:6849181831",
+    "canonical_poi_id": "osm:node:6849181831",
+    "seed_name": "Chợ Xanh Linh Đàm",
+    "aliases": [
+      "Chợ Xanh Linh Đàm"
+    ],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "weekly_hours",
+      "website"
+    ],
+    "expected_category": "market",
+    "latitude": 20.9658478,
+    "longitude": 105.83422,
+    "query": "Chợ Xanh Linh Đàm, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10011953034",
+    "canonical_poi_id": "osm:node:10011953034",
+    "seed_name": "Micasa - Tea & Coffee",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 21.008974,
+    "longitude": 105.9668914,
+    "query": "Micasa - Tea & Coffee, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:6324812247",
+    "canonical_poi_id": "osm:node:6324812247",
+    "seed_name": "King BBQ Buffet 20 Hai Bà Trưng",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 21.024043,
+    "longitude": 105.8539531,
+    "query": "King BBQ Buffet 20 Hai Bà Trưng, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10082412846",
+    "canonical_poi_id": "osm:node:10082412846",
+    "seed_name": "Highlands Coffee",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 20.9858452,
+    "longitude": 105.8126081,
+    "query": "Highlands Coffee, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:6346505980",
+    "canonical_poi_id": "osm:node:6346505980",
+    "seed_name": "Nhà Hàng King BBQ",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 21.0362704,
+    "longitude": 105.7613852,
+    "query": "Nhà Hàng King BBQ, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10269656431",
+    "canonical_poi_id": "osm:node:10269656431",
+    "seed_name": "Starbucks",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 21.0069088,
+    "longitude": 105.795654,
+    "query": "Starbucks, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10098130620",
+    "canonical_poi_id": "osm:node:10098130620",
+    "seed_name": "Youone Hotdog",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 21.0226916,
+    "longitude": 105.807599,
+    "query": "Youone Hotdog, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10651129981",
+    "canonical_poi_id": "osm:node:10651129981",
+    "seed_name": "Joma Bakery Cafe",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 21.0345791,
+    "longitude": 105.8139822,
+    "query": "Joma Bakery Cafe, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10098130621",
+    "canonical_poi_id": "osm:node:10098130621",
+    "seed_name": "Youone Hotdog",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 20.9979589,
+    "longitude": 105.8454858,
+    "query": "Youone Hotdog, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11563281096",
+    "canonical_poi_id": "osm:node:11563281096",
+    "seed_name": "Nghiền cafe",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 21.032618,
+    "longitude": 105.8093764,
+    "query": "Nghiền cafe, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10098130622",
+    "canonical_poi_id": "osm:node:10098130622",
+    "seed_name": "Youone Hotdog",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 20.986858,
+    "longitude": 105.7970406,
+    "query": "Youone Hotdog, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11659995709",
+    "canonical_poi_id": "osm:node:11659995709",
+    "seed_name": "The Alley",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 21.0102936,
+    "longitude": 105.8496384,
+    "query": "The Alley, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10158964415",
+    "canonical_poi_id": "osm:node:10158964415",
+    "seed_name": "Lẩu&Nướng Ăndeee - 188 Phó Đức Chính",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 21.0442652,
+    "longitude": 105.8460809,
+    "query": "Lẩu&Nướng Ăndeee - 188 Phó Đức Chính, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:11868107987",
+    "canonical_poi_id": "osm:node:11868107987",
+    "seed_name": "Kafa Café",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 21.027728,
+    "longitude": 105.8442442,
+    "query": "Kafa Café, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:10621408642",
+    "canonical_poi_id": "osm:node:10621408642",
+    "seed_name": "Lotteria",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "restaurant",
+    "latitude": 21.03203,
+    "longitude": 105.8128607,
+    "query": "Lotteria, Hà Nội, Việt Nam"
+  },
+  {
+    "record_id": "missing:osm:node:12067246576",
+    "canonical_poi_id": "osm:node:12067246576",
+    "seed_name": "Đường vào tym em",
+    "aliases": [],
+    "location_expected": "Hà Nội",
+    "missing_fields": [
+      "image",
+      "weekly_hours",
+      "rating_pair",
+      "address"
+    ],
+    "expected_category": "cafe",
+    "latitude": 20.9749259,
+    "longitude": 105.8700391,
+    "query": "Đường vào tym em, Hà Nội, Việt Nam"
+  }
+]

@@ -7,7 +7,7 @@ from pathlib import Path
 from where2go.config import ROOT
 from .storage import connect
 from .taxonomy import FOOD_CATEGORIES
-from .quality import serving_quality
+from .quality import serving_quality, explorable, itinerary_eligible, access_sort_key
 
 
 CATALOG_V2 = ROOT / "data/catalog_v2.sqlite"
@@ -25,6 +25,20 @@ def load_catalog(path=CATALOG_V2):
         confirmed = {row[0] for row in db.execute("SELECT DISTINCT poi_id FROM source_links WHERE status='confirmed'")}
         for row in db.execute("SELECT * FROM selected_fields ORDER BY poi_id,field_name"):
             pois[row["poi_id"]][row["field_name"]] = json.loads(row["value_json"])
+        for row in db.execute("""SELECT s.poi_id,s.field_name,s.selection_reason,o.observed_at,o.verification_method,
+                              o.use_status,r.source_key,f.logical_path FROM selected_fields s
+                              LEFT JOIN field_observations o USING(observation_id)
+                              LEFT JOIN source_records r USING(source_record_id)
+                              LEFT JOIN source_files f USING(source_file_id)"""):
+            pois[row["poi_id"]].setdefault("provenance", {})[row["field_name"]] = {
+                key: row[key] for key in ("selection_reason", "observed_at", "verification_method", "use_status", "source_key", "logical_path")}
+        tables = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+        if "poi_aliases" in tables:
+            for row in db.execute("SELECT poi_id,name FROM poi_aliases ORDER BY normalized"):
+                pois[row["poi_id"]]["aliases"].append(row["name"])
+        if "external_ids" in tables:
+            for row in db.execute("SELECT * FROM external_ids"):
+                pois[row["poi_id"]].setdefault("external_ids", []).append({"provider": row["provider"], "id": row["external_id"]})
         for row in db.execute("SELECT * FROM duration_profiles"):
             pois[row["poi_id"]]["duration_profile"] = {
                 "short_minutes": row["short_minutes"], "typical_minutes": row["typical_minutes"],
@@ -72,11 +86,14 @@ def load_catalog(path=CATALOG_V2):
             poi.setdefault("hours_exceptions", {})
             poi.setdefault("duration_profile", None)
             poi.setdefault("access_points", [])
+            poi["access_points"].sort(key=access_sort_key)
             poi.setdefault("ratings", [])
             poi.setdefault("tags", [])
             poi["entity_confirmed"] = poi["poi_id"] in confirmed
             poi["is_food"] = poi.get("category") in FOOD_CATEGORIES
             poi["serving_quality"] = serving_quality(poi)
+            poi["explorable"] = explorable(poi)
+            poi["itinerary_eligible"] = itinerary_eligible(poi)
     return list(pois.values()), manifest
 
 

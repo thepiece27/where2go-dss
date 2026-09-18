@@ -1,0 +1,337 @@
+{
+  "status": "PASS",
+  "dataset_version": "v2-ae66988a1053d0de",
+  "checks": {
+    "preserved_canonical_ids": true,
+    "original_workbooks_unchanged": true,
+    "audit": true,
+    "csv_poi_count": true,
+    "csv_serviceable_count": true,
+    "api_export_explore_count": true,
+    "api_export_itinerary_count": true,
+    "my khe": true,
+    "my khe_detail": true,
+    "pham van dong": true,
+    "pham van dong_detail": true,
+    "my_khe_id_preserved": true,
+    "legacy_rating_pairs_not_used": true,
+    "profile_photos_not_selected": true,
+    "foreign_keys": true,
+    "deterministic_rebuild": true,
+    "published_catalog_matches_stage": true
+  },
+  "before": {
+    "version": "v2-91f833f05c8c7ef8",
+    "pois": 15713,
+    "serviceable": 1522,
+    "images": 0,
+    "rating_pairs": 96,
+    "source_checksums": {
+      "vietnam_destinations_google_maps_browser_hotosm.xlsx": "9ac0a4e69d99d3da7d1ffb45cf3100d0385539c3c6317e3faa6124ecf2940744",
+      "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx": "398e36c3f34b4f67034cbd6cf76dea8da5bbd6b8f17f1a8ea78195e491567580",
+      "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx": "a9f3c7dad98a5f4c850fabd28d342150b0a73d6376c74aa2adcd596487d32876"
+    }
+  },
+  "after": {
+    "pois": 16018,
+    "explorable": 15245,
+    "serviceable": 1475,
+    "images": 1048,
+    "rating_pairs_serviceable": 86,
+    "serviceable_missing_hours": 257,
+    "serviceable_missing_rating_pair": 1389
+  },
+  "merge_stats": {
+    "collected": {
+      "accepted": 89,
+      "attempts": 149,
+      "image_candidates": 88,
+      "new_pois": 1,
+      "rating_pairs": 84,
+      "structured_hours": 58
+    },
+    "duration_curation": {
+      "imported": 33
+    },
+    "focus_category_curation": {
+      "category_updated": 3,
+      "location_updated": 1,
+      "missing_or_new_poi": 7,
+      "unchanged": 29
+    },
+    "focus_coverage": [
+      {
+        "attractions": 1508,
+        "food_rest": 2977,
+        "location": "Hà Nội",
+        "total": 4499,
+        "usable": 4485,
+        "with_curated_duration_estimate": 15,
+        "with_rating_pair": 39,
+        "with_specific_duration": 15,
+        "with_structured_hours": 623,
+        "with_verified_access": 0,
+        "with_verified_duration": 0
+      },
+      {
+        "attractions": 426,
+        "food_rest": 2265,
+        "location": "Đà Nẵng",
+        "total": 2752,
+        "usable": 2691,
+        "with_curated_duration_estimate": 18,
+        "with_rating_pair": 47,
+        "with_specific_duration": 18,
+        "with_structured_hours": 429,
+        "with_verified_access": 0,
+        "with_verified_duration": 0
+      }
+    ],
+    "google": {
+      "ambiguous": 54,
+      "confirmed": 4853,
+      "image_candidates": 4096,
+      "linked_unique_pois": 1569,
+      "new_pois": 304,
+      "rows": 25621,
+      "selected_fields_recovered": 8153,
+      "sources": {
+        "vietnam_destinations_google_maps_browser_hotosm.xlsx": {
+          "ambiguous": 18,
+          "confirmed": 1608,
+          "image_candidates": 1358,
+          "new_pois": 304,
+          "rows": 8201,
+          "selected_fields_recovered": 8149,
+          "spatial_assignments": 1,
+          "unmatched": 6575
+        },
+        "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx": {
+          "ambiguous": 18,
+          "confirmed": 1623,
+          "image_candidates": 1369,
+          "rows": 8710,
+          "selected_fields_recovered": 4,
+          "unmatched": 7069
+        },
+        "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx": {
+          "ambiguous": 18,
+          "confirmed": 1622,
+          "image_candidates": 1369,
+          "rows": 8710,
+          "unmatched": 7070
+        }
+      },
+      "spatial_assignments": 1,
+      "unique_legacy_ids": 8710,
+      "unmatched": 20714
+    },
+    "images": {
+      "cached_checks": 1127,
+      "selected": 1048,
+      "shared_urls_held_for_review": 2
+    },
+    "manual": {
+      "confirmed": 20,
+      "hours_skipped_unconfirmed": 56,
+      "hours_sources_replaced": 13,
+      "invalid_google_rating_precision": 1,
+      "new_pois": 2,
+      "opening_rows": 91,
+      "pending_verification": 12,
+      "seed_only": 48,
+      "tool_confirmed": 20
+    },
+    "osm_supplement": {
+      "Hà Nội:cafe": 1188,
+      "Hà Nội:market": 153,
+      "Hà Nội:nature_area": 27,
+      "Hà Nội:restaurant": 1789,
+      "inserted": 5509,
+      "linked_existing": 100,
+      "Đà Nẵng:cafe": 1147,
+      "Đà Nẵng:market": 65,
+      "Đà Nẵng:nature_area": 23,
+      "Đà Nẵng:restaurant": 1117
+    },
+    "poi_count": 16018,
+    "poi_relations": {
+      "imported": 11
+    },
+    "resolved_spatial_statuses": 2,
+    "review_queue": 20840
+  },
+  "fresh_field_observations": {
+    "address_raw": 85,
+    "category": 1,
+    "entity_coordinate": 89,
+    "google_maps_url": 89,
+    "image_candidate": 88,
+    "latitude": 1,
+    "location": 1,
+    "longitude": 1,
+    "name": 30,
+    "opening_hours": 58,
+    "phone": 40,
+    "rating_pair": 84,
+    "source_url": 1,
+    "website": 36
+  },
+  "selected_images_by_evidence": {
+    "entity_panel": 88,
+    "legacy_entity_link": 960
+  },
+  "image_validation_states": {
+    "pending": 303,
+    "rejected_url": 83,
+    "unavailable": 16,
+    "valid": 1110
+  },
+  "collection": {
+    "pilot": {
+      "attempts": 32,
+      "unique_targets": 20,
+      "accepted": 19,
+      "held": 1,
+      "latest_statuses": {
+        "partial": 6,
+        "complete": 10,
+        "needs_review": 4
+      },
+      "human_verified": 0
+    },
+    "expansion": {
+      "attempts": 147,
+      "unique_targets": 129,
+      "accepted": 70,
+      "held": 59,
+      "latest_statuses": {
+        "needs_review": 31,
+        "complete": 57,
+        "partial": 24,
+        "unresolved": 17
+      },
+      "human_verified": 0
+    }
+  },
+  "named_beaches": {
+    "Bãi biển Mỹ Khê": {
+      "poi_id": "osm:relation:19000664",
+      "name": "Bãi biển Mỹ Khê",
+      "location": "Đà Nẵng",
+      "latitude": 16.0756254,
+      "longitude": 108.24687837443167,
+      "itinerary_eligible": true,
+      "image": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnWzT2iRXYIjCevPKKtZTWbGwJfkJ9KUGsYRdk2dfd8CyBTKCUA4KhmBAuTwB1hgxRG4gJS3teMBVkQq5MtU1vdbpbig8rBCXK7U03dcVJt_6WKGLGucjB-oZDtEEGK5iNNzZATMeNh0ik=w408-h305-k-no"
+    },
+    "Bãi tắm Phạm Văn Đồng": {
+      "poi_id": "poi-google:9f6b613e52c6d0f34461666b",
+      "name": "Bãi tắm Phạm Văn Đồng",
+      "location": "Đà Nẵng",
+      "latitude": 16.0732782,
+      "longitude": 108.2468342,
+      "itinerary_eligible": false,
+      "image": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm0neSoDkzuYaFWvQBRYDQyHHVSvIegdMMeiL2iR3x7IryqIVUgJsJh6q96tThs7t6fJtIxceUZ3E88eJ5h-hTlXq3s53eFHLFjZ9AD5e_4xG-XchvLw9yfeJng3TVjvJEL6w4Z=w408-h272-k-no"
+    }
+  },
+  "semantic_signature": {
+    "pois": "afa3115494fa7c5361e2ea7fc1e2c2831b0429af828b3c0e72d1b3508724a477",
+    "selected_fields": "e98a6102be5f2e68c83047375c2d9d90e4980ae5e698cb45a72da279482c5d96",
+    "poi_aliases": "f61849c7c539d3a77bac28315680adc96dab4e81446a9fa8d1f06ff8adc491af",
+    "external_ids": "40409c9d65d54508439c7061cf7f86f93c654771507c97046b8aac98c8278803",
+    "poi_images": "516716691cf49078e9681625a31e6d4f242dc28430c7c40e880144758bf232b9",
+    "ratings": "e16a556c4fca6eba988dced05ec84df28efaa861f0d60203a8f361f0153a7cc0",
+    "opening_intervals": "18a9542dcb8b94c10a644f0292d67d0995b0ddce79df44009a132d541c2df10c",
+    "duration_profiles": "deb71801d099e692a6207de82080befccb409db4bf72f30f2a292ed81414682b",
+    "access_points": "d04c4517e5f854d5b5f81f21f8a0a5b0251dfbe5f966a67bab4db8f83a19ae8e"
+  },
+  "publication": {
+    "status": "PUBLISHED",
+    "backup": "artifacts/dataset-backups/20260918_080614",
+    "catalog": "data/catalog_v2.sqlite"
+  },
+  "validation": {
+    "pytest": "74 PASS",
+    "javascript": "PASS",
+    "pip_check": "PASS",
+    "xlsx_integrity": "PASS",
+    "online_and_offline_smoke": {
+      "national_discovery": {
+        "status": "PASS",
+        "markers": 15245,
+        "list_first_page": 250
+      },
+      "my khe": {
+        "status": "PASS",
+        "name": "Bãi biển Mỹ Khê",
+        "image_loaded": true
+      },
+      "pham van dong": {
+        "status": "PASS",
+        "name": "Bãi tắm Phạm Văn Đồng",
+        "image_loaded": true
+      },
+      "online": "PASS",
+      "page_errors": [],
+      "broken_image_fallback": "PASS",
+      "mobile_offline": "PASS",
+      "mobile_page_errors": []
+    },
+    "itinerary_smoke": {
+      "status": "PASS",
+      "stops": 5,
+      "page_errors": [],
+      "basemap": "danang",
+      "basemap_canvas_count": 3,
+      "basemap_render_features": "13",
+      "basemap_canvas_pixels": "PASS",
+      "map_warning": "Đang dùng bản đồ dự phòng. Chi tiết offline có tại Hà Nội và Đà Nẵng.",
+      "blocked_external_requests": 179,
+      "list_filter_separate_from_trip_preference": "PASS",
+      "thematic_mode": "PASS",
+      "offline_local_basemap": "PASS",
+      "mobile_layout": "PASS",
+      "mobile_stops": 5,
+      "mobile_blocked_external_requests": 27
+    },
+    "evaluator": {
+      "runs": 64,
+      "provisional": 64,
+      "owner_grading": "NOT RUN"
+    },
+    "published_api": {
+      "status": "PASS",
+      "health": {
+        "catalog": "ready",
+        "catalog_api_version": "v2",
+        "poi_count": 16018,
+        "routing": "ready",
+        "dataset_version": "v2-ae66988a1053d0de",
+        "routing_version": "1e1d2ec5e5a86240",
+        "basemap": "ready",
+        "basemap_locations": [
+          "danang",
+          "hanoi"
+        ]
+      },
+      "dataset": {
+        "dataset_version": "v2-ae66988a1053d0de",
+        "poi_count": 16018,
+        "explorable_count": 15245,
+        "serviceable_count": 1475,
+        "with_image": 1048
+      },
+      "xlsx_and_csv_download": "PASS"
+    },
+    "git_diff_check": {
+      "code_and_docs": "PASS",
+      "including_generated_data": "FAIL",
+      "reason": "Một dòng CSV nhiều dòng giữ khoảng trắng cuối dòng từ mô tả nguồn; không sửa giá trị dữ liệu để thỏa kiểm tra whitespace."
+    }
+  },
+  "next_collection_queue": {
+    "file": "data/reports/v2/next_collection_queue.json",
+    "targets": 110,
+    "status": "NOT RUN; queue only"
+  }
+}

@@ -148,6 +148,7 @@ def priority_coverage(pois, location):
 
 def dataset_summary(pois, manifest):
     from .catalog import coverage
+    from .quality import explorable, itinerary_eligible
 
     locations = []
     for row in coverage(pois):
@@ -159,6 +160,10 @@ def dataset_summary(pois, manifest):
         "schema_version": manifest.get("schema_version"),
         "created_at": manifest.get("created_at"),
         "poi_count": len(pois),
+        "explorable_count": sum(explorable(p) for p in pois),
+        "serviceable_count": sum(itinerary_eligible(p) for p in pois),
+        "with_image": sum(bool(p.get("image")) for p in pois),
+        "merge_stats": manifest.get("stats", {}).get("google", {}),
         "locations": locations,
         "rights": manifest.get("rights", {}),
         "files": {
@@ -169,6 +174,9 @@ def dataset_summary(pois, manifest):
             "duration_profiles": "data/reports/v2/dataset/duration_profiles.csv",
             "access_points": "data/reports/v2/dataset/access_points.csv",
             "sources": "data/reports/v2/dataset/sources.csv",
+            "workbook": "data/reports/v2/dataset/merged_dataset.xlsx",
+            "images": "data/reports/v2/dataset/images.csv",
+            "field_provenance": "data/reports/v2/dataset/field_provenance.csv",
         },
         "notes": [
             "Google Maps observations are restricted_internal and are not a public redistribution dataset.",

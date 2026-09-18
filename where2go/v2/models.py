@@ -50,6 +50,8 @@ class ItineraryRequestV2(StrictModel):
 
     @model_validator(mode="after")
     def validate_request(self):
+        if self.location not in ("", "Hà Nội", "Đà Nẵng"):
+            raise ValueError("Lịch trình hiện hỗ trợ Hà Nội và Đà Nẵng; khám phá POI hỗ trợ toàn quốc")
         if self.start_time.tzinfo or self.end_time.tzinfo or self.start_time >= self.end_time:
             raise ValueError("Khung giờ địa phương phải trong cùng ngày và giờ về sau giờ đi")
         if any(value.second or value.microsecond for value in (self.start_time, self.end_time)):
@@ -71,4 +73,3 @@ class ItineraryRequestV2(StrictModel):
         if any(len(text) > 100 for text in self.interests):
             raise ValueError("Mỗi sở thích tối đa 100 ký tự")
         return self
-

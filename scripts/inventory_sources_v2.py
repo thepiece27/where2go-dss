@@ -26,7 +26,7 @@ def role(path):
         return "evaluation_fixture"
     if relative.startswith("manual/"):
         return "manual_observation"
-    if relative.startswith(("google-pilot/", "google-focus/", "google-focus-resolved/", "google-focus-missing/")):
+    if relative.startswith(("enrichment/", "google-pilot/", "google-focus/", "google-focus-resolved/", "google-focus-missing/")):
         return "source_observation_restricted"
     if relative.startswith("private/") and name.startswith("google_"):
         return "source_observation_restricted"

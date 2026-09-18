@@ -1,6 +1,8 @@
 from functools import lru_cache
 from pathlib import Path
 import json
+import math
+from typing import Literal
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from .catalog import load_catalog, coverage, filter_pois
@@ -11,8 +13,10 @@ from .routing import OSRM, RoutingUnavailable
 from .ranking import normalize
 from .v2.catalog import CATALOG_V2, load_catalog as load_catalog_v2, coverage as coverage_v2
 from .v2.models import ItineraryRequestV2
+from .v2.trip_models import TripContext, TripSuggestionRequest
 from .v2.service import ItineraryService
 from .v2.dataset import dataset_summary
+from .v2.quality import explorable, itinerary_eligible, manual_trip_quality, recommendation_eligible
 
 
 DATASET_EXPORT_DIR = ROOT / "data/reports/v2/dataset"
@@ -21,9 +25,13 @@ BASEMAP_SLUGS = {"hanoi", "danang"}
 DATASET_EXPORT_FILES = {
     "pois.csv", "opening_hours.csv", "ratings.csv", "duration_profiles.csv",
     "access_points.csv", "sources.csv", "summary.json", "audit.json", "README.md",
+    "merged_dataset.xlsx", "images.csv", "field_provenance.csv", "merge_report.json",
 }
 FRONTEND_ASSETS = {
+    "dataset.html": ("dataset.html", "text/html"),
+    "dataset.js": ("dataset.js", "text/javascript"),
     "app.js": ("app.js", "text/javascript"),
+    "map.js": ("map.js", "text/javascript"),
     "styles.css": ("styles.css", "text/css"),
     "vendor/leaflet.js": ("vendor/leaflet.js", "text/javascript"),
     "vendor/leaflet.css": ("vendor/leaflet.css", "text/css"),
@@ -32,6 +40,7 @@ FRONTEND_ASSETS = {
     "vendor/images/marker-icon.png": ("vendor/images/marker-icon.png", "image/png"),
     "vendor/images/marker-icon-2x.png": ("vendor/images/marker-icon-2x.png", "image/png"),
     "vendor/images/marker-shadow.png": ("vendor/images/marker-shadow.png", "image/png"),
+    "data/vietnam-boundaries.json": ("data/vietnam-boundaries.json", "application/geo+json"),
 }
 
 
@@ -123,33 +132,72 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
     @app.get("/api/v2/pois")
     def pois_v2(location: str = "", category: str = "", query: str = "",
                 include_unserviceable: bool = False,
-                limit: int = Query(500, ge=1, le=20000)):
+                view: Literal["explore", "itinerary"] = "itinerary",
+                offset: int = Query(0, ge=0), limit: int = Query(500, ge=1, le=20000)):
         service = v2_service()
         text = normalize(query)
         visible = [
             poi for poi in service.pois
-            if poi["data_status"] == "usable"
-            and (include_unserviceable or poi.get("serving_quality", {}).get("eligible", True))
+            if (explorable(poi) if view == "explore" else
+                poi["data_status"] == "usable" if include_unserviceable else itinerary_eligible(poi))
         ]
         selected = [poi for poi in visible
                     if (not location or poi["location"] == location)
                     and (not category or poi["category"] == category)
-                    and (not text or text in normalize(poi["name"] + " " + poi.get("description", "")))]
+                    and (not text or text in normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", "")])))]
         selected.sort(key=lambda poi: (poi["location"] or "", poi["name"], poi["poi_id"]))
         return {
-            "pois": selected[:limit], "total": len(selected),
+            "pois": [{k: v for k, v in p.items() if k != "provenance"} | {"manual_trip_quality": manual_trip_quality(p)}
+                     for p in selected[offset:offset + limit]],
+            "total": len(selected), "offset": offset, "has_more": offset + limit < len(selected),
             "dataset_version": service.manifest["version"],
             "locations": sorted({poi["location"] for poi in visible if poi.get("location")}),
             "categories": sorted({poi["category"] for poi in visible if poi.get("category")}),
         }
 
+    @app.get("/api/v2/map-pois")
+    def map_pois(bbox: str = "", location: str = "", category: str = "", query: str = ""):
+        bounds = None
+        if bbox:
+            try:
+                bounds = tuple(float(part) for part in bbox.split(","))
+                west, south, east, north = bounds
+                if not all(math.isfinite(v) for v in bounds) or not (-180 <= west < east <= 180 and -90 <= south < north <= 90):
+                    raise ValueError()
+            except ValueError:
+                raise HTTPException(422, "bbox phải là west,south,east,north hợp lệ")
+        text = normalize(query)
+        features = []
+        service = v2_service()
+        for poi in service.pois:
+            if not explorable(poi) or (location and poi["location"] != location) or (category and poi["category"] != category):
+                continue
+            if text and text not in normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", "")])):
+                continue
+            lon, lat = poi["longitude"], poi["latitude"]
+            if bounds and not (west <= lon <= east and south <= lat <= north):
+                continue
+            features.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": [lon, lat]},
+                             "properties": {"poi_id": poi["poi_id"], "name": poi["name"], "category": poi["category"],
+                                            "itinerary_eligible": itinerary_eligible(poi)}})
+        return {"type": "FeatureCollection", "features": features, "total": len(features), "dataset_version": service.manifest["version"]}
+
     @app.get("/api/v2/pois/{poi_id}")
-    def poi_v2(poi_id: str):
+    def poi_v2(poi_id: str, view: Literal["explore", "itinerary"] = "itinerary"):
         service = v2_service()
         poi = next((item for item in service.pois if item["poi_id"] == poi_id), None)
-        if poi is None or poi["data_status"] != "usable" or not poi.get("serving_quality", {}).get("eligible", True):
+        if poi is None or not (explorable(poi) if view == "explore" else itinerary_eligible(poi)):
             raise HTTPException(404, "POI không tồn tại hoặc chưa đủ điều kiện phục vụ")
-        return {"poi": poi, "dataset_version": service.manifest["version"]}
+        return {"poi": dict(poi, manual_trip_quality=manual_trip_quality(poi),
+                            recommendation_eligible=recommendation_eligible(poi)), "dataset_version": service.manifest["version"]}
+
+    @app.post("/api/v2/trip-recommendations")
+    def trip_recommendations(request: TripContext):
+        return v2_service().recommend(request)
+
+    @app.post("/api/v2/trip-suggestions")
+    def trip_suggestions(request: TripSuggestionRequest):
+        return v2_service().suggest(request)
 
     @app.get("/api/v2/coverage")
     def data_coverage_v2():
@@ -170,7 +218,15 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
         path = Path(v2_export_dir) / filename
         if not path.is_file():
             raise HTTPException(404, "Chưa xuất dataset; chạy scripts/export_dataset_v2.py")
-        media = "text/csv" if filename.endswith(".csv") else ("application/json" if filename.endswith(".json") else "text/markdown")
+        try:
+            exported_version = json.loads((Path(v2_export_dir) / "summary.json").read_text(encoding="utf-8"))["dataset_version"]
+        except (OSError, ValueError, KeyError):
+            exported_version = None
+        if ((Path(v2_export_dir) / ".publishing").exists()
+                or exported_version != v2_service().manifest["version"]):
+            raise HTTPException(503, "Bộ file xuất đang cập nhật hoặc khác phiên bản catalog; hãy khởi động lại API sau khi publish")
+        media = ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" if filename.endswith(".xlsx") else
+                 "text/csv" if filename.endswith(".csv") else "application/json" if filename.endswith(".json") else "text/markdown")
         return FileResponse(path, media_type=media, filename=filename)
 
     @app.get("/api/v2/basemaps/{slug}")

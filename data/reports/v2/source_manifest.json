@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "created_at": "2026-09-18T03:41:05.758861+00:00",
+  "created_at": "2026-09-18T08:09:54.771606+00:00",
   "root": "data",
   "files": [
     {
@@ -12,10 +12,26 @@
       "use_status": "not_for_publication"
     },
     {
+      "logical_path": "data/cache/image_checks_v2.json",
+      "size_bytes": 893757,
+      "sha256": "6ede5cc4feb51b669d2db1238bb1932c3217c3269a54ebc66814e0511899f079",
+      "modified_at": "2026-09-18T07:47:15.224636+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
       "logical_path": "data/cache/osm_supplement_v2.json",
       "size_bytes": 4139583,
       "sha256": "3bdde8b5445dbcf28fb049c75a85cf8f56b32c9f319fb388e5ce00387c0e0971",
       "modified_at": "2026-09-17T13:25:34.192310+00:00",
+      "role": "runtime_or_private",
+      "use_status": "not_for_publication"
+    },
+    {
+      "logical_path": "data/cache/poi_geometries_v2.json",
+      "size_bytes": 602842,
+      "sha256": "0106512604f6e69430e4453ee6fcb17477666c84e8dd2b895b657e64f03e64c6",
+      "modified_at": "2026-09-18T06:56:45.974412+00:00",
       "role": "runtime_or_private",
       "use_status": "not_for_publication"
     },
@@ -29,10 +45,26 @@
     },
     {
       "logical_path": "data/catalog_v2.sqlite",
-      "size_bytes": 174731264,
-      "sha256": "2e81e6a12ac9f9b6c5f2eff2b884dc69d6bbdfb8ebf39cd9bb0a51eaa8acaae2",
-      "modified_at": "2026-09-18T03:37:13.902701+00:00",
+      "size_bytes": 207826944,
+      "sha256": "b8505d1bac1568ebe7148c31a2cfacc1b6edab5fddbf690e40097cb3b3b04ae3",
+      "modified_at": "2026-09-18T08:05:16.812909+00:00",
       "role": "generated_catalog",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/catalog_v2.staging.sqlite",
+      "size_bytes": 206409728,
+      "sha256": "45b9d6e320f8e1de009e83945e4d77002fac589c64f90de8e18f594c2e187699",
+      "modified_at": "2026-09-18T07:29:56.559849+00:00",
+      "role": "generated_catalog",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/curation/collection_identity_reviews_v2.csv",
+      "size_bytes": 5975,
+      "sha256": "0ab8e72918a098a0f063b6e6382b053dbf12749dc17453a16fe219fa8d0e4fa3",
+      "modified_at": "2026-09-18T07:49:08.053494+00:00",
+      "role": "curation_input",
       "use_status": "project_internal"
     },
     {
@@ -82,6 +114,54 @@
       "modified_at": "2026-09-17T01:03:25.063481+00:00",
       "role": "curation_input",
       "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/enrichment/accepted-expansion.json",
+      "size_bytes": 477377,
+      "sha256": "bde8c8c8aa78013c7bcd39eec671a1999e8c4b25f785754a169b51a406bcf1e0",
+      "modified_at": "2026-09-18T07:49:41.562748+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/enrichment/accepted-pilot.json",
+      "size_bytes": 89022,
+      "sha256": "d365f472b05a19d8cdf9805876c0e1f658eed0e4076342454b38f2984363fbfe",
+      "modified_at": "2026-09-18T07:49:41.518532+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/enrichment/expansion-seeds.json",
+      "size_bytes": 52595,
+      "sha256": "47a757d60e8c7063404f2826caab5fb9605154dd7048e7096b581fa11db0abce",
+      "modified_at": "2026-09-18T07:21:39.847807+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/enrichment/expansion.json",
+      "size_bytes": 454935,
+      "sha256": "9df05c637eae280cccc0baa373e599a3583986521d47926abef8c53bf868cb9d",
+      "modified_at": "2026-09-18T07:45:10.192976+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/enrichment/pilot.json",
+      "size_bytes": 122960,
+      "sha256": "cee7542aa4b7e86014ec7672f7262e65b270685a37a4fc8a0d016de1dea70f6d",
+      "modified_at": "2026-09-18T07:05:57.264308+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
+    },
+    {
+      "logical_path": "data/enrichment/seeds.json",
+      "size_bytes": 64643,
+      "sha256": "9970282056abac19d725166656c0de811ef1f56b99c59cd87dabee429a331863",
+      "modified_at": "2026-09-18T06:52:14.701705+00:00",
+      "role": "source_observation_restricted",
+      "use_status": "restricted_internal"
     },
     {
       "logical_path": "data/evaluation/v2_scenarios.json",
@@ -247,7 +327,7 @@
       "logical_path": "data/private/google_enrichment_v2.csv",
       "size_bytes": 27452,
       "sha256": "3feed68b1015b9002948a5d955c5c599a0669a4bcd3a8a42299cda6633c3992c",
-      "modified_at": "2026-09-18T03:37:51.005308+00:00",
+      "modified_at": "2026-09-18T08:05:48.811693+00:00",
       "role": "source_observation_restricted",
       "use_status": "restricted_internal"
     },
@@ -255,7 +335,7 @@
       "logical_path": "data/private/google_opening_hours_v2.csv",
       "size_bytes": 78999,
       "sha256": "4c0f34ca644b0c495b8a0f9f19b2ffcd07944e899f5b7433e0b0be9ff99fa79c",
-      "modified_at": "2026-09-18T03:37:51.049616+00:00",
+      "modified_at": "2026-09-18T08:05:48.822184+00:00",
       "role": "source_observation_restricted",
       "use_status": "restricted_internal"
     },
@@ -270,104 +350,152 @@
     {
       "logical_path": "data/reports/v2/catalog/coverage.json",
       "size_bytes": 682,
-      "sha256": "b66dbe51c8c4ab39d05f2b8cfc02957f1ccfa8e1a13613cb187ec5c70e31fd8a",
-      "modified_at": "2026-09-18T03:37:15.804993+00:00",
+      "sha256": "7c85f2616ae185188da57922da3e4448a377014d288b399e2ae03198cb06b6b7",
+      "modified_at": "2026-09-18T08:05:17.986173+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/catalog/manifest.json",
-      "size_bytes": 2637,
-      "sha256": "fb87e4058ca5cf4668aae353a3074e72d6ae890be5d864d9a787284c64422d08",
-      "modified_at": "2026-09-18T03:37:15.804993+00:00",
+      "size_bytes": 4116,
+      "sha256": "7443161f29b207c817d1ecdb7229b0660d26e769967032f88b3ca5835fe5d5f2",
+      "modified_at": "2026-09-18T08:05:17.986173+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/catalog/review_queue.json",
-      "size_bytes": 10123628,
-      "sha256": "e6939bab583f26ec87b1594385c0d483e29fafdca46564b0c1c6d20c3fb1c41d",
-      "modified_at": "2026-09-18T03:37:16.002730+00:00",
+      "size_bytes": 8770528,
+      "sha256": "27bda05d679e29303a423c95cb3cbb9068b96fd31400eddcb47e71276bac74f4",
+      "modified_at": "2026-09-18T08:05:18.074398+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/collection_expansion.json",
+      "size_bytes": 401,
+      "sha256": "d475a43c3abbb9f27e4e8a04b117a47fd750945baf0ca02d9e35c630e16f6ebe",
+      "modified_at": "2026-09-18T07:49:41.563749+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/collection_pilot.json",
+      "size_bytes": 363,
+      "sha256": "ad7a3068d0537983daf2ec98d1cd2d50a680642092de56d1e4ecf5f8ffdbe46c",
+      "modified_at": "2026-09-18T07:49:41.518532+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/collection_review_evidence.json",
+      "size_bytes": 835,
+      "sha256": "5a9c61a6357b4baa8b97be202b847870d9b1cafd28e18a6a3f032e372d8bafb9",
+      "modified_at": "2026-09-18T07:20:58.132377+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/access_points.csv",
-      "size_bytes": 2394956,
-      "sha256": "f65aa0a20e72dc8d6507dd706d73dcb2c80ff7a12bc1d9c393e40214bbabecce",
-      "modified_at": "2026-09-18T03:37:50.106299+00:00",
+      "size_bytes": 2455001,
+      "sha256": "1d852b6ded923b18e12cc6cce6018b44e1479cbe5727acd498575b874b267881",
+      "modified_at": "2026-09-18T08:05:21.894497+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/audit.json",
-      "size_bytes": 6559,
-      "sha256": "da62284fa2f64597863ee3d4954a7d732c12824df9b60450052f901111fcef88",
-      "modified_at": "2026-09-18T03:38:46.759075+00:00",
+      "size_bytes": 6158,
+      "sha256": "b3333e1d1c22e01b6768806a49ca599ed2271eba251419a485b1d0e0fb03c2cb",
+      "modified_at": "2026-09-18T08:05:55.133652+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/duration_profiles.csv",
-      "size_bytes": 766572,
-      "sha256": "41f885f3939795b8f3fab21d0ec92a712a841824d6b9a9291a663a72d472441a",
-      "modified_at": "2026-09-18T03:37:49.937944+00:00",
+      "size_bytes": 786443,
+      "sha256": "0e4122ad25cfc6bdb21e8b368fe6055882b9b11a81704124b300f5cb70f50299",
+      "modified_at": "2026-09-18T08:05:21.795282+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/field_provenance.csv",
+      "size_bytes": 30758812,
+      "sha256": "7a80df8490c869ddc36aa402dc42ab48b1c7adfb5e67a2080ad4c3773fd218a4",
+      "modified_at": "2026-09-18T08:05:24.040375+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/images.csv",
+      "size_bytes": 1004760,
+      "sha256": "070f88ae91de6badb5dc34088f4517d70ff70f76663c7d53c57bdeb47a187b35",
+      "modified_at": "2026-09-18T08:05:21.923015+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/dataset/merged_dataset.xlsx",
+      "size_bytes": 13292537,
+      "sha256": "00c89e752796af2677d93e9ee07fc7110e436bada76f026c09191fb779df2265",
+      "modified_at": "2026-09-18T08:05:48.386757+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/opening_hours.csv",
-      "size_bytes": 893610,
-      "sha256": "895ea33d488341e9479f0acf96785af613ef5a1f260feac3373a5692ddc31596",
-      "modified_at": "2026-09-18T03:37:49.837990+00:00",
+      "size_bytes": 911578,
+      "sha256": "df2530c470e7b44c04e8bd3ec540f5cb4efe7ac1883e28cfabf6dbb7583c8ac3",
+      "modified_at": "2026-09-18T08:05:21.724737+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/pois.csv",
-      "size_bytes": 6286101,
-      "sha256": "10a1de0f576dd804dee67f7cf1fa423853d9bf000539867121c513fc198409c9",
-      "modified_at": "2026-09-18T03:37:49.775339+00:00",
+      "size_bytes": 7728811,
+      "sha256": "f7436159f71d8b785ca046a241775968eb0dcf909a4fc569b7a89c69b469b528",
+      "modified_at": "2026-09-18T08:05:21.681498+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/ratings.csv",
-      "size_bytes": 29342,
-      "sha256": "ed21eb166c567d94068f13bfb8f68ccf4ff4ba18fe27711608576a9690530dc2",
-      "modified_at": "2026-09-18T03:37:49.841581+00:00",
+      "size_bytes": 171396,
+      "sha256": "62b9cc5f42ddb90a530c6e8307c0dd5b10b3ba9183213c44601c21b933729337",
+      "modified_at": "2026-09-18T08:05:21.740117+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/README.md",
       "size_bytes": 1185,
-      "sha256": "87dff074c7366e5e5894c47bb1fb88dd8d9e4b4b78a376610e9796c1dfe0f484",
-      "modified_at": "2026-09-18T03:37:51.051617+00:00",
+      "sha256": "f60c303f7c88c8867ebe855341e129d7436bfdfb38b47357ecb2ce3eaaf3b1c3",
+      "modified_at": "2026-09-18T08:05:48.822184+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/sources.csv",
-      "size_bytes": 2306,
-      "sha256": "3f94e6f392075e8652498bbf27bb1588eb5c88f004f5d7936399bdf9a915a359",
-      "modified_at": "2026-09-18T03:37:50.113355+00:00",
+      "size_bytes": 2445,
+      "sha256": "1c702b92824f4e1dc4a568c750ed5aafc716f1761fb41091101c2fde900167b2",
+      "modified_at": "2026-09-18T08:05:21.898499+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/summary.json",
-      "size_bytes": 4718,
-      "sha256": "e014ecb17d9fe1c3ff96b29737e5a2a5f527625b2042e4c346b1b5b31d79a64b",
-      "modified_at": "2026-09-18T03:37:51.050613+00:00",
+      "size_bytes": 6254,
+      "sha256": "40b08d7fd9ba075c389eff196ad37a0417ca68db345743ea0c147c9757eca89b",
+      "modified_at": "2026-09-18T08:05:48.822184+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/evaluation.json",
-      "size_bytes": 109298,
-      "sha256": "012b58f4ab196186f006fada19262a03ed183fcf7d389d8170bd13bbd1146730",
-      "modified_at": "2026-09-18T03:40:03.297199+00:00",
+      "size_bytes": 109423,
+      "sha256": "acccb7477beccd6068ca3cc418ad65b60d9f0c0c2482ed7cb384432621b15fab",
+      "modified_at": "2026-09-18T08:00:51.991060+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -375,7 +503,7 @@
       "logical_path": "data/reports/v2/evaluation_method_key.json",
       "size_bytes": 1615,
       "sha256": "395800be1122707ceaf84a41aad3924dbdd5f69ebb4eec1e08ce7c1782f0cd68",
-      "modified_at": "2026-09-18T03:40:03.298201+00:00",
+      "modified_at": "2026-09-18T08:00:51.991060+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -388,18 +516,34 @@
       "use_status": "project_internal"
     },
     {
+      "logical_path": "data/reports/v2/merge_report.json",
+      "size_bytes": 10695,
+      "sha256": "e6ce5465deb837825fe3faacdff41ab5ec791604aca1cd0fc2510bf8f914f248",
+      "modified_at": "2026-09-18T08:09:53.839536+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
+      "logical_path": "data/reports/v2/next_collection_queue.json",
+      "size_bytes": 56921,
+      "sha256": "5928e4067202146df03ad425499f979241ab8e8991ba40b3abf09ddf5abb48d9",
+      "modified_at": "2026-09-18T08:05:10.529685+00:00",
+      "role": "generated_report",
+      "use_status": "project_internal"
+    },
+    {
       "logical_path": "data/reports/v2/priority_set.csv",
-      "size_bytes": 27940,
-      "sha256": "edd22be6695690ab6adc0431bc1090310d51368b8624611d779c36dfbee583b8",
-      "modified_at": "2026-09-18T03:37:40.995984+00:00",
+      "size_bytes": 27354,
+      "sha256": "d1bad5643001701e07b3159356802da9fa5cff75d09b64010572303316a53b6e",
+      "modified_at": "2026-09-18T08:08:02.465600+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/quality_queue.csv",
-      "size_bytes": 925920,
-      "sha256": "1ce25c0555800ce130cd4fc351508178b6a39607a126b95ae176516735646c9b",
-      "modified_at": "2026-09-18T03:37:24.129811+00:00",
+      "size_bytes": 943204,
+      "sha256": "e3dbe426111b59edb0607ab1a20a8d304161eb74944c0bfbe155d046d563e9a6",
+      "modified_at": "2026-09-18T08:08:01.922741+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -410,14 +554,6 @@
       "modified_at": "2026-09-18T03:26:44.628181+00:00",
       "role": "runtime_or_private",
       "use_status": "not_for_publication"
-    },
-    {
-      "logical_path": "data/vietnam_destinations.xlsx",
-      "size_bytes": 69891,
-      "sha256": "39e659f3d280329fa44573c9c8ef3783e67c1f6f1cc00560d7b901978742bf32",
-      "modified_at": "2026-09-15T10:29:38.057868+00:00",
-      "role": "source_observation",
-      "use_status": "project_internal"
     },
     {
       "logical_path": "data/vietnam_destinations_google_maps_browser_hotosm.xlsx",
@@ -453,14 +589,13 @@
     }
   ],
   "counts_by_role": {
-    "curation_input": 6,
+    "curation_input": 7,
     "evaluation_fixture": 2,
-    "generated_catalog": 2,
-    "generated_report": 17,
+    "generated_catalog": 3,
+    "generated_report": 25,
     "manual_observation": 1,
-    "runtime_or_private": 3,
-    "source_observation": 1,
-    "source_observation_restricted": 22,
+    "runtime_or_private": 5,
+    "source_observation_restricted": 28,
     "spatial_source": 2
   }
 }

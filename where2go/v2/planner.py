@@ -10,6 +10,7 @@ from .durations import choose_duration
 from .hours import intervals_on_date
 from .ranking import confidence, rank, valid_rating
 from .taxonomy import FOOD_CATEGORIES
+from .quality import access_sort_key
 
 
 PACE_LIMITS = {"quick": 5, "balanced": 4, "relaxed": 3}
@@ -42,7 +43,7 @@ def end_seconds(request):
 
 
 def access_point(poi):
-    points = sorted(poi.get("access_points", []), key=lambda point: (not point.get("verified"), point.get("access_id", "")))
+    points = sorted(poi.get("access_points", []), key=access_sort_key)
     return points[0] if points else None
 
 
@@ -67,7 +68,7 @@ def filter_candidates(pois, request):
         reason = None
         if poi.get("data_status") != "usable" or not poi.get("entity_confirmed"):
             reason = "entity_unconfirmed"
-        elif request.location and poi.get("location") != request.location:
+        elif poi.get("location") not in ("Hà Nội", "Đà Nẵng") or (request.location and poi.get("location") != request.location):
             reason = "wrong_location"
         elif poi.get("business_status") in ("temporarily_closed", "permanently_closed"):
             reason = "business_closed"

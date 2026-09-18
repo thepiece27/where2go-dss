@@ -1,0 +1,4 @@
+# Optional Google DOM parser, pinned to the revision exercised by the collector.
+-r requirements-app.lock.txt
+google-maps-scraper @ git+https://github.com/noworneverev/google-maps-scraper.git@283f50c179da23f36f2df5bb638df5ba5ab9a15b
+tqdm==4.70.1

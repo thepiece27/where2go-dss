@@ -2,6 +2,8 @@
 
 Tài liệu này mô tả `where2go/v2/ranking.py`, `where2go/v2/planner.py` và hợp đồng trong `where2go/v2/models.py`.
 
+**Phân biệt hai luồng kể từ 18/09/2026:** phần lọc/shortlist/seed và planner bên dưới mô tả endpoint nghiên cứu `/api/v2/itineraries`. Giao diện người dùng dùng `/api/v2/trip-suggestions` trong `trips.py`: tối đa 12 điểm do người dùng chọn, beam search, ba hồ sơ thời lượng, không dùng điểm TOPSIS để loại điểm đã chọn. Fuzzy AHP/TOPSIS với trọng số thiết kế vẫn được dùng tại `/api/v2/trip-recommendations` để xếp hạng đề xuất bổ sung có đường đi; người dùng thông thường không nhập so sánh cặp. Danh sách landmark biên tập tách khỏi điểm xếp hạng. Khi không có routing, gợi ý theo vị trí được ghi rõ và không giả thời gian lái xe. Xem [thuật toán và hợp đồng mới](trai_nghiem_lua_chon_lich_trinh.md).
+
 ## 1. Tập ứng viên
 
 Planner lọc trước theo trạng thái dữ liệu, địa phương, bán kính, category bị loại, quan hệ cha-con và điểm tiếp cận. Khoảng cách thẳng chỉ dùng tạo shortlist. Khả năng đi/về và thời gian lái xe lấy từ OSRM Table; cạnh `null` hoặc snap quá xa bị loại.

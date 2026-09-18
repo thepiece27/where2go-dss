@@ -79,6 +79,22 @@ CREATE TABLE builds(
   build_version TEXT PRIMARY KEY, created_at TEXT NOT NULL, input_hash TEXT NOT NULL,
   model_version TEXT NOT NULL, stats_json TEXT NOT NULL
 );
+CREATE TABLE poi_aliases(
+  poi_id TEXT NOT NULL REFERENCES pois(poi_id), name TEXT NOT NULL, normalized TEXT NOT NULL,
+  observation_id TEXT REFERENCES field_observations(observation_id), PRIMARY KEY(poi_id,normalized)
+);
+CREATE TABLE external_ids(
+  provider TEXT NOT NULL, external_id TEXT NOT NULL, poi_id TEXT NOT NULL REFERENCES pois(poi_id),
+  observation_id TEXT REFERENCES field_observations(observation_id), PRIMARY KEY(provider,external_id)
+);
+CREATE TABLE poi_images(
+  image_id TEXT PRIMARY KEY, poi_id TEXT NOT NULL REFERENCES pois(poi_id), url TEXT NOT NULL,
+  source_url TEXT, provider TEXT NOT NULL, rights_status TEXT NOT NULL,
+  identity_status TEXT NOT NULL, validation_status TEXT NOT NULL DEFAULT 'pending',
+  checked_at TEXT, content_type TEXT, width INTEGER, height INTEGER,
+  observation_id TEXT REFERENCES field_observations(observation_id), UNIQUE(poi_id,url)
+);
+CREATE TABLE poi_redirects(old_id TEXT PRIMARY KEY, poi_id TEXT NOT NULL REFERENCES pois(poi_id));
 CREATE INDEX idx_records_file ON source_records(source_file_id);
 CREATE INDEX idx_observations_poi_field ON field_observations(poi_id, field_name);
 CREATE INDEX idx_links_record_status ON source_links(source_record_id, status);
@@ -113,4 +129,3 @@ def connect(path, readonly=False):
     db.execute("PRAGMA foreign_keys=ON")
     db.row_factory = sqlite3.Row
     return db
-

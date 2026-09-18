@@ -1,5 +1,6 @@
 """Serving-quality gates separate catalog presence from itinerary eligibility."""
 import re
+import math
 
 from where2go.ranking import normalize
 
@@ -57,6 +58,10 @@ def weak_name(name):
 def serving_quality(poi):
     components = evidence_components(poi)
     reasons = []
+    if poi.get("data_status", "usable") != "usable":
+        reasons.append("identity_needs_review")
+    if poi.get("entity_confirmed") is False:
+        reasons.append("entity_unconfirmed")
     name = normalize(poi.get("name", ""))
     if weak_name(poi.get("name", "")):
         reasons.append("weak_or_generic_name")
@@ -80,3 +85,42 @@ def serving_quality(poi):
         "evidence_count": sum(components.values()),
         "evidence_score": score,
     }
+
+
+def explorable(poi):
+    """Identity and position are required; missing itinerary metadata is allowed."""
+    if poi.get("data_status") != "usable" or poi.get("entity_confirmed") is False or weak_name(poi.get("name")):
+        return False
+    quality = poi.get("serving_quality") or {}
+    if any(reason in quality.get("reasons", []) for reason in ("weak_or_generic_name", "category_name_conflict")):
+        return False
+    lat, lon = poi.get("latitude"), poi.get("longitude")
+    return bool(poi.get("location") and isinstance(lat, (int, float)) and isinstance(lon, (int, float))
+                and math.isfinite(lat) and math.isfinite(lon) and -90 <= lat <= 90 and -180 <= lon <= 180)
+
+
+def itinerary_eligible(poi):
+    return (poi.get("data_status") == "usable" and poi.get("entity_confirmed") is not False
+            and bool((poi.get("serving_quality") or serving_quality(poi))["eligible"]))
+
+
+def access_sort_key(point):
+    method = str(point.get("method") or "")
+    return (not point.get("verified"), 0 if method == "google_entity_url_not_verified_entrance" else 1,
+            point.get("access_id", ""))
+
+
+def manual_trip_quality(poi, location=None):
+    """Missing metadata is allowed; unresolved identity/position/closure is not."""
+    reasons = []
+    if not explorable(poi):
+        reasons.append("identity_or_coordinates_unconfirmed")
+    if poi.get("business_status") in ("temporarily_closed", "permanently_closed"):
+        reasons.append("business_closed")
+    if poi.get("location") not in ("Hà Nội", "Đà Nẵng") or (location and poi.get("location") != location):
+        reasons.append("wrong_location")
+    return {"eligible": not reasons, "reasons": reasons}
+
+
+def recommendation_eligible(poi, location=None):
+    return manual_trip_quality(poi, location)["eligible"] and itinerary_eligible(poi)

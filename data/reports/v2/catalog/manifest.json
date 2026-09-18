@@ -1,9 +1,9 @@
 {
-  "version": "v2-91f833f05c8c7ef8",
-  "created_at": "2026-09-18T03:37:13.896186+00:00",
-  "schema_version": "2.0",
+  "version": "v2-ae66988a1053d0de",
+  "created_at": "2026-09-18T08:05:16.805404+00:00",
+  "schema_version": "2.1",
   "model_version": "where2go-v2.0.0",
-  "input_hash": "91f833f05c8c7ef8fa825fc61054e42a337b37bdb0fc77ac0855dff6922014e9",
+  "input_hash": "ae66988a1053d0dea27f59b4bc5bd7370865ee180f61356b92fdeebce53e6c6b",
   "v1_dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-e118cf0e",
   "osm": {
     "sha256": "4f7244d59895803a521b8f6ef0b86629bf4470565ad329ed5d3336676db047e7",
@@ -13,7 +13,7 @@
     "license": "ODbL-1.0"
   },
   "stats": {
-    "poi_count": 15713,
+    "poi_count": 16018,
     "osm_supplement": {
       "Hà Nội:cafe": 1188,
       "inserted": 5509,
@@ -27,9 +27,43 @@
       "Đà Nẵng:market": 65
     },
     "google": {
-      "unmatched": 25302,
-      "confirmed": 303,
-      "ambiguous": 16
+      "rows": 25621,
+      "unmatched": 20714,
+      "new_pois": 304,
+      "confirmed": 4853,
+      "selected_fields_recovered": 8153,
+      "image_candidates": 4096,
+      "ambiguous": 54,
+      "spatial_assignments": 1,
+      "unique_legacy_ids": 8710,
+      "linked_unique_pois": 1569,
+      "sources": {
+        "vietnam_destinations_google_maps_browser_hotosm.xlsx": {
+          "rows": 8201,
+          "unmatched": 6575,
+          "new_pois": 304,
+          "confirmed": 1608,
+          "selected_fields_recovered": 8149,
+          "image_candidates": 1358,
+          "ambiguous": 18,
+          "spatial_assignments": 1
+        },
+        "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx": {
+          "rows": 8710,
+          "unmatched": 7069,
+          "confirmed": 1623,
+          "image_candidates": 1369,
+          "ambiguous": 18,
+          "selected_fields_recovered": 4
+        },
+        "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx": {
+          "rows": 8710,
+          "unmatched": 7070,
+          "confirmed": 1622,
+          "image_candidates": 1369,
+          "ambiguous": 18
+        }
+      }
     },
     "manual": {
       "pending_verification": 12,
@@ -54,16 +88,30 @@
       "missing_or_new_poi": 7,
       "location_updated": 1
     },
-    "review_queue": 25330,
+    "collected": {
+      "attempts": 149,
+      "rating_pairs": 84,
+      "structured_hours": 58,
+      "image_candidates": 88,
+      "accepted": 89,
+      "new_pois": 1
+    },
+    "images": {
+      "selected": 1048,
+      "shared_urls_held_for_review": 2,
+      "cached_checks": 1127
+    },
+    "resolved_spatial_statuses": 2,
+    "review_queue": 20840,
     "focus_coverage": [
       {
         "location": "Hà Nội",
-        "total": 4488,
-        "usable": 4474,
-        "attractions": 1497,
+        "total": 4499,
+        "usable": 4485,
+        "attractions": 1508,
         "food_rest": 2977,
-        "with_rating_pair": 67,
-        "with_structured_hours": 611,
+        "with_rating_pair": 39,
+        "with_structured_hours": 623,
         "with_specific_duration": 15,
         "with_verified_duration": 0,
         "with_curated_duration_estimate": 15,
@@ -71,12 +119,12 @@
       },
       {
         "location": "Đà Nẵng",
-        "total": 2744,
-        "usable": 2682,
-        "attractions": 418,
-        "food_rest": 2264,
-        "with_rating_pair": 30,
-        "with_structured_hours": 415,
+        "total": 2752,
+        "usable": 2691,
+        "attractions": 426,
+        "food_rest": 2265,
+        "with_rating_pair": 47,
+        "with_structured_hours": 429,
         "with_specific_duration": 18,
         "with_verified_duration": 0,
         "with_curated_duration_estimate": 18,

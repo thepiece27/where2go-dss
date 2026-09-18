@@ -1,77 +1,62 @@
 {
   "status": "PASS",
-  "created_at": "2026-09-18T03:38:46.758900+00:00",
-  "dataset_version": "v2-91f833f05c8c7ef8",
-  "catalog_path": "data/catalog_v2.sqlite",
-  "poi_count": 15713,
-  "serviceable_count": 1536,
+  "created_at": "2026-09-18T08:05:55.133429+00:00",
+  "dataset_version": "v2-ae66988a1053d0de",
+  "catalog_path": "artifacts/dataset-build/catalog_v2.sqlite",
+  "poi_count": 16018,
+  "serviceable_count": 1475,
   "hard_error_count": 0,
-  "warning_count": 4853,
+  "warning_count": 4599,
   "errors": [],
   "warnings": [
     {
       "code": "duplicate_serviceable_attraction_name_in_location",
-      "count": 3,
+      "count": 1,
       "examples": [
-        [
-          "('Huế', 'boi tran garden')",
-          [
-            "osm:node:9518711737",
-            "osm:way:1050684699"
-          ]
-        ],
-        [
-          "('Đà Nẵng', 'chua linh ung')",
-          [
-            "osm:way:486703049",
-            "osm:way:746227054"
-          ]
-        ],
         [
           "('An Giang', 'cong vien binh khanh')",
           [
             "osm:way:777891292",
-            "osm:way:777891293",
-            "osm:way:777891294"
+            "osm:way:777891293"
           ]
         ]
       ]
     },
     {
       "code": "serviceable_hours_unknown",
-      "count": 335,
+      "count": 257,
       "examples": [
         "osm:node:10225121259",
         "osm:node:10295139993",
         "osm:node:10295259298",
         "osm:node:10298273478",
         "osm:node:10304520225",
-        "osm:node:10709724107",
         "osm:node:10709724414",
         "osm:node:10784775351",
         "osm:node:10796653113",
-        "osm:node:10830817805"
+        "osm:node:10830817805",
+        "osm:node:10855443206"
       ]
     },
     {
       "code": "serviceable_rating_missing",
-      "count": 1439,
+      "count": 1389,
       "examples": [
         "osm:node:10011953034",
         "osm:node:10082412846",
-        "osm:node:10098130619",
         "osm:node:10098130620",
         "osm:node:10098130621",
         "osm:node:10098130622",
         "osm:node:10103088449",
         "osm:node:10111546117",
-        "osm:node:10114776452",
-        "osm:node:10129864868"
+        "osm:node:10129864868",
+        "osm:node:10154412164",
+        "osm:node:10158964415"
       ]
     },
     {
       "code": "serviceable_duration_unverified",
-      "count": 1536,
+      "count": 1475,
       "examples": [
         "osm:node:10011953034",
         "osm:node:10082412846",
@@ -87,7 +72,7 @@
     },
     {
       "code": "serviceable_access_unverified",
-      "count": 1536,
+      "count": 1475,
       "examples": [
         "osm:node:10011953034",
         "osm:node:10082412846",
@@ -103,11 +88,9 @@
     },
     {
       "code": "priority_target_not_met",
-      "count": 4,
+      "count": 2,
       "examples": [
-        "Hà Nội:hours",
         "Hà Nội:verified_duration",
-        "Đà Nẵng:hours",
         "Đà Nẵng:verified_duration"
       ]
     }
@@ -115,25 +98,25 @@
   "coverage": [
     {
       "location": "Hà Nội",
-      "total": 4488,
-      "usable": 4474,
-      "attractions": 1497,
+      "total": 4499,
+      "usable": 4485,
+      "attractions": 1508,
       "food_rest": 2977,
-      "serviceable": 784,
-      "serviceable_attractions": 113,
+      "serviceable": 742,
+      "serviceable_attractions": 71,
       "serviceable_food_rest": 671,
-      "with_rating_pair": 67,
-      "with_structured_hours": 611,
-      "with_full_week_hours": 580,
+      "with_rating_pair": 39,
+      "with_structured_hours": 623,
+      "with_full_week_hours": 594,
       "with_specific_duration": 15,
       "with_verified_duration": 0,
       "with_curated_duration_estimate": 15,
       "with_verified_access": 0,
       "coverage_percent": {
-        "rating_pair": 1.5,
-        "structured_hours": 13.66,
-        "full_week_hours": 12.96,
-        "specific_duration": 0.34,
+        "rating_pair": 0.87,
+        "structured_hours": 13.89,
+        "full_week_hours": 13.24,
+        "specific_duration": 0.33,
         "verified_duration": 0.0,
         "verified_access": 0.0
       },
@@ -142,14 +125,14 @@
         "attractions": 50,
         "food_rest": 20,
         "serviceable": 70,
-        "with_structured_hours": 46,
-        "with_full_week_hours": 40,
+        "with_structured_hours": 58,
+        "with_full_week_hours": 54,
         "with_specific_duration": 15,
         "with_verified_duration": 0,
         "with_curated_duration_estimate": 15,
-        "with_rating_pair": 25,
+        "with_rating_pair": 39,
         "with_verified_access": 0,
-        "hours_percent": 65.71,
+        "hours_percent": 82.86,
         "specific_duration_percent": 30.0,
         "verified_duration_percent": 0.0,
         "targets": {
@@ -161,7 +144,7 @@
         "target_status": {
           "attractions": true,
           "food_rest": true,
-          "hours": false,
+          "hours": true,
           "specific_duration": false,
           "verified_duration": false
         }
@@ -169,25 +152,25 @@
     },
     {
       "location": "Đà Nẵng",
-      "total": 2744,
-      "usable": 2682,
-      "attractions": 418,
-      "food_rest": 2264,
-      "serviceable": 499,
-      "serviceable_attractions": 69,
+      "total": 2752,
+      "usable": 2691,
+      "attractions": 426,
+      "food_rest": 2265,
+      "serviceable": 493,
+      "serviceable_attractions": 63,
       "serviceable_food_rest": 430,
-      "with_rating_pair": 29,
-      "with_structured_hours": 414,
-      "with_full_week_hours": 392,
-      "with_specific_duration": 17,
+      "with_rating_pair": 47,
+      "with_structured_hours": 428,
+      "with_full_week_hours": 407,
+      "with_specific_duration": 18,
       "with_verified_duration": 0,
-      "with_curated_duration_estimate": 17,
+      "with_curated_duration_estimate": 18,
       "with_verified_access": 0,
       "coverage_percent": {
-        "rating_pair": 1.08,
-        "structured_hours": 15.44,
-        "full_week_hours": 14.62,
-        "specific_duration": 0.63,
+        "rating_pair": 1.75,
+        "structured_hours": 15.9,
+        "full_week_hours": 15.12,
+        "specific_duration": 0.67,
         "verified_duration": 0.0,
         "verified_access": 0.0
       },
@@ -196,15 +179,15 @@
         "attractions": 50,
         "food_rest": 20,
         "serviceable": 70,
-        "with_structured_hours": 44,
-        "with_full_week_hours": 42,
-        "with_specific_duration": 17,
+        "with_structured_hours": 59,
+        "with_full_week_hours": 57,
+        "with_specific_duration": 18,
         "with_verified_duration": 0,
-        "with_curated_duration_estimate": 17,
-        "with_rating_pair": 24,
+        "with_curated_duration_estimate": 18,
+        "with_rating_pair": 47,
         "with_verified_access": 0,
-        "hours_percent": 62.86,
-        "specific_duration_percent": 34.0,
+        "hours_percent": 84.29,
+        "specific_duration_percent": 36.0,
         "verified_duration_percent": 0.0,
         "targets": {
           "attractions": 50,
@@ -215,7 +198,7 @@
         "target_status": {
           "attractions": true,
           "food_rest": true,
-          "hours": false,
+          "hours": true,
           "specific_duration": false,
           "verified_duration": false
         }

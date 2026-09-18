@@ -5,6 +5,7 @@ data/raw/
 data/routing/
 data/catalog.sqlite*
 data/catalog_v2.sqlite*
+data/catalog_v2.staging.sqlite*
 data/cache/
 .pytest_cache/
 artifacts/
@@ -15,3 +16,5 @@ data/google-focus/
 data/google-focus-resolved/
 data/google-focus-missing/
 data/reports/v1/
+data/enrichment/
+data/reports/v2/dataset/*.xlsx

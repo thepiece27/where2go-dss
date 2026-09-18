@@ -21,6 +21,7 @@ osmium==4.1.1
 packaging==26.3
 pandas==2.2.3
 playwright==1.62.0
+Pillow==12.3.0
 pluggy==1.6.0
 pydantic==2.13.5
 pydantic_core==2.46.5
