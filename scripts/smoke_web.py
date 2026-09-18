@@ -5,6 +5,19 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 
+BASEMAP_PIXEL_CHECK = """() => [...document.querySelectorAll('.leaflet-basemap-pane canvas')].some(canvas => {
+      const context=canvas.getContext('2d');
+      if(!context||!canvas.width||!canvas.height)return false;
+      const pixels=context.getImageData(0,0,canvas.width,canvas.height).data;
+      for(let index=3;index<pixels.length;index+=64){if(pixels[index]>0)return true;}
+      return false;
+    })"""
+
+
+def wait_for_basemap_pixels(page):
+    page.wait_for_function(BASEMAP_PIXEL_CHECK, timeout=15000, polling=500)
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--url",default="http://127.0.0.1:8000")
@@ -14,8 +27,21 @@ def main():
         browser=p.chromium.launch(headless=True)
         page=browser.new_page(viewport={"width":1440,"height":1000})
         errors=[]
+        blocked=[]
         page.on("pageerror",lambda error:errors.append(str(error)))
+        base=args.url.rstrip("/")
+        def local_only(route):
+            if route.request.url==base or route.request.url.startswith(base+"/"):
+                route.continue_()
+            else:
+                blocked.append(route.request.url)
+                route.abort()
+        page.route("**/*",local_only)
         page.goto(args.url,wait_until="networkidle",timeout=60000)
+        page.wait_for_function("document.querySelector('#map').dataset.basemap==='hanoi'",timeout=60000)
+        assert page.locator("#map canvas").count()>0
+        wait_for_basemap_pixels(page)
+        assert page.locator("#mapStatus").is_hidden()
         page.locator("#poiList .poi-button").first.wait_for()
         page.locator("#poiList .poi-button").first.click()
         page.locator("#savePoi").wait_for()
@@ -24,6 +50,8 @@ def main():
         assert len(page.evaluate("JSON.parse(localStorage.getItem('where2go-saved-v2'))"))==1
         page.locator("#locationFilter").select_option(label="Đà Nẵng")
         page.wait_for_function("state.pois.length>0 && state.pois.every(p=>p.location==='Đà Nẵng')")
+        page.wait_for_function("document.querySelector('#map').dataset.basemap==='danang'",timeout=60000)
+        wait_for_basemap_pixels(page)
         page.locator("#poiList .poi-button").first.click()
         page.locator("#savePoi").wait_for()
         page.locator("#savePoi").click()
@@ -54,8 +82,10 @@ def main():
         assert not errors,errors
         page.evaluate("()=>{state.required.clear();state.durationOverrides={};}")
         report={"status":"PASS","stops":page.locator('#itinerary .stop').count(),"page_errors":errors,
-                "map_tiles_loaded":page.locator('.leaflet-tile').evaluate_all('(xs)=>xs.filter(x=>x.naturalWidth>0).length'),
-                "map_warning":page.locator('#mapStatus').inner_text()}
+                "basemap":"danang","basemap_canvas_count":page.locator('#map canvas').count(),
+                "basemap_render_features":page.locator('#map').get_attribute('data-basemap-features'),
+                "basemap_canvas_pixels":"PASS","map_warning":page.locator('#mapStatus').inner_text(),
+                "blocked_external_requests":len(blocked)}
         page.locator("#typeFilter").select_option("museum")
         page.wait_for_function("state.pois.length>0 && state.pois.every(p=>p.category==='museum')")
         assert page.locator('#itinerary .stop').count()==0
@@ -70,20 +100,29 @@ def main():
         page.wait_for_function("!document.querySelector('#planButton').disabled",timeout=60000)
         assert page.evaluate("state.lastPlan.blocks.filter(b=>b.role==='attraction').every(b=>b.category==='historic')")
         report['thematic_mode']='PASS'
-        # Simulate only loss of external tiles; local route/API remain real.
-        page.route("https://tile.openstreetmap.org/**",lambda route:route.abort())
-        page.reload(wait_until="networkidle")
-        page.wait_for_function("!document.querySelector('#mapStatus').hidden")
-        assert "Không tải được" in page.locator('#mapStatus').inner_text()
-        report['tile_failure_message']='PASS'
+        assert page.locator("#mapStatus").is_hidden()
+        assert not page.locator(".leaflet-tile").count()
+        report['offline_local_basemap']='PASS'
         assert not errors,errors
 
         mobile=browser.new_page(viewport={"width":390,"height":844})
         mobile_errors=[]
+        mobile_blocked=[]
         mobile.on("pageerror",lambda error:mobile_errors.append(str(error)))
+        def mobile_local_only(route):
+            if route.request.url==base or route.request.url.startswith(base+"/"):
+                route.continue_()
+            else:
+                mobile_blocked.append(route.request.url)
+                route.abort()
+        mobile.route("**/*",mobile_local_only)
         mobile.goto(args.url,wait_until="networkidle",timeout=60000)
         mobile.locator("#poiList .poi-button").first.wait_for()
         mobile.locator("#locationFilter").select_option(label="Hà Nội")
+        mobile.wait_for_function("document.querySelector('#map').dataset.basemap==='hanoi'",timeout=60000)
+        assert mobile.locator("#map canvas").count()>0
+        wait_for_basemap_pixels(mobile)
+        assert mobile.locator("#mapStatus").is_hidden()
         mobile.locator("#tripDate").fill("2026-09-20")
         mobile.locator("#interests").fill("văn hóa, lịch sử")
         mobile.locator("#planButton").click()
@@ -103,6 +142,7 @@ def main():
         assert not mobile_errors,mobile_errors
         report['mobile_layout']='PASS'
         report['mobile_stops']=mobile.locator('#itinerary .stop').count()
+        report['mobile_blocked_external_requests']=len(mobile_blocked)
         mobile.close()
 
         Path("artifacts/web-smoke.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")

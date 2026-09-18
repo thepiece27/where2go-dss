@@ -2,7 +2,7 @@
 const $ = (id) => document.getElementById(id);
 const state = {
   pois: [], selectedId: null, saved: new Set(), required: new Set(), durationOverrides: {},
-  listVersion: 0, planVersion: 0, lastPlan: null,
+  listVersion: 0, planVersion: 0, basemapVersion: 0, lastPlan: null,
 };
 try { state.saved = new Set(JSON.parse(localStorage.getItem("where2go-saved-v2") || "[]")); } catch {}
 const labels = {
@@ -24,21 +24,74 @@ const criterionLabels = {
   preference_match:"Sở thích", place_quality:"Chất lượng điểm đến",
   drive_time:"Thời gian lái xe", data_confidence:"Độ tin cậy dữ liệu",
 };
-const map = window.L ? L.map("map").setView([21.0285,105.8542],12) : null;
-let markerLayer, startMarker, routeLayer;
+const basemapConfig = {
+  "H\u00e0 N\u1ed9i": {slug:"hanoi",center:[21.0285,105.8542]},
+  "\u0110\u00e0 N\u1eb5ng": {slug:"danang",center:[16.0544,108.2022]},
+};
+const map = window.L ? L.map("map",{preferCanvas:true}).setView(basemapConfig["H\u00e0 N\u1ed9i"].center,12) : null;
+let markerLayer, startMarker, routeLayer, basemapLayer, basemapLocalLayer, basemapRenderer;
 
 if (map) {
-  const tiles=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
-  let tileFailures=0;
-  tiles.on("loading",()=>{tileFailures=0;});
-  tiles.on("tileerror",()=>{tileFailures++;$("mapStatus").hidden=false;$("mapStatus").textContent="Không tải được một phần hoặc toàn bộ nền bản đồ. Lịch trình và đường OSRM vẫn có thể hoạt động.";});
-  tiles.on("load",()=>{if(!tileFailures) $("mapStatus").hidden=true;});
-  tiles.addTo(map);
+  map.createPane("basemapPane");
+  map.getPane("basemapPane").style.zIndex="200";
+  map.getPane("basemapPane").style.pointerEvents="none";
+  basemapRenderer=L.canvas({pane:"basemapPane",padding:0.5,tolerance:1});
+  map.attributionControl.addAttribution("&copy; OpenStreetMap contributors, ODbL 1.0");
   markerLayer=L.layerGroup().addTo(map);
+  map.on("zoomend",updateLocalBasemapVisibility);
   map.on("click",(event)=>{$("latitude").value=event.latlng.lat.toFixed(6);$("longitude").value=event.latlng.lng.toFixed(6);updateStart();invalidatePlan();});
 } else {
   $("mapStatus").hidden=false;
   $("mapStatus").textContent="Chưa tải được thư viện bản đồ. Bạn vẫn có thể nhập tọa độ và đọc lịch trình.";
+}
+
+function basemapStyle(feature) {
+  const kind=feature.properties?.kind;const detail=feature.properties?.class;
+  if(kind==="focus_boundary")return {color:"#8b99a5",weight:1.2,opacity:.85,fill:true,fillColor:"#edf1f3",fillOpacity:1};
+  if(kind==="green")return {stroke:false,fill:true,fillColor:"#cfe4ce",fillOpacity:.68};
+  if(kind==="water")return {stroke:false,fill:true,fillColor:"#bcdde8",fillOpacity:.9};
+  if(kind==="waterway")return {color:"#8fc6d8",weight:detail==="river"?2.2:1.2,opacity:.9};
+  if(kind==="coastline")return {color:"#6ba9bd",weight:1.8,opacity:.95};
+  if(kind==="admin")return {color:"#98a3ab",weight:detail==="4"?1.2:.7,opacity:detail==="4"?.7:.42,dashArray:"4 5"};
+  if(kind==="road"&&detail==="major")return {color:"#d6a760",weight:2.8,opacity:.95};
+  if(kind==="road"&&detail==="secondary")return {color:"#d8c28f",weight:1.8,opacity:.92};
+  if(kind==="road")return {color:"#ffffff",weight:1.05,opacity:.86};
+  if(kind==="railway")return {color:"#6f777d",weight:1.1,opacity:.75,dashArray:"5 4"};
+  return {color:"#a9b2b8",weight:1,opacity:.5};
+}
+function clearBasemap() {
+  if(!map)return;
+  if(basemapLayer){map.removeLayer(basemapLayer);basemapLayer=null;}
+  if(basemapLocalLayer){map.removeLayer(basemapLocalLayer);basemapLocalLayer=null;}
+  delete map.getContainer().dataset.basemap;
+  delete map.getContainer().dataset.basemapFeatures;
+}
+function updateLocalBasemapVisibility() {
+  if(!map||!basemapLocalLayer)return;
+  if(map.getZoom()>=13){if(!map.hasLayer(basemapLocalLayer))basemapLocalLayer.addTo(map);}
+  else if(map.hasLayer(basemapLocalLayer))map.removeLayer(basemapLocalLayer);
+}
+async function loadBasemap(location) {
+  if(!map)return;
+  const version=++state.basemapVersion;const config=basemapConfig[location];clearBasemap();
+  if(!config){$("mapStatus").hidden=true;return;}
+  $("mapStatus").hidden=false;$("mapStatus").textContent="\u0110ang t\u1ea3i n\u1ec1n b\u1ea3n \u0111\u1ed3 local\u2026";
+  try {
+    const data=await api(`/api/v2/basemaps/${config.slug}`);
+    if(version!==state.basemapVersion)return;
+    const options={renderer:basemapRenderer,pane:"basemapPane",interactive:false,style:basemapStyle};
+    basemapLayer=L.geoJSON(data,{...options,filter:feature=>!(feature.properties?.kind==="road"&&feature.properties?.class==="local")}).addTo(map);
+    basemapLocalLayer=L.geoJSON(data,{...options,filter:feature=>feature.properties?.kind==="road"&&feature.properties?.class==="local"});
+    updateLocalBasemapVisibility();
+    basemapLayer.eachLayer(layer=>{if(layer.redraw)layer.redraw();});
+    map.getContainer().dataset.basemap=config.slug;
+    map.getContainer().dataset.basemapFeatures=String(data.features?.length||0);
+    $("mapStatus").textContent="";$("mapStatus").hidden=true;
+  } catch(error) {
+    if(version!==state.basemapVersion)return;
+    clearBasemap();$("mapStatus").hidden=false;
+    $("mapStatus").textContent=`N\u1ec1n b\u1ea3n \u0111\u1ed3 local ch\u01b0a s\u1eb5n s\u00e0ng: ${error.message}`;
+  }
 }
 
 function node(tag,text,className) {
@@ -158,7 +211,7 @@ async function loadPois() {
     for(const poi of data.pois) {
       const button=node("button",`${poi.name} · ${labels[poi.category]||poi.category}`,"poi-button");
       button.type="button";button.dataset.poiId=poi.poi_id;
-      button.onclick=()=>{showDetail(poi);if(map)map.setView([poi.latitude,poi.longitude],15);};list.append(button);
+      button.onclick=()=>{showDetail(poi);if(map){map.stop();map.setView([poi.latitude,poi.longitude],15,{animate:false});}};list.append(button);
       if(markerLayer&&Number.isFinite(poi.latitude)&&Number.isFinite(poi.longitude)) L.circleMarker([poi.latitude,poi.longitude],{radius:4,color:"#0f766e",weight:2,fillOpacity:.28}).addTo(markerLayer).on("click",()=>showDetail(poi)).bindTooltip(node("span",poi.name));
     }
     if(data.total>data.pois.length)list.append(node("p",`Đang hiển thị ${data.pois.length} điểm. Hãy lọc để xem cụ thể hơn.`));
@@ -226,15 +279,15 @@ $("tripDate").value=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Ho_Chi_Minh"
 $("planForm").addEventListener("change",event=>{if(!event.target.closest(".duration-editor")){updateStart();invalidatePlan();}});
 let searchTimer;$("searchInput").oninput=()=>{invalidatePlan();clearTimeout(searchTimer);searchTimer=setTimeout(loadPois,250);};
 $("typeFilter").onchange=()=>{invalidatePlan();loadPois();};
-$("locationFilter").onchange=()=>{const centers={"Hà Nội":[21.0285,105.8542],"Đà Nẵng":[16.0544,108.2022]};const center=centers[$("locationFilter").value];state.required.clear();state.durationOverrides={};state.selectedId=null;$("detailPanel").replaceChildren();if(center){$("latitude").value=center[0];$("longitude").value=center[1];if(map)map.setView(center,12);}updateStart();invalidatePlan();loadPois();};
+$("locationFilter").onchange=()=>{const config=basemapConfig[$("locationFilter").value];const center=config?.center;state.required.clear();state.durationOverrides={};state.selectedId=null;$("detailPanel").replaceChildren();if(center){$("latitude").value=center[0];$("longitude").value=center[1];if(map){map.stop();map.setView(center,12,{animate:false});}}loadBasemap($("locationFilter").value);updateStart();invalidatePlan();loadPois();};
 
 (async()=>{
   try{
     const data=await api("/api/v2/pois?limit=1");
-    for(const location of data.locations){const option=node("option",location);option.value=location;$("locationFilter").append(option);}
+    for(const location of data.locations.filter(item=>basemapConfig[item])){const option=node("option",location);option.value=location;$("locationFilter").append(option);}
     for(const category of data.categories){const option=node("option",labels[category]||category);option.value=category;$("typeFilter").append(option.cloneNode(true));$("excludedCategories").append(option);if(!foodCategories.has(category)){const label=node("label");const input=document.createElement("input");input.type="checkbox";input.value=category;label.append(input,node("span",labels[category]||category));$("tripCategories").append(label);}}
     $("locationFilter").value="Hà Nội";
-    const coverage=await api("/api/v2/coverage");
+    const [coverage]=await Promise.all([api("/api/v2/coverage"),loadBasemap($("locationFilter").value)]);
     renderCoverage(coverage);
     $("systemStatus").textContent="Catalog v2 đa nguồn · Chọn điểm xuất phát, chủ đề và thời gian.";updateStart();await loadPois();
   }catch(error){$("systemStatus").textContent=error.message;}

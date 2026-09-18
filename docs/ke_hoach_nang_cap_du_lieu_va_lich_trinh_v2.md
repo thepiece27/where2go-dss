@@ -4,7 +4,7 @@
 **Thời gian:** 7 ngày làm việc.  
 **Địa bàn:** Hà Nội và Đà Nẵng mới, bao gồm Quảng Nam cũ.  
 **Ngân sách:** Công cụ miễn phí trước, Docker/WSL và máy hiện có.  
-**Căn cứ:** [Review nền tảng](bao_cao_review_du_an_where2go_dss.md), [kế hoạch v1](ke_hoach_hoan_thien_where2go_dss.md), [kết quả v1](ket_qua_trien_khai.md).
+**Căn cứ:** Kết quả review và kế hoạch v1 đã được hợp nhất vào tài liệu này. Các file trung gian lỗi thời đã được xóa khi cleanup ngày 18/09/2026; trạng thái thực tế nằm tại [kết quả triển khai v2](ket_qua_trien_khai_v2.md).
 
 Tài liệu này thay hướng catalog chỉ dùng OSM bằng dữ liệu đa nguồn có kiểm soát. Giữ yêu cầu ID bền vững, provenance, toán học đúng, tuyến thật và báo cáo trung thực. Không ghi đè kết quả v1 thành kết quả v2 chưa thực hiện.
 

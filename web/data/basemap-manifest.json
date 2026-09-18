@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "pbf_sha256": "4f7244d59895803a521b8f6ef0b86629bf4470565ad329ed5d3336676db047e7",
+  "boundary_sha256": "7ea9ed33d6b17fff5bdaa249b7edcb6546a39d397442104cb3d0ad2f683b9469",
+  "outputs": {
+    "hanoi": {
+      "file": "web/data/basemap-hanoi.json.gz",
+      "location": "Hà Nội",
+      "source_features": 139007,
+      "render_features": 13,
+      "counts": {
+        "admin:4": 136,
+        "admin:6": 975,
+        "green:area": 3231,
+        "railway:rail": 394,
+        "railway:subway": 141,
+        "road:local": 114089,
+        "road:major": 6325,
+        "road:secondary": 6651,
+        "water:area": 6114,
+        "waterway:canal": 685,
+        "waterway:river": 254,
+        "waterway:stream": 11
+      },
+      "raw_bytes": 11129771,
+      "gzip_bytes": 3222186,
+      "gzip_sha256": "faeda9e70e7f2fdaac684f3ea1ad8072653852704d36145948a7977937754a0f"
+    },
+    "danang": {
+      "file": "web/data/basemap-danang.json.gz",
+      "location": "Đà Nẵng",
+      "source_features": 60130,
+      "render_features": 13,
+      "counts": {
+        "admin:4": 43,
+        "admin:6": 445,
+        "coastline:coastline": 32,
+        "green:area": 1687,
+        "railway:rail": 168,
+        "road:local": 47883,
+        "road:major": 2905,
+        "road:secondary": 3420,
+        "water:area": 2478,
+        "waterway:canal": 413,
+        "waterway:river": 587,
+        "waterway:stream": 68
+      },
+      "raw_bytes": 7925846,
+      "gzip_bytes": 2340084,
+      "gzip_sha256": "fa92f94000585de7517da143f2f06d8a01cbf1432dbf0a0b3a8594339032c8b1"
+    }
+  }
+}

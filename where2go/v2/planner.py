@@ -441,6 +441,7 @@ def plan_itinerary(pois, manifest, request, router, context, method="fuzzy"):
         schedule = simulate(order, environment)
         if schedule is None:
             return dict(base, reason="Route thực làm lịch vượt ràng buộc; cần nới thời gian hoặc bán kính")
+        objective = utility(order, schedule, by_id, request)
 
         used = set(order)
         for poi in ranked:

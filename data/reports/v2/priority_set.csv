@@ -1,141 +1,141 @@
 ﻿location,set,priority_rank,poi_id,name,category,evidence_score,rating,review_count,hours_known,duration_method,access_verified,serving_evidence_count,review_status,missing_fields,dataset_version
-Hà Nội,attraction,1,osm:way:37625751,Lăng Chủ tịch Hồ Chí Minh,historic,12,4.5,21183,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,2,osm:way:696913691,Hoàng thành Thăng Long,historic,12,4.4,19338,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,3,osm:way:339936730,Bảo tàng Dân tộc học Việt Nam,museum,12,4.6,15549,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,4,osm:way:340128580,Nhà tù Hoả Lò,museum,12,4.5,23329,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,5,osm:way:697326496,Chùa Một Cột,temple,12,4.3,10728,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,6,osm:way:704147278,Bảo tàng Phụ nữ Việt Nam,museum,12,4.5,6763,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,7,osm:way:1148571536,Bảo tàng Lịch sử Quân sự Việt Nam,museum,12,4.5,12776,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,8,osm:way:178995262,Đền Ngọc Sơn,temple,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,9,osm:way:220302249,Chùa Trấn Quốc,temple,7,4.4,47407,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,10,osm:way:28912942,Nhà thờ Lớn,temple,9,4.5,24288,False,curated_planning_estimate,False,3,needs_manual_review,opening_hours|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,11,osm:way:208255133,Bảo tàng Hà Nội,museum,8,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,12,osm:node:5406262022,Đài quan sát Lotte Skywalk,viewpoint,8,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,13,osm:way:1212230635,Chợ Đồng Xuân,market,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,14,osm:relation:17148894,Vườn quốc gia Ba Vì,nature_area,5,,,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,15,osm:way:37933050,Nhà hát Lớn,performance_venue,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,16,osm:node:12090398186,Lunet Art Galerie,gallery,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,17,osm:way:1296795442,Vietgangz Farm,zoo,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,18,osm:node:10709724414,Đình làng Tự Nhiên,attraction,4,4.5,30,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,19,osm:way:1510802054,Phố Sách Hà Nội,park,4,4.5,1049,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,20,osm:relation:16109340,Làng Văn hóa - Du lịch các Dân tộc Việt Nam,theme_park,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,21,osm:way:1234036432,Đông Phong Art Gallery,gallery,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,22,osm:way:28945667,Công viên Thủ Lệ,zoo,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,23,osm:node:12814113704,Chợ Cốm Mễ Trì Hạ,market,4,4.3,234,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,24,osm:way:921987266,Thành cổ Sơn Tây,attraction,4,4.5,5498,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,25,osm:node:9498047319,Khu Sinh Thái Thiên Phú Lâm,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,26,osm:way:843085954,Thiên đường Bảo Sơn,theme_park,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,27,osm:node:13449384383,Chợ Quỳnh Đô,market,4,4.2,304,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,28,osm:node:4489385889,Chợ Đêm Hàng Đào – Đồng Xuân,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,29,osm:way:1087731715,Vườn hoa Tao Đàn,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,30,osm:way:1474970180,Lệ Mật Snake Kingdom,zoo,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,31,osm:node:2471647464,Chợ Phùng Khoang,market,4,4.1,10593,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,32,osm:way:1103182086,Công viên Võ Thị Sáu,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,33,osm:way:228075195,Cung Văn hóa Lao động Hữu nghị Việt Xô,attraction,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,34,osm:node:10855443206,Chùa Tranh Khúc,temple,4,4.6,51,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,35,osm:node:6849181831,Chợ Xanh Linh Đàm,market,4,5.0,3,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,36,osm:way:1223384698,Tonkin's park,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,37,osm:way:37629143,Bảo tàng Hồ Chí Minh,museum,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,38,osm:node:12404222239,Chùa Hoà Phúc,temple,4,4.7,278,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,39,osm:node:9237323772,Chợ Tư Đình,market,4,4.0,597,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,40,osm:way:1253839879,Công viên hồ Cần,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,41,osm:way:700145152,Bảo tàng Mỹ thuật Việt Nam,museum,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,42,osm:node:12876453886,Đền Thiên Vương Thịnh,temple,4,5.0,10,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,43,osm:way:1114927597,Chợ Thượng Thanh,market,4,4.2,245,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,44,osm:way:1307631429,Vườn hoa Nghè Ngô,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,45,osm:node:13352652760,Đình Thuận Quang,temple,4,4.8,4,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,46,osm:way:1185629560,Chợ Dục Tú,market,4,4.3,86,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,47,osm:node:4499978190,Bảo tàng Địa chất Việt Nam,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,48,osm:way:136176176,Công viên hồ Đền Lừ,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,49,osm:node:3794435557,Đình Làng Quảng Bá,temple,4,4.5,75,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,attraction,50,osm:way:1192808464,Chợ Vồi,market,4,4.3,66,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,1,osm:node:6324812247,King BBQ Buffet 20 Hai Bà Trưng,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,2,osm:node:10011953034,Micasa - Tea & Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,3,osm:node:6346505980,Nhà Hàng King BBQ,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,4,osm:node:10082412846,Highlands Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,5,osm:node:10098130619,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,6,osm:node:10114776452,Skyline Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,7,osm:node:10098130620,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,8,osm:node:10269656431,Starbucks,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,9,osm:node:10098130621,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,10,osm:node:10651129981,Joma Bakery Cafe,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,11,osm:node:10098130622,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,12,osm:node:10715935205,ACID8 Speciality Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,13,osm:node:10158964415,Lẩu&Nướng Ăndeee - 188 Phó Đức Chính,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,14,osm:node:11563281096,Nghiền cafe,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,15,osm:node:10179892274,The East,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,16,osm:node:11659995709,The Alley,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,17,osm:node:10245908053,iMeatU Korea BBQ,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,18,osm:node:11868107987,Kafa Café,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,19,osm:node:10621408642,Lotteria,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Hà Nội,food_rest,20,osm:node:12067246576,Đường vào tym em,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,1,osm:way:359114064,Sun World Bà Nà Hills,theme_park,12,4.5,71653,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,2,osm:relation:8552348,Ngũ Hành Sơn,nature_area,12,4.4,42808,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,3,osm:way:302872188,Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng,museum,12,4.2,8193,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,4,osm:way:198804483,Thánh địa Mỹ Sơn,historic,8,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,5,osm:way:694831926,Cầu Rồng,attraction,7,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,6,osm:relation:7055216,Rừng đặc dụng Sơn Trà,nature_area,7,4.7,1125,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,7,osm:way:486703049,Chùa Linh Ứng,temple,12,4.5,16190,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,8,poi-google:3aac3427ee25b18a817027e9,Phố Cổ Hội An,old_quarter,10,4.8,631,True,curated_planning_estimate,False,3,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,9,poi-google:270efa89c4fa1b1bdeb4cdcd,Chùa Cầu,historic,10,4.3,29250,True,curated_planning_estimate,False,3,needs_manual_review,verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,10,osm:way:14131302,Hoi An Memories Land,theme_park,7,4.7,5208,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,11,osm:way:782381624,VinWonders Nam Hội An,theme_park,5,,,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,12,osm:way:1368599361,Bảo tàng Đà Nẵng,museum,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,13,osm:way:204885903,Chợ Hàn,market,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,14,osm:way:204790989,Chợ Cồn,market,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,15,osm:node:4171964390,Thanh Ha Pottery Village,craft_village,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,16,osm:node:4171971289,Kim Bong Carpentry Village,craft_village,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,17,osm:node:10709724107,Làng đá mỹ nghệ Non Nước,craft_village,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,18,osm:node:13040467529,Bãi Đá,beach,4,4.1,104,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,19,osm:node:5747015021,Đỉnh Quế,viewpoint,4,4.0,602,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,20,osm:node:11896339273,CSO Gallery,gallery,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,21,osm:node:1819451633,Chùa Hải Tạng,temple,4,4.4,514,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,22,osm:node:11934169470,Queen Cobra,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,23,osm:node:8883385553,TASY STUDIO,gallery,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,24,osm:way:1556362196,Chợ Đêm Sơn Trà,market,7,3.6,2128,True,category_default,False,2,needs_manual_review,specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,25,osm:node:12344125229,Di San Vô Giá,museum,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,26,osm:node:4280016689,Chùa Giác Hoàng Viên,temple,4,4.5,15,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,27,osm:node:14078442086,Hoi An Hideout Fishing Barbecue Tour,attraction,3,,,False,category_default,False,2,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,28,osm:node:2617007574,Kazimierz Kwiatkowski,historic,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,29,osm:relation:17140360,Vườn quốc gia Sông Thanh,nature_area,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,30,osm:node:12333995781,Chợ đêm Lê Duẩn,market,4,4.0,97,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,31,osm:relation:2836882,Chùa Chúc Thánh,temple,4,4.6,436,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,32,osm:node:10154412164,Fantasy Park,theme_park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,33,osm:node:5273998823,Cầu Trần Thị Lý,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,34,osm:node:5513474821,Terracotta Park,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,35,osm:way:1076716243,Chợ Khuê Mỹ,market,4,4.3,198,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,36,osm:way:1422444084,Chùa Thuận Thành,temple,4,4.3,33,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,37,osm:node:7127464285,Hoi An Museum of Traditional Medicine,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,38,osm:node:7328902486,Graffiti village,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,39,osm:node:4807957148,Trung tâm Giải trí Phức hợp Helio Center,theme_park,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,40,osm:way:1181242323,Chợ Bắc Trà My,market,4,4.0,296,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,41,osm:way:302944359,Chùa Trung Lương,temple,4,4.9,57,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,42,osm:node:8474743417,Bảo tàng Phật giáo,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,43,osm:way:35952591,Chợ vải Hội An,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,44,osm:way:118672509,Chợ Đầu mối Hoà Cường,market,4,4.7,68,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,45,osm:way:565186618,Đình Cẩm Phô,temple,4,4.2,230,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,46,osm:way:565592419,Bảo tàng Hội An,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,47,osm:node:13687068650,Linh Phong Bảo Tháp,attraction,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,48,osm:way:1326219930,Chợ Kỳ Đồng,market,4,4.1,327,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,49,osm:way:693441028,Đình Mỹ Khê,temple,4,4.8,9,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,attraction,50,osm:way:595471597,Bảo tàng Đà Nẵng (cơ sở 2),museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,1,osm:node:4389441895,Bale Well,restaurant,7,4.5,138,True,category_default,False,2,needs_manual_review,specific_duration|verified_access,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,2,osm:node:10749874405,Roots Plant-Based Café,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,3,osm:node:10652658505,Peanuts - Vegan Vietnamese Food,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,4,osm:node:10959238968,Thom's Sourdough Bakery & Coffee - Tan Thanh Beach,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,5,osm:node:11276780187,La Cabana - House of BBQ,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,6,osm:node:4520093589,Lapin Ca Phe,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,7,osm:node:4260382168,The Amazing Taco | Tại Đà Nẵng,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,8,osm:way:616910526,Thom's Sourdough Bakery & Coffee - An Bang Beach,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,9,osm:node:10304039134,Caddilac Bar & Grill,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,10,osm:node:10536187009,Dudu Cafe Hoi An,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,11,osm:node:10304609242,"Bánh Xèo, Thịt Nướng, Nem Lụi Bà 9",restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,12,osm:node:10601191015,Tiệm cà phê Mandala,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,13,osm:node:10310109109,KURUMI - Healthy Vegan Food & Desserts,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,14,osm:node:10773540605,Art Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,15,osm:node:10312895500,Cardi Pizzeria,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,16,osm:node:11074810731,Bro's Kafe,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,17,osm:node:10537046604,Carol Lounge,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,18,osm:node:11665246470,Trình cà phê,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,19,osm:node:10736260563,Chickpea Eatery,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
-Đà Nẵng,food_rest,20,osm:node:11795856089,Nghé Coffee Hội An,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-54f6cfdfb5d1038c
+Hà Nội,attraction,1,osm:way:37625751,Lăng Chủ tịch Hồ Chí Minh,historic,12,4.5,21183,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,2,osm:way:696913691,Hoàng thành Thăng Long,historic,12,4.4,19338,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,3,osm:way:339936730,Bảo tàng Dân tộc học Việt Nam,museum,12,4.6,15549,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,4,osm:way:340128580,Nhà tù Hoả Lò,museum,12,4.5,23329,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,5,osm:way:697326496,Chùa Một Cột,temple,12,4.3,10728,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,6,osm:way:704147278,Bảo tàng Phụ nữ Việt Nam,museum,12,4.5,6763,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,7,osm:way:1148571536,Bảo tàng Lịch sử Quân sự Việt Nam,museum,12,4.5,12776,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,8,osm:way:178995262,Đền Ngọc Sơn,temple,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,9,osm:way:220302249,Chùa Trấn Quốc,temple,7,4.4,47407,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,10,osm:way:28912942,Nhà thờ Lớn,temple,9,4.5,24288,False,curated_planning_estimate,False,3,needs_manual_review,opening_hours|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,11,osm:way:208255133,Bảo tàng Hà Nội,museum,8,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,12,osm:node:5406262022,Đài quan sát Lotte Skywalk,viewpoint,8,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,13,osm:way:1212230635,Chợ Đồng Xuân,market,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,14,osm:relation:17148894,Vườn quốc gia Ba Vì,nature_area,5,,,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,15,osm:way:37933050,Nhà hát Lớn,performance_venue,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,16,osm:node:12090398186,Lunet Art Galerie,gallery,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,17,osm:way:1296795442,Vietgangz Farm,zoo,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,18,osm:node:10709724414,Đình làng Tự Nhiên,attraction,4,4.5,30,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,19,osm:way:1510802054,Phố Sách Hà Nội,park,4,4.5,1049,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,20,osm:relation:16109340,Làng Văn hóa - Du lịch các Dân tộc Việt Nam,theme_park,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,21,osm:way:1234036432,Đông Phong Art Gallery,gallery,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,22,osm:way:28945667,Công viên Thủ Lệ,zoo,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,23,osm:node:12814113704,Chợ Cốm Mễ Trì Hạ,market,4,4.3,234,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,24,osm:way:921987266,Thành cổ Sơn Tây,attraction,4,4.5,5498,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,25,osm:node:9498047319,Khu Sinh Thái Thiên Phú Lâm,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,26,osm:way:843085954,Thiên đường Bảo Sơn,theme_park,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,27,osm:node:13449384383,Chợ Quỳnh Đô,market,4,4.2,304,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,28,osm:node:4489385889,Chợ Đêm Hàng Đào – Đồng Xuân,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,29,osm:way:1087731715,Vườn hoa Tao Đàn,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,30,osm:way:1474970180,Lệ Mật Snake Kingdom,zoo,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,31,osm:node:2471647464,Chợ Phùng Khoang,market,4,4.1,10593,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,32,osm:way:1103182086,Công viên Võ Thị Sáu,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,33,osm:way:228075195,Cung Văn hóa Lao động Hữu nghị Việt Xô,attraction,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,34,osm:node:10855443206,Chùa Tranh Khúc,temple,4,4.6,51,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,35,osm:node:6849181831,Chợ Xanh Linh Đàm,market,4,5.0,3,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,36,osm:way:1223384698,Tonkin's park,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,37,osm:way:37629143,Bảo tàng Hồ Chí Minh,museum,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,38,osm:node:12404222239,Chùa Hoà Phúc,temple,4,4.7,278,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,39,osm:node:9237323772,Chợ Tư Đình,market,4,4.0,597,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,40,osm:way:1253839879,Công viên hồ Cần,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,41,osm:way:700145152,Bảo tàng Mỹ thuật Việt Nam,museum,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,42,osm:node:12876453886,Đền Thiên Vương Thịnh,temple,4,5.0,10,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,43,osm:way:1114927597,Chợ Thượng Thanh,market,4,4.2,245,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,44,osm:way:1307631429,Vườn hoa Nghè Ngô,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,45,osm:node:13352652760,Đình Thuận Quang,temple,4,4.8,4,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,46,osm:way:1185629560,Chợ Dục Tú,market,4,4.3,86,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,47,osm:node:4499978190,Bảo tàng Địa chất Việt Nam,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,48,osm:way:136176176,Công viên hồ Đền Lừ,park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,attraction,49,osm:node:3794435557,Đình Làng Quảng Bá,temple,4,4.5,75,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,attraction,50,osm:way:1192808464,Chợ Vồi,market,4,4.3,66,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,1,osm:node:6324812247,King BBQ Buffet 20 Hai Bà Trưng,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,2,osm:node:10011953034,Micasa - Tea & Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,3,osm:node:6346505980,Nhà Hàng King BBQ,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,4,osm:node:10082412846,Highlands Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,5,osm:node:10098130619,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,6,osm:node:10114776452,Skyline Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,7,osm:node:10098130620,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,8,osm:node:10269656431,Starbucks,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,9,osm:node:10098130621,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,10,osm:node:10651129981,Joma Bakery Cafe,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,11,osm:node:10098130622,Youone Hotdog,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,12,osm:node:10715935205,ACID8 Speciality Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,13,osm:node:10158964415,Lẩu&Nướng Ăndeee - 188 Phó Đức Chính,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,14,osm:node:11563281096,Nghiền cafe,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,15,osm:node:10179892274,The East,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,16,osm:node:11659995709,The Alley,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,17,osm:node:10245908053,iMeatU Korea BBQ,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,18,osm:node:11868107987,Kafa Café,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,19,osm:node:10621408642,Lotteria,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Hà Nội,food_rest,20,osm:node:12067246576,Đường vào tym em,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,1,osm:way:359114064,Sun World Bà Nà Hills,theme_park,12,4.5,71653,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,2,osm:relation:8552348,Ngũ Hành Sơn,nature_area,12,4.4,42808,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,3,osm:way:302872188,Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng,museum,12,4.2,8193,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,4,osm:way:198804483,Thánh địa Mỹ Sơn,historic,8,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,5,osm:way:694831926,Cầu Rồng,attraction,7,,,True,curated_planning_estimate,False,3,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,6,osm:relation:7055216,Rừng đặc dụng Sơn Trà,nature_area,7,4.7,1125,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,7,osm:way:486703049,Chùa Linh Ứng,temple,12,4.5,16190,True,curated_planning_estimate,False,4,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,8,poi-google:3aac3427ee25b18a817027e9,Phố Cổ Hội An,old_quarter,10,4.8,631,True,curated_planning_estimate,False,3,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,9,poi-google:270efa89c4fa1b1bdeb4cdcd,Chùa Cầu,historic,10,4.3,29250,True,curated_planning_estimate,False,3,needs_manual_review,verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,10,osm:way:14131302,Hoi An Memories Land,theme_park,7,4.7,5208,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,11,osm:way:782381624,VinWonders Nam Hội An,theme_park,5,,,False,curated_planning_estimate,False,2,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,12,osm:way:1368599361,Bảo tàng Đà Nẵng,museum,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,13,osm:way:204885903,Chợ Hàn,market,6,,,True,curated_planning_estimate,False,2,needs_manual_review,verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,14,osm:way:204790989,Chợ Cồn,market,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,15,osm:node:4171964390,Thanh Ha Pottery Village,craft_village,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,16,osm:node:4171971289,Kim Bong Carpentry Village,craft_village,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,17,osm:node:10709724107,Làng đá mỹ nghệ Non Nước,craft_village,3,,,False,curated_planning_estimate,False,1,needs_manual_review,opening_hours|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,18,osm:node:13040467529,Bãi Đá,beach,4,4.1,104,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,19,osm:node:5747015021,Đỉnh Quế,viewpoint,4,4.0,602,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,20,osm:node:11896339273,CSO Gallery,gallery,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,21,osm:node:1819451633,Chùa Hải Tạng,temple,4,4.4,514,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,22,osm:node:11934169470,Queen Cobra,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,23,osm:node:8883385553,TASY STUDIO,gallery,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,24,osm:way:1556362196,Chợ Đêm Sơn Trà,market,7,3.6,2128,True,category_default,False,2,needs_manual_review,specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,25,osm:node:12344125229,Di San Vô Giá,museum,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,26,osm:node:4280016689,Chùa Giác Hoàng Viên,temple,4,4.5,15,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,27,osm:node:14078442086,Hoi An Hideout Fishing Barbecue Tour,attraction,3,,,False,category_default,False,2,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,28,osm:node:2617007574,Kazimierz Kwiatkowski,historic,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,29,osm:relation:17140360,Vườn quốc gia Sông Thanh,nature_area,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,30,osm:node:12333995781,Chợ đêm Lê Duẩn,market,4,4.0,97,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,31,osm:relation:2836882,Chùa Chúc Thánh,temple,4,4.6,436,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,32,osm:node:10154412164,Fantasy Park,theme_park,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,33,osm:node:5273998823,Cầu Trần Thị Lý,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,34,osm:node:5513474821,Terracotta Park,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,35,osm:way:1076716243,Chợ Khuê Mỹ,market,4,4.3,198,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,36,osm:way:1422444084,Chùa Thuận Thành,temple,4,4.3,33,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,37,osm:node:7127464285,Hoi An Museum of Traditional Medicine,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,38,osm:node:7328902486,Graffiti village,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,39,osm:node:4807957148,Trung tâm Giải trí Phức hợp Helio Center,theme_park,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,40,osm:way:1181242323,Chợ Bắc Trà My,market,4,4.0,296,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,41,osm:way:302944359,Chùa Trung Lương,temple,4,4.9,57,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,42,osm:node:8474743417,Bảo tàng Phật giáo,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,43,osm:way:35952591,Chợ vải Hội An,attraction,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,44,osm:way:118672509,Chợ Đầu mối Hoà Cường,market,4,4.7,68,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,45,osm:way:565186618,Đình Cẩm Phô,temple,4,4.2,230,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,46,osm:way:565592419,Bảo tàng Hội An,museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,47,osm:node:13687068650,Linh Phong Bảo Tháp,attraction,2,,,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,48,osm:way:1326219930,Chợ Kỳ Đồng,market,4,4.1,327,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,49,osm:way:693441028,Đình Mỹ Khê,temple,4,4.8,9,False,category_default,False,1,needs_manual_review,opening_hours|specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,attraction,50,osm:way:595471597,Bảo tàng Đà Nẵng (cơ sở 2),museum,3,,,True,category_default,False,1,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,1,osm:node:4389441895,Bale Well,restaurant,7,4.5,138,True,category_default,False,2,needs_manual_review,specific_duration|verified_access,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,2,osm:node:10749874405,Roots Plant-Based Café,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,3,osm:node:10652658505,Peanuts - Vegan Vietnamese Food,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,4,osm:node:10959238968,Thom's Sourdough Bakery & Coffee - Tan Thanh Beach,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,5,osm:node:11276780187,La Cabana - House of BBQ,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,6,osm:node:4520093589,Lapin Ca Phe,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,7,osm:node:4260382168,The Amazing Taco | Tại Đà Nẵng,restaurant,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,8,osm:way:616910526,Thom's Sourdough Bakery & Coffee - An Bang Beach,cafe,6,,,True,category_default,False,3,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,9,osm:node:10304039134,Caddilac Bar & Grill,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,10,osm:node:10536187009,Dudu Cafe Hoi An,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,11,osm:node:10304609242,"Bánh Xèo, Thịt Nướng, Nem Lụi Bà 9",restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,12,osm:node:10601191015,Tiệm cà phê Mandala,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,13,osm:node:10310109109,KURUMI - Healthy Vegan Food & Desserts,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,14,osm:node:10773540605,Art Coffee,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,15,osm:node:10312895500,Cardi Pizzeria,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,16,osm:node:11074810731,Bro's Kafe,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,17,osm:node:10537046604,Carol Lounge,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,18,osm:node:11665246470,Trình cà phê,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,19,osm:node:10736260563,Chickpea Eatery,restaurant,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8
+Đà Nẵng,food_rest,20,osm:node:11795856089,Nghé Coffee Hội An,cafe,5,,,True,category_default,False,2,needs_manual_review,specific_duration|verified_access|rating_pair,v2-91f833f05c8c7ef8

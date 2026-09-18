@@ -1,7 +1,7 @@
 {
-  "dataset_version": "v2-54f6cfdfb5d1038c",
+  "dataset_version": "v2-91f833f05c8c7ef8",
   "schema_version": "2.0",
-  "created_at": "2026-09-18T03:15:44.665364+00:00",
+  "created_at": "2026-09-18T03:37:13.896186+00:00",
   "poi_count": 15713,
   "locations": [
     {
@@ -10,9 +10,9 @@
       "usable": 4474,
       "attractions": 1497,
       "food_rest": 2977,
-      "serviceable": 802,
+      "serviceable": 784,
       "serviceable_attractions": 113,
-      "serviceable_food_rest": 689,
+      "serviceable_food_rest": 671,
       "with_rating_pair": 67,
       "with_structured_hours": 611,
       "with_full_week_hours": 580,
@@ -64,9 +64,9 @@
       "usable": 2682,
       "attractions": 418,
       "food_rest": 2264,
-      "serviceable": 504,
+      "serviceable": 499,
       "serviceable_attractions": 69,
-      "serviceable_food_rest": 435,
+      "serviceable_food_rest": 430,
       "with_rating_pair": 29,
       "with_structured_hours": 414,
       "with_full_week_hours": 392,

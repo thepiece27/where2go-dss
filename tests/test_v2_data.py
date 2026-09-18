@@ -150,6 +150,23 @@ def test_closed_business_is_not_serviceable():
     assert "business_closed" in quality["reasons"]
 
 
+def test_food_description_alone_is_not_enough_for_serving():
+    row = {
+        "name": "Quán thử nghiệm",
+        "category": "restaurant",
+        "business_status": "open",
+        "ratings": [],
+        "hours_weekly": None,
+        "website": "",
+        "description": "Mô tả đủ dài nhưng chưa có bằng chứng hoạt động mạnh.",
+        "duration_profile": {"method": "category_default"},
+        "access_points": [{"verified": False}],
+    }
+    quality = serving_quality(row)
+    assert not quality["eligible"]
+    assert "insufficient_service_evidence" in quality["reasons"]
+
+
 def test_source_inventory_separates_restricted_observations_and_fixtures():
     root = inventory_sources_v2.ROOT / "data"
     assert role(root / "private/google_enrichment_v2.csv") == "source_observation_restricted"

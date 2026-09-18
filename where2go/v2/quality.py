@@ -67,7 +67,10 @@ def serving_quality(poi):
     weights = {"rating_pair": 2, "structured_hours": 2, "website": 2, "description": 1,
                "specific_duration": 3, "verified_access": 3}
     score = sum(weights[key] for key, present in components.items() if present)
-    minimum = 1 if poi.get("category") in ("restaurant", "cafe", "food_street") else 2
+    # A free-text description alone is not enough to recommend a meal stop.
+    # Score 2 requires at least structured hours, a valid rating pair, or a
+    # website; attractions already used the same minimum.
+    minimum = 2
     if score < minimum:
         reasons.append("insufficient_service_evidence")
     return {

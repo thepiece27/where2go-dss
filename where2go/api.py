@@ -16,6 +16,8 @@ from .v2.dataset import dataset_summary
 
 
 DATASET_EXPORT_DIR = ROOT / "data/reports/v2/dataset"
+BASEMAP_DIR = ROOT / "web/data"
+BASEMAP_SLUGS = {"hanoi", "danang"}
 DATASET_EXPORT_FILES = {
     "pois.csv", "opening_hours.csv", "ratings.csv", "duration_profiles.csv",
     "access_points.csv", "sources.csv", "summary.json", "audit.json", "README.md",
@@ -34,7 +36,7 @@ FRONTEND_ASSETS = {
 
 
 def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2_data=None,
-               v2_export_dir=DATASET_EXPORT_DIR):
+               v2_export_dir=DATASET_EXPORT_DIR, basemap_dir=BASEMAP_DIR):
     app = FastAPI(title="Where2Go DSS", version="2.0.0")
     app.state.router = router or OSRM()
 
@@ -52,6 +54,30 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             return ItineraryService(rows, meta, app.state.router)
         except Exception as error:
             raise HTTPException(503, "Catalog v2 chưa sẵn sàng. Chạy scripts/build_catalog_v2.py") from error
+
+    @lru_cache(maxsize=1)
+    def basemap_manifest():
+        path = Path(basemap_dir) / "basemap-manifest.json"
+        try:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as error:
+            raise HTTPException(503, "Basemap local chưa sẵn sàng. Chạy scripts/build_local_basemaps.py") from error
+        if not isinstance(manifest.get("outputs"), dict) or not manifest.get("pbf_sha256"):
+            raise HTTPException(503, "Manifest basemap local không hợp lệ")
+        return manifest
+
+    def basemap_state(service):
+        try:
+            manifest = basemap_manifest()
+        except HTTPException:
+            return "unavailable", []
+        expected_hash = service.manifest.get("osm", {}).get("sha256")
+        routing_hash = getattr(app.state.router, "manifest", {}).get("pbf_sha256")
+        if not expected_hash or manifest.get("pbf_sha256") != expected_hash or routing_hash != expected_hash:
+            return "version_mismatch", []
+        available = [slug for slug in sorted(BASEMAP_SLUGS)
+                     if slug in manifest["outputs"] and (Path(basemap_dir) / f"basemap-{slug}.json.gz").is_file()]
+        return ("ready" if len(available) == len(BASEMAP_SLUGS) else "unavailable"), available
 
     @app.get("/api/pois")
     def pois(location: str = "", category: str = "", query: str = "", limit: int = Query(500, ge=1, le=20000)):
@@ -85,6 +111,8 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             "routing": "ready" if ok else "unavailable",
             "dataset_version": service.manifest["version"],
             "routing_version": route.version,
+            "basemap": basemap_state(service)[0],
+            "basemap_locations": basemap_state(service)[1],
         }
 
     @app.post("/api/itineraries")
@@ -144,6 +172,25 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             raise HTTPException(404, "Chưa xuất dataset; chạy scripts/export_dataset_v2.py")
         media = "text/csv" if filename.endswith(".csv") else ("application/json" if filename.endswith(".json") else "text/markdown")
         return FileResponse(path, media_type=media, filename=filename)
+
+    @app.get("/api/v2/basemaps/{slug}")
+    def basemap_v2(slug: str):
+        if slug not in BASEMAP_SLUGS:
+            raise HTTPException(404, "Basemap không tồn tại")
+        service = v2_service()
+        status, available = basemap_state(service)
+        if status != "ready" or slug not in available:
+            raise HTTPException(503, "Basemap local không khớp phiên bản catalog và OSRM")
+        manifest = basemap_manifest()
+        info = manifest["outputs"][slug]
+        path = Path(basemap_dir) / f"basemap-{slug}.json.gz"
+        headers = {
+            "Content-Encoding": "gzip",
+            "Cache-Control": "public, max-age=3600, must-revalidate",
+            "ETag": f'"{info.get("gzip_sha256", manifest["pbf_sha256"])}"',
+            "X-Basemap-PBF-SHA256": manifest["pbf_sha256"],
+        }
+        return FileResponse(path, media_type="application/geo+json", headers=headers)
 
     @app.post("/api/v2/itineraries")
     def itineraries_v2(request: ItineraryRequestV2):

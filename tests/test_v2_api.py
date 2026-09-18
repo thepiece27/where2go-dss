@@ -1,3 +1,7 @@
+import gzip
+import hashlib
+import json
+
 from fastapi.testclient import TestClient
 
 from where2go.api import create_app
@@ -39,12 +43,28 @@ def poi(ident, category):
     }
 
 
-def client(v2_export_dir=None):
+def write_basemaps(path, pbf_sha=OSM_HASH):
+    outputs = {}
+    payload = {"type": "FeatureCollection", "features": []}
+    for slug in ("hanoi", "danang"):
+        content = gzip.compress(json.dumps(payload).encode("utf-8"), mtime=0)
+        target = path / f"basemap-{slug}.json.gz"
+        target.write_bytes(content)
+        outputs[slug] = {"gzip_sha256": hashlib.sha256(content).hexdigest()}
+    (path / "basemap-manifest.json").write_text(json.dumps({
+        "pbf_sha256": pbf_sha, "outputs": outputs,
+    }), encoding="utf-8")
+    return path
+
+
+def client(v2_export_dir=None, basemap_dir=None):
     rows = [poi("museum-a", "museum"), poi("historic-a", "historic")]
     manifest = {"version": "api-test-v2", "osm": {"sha256": OSM_HASH}}
     kwargs = {"router": Router(), "v2_data": (rows, manifest)}
     if v2_export_dir is not None:
         kwargs["v2_export_dir"] = v2_export_dir
+    if basemap_dir is not None:
+        kwargs["basemap_dir"] = basemap_dir
     return TestClient(create_app(**kwargs))
 
 
@@ -78,8 +98,8 @@ def test_v2_pois_hide_unserviceable_rows_by_default():
         assert api.get("/api/v2/pois/1-km").status_code == 404
 
 
-def test_health_reports_the_active_v2_catalog():
-    with client() as api:
+def test_health_reports_the_active_v2_catalog(tmp_path):
+    with client(basemap_dir=write_basemaps(tmp_path)) as api:
         health = api.get("/api/health")
         assert health.status_code == 200
         assert health.json() == {
@@ -89,7 +109,26 @@ def test_health_reports_the_active_v2_catalog():
             "routing": "ready",
             "dataset_version": "api-test-v2",
             "routing_version": "api-test-router",
+            "basemap": "ready",
+            "basemap_locations": ["danang", "hanoi"],
         }
+
+
+def test_local_basemap_endpoint_is_versioned_and_gzipped(tmp_path):
+    with client(basemap_dir=write_basemaps(tmp_path)) as api:
+        response = api.get("/api/v2/basemaps/hanoi")
+        assert response.status_code == 200
+        assert response.headers["content-type"].startswith("application/geo+json")
+        assert response.headers["content-encoding"] == "gzip"
+        assert response.headers["x-basemap-pbf-sha256"] == OSM_HASH
+        assert response.json()["type"] == "FeatureCollection"
+        assert api.get("/api/v2/basemaps/other").status_code == 404
+
+
+def test_local_basemap_rejects_catalog_or_routing_version_mismatch(tmp_path):
+    with client(basemap_dir=write_basemaps(tmp_path, "wrong-osm")) as api:
+        assert api.get("/api/v2/basemaps/hanoi").status_code == 503
+        assert api.get("/api/health").json()["basemap"] == "version_mismatch"
 
 
 def test_v2_itinerary_contract_and_v1_endpoint_both_exist():
@@ -136,3 +175,6 @@ def test_frontend_uses_local_leaflet_assets():
         assert api.get("/vendor/leaflet.js").status_code == 200
         assert api.get("/vendor/leaflet.css").status_code == 200
         assert api.get("/vendor/images/marker-icon.png").status_code == 200
+        app_js = api.get("/app.js").text
+        assert "/api/v2/basemaps/" in app_js
+        assert "tile.openstreetmap.org" not in app_js

@@ -130,6 +130,7 @@ def export(catalog, output_dir, workbook_path=None, private_dir=None):
         summary["private_enrichment"] = export_private_enrichment(workbook_path, private_dir)
     (output_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     readme = f"""# Dataset Where2Go DSS v2\n\nPhiên bản: `{manifest['version']}`  \nSinh lúc: `{manifest.get('created_at', '')}`\n\n- `pois.csv`: catalog phẳng, một dòng cho mỗi POI.\n- `opening_hours.csv`: các khoảng giờ cấu trúc; `day_of_week` dùng 0=Thứ Hai đến 6=Chủ Nhật.\n- `ratings.csv`: rating và số review theo cùng quan sát khi `same_observation=1`.\n- `duration_profiles.csv`: ba mức thời lượng; `category_default` chỉ là fallback thiết kế.\n- `access_points.csv`: tọa độ tiếp cận; `verified=0` nghĩa chưa được xác minh thủ công.\n- `sources.csv`: nguồn, checksum, vai trò và quyền sử dụng.\n- `summary.json`: coverage toàn catalog và tập ưu tiên 70 POI mỗi thành phố.\n\nCatalog chuẩn vẫn là `data/catalog_v2.sqlite`, chứa provenance chi tiết. Quan sát Google đang chờ kiểm duyệt được xuất riêng tại `data/private/google_enrichment_v2.csv` và `data/private/google_opening_hours_v2.csv`; hai file này bị Git bỏ qua. Dữ liệu Google Maps có trạng thái `restricted_internal`; không coi thư mục xuất này là dataset công khai được phép tái phân phối.\n"""
+    readme = readme.replace("  \n", "\n\n")
     (output_dir / "README.md").write_text(readme, encoding="utf-8")
     return summary
 

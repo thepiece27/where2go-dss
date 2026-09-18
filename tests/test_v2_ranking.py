@@ -44,6 +44,12 @@ def test_default_ahp_is_consistent_and_permutation_invariant():
     assert np.allclose(weights, base[permutation])
 
 
+def test_uniform_fuzzy_uncertainty_has_same_weights_as_crisp_ahp():
+    crisp, _ = ahp_weights(DEFAULT_COMPARISONS, [1.0] * 6)
+    fuzzy, _ = ahp_weights(DEFAULT_COMPARISONS, [1.2] * 6)
+    assert np.allclose(fuzzy, crisp)
+
+
 def test_inconsistent_ahp_is_rejected_by_request_validation():
     with pytest.raises(ValueError, match="CR="):
         AHPPreferences(comparisons=[9, 9, 1 / 9, 9, 1 / 9, 9])

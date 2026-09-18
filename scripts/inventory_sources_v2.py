@@ -22,7 +22,7 @@ def role(path):
         return "spatial_source"
     if relative.startswith("curation/"):
         return "curation_input"
-    if relative.startswith("evaluation/"):
+    if relative.startswith("evaluation/") or relative == "manual/v2_owner_grading.xlsx":
         return "evaluation_fixture"
     if relative.startswith("manual/"):
         return "manual_observation"

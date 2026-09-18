@@ -37,6 +37,13 @@ class FakeRouter:
                 "geometry": {"type": "LineString", "coordinates": [[lon, lat] for lat, lon in coords]}}
 
 
+class SlowerRouteRouter(FakeRouter):
+    def route(self, coords, use_cache=True):
+        return {"legs": [{"duration": 1200, "distance": 5000} for _ in range(len(coords) - 1)],
+                "duration": 1200 * (len(coords) - 1), "distance": 5000 * (len(coords) - 1),
+                "geometry": {"type": "LineString", "coordinates": [[lon, lat] for lat, lon in coords]}}
+
+
 def make_poi(ident, category, typical=60, latitude=21.03, longitude=105.85, hours=True, food=False):
     return {
         "poi_id": ident, "name": ident, "location": "Hà Nội", "category": category,
@@ -125,3 +132,12 @@ def test_low_evidence_poi_is_not_served():
     selected = {block["poi_id"] for block in result["blocks"] if block["role"] == "attraction"}
     assert "Hard to climb" not in selected
     assert {item["reason"] for item in result["excluded_candidates"] if item["poi_id"] == "Hard to climb"} == {"weak_or_generic_name"}
+
+
+def test_objective_is_recalculated_after_route_leg_recheck():
+    pois = [make_poi("museum-a", "museum"), make_poi("historic-a", "historic")]
+    result = plan(pois, request(), SlowerRouteRouter())
+    attractions = [block for block in result["blocks"] if block["role"] == "attraction"]
+    expected = sum(block["score"] for block in attractions) + 0.12 - 0.05 * result["drive_seconds"] / 3600
+    assert result["drive_seconds"] == 3600
+    assert result["objective"] == expected

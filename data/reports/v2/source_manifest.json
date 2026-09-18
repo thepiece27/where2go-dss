@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "created_at": "2026-09-18T03:16:33.700413+00:00",
+  "created_at": "2026-09-18T03:41:05.758861+00:00",
   "root": "data",
   "files": [
     {
@@ -30,8 +30,8 @@
     {
       "logical_path": "data/catalog_v2.sqlite",
       "size_bytes": 174731264,
-      "sha256": "f9729154a5afcc7c1938898f1f5aaf682d3694dd189f6e5a8c5228ea74b929eb",
-      "modified_at": "2026-09-18T03:15:44.668602+00:00",
+      "sha256": "2e81e6a12ac9f9b6c5f2eff2b884dc69d6bbdfb8ebf39cd9bb0a51eaa8acaae2",
+      "modified_at": "2026-09-18T03:37:13.902701+00:00",
       "role": "generated_catalog",
       "use_status": "project_internal"
     },
@@ -237,17 +237,17 @@
     },
     {
       "logical_path": "data/manual/v2_owner_grading.xlsx",
-      "size_bytes": 10118,
-      "sha256": "e2eaee0849a6a7280830bb9a91078a2c854ab15720ffe2212d7ed5d9019f32cb",
-      "modified_at": "2026-09-17T19:18:06.827571+00:00",
-      "role": "manual_observation",
-      "use_status": "manual_fact_with_source"
+      "size_bytes": 10117,
+      "sha256": "5a75eb2c7b75eebfca43e21ed454b40c431dfa925507e29aae1ca09039e7ed71",
+      "modified_at": "2026-09-18T03:40:03.347595+00:00",
+      "role": "evaluation_fixture",
+      "use_status": "project_test_fixture"
     },
     {
       "logical_path": "data/private/google_enrichment_v2.csv",
       "size_bytes": 27452,
       "sha256": "3feed68b1015b9002948a5d955c5c599a0669a4bcd3a8a42299cda6633c3992c",
-      "modified_at": "2026-09-18T03:16:11.822083+00:00",
+      "modified_at": "2026-09-18T03:37:51.005308+00:00",
       "role": "source_observation_restricted",
       "use_status": "restricted_internal"
     },
@@ -255,7 +255,7 @@
       "logical_path": "data/private/google_opening_hours_v2.csv",
       "size_bytes": 78999,
       "sha256": "4c0f34ca644b0c495b8a0f9f19b2ffcd07944e899f5b7433e0b0be9ff99fa79c",
-      "modified_at": "2026-09-18T03:16:11.839831+00:00",
+      "modified_at": "2026-09-18T03:37:51.049616+00:00",
       "role": "source_observation_restricted",
       "use_status": "restricted_internal"
     },
@@ -271,15 +271,15 @@
       "logical_path": "data/reports/v2/catalog/coverage.json",
       "size_bytes": 682,
       "sha256": "b66dbe51c8c4ab39d05f2b8cfc02957f1ccfa8e1a13613cb187ec5c70e31fd8a",
-      "modified_at": "2026-09-18T03:15:45.881106+00:00",
+      "modified_at": "2026-09-18T03:37:15.804993+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/catalog/manifest.json",
       "size_bytes": 2637,
-      "sha256": "4a0e9f7cb1d6b61f19363d3e7f1b0484c218c5504435d14fef6772b7b26afaa8",
-      "modified_at": "2026-09-18T03:15:45.881106+00:00",
+      "sha256": "fb87e4058ca5cf4668aae353a3074e72d6ae890be5d864d9a787284c64422d08",
+      "modified_at": "2026-09-18T03:37:15.804993+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -287,7 +287,7 @@
       "logical_path": "data/reports/v2/catalog/review_queue.json",
       "size_bytes": 10123628,
       "sha256": "e6939bab583f26ec87b1594385c0d483e29fafdca46564b0c1c6d20c3fb1c41d",
-      "modified_at": "2026-09-18T03:15:46.048329+00:00",
+      "modified_at": "2026-09-18T03:37:16.002730+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -295,15 +295,15 @@
       "logical_path": "data/reports/v2/dataset/access_points.csv",
       "size_bytes": 2394956,
       "sha256": "f65aa0a20e72dc8d6507dd706d73dcb2c80ff7a12bc1d9c393e40214bbabecce",
-      "modified_at": "2026-09-18T03:16:11.456269+00:00",
+      "modified_at": "2026-09-18T03:37:50.106299+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/audit.json",
       "size_bytes": 6559,
-      "sha256": "5a6b7fc1b307d1dbab752b22b072e1d6d2dc3970e9f3f3b123a86dcd661040d4",
-      "modified_at": "2026-09-18T03:16:27.489221+00:00",
+      "sha256": "da62284fa2f64597863ee3d4954a7d732c12824df9b60450052f901111fcef88",
+      "modified_at": "2026-09-18T03:38:46.759075+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -311,7 +311,7 @@
       "logical_path": "data/reports/v2/dataset/duration_profiles.csv",
       "size_bytes": 766572,
       "sha256": "41f885f3939795b8f3fab21d0ec92a712a841824d6b9a9291a663a72d472441a",
-      "modified_at": "2026-09-18T03:16:11.338300+00:00",
+      "modified_at": "2026-09-18T03:37:49.937944+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -319,15 +319,15 @@
       "logical_path": "data/reports/v2/dataset/opening_hours.csv",
       "size_bytes": 893610,
       "sha256": "895ea33d488341e9479f0acf96785af613ef5a1f260feac3373a5692ddc31596",
-      "modified_at": "2026-09-18T03:16:11.267434+00:00",
+      "modified_at": "2026-09-18T03:37:49.837990+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/pois.csv",
-      "size_bytes": 6285381,
-      "sha256": "9b6c9ff1318bc9314342fad3a8f57b4734b26ee33bd711c4ce2c8e5e6cc3901d",
-      "modified_at": "2026-09-18T03:16:11.211312+00:00",
+      "size_bytes": 6286101,
+      "sha256": "10a1de0f576dd804dee67f7cf1fa423853d9bf000539867121c513fc198409c9",
+      "modified_at": "2026-09-18T03:37:49.775339+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -335,15 +335,15 @@
       "logical_path": "data/reports/v2/dataset/ratings.csv",
       "size_bytes": 29342,
       "sha256": "ed21eb166c567d94068f13bfb8f68ccf4ff4ba18fe27711608576a9690530dc2",
-      "modified_at": "2026-09-18T03:16:11.270458+00:00",
+      "modified_at": "2026-09-18T03:37:49.841581+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/README.md",
       "size_bytes": 1185,
-      "sha256": "0677cb5418b521782d551042778904cb1430f9248ab1d0e62bbe1bd2fe53cfdf",
-      "modified_at": "2026-09-18T03:16:11.840844+00:00",
+      "sha256": "87dff074c7366e5e5894c47bb1fb88dd8d9e4b4b78a376610e9796c1dfe0f484",
+      "modified_at": "2026-09-18T03:37:51.051617+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -351,23 +351,23 @@
       "logical_path": "data/reports/v2/dataset/sources.csv",
       "size_bytes": 2306,
       "sha256": "3f94e6f392075e8652498bbf27bb1588eb5c88f004f5d7936399bdf9a915a359",
-      "modified_at": "2026-09-18T03:16:11.459266+00:00",
+      "modified_at": "2026-09-18T03:37:50.113355+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/dataset/summary.json",
       "size_bytes": 4718,
-      "sha256": "cbaac036a9b807acaa43d646211445aa13dd7b8de5f4d612fb4f6d8121314dd5",
-      "modified_at": "2026-09-18T03:16:11.839831+00:00",
+      "sha256": "e014ecb17d9fe1c3ff96b29737e5a2a5f527625b2042e4c346b1b5b31d79a64b",
+      "modified_at": "2026-09-18T03:37:51.050613+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/evaluation.json",
-      "size_bytes": 109292,
-      "sha256": "5efb12f4e958eecbb4bdc40911fae91bbf6c4886698f4dbfea27fb4c17dfc4ac",
-      "modified_at": "2026-09-17T19:18:06.800102+00:00",
+      "size_bytes": 109298,
+      "sha256": "012b58f4ab196186f006fada19262a03ed183fcf7d389d8170bd13bbd1146730",
+      "modified_at": "2026-09-18T03:40:03.297199+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -375,7 +375,7 @@
       "logical_path": "data/reports/v2/evaluation_method_key.json",
       "size_bytes": 1615,
       "sha256": "395800be1122707ceaf84a41aad3924dbdd5f69ebb4eec1e08ce7c1782f0cd68",
-      "modified_at": "2026-09-17T19:18:06.800627+00:00",
+      "modified_at": "2026-09-18T03:40:03.298201+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -390,16 +390,16 @@
     {
       "logical_path": "data/reports/v2/priority_set.csv",
       "size_bytes": 27940,
-      "sha256": "33cbab45eab5f25d32b0d9a4b818d97c88e524aa55ddca3ff4945b93828eb063",
-      "modified_at": "2026-09-18T03:16:01.745239+00:00",
+      "sha256": "edd22be6695690ab6adc0431bc1090310d51368b8624611d779c36dfbee583b8",
+      "modified_at": "2026-09-18T03:37:40.995984+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
     {
       "logical_path": "data/reports/v2/quality_queue.csv",
-      "size_bytes": 922284,
-      "sha256": "00fdcbb5268b863b08624bfbd53671827411789518c145ee1880df0bad8a014e",
-      "modified_at": "2026-09-18T03:15:54.145667+00:00",
+      "size_bytes": 925920,
+      "sha256": "1ce25c0555800ce130cd4fc351508178b6a39607a126b95ae176516735646c9b",
+      "modified_at": "2026-09-18T03:37:24.129811+00:00",
       "role": "generated_report",
       "use_status": "project_internal"
     },
@@ -407,7 +407,7 @@
       "logical_path": "data/routing/manifest.json",
       "size_bytes": 257,
       "sha256": "a90c3c40324bbb2286ea06e6988133ff9c464f50a50b7ecddda3ef36027a17aa",
-      "modified_at": "2026-09-17T01:05:08.553006+00:00",
+      "modified_at": "2026-09-18T03:26:44.628181+00:00",
       "role": "runtime_or_private",
       "use_status": "not_for_publication"
     },
@@ -454,10 +454,10 @@
   ],
   "counts_by_role": {
     "curation_input": 6,
-    "evaluation_fixture": 1,
+    "evaluation_fixture": 2,
     "generated_catalog": 2,
     "generated_report": 17,
-    "manual_observation": 2,
+    "manual_observation": 1,
     "runtime_or_private": 3,
     "source_observation": 1,
     "source_observation_restricted": 22,

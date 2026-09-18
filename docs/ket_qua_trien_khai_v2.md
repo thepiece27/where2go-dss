@@ -1,127 +1,98 @@
-# Kết quả triển khai Where2Go DSS v2
+# Kết quả kiểm tra và đánh giá Where2Go DSS v2
 
-**Ngày chốt lần chạy:** 18/09/2026  
-**Dataset:** `v2-c829c8f3e2414108`  
-**Phạm vi ưu tiên:** Hà Nội và Đà Nẵng mới, gồm địa bàn Quảng Nam cũ  
-**Trạng thái chung:** Chạy được end-to-end; dữ liệu đủ để nghiên cứu tình huống và demo có cảnh báo, chưa đạt mức xác minh thực địa.
+**Ngày kiểm tra:** 18/09/2026
+
+**Dataset:** `v2-91f833f05c8c7ef8`
+
+**Phạm vi ưu tiên:** Hà Nội và Đà Nẵng mới, gồm Quảng Nam cũ
+
+**Kết luận:** Hệ thống chạy được với catalog đa nguồn, routing thật và web/API chung lõi. Dataset đủ cho demo/nghiên cứu tình huống có cảnh báo; chưa đủ bằng chứng để gọi là lịch trình đã xác minh ngoài thực địa.
 
 ## 1. Kết quả kỹ thuật
 
-Pipeline v2 đã có catalog đa nguồn, provenance theo quan sát, quality gate, Fuzzy AHP + TOPSIS bốn tiêu chí, planner có đường về, giờ, thời lượng, ăn/nghỉ và dự phòng. API v1 vẫn tồn tại để đối chiếu; web sử dụng `/api/v2/*`.
-
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Catalog SQLite v2 và CSV local | PASS | 15.713 POI; `data/catalog_v2.sqlite`; `data/reports/v2/dataset/` |
-| ID bền vững và provenance | PASS | Source file, source record, field observation, selected field trong SQLite |
-| Google collector có resume | PASS kỹ thuật | `noworneverev/google-maps-scraper` tại commit đã pin trong code; 20 bản ghi được xác nhận chéo tự động |
-| Kiểm duyệt Google bởi người ở ngưỡng 95% | NOT RUN | Chưa có người kiểm tra độc lập đủ mẫu pilot |
-| OSM/OSRM cùng snapshot | PASS | OSRM container trả tuyến và health báo `routing=ready` |
-| Fuzzy AHP/TOPSIS v2 | PASS kiểm thử | Kiểm tra CR, hoán vị tiêu chí, missing rating và TOPSIS biên |
-| Planner v2 | PASS kiểm thử | 64/64 lượt evaluator trả lịch `provisional` |
-| API/web desktop và mobile | PASS | Smoke test tạo lịch, sửa duration, thematic mode, tile failure và mobile 390x844 |
-| Chủ dự án chấm 12 holdout | NOT RUN | Evaluator chưa có phiếu chấm hoàn chỉnh |
-| Khảo sát người dùng độc lập | NOT RUN | Chưa thu nhãn người dùng |
+| Catalog v2 và export local | PASS | 15.713 POI; SQLite và 6 bảng CSV |
+| Audit cấu trúc | PASS | 0 hard error; SQLite integrity/foreign key/export khớp |
+| Test tự động | PASS | 65 test; 1 deprecation warning từ Starlette TestClient |
+| Dependency | PASS | `pip check`: không có dependency hỏng |
+| JavaScript | PASS | `node --check web/app.js` |
+| Web dùng POI serviceable | PASS kiểm thử | API mặc định ẩn hàng quality gate không đạt |
+| OSRM cùng snapshot | PASS | Container `where2go-osrm` và route probe dùng đúng SHA256 PBF |
+| Evaluator trên dataset mới | PASS kỹ thuật | 16 kịch bản x 4 phương pháp = 64/64 lịch `provisional` |
+| Smoke desktop/mobile trên code mới | PASS | 5 điểm, sửa duration, lọc/chủ đề, basemap local khi chặn mạng ngoài, mobile; 0 page error |
+| Kiểm duyệt người | NOT RUN | 0 record `confirmed` bởi người |
+| Owner grading/nhãn độc lập | NOT RUN | Workbook chưa có điểm chấm hoàn chỉnh |
 
-Không có kết quả nào trong tài liệu này chứng minh Fuzzy AHP vượt baseline về chất lượng cảm nhận. Evaluator mới xác nhận các phương pháp cùng chạy trên kịch bản và tạo được đầu ra.
+## 2. Chất lượng dataset
 
-## 2. Dataset đang dùng
+Audit hiện có 1.536 POI serviceable toàn catalog và 4.853 cảnh báo làm giàu:
 
-Catalog chuẩn là `data/catalog_v2.sqlite`. Bộ dễ đọc nằm tại:
+| Cảnh báo | Số lượng |
+|---|---:|
+| Tên điểm tham quan trùng trong cùng địa phương | 3 |
+| POI serviceable chưa biết giờ | 335 |
+| Thiếu cặp rating/review hợp lệ | 1.439 |
+| Duration chưa được người kiểm duyệt xác minh | 1.536 |
+| Access chưa được người kiểm duyệt xác minh | 1.536 |
+| Mục tiêu priority chưa đạt | 4 |
 
-| File | Nội dung |
-|---|---|
-| `data/reports/v2/dataset/pois.csv` | Một dòng cho mỗi POI, category, tọa độ, trạng thái và quality gate |
-| `data/reports/v2/dataset/opening_hours.csv` | Khoảng giờ cấu trúc; ngày thiếu giữ `unknown`, chỉ 24/7 khi nguồn nói rõ |
-| `data/reports/v2/dataset/ratings.csv` | Rating và review count theo quan sát; `same_observation=1` mới dùng để xếp hạng |
-| `data/reports/v2/dataset/duration_profiles.csv` | Mức ngắn/thông thường/dài và phương pháp tạo |
-| `data/reports/v2/dataset/access_points.csv` | Điểm tiếp cận và trạng thái xác minh |
-| `data/reports/v2/dataset/sources.csv` | Nguồn, checksum, vai trò và quyền sử dụng |
-| `data/reports/v2/dataset/summary.json` | Coverage toàn catalog và tập ưu tiên |
+Quality gate đã được siết: POI ăn uống không còn đủ điều kiện chỉ nhờ một mô tả dài; phải có bằng chứng mạnh hơn như giờ cấu trúc, rating hợp lệ hoặc website. Thay đổi này loại 23 hàng yếu khỏi tập phục vụ so với bản audit trước.
 
-Dữ liệu Google chờ xử lý được lưu riêng tại `data/private/google_enrichment_v2.csv` và `data/private/google_opening_hours_v2.csv`. Thư mục này bị Git bỏ qua. Quan sát Google là `restricted_internal`, không phải bộ dữ liệu công khai để tái phân phối.
-
-Workbook kiểm tra `data/manual/poi_enrichment_v2.xlsx` hiện có 80 seed, 147 dòng giờ và 20 bản ghi `tool_confirmed`. Số bản ghi `confirmed` bởi người là 0. `tool_confirmed` chỉ có nghĩa URL địa điểm và nguồn chéo khớp bằng công cụ, không thay thế kiểm duyệt người.
-
-## 3. Coverage thực tế
-
-### 3.1. Toàn catalog ưu tiên theo địa phương
+### Hai địa phương ưu tiên
 
 | Chỉ số | Hà Nội | Đà Nẵng |
 |---|---:|---:|
 | POI usable | 4.474 | 2.682 |
-| POI serviceable mặc định | 802 | 504 |
+| POI serviceable | 784 | 499 |
 | Điểm tham quan serviceable | 113 | 69 |
-| Ăn/nghỉ serviceable | 689 | 435 |
+| Ăn/nghỉ serviceable | 671 | 430 |
 | Có cặp rating/review hợp lệ | 67 | 29 |
 | Có giờ cấu trúc | 611 | 414 |
-| Có đủ bảy ngày giờ | 580 | 392 |
-| Có hồ sơ duration riêng | 15 | 17 |
 | Duration đã xác minh | 0 | 0 |
-| Điểm tiếp cận đã xác minh | 0 | 0 |
+| Access đã xác minh | 0 | 0 |
 
-### 3.2. Tập ưu tiên 70 POI mỗi thành phố
+Tập ưu tiên 70 POI mỗi thành phố đủ 50 tham quan + 20 ăn/nghỉ, nhưng giờ chỉ đạt 65,71% ở Hà Nội và 62,86% ở Đà Nẵng; mục tiêu là 80%. Duration xác minh vẫn 0%, nên các lịch có duration/access ước lượng phải là `provisional`.
 
-| Chỉ số | Hà Nội | Đà Nẵng | Mục tiêu |
-|---|---:|---:|---:|
-| Tham quan | 50 | 50 | 50 |
-| Ăn/nghỉ | 20 | 20 | 20 |
-| Có giờ cấu trúc | 65,71% | 62,86% | 80% |
-| Có hồ sơ duration riêng/ước lượng | 30% | 34% | Theo dõi riêng |
-| Duration đã xác minh | 0% | 0% | 80% |
-| Có cặp rating/review | 25 | 24 | Không bịa để đạt tỷ lệ |
+Ba cảnh báo trùng tên điểm tham quan gồm hai đối tượng “Chùa Linh Ứng” ở Đà Nẵng và các cụm ở Huế/An Giang. Đà Nẵng cần kiểm duyệt xem đây là hai chùa riêng hay bản ghi trùng; không tự gộp chỉ dựa trên tên.
 
-Số POI đã đủ, nhưng coverage giờ, duration xác minh và access xác minh chưa đạt. Vì vậy giao diện hiển thị `CHƯA ĐẠT`, và lịch có dữ liệu chưa chắc chắn mang trạng thái `provisional`.
+## 3. Đánh giá thuật toán
 
-## 4. Các sửa lỗi quan trọng
+Điểm mạnh:
 
-- Ngày không được nguồn nêu trong chuỗi giờ giữ `unknown`; không tự chuyển thành đóng cửa.
-- Google tool-confirmed thay lịch OSM cũ của cùng POI, tránh nối khoảng giờ lặp.
-- Chỉ `Open 24 hours` hoặc nguồn tương đương mới tạo khoảng 00:00–24:00.
-- Rating Google có độ chính xác bất thường như `4.97` bị loại khỏi ranking.
-- Missing rating nhận giá trị trung tính, không dùng prior nhà cung cấp như rating thật.
-- Category là ưu tiên mềm; thematic mode mới là ràng buộc chỉ chọn category đã chỉ định.
-- POI cha/con không được chọn thành nhiều lượt ghé trùng trải nghiệm.
-- Cơ sở văn hóa-thể thao bị gắn nhầm `park`, tên kỹ thuật và tên dạng khoảng cách bị quality gate chặn.
-- `/api/v2/pois` mặc định chỉ trả POI serviceable; dữ liệu bị chặn vẫn còn trong dataset để audit.
-- Coverage tách hồ sơ duration riêng khỏi duration đã xác minh; mục tiêu 80% dựa trên phần đã xác minh.
-- Dataset version băm cả dữ liệu curation và code biến đổi quan trọng để tránh nội dung đổi nhưng version giữ nguyên.
+- Bốn tiêu chí thống nhất giữa model, API, web và evaluator.
+- Rating được co theo số review; thiếu rating giữ trung tính và không hiển thị số giả.
+- TOPSIS xử lý cột hằng/toàn 0, cost direction và tie-break ổn định.
+- Planner kiểm tra giờ, nghỉ trưa, duration, access, ăn/nghỉ, đường về và reserve.
+- POI cha/con bị chặn; category ưu tiên được tách khỏi chế độ chuyên đề.
 
-## 5. Kết quả kiểm thử
+Giới hạn:
 
-Lần chạy cuối:
+- Confidence hiện thấp chủ yếu vì chưa có access/duration/activity verification; nó phản ánh bằng chứng chứ không phản ánh trải nghiệm.
+- TF-IDF và tag matching còn đơn giản; chưa có embedding tiếng Việt hoặc nhãn sở thích độc lập.
+- Với cùng hệ số bất định 1,2 cho mọi cặp, trọng số Fuzzy AHP bằng crisp geometric-mean AHP. Không được tuyên bố fuzzy tốt hơn vì tên phương pháp.
+- Multi-start hiện thử ba seed và ba vòng thay điểm, thấp hơn mục tiêu kế hoạch ban đầu; phù hợp demo nhưng chưa phải tìm kiếm mạnh.
+- Không có giao thông trực tiếp, parking/walking graph hay lịch ngày lễ đầy đủ.
 
-```text
-pytest: 55 passed, 1 deprecation warning từ Starlette TestClient
-pip check: No broken requirements found
-node --check web/app.js: PASS
-OSRM route probe: Ok
-evaluator: 16 kịch bản x 4 phương pháp = 64/64 provisional
-web smoke: PASS desktop và mobile; không có page error
-```
+Evaluator xác nhận bốn phương pháp chạy trên cùng 16 kịch bản và đều tạo được đầu ra. Kết quả này chỉ chứng minh pipeline hoạt động; chưa có phiếu chấm nên không có cơ sở xếp phương pháp nào tốt hơn. Objective đã được tính lại sau khi OSRM Route thay các leg ước lượng của Table, tránh báo điểm mục tiêu cũ khi timeline cuối thay đổi.
 
-Smoke web đã kiểm tra lưu POI, tạo lịch, sửa thời lượng và tính lại ở backend, tách bộ lọc danh sách khỏi chủ đề lịch, thematic mode, mất tile OSM và responsive mobile. Tile nền ngoài mạng không tải được trong lần chạy; ứng dụng đã hiện cảnh báo và OSRM/API vẫn hoạt động.
+## 4. Web và cleanup
 
-## 6. Việc còn phải làm để đạt mục tiêu dữ liệu
+- Web không tự mở panel POI đầu tiên; có nút đóng và giới hạn 250 POI hiển thị.
+- Timeline mở được chi tiết POI qua API riêng dù POI không còn trong danh sách đang lọc.
+- Đổi thành phố xóa required POI, duration override và panel cũ.
+- Leaflet JS/CSS/icon và basemap OSM cho Hà Nội/Đà Nẵng đều được lưu local; web không còn gọi tile CDN.
+- Basemap được sinh từ cùng PBF với catalog/OSRM và chỉ được API phục vụ khi checksum khớp. Hà Nội có 139.007 đối tượng nguồn, Đà Nẵng có 60.130; mỗi nơi được gộp thành 13 lớp Canvas để tránh tạo hàng chục nghìn Leaflet layer.
+- Smoke chặn toàn bộ request ngoài origin local; nền, tuyến OSRM, marker và timeline vẫn render trên desktop/mobile, kiểm tra pixel Canvas PASS và không có page error.
+- Các notebook, tài liệu v1, scraper legacy, workbook đánh giá mô phỏng và JSON frontend cũ đã bị xóa.
+- Nguồn/snapshot cần rebuild v2, catalog, curation, workbook kiểm duyệt và dữ liệu Google có provenance được giữ lại.
 
-1. Người kiểm duyệt xác nhận danh tính, giờ, duration và access cho tập ưu tiên; cập nhật workbook nguồn rồi rebuild, không sửa CSV dẫn xuất.
-2. Bổ sung giờ cho ít nhất 10 POI Hà Nội và 12 POI Đà Nẵng trong tập ưu tiên để đạt mốc 80% trên 70 POI.
-3. Thu bằng chứng duration riêng cho ít nhất 40/50 điểm tham quan mỗi thành phố; hiện chưa có hồ sơ nào mang `verified_at`.
-4. Xác minh điểm đỗ/cổng tiếp cận. OSRM tìm được đường không chứng minh cổng thực tế sử dụng được.
-5. Hoàn thành phiếu chấm 12 holdout rồi mới tính so sánh phương pháp; chỉ dùng AP/NDCG khi có nhãn POI độc lập.
-6. Làm mới dữ liệu có mục tiêu theo hàng thiếu; dừng khi CAPTCHA/chặn truy cập, không xây cơ chế vượt chặn.
+## 5. Việc ưu tiên tiếp theo
 
-## 7. Lệnh tái lập
+1. Xác minh người thật cho ít nhất 40/50 điểm tham quan mỗi thành phố: danh tính, giờ, duration và access.
+2. Bổ sung giờ cho ít nhất 10 POI priority Hà Nội và 12 POI priority Đà Nẵng để tiến tới 80%.
+3. Xử lý cảnh báo “Chùa Linh Ứng” và các quan hệ khu-cha/con trước khi demo chuyên đề.
+4. Khi đổi snapshot OSM hoặc địa giới, rebuild basemap local và xác nhận `/api/health` báo `basemap: ready` trước khi demo.
+5. Hoàn thành 12 phiếu holdout trước khi so sánh phương pháp; AP/NDCG chỉ dùng khi pool có nhãn độc lập đầy đủ.
 
-```powershell
-.venv\Scripts\python.exe scripts\validate_manual_data_v2.py
-.venv\Scripts\python.exe scripts\build_catalog_v2.py
-.venv\Scripts\python.exe scripts\export_quality_queue_v2.py
-.venv\Scripts\python.exe scripts\export_priority_set_v2.py
-.venv\Scripts\python.exe scripts\export_dataset_v2.py
-.venv\Scripts\python.exe scripts\inventory_sources_v2.py
-.venv\Scripts\python.exe -m pytest -q
-.venv\Scripts\python.exe scripts\evaluate_v2.py
-.venv\Scripts\python.exe scripts\smoke_web.py
-```
-
-API và OSRM phải chạy khi thực hiện evaluator/smoke. Health hiện hành: `GET /api/health`. Dataset tải qua `GET /api/v2/dataset` và `GET /api/v2/dataset/{filename}`.
+Nguồn số liệu: `data/reports/v2/dataset/summary.json`, `audit.json`, `source_manifest.json` và `manual_validation.json`.
