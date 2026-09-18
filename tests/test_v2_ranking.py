@@ -1,4 +1,3 @@
-from datetime import date
 import numpy as np
 import pytest
 

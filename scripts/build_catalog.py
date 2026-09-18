@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 os.environ.setdefault("OSMIUM_POOL_THREADS", "1")
 import osmium
 import pandas as pd
-from shapely.geometry import Point, Polygon, shape
+from shapely.geometry import Point, shape
 from shapely.strtree import STRtree
 from shapely import wkb
 from where2go.config import ROOT, DURATIONS

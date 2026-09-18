@@ -2,6 +2,7 @@
 from .planner import plan_itinerary
 from .ranking import RankingContext
 from .trips import recommendations, suggest_trips
+from .recommendations import recommend_pois
 
 
 class ItineraryService:
@@ -22,3 +23,6 @@ class ItineraryService:
 
     def recommend(self, request):
         return recommendations(self.pois, self.manifest, request, self.router, self.ranking_context)
+
+    def recommend_pois(self, request):
+        return recommend_pois(self.pois, self.manifest, request, self.router, self.ranking_context)

@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from where2go.routing import OSRM
 from where2go.v2.catalog import load_catalog, CATALOG_V2
 from where2go.v2.models import ItineraryRequestV2
-from where2go.v2.quality import manual_trip_quality, recommendation_eligible
+from where2go.v2.quality import recommendation_eligible
 from where2go.v2.service import ItineraryService
 from where2go.v2.trip_models import TripSuggestionRequest
 

@@ -2,7 +2,7 @@
 import argparse
 import asyncio
 import csv
-from datetime import datetime, timezone
+from datetime import timezone
 import json
 from pathlib import Path
 import random

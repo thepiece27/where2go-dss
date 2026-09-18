@@ -3,7 +3,6 @@ from collections import Counter
 import csv
 from functools import lru_cache
 import json
-from pathlib import Path
 
 from where2go.config import ROOT
 from .quality import latest_rating_pair

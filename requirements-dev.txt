@@ -1,0 +1,2 @@
+-r requirements-app.lock.txt
+ruff==0.16.8

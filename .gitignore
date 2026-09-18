@@ -8,6 +8,8 @@ data/catalog_v2.sqlite*
 data/catalog_v2.staging.sqlite*
 data/cache/
 .pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
 artifacts/
 data/private/
 data/manual/*.xlsx

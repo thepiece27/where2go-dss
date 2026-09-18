@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-09-18T17:28:50.801148+00:00",
+  "dataset_version": "v2-ae66988a1053d0de",
+  "scope": "Source-import cleanup, report and executed notebook validation",
+  "checks": {
+    "pytest": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "D:\\Desktop\\NHAP\\DSS_NGUYENVANHIEU\\GKI-Project\\where2go-dss\\.venv\\Scripts\\python.exe -m pytest -q",
+      "log": "artifacts/report-validation/pytest.log",
+      "passed": 107,
+      "warnings": 1
+    },
+    "ruff": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "D:\\Desktop\\NHAP\\DSS_NGUYENVANHIEU\\GKI-Project\\where2go-dss\\.venv\\Scripts\\python.exe -m ruff check where2go scripts tests",
+      "log": "artifacts/report-validation/ruff.log"
+    },
+    "pip_check": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "D:\\Desktop\\NHAP\\DSS_NGUYENVANHIEU\\GKI-Project\\where2go-dss\\.venv\\Scripts\\python.exe -m pip check",
+      "log": "artifacts/report-validation/pip_check.log"
+    },
+    "js_app": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "node --check web/app.js",
+      "log": "artifacts/report-validation/js_app.log"
+    },
+    "js_map": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "node --check web/map.js",
+      "log": "artifacts/report-validation/js_map.log"
+    },
+    "js_dataset": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "node --check web/dataset.js",
+      "log": "artifacts/report-validation/js_dataset.log"
+    },
+    "git_diff_check": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "git diff --check",
+      "log": "artifacts/report-validation/git_diff_check.log"
+    },
+    "notebook": {
+      "status": "PASS",
+      "executed_cells": 10,
+      "figures": 10,
+      "artifact": "notebooks/phan_tich_du_lieu_poi.ipynb"
+    },
+    "analysis_input_checksums": {
+      "status": "PASS",
+      "files": 8
+    },
+    "real_osrm_ranking_evaluation": {
+      "status": "PASS",
+      "runs": 64,
+      "matching_prior_results": true,
+      "all_statuses": [
+        "provisional"
+      ],
+      "artifact": "artifacts/report-validation/evaluation.json",
+      "note": "Semantic comparisons only; runtime excluded. No independent relevance labels."
+    },
+    "real_osrm_trip_evaluation": {
+      "status": "PASS",
+      "scenario_count": 7,
+      "legacy_schedule_count": 2,
+      "new_schedule_count": 7,
+      "new_actionable_count": 7,
+      "new_full_must_original_window": 5,
+      "new_full_must_any_window": 7,
+      "legacy_median_ms": 17.8,
+      "new_median_ms": 516.8,
+      "new_max_ms": 1506.2,
+      "timeline_route_consistency": "PASS",
+      "artifact": "artifacts/report-validation/trip_choices_evaluation.json",
+      "note": "Seven targeted scenarios; not a representative recommendation-quality benchmark."
+    },
+    "catalog_audit": {
+      "status": "PASS",
+      "hard_errors": 0,
+      "warning_count": 4599,
+      "artifact": "artifacts/report-validation/audit.json"
+    },
+    "trip_browser_smoke": {
+      "real_api_osrm": {
+        "status": "PASS",
+        "options": 3,
+        "elapsed_ms": 1256.7,
+        "dataset_version": "v2-ae66988a1053d0de"
+      },
+      "desktop": "PASS",
+      "mobile_offline": "PASS",
+      "browser_race_probe": "PASS",
+      "human_usability": "NOT RUN",
+      "image_error": "PASS",
+      "desktop_page_errors": [],
+      "keyboard_controls": "PASS",
+      "mobile_page_errors": [],
+      "artifact": "artifacts/trip-choices/smoke.json"
+    },
+    "markdown_local_links": {
+      "status": "PASS",
+      "files": 5
+    },
+    "exploration_browser_smoke": {
+      "national_discovery": {
+        "status": "PASS",
+        "markers": 15245,
+        "list_first_page": 250
+      },
+      "my khe": {
+        "status": "PASS",
+        "name": "Bãi biển Mỹ Khê",
+        "image_loaded": true
+      },
+      "pham van dong": {
+        "status": "PASS",
+        "name": "Bãi tắm Phạm Văn Đồng",
+        "image_loaded": true
+      },
+      "online": "PASS",
+      "page_errors": [],
+      "broken_image_fallback": "PASS",
+      "mobile_offline": "PASS",
+      "mobile_page_errors": [],
+      "artifact": "artifacts/enrichment-web/smoke.json"
+    },
+    "markdown_math_fences": {
+      "status": "PASS",
+      "format": "GFM dollar math delimiters"
+    }
+  },
+  "paper_inputs": {
+    "2014-Lore exploiting sequential influence for location recommendations.pdf": {
+      "sha256": "7570914bf58f7607eaf17704d2fefbee03d402ac24232b02d3fd4995804819d4"
+    },
+    "2020-Contextualized Point-of-Interest Recommendation-IJCAI.pdf": {
+      "sha256": "4c0ce65c3265c43c1fa96adededc7bf1d475f8f5a65461540600838174744908"
+    }
+  },
+  "not_run": [
+    "Independent user study",
+    "Ground-truth relevance benchmark",
+    "Field verification",
+    "Retraining or reproduction of LORE and contextualized graph models",
+    "Full catalog rebuild/publish"
+  ],
+  "notes": [
+    "Original dataset, workbook inputs and PDFs preserved.",
+    "Real routing evaluators were run during this task; latency is not a controlled benchmark."
+  ],
+  "cleanup": {
+    "removed_unused_imports": 21,
+    "removed_superseded_docs": 6,
+    "main_docs": 3,
+    "ranking_behavior_changed": false
+  }
+}

@@ -8,7 +8,7 @@ from where2go.routing import RoutingUnavailable
 from . import MODEL_VERSION
 from .durations import choose_duration
 from .hours import intervals_on_date
-from .ranking import confidence, rank, valid_rating
+from .ranking import rank, valid_rating
 from .taxonomy import FOOD_CATEGORIES
 from .quality import access_sort_key
 

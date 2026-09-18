@@ -11,9 +11,10 @@ from .models import ItineraryRequest
 from .planner import plan_itinerary
 from .routing import OSRM, RoutingUnavailable
 from .ranking import normalize
-from .v2.catalog import CATALOG_V2, load_catalog as load_catalog_v2, coverage as coverage_v2
+from .v2.catalog import CATALOG_V2, load_catalog as load_catalog_v2
 from .v2.models import ItineraryRequestV2
 from .v2.trip_models import TripContext, TripSuggestionRequest
+from .v2.recommendations import RecommendationRequest
 from .v2.service import ItineraryService
 from .v2.dataset import dataset_summary
 from .v2.quality import explorable, itinerary_eligible, manual_trip_quality, recommendation_eligible
@@ -28,6 +29,11 @@ DATASET_EXPORT_FILES = {
     "merged_dataset.xlsx", "images.csv", "field_provenance.csv", "merge_report.json",
 }
 FRONTEND_ASSETS = {
+    "common.js": ("common.js", "text/javascript"),
+    "recommend.js": ("recommend.js", "text/javascript"),
+    "explore.js": ("explore.js", "text/javascript"),
+    "explore": ("explore.html", "text/html"),
+    "itinerary": ("itinerary.html", "text/html"),
     "dataset.html": ("dataset.html", "text/html"),
     "dataset.js": ("dataset.js", "text/javascript"),
     "app.js": ("app.js", "text/javascript"),
@@ -190,6 +196,10 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             raise HTTPException(404, "POI không tồn tại hoặc chưa đủ điều kiện phục vụ")
         return {"poi": dict(poi, manual_trip_quality=manual_trip_quality(poi),
                             recommendation_eligible=recommendation_eligible(poi)), "dataset_version": service.manifest["version"]}
+
+    @app.post("/api/v2/recommendations")
+    def recommendations_v2(request: RecommendationRequest):
+        return v2_service().recommend_pois(request)
 
     @app.post("/api/v2/trip-recommendations")
     def trip_recommendations(request: TripContext):

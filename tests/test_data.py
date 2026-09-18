@@ -1,7 +1,4 @@
-from pathlib import Path
 from scripts.build_catalog import Boundaries, Importer, category
-from where2go.catalog import candidates
-from where2go.models import ItineraryRequest
 from where2go.config import ROOT
 from copy import deepcopy
 from scripts.build_catalog import deduplicate

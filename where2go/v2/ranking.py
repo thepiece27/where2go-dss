@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from where2go.ranking import normalize, topsis
 from .hours import intervals_on_date
 from .models import CRITERIA
-from .taxonomy import CATEGORY_TAGS
+from .taxonomy import CATEGORY_TAGS, CATEGORIES
 
 
 PAIR_ORDER = tuple((i, j) for i in range(4) for j in range(i + 1, 4))
@@ -67,7 +67,9 @@ class RankingContext:
     def __init__(self, pois):
         self.pois = pois
         self.index = {poi["poi_id"]: index for index, poi in enumerate(pois)}
-        corpus = [normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", "")])) or "unknown"
+        corpus = [normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", ""),
+                  CATEGORIES.get(poi.get("category"), ""), *poi.get("tags", []),
+                  *CATEGORY_TAGS.get(poi.get("category"), ())])) or "unknown"
                   for poi in pois]
         self.vectorizer = TfidfVectorizer(ngram_range=(1, 2), max_features=20000)
         self.matrix = self.vectorizer.fit_transform(corpus)
@@ -95,9 +97,13 @@ class RankingContext:
         return score / 5, {"method": method, "prior": prior, "m": m, "observation": current}
 
     def preference_scores(self, pool, request):
+        return {ident: detail["score"] for ident, detail in self.preference_components(pool, request).items()}
+
+    def preference_components(self, pool, request):
         wanted = set(normalize(" ".join(request.interests)).split())
         if not wanted and not request.preferred_categories:
-            return {poi["poi_id"]: 1.0 for poi in pool}
+            return {poi["poi_id"]: {"score": 1.0, "taxonomy": 0.0, "cosine": 0.0,
+                    "category_match": False, "matched_tokens": [], "unspecified": True} for poi in pool}
         query_parts = list(request.interests)
         for category in request.preferred_categories:
             query_parts.extend(CATEGORY_TAGS[category])
@@ -109,7 +115,10 @@ class RankingContext:
             if poi["category"] in request.preferred_categories:
                 taxonomy = 1.0
             similarity = float((self.matrix[self.index[poi["poi_id"]]] @ vector.T).toarray()[0, 0])
-            result[poi["poi_id"]] = 0.7 * taxonomy + 0.3 * similarity
+            result[poi["poi_id"]] = {"score": 0.7 * taxonomy + 0.3 * similarity,
+                    "taxonomy": taxonomy, "cosine": similarity,
+                    "category_match": poi["category"] in request.preferred_categories,
+                    "matched_tokens": sorted(tags & wanted), "unspecified": False}
         return result
 
 

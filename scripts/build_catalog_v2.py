@@ -7,7 +7,6 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import math
-import os
 from pathlib import Path
 import sys
 
@@ -15,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from openpyxl import load_workbook
 
 from scripts.create_manual_template_v2 import PLACES, OPENING, DURATION, VERIFICATION
-from scripts.inventory_sources_v2 import digest, inventory
+from scripts.inventory_sources_v2 import digest
 from where2go.catalog import haversine, load_catalog
 from where2go.config import CATALOG, ROOT
 from where2go.hours import parse_week

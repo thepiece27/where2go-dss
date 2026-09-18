@@ -1,0 +1,9 @@
+﻿split,method,runs,mean_attractions,mean_drive_minutes
+development,crisp,4,3.25,28.827499999999997
+development,equal,4,3.5,17.2325
+development,fuzzy,4,3.25,28.827499999999997
+development,nearby,4,3.5,11.822500000000002
+holdout,crisp,12,4.083333333333333,35.689166666666665
+holdout,equal,12,4.083333333333333,32.485
+holdout,fuzzy,12,4.083333333333333,35.689166666666665
+holdout,nearby,12,4.083333333333333,24.8625

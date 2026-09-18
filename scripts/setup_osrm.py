@@ -5,7 +5,6 @@ import json
 import shlex
 from pathlib import Path
 import subprocess
-import sys
 import time
 import urllib.request
 

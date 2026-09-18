@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-09-18T18:36:26.736371+00:00",
+  "dataset_version": "v2-ae66988a1053d0de",
+  "policy_version": "poi-recommendation-1.0",
+  "app_url": "http://127.0.0.1:8000",
+  "browser_test_url": "http://127.0.0.1:8001",
+  "pytest": {
+    "status": "PASS",
+    "passed": 117,
+    "command": ".venv/Scripts/python.exe -m pytest -q"
+  },
+  "ruff": "PASS",
+  "pip_check": "PASS",
+  "javascript_syntax": "PASS",
+  "markdown_links": "PASS",
+  "notebook": {
+    "status": "PASS",
+    "executed_code_cells": 13,
+    "figures": 14
+  },
+  "recommendation_evaluation": {
+    "runs": 96,
+    "scenarios": 16,
+    "travel_modes": {
+      "road_time": 12,
+      "geographic_distance": 4
+    },
+    "same_crisp_fuzzy_top10": 16,
+    "evaluation_sha256": "18ad5a22832e2dc7f540c51a4fdcb5cf3df91a9b26ad4c01ae8becb6d7482d1c"
+  },
+  "browser": {
+    "human_quality": "NOT GRADED",
+    "cross_page_city_drafts": "PASS",
+    "actual_osrm_itinerary_confirmation": "PASS",
+    "stale_response": "PASS",
+    "broken_image_fallback": "PASS",
+    "mobile_offline_basemap": "PASS",
+    "javascript_errors": []
+  },
+  "live_app_api": "PASS",
+  "human_relevance": "NOT GRADED",
+  "source_sha256": {
+    "where2go/api.py": "cc49ab68c396005b69af551ad75b64f09e038e33a23e89e0ec4ebbf1d1977053",
+    "where2go/v2/recommendations.py": "2245987b42f456f1b69547aaa4dae6b7939b717db463e26d2d7b2a51eab40aba",
+    "where2go/v2/ranking.py": "7318fe408a77df910005d147fea2325a30a12e67d502ee9384b6b0c36b6386cc",
+    "where2go/v2/recommendation_evaluation.py": "ae3e47178fcda59bac87170d8e15e1c848c65ab491df6b3b5b3cb11c5f1ca47f",
+    "web/common.js": "7e667dda629f2eddb9240ad040bec30c8559e10c9eb1001fa351e149de950f63",
+    "web/recommend.js": "df2c923214057aba70e84ff742df8d61a2229088ec9e5294b8db5c53b4b302fe",
+    "web/explore.js": "9c274525a301ee28b5af83a5a033a38a326fc24c58171d58cba34f614ef6630e",
+    "web/app.js": "06e1012c573fb014b5e434581536312b25f5ca5320c3901110e402dae9852221",
+    "web/map.js": "31277655da6fe6cef83f09cf6f4503f448756de251b3c84523aa12f59c0db9a0",
+    "web/styles.css": "4051b750087000ad2d2be9179d3c817f0c8144af3e39fb5e9a05fbaf83ff9a84",
+    "scripts/evaluate_recommendations.py": "4edd06d6d3b0aeeba509f1a2d1d7c66f30da25f4c392c5ea0d36e9a7af77294b",
+    "scripts/smoke_recommendations.py": "762c1d9e93ef08eee343d52a0ba07b02792a97292fa1487ceb28814cd87444da",
+    "notebooks/phan_tich_du_lieu_poi.ipynb": "a058f5920724a8a57a9f8b13a8c2c90686c04b2676feb1c04e93f24902e5bf76"
+  }
+}

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lịch trình · Where2Go</title>
+    <link rel="stylesheet" href="/vendor/leaflet.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Đến nội dung</a>
+    <header class="app-header">
+      <a class="brand" href="/">Where2Go<span>Địa điểm hợp với bạn.</span></a>
+      <nav aria-label="Điều hướng chính">
+        <a href="/">Gợi ý POI</a><a href="/explore">Khám phá</a
+        ><a href="/itinerary" aria-current="page"
+          >Lịch trình <span data-trip-count>0</span></a
+        >
+      </nav>
+      <a class="data-link" href="/dataset.html">Dữ liệu</a>
+    </header>
+    <main id="main">
+      <section class="trip-setup" aria-labelledby="setupTitle">
+        <div class="section-heading">
+          <h1 id="setupTitle">Sắp xếp những nơi bạn đã chọn</h1>
+          <span class="pill">Ô tô · Trong ngày</span>
+        </div>
+        <form id="planForm">
+          <div class="setup-fields">
+            <label
+              >Chuyến đi tại<select id="planLocation">
+                <option>Đà Nẵng</option>
+                <option>Hà Nội</option>
+              </select></label
+            >
+            <label>Ngày đi<input id="tripDate" type="date" required /></label>
+            <label
+              >Khung giờ<select id="timePreset">
+                <option value="day">Cả ngày · 08–18h</option>
+                <option value="morning">Buổi sáng · 08–12h</option>
+                <option value="afternoon">Buổi chiều · 13–18h</option>
+                <option value="custom">Tùy chọn</option>
+              </select></label
+            >
+            <label
+              >Giờ đi<input id="startTime" type="time" value="08:00" required
+            /></label>
+            <label
+              >Mục tiêu giờ về<input
+                id="endTime"
+                type="time"
+                value="18:00"
+                required
+            /></label>
+          </div>
+          <div class="start-row">
+            <div>
+              <strong>Xuất phát và quay về</strong>
+              <p id="startDescription">
+                Tâm Đà Nẵng — điểm mẫu, hãy chọn vị trí của bạn.
+              </p>
+            </div>
+            <div class="actions">
+              <button id="pickStart" type="button">Ghim bản đồ</button
+              ><button id="locateStart" type="button">Vị trí của tôi</button
+              ><button id="catalogStart" type="button">Chọn từ địa điểm</button>
+            </div>
+          </div>
+          <details class="extra-settings">
+            <summary>Tùy chọn thêm</summary>
+            <div class="setup-fields">
+              <label
+                >Vĩ độ<input
+                  id="latitude"
+                  type="number"
+                  min="-90"
+                  max="90"
+                  step="any"
+                  value="16.0544"
+                  required
+              /></label>
+              <label
+                >Kinh độ<input
+                  id="longitude"
+                  type="number"
+                  min="-180"
+                  max="180"
+                  step="any"
+                  value="108.2022"
+                  required
+              /></label>
+              <label
+                >Sở thích<input
+                  id="interests"
+                  maxlength="100"
+                  placeholder="Ví dụ: văn hóa, thiên nhiên"
+              /></label>
+              <label
+                >Chủ đề gợi ý<select id="tripTheme">
+                  <option value="">Tất cả chủ đề</option>
+                </select></label
+              >
+            </div>
+            <div class="check-options">
+              <label
+                ><input id="includeMeals" type="checkbox" checked /> Gợi ý thời
+                gian ăn</label
+              ><label
+                ><input id="includeCoffee" type="checkbox" /> Thêm giờ
+                nghỉ</label
+              ><label
+                ><input id="autoAdd" type="checkbox" /> Tự bổ sung tối đa 3 điểm
+                phù hợp</label
+              >
+            </div>
+            <p class="muted">
+              Thời gian ăn/nghỉ linh hoạt. Địa điểm ăn uống cụ thể chỉ có khi
+              bạn chọn hoặc bật tự bổ sung.
+            </p>
+          </details>
+          <div class="plan-bar">
+            <p id="tripSummary" aria-live="polite">
+              Chưa chọn địa điểm. Bắt đầu từ những nơi bạn yêu thích.
+            </p>
+            <button id="planButton" class="primary" type="submit">
+              Xem lịch gợi ý
+            </button>
+          </div>
+        </form>
+      </section>
+      <p id="systemStatus" class="system-status" role="status">
+        Khám phá Việt Nam · Lập lịch tại Hà Nội và Đà Nẵng.
+      </p>
+      <div id="workspace" class="workspace" data-view="selected">
+        <section class="workbench">
+          <nav class="view-tabs" aria-label="Các khu vực chuyến đi">
+            <button data-view="selected" aria-pressed="false">
+              Đã chọn <span id="selectedCount">0</span></button
+            ><button data-view="itinerary" aria-pressed="false">
+              Lịch trình</button
+            ><button data-view="map" aria-pressed="false">Bản đồ</button>
+          </nav>
+          <div
+            id="selectionStrip"
+            class="selection-strip"
+            aria-label="Những nơi trong chuyến đi"
+          ></div>
+          <section id="selectedView" class="view-content" hidden>
+            <div class="section-heading">
+              <h2>Chuyến đi của bạn</h2>
+              <button id="optimizeOrder" type="button">
+                Để ứng dụng xếp thứ tự
+              </button>
+            </div>
+            <p id="orderStatus" class="muted"></p>
+            <div id="selectedList"></div>
+            <button id="selectedPlan" class="primary" type="button">
+              Xem lịch gợi ý
+            </button>
+          </section>
+          <section id="itineraryView" class="view-content" hidden>
+            <div class="section-heading">
+              <h2>Lịch cho bạn lựa chọn</h2>
+              <button id="tryWindows" type="button">Thử khung giờ khác</button>
+            </div>
+            <p id="planStatus" role="status"></p>
+            <div id="itinerary" aria-live="polite"></div>
+            <div id="timeline"></div>
+          </section>
+        </section>
+        <section id="mapPanel" class="map-panel" aria-label="Bản đồ Việt Nam">
+          <div hidden>
+            <input id="searchInput" /><select id="typeFilter">
+              <option value="">Tất cả</option></select
+            ><select id="locationFilter">
+              <option value="">Toàn quốc</option>
+            </select>
+          </div>
+          <div id="map"></div>
+          <nav class="map-shortcuts" aria-label="Chuyển vùng bản đồ">
+            <button type="button" id="viewVietnam">Toàn Việt Nam</button
+            ><button type="button" data-map-location="Hà Nội">Hà Nội</button
+            ><button type="button" data-map-location="Đà Nẵng">Đà Nẵng</button>
+          </nav>
+          <p id="mapStatus" class="map-status" hidden role="status"></p>
+          <p id="mapInstruction" class="map-instruction" hidden>
+            Chạm vào bản đồ để đặt điểm xuất phát.
+          </p>
+          <article
+            id="detailPanel"
+            class="detail-panel"
+            aria-live="polite"
+          ></article>
+        </section>
+      </div>
+    </main>
+    <dialog id="confirmDialog">
+      <h2>Chọn phương án có điều chỉnh</h2>
+      <div id="confirmationChanges"></div>
+      <p>Các điểm chưa xếp vẫn được giữ trong chuyến đi của bạn.</p>
+      <div class="actions">
+        <button id="cancelOption" type="button">Quay lại</button
+        ><button id="confirmOption" class="primary" type="button">
+          Chấp nhận điều chỉnh và chọn lịch
+        </button>
+      </div>
+    </dialog>
+    <script src="/vendor/leaflet.js"></script>
+    <script src="/common.js" defer></script>
+    <script src="/map.js" defer></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -1,83 +1,86 @@
-# Where2Go DSS
+# Where2Go DSS — POI Recommendation System
 
-Where2Go khám phá địa điểm trên toàn Việt Nam và hỗ trợ lựa chọn lịch trình ô tô trong ngày tại Hà Nội/Đà Nẵng mới, gồm địa bàn Quảng Nam cũ. Người dùng chọn tối đa 12 địa điểm, đánh dấu nơi nhất định phải ghé, so sánh các lịch rồi chỉnh thứ tự, thời lượng và giờ xuất phát. Nhà hàng/cà phê cũng có thể được chọn. Địa điểm đề xuất thêm mặc định chỉ được đưa vào khi người dùng tick.
+Hệ gợi ý POI **dựa trên nội dung và ngữ cảnh, kết hợp ra quyết định đa tiêu chí** tại Hà Nội/Đà Nẵng. Nhập sở thích, vị trí, ngày đi và mẫu ưu tiên để nhận Top-10 có giải thích. Có thêm trang khám phá toàn quốc và lập lịch cho tối đa 12 địa điểm đã chọn.
 
-Fuzzy AHP/TOPSIS hỗ trợ xếp hạng địa điểm gợi ý; beam search thử thứ tự ghé các điểm đã chọn. OSRM kiểm tra tuyến cho từng phương án, không có giao thông trực tiếp. Giờ và điểm tiếp cận chưa xác minh được ghi rõ. Khi không xếp đủ điểm, ứng dụng đưa phương án đổi giờ hoặc bớt điểm để người dùng quyết định; khi thiếu đường đi, ứng dụng giữ danh sách và đưa hành động điều chỉnh. Đây là tìm kiếm có giới hạn, không bảo đảm tối ưu toàn cục.
+Ba trang: **Gợi ý POI `/` → Khám phá `/explore` → Lịch trình `/itinerary`**. Danh sách đã chọn dùng chung, nháp lưu theo địa phương trên trình duyệt. Giao diện sáng, responsive, không cần Node build.
 
-Luồng mới dùng `POST /api/v2/trip-suggestions` và `POST /api/v2/trip-recommendations`. Endpoint `/api/v2/itineraries` vẫn giữ planner cũ để tương thích/nghiên cứu. Xem [hợp đồng, thuật toán và báo cáo bàn giao](docs/trai_nghiem_lua_chon_lich_trinh.md).
+Thuật toán: taxonomy + TF-IDF/cosine → ứng viên từ ba nguồn → AHP–TOPSIS trên sở thích, chất lượng, di chuyển và bằng chứng. OSRM đầy đủ dùng giây; thiếu dữ liệu dùng km đường chim bay cho toàn pool và ghi rõ. Chưa học từ lịch sử tương tác. Fuzzy AHP mặc định trùng AHP thường, không được coi là cải thiện đã chứng minh.
 
-## Chạy ứng dụng
+Đã có 96 lượt đối chiếu trên 16 bối cảnh và notebook có output. **Phiếu relevance của nhóm chưa chấm; chất lượng gợi ý với người dùng chưa được kiểm chứng.**
 
-Yêu cầu Python 3.13 và Docker Desktop/WSL2. Từ thư mục gốc trong PowerShell:
+## Tài liệu cho báo cáo và bảo vệ
+
+| Tài liệu | Nội dung |
+|---|---|
+| **[Báo cáo dự án hoàn chỉnh](docs/bao_cao_du_an_poi.md)** | Bài toán, kiến trúc, nguồn/crawl/ghép dữ liệu, chất lượng, công thức, lý do lựa chọn, thực nghiệm và đối chiếu hai paper |
+| **[Hướng dẫn chạy](docs/huong_dan_chay.md)** | Chạy từ catalog có sẵn, dựng mới, OSRM, notebook, kiểm thử, thu thập và xử lý lỗi |
+| **[Kịch bản bảo vệ 25–30 phút](docs/kich_ban_bao_ve.md)** | 18 slide, 27 phút, lời nói, demo, phụ lục và câu hỏi phản biện |
+| **[Notebook đã thực thi](notebooks/phan_tich_du_lieu_poi.ipynb)** | Phân tích dữ liệu thực, 14 biểu đồ, bảng kết quả và kiểm chứng toán |
+| [Biểu đồ PNG](docs/assets/poi/) · [Bảng/JSON phân tích](data/reports/analysis/) | Tài nguyên đưa vào báo cáo/slide, checksum đầu vào |
+| [Hai bài báo gốc](paper/) | LORE 2014 và Contextualized Point-of-Interest Recommendation 2020 |
+
+## Chạy nhanh khi đã có dữ liệu runtime
+
+Python **3.13**, PowerShell tại thư mục gốc:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements-app.lock.txt
-.venv\Scripts\python.exe scripts\setup_osrm.py --download
-.venv\Scripts\python.exe scripts\build_local_basemaps.py
-.venv\Scripts\python.exe scripts\build_national_basemap.py
-.venv\Scripts\python.exe scripts\build_catalog.py
-.venv\Scripts\python.exe scripts\validate_manual_data_v2.py
-.venv\Scripts\python.exe scripts\rebuild_dataset_v2.py --publish
-.venv\Scripts\python.exe scripts\export_quality_queue_v2.py
-.venv\Scripts\python.exe scripts\export_priority_set_v2.py
-.venv\Scripts\python.exe scripts\inventory_sources_v2.py
 .venv\Scripts\python.exe -m uvicorn where2go.api:app --host 127.0.0.1 --port 8000
 ```
 
-Mở `http://127.0.0.1:8000`; OpenAPI tại `http://127.0.0.1:8000/docs`. OSRM chạy cục bộ tại `127.0.0.1:5001`.
+Mở **http://127.0.0.1:8000**; OpenAPI tại **http://127.0.0.1:8000/docs**. Cần `data/catalog_v2.sqlite`; Git clone mới có thể chưa có file này. Muốn tạo lịch có đường đi, cần OSRM và manifest đúng snapshot:
 
-## Dataset hiện hành
+```powershell
+# Cần Docker Desktop/WSL2; lần đầu tải và tiền xử lý PBF.
+.venv\Scripts\python.exe scripts\setup_osrm.py --download
+```
 
-- Catalog chuẩn: `data/catalog_v2.sqlite`.
-- Bản CSV/JSON và workbook tổng hợp `merged_dataset.xlsx`: `data/reports/v2/dataset/`.
-- Tập ưu tiên và hàng kiểm duyệt: `data/reports/v2/priority_set.csv`, `data/reports/v2/quality_queue.csv`.
-- Quan sát Google nội bộ: `data/private/google_enrichment_v2.csv`, `data/private/google_opening_hours_v2.csv`.
-- Workbook kiểm duyệt: `data/manual/poi_enrichment_v2.xlsx`.
-- Nguồn cần giữ để rebuild: baseline `data/catalog.sqlite`, OSM PBF, địa giới, ba workbook Google/HOTOSM, `data/curation/`, workbook kiểm duyệt, `data/enrichment/` và cache hiện hành. Workbook `data/vietnam_destinations.xlsx` không phải đầu vào bắt buộc của pipeline hiện hành.
+OSRM dùng **127.0.0.1:5001**. Hướng dẫn dựng catalog đầy đủ và khôi phục runtime ở [đây](docs/huong_dan_chay.md). Frontend tĩnh không cần bước build Node.
 
-Ba Excel được hợp nhất theo thực thể và từng trường; web đọc SQLite. Dữ liệu khám phá được tách khỏi điều kiện lập lịch trình, có tìm bí danh không dấu, ảnh có nguồn và bản đồ toàn quốc. Xem số liệu đo trên catalog mới trong [báo cáo triển khai](docs/ket_qua_trien_khai_v2.md), cùng [quy trình hợp nhất, thu thập và hoàn tác](docs/du_lieu_hop_nhat_va_ban_do.md).
+## Chạy lại phân tích dữ liệu
 
-Nguồn Google được đánh dấu `restricted_internal`; không coi các CSV nội bộ là dataset được phép tái phân phối. Dữ liệu OSM theo ODbL 1.0 và phải giữ attribution.
+```powershell
+.venv\Scripts\python.exe -m pip install -r requirements-analysis.txt
+.venv\Scripts\python.exe -X utf8 scripts\run_analysis.py
+```
+
+Notebook đọc CSV và artifact thực nghiệm đã xuất, không cần Docker/API/crawl. Snapshot **`v2-ae66988a1053d0de`**: 16.018 POI, 15.245 khám phá được, 1.475 qua cổng chất lượng trên toàn catalog; luồng gợi ý hai địa bàn có 1.235 POI trước lọc ngày/bán kính. Chỉ 86 POI có rating–review hợp lệ. Đây là dữ liệu prototype có giới hạn, chưa được xác minh thực địa đầy đủ.
+
+## Cấu trúc
+
+```text
+where2go/              API, mô hình chung, routing, lõi v1 còn được dùng
+  v2/                  Catalog, chất lượng, ranking, planner và luồng chọn lịch
+web/                   HTML/CSS/JS và Leaflet
+scripts/               Build, audit, export, collection, evaluation, smoke
+tests/                 Kiểm thử thuật toán, dữ liệu, routing và API
+data/curation/         Quy tắc, ID và quyết định đối chiếu
+data/reports/v2/       Dataset xuất và báo cáo nghiên cứu tình huống
+data/reports/analysis/ Bảng, checksum và kết quả notebook
+notebooks/             Phân tích có output
+docs/                  Báo cáo, hướng dẫn, kịch bản và biểu đồ
+paper/                 Hai PDF tham khảo
+artifacts/             Đầu ra kiểm tra tạm, không theo dõi trong Git
+```
+
+API chính dùng `/api/v2/recommendations` và `/api/v2/trip-suggestions`. `/api/v2/trip-recommendations` giữ vai trò tương thích. Endpoint `/api/v2/itineraries` giữ planner nghiên cứu để đối chiếu. Không xóa lõi v1 tùy tiện: v2 còn dùng model, TOPSIS, chuẩn hóa, routing và catalog nền.
 
 ## Kiểm tra
 
 ```powershell
+.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+.venv\Scripts\python.exe -m ruff check where2go scripts tests
 .venv\Scripts\python.exe -m pytest -q
 .venv\Scripts\python.exe -m pip check
+node --check web\common.js
+node --check web\recommend.js
+node --check web\explore.js
 node --check web\app.js
 node --check web\map.js
 node --check web\dataset.js
-.venv\Scripts\python.exe scripts\evaluate_v2.py
-.venv\Scripts\python.exe scripts\evaluate_trip_choices.py
-.venv\Scripts\python.exe scripts\smoke_explore_v2.py
-.venv\Scripts\python.exe scripts\smoke_web.py
 ```
 
-Evaluator và smoke lịch trình cần OSRM; hai smoke cần API đang chạy. Smoke khám phá kiểm tra riêng online và chặn mạng ngoài. Kết quả evaluator chỉ là nghiên cứu tình huống vì chưa có nhãn độc lập hoàn chỉnh.
+Các bài kiểm tra dùng dữ liệu local cần các fixture/runtime tương ứng. Evaluator với OSRM thật và smoke trình duyệt được hướng dẫn riêng; kiểm thử phần mềm không thay đánh giá người dùng. Kết quả lần làm sạch nằm trong [bản ghi kiểm chứng](data/reports/analysis/verification.json).
 
-## Cấu trúc chính
-
-| Đường dẫn | Vai trò |
-|---|---|
-| `where2go/v2/` | Catalog, taxonomy, quality gate, ranking, planner và service v2 |
-| `where2go/api.py` | API v1 đối chiếu, API v2 và frontend assets |
-| `scripts/build_catalog_v2.py` | Hợp nhất nguồn, curation, giờ, rating, duration và quan hệ POI |
-| `scripts/audit_dataset_v2.py` | Kiểm tra SQLite, export, ID, tọa độ, giờ, rating và coverage |
-| `scripts/evaluate_v2.py` | 16 kịch bản x 4 phương pháp trên cùng lõi v2 |
-| `where2go/v2/trips.py`, `trip_models.py` | Đề xuất điểm, lịch nhiều phương án và hợp đồng chọn tối đa 12 điểm |
-| `scripts/evaluate_trip_choices.py` | Đối chiếu planner cũ/mới trên bảy kịch bản có chủ đích với OSRM thật |
-| `scripts/smoke_trip_choices.py` | Luồng chọn/so sánh/chỉnh lịch, lưu nháp, phản hồi cũ và mobile |
-| `web/` | Leaflet local, nền online toàn quốc, địa giới dự phòng và nền local chi tiết Hà Nội/Đà Nẵng |
-| `scripts/build_local_basemaps.py` | Cắt OSM PBF theo địa giới, gộp lớp hình học và tạo GeoJSON gzip cho web |
-| `tests/` | Kiểm thử toán học, dữ liệu, planner, routing và API |
-
-Tài liệu đang dùng:
-
-- [Phương pháp và công thức](docs/fuzzy_ahp.md)
-- [Trải nghiệm chọn lịch, API mới và kết quả kiểm thử](docs/trai_nghiem_lua_chon_lich_trinh.md)
-- [Hướng dẫn dữ liệu, triển khai và demo](docs/huong_dan_trien_khai.md)
-- [Kết quả, đánh giá và giới hạn](docs/ket_qua_trien_khai_v2.md)
-- [Hợp nhất dữ liệu, ảnh và bản đồ toàn quốc](docs/du_lieu_hop_nhat_va_ban_do.md)
-- [Kế hoạch phát triển v2](docs/ke_hoach_nang_cap_du_lieu_va_lich_trinh_v2.md)
-- [Mục lục tài liệu](docs/README.md)
+Giữ bất biến các workbook nguồn/backup, PBF, địa giới, curation và quan sát cần tái lập. Catalog là dữ liệu phục vụ; CSV/XLSX trong `data/reports/v2/dataset/` là dẫn xuất. Dữ liệu Google giữ **`restricted_internal`**; không coi export nội bộ là dataset được phép phát hành. Dữ liệu OSM giữ attribution và ODbL 1.0.

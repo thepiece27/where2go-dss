@@ -1,0 +1,8 @@
+# Analysis is optional; the API does not require Jupyter or PDF tools.
+-r requirements-app.lock.txt
+matplotlib==3.11.2
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.3.0
+jupyterlab==4.6.3
+pypdf==6.19.0

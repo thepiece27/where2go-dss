@@ -1,0 +1,10 @@
+﻿source,selected_field_count
+data/catalog.sqlite,100771
+data/raw/vietnam-260915.osm.pbf,49517
+data/vietnam_destinations_google_maps_browser_hotosm.xlsx,11894
+data/enrichment/accepted-expansion.json,324
+data/enrichment/accepted-pilot.json,109
+data/manual/poi_enrichment_v2.xlsx,25
+data/curation/poi_relations_v2.csv,11
+data/curation/focus_landmarks_v2.csv,4
+data/vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx,4

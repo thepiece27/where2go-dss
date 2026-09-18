@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Khám phá · Where2Go</title>
+    <link rel="stylesheet" href="/vendor/leaflet.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Đến nội dung</a>
+    <header class="app-header">
+      <a class="brand" href="/">Where2Go<span>Địa điểm hợp với bạn.</span></a>
+      <nav aria-label="Điều hướng chính">
+        <a href="/">Gợi ý POI</a
+        ><a href="/explore" aria-current="page">Khám phá</a
+        ><a href="/itinerary">Lịch trình <span data-trip-count>0</span></a>
+      </nav>
+      <a class="data-link" href="/dataset.html">Dữ liệu</a>
+    </header>
+    <main id="main" class="explore-page">
+      <section class="page-intro">
+        <p class="eyebrow">KHÁM PHÁ VIỆT NAM</p>
+        <h1>Những nơi đáng để tìm hiểu</h1>
+        <p>
+          Tìm kiếm trên bản đồ toàn quốc. Chọn địa điểm cho chuyến đi tại Hà Nội
+          hoặc Đà Nẵng.
+        </p>
+      </section>
+      <div class="search-fields explore-filters">
+        <label
+          >Tên địa điểm<input
+            id="searchInput"
+            type="search"
+            placeholder="Tên địa điểm, tên không dấu…" /></label
+        ><label
+          >Địa phương<select id="locationFilter">
+            <option value="">Toàn Việt Nam</option>
+          </select></label
+        ><label
+          >Loại hình<select id="typeFilter">
+            <option value="">Tất cả loại hình</option>
+          </select></label
+        ><label
+          >Chuyến đi đang chọn<select id="tripCity">
+            <option>Đà Nẵng</option>
+            <option>Hà Nội</option>
+          </select></label
+        >
+      </div>
+      <p id="systemStatus" role="status" class="system-status"></p>
+      <div class="explore-layout">
+        <section class="explore-list">
+          <h2 id="listTitle">Địa điểm</h2>
+          <div id="poiList" class="card-grid"></div>
+          <button id="loadMore" type="button" hidden>Xem thêm</button>
+        </section>
+        <section id="mapPanel" class="map-panel" aria-label="Bản đồ địa điểm">
+          <div id="map"></div>
+          <nav class="map-shortcuts" aria-label="Vùng bản đồ">
+            <button id="viewVietnam" type="button">Toàn quốc</button
+            ><button data-map-location="Hà Nội" type="button">Hà Nội</button
+            ><button data-map-location="Đà Nẵng" type="button">Đà Nẵng</button
+            ><button id="pickStart" type="button">Chọn điểm xuất phát</button>
+          </nav>
+          <p id="mapStatus" class="map-status" role="status" hidden></p>
+          <p id="mapInstruction" class="map-instruction" hidden>
+            Chạm vào bản đồ để chọn điểm xuất phát.
+          </p>
+          <article
+            id="detailPanel"
+            class="detail-panel"
+            aria-live="polite"
+          ></article>
+        </section>
+      </div>
+    </main>
+    <script src="/vendor/leaflet.js"></script>
+    <script src="/common.js" defer></script>
+    <script src="/map.js" defer></script>
+    <script src="/explore.js" defer></script>
+  </body>
+</html>

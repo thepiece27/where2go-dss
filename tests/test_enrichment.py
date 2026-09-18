@@ -1,5 +1,3 @@
-import json
-from pathlib import Path
 
 from fastapi.testclient import TestClient
 from shapely.geometry import Polygon, mapping

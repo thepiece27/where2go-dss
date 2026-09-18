@@ -1,4 +1,3 @@
-from copy import deepcopy
 
 from where2go.v2.models import ItineraryRequestV2
 from where2go.v2.planner import plan_itinerary

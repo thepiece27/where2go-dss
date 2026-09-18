@@ -1,49 +1,124 @@
 <!doctype html>
 <html lang="vi">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Where2Go · Chuyến đi của bạn</title><link rel="stylesheet" href="/vendor/leaflet.css"><link rel="stylesheet" href="/styles.css"></head>
-<body>
-<header class="app-header"><a class="brand" href="/">Where2Go<span>Đi theo cách của bạn.</span></a><p>Chọn nơi muốn ghé. Tìm lịch phù hợp.</p><a href="/dataset.html">Thông tin dữ liệu</a></header>
-<main>
-  <section class="trip-setup" aria-labelledby="setupTitle">
-    <div class="section-heading"><h1 id="setupTitle">Một ngày, những nơi bạn muốn đến</h1><span class="pill">Ô tô · Trong ngày</span></div>
-    <form id="planForm">
-      <div class="setup-fields">
-        <label>Chuyến đi tại<select id="planLocation"><option>Đà Nẵng</option><option>Hà Nội</option></select></label>
-        <label>Ngày đi<input id="tripDate" type="date" required></label>
-        <label>Khung giờ<select id="timePreset"><option value="day">Cả ngày · 08–18h</option><option value="morning">Buổi sáng · 08–12h</option><option value="afternoon">Buổi chiều · 13–18h</option><option value="custom">Tùy chọn</option></select></label>
-        <label>Giờ đi<input id="startTime" type="time" value="08:00" required></label>
-        <label>Mục tiêu giờ về<input id="endTime" type="time" value="18:00" required></label>
-      </div>
-      <div class="start-row"><div><strong>Xuất phát và quay về</strong><p id="startDescription">Tâm Đà Nẵng — điểm mẫu, hãy chọn vị trí của bạn.</p></div><div class="actions"><button id="pickStart" type="button">Ghim bản đồ</button><button id="locateStart" type="button">Vị trí của tôi</button><button id="catalogStart" type="button">Chọn từ địa điểm</button></div></div>
-      <details class="extra-settings"><summary>Tùy chọn thêm</summary><div class="setup-fields">
-        <label>Vĩ độ<input id="latitude" type="number" min="-90" max="90" step="any" value="16.0544" required></label>
-        <label>Kinh độ<input id="longitude" type="number" min="-180" max="180" step="any" value="108.2022" required></label>
-        <label>Sở thích<input id="interests" maxlength="100" placeholder="Ví dụ: văn hóa, thiên nhiên"></label>
-        <label>Chủ đề gợi ý<select id="tripTheme"><option value="">Tất cả chủ đề</option></select></label>
-      </div><div class="check-options"><label><input id="includeMeals" type="checkbox" checked> Gợi ý thời gian ăn</label><label><input id="includeCoffee" type="checkbox"> Thêm giờ nghỉ</label><label><input id="autoAdd" type="checkbox"> Tự bổ sung tối đa 3 điểm phù hợp</label></div><p class="muted">Thời gian ăn/nghỉ linh hoạt. Địa điểm ăn uống cụ thể chỉ có khi bạn chọn hoặc bật tự bổ sung.</p></details>
-      <div class="plan-bar"><p id="tripSummary" aria-live="polite">Chưa chọn địa điểm. Bắt đầu từ những nơi bạn yêu thích.</p><button id="planButton" class="primary" type="submit">Xem lịch gợi ý</button></div>
-    </form>
-  </section>
-  <p id="systemStatus" class="system-status" role="status">Khám phá Việt Nam · Lập lịch tại Hà Nội và Đà Nẵng.</p>
-  <div id="workspace" class="workspace" data-view="explore">
-    <section class="workbench">
-      <nav class="view-tabs" aria-label="Các khu vực chuyến đi"><button data-view="explore" class="active" aria-pressed="true">Khám phá</button><button data-view="selected" aria-pressed="false">Đã chọn <span id="selectedCount">0</span></button><button data-view="itinerary" aria-pressed="false">Lịch trình</button><button data-view="map" aria-pressed="false">Bản đồ</button></nav>
-      <div id="selectionStrip" class="selection-strip" aria-label="Những nơi trong chuyến đi"></div>
-      <section id="exploreView" class="view-content">
-        <div class="section-heading"><h2>Chọn nơi muốn ghé</h2><span id="recommendationLocation" class="pill">Đà Nẵng</span></div>
-        <p class="muted">Thêm địa điểm vào chuyến đi rồi đánh dấu những nơi nhất định phải ghé. Tối đa 12 điểm.</p>
-        <h3>Địa điểm nổi bật</h3><div id="featuredList" class="card-grid"></div>
-        <h3>Hợp với chuyến đi của bạn</h3><div id="contextualList" class="card-grid"></div><p id="recommendationStatus" class="muted" role="status"></p>
-        <h3>Tìm địa điểm khác</h3>
-        <div class="search-fields"><label>Tên địa điểm<input id="searchInput" type="search" placeholder="Tên, bí danh, tên không dấu…"></label><label>Địa phương<select id="locationFilter"><option value="">Toàn Việt Nam</option></select></label><label>Loại hình<select id="typeFilter"><option value="">Tất cả loại hình</option></select></label></div>
-        <h3 id="listTitle">Địa điểm</h3><div id="poiList" class="card-grid"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gợi ý POI · Where2Go</title>
+    <link rel="stylesheet" href="/vendor/leaflet.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Đến nội dung</a>
+    <header class="app-header">
+      <a class="brand" href="/">Where2Go<span>Địa điểm hợp với bạn.</span></a>
+      <nav aria-label="Điều hướng chính">
+        <a href="/" aria-current="page">Gợi ý POI</a
+        ><a href="/explore">Khám phá</a
+        ><a href="/itinerary">Lịch trình <span data-trip-count>0</span></a>
+      </nav>
+      <a class="data-link" href="/dataset.html">Dữ liệu</a>
+    </header>
+    <main id="main" class="recommend-page">
+      <section class="page-intro">
+        <p class="eyebrow">GỢI Ý THEO SỞ THÍCH VÀ NGỮ CẢNH</p>
+        <h1>Hôm nay, bạn muốn khám phá điều gì?</h1>
+        <p>
+          Chọn điều bạn thích. Tìm những nơi phù hợp và hiểu lý do trước khi lên
+          đường.
+        </p>
       </section>
-      <section id="selectedView" class="view-content" hidden><div class="section-heading"><h2>Chuyến đi của bạn</h2><button id="optimizeOrder" type="button">Để ứng dụng xếp thứ tự</button></div><p id="orderStatus" class="muted"></p><div id="selectedList"></div><button id="selectedPlan" class="primary" type="button">Xem lịch gợi ý</button></section>
-      <section id="itineraryView" class="view-content" hidden><div class="section-heading"><h2>Lịch cho bạn lựa chọn</h2><button id="tryWindows" type="button">Thử khung giờ khác</button></div><p id="planStatus" role="status"></p><div id="itinerary" aria-live="polite"></div><div id="timeline"></div></section>
-    </section>
-    <section id="mapPanel" class="map-panel" aria-label="Bản đồ Việt Nam"><div id="map"></div><nav class="map-shortcuts" aria-label="Chuyển vùng bản đồ"><button type="button" id="viewVietnam">Toàn Việt Nam</button><button type="button" data-map-location="Hà Nội">Hà Nội</button><button type="button" data-map-location="Đà Nẵng">Đà Nẵng</button></nav><p id="mapStatus" class="map-status" hidden role="status"></p><p id="mapInstruction" class="map-instruction" hidden>Chạm vào bản đồ để đặt điểm xuất phát.</p><article id="detailPanel" class="detail-panel" aria-live="polite"></article></section>
-  </div>
-</main>
-<dialog id="confirmDialog"><h2>Chọn phương án có điều chỉnh</h2><div id="confirmationChanges"></div><p>Các điểm chưa xếp vẫn được giữ trong chuyến đi của bạn.</p><div class="actions"><button id="cancelOption" type="button">Quay lại</button><button id="confirmOption" class="primary" type="button">Chấp nhận điều chỉnh và chọn lịch</button></div></dialog>
-<script src="/vendor/leaflet.js"></script><script src="/map.js" defer></script><script src="/app.js" defer></script>
-</body></html>
+      <form id="recommendForm" class="recommend-form">
+        <div class="form-grid">
+          <label
+            >Địa phương<select id="location">
+              <option>Đà Nẵng</option>
+              <option>Hà Nội</option>
+            </select></label
+          ><label>Ngày dự định đi<input id="date" type="date" required /></label
+          ><label
+            >Bán kính đường chim bay (km)<input
+              id="radius"
+              type="number"
+              min="1"
+              max="80"
+              value="30"
+              required /></label
+          ><label
+            >Bạn ưu tiên điều gì?<select id="preset">
+              <option value="balanced">Cân bằng các yếu tố</option>
+              <option value="interests">Hợp sở thích</option>
+              <option value="nearby">Đi gần</option>
+              <option value="quality">Đánh giá địa điểm</option>
+            </select></label
+          >
+        </div>
+        <fieldset>
+          <legend>Điều bạn quan tâm</legend>
+          <div id="topics" class="topics"></div>
+        </fieldset>
+        <label
+          >Nhu cầu của bạn<input
+            id="interests"
+            maxlength="100"
+            placeholder="Ví dụ: tìm hiểu lịch sử, ngắm cảnh biển…"
+        /></label>
+        <details class="extra-settings">
+          <summary>Loại hình và điểm xuất phát</summary>
+          <div class="form-grid">
+            <label
+              >Loại hình ưu tiên (có thể chọn nhiều)<select
+                id="categories"
+                multiple
+                size="5"
+              ></select></label
+            ><label
+              >Vĩ độ<input
+                id="latitude"
+                type="number"
+                min="-90"
+                max="90"
+                step="any"
+                required /></label
+            ><label
+              >Kinh độ<input
+                id="longitude"
+                type="number"
+                min="-180"
+                max="180"
+                step="any"
+                required
+            /></label>
+          </div>
+          <div class="actions">
+            <button id="locate" type="button">Dùng vị trí của tôi</button
+            ><a href="/explore?pick=start">Chọn điểm xuất phát trên bản đồ</a>
+          </div>
+        </details>
+        <p class="muted">
+          Vị trí mặc định là tâm địa phương. Bạn có thể đổi điểm xuất phát để
+          kết quả gần với nhu cầu hơn.
+        </p>
+        <button id="recommendButton" class="primary" type="submit">
+          Nhận gợi ý
+        </button>
+      </form>
+      <section aria-labelledby="resultsTitle">
+        <div class="section-heading">
+          <h2 id="resultsTitle">Địa điểm dành cho chuyến đi của bạn</h2>
+          <a href="/itinerary"
+            >Xem chuyến đi <span data-trip-count>0</span> →</a
+          >
+        </div>
+        <p id="resultSummary" role="status">
+          Chọn sở thích rồi bấm Nhận gợi ý để bắt đầu.
+        </p>
+        <p id="systemStatus" class="system-status" role="status"></p>
+        <div id="results" class="recommend-results"></div>
+      </section>
+    </main>
+    <dialog id="poiDialog" aria-label="Chi tiết địa điểm"></dialog>
+    <script src="/vendor/leaflet.js"></script>
+    <script src="/common.js" defer></script>
+    <script src="/recommend.js" defer></script>
+  </body>
+</html>

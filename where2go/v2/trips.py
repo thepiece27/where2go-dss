@@ -12,10 +12,10 @@ from .dataset import curated_focus_ids
 from .durations import choose_duration, fallback_profile
 from .hours import intervals_on_date
 from .planner import access_point, clock, overlap
-from .quality import manual_trip_quality, recommendation_eligible
-from .ranking import rank
+from .quality import manual_trip_quality
 
 POLICY_VERSION = "trip-choice-1.0"
+TripContextFields = ("start", "date", "location", "selected_poi_ids", "interests", "preferred_categories")
 BEAM_WIDTH = 64
 MAX_ROUTE_CHECKS = 18
 SEARCH_BUDGET_SECONDS = 12
@@ -61,38 +61,18 @@ def recommendations(pois, manifest, request, router, context):
     featured = [by_id[i] for i in curated_focus_ids().get(request.location, [])
                 if i in by_id and i not in selected and manual_trip_quality(by_id[i], request.location)["eligible"]
                 and intervals_on_date(by_id[i].get("hours_weekly"), by_id[i].get("hours_exceptions"), request.date) != []]
+    from .recommendations import RecommendationRequest, recommend_pois
+    # Preserve the old editorial/contextual wire shape; the homepage uses items.
+    payload = {k: getattr(request, k) for k in TripContextFields}
+    payload["top_k"] = 20
+    data = recommend_pois(pois, manifest, RecommendationRequest.model_validate(payload), router, context)
     featured_ids = {p["poi_id"] for p in featured}
-    anchors = [(by_id[i]["latitude"], by_id[i]["longitude"]) for i in selected
-               if i in by_id and manual_trip_quality(by_id[i], request.location)["eligible"]]
-    origin = (request.start.latitude, request.start.longitude)
-    anchors = anchors or [origin]
-    pool = [p for p in pois if p["poi_id"] not in selected | featured_ids
-            and recommendation_eligible(p, request.location)
-            and intervals_on_date(p.get("hours_weekly"), p.get("hours_exceptions"), request.date) != []]
-    pool.sort(key=lambda p: (p["category"] not in request.preferred_categories if request.preferred_categories else False,
-                            min(haversine(a, (p["latitude"], p["longitude"])) for a in anchors), p["poi_id"]))
-    pool = pool[:30]
-    ranked, ranking_info, routing_status = [], None, "unavailable"
-    if pool and router.manifest.get("pbf_sha256") == manifest.get("osm", {}).get("sha256"):
-        try:
-            points = [position(p) for p in pool]
-            matrix = router.table([origin] + [(p["latitude"], p["longitude"]) for p in points])
-            if matrix and matrix["sources"][0]["distance"] <= SNAP_LIMIT_METERS:
-                valid = [(p, matrix["durations"][0][i]) for i, p in enumerate(pool, 1)
-                         if matrix["sources"][i]["distance"] <= SNAP_LIMIT_METERS
-                         and matrix["durations"][0][i] is not None and matrix["durations"][i][0] is not None]
-                if valid:
-                    ranked, ranking_info = rank([p for p, _ in valid], [t for _, t in valid], request, context)
-                    routing_status = "ready"
-        except RoutingUnavailable:
-            pass
-    # Without road evidence, proximity is explicitly geographic, never a driving-time claim.
-    contextual = ranked[:8] if ranked else pool[:8]
+    contextual = [p for p in data["items"] if p["poi_id"] not in featured_ids][:8]
+    routing_status = "ready" if data["travel_metric"] == "road_time" else "unavailable"
     return {"dataset_version": manifest["version"], "policy_version": POLICY_VERSION,
-            "routing_status": routing_status, "ranking": ranking_info,
+            "routing_status": routing_status, "ranking": data["ranking"] if routing_status == "ready" else None,
             "featured": [card(p) | {"reasons": [f"Điểm nổi bật tại {request.location}"]} for p in featured[:12]],
-            "contextual": [card(p) | {"reasons": ["Gần các điểm bạn đã chọn (theo vị trí)" if selected else "Gần điểm xuất phát (theo vị trí)"]}
-                           for p in contextual]}
+            "contextual": contextual}
 
 
 @dataclass(frozen=True)

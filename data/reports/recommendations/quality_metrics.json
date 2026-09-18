@@ -1,0 +1,1737 @@
+{
+  "dataset_version": "v2-ae66988a1053d0de",
+  "policy_version": "poi-recommendation-1.0",
+  "evaluation_sha256": "18ad5a22832e2dc7f540c51a4fdcb5cf3df91a9b26ad4c01ae8becb6d7482d1c",
+  "labels_sha256": "34ac1c5dc277554c55f2f3cf30aad3f6ee676762e4b6b7955a94589c1cb5f8b3",
+  "design": "Group/owner case study, pooled top-10, relevance 0..3, binary relevance >=2; not independent users.",
+  "results": [
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "nearby",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "quality",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "content",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "content",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "equal",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "equal",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "crisp",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "fuzzy",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    }
+  ]
+}

@@ -3,7 +3,6 @@ import json
 import math
 import threading
 from copy import deepcopy
-from pathlib import Path
 import httpx
 from .config import OSRM_URL, ROOT
 

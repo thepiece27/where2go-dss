@@ -9,7 +9,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from shapely.geometry import Point, shape
 from where2go.config import ROOT
 from where2go.catalog import haversine
-from where2go.ranking import normalize
 from where2go.v2.catalog import load_catalog, CATALOG_V2
 from where2go.v2.google_collector import entity_coordinate, google_identity, name_similarity
 from where2go.v2.quality import weak_name
