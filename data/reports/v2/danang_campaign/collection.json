@@ -1,15 +1,16 @@
 {
-  "updated_at": "2026-09-19T15:24:35.467531+00:00",
-  "status": "running",
+  "updated_at": "2026-09-19T15:24:57.771309+00:00",
+  "status": "interrupted",
   "pilot": {
     "total": 20,
     "accepted": 19,
     "status": "PASS"
   },
   "queries": {
-    "complete": 119,
+    "complete": 120,
     "subdivided": 5,
-    "pending": 1382
+    "transient_error": 1,
+    "pending": 1380
   },
   "discovered": 302,
   "collected": 310,
