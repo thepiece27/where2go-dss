@@ -6,6 +6,7 @@
 2. **[Kịch bản bảo vệ](kich_ban_bao_ve.md)** — 18 slide, phần nói chính 27 phút, lời nói và hình nên dùng, demo ba phút, phụ lục và câu hỏi phản biện.
 3. **[Hướng dẫn chạy](huong_dan_chay.md)** — môi trường, API/OSRM, dựng dữ liệu, notebook, kiểm thử và vận hành.
 4. **[Thu thập Đà Nẵng – Hội An](thu_thap_danang_hoian.md)** — phạm vi mới, crawler có checkpoint, ảnh, kiểm duyệt và báo cáo trước/sau.
+5. **[29 ca demo Đà Nẵng đã chạy thật](demo_da_nang_thuc_nghiem.md)** — thao tác theo người dùng, kết quả trên web, ảnh/request/response, thay đổi sở thích–tọa độ–lịch trình và đánh giá cả điểm tốt lẫn lỗi.
 
 [Notebook có kết quả](../notebooks/phan_tich_du_lieu_poi.ipynb) · [14 biểu đồ PNG](assets/poi/) · [Bảng phân tích và kiểm chứng](../data/reports/analysis/) · [PDF nguồn](../paper/).
 
