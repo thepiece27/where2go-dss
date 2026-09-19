@@ -80,6 +80,8 @@ def load_catalog(path=CATALOG_V2):
         for poi_id, weekly in hours.items():
             pois[poi_id]["hours_weekly"] = weekly
         for poi in pois.values():
+            from .discovery import requires_boat
+            poi["requires_boat"] = requires_boat(poi)
             poi.setdefault("description", "")
             poi.setdefault("hours_raw", "")
             poi.setdefault("hours_weekly", None)

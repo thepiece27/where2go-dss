@@ -22,6 +22,7 @@ SEARCH_BUDGET_SECONDS = 12
 PROFILES = (("convenient", "Thuận đường", "balanced"), ("more", "Ghé nhiều hơn", "quick"),
             ("relaxed", "Thư thả", "relaxed"))
 REASONS = {
+    "boat_transfer_required": "Địa điểm cần chặng tàu ra Cù Lao Chàm; chưa hỗ trợ trong lịch trình ô tô.",
     "not_found": "Địa điểm không còn trong catalog; hãy tìm và chọn lại.",
     "identity_or_coordinates_unconfirmed": "Danh tính hoặc tọa độ chưa đủ tin cậy.",
     "business_closed": "Nguồn dữ liệu báo địa điểm đã đóng hoặc tạm đóng cửa.",

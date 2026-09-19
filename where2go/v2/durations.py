@@ -3,6 +3,14 @@ from .taxonomy import CATEGORIES
 
 
 DEFAULT_PROFILES = {
+    "water_park": (120, 180, 300),
+    "playground": (20, 45, 90),
+    "walking_street": (30, 60, 120),
+    "bridge": (15, 30, 60),
+    "cave": (30, 60, 120),
+    "waterfall": (45, 90, 150),
+    "campground": (60, 120, 240),
+    "trailhead": (30, 90, 180),
     "viewpoint": (15, 30, 45),
     "historic": (20, 45, 75),
     "temple": (20, 45, 90),
@@ -51,4 +59,3 @@ def choose_duration(profile, pace, override=None):
     if not isinstance(value, int) or value <= 0:
         raise ValueError("Duration profile không hợp lệ")
     return value, profile.get("method", "unknown")
-

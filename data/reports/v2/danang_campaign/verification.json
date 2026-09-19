@@ -1,0 +1,22 @@
+{
+  "dataset_version": "v2-c3ad315d02c5356a",
+  "catalog_audit": {"status": "PASS", "hard_errors": 0, "warnings": 4818},
+  "tests": {"full_suite_passed": 128, "campaign_suite_after_final_regression_passed": 12, "distinct_tests_passed": 129},
+  "ruff": "PASS",
+  "javascript_syntax": "PASS",
+  "desktop_mobile_smoke": "PASS",
+  "offline_basemap": "PASS",
+  "javascript_runtime_errors": [],
+  "notebook": {"status": "PASS", "executed_code_cells": 14},
+  "live_api_matches_catalog_version": true,
+  "campaign_unique_image_urls_validated": 102,
+  "scope_total_before": 2545,
+  "scope_total_after": 2625,
+  "new_temple_cafe_restaurant_count": 0,
+  "accepted_campaign_policy_violations": [],
+  "osrm": "UNAVAILABLE",
+  "real_driving_route_verification": "NOT RUN",
+  "human_recommendation_quality": "NOT GRADED",
+  "collection_saturated": false,
+  "note": "Verification applies to this published snapshot. Subsequent background collection and publication require their own versioned audit."
+}

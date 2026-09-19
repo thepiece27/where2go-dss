@@ -621,6 +621,7 @@ def build(args):
     if args.manual.exists():
         input_paths.append(args.manual)
     input_paths.extend(path for path in [geometry_path, image_checks, *collected_paths] if path.exists())
+    input_paths.append(ROOT / "data/curation/danang_hoian_scope.geojson")
     code_paths = [
         Path(__file__),
         ROOT / "where2go/hours.py",
@@ -636,6 +637,7 @@ def build(args):
         ROOT / "scripts/export_dataset_v2.py",
         ROOT / "scripts/merge_sources_v2.py",
         ROOT / "where2go/v2/google_collector.py",
+        ROOT / "where2go/v2/discovery.py",
     ]
     input_hash = pipeline_hash(input_paths + code_paths)
     build_version = "v2-" + input_hash[:16]
@@ -679,6 +681,8 @@ def build(args):
         foreign = db.execute("PRAGMA foreign_key_check").fetchall()
         if foreign:
             raise RuntimeError(f"Foreign key errors: {foreign[:5]}")
+    if pipeline_hash(input_paths + code_paths) != input_hash:
+        raise RuntimeError("Inputs changed during build; staging was not published. Pause collection and rebuild.")
     staging_output.replace(args.output)
     args.report_dir.mkdir(parents=True, exist_ok=True)
     (args.report_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")

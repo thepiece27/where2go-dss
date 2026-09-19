@@ -1,0 +1,283 @@
+{
+  "dataset_version": "v2-c3ad315d02c5356a",
+  "baseline_version": "v2-ae66988a1053d0de",
+  "before_total": 2545,
+  "after_total": 2625,
+  "coverage": [
+    {
+      "category": "attraction",
+      "before": 49,
+      "after": 63,
+      "delta": 14,
+      "valid_image": 24,
+      "rating_pair": 21,
+      "hours": 16,
+      "recommendation_eligible": 25
+    },
+    {
+      "category": "beach",
+      "before": 16,
+      "after": 33,
+      "delta": 17,
+      "valid_image": 23,
+      "rating_pair": 23,
+      "hours": 8,
+      "recommendation_eligible": 21
+    },
+    {
+      "category": "bridge",
+      "before": 0,
+      "after": 5,
+      "delta": 5,
+      "valid_image": 5,
+      "rating_pair": 5,
+      "hours": 5,
+      "recommendation_eligible": 5
+    },
+    {
+      "category": "cafe",
+      "before": 1106,
+      "after": 1106,
+      "delta": 0,
+      "valid_image": 5,
+      "rating_pair": 5,
+      "hours": 139,
+      "recommendation_eligible": 147
+    },
+    {
+      "category": "campground",
+      "before": 0,
+      "after": 2,
+      "delta": 2,
+      "valid_image": 2,
+      "rating_pair": 2,
+      "hours": 0,
+      "recommendation_eligible": 2
+    },
+    {
+      "category": "craft_village",
+      "before": 5,
+      "after": 5,
+      "delta": 0,
+      "valid_image": 3,
+      "rating_pair": 3,
+      "hours": 2,
+      "recommendation_eligible": 3
+    },
+    {
+      "category": "gallery",
+      "before": 4,
+      "after": 4,
+      "delta": 0,
+      "valid_image": 0,
+      "rating_pair": 0,
+      "hours": 1,
+      "recommendation_eligible": 1
+    },
+    {
+      "category": "historic",
+      "before": 25,
+      "after": 26,
+      "delta": 1,
+      "valid_image": 3,
+      "rating_pair": 2,
+      "hours": 1,
+      "recommendation_eligible": 3
+    },
+    {
+      "category": "market",
+      "before": 51,
+      "after": 58,
+      "delta": 7,
+      "valid_image": 24,
+      "rating_pair": 13,
+      "hours": 11,
+      "recommendation_eligible": 15
+    },
+    {
+      "category": "museum",
+      "before": 21,
+      "after": 25,
+      "delta": 4,
+      "valid_image": 14,
+      "rating_pair": 13,
+      "hours": 14,
+      "recommendation_eligible": 14
+    },
+    {
+      "category": "nature_area",
+      "before": 17,
+      "after": 19,
+      "delta": 2,
+      "valid_image": 4,
+      "rating_pair": 4,
+      "hours": 1,
+      "recommendation_eligible": 4
+    },
+    {
+      "category": "old_quarter",
+      "before": 1,
+      "after": 1,
+      "delta": 0,
+      "valid_image": 1,
+      "rating_pair": 1,
+      "hours": 1,
+      "recommendation_eligible": 1
+    },
+    {
+      "category": "park",
+      "before": 36,
+      "after": 51,
+      "delta": 15,
+      "valid_image": 17,
+      "rating_pair": 17,
+      "hours": 11,
+      "recommendation_eligible": 17
+    },
+    {
+      "category": "performance_venue",
+      "before": 1,
+      "after": 1,
+      "delta": 0,
+      "valid_image": 0,
+      "rating_pair": 0,
+      "hours": 0,
+      "recommendation_eligible": 0
+    },
+    {
+      "category": "playground",
+      "before": 0,
+      "after": 2,
+      "delta": 2,
+      "valid_image": 2,
+      "rating_pair": 2,
+      "hours": 2,
+      "recommendation_eligible": 2
+    },
+    {
+      "category": "restaurant",
+      "before": 1084,
+      "after": 1084,
+      "delta": 0,
+      "valid_image": 5,
+      "rating_pair": 4,
+      "hours": 229,
+      "recommendation_eligible": 272
+    },
+    {
+      "category": "temple",
+      "before": 116,
+      "after": 116,
+      "delta": 0,
+      "valid_image": 15,
+      "rating_pair": 7,
+      "hours": 7,
+      "recommendation_eligible": 11
+    },
+    {
+      "category": "theme_park",
+      "before": 5,
+      "after": 6,
+      "delta": 1,
+      "valid_image": 3,
+      "rating_pair": 3,
+      "hours": 4,
+      "recommendation_eligible": 5
+    },
+    {
+      "category": "trailhead",
+      "before": 0,
+      "after": 1,
+      "delta": 1,
+      "valid_image": 1,
+      "rating_pair": 1,
+      "hours": 1,
+      "recommendation_eligible": 1
+    },
+    {
+      "category": "viewpoint",
+      "before": 7,
+      "after": 9,
+      "delta": 2,
+      "valid_image": 2,
+      "rating_pair": 2,
+      "hours": 2,
+      "recommendation_eligible": 2
+    },
+    {
+      "category": "walking_street",
+      "before": 0,
+      "after": 3,
+      "delta": 3,
+      "valid_image": 3,
+      "rating_pair": 3,
+      "hours": 1,
+      "recommendation_eligible": 3
+    },
+    {
+      "category": "water_park",
+      "before": 0,
+      "after": 2,
+      "delta": 2,
+      "valid_image": 2,
+      "rating_pair": 2,
+      "hours": 2,
+      "recommendation_eligible": 2
+    },
+    {
+      "category": "waterfall",
+      "before": 0,
+      "after": 2,
+      "delta": 2,
+      "valid_image": 2,
+      "rating_pair": 2,
+      "hours": 1,
+      "recommendation_eligible": 2
+    },
+    {
+      "category": "zoo",
+      "before": 1,
+      "after": 1,
+      "delta": 0,
+      "valid_image": 0,
+      "rating_pair": 0,
+      "hours": 0,
+      "recommendation_eligible": 0
+    }
+  ],
+  "collection_status": "paused",
+  "saturated": false,
+  "pilot": {
+    "total": 20,
+    "accepted": 19,
+    "status": "PASS"
+  },
+  "pilot_history": [
+    {
+      "total": 20,
+      "accepted": 3,
+      "status": "NOT_PASSED"
+    }
+  ],
+  "discovered": 189,
+  "collected": 175,
+  "accepted_observations": 116,
+  "accepted_unique_google_ids": 103,
+  "queries": {
+    "complete": 7,
+    "unresolved": 2,
+    "pending": 1479
+  },
+  "review_reasons": {
+    "outside_scope_or_missing_identity": 4,
+    "ambiguous_catalog_match": 6,
+    "unknown_category": 23,
+    "excluded_service": 18,
+    "source_location_conflict": 1,
+    "generic_name_needs_review": 1,
+    "excluded_category": 2,
+    "place_of_worship": 4
+  },
+  "policy_violations": [],
+  "scope_policy": "19 ward polygons; 25 m precision tolerance on six coastal wards; no inland boundary expansion"
+}

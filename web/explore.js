@@ -1,4 +1,9 @@
 "use strict";
+function exploreFilters() {
+  const location = $("locationFilter").value, category = $("typeFilter").value;
+  return {scope: location === "danang_hoian" ? location : "", location: location === "danang_hoian" ? "" : location,
+    category: category === "tourism" ? "" : category, tourism_only: category === "tourism"};
+}
 const state = {
   city: tripStore.city(),
   basemapVersion: 0,
@@ -28,8 +33,7 @@ async function loadPois(append = false) {
   $("loadMore").disabled = true;
   const params = new URLSearchParams({
     view: "explore",
-    location: $("locationFilter").value,
-    category: $("typeFilter").value,
+    ...exploreFilters(),
     query: $("searchInput").value,
     limit: 40,
     offset: state.offset,
@@ -106,6 +110,8 @@ async function loadPoiDetail(ident) {
         p.hours_raw || "Chưa có giờ mở cửa; cần kiểm tra trước khi đi.",
       ),
     );
+    if (p.requires_boat) panel.append(node("p", "Cần chặng tàu ra Cù Lao Chàm; chưa hỗ trợ trong lịch trình ô tô.", "quality-note"));
+    appendPlaceMetadata(panel, p);
     if (basemapConfig[p.location] && p.manual_trip_quality?.eligible) {
       if (p.location !== state.city)
         panel.append(
@@ -175,9 +181,9 @@ $("searchInput").oninput = () => {
   timer = setTimeout(() => loadPois(), 250);
 };
 $("locationFilter").onchange = () => {
-  const c = basemapConfig[$("locationFilter").value];
+  const c = basemapConfig[$("locationFilter").value === "danang_hoian" ? "Đà Nẵng" : $("locationFilter").value];
   if (c) map?.setView(c.center, 12, { animate: false });
-  loadBasemap($("locationFilter").value);
+  loadBasemap($("locationFilter").value === "danang_hoian" ? "Đà Nẵng" : $("locationFilter").value);
   loadPois();
 };
 $("loadMore").onclick = () => {
@@ -197,6 +203,7 @@ $("pickStart").onclick = () => {
       $("locationFilter").append(o);
     }
     await initializeMap();
+    if ($("locationFilter").value === "danang_hoian") map?.setView([16.02, 108.25], 11);
     if (state.pickingStart) {
       $("mapInstruction").hidden = false;
       map?.setView(basemapConfig[state.city].center, 12, { animate: false });

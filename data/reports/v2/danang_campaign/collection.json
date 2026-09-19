@@ -1,0 +1,51 @@
+{
+  "updated_at": "2026-09-19T15:24:35.467531+00:00",
+  "status": "running",
+  "pilot": {
+    "total": 20,
+    "accepted": 19,
+    "status": "PASS"
+  },
+  "queries": {
+    "complete": 119,
+    "subdivided": 5,
+    "pending": 1382
+  },
+  "discovered": 302,
+  "collected": 310,
+  "accepted": 176,
+  "new_entities": 134,
+  "categories": {
+    "beach": 41,
+    "park": 29,
+    "nature_area": 5,
+    "attraction": 31,
+    "theme_park": 5,
+    "museum": 15,
+    "craft_village": 1,
+    "water_park": 3,
+    "playground": 7,
+    "market": 10,
+    "historic": 2,
+    "campground": 7,
+    "bridge": 11,
+    "viewpoint": 2,
+    "waterfall": 2,
+    "trailhead": 1,
+    "walking_street": 3,
+    "zoo": 1
+  },
+  "rejected_or_review": {
+    "outside_scope_or_missing_identity": 12,
+    "ambiguous_catalog_match": 9,
+    "excluded_service": 57,
+    "source_location_conflict": 1,
+    "generic_name_needs_review": 3,
+    "unknown_category": 42,
+    "excluded_category": 5,
+    "place_of_worship": 5
+  },
+  "with_image_candidate": 174,
+  "history": [],
+  "saturated": false
+}

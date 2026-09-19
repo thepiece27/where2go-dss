@@ -1,6 +1,14 @@
 "use strict";
 const $ = (id) => document.getElementById(id);
 const labels = {
+  water_park: "Công viên nước",
+  playground: "Sân chơi",
+  walking_street: "Phố đi bộ và đường dạo",
+  bridge: "Cầu tham quan",
+  cave: "Hang động",
+  waterfall: "Thác nước",
+  campground: "Khu cắm trại",
+  trailhead: "Điểm bắt đầu đường mòn",
   museum: "Bảo tàng",
   historic: "Di tích",
   attraction: "Tham quan",
@@ -30,6 +38,14 @@ function node(tag, text, className) {
   if (text !== undefined) el.textContent = text;
   if (className) el.className = className;
   return el;
+}
+function appendPlaceMetadata(panel, poi) {
+  const clean = value => String(value).replace(/[\ue000-\uf8ff]/g, "").replace(/\s+/g, " ").trim();
+  if (poi.address_raw) panel.append(node("p", clean(poi.address_raw)));
+  if (poi.phone) panel.append(node("p", "Điện thoại: " + clean(poi.phone)));
+  if (poi.website) panel.append(safeLink(poi.website, "Website địa điểm"));
+  if (poi.admission_raw?.length) panel.append(node("p", "Vé/phí theo nguồn: " + poi.admission_raw.join(" · ")));
+  for (const image of (poi.images || []).filter(i => i.url !== poi.image).slice(0, 3)) panel.append(imageElement(image.url, poi.name));
 }
 function button(text, handler, className) {
   const el = node("button", text, className);
@@ -293,6 +309,7 @@ async function openPoiDialog(p) {
       node("p", poi.description || "Chưa có mô tả."),
       node("p", poi.hours_raw || "Chưa có giờ mở cửa; kiểm tra trước khi đi."),
     );
+    appendPlaceMetadata(dialog, poi);
     const a = node("a", "Xem trên bản đồ", "button-link");
     a.href = "/explore?poi=" + encodeURIComponent(ident);
     dialog.append(a);

@@ -1,0 +1,8 @@
+{
+  "0x31706734de3838ab:0x7196d8dffc8c7fea": {
+    "decision": "needs_review",
+    "reason": "source_location_conflict",
+    "evidence_url": "https://ticket-stations.com/vinwonders-nha-trang-ticket",
+    "notes": "Panel tên MerPerle Hòn Tằm Pier - Cảng Hòn Tằm nhưng tọa độ/địa chỉ ở Đà Nẵng, website bán vé Nha Trang. Giữ chờ đối chiếu nguồn độc lập; không xác nhận danh tính chỉ từ tọa độ Maps."
+  }
+}

@@ -113,6 +113,9 @@ def access_sort_key(point):
 def manual_trip_quality(poi, location=None):
     """Missing metadata is allowed; unresolved identity/position/closure is not."""
     reasons = []
+    from .discovery import requires_boat
+    if requires_boat(poi):
+        reasons.append("boat_transfer_required")
     if not explorable(poi):
         reasons.append("identity_or_coordinates_unconfirmed")
     if poi.get("business_status") in ("temporarily_closed", "permanently_closed"):

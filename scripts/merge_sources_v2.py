@@ -284,6 +284,12 @@ def import_collected(db, paths, queue, version):
             record = add_record(db, source, row["record_id"], row, row.get("scraped_at"))
             counts["attempts"] += 1
             place = row.get("place") or {}
+            if row.get("campaign") == "danang_hoian":
+                from where2go.v2.discovery import region_for, exclusion_reason
+                if (not region_for(place.get("latitude"), place.get("longitude"))
+                        or exclusion_reason(place.get("name", ""), place.get("category", ""))):
+                    counts["campaign_policy_rejected"] += 1
+                    continue
             if (row.get("identity") or {}).get("status") != "tool_confirmed" or row.get("accepted") is not True:
                 queue.append({"source_file": path.name, "source_key": row["record_id"], "seed_name": row.get("seed_name"),
                               "reasons": ["collection_identity_review_required"], "candidate_poi_ids": [row.get("canonical_poi_id")]})
@@ -308,6 +314,17 @@ def import_collected(db, paths, queue, version):
                 counts["new_pois"] += 1
             db.execute("INSERT OR IGNORE INTO source_links VALUES (?,?,?,?,?,?,?)", (ident, record, "tool_cross_source_identity", 1., "tool:source_review", "confirmed", row.get("review_evidence")))
             timestamp = row.get("scraped_at")
+            if row.get("campaign") == "danang_hoian":
+                category = canonical_category(place.get("category"), place.get("name")) or row.get("expected_category")
+                obs = observe(db, ident, record, "category", category, timestamp, "restricted_internal", "live_entity_category")
+                db.execute("DELETE FROM poi_categories WHERE poi_id=?", (ident,))
+                db.execute("INSERT INTO poi_categories VALUES (?,?,1,?)", (ident, category, obs))
+                for tag in tags_for(category):
+                    db.execute("INSERT INTO poi_categories VALUES (?,?,0,?)", (ident, "tag:" + tag, obs))
+                select(db, ident, "category", obs, category, "Campaign category from confirmed entity", version)
+                profile = fallback_profile(category)
+                db.execute("UPDATE duration_profiles SET short_minutes=?,typical_minutes=?,long_minutes=? WHERE poi_id=? AND method='category_default'",
+                           (profile["short_minutes"], profile["typical_minutes"], profile["long_minutes"], ident))
             position_obs = observe(db, ident, record, "entity_coordinate", {"latitude": coordinate[0], "longitude": coordinate[1]}, timestamp,
                                    "restricted_internal", "google_entity_url_not_verified_entrance")
             db.execute("INSERT OR REPLACE INTO access_points VALUES (?,?,?,?,?,?,0,?,?)", (
@@ -325,6 +342,12 @@ def import_collected(db, paths, queue, version):
                 if not empty(value):
                     obs = observe(db, ident, record, field, value, timestamp, "restricted_internal", "live_entity_panel")
                     select_if_empty(db, ident, field, value, obs, version, "Accepted live entity panel")
+            for field, value in (("description", place.get("description")), ("google_category_raw", place.get("category")),
+                                 ("hours_raw", "\n".join(place.get("hours") or [])), ("amenities_raw", place.get("amenities_raw")),
+                                 ("admission_raw", place.get("admission_raw"))):
+                if not empty(value):
+                    obs = observe(db, ident, record, field, value, timestamp, "restricted_internal", "live_entity_panel")
+                    select_if_empty(db, ident, field, value, obs, version, "Accepted live entity metadata")
             rating, count = parse_rating(place.get("rating")), parse_review_count(place.get("review_count"))
             if rating is not None and count is not None:
                 obs = observe(db, ident, record, "rating_pair", {"rating": rating, "review_count": count}, timestamp, "restricted_internal", "same_live_entity_panel")
@@ -343,6 +366,9 @@ def import_collected(db, paths, queue, version):
                 counts["structured_hours"] += 1
             if add_image(db, ident, place.get("image_url"), url, record, timestamp, "entity_panel"):
                 counts["image_candidates"] += 1
+            for image_url in place.get("image_urls", [])[:4]:
+                if image_url != place.get("image_url"):
+                    add_image(db, ident, image_url, url, record, timestamp, "entity_panel")
             business = "permanently_closed" if place.get("permanently_closed") else "temporarily_closed" if place.get("temporarily_closed") else None
             if business:
                 db.execute("UPDATE pois SET business_status=? WHERE poi_id=?", (business, ident))
@@ -357,11 +383,17 @@ def apply_images(db, cache_path, version):
         db.execute("UPDATE poi_images SET validation_status=?,checked_at=?,content_type=?,width=?,height=? WHERE url=? AND validation_status<>'rejected_url'", (
             result["status"], result.get("checked_at"), result.get("content_type"), result.get("width"), result.get("height"), url))
     selected = set()
+    galleries = defaultdict(list)
     # A URL repeated across distinct entities needs review instead of being a representative photo.
     shared = {r[0] for r in db.execute("SELECT url FROM poi_images GROUP BY url HAVING count(DISTINCT poi_id)>1")}
     candidates = db.execute("SELECT i.*,o.observed_at FROM poi_images i LEFT JOIN field_observations o USING(observation_id) WHERE validation_status='valid' AND identity_status IN ('entity_panel','legacy_entity_link') ORDER BY o.observed_at DESC,i.image_id").fetchall()
     for row in candidates:
-        if row["poi_id"] in selected or row["url"] in shared:
+        if row["url"] in shared:
+            continue
+        if len(galleries[row["poi_id"]]) < 4:
+            galleries[row["poi_id"]].append({"url": row["url"], "source_url": row["source_url"], "provider": row["provider"],
+                                             "checked_at": row["checked_at"], "rights_status": row["rights_status"]})
+        if row["poi_id"] in selected:
             continue
         select(db, row["poi_id"], "image", row["observation_id"], row["url"], "Entity-linked image; live content and dimensions checked", version)
         select(db, row["poi_id"], "image_metadata", row["observation_id"], {
@@ -369,6 +401,8 @@ def apply_images(db, cache_path, version):
             "validation_status": row["validation_status"], "checked_at": row["checked_at"],
             "width": row["width"], "height": row["height"], "identity_status": row["identity_status"]}, "Image provenance", version)
         selected.add(row["poi_id"])
+    for ident, gallery in galleries.items():
+        select(db, ident, "images", None, gallery, "Validated entity gallery; per-image provenance in poi_images", version)
     return {"selected": len(selected), "shared_urls_held_for_review": len(shared), "cached_checks": len(checks)}
 
 

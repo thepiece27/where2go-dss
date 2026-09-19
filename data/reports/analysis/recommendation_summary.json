@@ -1,25 +1,24 @@
 {
-  "dataset_version": "v2-ae66988a1053d0de",
+  "dataset_version": "v2-c3ad315d02c5356a",
   "policy_version": "poi-recommendation-1.0",
   "runs": 96,
   "scenarios": 16,
   "travel_modes": {
-    "road_time": 12,
-    "geographic_distance": 4
+    "geographic_distance": 16
   },
   "same_crisp_fuzzy_top10": 16,
   "quality_status": "NOT GRADED",
   "preset_overlap": {
     "balanced": 1.0,
     "interests": 0.9125,
-    "nearby": 0.76875,
-    "quality": 0.8375
+    "nearby": 0.75625,
+    "quality": 0.8250000000000001
   },
   "pool_overlap": {
-    "20": 0.9375,
+    "20": 0.86875,
     "40": 1.0,
-    "80": 0.9625
+    "80": 0.9375
   },
-  "road_geo_overlap_mean": 0.9416666666666668,
-  "evaluation_sha256": "18ad5a22832e2dc7f540c51a4fdcb5cf3df91a9b26ad4c01ae8becb6d7482d1c"
+  "road_geo_overlap_mean": null,
+  "evaluation_sha256": "3ea0d407e54cc7d0d39035237285c0e2dbdcf6ffe6efe113f361ded6383810f5"
 }

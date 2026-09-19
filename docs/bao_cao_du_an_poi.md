@@ -1,3 +1,9 @@
+<!-- DANANG_CURRENT_START -->
+> Dữ liệu đang phục vụ: `v2-c3ad315d02c5356a`. Đợt Đà Nẵng–Hội An có trạng thái **paused**, 2625 POI trong phạm vi (bao gồm dữ liệu cũ). Các số liệu baseline bên dưới vẫn là kết quả lịch sử của snapshot được ghi kèm; xem báo cáo chiến dịch và notebook đã cập nhật để đối chiếu snapshot mới.
+
+[Báo cáo chiến dịch hiện tại](../data/reports/v2/danang_campaign/report.md)
+<!-- DANANG_CURRENT_END -->
+
 # Where2Go — Hệ gợi ý POI dựa trên nội dung và ngữ cảnh, kết hợp ra quyết định đa tiêu chí
 
 **Đề tài:** POI Recommendation System. **Ngày biên soạn:** 19/09/2026. **Snapshot phân tích:** `v2-ae66988a1053d0de`, schema `2.1`, dữ liệu xuất ngày 18/09/2026. Các số liệu dưới đây mô tả snapshot này; không phải thống kê đầy đủ các địa điểm ở Việt Nam.

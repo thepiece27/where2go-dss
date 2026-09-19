@@ -5,6 +5,7 @@
 1. **[Báo cáo dự án POI](bao_cao_du_an_poi.md)** — tài liệu nội dung chính: bài toán, nguồn/crawler, EDA, toàn bộ công thức cốt lõi, thuật toán, thực nghiệm, hai paper và hướng phát triển.
 2. **[Kịch bản bảo vệ](kich_ban_bao_ve.md)** — 18 slide, phần nói chính 27 phút, lời nói và hình nên dùng, demo ba phút, phụ lục và câu hỏi phản biện.
 3. **[Hướng dẫn chạy](huong_dan_chay.md)** — môi trường, API/OSRM, dựng dữ liệu, notebook, kiểm thử và vận hành.
+4. **[Thu thập Đà Nẵng – Hội An](thu_thap_danang_hoian.md)** — phạm vi mới, crawler có checkpoint, ảnh, kiểm duyệt và báo cáo trước/sau.
 
 [Notebook có kết quả](../notebooks/phan_tich_du_lieu_poi.ipynb) · [14 biểu đồ PNG](assets/poi/) · [Bảng phân tích và kiểm chứng](../data/reports/analysis/) · [PDF nguồn](../paper/).
 

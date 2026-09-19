@@ -76,6 +76,8 @@ def filter_candidates(pois, request):
             reason = poi["serving_quality"]["reasons"][0]
         elif poi.get("category") in request.excluded_categories:
             reason = "excluded_category"
+        elif poi.get("requires_boat"):
+            reason = "boat_transfer_required"
         elif not poi.get("access_points"):
             reason = "missing_access_point"
         else:
