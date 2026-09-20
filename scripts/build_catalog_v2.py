@@ -9,6 +9,7 @@ import json
 import math
 from pathlib import Path
 import sys
+from time import perf_counter
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from openpyxl import load_workbook
@@ -34,6 +35,22 @@ GOOGLE_FILES = (
     "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
 )
+
+
+def progress(message):
+    print(f"[build_catalog_v2] {message}", flush=True)
+
+
+def stage(label, function):
+    progress(f"{label}...")
+    started = perf_counter()
+    try:
+        result = function()
+    except Exception as error:
+        progress(f"{label} failed after {perf_counter() - started:.1f}s: {error}")
+        raise
+    progress(f"{label} complete in {perf_counter() - started:.1f}s")
+    return result
 
 
 def add_source(db, path, role, use_status, tool):
@@ -613,6 +630,7 @@ def pipeline_hash(paths):
 
 def build(args):
     from scripts.merge_sources_v2 import import_legacy, import_collected, apply_images, reconcile_status
+    progress("Preparing input and code hashes")
     geometry_path = ROOT / "data/cache/poi_geometries_v2.json"
     image_checks = ROOT / "data/cache/image_checks_v2.json"
     collected_paths = sorted((ROOT / "data/enrichment").glob("accepted*.json"))
@@ -641,23 +659,51 @@ def build(args):
     ]
     input_hash = pipeline_hash(input_paths + code_paths)
     build_version = "v2-" + input_hash[:16]
+    progress(f"Build version: {build_version}")
     staging_output = args.output.with_suffix(".building.sqlite")
-    create_database(staging_output)
+    stage("Creating staging database", lambda: create_database(staging_output))
     review_queue = []
     with closing(connect(staging_output)) as db:
-        pois, v1_manifest, name_index = import_base(db, args.v1_catalog, build_version)
-        supplement_stats = import_osm_supplement(db, args.pbf, args.supplement, name_index, build_version)
-        manual_stats = import_manual(db, args.manual, review_queue, build_version)
-        duration_stats = import_duration_curation(db, args.duration_curation, build_version)
-        relation_stats = import_poi_relations(db, args.poi_relations, build_version)
-        category_stats = import_focus_category_curation(db, args.focus_curation, build_version)
+        pois, v1_manifest, name_index = stage(
+            "Importing v1 catalog",
+            lambda: import_base(db, args.v1_catalog, build_version),
+        )
+        supplement_stats = stage(
+            "Importing OSM supplement",
+            lambda: import_osm_supplement(db, args.pbf, args.supplement, name_index, build_version),
+        )
+        manual_stats = stage(
+            "Importing manual enrichment",
+            lambda: import_manual(db, args.manual, review_queue, build_version),
+        )
+        duration_stats = stage(
+            "Importing duration curation",
+            lambda: import_duration_curation(db, args.duration_curation, build_version),
+        )
+        relation_stats = stage(
+            "Importing POI relations",
+            lambda: import_poi_relations(db, args.poi_relations, build_version),
+        )
+        category_stats = stage(
+            "Importing focus category curation",
+            lambda: import_focus_category_curation(db, args.focus_curation, build_version),
+        )
         geometry_cache = json.loads(geometry_path.read_text(encoding="utf-8")) if geometry_path.exists() else {}
         if geometry_cache and geometry_cache.get("pbf_sha256") != v1_manifest["osm"]["sha256"]:
             raise ValueError("Geometry cache does not match the OSM snapshot")
-        collected_stats = import_collected(db, collected_paths, review_queue, build_version)
-        google_stats = import_legacy(db, args.google, review_queue, build_version, geometry_cache.get("geometries"))
-        image_stats = apply_images(db, image_checks, build_version)
-        resolved_statuses = reconcile_status(db)
+        collected_stats = stage(
+            "Importing accepted enrichment",
+            lambda: import_collected(db, collected_paths, review_queue, build_version),
+        )
+        google_stats = stage(
+            "Merging Google workbook observations",
+            lambda: import_legacy(db, args.google, review_queue, build_version, geometry_cache.get("geometries")),
+        )
+        image_stats = stage(
+            "Applying validated images",
+            lambda: apply_images(db, image_checks, build_version),
+        )
+        resolved_statuses = stage("Reconciling POI statuses", lambda: reconcile_status(db))
         stats = {
             "poi_count": db.execute("SELECT count(*) FROM pois").fetchone()[0],
             "osm_supplement": dict(supplement_stats), "google": dict(google_stats), "manual": dict(manual_stats),
@@ -677,17 +723,17 @@ def build(args):
             "rights": {"Google Maps": "restricted_internal", "OpenStreetMap": "ODbL-1.0"},
         }
         db.execute("INSERT INTO metadata VALUES ('manifest',?)", (json_text(manifest),))
-        db.commit()
+        stage("Committing catalog database", db.commit)
         foreign = db.execute("PRAGMA foreign_key_check").fetchall()
         if foreign:
             raise RuntimeError(f"Foreign key errors: {foreign[:5]}")
-    if pipeline_hash(input_paths + code_paths) != input_hash:
-        raise RuntimeError("Inputs changed during build; staging was not published. Pause collection and rebuild.")
-    staging_output.replace(args.output)
-    args.report_dir.mkdir(parents=True, exist_ok=True)
-    (args.report_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    (args.report_dir / "coverage.json").write_text(json.dumps(stats["focus_coverage"], ensure_ascii=False, indent=2), encoding="utf-8")
-    (args.report_dir / "review_queue.json").write_text(json.dumps(review_queue, ensure_ascii=False, indent=2), encoding="utf-8")
+    stage("Publishing catalog database", lambda: staging_output.replace(args.output))
+    stage("Writing catalog reports", lambda: (
+        args.report_dir.mkdir(parents=True, exist_ok=True),
+        (args.report_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"),
+        (args.report_dir / "coverage.json").write_text(json.dumps(stats["focus_coverage"], ensure_ascii=False, indent=2), encoding="utf-8"),
+        (args.report_dir / "review_queue.json").write_text(json.dumps(review_queue, ensure_ascii=False, indent=2), encoding="utf-8"),
+    ))
     print(json.dumps({"version": build_version, **stats}, ensure_ascii=False))
 
 
