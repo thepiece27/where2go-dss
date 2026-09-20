@@ -66,6 +66,55 @@ def test_preference_and_preset_change_controlled_ranking():
     assert score_candidates(p, req(preset="nearby"))[0][0][0]["poi"]["poi_id"] == "2"
 
 
+@pytest.mark.parametrize(
+    "preferences",
+    [
+        {"interests": ["tâm linh"]},
+        {"interests": ["TAM LINH"]},
+        {"preferred_categories": ["temple"]},
+        {"preferred_categories": ["cafe"]},
+    ],
+)
+def test_explicit_preference_overrides_default_tourism_category_filter(preferences):
+    rows = [
+        poi(1, name="Bãi biển", category="beach", description="biển thư giãn"),
+        poi(2, name="Chùa Linh Ứng", category="temple", description="tâm linh"),
+        poi(3, name="Quán cà phê", category="cafe", google_category_raw="Cafe"),
+        poi(4, name="Nhà hàng", category="restaurant", google_category_raw="Restaurant"),
+    ]
+    context = RankingContext(rows)
+    base = req(scope="danang_hoian", tourism_only=True)
+    default = prepare_candidates(rows, MANIFEST, base, Router(), context)
+    assert [r["poi"]["poi_id"] for r in default["rows"]] == ["1"]
+    changed = base.model_copy(update=preferences)
+    prepared = prepare_candidates(rows, MANIFEST, changed, Router(), context)
+    expected = "cafe" if preferences.get("preferred_categories") == ["cafe"] else "temple"
+    assert {r["poi"]["category"] for r in prepared["rows"]} == {"beach", expected}
+    result = recommendation_response(prepared, changed)
+    assert result["items"][0]["category"] == expected
+    assert result["items"][0]["criteria"]["preference_match"] >= 0.7
+    # Removing the preference must restore the default pool on the same context.
+    assert prepare_candidates(rows, MANIFEST, base, Router(), context) == default
+
+
+def test_spiritual_interest_preserves_scope_radius_hours_and_selection():
+    rows = [
+        poi(1, name="Chùa mở cửa", category="temple"),
+        poi(2, name="Chùa đóng cửa", category="temple", business_status="permanently_closed"),
+        poi(3, name="Chùa nghỉ hôm nay", category="temple", hours_weekly=[[]] * 7),
+        poi(4, name="Chùa đã chọn", category="temple"),
+        poi(5, name="Chùa xa", category="temple", latitude=15.99),
+        poi(6, name="Chùa ngoài phạm vi", category="temple", latitude=16.30, longitude=107.8),
+    ]
+    context = RankingContext(rows)
+    r = req(interests=["tâm linh"], tourism_only=True, scope="danang_hoian",
+            radius_km=5, selected_poi_ids=["4"])
+    result = prepare_candidates(rows, MANIFEST, r, Router(), context)
+    assert [row["poi"]["poi_id"] for row in result["rows"]] == ["1"]
+    wider = prepare_candidates(rows, MANIFEST, r.model_copy(update={"radius_km": 80}), Router(), context)
+    assert {row["poi"]["poi_id"] for row in wider["rows"]} == {"1", "5"}
+
+
 def test_partial_route_batches_use_geographic_cost_for_every_poi():
     class Partial(Router):
         def table(self, coords):

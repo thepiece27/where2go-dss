@@ -4,6 +4,7 @@ Scores are relative to the complete retrieved pool, never to the displayed top K
 No behavioral labels are inferred from these scores.
 """
 
+import re
 from typing import Literal
 
 import numpy as np
@@ -11,16 +12,17 @@ from pydantic import Field
 
 from where2go.catalog import haversine
 from where2go.config import SNAP_LIMIT_METERS
-from where2go.ranking import topsis
+from where2go.ranking import normalize, topsis
 from where2go.routing import RoutingUnavailable
 from .hours import intervals_on_date
 from .models import AHPPreferences
 from .quality import recommendation_eligible
 from .ranking import ahp_weights, confidence
 from .trip_models import TripContext
-from .discovery import matches_scope
+from .discovery import EXCLUDED, matches_scope
+from .taxonomy import CATEGORIES
 
-POLICY_VERSION = "poi-recommendation-1.0"
+POLICY_VERSION = "poi-recommendation-1.1"
 CRITERIA = ("preference_match", "place_quality", "travel_cost", "data_confidence")
 PRESETS = {
     "balanced": (0.40, 0.30, 0.20, 0.10),
@@ -54,9 +56,16 @@ def prepare_candidates(
         raise ValueError("pool_size must be positive")
     origin = (request.start.latitude, request.start.longitude)
     selected = set(request.selected_poi_ids)
+    # A default tourism group must not silently defeat an explicit preference.
+    included_categories = set(request.preferred_categories) & EXCLUDED
+    if any(re.search(r"\btam linh\b", normalize(text)) for text in request.interests):
+        included_categories.add("temple")
+    if not request.tourism_only:
+        included_categories.clear()
     eligible, distances = [], {}
     for poi in pois:
-        if not matches_scope(poi, request.scope, request.tourism_only):
+        if not matches_scope(poi, request.scope, request.tourism_only,
+                             include_categories=included_categories):
             continue
         if poi["poi_id"] in selected or not recommendation_eligible(
             poi, request.location
@@ -163,6 +172,12 @@ def prepare_candidates(
         "candidate_count": len(rows),
         "pool_size_per_source": pool_size,
         "dataset_version": manifest["version"],
+        "included_categories": sorted(included_categories),
+        "filter_message": (
+            "Đã xét thêm " + ", ".join(CATEGORIES[c] for c in sorted(included_categories))
+            + " theo sở thích hoặc loại hình bạn chọn."
+            if included_categories else ""
+        ),
     }
 
 
@@ -214,8 +229,6 @@ def recommendation_response(prepared, request, method="crisp"):
         if content["category_match"]:
             reasons.append("Thuộc loại hình bạn ưu tiên.")
         elif content["matched_tokens"]:
-            from where2go.ranking import normalize
-
             matched = [
                 text
                 for text in request.interests

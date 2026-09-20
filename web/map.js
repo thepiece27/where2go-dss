@@ -16,6 +16,13 @@ let mapFeatures = [],
   tilesLoaded = 0;
 const localCache = new Map();
 
+// Both exploration and itinerary load this module and share these filter inputs.
+function exploreFilters() {
+  const location = $("locationFilter").value, category = $("typeFilter").value;
+  return {scope: location === "danang_hoian" ? location : "", location: location === "danang_hoian" ? "" : location,
+    category: category === "tourism" ? "" : category, tourism_only: category === "tourism"};
+}
+
 function basemapStyle(feature) {
   const kind = feature.properties?.kind,
     detail = feature.properties?.class;

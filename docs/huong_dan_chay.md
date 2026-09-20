@@ -1,5 +1,7 @@
 # Hướng dẫn chạy, phân tích và bảo trì Where2Go DSS
 
+**Để setup và khởi động demo từ đầu:** xem [Setup và khởi động demo đầy đủ](setup_va_khoi_dong_demo.md), gồm lệnh PowerShell theo từng terminal, Docker/OSRM, kiểm tra API/web và biên bản đã chạy. Tài liệu bên dưới giữ hướng dẫn phân tích, dựng dữ liệu và bảo trì tổng quát.
+
 Các lệnh dưới đây chạy từ **thư mục gốc dự án**, bằng PowerShell trên Windows. Môi trường đã kiểm tra dùng Python **3.13.15**. Không cần kích hoạt virtualenv; gọi thẳng Python trong `.venv` để tránh nhầm môi trường.
 
 ## 1. Chọn đúng nhu cầu
@@ -49,6 +51,8 @@ Frontend là HTML/CSS/JavaScript tĩnh, không có `npm install` hoặc `npm run
 2. Bấm **Nhận gợi ý**. Mở **Vì sao được gợi ý?** để xem điểm tương đối và dữ liệu thiếu. Thêm các POI muốn ghé.
 3. Trang Khám phá cho tìm POI toàn quốc; chọn đúng địa phương chuyến đi để thêm điểm. Các địa bàn ngoài Hà Nội/Đà Nẵng chỉ khám phá.
 4. Sang Lịch trình để đặt giờ, thời lượng, điểm bắt buộc; xem phương án và xác nhận khi có điều chỉnh. Đổi trang hoặc tải lại vẫn giữ nháp trên cùng trình duyệt.
+
+Khi sửa sở thích, kết quả cũ được xóa; bấm **Nhận gợi ý** để tính lại. Trình duyệt lưu nháp lựa chọn, không lưu danh sách gợi ý để dùng lại cho yêu cầu khác. Nhóm mặc định **Tham quan và ngoài trời** vẫn loại dịch vụ và nơi thờ tự khi chưa có yêu cầu cụ thể. Chọn **tâm linh** (hoặc nhập cụm từ này, có/không dấu) sẽ xét thêm đền/chùa; chọn rõ **Loại hình ưu tiên** sẽ cho phép loại đó qua bộ lọc nhóm mặc định, kể cả cà phê. Web hiển thị nhóm được xét thêm. Phạm vi, bán kính, ngày mở cửa và việc loại điểm đã chọn vẫn được áp dụng. Đây là ưu tiên xếp hạng, không phải cam kết mọi kết quả chỉ thuộc một loại hình.
 
 ### Thử API theo dữ liệu thật
 

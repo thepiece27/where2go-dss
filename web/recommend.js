@@ -162,6 +162,7 @@ async function recommend() {
       (data.personalized
         ? "Gợi ý theo sở thích bạn khai báo. "
         : "Chưa khai báo sở thích: gợi ý theo vị trí và mẫu ưu tiên. ") +
+        (data.filter_message ? `${data.filter_message} ` : "") +
         data.routing_message,
     );
   } catch (e) {

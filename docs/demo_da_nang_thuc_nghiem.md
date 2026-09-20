@@ -1,5 +1,7 @@
 # Demo Đà Nẵng: 29 kịch bản đã chạy thật và đánh giá kết quả
 
+> Cập nhật 21/09/2026: bản ghi bên dưới giữ kết quả lịch sử. Lỗi nhóm mặc định loại đền/chùa khi chọn tâm linh, hoặc loại cà phê khi đã chọn rõ loại hình, đã được sửa. Xem [13 ca kiểm thử cập nhật sở thích](kiem_thu_cap_nhat_so_thich.md) để biết hành vi hiện tại; kết luận xung đột bộ lọc ở R13 không còn đại diện cho bản mới.
+
 **Lần chạy chính:** 2026-09-19T23:11:36.727402+07:00 → 2026-09-19T23:13:23.430191+07:00. **Web:** http://127.0.0.1:8000. **Dataset:** `v2-c3ad315d02c5356a`; **routing:** `1e1d2ec5e5a86240`; **Chromium:** `151.0.7922.34`.
 
 ## 1. Kết luận để dùng khi demo

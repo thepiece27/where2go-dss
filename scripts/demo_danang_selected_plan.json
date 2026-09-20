@@ -1,0 +1,28 @@
+[
+  {
+    "id": "K1_so_thich_va_uu_tien",
+    "steps": [
+      {"case": "topic_nature_balanced", "topics": ["thiên nhiên"]},
+      {"case": "topic_history_culture_balanced", "topics": ["lịch sử", "văn hóa"]},
+      {"case": "topic_history_culture_nearby", "topics": ["lịch sử", "văn hóa"]},
+      {"case": "topic_spiritual_nearby", "topics": ["tâm linh"]}
+    ]
+  },
+  {
+    "id": "K2_vi_tri_va_ban_kinh",
+    "steps": [
+      {"case": "geo_center_5_sea", "text": "biển"},
+      {"case": "geo_coast_5_sea", "text": "biển"},
+      {"case": "geo_coast_3_sea", "text": "biển"},
+      {"case": "geo_coast_1_sea", "text": "biển"}
+    ]
+  },
+  {
+    "id": "K3_nhu_cau_va_loai_hinh",
+    "steps": [
+      {"case": "text_sea_interests", "text": "biển"},
+      {"case": "sea_with_beach", "text": "biển"},
+      {"case": "text_sea_interests", "text": "biển"}
+    ]
+  }
+]

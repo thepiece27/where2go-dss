@@ -1,9 +1,4 @@
 "use strict";
-function exploreFilters() {
-  const location = $("locationFilter").value, category = $("typeFilter").value;
-  return {scope: location === "danang_hoian" ? location : "", location: location === "danang_hoian" ? "" : location,
-    category: category === "tourism" ? "" : category, tourism_only: category === "tourism"};
-}
 const state = {
   city: tripStore.city(),
   basemapVersion: 0,

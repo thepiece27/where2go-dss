@@ -58,9 +58,16 @@ def exclusion_reason(name, raw_category=""):
     return None
 
 
-def matches_scope(poi, scope="", tourism_only=False):
+def matches_scope(poi, scope="", tourism_only=False, *, include_categories=()):
+    """Explicit recommendation choices may override the default thematic filter.
+
+    Collection and exploration keep the original policy unless an allowance is
+    supplied. Geographic scope is always enforced.
+    """
     if scope and not region_for(poi.get("latitude"), poi.get("longitude")):
         return False
+    if poi.get("category") in include_categories:
+        return True
     if tourism_only and (poi.get("category") in EXCLUDED or exclusion_reason(poi.get("name", ""), poi.get("google_category_raw", ""))):
         return False
     return True
