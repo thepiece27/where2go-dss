@@ -1,110 +1,118 @@
 {
-  "dataset_version": "v2-ae66988a1053d0de",
-  "reference_date": "2026-09-18",
-  "poi_count": 16018,
+  "dataset_version": "v2-c3ad315d02c5356a",
+  "reference_date": "2026-09-19",
+  "poi_count": 16129,
   "location_count": 34,
   "status_counts": {
-    "usable": 15430,
+    "usable": 15541,
     "excluded": 315,
     "needs_review": 273
   },
   "category_counts": {
-    "temple": 6068,
+    "temple": 6082,
     "restaurant": 2909,
     "cafe": 2335,
-    "park": 1500,
-    "attraction": 969,
-    "historic": 902,
-    "market": 422,
-    "museum": 338,
-    "viewpoint": 260,
-    "beach": 126,
-    "nature_area": 56,
-    "theme_park": 45,
+    "park": 1515,
+    "attraction": 982,
+    "historic": 903,
+    "market": 429,
+    "museum": 342,
+    "viewpoint": 262,
+    "beach": 143,
+    "nature_area": 65,
+    "theme_park": 48,
     "craft_village": 35,
     "gallery": 32,
     "zoo": 11,
+    "bridge": 6,
     "performance_venue": 6,
-    "old_quarter": 4
+    "campground": 5,
+    "old_quarter": 4,
+    "cave": 3,
+    "playground": 3,
+    "waterfall": 3,
+    "walking_street": 3,
+    "water_park": 2,
+    "trailhead": 1
   },
-  "top_two_location_share": 0.45267823698339366,
+  "top_two_location_share": 0.45489490978981956,
   "coverage": {
     "Tên": {
-      "count": 16018,
-      "denominator": 16018,
+      "count": 16129,
+      "denominator": 16129,
       "percent": 100.0
     },
     "Tọa độ": {
-      "count": 16018,
-      "denominator": 16018,
+      "count": 16129,
+      "denominator": 16129,
       "percent": 100.0
     },
     "Mô tả": {
-      "count": 1693,
-      "denominator": 16018,
-      "percent": 10.569359470595579
+      "count": 1726,
+      "denominator": 16129,
+      "percent": 10.701221402442805
     },
     "Website": {
-      "count": 554,
-      "denominator": 16018,
-      "percent": 3.4586090648020975
+      "count": 578,
+      "denominator": 16129,
+      "percent": 3.5836071672143346
     },
     "Ảnh đã chọn": {
-      "count": 1048,
-      "denominator": 16018,
-      "percent": 6.542639530528156
+      "count": 1196,
+      "denominator": 16129,
+      "percent": 7.41521483042966
     },
     "Rating hợp lệ": {
-      "count": 86,
-      "denominator": 16018,
-      "percent": 0.5368959920089899
+      "count": 179,
+      "denominator": 16129,
+      "percent": 1.1098022196044393
     },
     "Giờ có cấu trúc": {
-      "count": 1244,
-      "denominator": 16018,
-      "percent": 7.766262954176552
+      "count": 1295,
+      "denominator": 16129,
+      "percent": 8.029016058032116
     },
     "Giờ đủ 7 ngày": {
-      "count": 1174,
-      "denominator": 16018,
-      "percent": 7.329254588587839
+      "count": 1220,
+      "denominator": 16129,
+      "percent": 7.564015128030256
     },
     "Thời lượng riêng": {
       "count": 33,
-      "denominator": 16018,
-      "percent": 0.2060182294918217
+      "denominator": 16129,
+      "percent": 0.20460040920081843
     },
     "Thời lượng xác minh": {
       "count": 0,
-      "denominator": 16018,
+      "denominator": 16129,
       "percent": 0.0
     },
     "Lối vào xác minh": {
       "count": 0,
-      "denominator": 16018,
+      "denominator": 16129,
       "percent": 0.0
     },
     "Khám phá được": {
-      "count": 15245,
-      "denominator": 16018,
-      "percent": 95.17417904857037
+      "count": 15356,
+      "denominator": 16129,
+      "percent": 95.20739041478083
     },
     "Đủ metadata gợi ý": {
-      "count": 1475,
-      "denominator": 16018,
-      "percent": 9.208390560619303
+      "count": 1564,
+      "denominator": 16129,
+      "percent": 9.696819393638787
     }
   },
   "ratings": {
-    "observation_rows": 1277,
-    "accepted_pair_rows": 101,
-    "accepted_pair_pois": 86,
-    "selected_rated_pois": 86,
-    "rated_serviceable_pois": 86,
-    "median_review_count": 543.0,
+    "observation_rows": 1412,
+    "accepted_pair_rows": 216,
+    "accepted_pair_pois": 179,
+    "selected_rated_pois": 179,
+    "rated_serviceable_pois": 176,
+    "median_review_count": 245.0,
     "median_rating": 4.5
   },
-  "duplicate_name_groups": 827,
+  "duplicate_name_groups": 834,
   "same_crisp_fuzzy_orders": 16,
   "crisp_weights": [
     0.39999999999999997,
@@ -120,19 +128,19 @@
   ],
   "collection_accepted": 89,
   "collection_targets": 149,
-  "unknown_provenance_date": 22154,
-  "selected_fields": 162659,
+  "unknown_provenance_date": 24135,
+  "selected_fields": 165565,
   "source_sha256": {
-    "access_points.csv": "1d852b6ded923b18e12cc6cce6018b44e1479cbe5727acd498575b874b267881",
-    "duration_profiles.csv": "0e4122ad25cfc6bdb21e8b368fe6055882b9b11a81704124b300f5cb70f50299",
-    "field_provenance.csv": "7a80df8490c869ddc36aa402dc42ab48b1c7adfb5e67a2080ad4c3773fd218a4",
-    "images.csv": "070f88ae91de6badb5dc34088f4517d70ff70f76663c7d53c57bdeb47a187b35",
-    "opening_hours.csv": "df2530c470e7b44c04e8bd3ec540f5cb4efe7ac1883e28cfabf6dbb7583c8ac3",
-    "pois.csv": "f7436159f71d8b785ca046a241775968eb0dcf909a4fc569b7a89c69b469b528",
-    "ratings.csv": "62b9cc5f42ddb90a530c6e8307c0dd5b10b3ba9183213c44601c21b933729337",
-    "sources.csv": "1c702b92824f4e1dc4a568c750ed5aafc716f1761fb41091101c2fde900167b2"
+    "access_points.csv": "85bacb2e3f7d05b5899ff466f5db63247d375a3a684ba8391dbf4882f364dc5b",
+    "duration_profiles.csv": "240be3d0881bfe068156b540040461daaeea371d6a0bf572e9e8f5861f3c0063",
+    "field_provenance.csv": "575a8c7e8d5148afe585f6d57ceb872b94ac406f637e4d39f29eb383add16625",
+    "images.csv": "6fc310d1b31fa5ae52659300feb23c4674945a1a7c4afcf073652ed41aae9618",
+    "opening_hours.csv": "b415d29ac1e2096a718f8b6f08408d1de6dcc2534a69d0a48c47abe62e5a8c18",
+    "pois.csv": "724ecd30983ffed1d2d34b79894952467d35befb0e52833b19765c2230ae8251",
+    "ratings.csv": "40dbc37945eb92a56ea876ec7324947495787965fadab795c8e9e391d50aa160",
+    "sources.csv": "60065abbac804390b7bf9131583cb4aa0bb1df90244b6c7a5357832292266b81"
   },
-  "evaluation_sha256": "acccb7477beccd6068ca3cc418ad65b60d9f0c0c2482ed7cb384432621b15fab",
+  "evaluation_sha256": "912abcbac093368445f2b847912c6b984eb9a90dfd34cce2eddd5d3084bdac8c",
   "versions": {
     "numpy": "2.2.6",
     "pandas": "2.2.3",

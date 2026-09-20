@@ -18,6 +18,7 @@ from .models import AHPPreferences
 from .quality import recommendation_eligible
 from .ranking import ahp_weights, confidence
 from .trip_models import TripContext
+from .discovery import matches_scope
 
 POLICY_VERSION = "poi-recommendation-1.0"
 CRITERIA = ("preference_match", "place_quality", "travel_cost", "data_confidence")
@@ -31,6 +32,8 @@ METHODS = ("nearby", "quality", "content", "equal", "crisp", "fuzzy")
 
 
 class RecommendationRequest(TripContext):
+    scope: Literal["", "danang_hoian"] = ""
+    tourism_only: bool = False
     preset: Literal["balanced", "interests", "nearby", "quality"] = "balanced"
     radius_km: float = Field(default=30, ge=1, le=80)
     top_k: int = Field(default=10, ge=1, le=20, strict=True)
@@ -53,6 +56,8 @@ def prepare_candidates(
     selected = set(request.selected_poi_ids)
     eligible, distances = [], {}
     for poi in pois:
+        if not matches_scope(poi, request.scope, request.tourism_only):
+            continue
         if poi["poi_id"] in selected or not recommendation_eligible(
             poi, request.location
         ):

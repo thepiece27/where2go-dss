@@ -39,6 +39,10 @@ def name_similarity(a, b):
 
 def normalize_place(raw, url):
     place = dict(raw)
+    from .google_hours import clean_google_text
+    for field in ("name", "address", "phone", "category", "description"):
+        if place.get(field):
+            place[field] = clean_google_text(place[field])
     url = place.get("google_maps_url") or url or place.get("url") or ""
     place["google_maps_url"] = url
     place["place_id"] = google_identity(url) or place.get("place_id")
@@ -158,6 +162,13 @@ async def collect_page(page, seed):
     place = normalize_place(raw, entity_url)
     place["entity_marker_evidence"] = marker
     place["image_url"] = next((url for url in images if image_url_allowed(url)), place.get("image_url"))
+    place["image_urls"] = list(dict.fromkeys(url for url in [place.get("image_url"), *images] if image_url_allowed(url)))[:4]
+    extras = await page.evaluate("""() => {
+        const text = s => [...document.querySelectorAll(s)].map(e => e.innerText.trim()).filter(Boolean);
+        return {amenities_raw: text('[data-section-id="7"] [aria-label]'),
+                admission_raw: text('a[data-item-id*="ticket"], button[data-item-id*="ticket"]')};
+    }""")
+    place.update(extras)
     assessment = assess_identity(seed, place)
     missing = [field for field in ("image_url", "hours", "rating", "review_count", "address") if place.get(field) in (None, "", [])]
     if weak_panel_name(place.get("name")) or not google_identity(entity_url):

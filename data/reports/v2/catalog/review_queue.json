@@ -887,19 +887,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "8",
-    "sheet": "Sheet1",
-    "row": 9,
-    "seed_name": "Chùa Láng Cát",
-    "result_name": "Chùa Láng Cát",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "10",
     "sheet": "Sheet1",
     "row": 11,
@@ -1353,19 +1340,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "45",
-    "sheet": "Sheet1",
-    "row": 46,
-    "seed_name": "Hồ Vị Xuyên",
-    "result_name": "Hồ Vị Xuyên",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "46",
     "sheet": "Sheet1",
     "row": 47,
@@ -1419,19 +1393,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "50",
-    "sheet": "Sheet1",
-    "row": 51,
-    "seed_name": "Hang Thẩm Ồm",
-    "result_name": "Hang Thẩm Ồm",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "51",
     "sheet": "Sheet1",
     "row": 52,
@@ -1477,19 +1438,6 @@
     "row": 55,
     "seed_name": "Vườn quốc gia Cúc Phương",
     "result_name": "Vườn quốc gia Cúc Phương",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "55",
-    "sheet": "Sheet1",
-    "row": 56,
-    "seed_name": "Hồ Đồng Chương",
-    "result_name": "Hồ Đồng Chương",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -1765,19 +1713,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "77",
-    "sheet": "Sheet1",
-    "row": 78,
-    "seed_name": "Bãi biển An Bàng",
-    "result_name": "An Bang Beach",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -2280,19 +2215,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "119",
-    "sheet": "Sheet1",
-    "row": 120,
-    "seed_name": "Động Linh Sơn",
-    "result_name": "Động Linh Sơn",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "120",
     "sheet": "Sheet1",
     "row": 121,
@@ -2683,19 +2605,6 @@
     "row": 155,
     "seed_name": "Đền Trung",
     "result_name": "Đền Trung",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "155",
-    "sheet": "Sheet1",
-    "row": 156,
-    "seed_name": "Hồ Khuôn Thần",
-    "result_name": "Ho Khuon Than",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -3126,19 +3035,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "193",
-    "sheet": "Sheet1",
-    "row": 194,
-    "seed_name": "Bàu Trắng",
-    "result_name": "Bau Trang",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "194",
     "sheet": "Sheet1",
     "row": 195,
@@ -3200,19 +3096,6 @@
     "row": 199,
     "seed_name": "Hòn Đá Bạc",
     "result_name": "Hòn Đá Bạc",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "199",
-    "sheet": "Sheet1",
-    "row": 200,
-    "seed_name": "Đầm Thị Tường",
-    "result_name": "Đầm Thị Tường",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -3794,19 +3677,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "249",
-    "sheet": "Sheet1",
-    "row": 250,
-    "seed_name": "Hồ Ea Snô",
-    "result_name": "Hồ Ea Snô",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "250",
     "sheet": "Sheet1",
     "row": 251,
@@ -4163,19 +4033,6 @@
     "row": 285,
     "seed_name": "Hoàng thành Thăng Long",
     "result_name": "Imperial Citadel of Thang Long",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "285",
-    "sheet": "Sheet1",
-    "row": 286,
-    "seed_name": "Cầu Long Biên",
-    "result_name": "cầu Long Biên",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -8029,19 +7886,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "617",
-    "sheet": "Sheet1",
-    "row": 601,
-    "seed_name": "Chùa lá",
-    "result_name": "Chùa Lá",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "618",
     "sheet": "Sheet1",
     "row": 602,
@@ -8220,19 +8064,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "635",
-    "sheet": "Sheet1",
-    "row": 619,
-    "seed_name": "Huyền Trân Công Chúa",
-    "result_name": "Huyền Trân Công Chúa",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "636",
     "sheet": "Sheet1",
     "row": 620,
@@ -8361,19 +8192,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "647",
-    "sheet": "Sheet1",
-    "row": 631,
-    "seed_name": "chùa Hưng Khánh",
-    "result_name": "Chua Hưng Khánh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -10839,19 +10657,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "884",
-    "sheet": "Sheet1",
-    "row": 854,
-    "seed_name": "Song Han Bridge",
-    "result_name": "Han River Bridge",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "885",
     "sheet": "Sheet1",
     "row": 855,
@@ -11066,6 +10871,32 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
+      "no_conservative_match"
+    ]
+  },
+  {
+    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
+    "source_key": "903",
+    "sheet": "Sheet1",
+    "row": 870,
+    "seed_name": "Khu vui chơi Vân Lại Viên",
+    "result_name": "Van Lai Vien Playground",
+    "status": "unmatched",
+    "candidate_poi_ids": [],
+    "reasons": [
+      "no_conservative_match"
+    ]
+  },
+  {
+    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
+    "source_key": "904",
+    "sheet": "Sheet1",
+    "row": 871,
+    "seed_name": "Vinpearl Hà Tĩnh",
+    "result_name": "Công viên nước Vinpearl Hà Tĩnh",
+    "status": "unmatched",
+    "candidate_poi_ids": [],
+    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -15083,19 +14914,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "1325",
-    "sheet": "Sheet1",
-    "row": 1288,
-    "seed_name": "Mung Chua Giang Sinh",
-    "result_name": "Mừng Chúa Giáng Sinh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "1326",
     "sheet": "Sheet1",
     "row": 1289,
@@ -15664,19 +15482,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "1367",
-    "sheet": "Sheet1",
-    "row": 1328,
-    "seed_name": "Museum of Folklore",
-    "result_name": "Museum of Folk Culture",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -20845,19 +20650,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "1846",
-    "sheet": "Sheet1",
-    "row": 1763,
-    "seed_name": "Quảng trường Hồ chí Minh",
-    "result_name": "Quảng trường Hồ Chí Minh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "1847",
     "sheet": "Sheet1",
     "row": 1764,
@@ -25483,9 +25275,12 @@
     "seed_name": "Nhà thờ Trinh Vương",
     "result_name": "Nhà thờ Trinh Vương",
     "status": "unmatched",
-    "candidate_poi_ids": [],
+    "candidate_poi_ids": [
+      "osm:way:978035287"
+    ],
     "reasons": [
-      "no_conservative_match"
+      "no_conservative_match",
+      "nearby_similar_entity_requires_review"
     ]
   },
   {
@@ -27637,9 +27432,12 @@
     "seed_name": "chùa Phước Sơn",
     "result_name": "Chùa Phước Sơn",
     "status": "unmatched",
-    "candidate_poi_ids": [],
+    "candidate_poi_ids": [
+      "osm:node:10167435017"
+    ],
     "reasons": [
-      "no_conservative_match"
+      "no_conservative_match",
+      "nearby_similar_entity_requires_review"
     ]
   },
   {
@@ -32425,19 +32223,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "3016",
-    "sheet": "Sheet1",
-    "row": 2837,
-    "seed_name": "Nhà thờ Long Bình",
-    "result_name": "Nhà thờ Long Bình",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "3018",
     "sheet": "Sheet1",
     "row": 2839,
@@ -35083,19 +34868,6 @@
     "row": 3072,
     "seed_name": "Thánh đường Thái Hải",
     "result_name": "Thai Hai Reserve Area of Ecological Houses-on-stilts Ethnic Village",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "3262",
-    "sheet": "Sheet1",
-    "row": 3073,
-    "seed_name": "Chùa Tăng Phúc",
-    "result_name": "Chùa Tăng Phúc",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -40430,19 +40202,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "3855",
-    "sheet": "Sheet1",
-    "row": 3630,
-    "seed_name": "Chùa Đông Quan",
-    "result_name": "Chùa Đồng Quan",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "3856",
     "sheet": "Sheet1",
     "row": 3631,
@@ -41350,19 +41109,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "3965",
-    "sheet": "Sheet1",
-    "row": 3730,
-    "seed_name": "Chùa Vẽ",
-    "result_name": "Chùa Vẽ",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -44897,19 +44643,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "4329",
-    "sheet": "Sheet1",
-    "row": 4074,
-    "seed_name": "Nhà Thờ Xuân Phong",
-    "result_name": "Nhà thờ Xuân Phong",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -55632,19 +55365,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "5314",
-    "sheet": "Sheet1",
-    "row": 5014,
-    "seed_name": "Plage de da nhai",
-    "result_name": "An Bang Beach",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "5315",
     "sheet": "Sheet1",
     "row": 5015,
@@ -56862,19 +56582,6 @@
     "row": 5104,
     "seed_name": "Bãi đá bảy màu",
     "result_name": "",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "5410",
-    "sheet": "Sheet1",
-    "row": 5105,
-    "seed_name": "Hồ đạ tẻh",
-    "result_name": "Hồ Đạ Tẻh",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -69280,19 +68987,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "6367",
-    "sheet": "Sheet1",
-    "row": 6012,
-    "seed_name": "nhà thờ Đông Cường",
-    "result_name": "Nhà thờ Đông Cường",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "6369",
     "sheet": "Sheet1",
     "row": 6013,
@@ -71536,19 +71230,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "6559",
-    "sheet": "Sheet1",
-    "row": 6181,
-    "seed_name": "Ca Chep Hoa Rong",
-    "result_name": "Tượng Cá Chép Hóa Rồng",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "6560",
     "sheet": "Sheet1",
     "row": 6182,
@@ -73471,19 +73152,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "6709",
-    "sheet": "Sheet1",
-    "row": 6322,
-    "seed_name": "Chùa Thanh Lâm",
-    "result_name": "Chùa Thanh Lâm",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "6710",
     "sheet": "Sheet1",
     "row": 6323,
@@ -74094,19 +73762,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "6759",
-    "sheet": "Sheet1",
-    "row": 6370,
-    "seed_name": "Chùa Thiên Tích",
-    "result_name": "Chùa Thiên Tích",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -75335,19 +74990,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "6868",
-    "sheet": "Sheet1",
-    "row": 6470,
-    "seed_name": "Thanh Vân Camp Site",
-    "result_name": "Thanh Vân Camp Site",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "6869",
     "sheet": "Sheet1",
     "row": 6471,
@@ -75371,19 +75013,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "6871",
-    "sheet": "Sheet1",
-    "row": 6473,
-    "seed_name": "Sunny Camping Sóc Sơn",
-    "result_name": "Sunny Camping Sóc Sơn",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -77237,19 +76866,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "7043",
-    "sheet": "Sheet1",
-    "row": 6645,
-    "seed_name": "hồ bơi quốc hùng",
-    "result_name": "Hồ bơi Quốc Hùng",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -88869,19 +88485,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "8130",
-    "sheet": "Sheet1",
-    "row": 7685,
-    "seed_name": "Nhà văn hóa Thiếu nhi phường Vệ An",
-    "result_name": "Nhà văn hóa Thiếu nhi phường Vệ An",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "8131",
     "sheet": "Sheet1",
     "row": 7686,
@@ -91424,19 +91027,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "8322",
-    "sheet": "Sheet1",
-    "row": 7866,
-    "seed_name": "Nhà thờ Hòa Nghĩa",
-    "result_name": "Nhà Thờ Hòa Nghĩa",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "8324",
     "sheet": "Sheet1",
     "row": 7867,
@@ -92447,19 +92037,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "8398",
-    "sheet": "Sheet1",
-    "row": 7936,
-    "seed_name": "Nhà văn hóa Khu phố Xa Loan",
-    "result_name": "Nhà văn hóa khu phố Xa Loan",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -94705,19 +94282,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
-    "source_key": "8585",
-    "sheet": "Sheet1",
-    "row": 8092,
-    "seed_name": "Nhà thiếu nhi Thái Nguyên",
-    "result_name": "Nhà Thiếu Nhi Thái Nguyên",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm.xlsx",
     "source_key": "8586",
     "sheet": "Sheet1",
     "row": 8093,
@@ -96331,19 +95895,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "8",
-    "sheet": "Sheet1",
-    "row": 9,
-    "seed_name": "Chùa Láng Cát",
-    "result_name": "Chùa Láng Cát",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "10",
     "sheet": "Sheet1",
     "row": 11,
@@ -96784,19 +96335,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "45",
-    "sheet": "Sheet1",
-    "row": 46,
-    "seed_name": "Hồ Vị Xuyên",
-    "result_name": "Hồ Vị Xuyên",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "46",
     "sheet": "Sheet1",
     "row": 47,
@@ -96850,19 +96388,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "50",
-    "sheet": "Sheet1",
-    "row": 51,
-    "seed_name": "Hang Thẩm Ồm",
-    "result_name": "Hang Thẩm Ồm",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "51",
     "sheet": "Sheet1",
     "row": 52,
@@ -96908,19 +96433,6 @@
     "row": 55,
     "seed_name": "Vườn quốc gia Cúc Phương",
     "result_name": "Vườn quốc gia Cúc Phương",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "55",
-    "sheet": "Sheet1",
-    "row": 56,
-    "seed_name": "Hồ Đồng Chương",
-    "result_name": "Hồ Đồng Chương",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -97196,19 +96708,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "77",
-    "sheet": "Sheet1",
-    "row": 78,
-    "seed_name": "Bãi biển An Bàng",
-    "result_name": "An Bang Beach",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -97711,19 +97210,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "119",
-    "sheet": "Sheet1",
-    "row": 120,
-    "seed_name": "Động Linh Sơn",
-    "result_name": "Động Linh Sơn",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "120",
     "sheet": "Sheet1",
     "row": 121,
@@ -98114,19 +97600,6 @@
     "row": 155,
     "seed_name": "Đền Trung",
     "result_name": "Đền Trung",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "155",
-    "sheet": "Sheet1",
-    "row": 156,
-    "seed_name": "Hồ Khuôn Thần",
-    "result_name": "Ho Khuon Than",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -98557,19 +98030,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "193",
-    "sheet": "Sheet1",
-    "row": 194,
-    "seed_name": "Bàu Trắng",
-    "result_name": "Bau Trang",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "194",
     "sheet": "Sheet1",
     "row": 195,
@@ -98631,19 +98091,6 @@
     "row": 199,
     "seed_name": "Hòn Đá Bạc",
     "result_name": "Hòn Đá Bạc",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "199",
-    "sheet": "Sheet1",
-    "row": 200,
-    "seed_name": "Đầm Thị Tường",
-    "result_name": "Đầm Thị Tường",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -99225,19 +98672,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "249",
-    "sheet": "Sheet1",
-    "row": 250,
-    "seed_name": "Hồ Ea Snô",
-    "result_name": "Hồ Ea Snô",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "250",
     "sheet": "Sheet1",
     "row": 251,
@@ -99594,19 +99028,6 @@
     "row": 285,
     "seed_name": "Hoàng thành Thăng Long",
     "result_name": "Imperial Citadel of Thang Long",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "285",
-    "sheet": "Sheet1",
-    "row": 286,
-    "seed_name": "Cầu Long Biên",
-    "result_name": "cầu Long Biên",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -103676,19 +103097,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "617",
-    "sheet": "Sheet1",
-    "row": 618,
-    "seed_name": "Chùa lá",
-    "result_name": "Chùa Lá",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "618",
     "sheet": "Sheet1",
     "row": 619,
@@ -103867,19 +103275,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "635",
-    "sheet": "Sheet1",
-    "row": 636,
-    "seed_name": "Huyền Trân Công Chúa",
-    "result_name": "Huyền Trân Công Chúa",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "636",
     "sheet": "Sheet1",
     "row": 637,
@@ -103995,19 +103390,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "647",
-    "sheet": "Sheet1",
-    "row": 648,
-    "seed_name": "chùa Hưng Khánh",
-    "result_name": "Chua Hưng Khánh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -106683,19 +106065,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "884",
-    "sheet": "Sheet1",
-    "row": 885,
-    "seed_name": "Song Han Bridge",
-    "result_name": "Han River Bridge",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "885",
     "sheet": "Sheet1",
     "row": 886,
@@ -106955,6 +106324,32 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
+      "no_conservative_match"
+    ]
+  },
+  {
+    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
+    "source_key": "903",
+    "sheet": "Sheet1",
+    "row": 904,
+    "seed_name": "Khu vui chơi Vân Lại Viên",
+    "result_name": "Van Lai Vien Playground",
+    "status": "unmatched",
+    "candidate_poi_ids": [],
+    "reasons": [
+      "no_conservative_match"
+    ]
+  },
+  {
+    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
+    "source_key": "904",
+    "sheet": "Sheet1",
+    "row": 905,
+    "seed_name": "Vinpearl Hà Tĩnh",
+    "result_name": "Công viên nước Vinpearl Hà Tĩnh",
+    "status": "unmatched",
+    "candidate_poi_ids": [],
+    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -111032,19 +110427,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "1325",
-    "sheet": "Sheet1",
-    "row": 1326,
-    "seed_name": "Mung Chua Giang Sinh",
-    "result_name": "Mừng Chúa Giáng Sinh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "1326",
     "sheet": "Sheet1",
     "row": 1327,
@@ -111643,19 +111025,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "1367",
-    "sheet": "Sheet1",
-    "row": 1368,
-    "seed_name": "Museum of Folklore",
-    "result_name": "Museum of Folk Culture",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -117477,19 +116846,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "1846",
-    "sheet": "Sheet1",
-    "row": 1847,
-    "seed_name": "Quảng trường Hồ chí Minh",
-    "result_name": "Quảng trường Hồ Chí Minh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -125135,9 +124491,12 @@
     "seed_name": "chùa Phước Sơn",
     "result_name": "Chùa Phước Sơn",
     "status": "unmatched",
-    "candidate_poi_ids": [],
+    "candidate_poi_ids": [
+      "osm:node:10167435017"
+    ],
     "reasons": [
-      "no_conservative_match"
+      "no_conservative_match",
+      "nearby_similar_entity_requires_review"
     ]
   },
   {
@@ -130463,19 +129822,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "3016",
-    "sheet": "Sheet1",
-    "row": 3017,
-    "seed_name": "Nhà thờ Long Bình",
-    "result_name": "Nhà thờ Long Bình",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "3018",
     "sheet": "Sheet1",
     "row": 3019,
@@ -133271,19 +132617,6 @@
     "row": 3262,
     "seed_name": "Thánh đường Thái Hải",
     "result_name": "Thai Hai Reserve Area of Ecological Houses-on-stilts Ethnic Village",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "3262",
-    "sheet": "Sheet1",
-    "row": 3263,
-    "seed_name": "Chùa Tăng Phúc",
-    "result_name": "Chùa Tăng Phúc",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -139158,19 +138491,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "3855",
-    "sheet": "Sheet1",
-    "row": 3856,
-    "seed_name": "Chùa Đông Quan",
-    "result_name": "Chùa Đồng Quan",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "3856",
     "sheet": "Sheet1",
     "row": 3857,
@@ -140228,19 +139548,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "3965",
-    "sheet": "Sheet1",
-    "row": 3966,
-    "seed_name": "Chùa Vẽ",
-    "result_name": "Chùa Vẽ",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -144060,19 +143367,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "4329",
-    "sheet": "Sheet1",
-    "row": 4330,
-    "seed_name": "Nhà Thờ Xuân Phong",
-    "result_name": "Nhà thờ Xuân Phong",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -155457,19 +154751,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "5314",
-    "sheet": "Sheet1",
-    "row": 5315,
-    "seed_name": "Plage de da nhai",
-    "result_name": "An Bang Beach",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "5315",
     "sheet": "Sheet1",
     "row": 5316,
@@ -156762,19 +156043,6 @@
     "row": 5410,
     "seed_name": "Bãi đá bảy màu",
     "result_name": "",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "5410",
-    "sheet": "Sheet1",
-    "row": 5411,
-    "seed_name": "Hồ đạ tẻh",
-    "result_name": "Hồ Đạ Tẻh",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -169916,19 +169184,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "6367",
-    "sheet": "Sheet1",
-    "row": 6368,
-    "seed_name": "nhà thờ Đông Cường",
-    "result_name": "Nhà thờ Đông Cường",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "6368",
     "sheet": "Sheet1",
     "row": 6369,
@@ -172517,19 +171772,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "6559",
-    "sheet": "Sheet1",
-    "row": 6560,
-    "seed_name": "Ca Chep Hoa Rong",
-    "result_name": "Tượng Cá Chép Hóa Rồng",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "6560",
     "sheet": "Sheet1",
     "row": 6561,
@@ -174587,19 +173829,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "6709",
-    "sheet": "Sheet1",
-    "row": 6710,
-    "seed_name": "Chùa Thanh Lâm",
-    "result_name": "Chùa Thanh Lâm",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "6710",
     "sheet": "Sheet1",
     "row": 6711,
@@ -175240,19 +174469,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "6759",
-    "sheet": "Sheet1",
-    "row": 6760,
-    "seed_name": "Chùa Thiên Tích",
-    "result_name": "Chùa Thiên Tích",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -176616,19 +175832,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "6868",
-    "sheet": "Sheet1",
-    "row": 6869,
-    "seed_name": "Thanh Vân Camp Site",
-    "result_name": "Thanh Vân Camp Site",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "6869",
     "sheet": "Sheet1",
     "row": 6870,
@@ -176652,19 +175855,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "6871",
-    "sheet": "Sheet1",
-    "row": 6872,
-    "seed_name": "Sunny Camping Sóc Sơn",
-    "result_name": "Sunny Camping Sóc Sơn",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -178518,19 +177708,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "7043",
-    "sheet": "Sheet1",
-    "row": 7044,
-    "seed_name": "hồ bơi quốc hùng",
-    "result_name": "Hồ bơi Quốc Hùng",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -190803,19 +189980,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "8130",
-    "sheet": "Sheet1",
-    "row": 8131,
-    "seed_name": "Nhà văn hóa Thiếu nhi phường Vệ An",
-    "result_name": "Nhà văn hóa Thiếu nhi phường Vệ An",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "8131",
     "sheet": "Sheet1",
     "row": 8132,
@@ -193523,19 +192687,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "8322",
-    "sheet": "Sheet1",
-    "row": 8323,
-    "seed_name": "Nhà thờ Hòa Nghĩa",
-    "result_name": "Nhà Thờ Hòa Nghĩa",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "8323",
     "sheet": "Sheet1",
     "row": 8324,
@@ -194636,19 +193787,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "8398",
-    "sheet": "Sheet1",
-    "row": 8399,
-    "seed_name": "Nhà văn hóa Khu phố Xa Loan",
-    "result_name": "Nhà văn hóa khu phố Xa Loan",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -197359,19 +196497,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
-    "source_key": "8585",
-    "sheet": "Sheet1",
-    "row": 8586,
-    "seed_name": "Nhà thiếu nhi Thái Nguyên",
-    "result_name": "Nhà Thiếu Nhi Thái Nguyên",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx",
     "source_key": "8586",
     "sheet": "Sheet1",
     "row": 8587,
@@ -199210,19 +198335,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "8",
-    "sheet": "Sheet1",
-    "row": 9,
-    "seed_name": "Chùa Láng Cát",
-    "result_name": "Chùa Láng Cát",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "10",
     "sheet": "Sheet1",
     "row": 11,
@@ -199663,19 +198775,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "45",
-    "sheet": "Sheet1",
-    "row": 46,
-    "seed_name": "Hồ Vị Xuyên",
-    "result_name": "Hồ Vị Xuyên",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "46",
     "sheet": "Sheet1",
     "row": 47,
@@ -199729,19 +198828,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "50",
-    "sheet": "Sheet1",
-    "row": 51,
-    "seed_name": "Hang Thẩm Ồm",
-    "result_name": "Hang Thẩm Ồm",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "51",
     "sheet": "Sheet1",
     "row": 52,
@@ -199787,19 +198873,6 @@
     "row": 55,
     "seed_name": "Vườn quốc gia Cúc Phương",
     "result_name": "Vườn quốc gia Cúc Phương",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "55",
-    "sheet": "Sheet1",
-    "row": 56,
-    "seed_name": "Hồ Đồng Chương",
-    "result_name": "Hồ Đồng Chương",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -200075,19 +199148,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "77",
-    "sheet": "Sheet1",
-    "row": 78,
-    "seed_name": "Bãi biển An Bàng",
-    "result_name": "An Bang Beach",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -200590,19 +199650,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "119",
-    "sheet": "Sheet1",
-    "row": 120,
-    "seed_name": "Động Linh Sơn",
-    "result_name": "Động Linh Sơn",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "120",
     "sheet": "Sheet1",
     "row": 121,
@@ -200993,19 +200040,6 @@
     "row": 155,
     "seed_name": "Đền Trung",
     "result_name": "Đền Trung",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "155",
-    "sheet": "Sheet1",
-    "row": 156,
-    "seed_name": "Hồ Khuôn Thần",
-    "result_name": "Ho Khuon Than",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -201436,19 +200470,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "193",
-    "sheet": "Sheet1",
-    "row": 194,
-    "seed_name": "Bàu Trắng",
-    "result_name": "Bau Trang",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "194",
     "sheet": "Sheet1",
     "row": 195,
@@ -201510,19 +200531,6 @@
     "row": 199,
     "seed_name": "Hòn Đá Bạc",
     "result_name": "Hòn Đá Bạc",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "199",
-    "sheet": "Sheet1",
-    "row": 200,
-    "seed_name": "Đầm Thị Tường",
-    "result_name": "Đầm Thị Tường",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -202104,19 +201112,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "249",
-    "sheet": "Sheet1",
-    "row": 250,
-    "seed_name": "Hồ Ea Snô",
-    "result_name": "Hồ Ea Snô",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "250",
     "sheet": "Sheet1",
     "row": 251,
@@ -202473,19 +201468,6 @@
     "row": 285,
     "seed_name": "Hoàng thành Thăng Long",
     "result_name": "Imperial Citadel of Thang Long",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "285",
-    "sheet": "Sheet1",
-    "row": 286,
-    "seed_name": "Cầu Long Biên",
-    "result_name": "cầu Long Biên",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -206555,19 +205537,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "617",
-    "sheet": "Sheet1",
-    "row": 618,
-    "seed_name": "Chùa lá",
-    "result_name": "Chùa Lá",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "618",
     "sheet": "Sheet1",
     "row": 619,
@@ -206746,19 +205715,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "635",
-    "sheet": "Sheet1",
-    "row": 636,
-    "seed_name": "Huyền Trân Công Chúa",
-    "result_name": "Huyền Trân Công Chúa",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "636",
     "sheet": "Sheet1",
     "row": 637,
@@ -206874,19 +205830,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "647",
-    "sheet": "Sheet1",
-    "row": 648,
-    "seed_name": "chùa Hưng Khánh",
-    "result_name": "Chua Hưng Khánh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -209562,19 +208505,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "884",
-    "sheet": "Sheet1",
-    "row": 885,
-    "seed_name": "Song Han Bridge",
-    "result_name": "Han River Bridge",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "885",
     "sheet": "Sheet1",
     "row": 886,
@@ -209834,6 +208764,32 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
+      "no_conservative_match"
+    ]
+  },
+  {
+    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
+    "source_key": "903",
+    "sheet": "Sheet1",
+    "row": 904,
+    "seed_name": "Khu vui chơi Vân Lại Viên",
+    "result_name": "Van Lai Vien Playground",
+    "status": "unmatched",
+    "candidate_poi_ids": [],
+    "reasons": [
+      "no_conservative_match"
+    ]
+  },
+  {
+    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
+    "source_key": "904",
+    "sheet": "Sheet1",
+    "row": 905,
+    "seed_name": "Vinpearl Hà Tĩnh",
+    "result_name": "Công viên nước Vinpearl Hà Tĩnh",
+    "status": "unmatched",
+    "candidate_poi_ids": [],
+    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -213911,19 +212867,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "1325",
-    "sheet": "Sheet1",
-    "row": 1326,
-    "seed_name": "Mung Chua Giang Sinh",
-    "result_name": "Mừng Chúa Giáng Sinh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "1326",
     "sheet": "Sheet1",
     "row": 1327,
@@ -214522,19 +213465,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "1367",
-    "sheet": "Sheet1",
-    "row": 1368,
-    "seed_name": "Museum of Folklore",
-    "result_name": "Museum of Folk Culture",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -220356,19 +219286,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "1846",
-    "sheet": "Sheet1",
-    "row": 1847,
-    "seed_name": "Quảng trường Hồ chí Minh",
-    "result_name": "Quảng trường Hồ Chí Minh",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -228014,9 +226931,12 @@
     "seed_name": "chùa Phước Sơn",
     "result_name": "Chùa Phước Sơn",
     "status": "unmatched",
-    "candidate_poi_ids": [],
+    "candidate_poi_ids": [
+      "osm:node:10167435017"
+    ],
     "reasons": [
-      "no_conservative_match"
+      "no_conservative_match",
+      "nearby_similar_entity_requires_review"
     ]
   },
   {
@@ -233342,19 +232262,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "3016",
-    "sheet": "Sheet1",
-    "row": 3017,
-    "seed_name": "Nhà thờ Long Bình",
-    "result_name": "Nhà thờ Long Bình",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "3018",
     "sheet": "Sheet1",
     "row": 3019,
@@ -236150,19 +235057,6 @@
     "row": 3262,
     "seed_name": "Thánh đường Thái Hải",
     "result_name": "Thai Hai Reserve Area of Ecological Houses-on-stilts Ethnic Village",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "3262",
-    "sheet": "Sheet1",
-    "row": 3263,
-    "seed_name": "Chùa Tăng Phúc",
-    "result_name": "Chùa Tăng Phúc",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -242037,19 +240931,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "3855",
-    "sheet": "Sheet1",
-    "row": 3856,
-    "seed_name": "Chùa Đông Quan",
-    "result_name": "Chùa Đồng Quan",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "3856",
     "sheet": "Sheet1",
     "row": 3857,
@@ -243107,19 +241988,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "3965",
-    "sheet": "Sheet1",
-    "row": 3966,
-    "seed_name": "Chùa Vẽ",
-    "result_name": "Chùa Vẽ",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -246939,19 +245807,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "4329",
-    "sheet": "Sheet1",
-    "row": 4330,
-    "seed_name": "Nhà Thờ Xuân Phong",
-    "result_name": "Nhà thờ Xuân Phong",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -258349,19 +257204,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "5314",
-    "sheet": "Sheet1",
-    "row": 5315,
-    "seed_name": "Plage de da nhai",
-    "result_name": "An Bang Beach",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "5315",
     "sheet": "Sheet1",
     "row": 5316,
@@ -259654,19 +258496,6 @@
     "row": 5410,
     "seed_name": "Bãi đá bảy màu",
     "result_name": "",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "5410",
-    "sheet": "Sheet1",
-    "row": 5411,
-    "seed_name": "Hồ đạ tẻh",
-    "result_name": "Hồ Đạ Tẻh",
     "status": "unmatched",
     "candidate_poi_ids": [],
     "reasons": [
@@ -272808,19 +271637,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "6367",
-    "sheet": "Sheet1",
-    "row": 6368,
-    "seed_name": "nhà thờ Đông Cường",
-    "result_name": "Nhà thờ Đông Cường",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "6368",
     "sheet": "Sheet1",
     "row": 6369,
@@ -275409,19 +274225,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "6559",
-    "sheet": "Sheet1",
-    "row": 6560,
-    "seed_name": "Ca Chep Hoa Rong",
-    "result_name": "Tượng Cá Chép Hóa Rồng",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "6560",
     "sheet": "Sheet1",
     "row": 6561,
@@ -277479,19 +276282,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "6709",
-    "sheet": "Sheet1",
-    "row": 6710,
-    "seed_name": "Chùa Thanh Lâm",
-    "result_name": "Chùa Thanh Lâm",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "6710",
     "sheet": "Sheet1",
     "row": 6711,
@@ -278132,19 +276922,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "6759",
-    "sheet": "Sheet1",
-    "row": 6760,
-    "seed_name": "Chùa Thiên Tích",
-    "result_name": "Chùa Thiên Tích",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -279508,19 +278285,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "6868",
-    "sheet": "Sheet1",
-    "row": 6869,
-    "seed_name": "Thanh Vân Camp Site",
-    "result_name": "Thanh Vân Camp Site",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "6869",
     "sheet": "Sheet1",
     "row": 6870,
@@ -279544,19 +278308,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "6871",
-    "sheet": "Sheet1",
-    "row": 6872,
-    "seed_name": "Sunny Camping Sóc Sơn",
-    "result_name": "Sunny Camping Sóc Sơn",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -281410,19 +280161,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "7043",
-    "sheet": "Sheet1",
-    "row": 7044,
-    "seed_name": "hồ bơi quốc hùng",
-    "result_name": "Hồ bơi Quốc Hùng",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -293695,19 +292433,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "8130",
-    "sheet": "Sheet1",
-    "row": 8131,
-    "seed_name": "Nhà văn hóa Thiếu nhi phường Vệ An",
-    "result_name": "Nhà văn hóa Thiếu nhi phường Vệ An",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "8131",
     "sheet": "Sheet1",
     "row": 8132,
@@ -296415,19 +295140,6 @@
   },
   {
     "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "8322",
-    "sheet": "Sheet1",
-    "row": 8323,
-    "seed_name": "Nhà thờ Hòa Nghĩa",
-    "result_name": "Nhà Thờ Hòa Nghĩa",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
     "source_key": "8323",
     "sheet": "Sheet1",
     "row": 8324,
@@ -297528,19 +296240,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "8398",
-    "sheet": "Sheet1",
-    "row": 8399,
-    "seed_name": "Nhà văn hóa Khu phố Xa Loan",
-    "result_name": "Nhà văn hóa khu phố Xa Loan",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },
@@ -300246,19 +298945,6 @@
     "reasons": [
       "missing_external_identity",
       "missing_entity_coordinate",
-      "no_conservative_match"
-    ]
-  },
-  {
-    "source_file": "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx",
-    "source_key": "8585",
-    "sheet": "Sheet1",
-    "row": 8586,
-    "seed_name": "Nhà thiếu nhi Thái Nguyên",
-    "result_name": "Nhà Thiếu Nhi Thái Nguyên",
-    "status": "unmatched",
-    "candidate_poi_ids": [],
-    "reasons": [
       "no_conservative_match"
     ]
   },

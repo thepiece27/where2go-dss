@@ -2,9 +2,9 @@
   {
     "scenario_id": "HN-DEV-01",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
-    "candidate_count": 96,
+    "candidate_count": 97,
     "request": {
       "start": {
         "latitude": 21.0285,
@@ -21,6 +21,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -28,25 +30,25 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
-      "osm:way:704147278",
       "osm:way:340128580",
-      "osm:way:178995262",
+      "osm:way:704147278",
       "osm:way:696913691",
+      "osm:way:178995262",
       "osm:way:28912942",
-      "osm:way:220302249",
       "osm:way:697326496",
+      "osm:way:37625751",
+      "osm:way:220302249",
       "osm:way:37933256",
-      "osm:node:4499978190",
-      "osm:way:700145152"
+      "osm:node:4499978190"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-DEV-01",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
-    "candidate_count": 96,
+    "candidate_count": 97,
     "request": {
       "start": {
         "latitude": 21.0285,
@@ -63,6 +65,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -74,21 +78,21 @@
       "osm:way:704147278",
       "osm:way:696913691",
       "osm:way:37933256",
-      "osm:node:4499978190",
       "osm:way:700145152",
+      "osm:node:4499978190",
       "osm:way:37629143",
       "osm:way:178995262",
       "osm:way:28912942",
-      "osm:way:700840711"
+      "osm:way:697326496"
     ],
     "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-DEV-01",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
-    "candidate_count": 96,
+    "candidate_count": 97,
     "request": {
       "start": {
         "latitude": 21.0285,
@@ -105,6 +109,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -113,24 +119,24 @@
     "value": "nearby",
     "ids": [
       "osm:way:704147278",
-      "osm:way:178995262",
       "osm:way:340128580",
+      "osm:way:178995262",
       "osm:way:28912942",
       "osm:way:37933256",
+      "osm:way:696913691",
       "osm:node:4499978190",
       "osm:way:700840711",
       "osm:way:700145152",
-      "osm:way:696913691",
-      "osm:way:220302249"
+      "osm:way:37625751"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-DEV-01",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
-    "candidate_count": 96,
+    "candidate_count": 97,
     "request": {
       "start": {
         "latitude": 21.0285,
@@ -147,6 +153,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -156,23 +164,23 @@
     "ids": [
       "osm:way:704147278",
       "osm:way:340128580",
+      "osm:way:696913691",
       "osm:way:178995262",
       "osm:way:28912942",
-      "osm:way:696913691",
-      "osm:way:220302249",
-      "osm:way:697326496",
       "osm:way:37625751",
-      "osm:way:339936730",
-      "osm:node:3794435557"
+      "osm:way:697326496",
+      "osm:way:220302249",
+      "osm:node:3794435557",
+      "osm:way:339936730"
     ],
-    "overlap_at_10": 0.7
+    "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-DEV-01",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
-    "candidate_count": 96,
+    "candidate_count": 97,
     "request": {
       "start": {
         "latitude": 21.0285,
@@ -189,6 +197,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -207,7 +217,7 @@
       "osm:way:37933256",
       "osm:node:4499978190"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-DEV-01",
@@ -231,6 +241,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -256,7 +268,7 @@
     "split": "development",
     "travel_metric": "geographic_distance",
     "eligible_count": 720,
-    "candidate_count": 96,
+    "candidate_count": 97,
     "request": {
       "start": {
         "latitude": 21.0285,
@@ -273,6 +285,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -315,6 +329,8 @@
         "historic",
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -338,7 +354,7 @@
   {
     "scenario_id": "HN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 109,
     "request": {
@@ -356,6 +372,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -365,21 +383,21 @@
     "ids": [
       "osm:way:704147278",
       "osm:way:340128580",
+      "osm:way:37629143",
       "osm:way:339936730",
       "osm:way:700145152",
-      "osm:way:37629143",
       "osm:way:37933256",
       "osm:node:4499978190",
-      "osm:way:1019050229",
+      "osm:way:208255133",
       "osm:way:480826771",
-      "osm:way:208255133"
+      "osm:way:1019050229"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 109,
     "request": {
@@ -397,6 +415,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -405,22 +425,22 @@
     "value": "interests",
     "ids": [
       "osm:way:704147278",
-      "osm:way:700145152",
       "osm:way:37629143",
+      "osm:way:700145152",
       "osm:way:340128580",
       "osm:way:37933256",
       "osm:node:4499978190",
       "osm:way:339936730",
-      "osm:way:1019050229",
       "osm:way:480826771",
-      "osm:way:409390951"
+      "osm:way:1019050229",
+      "osm:way:208255133"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 109,
     "request": {
@@ -438,6 +458,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -445,23 +467,23 @@
     "kind": "preset",
     "value": "nearby",
     "ids": [
+      "osm:way:37629143",
       "osm:way:700145152",
       "osm:way:340128580",
-      "osm:way:37629143",
       "osm:way:704147278",
-      "osm:node:4499978190",
       "osm:way:37933256",
+      "osm:node:4499978190",
       "osm:way:339936730",
       "osm:node:12090398186",
       "osm:way:1218337314",
-      "osm:node:4576672189"
+      "osm:node:12661290607"
     ],
     "overlap_at_10": 0.7
   },
   {
     "scenario_id": "HN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 109,
     "request": {
@@ -479,6 +501,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -489,20 +513,20 @@
       "osm:way:340128580",
       "osm:way:704147278",
       "osm:way:339936730",
-      "osm:way:700145152",
-      "osm:way:37629143",
       "osm:way:208255133",
-      "osm:way:1148571536",
+      "osm:way:37629143",
+      "osm:way:700145152",
       "osm:node:12090398186",
       "osm:way:37933256",
-      "osm:node:4499978190"
+      "osm:node:4499978190",
+      "osm:node:10179892274"
     ],
     "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 109,
     "request": {
@@ -520,6 +544,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -561,6 +587,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -602,6 +630,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -643,6 +673,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -666,7 +698,7 @@
   {
     "scenario_id": "HN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 724,
     "candidate_count": 114,
     "request": {
@@ -685,6 +717,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -694,21 +728,21 @@
     "ids": [
       "osm:way:1510802054",
       "osm:way:223798542",
+      "osm:way:879841441",
       "osm:way:1103182086",
       "osm:way:1087731715",
-      "osm:way:879841441",
       "osm:way:37933849",
       "osm:way:1307631429",
+      "osm:way:908417669",
       "osm:way:136176176",
-      "osm:way:1253839879",
-      "osm:way:1365437934"
+      "osm:way:1223384698"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 724,
     "candidate_count": 114,
     "request": {
@@ -727,6 +761,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -735,22 +771,22 @@
     "value": "interests",
     "ids": [
       "osm:way:223798542",
-      "osm:way:1087731715",
       "osm:way:879841441",
+      "osm:way:1087731715",
       "osm:way:37933849",
       "osm:way:1510802054",
-      "osm:way:136176176",
       "osm:way:1103182086",
-      "osm:way:1253839879",
-      "osm:way:1307631429",
-      "osm:way:1365437934"
+      "osm:way:908417669",
+      "osm:way:1223384698",
+      "osm:way:136176176",
+      "osm:way:1253839879"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "HN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 724,
     "candidate_count": 114,
     "request": {
@@ -769,6 +805,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -778,21 +816,21 @@
     "ids": [
       "osm:way:223798542",
       "osm:way:1510802054",
+      "osm:way:879841441",
       "osm:node:5239158923",
       "osm:node:9869536950",
-      "osm:way:28945667",
-      "osm:node:12235167371",
+      "osm:way:37933849",
+      "osm:node:14152839302",
       "osm:way:1087731715",
-      "osm:node:733355066",
-      "osm:way:879841441",
-      "osm:way:37933849"
+      "osm:node:12235167371",
+      "osm:node:6429760086"
     ],
     "overlap_at_10": 0.5
   },
   {
     "scenario_id": "HN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 724,
     "candidate_count": 114,
     "request": {
@@ -811,6 +849,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -820,21 +860,21 @@
     "ids": [
       "osm:way:1510802054",
       "osm:way:1103182086",
-      "osm:way:1307631429",
       "osm:way:223798542",
-      "osm:way:1087731715",
+      "osm:way:1307631429",
       "osm:way:879841441",
       "osm:way:37933849",
+      "osm:way:1087731715",
       "osm:node:5406262022",
-      "osm:way:136176176",
-      "osm:way:1253839879"
+      "osm:way:908417669",
+      "osm:way:136176176"
     ],
     "overlap_at_10": 0.9
   },
   {
     "scenario_id": "HN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 724,
     "candidate_count": 114,
     "request": {
@@ -853,6 +893,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -864,14 +906,14 @@
       "osm:way:223798542",
       "osm:way:879841441",
       "osm:way:1103182086",
-      "osm:way:37933849",
       "osm:way:1087731715",
+      "osm:way:37933849",
       "osm:way:1307631429",
       "osm:way:908417669",
       "osm:way:136176176",
-      "osm:way:1253839879"
+      "osm:way:1223384698"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-01",
@@ -895,6 +937,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -913,7 +957,7 @@
       "osm:way:136176176",
       "osm:way:1253839879"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "HN-HOLD-01",
@@ -937,6 +981,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -948,12 +994,12 @@
       "osm:way:223798542",
       "osm:way:879841441",
       "osm:way:1103182086",
-      "osm:way:37933849",
       "osm:way:1087731715",
+      "osm:way:37933849",
       "osm:way:1307631429",
       "osm:way:908417669",
       "osm:way:136176176",
-      "osm:way:1253839879"
+      "osm:way:1223384698"
     ],
     "overlap_at_10": 1.0
   },
@@ -979,6 +1025,8 @@
         "park",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -992,17 +1040,17 @@
       "osm:way:1103182086",
       "osm:way:37933849",
       "osm:way:1087731715",
-      "osm:way:1307631429",
       "osm:way:908417669",
+      "osm:way:1307631429",
       "osm:way:136176176",
       "osm:way:1253839879"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "HN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 98,
     "request": {
@@ -1021,6 +1069,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1028,13 +1078,13 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
+      "osm:way:696913691",
       "osm:way:178995262",
       "osm:way:28912942",
-      "osm:way:696913691",
-      "osm:way:220302249",
       "osm:way:697326496",
-      "osm:way:700840711",
+      "osm:way:220302249",
       "osm:way:37625751",
+      "osm:way:700840711",
       "osm:node:3794435557",
       "osm:node:5441412622",
       "osm:way:1481550721"
@@ -1044,7 +1094,7 @@
   {
     "scenario_id": "HN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 98,
     "request": {
@@ -1063,6 +1113,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1070,8 +1122,8 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
-      "osm:way:178995262",
       "osm:way:696913691",
+      "osm:way:178995262",
       "osm:way:700840711",
       "osm:way:28912942",
       "osm:way:697326496",
@@ -1086,7 +1138,7 @@
   {
     "scenario_id": "HN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 98,
     "request": {
@@ -1105,6 +1157,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1114,12 +1168,12 @@
     "ids": [
       "osm:way:178995262",
       "osm:way:28912942",
-      "osm:way:700840711",
       "osm:way:696913691",
-      "osm:way:220302249",
+      "osm:way:700840711",
       "osm:way:697326496",
-      "osm:node:5441412622",
       "osm:way:37625751",
+      "osm:way:220302249",
+      "osm:node:5441412622",
       "osm:way:37933256",
       "osm:way:704147278"
     ],
@@ -1128,7 +1182,7 @@
   {
     "scenario_id": "HN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 98,
     "request": {
@@ -1147,6 +1201,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1155,11 +1211,11 @@
     "value": "quality",
     "ids": [
       "osm:way:178995262",
-      "osm:way:28912942",
       "osm:way:696913691",
-      "osm:way:220302249",
+      "osm:way:28912942",
       "osm:way:697326496",
       "osm:way:37625751",
+      "osm:way:220302249",
       "osm:node:3794435557",
       "osm:way:700840711",
       "osm:node:12876453886",
@@ -1170,7 +1226,7 @@
   {
     "scenario_id": "HN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 721,
     "candidate_count": 98,
     "request": {
@@ -1189,6 +1245,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1231,6 +1289,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1273,6 +1333,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1315,6 +1377,8 @@
         "temple",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 18.0,
       "top_k": 10
@@ -1338,7 +1402,7 @@
   {
     "scenario_id": "HN-HOLD-03",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 723,
     "candidate_count": 88,
     "request": {
@@ -1358,6 +1422,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1373,15 +1439,15 @@
       "osm:node:4489385889",
       "osm:way:37933256",
       "osm:way:37933050",
-      "osm:way:700145152",
-      "osm:way:409390951"
+      "osm:node:4499978190",
+      "osm:way:700145152"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-03",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 723,
     "candidate_count": 88,
     "request": {
@@ -1401,6 +1467,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1415,16 +1483,16 @@
       "osm:way:697326496",
       "osm:node:4489385889",
       "osm:way:409390951",
-      "osm:way:37629143",
       "osm:way:37933256",
-      "osm:way:37933050"
+      "osm:way:37933050",
+      "osm:way:37629143"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-HOLD-03",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 723,
     "candidate_count": 88,
     "request": {
@@ -1444,6 +1512,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1455,19 +1525,19 @@
       "osm:way:37625751",
       "osm:way:228075195",
       "osm:node:4489385889",
-      "osm:way:697326496",
       "osm:way:37933256",
-      "osm:node:4499978190",
       "osm:way:37933050",
-      "osm:way:1234036432",
-      "osm:way:704147278"
+      "osm:node:4499978190",
+      "osm:way:697326496",
+      "osm:node:12876453886",
+      "osm:way:1234036432"
     ],
-    "overlap_at_10": 0.7
+    "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-HOLD-03",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 723,
     "candidate_count": 88,
     "request": {
@@ -1487,6 +1557,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1499,18 +1571,18 @@
       "osm:way:697326496",
       "osm:node:10709724414",
       "osm:way:228075195",
-      "osm:way:340128580",
       "osm:way:704147278",
+      "osm:way:340128580",
       "osm:way:1234036432",
-      "osm:node:4489385889",
-      "osm:node:12090398186"
+      "osm:node:12090398186",
+      "osm:node:4489385889"
     ],
     "overlap_at_10": 0.6
   },
   {
     "scenario_id": "HN-HOLD-03",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 723,
     "candidate_count": 88,
     "request": {
@@ -1530,6 +1602,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1548,7 +1622,7 @@
       "osm:node:4499978190",
       "osm:way:700145152"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-03",
@@ -1573,6 +1647,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1583,8 +1659,8 @@
       "osm:way:696913691",
       "osm:way:37625751",
       "osm:way:228075195",
-      "osm:way:697326496",
       "osm:node:10709724414",
+      "osm:way:697326496",
       "osm:node:4489385889",
       "osm:way:37933256",
       "osm:way:37933050",
@@ -1616,6 +1692,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1659,6 +1737,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1682,7 +1762,7 @@
   {
     "scenario_id": "HN-HOLD-04",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 728,
     "candidate_count": 109,
     "request": {
@@ -1701,6 +1781,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1712,10 +1794,10 @@
       "osm:way:1510802054",
       "osm:way:223798542",
       "osm:way:1103182086",
-      "osm:way:1087731715",
       "osm:way:37933849",
       "osm:way:879841441",
-      "osm:way:1365437934",
+      "osm:way:1087731715",
+      "osm:way:1223384698",
       "osm:way:136176176",
       "osm:way:1253839879"
     ],
@@ -1724,7 +1806,7 @@
   {
     "scenario_id": "HN-HOLD-04",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 728,
     "candidate_count": 109,
     "request": {
@@ -1743,6 +1825,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1752,21 +1836,21 @@
     "ids": [
       "osm:way:28945667",
       "osm:way:223798542",
-      "osm:way:1087731715",
       "osm:way:37933849",
       "osm:way:879841441",
+      "osm:way:1087731715",
+      "osm:way:1223384698",
       "osm:way:136176176",
       "osm:way:1253839879",
-      "osm:way:1510802054",
-      "osm:way:1365437934",
-      "osm:way:1103182086"
+      "osm:way:1103182086",
+      "osm:way:1510802054"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-04",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 728,
     "candidate_count": 109,
     "request": {
@@ -1785,6 +1869,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1793,14 +1879,14 @@
     "value": "nearby",
     "ids": [
       "osm:way:28945667",
-      "osm:way:1510802054",
       "osm:way:223798542",
-      "osm:way:1087731715",
+      "osm:way:1510802054",
       "osm:way:37933849",
       "osm:way:879841441",
+      "osm:way:1087731715",
       "osm:way:1103182086",
-      "osm:way:1365437934",
       "osm:node:5406262022",
+      "osm:way:1223384698",
       "osm:way:136176176"
     ],
     "overlap_at_10": 0.9
@@ -1808,7 +1894,7 @@
   {
     "scenario_id": "HN-HOLD-04",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 728,
     "candidate_count": 109,
     "request": {
@@ -1827,6 +1913,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1838,19 +1926,19 @@
       "osm:way:1103182086",
       "osm:way:28945667",
       "osm:way:223798542",
-      "osm:way:1307631429",
-      "osm:way:1087731715",
+      "osm:way:843085954",
       "osm:way:37933849",
       "osm:way:879841441",
-      "osm:way:843085954",
-      "osm:way:1365437934"
+      "osm:way:1087731715",
+      "osm:way:1307631429",
+      "osm:way:1223384698"
     ],
     "overlap_at_10": 0.8
   },
   {
     "scenario_id": "HN-HOLD-04",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 728,
     "candidate_count": 109,
     "request": {
@@ -1869,6 +1957,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1887,7 +1977,7 @@
       "osm:way:136176176",
       "osm:way:1253839879"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-04",
@@ -1911,6 +2001,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1953,6 +2045,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -1978,7 +2072,7 @@
     "split": "holdout",
     "travel_metric": "geographic_distance",
     "eligible_count": 728,
-    "candidate_count": 219,
+    "candidate_count": 218,
     "request": {
       "start": {
         "latitude": 21.0405,
@@ -1995,6 +2089,8 @@
         "park",
         "zoo"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -2018,7 +2114,7 @@
   {
     "scenario_id": "HN-HOLD-05",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
     "candidate_count": 96,
     "request": {
@@ -2037,6 +2133,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2045,9 +2143,9 @@
     "value": "balanced",
     "ids": [
       "osm:way:1234036432",
-      "osm:way:704147278",
-      "osm:way:340128580",
       "osm:node:12090398186",
+      "osm:way:340128580",
+      "osm:way:704147278",
       "osm:way:37933256",
       "osm:way:37933050",
       "osm:node:4499978190",
@@ -2060,7 +2158,7 @@
   {
     "scenario_id": "HN-HOLD-05",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
     "candidate_count": 96,
     "request": {
@@ -2079,6 +2177,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2093,16 +2193,16 @@
       "osm:way:37933256",
       "osm:way:37933050",
       "osm:way:700145152",
-      "osm:node:4499978190",
       "osm:way:37629143",
-      "osm:way:339936730"
+      "osm:node:4499978190",
+      "osm:way:480826771"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "HN-HOLD-05",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
     "candidate_count": 96,
     "request": {
@@ -2121,6 +2221,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2131,10 +2233,10 @@
       "osm:way:1234036432",
       "osm:way:704147278",
       "osm:way:340128580",
-      "osm:way:37933256",
-      "osm:node:4499978190",
-      "osm:way:37933050",
       "osm:node:12090398186",
+      "osm:way:37933256",
+      "osm:way:37933050",
+      "osm:node:4499978190",
       "osm:way:700145152",
       "osm:way:37629143",
       "osm:way:178995262"
@@ -2144,7 +2246,7 @@
   {
     "scenario_id": "HN-HOLD-05",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
     "candidate_count": 96,
     "request": {
@@ -2163,6 +2265,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2171,13 +2275,13 @@
     "value": "quality",
     "ids": [
       "osm:way:1234036432",
-      "osm:way:704147278",
       "osm:way:340128580",
+      "osm:way:704147278",
       "osm:node:12090398186",
       "osm:way:339936730",
+      "osm:way:37933050",
       "osm:way:37933256",
       "osm:node:4499978190",
-      "osm:way:37933050",
       "osm:way:700145152",
       "osm:way:37629143"
     ],
@@ -2186,7 +2290,7 @@
   {
     "scenario_id": "HN-HOLD-05",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 720,
     "candidate_count": 96,
     "request": {
@@ -2205,6 +2309,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2247,6 +2353,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2289,6 +2397,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2331,6 +2441,8 @@
         "gallery",
         "performance_venue"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 15.0,
       "top_k": 10
@@ -2354,7 +2466,7 @@
   {
     "scenario_id": "HN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 712,
     "candidate_count": 105,
     "request": {
@@ -2367,6 +2479,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2374,15 +2488,15 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
-      "osm:way:1234036432",
       "osm:way:704147278",
       "osm:way:1510802054",
+      "osm:way:1234036432",
       "osm:way:340128580",
-      "osm:way:178995262",
-      "osm:node:10715935205",
       "osm:node:10179892274",
-      "osm:way:28912942",
+      "osm:node:10715935205",
+      "osm:way:178995262",
       "osm:node:12090398186",
+      "osm:way:28912942",
       "osm:way:696913691"
     ],
     "overlap_at_10": 1.0
@@ -2390,7 +2504,7 @@
   {
     "scenario_id": "HN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 712,
     "candidate_count": 105,
     "request": {
@@ -2403,6 +2517,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2410,23 +2526,23 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
-      "osm:way:1234036432",
       "osm:way:704147278",
       "osm:way:1510802054",
+      "osm:way:1234036432",
       "osm:way:340128580",
-      "osm:node:10715935205",
       "osm:node:10179892274",
-      "osm:way:178995262",
+      "osm:node:10715935205",
       "osm:node:12090398186",
-      "osm:way:28912942",
-      "osm:way:696913691"
+      "osm:way:696913691",
+      "osm:way:178995262",
+      "osm:way:28912942"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 712,
     "candidate_count": 105,
     "request": {
@@ -2439,6 +2555,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2446,23 +2564,23 @@
     "kind": "preset",
     "value": "nearby",
     "ids": [
-      "osm:way:178995262",
       "osm:way:1234036432",
       "osm:way:704147278",
       "osm:way:1510802054",
       "osm:way:340128580",
-      "osm:way:28912942",
+      "osm:way:178995262",
       "osm:node:10179892274",
+      "osm:way:28912942",
       "osm:node:10715935205",
-      "osm:node:4255651589",
-      "osm:node:4486828192"
+      "osm:node:12090398186",
+      "osm:way:696913691"
     ],
-    "overlap_at_10": 0.8
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "HN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 712,
     "candidate_count": 105,
     "request": {
@@ -2475,6 +2593,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2482,13 +2602,13 @@
     "kind": "preset",
     "value": "quality",
     "ids": [
-      "osm:way:704147278",
-      "osm:way:1234036432",
-      "osm:way:1510802054",
-      "osm:way:178995262",
       "osm:node:10715935205",
-      "osm:way:340128580",
       "osm:node:10179892274",
+      "osm:way:704147278",
+      "osm:way:1510802054",
+      "osm:way:340128580",
+      "osm:way:1234036432",
+      "osm:way:178995262",
       "osm:way:28912942",
       "osm:node:12090398186",
       "osm:way:696913691"
@@ -2498,7 +2618,7 @@
   {
     "scenario_id": "HN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
+    "travel_metric": "geographic_distance",
     "eligible_count": 712,
     "candidate_count": 105,
     "request": {
@@ -2511,6 +2631,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2519,8 +2641,8 @@
     "value": "geographic_distance",
     "ids": [
       "osm:way:704147278",
-      "osm:way:1234036432",
       "osm:way:1510802054",
+      "osm:way:1234036432",
       "osm:way:340128580",
       "osm:node:10179892274",
       "osm:node:10715935205",
@@ -2547,6 +2669,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2583,6 +2707,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2591,8 +2717,8 @@
     "value": 40,
     "ids": [
       "osm:way:704147278",
-      "osm:way:1234036432",
       "osm:way:1510802054",
+      "osm:way:1234036432",
       "osm:way:340128580",
       "osm:node:10179892274",
       "osm:node:10715935205",
@@ -2619,6 +2745,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 12.0,
       "top_k": 10
@@ -2628,10 +2756,10 @@
     "ids": [
       "osm:way:704147278",
       "osm:way:1510802054",
-      "osm:way:1234036432",
       "osm:node:10179892274",
       "osm:way:340128580",
       "osm:node:10715935205",
+      "osm:way:1234036432",
       "osm:way:178995262",
       "osm:node:12090398186",
       "osm:way:28912942",
@@ -2643,8 +2771,8 @@
     "scenario_id": "DN-DEV-01",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 104,
+    "eligible_count": 548,
+    "candidate_count": 103,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -2662,6 +2790,8 @@
         "beach",
         "viewpoint"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -2669,16 +2799,16 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:node:2617007574",
-      "osm:way:694831926",
-      "osm:node:10709724107",
-      "osm:node:13687068650"
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "poi-google:554cc747f07be61990b2e682",
+      "poi-google:097516ae1819b8c9e6ae899d"
     ],
     "overlap_at_10": 1.0
   },
@@ -2686,8 +2816,8 @@
     "scenario_id": "DN-DEV-01",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 104,
+    "eligible_count": 548,
+    "candidate_count": 103,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -2705,6 +2835,8 @@
         "beach",
         "viewpoint"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -2712,145 +2844,16 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:2617007574",
-      "osm:node:13687068650",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:694831926",
-      "osm:way:35952591"
-    ],
-    "overlap_at_10": 0.9
-  },
-  {
-    "scenario_id": "DN-DEV-01",
-    "split": "development",
-    "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 104,
-    "request": {
-      "start": {
-        "latitude": 16.0544,
-        "longitude": 108.2022
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [
-        "biển",
-        "thiên nhiên",
-        "chụp ảnh"
-      ],
-      "preferred_categories": [
-        "beach",
-        "viewpoint"
-      ],
-      "preset": "balanced",
-      "radius_km": 25.0,
-      "top_k": 10
-    },
-    "kind": "preset",
-    "value": "nearby",
-    "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:694831926",
-      "osm:node:10709724107",
-      "osm:node:13340074016",
-      "osm:node:4281489185"
-    ],
-    "overlap_at_10": 0.8
-  },
-  {
-    "scenario_id": "DN-DEV-01",
-    "split": "development",
-    "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 104,
-    "request": {
-      "start": {
-        "latitude": 16.0544,
-        "longitude": 108.2022
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [
-        "biển",
-        "thiên nhiên",
-        "chụp ảnh"
-      ],
-      "preferred_categories": [
-        "beach",
-        "viewpoint"
-      ],
-      "preset": "balanced",
-      "radius_km": 25.0,
-      "top_k": 10
-    },
-    "kind": "preset",
-    "value": "quality",
-    "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:5273998823",
-      "osm:node:11934169470",
-      "osm:node:10709724107",
-      "osm:way:694831926",
-      "poi-google:3aac3427ee25b18a817027e9",
-      "osm:way:35952591"
-    ],
-    "overlap_at_10": 0.8
-  },
-  {
-    "scenario_id": "DN-DEV-01",
-    "split": "development",
-    "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 104,
-    "request": {
-      "start": {
-        "latitude": 16.0544,
-        "longitude": 108.2022
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [
-        "biển",
-        "thiên nhiên",
-        "chụp ảnh"
-      ],
-      "preferred_categories": [
-        "beach",
-        "viewpoint"
-      ],
-      "preset": "balanced",
-      "radius_km": 25.0,
-      "top_k": 10
-    },
-    "kind": "travel_mode",
-    "value": "geographic_distance",
-    "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:node:2617007574",
-      "osm:way:694831926",
-      "osm:node:10709724107",
-      "osm:node:13687068650"
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:554cc747f07be61990b2e682",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:097516ae1819b8c9e6ae899d",
+      "poi-google:9f6b613e52c6d0f34461666b"
     ],
     "overlap_at_10": 1.0
   },
@@ -2858,8 +2861,8 @@
     "scenario_id": "DN-DEV-01",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 52,
+    "eligible_count": 548,
+    "candidate_count": 103,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -2877,6 +2880,143 @@
         "beach",
         "viewpoint"
       ],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 25.0,
+      "top_k": 10
+    },
+    "kind": "preset",
+    "value": "nearby",
+    "ids": [
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "osm:relation:19000664",
+      "poi-google:9c82e6c8558ba33b3f9ec70a"
+    ],
+    "overlap_at_10": 0.8
+  },
+  {
+    "scenario_id": "DN-DEV-01",
+    "split": "development",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 548,
+    "candidate_count": 103,
+    "request": {
+      "start": {
+        "latitude": 16.0544,
+        "longitude": 108.2022
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [
+        "biển",
+        "thiên nhiên",
+        "chụp ảnh"
+      ],
+      "preferred_categories": [
+        "beach",
+        "viewpoint"
+      ],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 25.0,
+      "top_k": 10
+    },
+    "kind": "preset",
+    "value": "quality",
+    "ids": [
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "poi-google:9c82e6c8558ba33b3f9ec70a",
+      "osm:relation:19000664"
+    ],
+    "overlap_at_10": 0.8
+  },
+  {
+    "scenario_id": "DN-DEV-01",
+    "split": "development",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 548,
+    "candidate_count": 103,
+    "request": {
+      "start": {
+        "latitude": 16.0544,
+        "longitude": 108.2022
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [
+        "biển",
+        "thiên nhiên",
+        "chụp ảnh"
+      ],
+      "preferred_categories": [
+        "beach",
+        "viewpoint"
+      ],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 25.0,
+      "top_k": 10
+    },
+    "kind": "travel_mode",
+    "value": "geographic_distance",
+    "ids": [
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "poi-google:554cc747f07be61990b2e682",
+      "poi-google:097516ae1819b8c9e6ae899d"
+    ],
+    "overlap_at_10": 1.0
+  },
+  {
+    "scenario_id": "DN-DEV-01",
+    "split": "development",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 548,
+    "candidate_count": 59,
+    "request": {
+      "start": {
+        "latitude": 16.0544,
+        "longitude": 108.2022
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [
+        "biển",
+        "thiên nhiên",
+        "chụp ảnh"
+      ],
+      "preferred_categories": [
+        "beach",
+        "viewpoint"
+      ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -2884,16 +3024,16 @@
     "kind": "pool_size",
     "value": 20,
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:694831926",
-      "osm:node:10709724107",
-      "osm:node:2617007574",
-      "osm:way:35952591"
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "poi-google:554cc747f07be61990b2e682",
+      "poi-google:9c82e6c8558ba33b3f9ec70a"
     ],
     "overlap_at_10": 0.9
   },
@@ -2901,8 +3041,8 @@
     "scenario_id": "DN-DEV-01",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 104,
+    "eligible_count": 548,
+    "candidate_count": 103,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -2920,6 +3060,8 @@
         "beach",
         "viewpoint"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -2927,16 +3069,16 @@
     "kind": "pool_size",
     "value": 40,
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:node:2617007574",
-      "osm:way:694831926",
-      "osm:node:10709724107",
-      "osm:node:13687068650"
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "poi-google:554cc747f07be61990b2e682",
+      "poi-google:097516ae1819b8c9e6ae899d"
     ],
     "overlap_at_10": 1.0
   },
@@ -2944,8 +3086,8 @@
     "scenario_id": "DN-DEV-01",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 465,
-    "candidate_count": 202,
+    "eligible_count": 548,
+    "candidate_count": 172,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -2963,6 +3105,8 @@
         "beach",
         "viewpoint"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -2970,25 +3114,25 @@
     "kind": "pool_size",
     "value": 80,
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:2617007574",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:node:13687068650",
-      "osm:way:694831926",
-      "osm:node:10709724107"
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:6fe02f0d54698ccdc8e5fc46",
+      "poi-google:44589dd0fee354e42160f01b",
+      "poi-google:e961b3dee73a6dfbc87c86de",
+      "poi-google:3f4a179ef8edb5fa07b7a1a3",
+      "poi-google:a656101db03a62ca2415442f",
+      "poi-google:65dd50a3316d5f4bbe68a58b",
+      "poi-google:554cc747f07be61990b2e682",
+      "poi-google:9f6b613e52c6d0f34461666b",
+      "poi-google:097516ae1819b8c9e6ae899d"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
-    "eligible_count": 202,
-    "candidate_count": 102,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 216,
+    "candidate_count": 104,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3006,6 +3150,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3016,22 +3162,22 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:way:565186618",
-      "osm:node:5444693768",
+      "osm:relation:2836882",
+      "osm:node:4352265289",
       "osm:way:565280048",
       "osm:node:13888271701",
-      "osm:way:565592419",
-      "osm:node:10536187009",
-      "osm:node:4352265289"
+      "osm:node:5444693768"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
-    "eligible_count": 202,
-    "candidate_count": 102,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 216,
+    "candidate_count": 104,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3049,6 +3195,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3059,22 +3207,22 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "osm:node:2617007574",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
-      "osm:node:5444693768",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:4352265289",
+      "osm:node:13397525601",
       "osm:way:565280048",
       "osm:node:13888271701",
       "osm:way:565186618",
-      "osm:way:565592419",
-      "osm:node:5250607284"
+      "osm:node:5444693768"
     ],
     "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
-    "eligible_count": 202,
-    "candidate_count": 102,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 216,
+    "candidate_count": 104,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3092,6 +3240,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3102,22 +3252,22 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
-      "osm:node:5444693768",
-      "osm:way:565280048",
-      "osm:way:212215308",
       "osm:way:565186618",
+      "osm:way:565280048",
       "osm:node:13888271701",
+      "osm:node:5444693768",
+      "osm:node:4352265289",
       "osm:way:565592419",
-      "osm:node:5444645841"
+      "osm:node:4225643190"
     ],
     "overlap_at_10": 0.8
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
-    "eligible_count": 202,
-    "candidate_count": 102,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 216,
+    "candidate_count": 104,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3135,6 +3285,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3145,22 +3297,22 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:10536187009",
       "osm:way:565186618",
+      "osm:relation:2836882",
       "osm:node:10304609242",
       "osm:node:10652658505",
-      "osm:relation:2836882",
-      "osm:node:7127464285",
-      "osm:node:5513474821"
+      "poi-google:30d49ba30108437ac7f52313"
     ],
-    "overlap_at_10": 0.5
+    "overlap_at_10": 0.6
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
-    "travel_metric": "road_time",
-    "eligible_count": 202,
-    "candidate_count": 102,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 216,
+    "candidate_count": 104,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3178,6 +3330,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3188,21 +3342,21 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:way:565186618",
+      "osm:relation:2836882",
       "osm:node:4352265289",
       "osm:way:565280048",
-      "osm:relation:2836882",
       "osm:node:13888271701",
-      "osm:node:5444693768",
-      "osm:way:565592419"
+      "osm:node:5444693768"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 202,
+    "eligible_count": 216,
     "candidate_count": 54,
     "request": {
       "start": {
@@ -3221,6 +3375,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3231,22 +3387,22 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
+      "osm:relation:2836882",
       "osm:way:565280048",
       "osm:node:4352265289",
       "osm:node:13888271701",
       "osm:node:5444693768",
-      "osm:way:565592419",
-      "osm:node:4225643190",
-      "osm:node:11934034253"
+      "osm:way:565592419"
     ],
-    "overlap_at_10": 0.8
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-DEV-02",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 202,
-    "candidate_count": 102,
+    "eligible_count": 216,
+    "candidate_count": 104,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3264,6 +3420,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3274,13 +3432,13 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:way:565186618",
+      "osm:relation:2836882",
       "osm:node:4352265289",
       "osm:way:565280048",
-      "osm:relation:2836882",
       "osm:node:13888271701",
-      "osm:node:5444693768",
-      "osm:way:565592419"
+      "osm:node:5444693768"
     ],
     "overlap_at_10": 1.0
   },
@@ -3288,8 +3446,8 @@
     "scenario_id": "DN-DEV-02",
     "split": "development",
     "travel_metric": "geographic_distance",
-    "eligible_count": 202,
-    "candidate_count": 161,
+    "eligible_count": 216,
+    "candidate_count": 170,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -3307,6 +3465,8 @@
         "old_quarter",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3317,22 +3477,22 @@
       "poi-google:3aac3427ee25b18a817027e9",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:way:565186618",
+      "osm:relation:2836882",
       "osm:node:4352265289",
       "osm:way:565280048",
-      "osm:relation:2836882",
       "osm:node:13888271701",
-      "osm:node:10536187009",
       "osm:node:5444693768"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 468,
-    "candidate_count": 88,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 544,
+    "candidate_count": 98,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3350,6 +3510,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3362,20 +3524,20 @@
       "osm:way:302944359",
       "osm:way:1422444084",
       "osm:way:1386932720",
-      "osm:node:5216168822",
       "osm:way:486703049",
-      "osm:relation:2836882",
-      "osm:way:565186618",
-      "osm:relation:7055216"
+      "osm:node:5216168822",
+      "poi-google:0d78192558cd42efde612465",
+      "osm:relation:7055216",
+      "osm:relation:2836882"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 468,
-    "candidate_count": 88,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 544,
+    "candidate_count": 98,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3393,6 +3555,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3403,22 +3567,22 @@
       "osm:relation:8552348",
       "osm:node:4280016689",
       "osm:way:302944359",
-      "osm:way:1422444084",
       "osm:way:1386932720",
+      "osm:way:1422444084",
       "osm:node:5216168822",
+      "poi-google:0d78192558cd42efde612465",
+      "osm:relation:7055216",
       "osm:way:486703049",
-      "osm:relation:2836882",
-      "osm:way:565186618",
-      "osm:relation:7055216"
+      "osm:relation:2836882"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 468,
-    "candidate_count": 88,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 544,
+    "candidate_count": 98,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3436,6 +3600,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3448,20 +3614,20 @@
       "osm:way:302944359",
       "osm:way:1386932720",
       "osm:node:5216168822",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:way:1422444084",
       "osm:node:10709724107",
-      "osm:way:486703049",
-      "osm:relation:2836882",
-      "osm:node:11934169470"
+      "poi-google:96fd68df4dc2cab5e610d373",
+      "osm:way:486703049"
     ],
-    "overlap_at_10": 0.8
+    "overlap_at_10": 0.7
   },
   {
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 468,
-    "candidate_count": 88,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 544,
+    "candidate_count": 98,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3479,6 +3645,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3491,20 +3659,20 @@
       "osm:way:302944359",
       "osm:way:1422444084",
       "osm:way:486703049",
-      "osm:relation:2836882",
+      "poi-google:0d78192558cd42efde612465",
+      "osm:relation:7055216",
       "osm:way:1386932720",
-      "osm:way:565186618",
-      "osm:node:5216168822",
-      "osm:relation:7055216"
+      "osm:relation:2836882",
+      "osm:node:5216168822"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 468,
-    "candidate_count": 88,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 544,
+    "candidate_count": 98,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3522,6 +3690,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3533,12 +3703,12 @@
       "osm:node:4280016689",
       "osm:way:302944359",
       "osm:way:1422444084",
-      "osm:way:486703049",
       "osm:way:1386932720",
-      "osm:relation:7055216",
+      "osm:way:486703049",
       "osm:node:5216168822",
-      "osm:relation:2836882",
-      "osm:way:565186618"
+      "poi-google:0d78192558cd42efde612465",
+      "osm:relation:7055216",
+      "osm:relation:2836882"
     ],
     "overlap_at_10": 1.0
   },
@@ -3546,8 +3716,8 @@
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 468,
-    "candidate_count": 49,
+    "eligible_count": 544,
+    "candidate_count": 53,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3565,6 +3735,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3576,12 +3748,12 @@
       "osm:node:4280016689",
       "osm:way:302944359",
       "osm:way:1422444084",
-      "osm:way:486703049",
       "osm:way:1386932720",
+      "osm:way:486703049",
       "osm:node:5216168822",
+      "poi-google:0d78192558cd42efde612465",
       "osm:relation:7055216",
-      "osm:relation:2836882",
-      "osm:way:565186618"
+      "osm:relation:2836882"
     ],
     "overlap_at_10": 1.0
   },
@@ -3589,8 +3761,8 @@
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 468,
-    "candidate_count": 88,
+    "eligible_count": 544,
+    "candidate_count": 98,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3608,6 +3780,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3619,12 +3793,12 @@
       "osm:node:4280016689",
       "osm:way:302944359",
       "osm:way:1422444084",
-      "osm:way:486703049",
       "osm:way:1386932720",
-      "osm:relation:7055216",
+      "osm:way:486703049",
       "osm:node:5216168822",
-      "osm:relation:2836882",
-      "osm:way:565186618"
+      "poi-google:0d78192558cd42efde612465",
+      "osm:relation:7055216",
+      "osm:relation:2836882"
     ],
     "overlap_at_10": 1.0
   },
@@ -3632,8 +3806,8 @@
     "scenario_id": "DN-HOLD-01",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 468,
-    "candidate_count": 174,
+    "eligible_count": 544,
+    "candidate_count": 162,
     "request": {
       "start": {
         "latitude": 16.0035,
@@ -3651,6 +3825,8 @@
         "temple",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 25.0,
       "top_k": 10
@@ -3662,21 +3838,21 @@
       "osm:node:4280016689",
       "osm:way:302944359",
       "osm:way:1422444084",
-      "osm:way:486703049",
-      "osm:relation:7055216",
       "osm:way:1386932720",
+      "poi-google:0d78192558cd42efde612465",
+      "osm:way:486703049",
       "osm:node:5216168822",
-      "osm:relation:2836882",
-      "osm:way:565186618"
+      "osm:relation:7055216",
+      "osm:relation:2836882"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 98,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 105,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -3692,6 +3868,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3699,25 +3877,25 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:way:1368599361",
       "osm:way:302872188",
-      "osm:way:759913076",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:node:8474743417",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:way:1422444084",
       "osm:node:5216168822",
-      "osm:way:204790989",
-      "osm:node:11934169470",
-      "osm:way:204885903",
-      "osm:way:1326219930"
+      "poi-google:cb408a9f9680098e49e55cfe"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 98,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 105,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -3733,6 +3911,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3740,25 +3920,68 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:way:1368599361",
       "osm:way:302872188",
-      "osm:way:759913076",
       "osm:node:8474743417",
-      "osm:node:10709724107",
+      "poi-google:213a7020d00931869d51e9c1",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:node:5216168822",
+      "osm:node:10709724107",
+      "osm:way:1422444084"
+    ],
+    "overlap_at_10": 0.9
+  },
+  {
+    "scenario_id": "DN-HOLD-02",
+    "split": "holdout",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 105,
+    "request": {
+      "start": {
+        "latitude": 16.0544,
+        "longitude": 108.2022
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [
+        "bảo tàng",
+        "văn hóa"
+      ],
+      "preferred_categories": [
+        "museum"
+      ],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 20.0,
+      "top_k": 10
+    },
+    "kind": "preset",
+    "value": "nearby",
+    "ids": [
+      "poi-google:f300365d20dfc26c09a203a2",
+      "osm:way:759913076",
+      "osm:way:302872188",
+      "osm:way:1368599361",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:way:1422444084",
-      "osm:way:1386932720",
-      "osm:node:8883385553",
-      "osm:way:204790989"
+      "osm:way:204790989",
+      "osm:node:11176025737",
+      "poi-google:54f6c1d76c715ccf3460f85c",
+      "osm:node:5216168822"
     ],
     "overlap_at_10": 0.7
   },
   {
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 98,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 105,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -3774,47 +3997,8 @@
       "preferred_categories": [
         "museum"
       ],
-      "preset": "balanced",
-      "radius_km": 20.0,
-      "top_k": 10
-    },
-    "kind": "preset",
-    "value": "nearby",
-    "ids": [
-      "osm:way:302872188",
-      "osm:way:759913076",
-      "osm:way:1368599361",
-      "osm:way:204790989",
-      "osm:node:8474743417",
-      "osm:node:5216168822",
-      "osm:way:1422444084",
-      "osm:node:11934169470",
-      "osm:way:694831926",
-      "osm:way:1556362196"
-    ],
-    "overlap_at_10": 0.8
-  },
-  {
-    "scenario_id": "DN-HOLD-02",
-    "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 98,
-    "request": {
-      "start": {
-        "latitude": 16.0544,
-        "longitude": 108.2022
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [
-        "bảo tàng",
-        "văn hóa"
-      ],
-      "preferred_categories": [
-        "museum"
-      ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3822,25 +4006,25 @@
     "kind": "preset",
     "value": "quality",
     "ids": [
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:way:302872188",
       "osm:way:1368599361",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:node:8474743417",
-      "osm:way:759913076",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:way:1422444084",
-      "osm:way:204790989",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:118672509",
-      "osm:way:1326219930"
+      "poi-google:06fd7684a756790c4e7cb15a",
+      "osm:way:204790989"
     ],
     "overlap_at_10": 0.8
   },
   {
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 98,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 105,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -3856,6 +4040,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3863,25 +4049,25 @@
     "kind": "travel_mode",
     "value": "geographic_distance",
     "ids": [
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:way:1368599361",
       "osm:way:302872188",
-      "osm:way:759913076",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:node:8474743417",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:way:1422444084",
       "osm:node:5216168822",
-      "osm:way:204790989",
-      "osm:way:1326219930",
-      "osm:node:11934169470",
-      "osm:node:5273998823"
+      "poi-google:cb408a9f9680098e49e55cfe"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 287,
-    "candidate_count": 47,
+    "eligible_count": 363,
+    "candidate_count": 59,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -3897,6 +4083,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3904,25 +4092,25 @@
     "kind": "pool_size",
     "value": 20,
     "ids": [
-      "osm:way:302872188",
-      "osm:way:1368599361",
       "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
+      "osm:way:1368599361",
+      "osm:way:302872188",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:node:8474743417",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:way:1422444084",
-      "osm:way:204790989",
       "osm:node:5216168822",
-      "osm:way:1326219930",
-      "osm:node:11934169470",
-      "osm:node:5273998823"
+      "poi-google:06fd7684a756790c4e7cb15a"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 287,
-    "candidate_count": 98,
+    "eligible_count": 363,
+    "candidate_count": 105,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -3938,6 +4126,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3945,16 +4135,16 @@
     "kind": "pool_size",
     "value": 40,
     "ids": [
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:way:1368599361",
       "osm:way:302872188",
-      "osm:way:759913076",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:node:8474743417",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:way:1422444084",
       "osm:node:5216168822",
-      "osm:way:204790989",
-      "osm:way:1326219930",
-      "osm:node:11934169470",
-      "osm:node:5273998823"
+      "poi-google:cb408a9f9680098e49e55cfe"
     ],
     "overlap_at_10": 1.0
   },
@@ -3962,7 +4152,7 @@
     "scenario_id": "DN-HOLD-02",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 287,
+    "eligible_count": 363,
     "candidate_count": 184,
     "request": {
       "start": {
@@ -3979,6 +4169,8 @@
       "preferred_categories": [
         "museum"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -3986,16 +4178,16 @@
     "kind": "pool_size",
     "value": 80,
     "ids": [
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:way:1368599361",
       "osm:way:302872188",
-      "osm:way:759913076",
+      "poi-google:213a7020d00931869d51e9c1",
       "osm:node:8474743417",
+      "poi-google:07808f89028d3f46a34ffa87",
       "osm:way:1422444084",
       "osm:node:5216168822",
-      "osm:way:204790989",
-      "osm:node:11934169470",
-      "osm:way:1326219930",
-      "osm:node:5273998823"
+      "poi-google:cb408a9f9680098e49e55cfe"
     ],
     "overlap_at_10": 1.0
   },
@@ -4003,8 +4195,8 @@
     "scenario_id": "DN-HOLD-03",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 92,
+    "eligible_count": 542,
+    "candidate_count": 111,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -4022,6 +4214,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 30.0,
       "top_k": 10
@@ -4034,10 +4228,10 @@
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
       "osm:node:10709724107",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:12344125229",
       "osm:way:565592419",
       "osm:node:8883385553",
-      "osm:node:5513474821",
       "osm:node:11896339273"
     ],
     "overlap_at_10": 1.0
@@ -4046,8 +4240,8 @@
     "scenario_id": "DN-HOLD-03",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 92,
+    "eligible_count": 542,
+    "candidate_count": 111,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -4065,6 +4259,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 30.0,
       "top_k": 10
@@ -4072,16 +4268,16 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
-      "osm:node:4171964390",
       "osm:node:4171971289",
+      "osm:node:4171964390",
       "osm:node:2617007574",
       "osm:node:10709724107",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:12344125229",
       "osm:way:565592419",
       "osm:node:11896339273",
-      "osm:way:198804483",
-      "osm:node:8883385553"
+      "osm:way:198804483"
     ],
     "overlap_at_10": 0.9
   },
@@ -4089,8 +4285,8 @@
     "scenario_id": "DN-HOLD-03",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 92,
+    "eligible_count": 542,
+    "candidate_count": 111,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -4108,6 +4304,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 30.0,
       "top_k": 10
@@ -4122,18 +4320,18 @@
       "osm:node:12344125229",
       "osm:way:565592419",
       "osm:node:11896339273",
-      "osm:node:7127464285",
-      "osm:node:5513474821",
-      "osm:node:8883385553"
+      "poi-google:30d49ba30108437ac7f52313",
+      "osm:node:2076856032",
+      "osm:node:7127464285"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 0.7
   },
   {
     "scenario_id": "DN-HOLD-03",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 92,
+    "eligible_count": 542,
+    "candidate_count": 111,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -4151,6 +4349,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 30.0,
       "top_k": 10
@@ -4162,21 +4362,111 @@
       "osm:node:4171964390",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:8883385553",
+      "poi-google:30d49ba30108437ac7f52313",
       "osm:node:5513474821",
-      "osm:node:7127464285",
+      "osm:node:2076856032",
       "osm:node:10709724107",
+      "osm:node:7127464285",
+      "poi-google:94fe56282cbce6151cb0f160"
+    ],
+    "overlap_at_10": 0.6
+  },
+  {
+    "scenario_id": "DN-HOLD-03",
+    "split": "holdout",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 542,
+    "candidate_count": 111,
+    "request": {
+      "start": {
+        "latitude": 15.8794,
+        "longitude": 108.3278
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [
+        "làng nghề",
+        "văn hóa",
+        "nghệ thuật"
+      ],
+      "preferred_categories": [
+        "craft_village",
+        "historic"
+      ],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 30.0,
+      "top_k": 10
+    },
+    "kind": "travel_mode",
+    "value": "geographic_distance",
+    "ids": [
+      "osm:node:4171971289",
+      "osm:node:4171964390",
+      "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
+      "osm:node:10709724107",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:12344125229",
+      "osm:way:565592419",
+      "osm:node:8883385553",
+      "osm:node:11896339273"
+    ],
+    "overlap_at_10": 1.0
+  },
+  {
+    "scenario_id": "DN-HOLD-03",
+    "split": "holdout",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 542,
+    "candidate_count": 59,
+    "request": {
+      "start": {
+        "latitude": 15.8794,
+        "longitude": 108.3278
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [
+        "làng nghề",
+        "văn hóa",
+        "nghệ thuật"
+      ],
+      "preferred_categories": [
+        "craft_village",
+        "historic"
+      ],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 30.0,
+      "top_k": 10
+    },
+    "kind": "pool_size",
+    "value": 20,
+    "ids": [
+      "osm:node:4171971289",
+      "osm:node:4171964390",
+      "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "osm:node:2617007574",
+      "osm:node:10709724107",
+      "osm:node:5513474821",
+      "osm:node:8883385553",
+      "osm:node:12344125229",
+      "poi-google:30d49ba30108437ac7f52313",
       "osm:way:565592419"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 0.8
   },
   {
     "scenario_id": "DN-HOLD-03",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 92,
+    "eligible_count": 542,
+    "candidate_count": 111,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -4194,92 +4484,8 @@
         "craft_village",
         "historic"
       ],
-      "preset": "balanced",
-      "radius_km": 30.0,
-      "top_k": 10
-    },
-    "kind": "travel_mode",
-    "value": "geographic_distance",
-    "ids": [
-      "osm:node:4171971289",
-      "osm:node:4171964390",
-      "poi-google:270efa89c4fa1b1bdeb4cdcd",
-      "osm:node:2617007574",
-      "osm:node:10709724107",
-      "osm:node:12344125229",
-      "osm:way:565592419",
-      "osm:node:8883385553",
-      "osm:node:5513474821",
-      "osm:node:11896339273"
-    ],
-    "overlap_at_10": 1.0
-  },
-  {
-    "scenario_id": "DN-HOLD-03",
-    "split": "holdout",
-    "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 57,
-    "request": {
-      "start": {
-        "latitude": 15.8794,
-        "longitude": 108.3278
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [
-        "làng nghề",
-        "văn hóa",
-        "nghệ thuật"
-      ],
-      "preferred_categories": [
-        "craft_village",
-        "historic"
-      ],
-      "preset": "balanced",
-      "radius_km": 30.0,
-      "top_k": 10
-    },
-    "kind": "pool_size",
-    "value": 20,
-    "ids": [
-      "osm:node:4171971289",
-      "osm:node:4171964390",
-      "poi-google:270efa89c4fa1b1bdeb4cdcd",
-      "osm:node:2617007574",
-      "osm:node:10709724107",
-      "osm:node:5513474821",
-      "osm:node:12344125229",
-      "osm:node:8883385553",
-      "osm:way:565592419",
-      "osm:node:11896339273"
-    ],
-    "overlap_at_10": 1.0
-  },
-  {
-    "scenario_id": "DN-HOLD-03",
-    "split": "holdout",
-    "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 92,
-    "request": {
-      "start": {
-        "latitude": 15.8794,
-        "longitude": 108.3278
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [
-        "làng nghề",
-        "văn hóa",
-        "nghệ thuật"
-      ],
-      "preferred_categories": [
-        "craft_village",
-        "historic"
-      ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 30.0,
       "top_k": 10
@@ -4292,10 +4498,10 @@
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:2617007574",
       "osm:node:10709724107",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:12344125229",
       "osm:way:565592419",
       "osm:node:8883385553",
-      "osm:node:5513474821",
       "osm:node:11896339273"
     ],
     "overlap_at_10": 1.0
@@ -4304,8 +4510,8 @@
     "scenario_id": "DN-HOLD-03",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 473,
-    "candidate_count": 173,
+    "eligible_count": 542,
+    "candidate_count": 188,
     "request": {
       "start": {
         "latitude": 15.8794,
@@ -4323,6 +4529,8 @@
         "craft_village",
         "historic"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 30.0,
       "top_k": 10
@@ -4335,11 +4543,11 @@
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:node:10709724107",
       "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:node:12344125229",
       "osm:way:565592419",
       "osm:node:11896339273",
-      "osm:node:8883385553",
-      "osm:node:5513474821"
+      "osm:node:8883385553"
     ],
     "overlap_at_10": 1.0
   },
@@ -4347,8 +4555,8 @@
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 86,
+    "eligible_count": 411,
+    "candidate_count": 95,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4366,6 +4574,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4374,15 +4584,15 @@
     "value": "balanced",
     "ids": [
       "osm:way:198804483",
+      "poi-google:fb65138477020d96c1ac1463",
       "osm:node:2617007574",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
       "poi-google:3aac3427ee25b18a817027e9",
       "osm:node:12344125229",
-      "osm:way:627379326",
-      "osm:way:1109970072",
-      "osm:way:302944359",
-      "osm:relation:2836882"
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:77726493c07f4ffbb0a7434f"
     ],
     "overlap_at_10": 1.0
   },
@@ -4390,8 +4600,8 @@
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 86,
+    "eligible_count": 411,
+    "candidate_count": 95,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4409,6 +4619,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4417,24 +4629,24 @@
     "value": "interests",
     "ids": [
       "osm:node:2617007574",
+      "poi-google:fb65138477020d96c1ac1463",
       "osm:way:198804483",
+      "poi-google:94fe56282cbce6151cb0f160",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
       "osm:relation:8552348",
       "osm:node:12344125229",
       "poi-google:3aac3427ee25b18a817027e9",
-      "osm:way:1109970072",
-      "osm:way:627379326",
-      "osm:way:746227054",
-      "osm:way:1109970004"
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:a656101db03a62ca2415442f"
     ],
-    "overlap_at_10": 0.8
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 86,
+    "eligible_count": 411,
+    "candidate_count": 95,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4452,6 +4664,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4460,24 +4674,24 @@
     "value": "nearby",
     "ids": [
       "osm:way:198804483",
+      "poi-google:fb65138477020d96c1ac1463",
       "osm:node:2617007574",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
       "osm:way:627379326",
-      "osm:node:12344125229",
       "poi-google:3aac3427ee25b18a817027e9",
-      "osm:node:5513474821",
-      "osm:way:565186618",
-      "osm:relation:2836882"
+      "osm:node:12344125229",
+      "poi-google:77726493c07f4ffbb0a7434f"
     ],
-    "overlap_at_10": 0.8
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 86,
+    "eligible_count": 411,
+    "candidate_count": 95,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4495,6 +4709,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4503,15 +4719,15 @@
     "value": "quality",
     "ids": [
       "osm:way:198804483",
+      "poi-google:fb65138477020d96c1ac1463",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
       "osm:node:2617007574",
       "poi-google:3aac3427ee25b18a817027e9",
-      "osm:way:302944359",
-      "osm:relation:2836882",
-      "osm:node:12344125229",
-      "osm:node:4280016689",
-      "osm:node:8474743417"
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:8617d848944c924d30b5c956"
     ],
     "overlap_at_10": 0.8
   },
@@ -4519,8 +4735,8 @@
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 86,
+    "eligible_count": 411,
+    "candidate_count": 95,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4538,6 +4754,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4546,15 +4764,15 @@
     "value": "geographic_distance",
     "ids": [
       "osm:way:198804483",
+      "poi-google:fb65138477020d96c1ac1463",
       "osm:node:2617007574",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
       "poi-google:3aac3427ee25b18a817027e9",
       "osm:node:12344125229",
-      "osm:way:627379326",
-      "osm:way:1109970072",
-      "osm:way:302944359",
-      "osm:relation:2836882"
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:77726493c07f4ffbb0a7434f"
     ],
     "overlap_at_10": 1.0
   },
@@ -4562,8 +4780,8 @@
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 50,
+    "eligible_count": 411,
+    "candidate_count": 54,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4581,6 +4799,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4589,24 +4809,24 @@
     "value": 20,
     "ids": [
       "osm:way:198804483",
-      "osm:node:2617007574",
+      "poi-google:fb65138477020d96c1ac1463",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "osm:node:2617007574",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
       "poi-google:3aac3427ee25b18a817027e9",
       "osm:node:12344125229",
       "osm:way:627379326",
-      "osm:way:302944359",
-      "osm:relation:2836882",
-      "osm:way:1109970072"
+      "poi-google:77726493c07f4ffbb0a7434f"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 86,
+    "eligible_count": 411,
+    "candidate_count": 95,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4624,6 +4844,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4632,15 +4854,15 @@
     "value": 40,
     "ids": [
       "osm:way:198804483",
+      "poi-google:fb65138477020d96c1ac1463",
       "osm:node:2617007574",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
       "poi-google:3aac3427ee25b18a817027e9",
       "osm:node:12344125229",
-      "osm:way:627379326",
-      "osm:way:1109970072",
-      "osm:way:302944359",
-      "osm:relation:2836882"
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:77726493c07f4ffbb0a7434f"
     ],
     "overlap_at_10": 1.0
   },
@@ -4648,8 +4870,8 @@
     "scenario_id": "DN-HOLD-04",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 365,
-    "candidate_count": 159,
+    "eligible_count": 411,
+    "candidate_count": 160,
     "request": {
       "start": {
         "latitude": 15.7645,
@@ -4667,6 +4889,8 @@
         "historic",
         "nature_area"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4675,15 +4899,15 @@
     "value": 80,
     "ids": [
       "osm:way:198804483",
+      "poi-google:fb65138477020d96c1ac1463",
       "osm:node:2617007574",
       "poi-google:270efa89c4fa1b1bdeb4cdcd",
+      "poi-google:94fe56282cbce6151cb0f160",
       "osm:relation:8552348",
-      "osm:node:12344125229",
       "poi-google:3aac3427ee25b18a817027e9",
-      "osm:way:627379326",
-      "osm:way:1109970072",
-      "osm:way:746227054",
-      "osm:way:302944359"
+      "osm:node:12344125229",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:a656101db03a62ca2415442f"
     ],
     "overlap_at_10": 0.9
   },
@@ -4691,8 +4915,8 @@
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 110,
+    "eligible_count": 567,
+    "candidate_count": 106,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -4709,6 +4933,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4716,16 +4942,16 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:node:4807957148",
-      "osm:node:10154412164",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11665246470",
-      "osm:node:13340074016"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "osm:way:1384907056",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:ffb47bfbdaad001797941c2e",
+      "poi-google:14256836840dee41128344c8",
+      "poi-google:5f4830143ea064085bd78b52"
     ],
     "overlap_at_10": 1.0
   },
@@ -4733,8 +4959,8 @@
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 110,
+    "eligible_count": 567,
+    "candidate_count": 106,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -4751,6 +4977,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4758,25 +4986,25 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
-      "osm:node:4807957148",
-      "osm:node:13040467529",
-      "osm:relation:19000664",
-      "osm:node:10154412164",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:13340074016",
-      "osm:node:12612220720"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "osm:way:1384907056",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:d6565b2cea1890f2a4dca6c0",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "osm:way:962130353",
+      "poi-google:a5e26a17b144b3122a2c0ffe",
+      "poi-google:c7cf76efd90a14e904ff03a1"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 0.7
   },
   {
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 110,
+    "eligible_count": 567,
+    "candidate_count": 106,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -4793,6 +5021,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4800,25 +5030,25 @@
     "kind": "preset",
     "value": "nearby",
     "ids": [
-      "osm:node:4807957148",
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:node:10154412164",
-      "osm:way:359114064",
-      "osm:way:14131302",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:13340074016",
-      "osm:node:12612220720"
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "osm:way:1384907056",
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:086dbd4075f8029f486a6ded",
+      "poi-google:5f4830143ea064085bd78b52",
+      "poi-google:ffb47bfbdaad001797941c2e",
+      "poi-google:6fe02f0d54698ccdc8e5fc46"
     ],
-    "overlap_at_10": 0.9
+    "overlap_at_10": 0.8
   },
   {
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 110,
+    "eligible_count": 567,
+    "candidate_count": 106,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -4835,6 +5065,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4842,16 +5074,16 @@
     "kind": "preset",
     "value": "quality",
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:node:4807957148",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:node:10154412164",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11665246470",
-      "osm:node:10773540605"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:8617d848944c924d30b5c956",
+      "osm:way:1384907056",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:5f4830143ea064085bd78b52",
+      "poi-google:ffb47bfbdaad001797941c2e",
+      "poi-google:086dbd4075f8029f486a6ded"
     ],
     "overlap_at_10": 0.9
   },
@@ -4859,8 +5091,8 @@
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 110,
+    "eligible_count": 567,
+    "candidate_count": 106,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -4877,6 +5109,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4884,16 +5118,16 @@
     "kind": "travel_mode",
     "value": "geographic_distance",
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:node:4807957148",
-      "osm:node:10154412164",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11665246470",
-      "osm:node:13340074016"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "osm:way:1384907056",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:ffb47bfbdaad001797941c2e",
+      "poi-google:14256836840dee41128344c8",
+      "poi-google:5f4830143ea064085bd78b52"
     ],
     "overlap_at_10": 1.0
   },
@@ -4901,7 +5135,7 @@
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
+    "eligible_count": 567,
     "candidate_count": 57,
     "request": {
       "start": {
@@ -4919,6 +5153,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4926,25 +5162,25 @@
     "kind": "pool_size",
     "value": 20,
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:node:4807957148",
-      "osm:node:10154412164",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11665246470",
-      "osm:node:13340074016"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "osm:way:1384907056",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:d6565b2cea1890f2a4dca6c0",
+      "poi-google:44589dd0fee354e42160f01b",
+      "osm:way:962130353",
+      "poi-google:a5e26a17b144b3122a2c0ffe"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.6
   },
   {
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 110,
+    "eligible_count": 567,
+    "candidate_count": 106,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -4961,6 +5197,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -4968,16 +5206,16 @@
     "kind": "pool_size",
     "value": 40,
     "ids": [
-      "osm:relation:19000664",
-      "osm:node:13040467529",
-      "osm:node:4807957148",
-      "osm:node:10154412164",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11665246470",
-      "osm:node:13340074016"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "osm:way:1384907056",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:ffb47bfbdaad001797941c2e",
+      "poi-google:14256836840dee41128344c8",
+      "poi-google:5f4830143ea064085bd78b52"
     ],
     "overlap_at_10": 1.0
   },
@@ -4985,8 +5223,8 @@
     "scenario_id": "DN-HOLD-05",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 480,
-    "candidate_count": 207,
+    "eligible_count": 567,
+    "candidate_count": 183,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5003,6 +5241,8 @@
         "park",
         "theme_park"
       ],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 35.0,
       "top_k": 10
@@ -5010,25 +5250,25 @@
     "kind": "pool_size",
     "value": 80,
     "ids": [
-      "osm:node:13040467529",
-      "osm:node:4807957148",
-      "osm:relation:19000664",
-      "osm:node:10154412164",
-      "osm:way:14131302",
-      "osm:way:359114064",
-      "osm:relation:7055216",
-      "osm:relation:8552348",
-      "osm:node:11665246470",
-      "osm:node:13340074016"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "osm:way:1384907056",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:ce4ac990f49853c1a445272d",
+      "poi-google:4be563d872732c20923e7dc5",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:d6565b2cea1890f2a4dca6c0",
+      "poi-google:14256836840dee41128344c8",
+      "poi-google:5f4830143ea064085bd78b52"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 95,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 114,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5039,6 +5279,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5046,25 +5288,25 @@
     "kind": "preset",
     "value": "balanced",
     "ids": [
-      "osm:node:11665246470",
+      "poi-google:c7cf76efd90a14e904ff03a1",
       "osm:way:204790989",
-      "osm:way:302872188",
-      "osm:node:11934169470",
-      "osm:way:1422444084",
-      "osm:way:1326219930",
-      "osm:way:118672509",
-      "osm:node:5273998823",
-      "osm:node:10773540605",
-      "osm:way:1368599361"
+      "osm:way:1384907056",
+      "poi-google:f300365d20dfc26c09a203a2",
+      "poi-google:b74ba86b934986c0af360ab1",
+      "osm:node:11665246470",
+      "osm:way:759913076",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:06fd7684a756790c4e7cb15a",
+      "poi-google:54f6c1d76c715ccf3460f85c"
     ],
     "overlap_at_10": 1.0
   },
   {
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 95,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 114,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5075,6 +5317,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5082,25 +5326,25 @@
     "kind": "preset",
     "value": "interests",
     "ids": [
+      "poi-google:c7cf76efd90a14e904ff03a1",
       "osm:way:204790989",
+      "poi-google:b74ba86b934986c0af360ab1",
       "osm:node:11665246470",
-      "osm:way:302872188",
-      "osm:node:11934169470",
-      "osm:way:1422444084",
-      "osm:way:1326219930",
-      "osm:way:118672509",
-      "osm:node:5273998823",
-      "osm:node:10773540605",
-      "osm:way:204885903"
+      "osm:way:1384907056",
+      "osm:way:759913076",
+      "osm:node:11176025737",
+      "poi-google:f300365d20dfc26c09a203a2",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:54f6c1d76c715ccf3460f85c"
     ],
     "overlap_at_10": 0.9
   },
   {
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 95,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 114,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5111,6 +5355,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5118,25 +5364,25 @@
     "kind": "preset",
     "value": "nearby",
     "ids": [
-      "osm:way:302872188",
-      "osm:way:204790989",
-      "osm:node:11665246470",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "osm:node:13340074016",
       "osm:node:11715206469",
       "osm:node:5293335937",
       "osm:node:12612220720",
+      "poi-google:f300365d20dfc26c09a203a2",
       "osm:node:7370362779",
-      "osm:node:13340074016",
-      "osm:node:5301723622",
-      "osm:node:5978084714"
+      "osm:way:1384907056",
+      "osm:node:5978084714",
+      "osm:node:4281489185"
     ],
     "overlap_at_10": 0.3
   },
   {
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 95,
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 114,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5147,6 +5393,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5154,52 +5402,16 @@
     "kind": "preset",
     "value": "quality",
     "ids": [
+      "poi-google:c7cf76efd90a14e904ff03a1",
       "osm:node:11665246470",
+      "osm:way:1384907056",
+      "poi-google:b74ba86b934986c0af360ab1",
       "osm:way:204790989",
-      "osm:node:11934169470",
-      "osm:way:302872188",
-      "osm:way:1422444084",
-      "osm:node:5273998823",
-      "osm:node:10773540605",
-      "osm:way:118672509",
-      "osm:way:1326219930",
-      "osm:way:1368599361"
-    ],
-    "overlap_at_10": 1.0
-  },
-  {
-    "scenario_id": "DN-HOLD-06",
-    "split": "holdout",
-    "travel_metric": "road_time",
-    "eligible_count": 287,
-    "candidate_count": 95,
-    "request": {
-      "start": {
-        "latitude": 16.0544,
-        "longitude": 108.2022
-      },
-      "date": "2026-09-20",
-      "location": "Đà Nẵng",
-      "selected_poi_ids": [],
-      "interests": [],
-      "preferred_categories": [],
-      "preset": "balanced",
-      "radius_km": 20.0,
-      "top_k": 10
-    },
-    "kind": "travel_mode",
-    "value": "geographic_distance",
-    "ids": [
-      "osm:way:204790989",
-      "osm:way:1422444084",
-      "osm:node:11665246470",
-      "osm:way:302872188",
-      "osm:way:1326219930",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:118672509",
-      "osm:way:204885903",
-      "osm:way:1368599361"
+      "poi-google:8617d848944c924d30b5c956",
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2",
+      "poi-google:06fd7684a756790c4e7cb15a",
+      "poi-google:b791504c992c0abe3b3e6c17"
     ],
     "overlap_at_10": 0.9
   },
@@ -5207,8 +5419,8 @@
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 287,
-    "candidate_count": 56,
+    "eligible_count": 363,
+    "candidate_count": 114,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5219,6 +5431,46 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
+      "preset": "balanced",
+      "radius_km": 20.0,
+      "top_k": 10
+    },
+    "kind": "travel_mode",
+    "value": "geographic_distance",
+    "ids": [
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "osm:way:204790989",
+      "osm:way:1384907056",
+      "poi-google:f300365d20dfc26c09a203a2",
+      "poi-google:b74ba86b934986c0af360ab1",
+      "osm:node:11665246470",
+      "osm:way:759913076",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:06fd7684a756790c4e7cb15a",
+      "poi-google:54f6c1d76c715ccf3460f85c"
+    ],
+    "overlap_at_10": 1.0
+  },
+  {
+    "scenario_id": "DN-HOLD-06",
+    "split": "holdout",
+    "travel_metric": "geographic_distance",
+    "eligible_count": 363,
+    "candidate_count": 57,
+    "request": {
+      "start": {
+        "latitude": 16.0544,
+        "longitude": 108.2022
+      },
+      "date": "2026-09-20",
+      "location": "Đà Nẵng",
+      "selected_poi_ids": [],
+      "interests": [],
+      "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5226,25 +5478,25 @@
     "kind": "pool_size",
     "value": 20,
     "ids": [
-      "osm:way:204790989",
-      "osm:way:1422444084",
+      "poi-google:c7cf76efd90a14e904ff03a1",
+      "poi-google:b74ba86b934986c0af360ab1",
       "osm:node:11665246470",
-      "osm:node:11934169470",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:b791504c992c0abe3b3e6c17",
       "osm:node:5273998823",
-      "osm:way:118672509",
-      "osm:way:1368599361",
+      "poi-google:5fe82be03ab7e639f3ffa3cc",
+      "poi-google:4be563d872732c20923e7dc5",
       "osm:node:13340074016",
-      "osm:node:11715206469",
-      "osm:node:10773540605"
+      "osm:node:11715206469"
     ],
-    "overlap_at_10": 0.7
+    "overlap_at_10": 0.4
   },
   {
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 287,
-    "candidate_count": 95,
+    "eligible_count": 363,
+    "candidate_count": 114,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5255,6 +5507,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5262,16 +5516,16 @@
     "kind": "pool_size",
     "value": 40,
     "ids": [
+      "poi-google:c7cf76efd90a14e904ff03a1",
       "osm:way:204790989",
-      "osm:way:1422444084",
+      "osm:way:1384907056",
+      "poi-google:f300365d20dfc26c09a203a2",
+      "poi-google:b74ba86b934986c0af360ab1",
       "osm:node:11665246470",
-      "osm:way:302872188",
-      "osm:way:1326219930",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:118672509",
-      "osm:way:204885903",
-      "osm:way:1368599361"
+      "osm:way:759913076",
+      "poi-google:8617d848944c924d30b5c956",
+      "poi-google:06fd7684a756790c4e7cb15a",
+      "poi-google:54f6c1d76c715ccf3460f85c"
     ],
     "overlap_at_10": 1.0
   },
@@ -5279,8 +5533,8 @@
     "scenario_id": "DN-HOLD-06",
     "split": "holdout",
     "travel_metric": "geographic_distance",
-    "eligible_count": 287,
-    "candidate_count": 160,
+    "eligible_count": 363,
+    "candidate_count": 206,
     "request": {
       "start": {
         "latitude": 16.0544,
@@ -5291,6 +5545,8 @@
       "selected_poi_ids": [],
       "interests": [],
       "preferred_categories": [],
+      "scope": "",
+      "tourism_only": false,
       "preset": "balanced",
       "radius_km": 20.0,
       "top_k": 10
@@ -5298,17 +5554,17 @@
     "kind": "pool_size",
     "value": 80,
     "ids": [
+      "poi-google:c7cf76efd90a14e904ff03a1",
       "osm:way:204790989",
-      "osm:way:1422444084",
       "osm:node:11665246470",
-      "osm:way:302872188",
-      "osm:way:1326219930",
-      "osm:node:11934169470",
-      "osm:node:5273998823",
-      "osm:way:118672509",
-      "osm:way:204885903",
-      "osm:way:1368599361"
+      "poi-google:b74ba86b934986c0af360ab1",
+      "osm:way:1422444084",
+      "poi-google:c3bbfbd7bec3b184f49639b7",
+      "poi-google:183431090e55bb6426c6b964",
+      "osm:way:1384907056",
+      "osm:way:759913076",
+      "poi-google:f300365d20dfc26c09a203a2"
     ],
-    "overlap_at_10": 1.0
+    "overlap_at_10": 0.7
   }
 ]

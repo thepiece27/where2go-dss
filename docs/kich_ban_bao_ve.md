@@ -1,3 +1,9 @@
+<!-- DANANG_CURRENT_START -->
+> Dữ liệu đang phục vụ: `v2-c3ad315d02c5356a`. Đợt Đà Nẵng–Hội An có trạng thái **paused**, 2625 POI trong phạm vi (bao gồm dữ liệu cũ). Các số liệu baseline bên dưới vẫn là kết quả lịch sử của snapshot được ghi kèm; xem báo cáo chiến dịch và notebook đã cập nhật để đối chiếu snapshot mới.
+
+[Báo cáo chiến dịch hiện tại](../data/reports/v2/danang_campaign/report.md)
+<!-- DANANG_CURRENT_END -->
+
 # Kịch bản bảo vệ — Hệ gợi ý POI dựa trên nội dung và ngữ cảnh, kết hợp ra quyết định đa tiêu chí
 
 Dùng cùng [báo cáo kỹ thuật](bao_cao_du_an_poi.md), [hướng dẫn chạy](huong_dan_chay.md) và [notebook đã thực thi](../notebooks/phan_tich_du_lieu_poi.ipynb). Snapshot `v2-ae66988a1053d0de`, policy `poi-recommendation-1.0`. Đây là khung nội dung để dựng slide và luyện nói; không đưa nguyên các đoạn văn dài lên slide.

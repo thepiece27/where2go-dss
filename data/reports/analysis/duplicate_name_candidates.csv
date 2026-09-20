@@ -4,236 +4,264 @@ An Giang,cong vien,36,osm:way:1108260166 | osm:way:1108260510 | osm:way:11082606
 Hà Nội,the coffee house,33,osm:node:11039425483 | osm:node:4697346784 | osm:node:5621040322 | osm:node:6149039485 | osm:node:6846162967 | osm:node:7056055192 | osm:node:7056055193 | osm:node:7056055194 | osm:node:7056055197 | osm:node:7056055198 | osm:node:7056055199 | osm:node:7056055200 | osm:node:7056055201 | osm:node:7056055202 | osm:node:7056055203 | osm:node:7056055204 | osm:node:7056055205 | osm:node:7056055208 | osm:node:7056055209 | osm:node:7056055211 | osm:node:7056055212 | osm:node:7056055213 | osm:node:7056055214 | osm:node:7056055216 | osm:node:7056055217 | osm:node:7056055218 | osm:node:7090399807 | osm:node:8906156035 | osm:node:8938779418 | osm:node:9961839403 | osm:way:1329845893 | osm:way:863793823 | osm:way:899679881
 Hà Nội,lotteria,25,osm:node:10621408642 | osm:node:11799743443 | osm:node:11929860879 | osm:node:12164856801 | osm:node:12277048843 | osm:node:12287492384 | osm:node:12823270593 | osm:node:13632874302 | osm:node:13912681355 | osm:node:4507417291 | osm:node:4535978495 | osm:node:5036642922 | osm:node:5485670930 | osm:node:5680772376 | osm:node:6224015609 | osm:node:6491366585 | osm:node:6658873504 | osm:node:6846162969 | osm:node:7056017420 | osm:node:9931517986 | osm:way:1231374579 | osm:way:1329845834 | osm:way:1331951049 | osm:way:892577376 | osm:way:899221544
 Hà Nội,kfc,24,osm:node:11212195515 | osm:node:11237992813 | osm:node:12331430862 | osm:node:13806229577 | osm:node:13912681354 | osm:node:3715457786 | osm:node:4413364391 | osm:node:442913494 | osm:node:4538467361 | osm:node:481837568 | osm:node:4859558525 | osm:node:5112142021 | osm:node:5485777714 | osm:node:5485879965 | osm:node:6611696185 | osm:node:6658026112 | osm:node:6658873511 | osm:node:7056021081 | osm:node:9407362504 | osm:node:9683275500 | osm:node:9964447763 | osm:way:1331658928 | osm:way:892577134 | osm:way:899679880
-Hà Nội,starbucks,20,osm:node:10002371862 | osm:node:10269656431 | osm:node:10269656433 | osm:node:10621408648 | osm:node:11173421913 | osm:node:11536272574 | osm:node:12118199553 | osm:node:12277048842 | osm:node:12331430863 | osm:node:12372389429 | osm:node:12828541766 | osm:node:13284316428 | osm:node:13284330528 | osm:node:13806229567 | osm:node:6429760086 | osm:node:7053793591 | osm:node:7176671001 | osm:node:8929646295 | osm:node:9942330783 | osm:node:9951113019
 Hà Nội,cong ca phe,20,osm:node:12372377830 | osm:node:14064444702 | osm:node:4453120690 | osm:node:4568021791 | osm:node:4601307889 | osm:node:4831974121 | osm:node:5030121722 | osm:node:5072875424 | osm:node:5133284823 | osm:node:5485659318 | osm:node:5485735851 | osm:node:5761335023 | osm:node:6024401286 | osm:node:6027206187 | osm:node:6139814449 | osm:node:6531739087 | osm:node:6846162970 | osm:node:7099271385 | osm:node:9624104359 | osm:way:1254526558
+Hà Nội,starbucks,20,osm:node:10002371862 | osm:node:10269656431 | osm:node:10269656433 | osm:node:10621408648 | osm:node:11173421913 | osm:node:11536272574 | osm:node:12118199553 | osm:node:12277048842 | osm:node:12331430863 | osm:node:12372389429 | osm:node:12828541766 | osm:node:13284316428 | osm:node:13284330528 | osm:node:13806229567 | osm:node:6429760086 | osm:node:7053793591 | osm:node:7176671001 | osm:node:8929646295 | osm:node:9942330783 | osm:node:9951113019
 Đà Nẵng,highlands coffee,19,osm:node:11609564692 | osm:node:13036529160 | osm:node:13204937554 | osm:node:13288936111 | osm:node:13290098752 | osm:node:13421486901 | osm:node:13542865076 | osm:node:13990162765 | osm:node:14104855301 | osm:node:4403884590 | osm:node:5301723622 | osm:node:6520986631 | osm:node:6563961976 | osm:node:6680247851 | osm:node:6698271431 | osm:node:7085762965 | osm:node:729406744 | osm:way:1314405280 | osm:way:1535565790
 Hà Nội,pizza hut,18,osm:node:13912681353 | osm:node:2399180443 | osm:node:4090272750 | osm:node:4090277644 | osm:node:4090279692 | osm:node:4090284259 | osm:node:4090297904 | osm:node:4090305470 | osm:node:4090309926 | osm:node:4091985948 | osm:node:4091988292 | osm:node:4091994843 | osm:node:4091998924 | osm:node:6690139595 | osm:node:6846162972 | osm:node:7076962085 | osm:node:9931514400 | osm:way:1331638432
 Hà Nội,mixue,14,osm:node:11212149484 | osm:node:11212195517 | osm:node:11563334815 | osm:node:11645156888 | osm:node:11830565369 | osm:node:11832141669 | osm:node:11832188470 | osm:node:11834016869 | osm:node:12109633453 | osm:node:13418020264 | osm:node:13888717612 | osm:way:1211287036 | osm:way:1331658969 | osm:way:1454693639
-Hà Nội,vuon hoa,11,osm:way:1002534081 | osm:way:1002535124 | osm:way:1044485853 | osm:way:1044486077 | osm:way:1106866558 | osm:way:1371658512 | osm:way:1460190471 | osm:way:786580801 | osm:way:795142588 | osm:way:795142945 | osm:way:892583617
 Hà Nội,ca phe aha,11,osm:node:2272708929 | osm:node:5141997421 | osm:node:6609660791 | osm:node:6856563729 | osm:node:7022966185 | osm:node:7056034217 | osm:node:7098077085 | osm:node:7176669284 | osm:node:7178815905 | osm:node:8307082776 | osm:node:9290531317
+Hà Nội,vuon hoa,11,osm:way:1002534081 | osm:way:1002535124 | osm:way:1044485853 | osm:way:1044486077 | osm:way:1106866558 | osm:way:1371658512 | osm:way:1460190471 | osm:way:786580801 | osm:way:795142588 | osm:way:795142945 | osm:way:892583617
 Hà Nội,tocotoco,10,osm:node:10248628282 | osm:node:12064276069 | osm:node:5485791236 | osm:node:6658017286 | osm:node:7055904082 | osm:node:7168918108 | osm:node:8357763624 | osm:node:9961849557 | osm:way:1329845910 | osm:way:1331658970
 Hà Nội,aha cafe,10,osm:node:11212195524 | osm:node:11521920518 | osm:node:11625397940 | osm:node:12533367105 | osm:node:13003770803 | osm:node:13039615005 | osm:node:13110584901 | osm:node:4383692291 | osm:node:9811836129 | osm:way:904135121
-Hà Nội,mcdonald s,9,osm:node:10621408652 | osm:node:12118199551 | osm:node:13806229568 | osm:node:5340817221 | osm:node:6880982195 | osm:node:6880982196 | osm:node:6880982198 | osm:way:1329845833 | osm:way:899679882
 Hà Nội,ding tea,9,osm:node:10002371882 | osm:node:11212149481 | osm:node:12589868465 | osm:node:4580736991 | osm:node:5239158923 | osm:node:5485722446 | osm:node:5662831628 | osm:node:8656339979 | osm:way:892577224
+Hà Nội,mcdonald s,9,osm:node:10621408652 | osm:node:12118199551 | osm:node:13806229568 | osm:node:5340817221 | osm:node:6880982195 | osm:node:6880982196 | osm:node:6880982198 | osm:way:1329845833 | osm:way:899679882
 Hồ Chí Minh,mieu ngu hanh,8,osm:node:11054418024 | osm:node:1779408248 | osm:node:5362836921 | osm:node:6390690759 | osm:node:6393868878 | osm:way:1144380324 | osm:way:616108695 | osm:way:754264578
-Hà Nội,ca phe fimo sp,7,osm:node:7383642461 | osm:node:7383642463 | osm:node:7383642464 | osm:node:7383642466 | osm:node:7383642467 | osm:node:7383642468 | osm:node:7383642470
 Hà Nội,ca phe trung nguyen,7,osm:node:11662267270 | osm:node:3281664612 | osm:node:4532521491 | osm:node:4961221921 | osm:node:5043921422 | osm:node:7170708485 | osm:way:1046542443
-Ninh Bình,chua nam lang,7,osm:way:1396507642 | osm:way:1468661195 | osm:way:1468661196 | osm:way:1468661197 | osm:way:1468661198 | osm:way:1468661199 | osm:way:1468661200
 Hà Nội,net hue,7,osm:node:10002371867 | osm:node:11782452957 | osm:node:12589868470 | osm:node:4740929425 | osm:way:1330098155 | osm:way:1331658950 | osm:way:892577131
-Hà Nội,pho,6,osm:node:11215223970 | osm:node:11618650232 | osm:node:13632874202 | osm:node:13632874415 | osm:node:13632874613 | osm:node:14087058901
+Ninh Bình,chua nam lang,7,osm:way:1396507642 | osm:way:1468661195 | osm:way:1468661196 | osm:way:1468661197 | osm:way:1468661198 | osm:way:1468661199 | osm:way:1468661200
+Hà Nội,ca phe fimo sp,7,osm:node:7383642461 | osm:node:7383642463 | osm:node:7383642464 | osm:node:7383642466 | osm:node:7383642467 | osm:node:7383642468 | osm:node:7383642470
+Tây Ninh,van phap cung,6,osm:way:666407652 | osm:way:666407653 | osm:way:666407654 | osm:way:666407655 | osm:way:666407656 | osm:way:666407659
+Hồ Chí Minh,chua tu quang,6,osm:node:12187486006 | osm:node:3313813773 | osm:way:326338832 | osm:way:489020905 | osm:way:692394462 | osm:way:727756302
+Đà Nẵng,lotteria,6,osm:node:11423812931 | osm:node:11436139139 | osm:node:12641992501 | osm:node:12649550201 | osm:node:4985355119 | osm:node:6357894214
+Đà Nẵng,thai market,6,osm:node:11427582964 | osm:node:12169278141 | osm:node:5429167110 | osm:node:5429181331 | osm:node:5444874593 | osm:node:6617189371
+Hà Nội,twitterbeans coffee,6,osm:node:3440266925 | osm:node:3440273722 | osm:node:3440273951 | osm:node:5555933421 | osm:node:5915365601 | osm:node:8886603909
 Hà Nội,le monde steak,6,osm:node:10678548055 | osm:node:12245679309 | osm:node:6561157585 | osm:node:9961849558 | osm:way:1331668357 | osm:way:899514943
 Hà Nội,domino s,6,osm:node:11411581952 | osm:node:5485644612 | osm:node:5485644613 | osm:node:6846162968 | osm:node:7222198618 | osm:way:899221543
-Hà Nội,twitterbeans coffee,6,osm:node:3440266925 | osm:node:3440273722 | osm:node:3440273951 | osm:node:5555933421 | osm:node:5915365601 | osm:node:8886603909
-Đà Nẵng,lotteria,6,osm:node:11423812931 | osm:node:11436139139 | osm:node:12641992501 | osm:node:12649550201 | osm:node:4985355119 | osm:node:6357894214
 Hà Nội,the pizza company,6,osm:node:5614494624 | osm:node:7845431718 | osm:way:1236046190 | osm:way:1331658935 | osm:way:892577169 | osm:way:899514993
-Hồ Chí Minh,chua tu quang,6,osm:node:12187486006 | osm:node:3313813773 | osm:way:326338832 | osm:way:489020905 | osm:way:692394462 | osm:way:727756302
-Đà Nẵng,thai market,6,osm:node:11427582964 | osm:node:12169278141 | osm:node:5429167110 | osm:node:5429181331 | osm:node:5444874593 | osm:node:6617189371
-Tây Ninh,van phap cung,6,osm:way:666407652 | osm:way:666407653 | osm:way:666407654 | osm:way:666407655 | osm:way:666407656 | osm:way:666407659
+Hà Nội,pho,6,osm:node:11215223970 | osm:node:11618650232 | osm:node:13632874202 | osm:node:13632874415 | osm:node:13632874613 | osm:node:14087058901
 Đà Nẵng,kfc,6,osm:node:10312611228 | osm:node:4289580589 | osm:node:5539964821 | osm:node:5699726168 | osm:node:6675647538 | osm:node:6976178457
 Tây Ninh,buu thap dau su,5,osm:node:3690121740 | osm:node:3690121742 | osm:node:6232955922 | osm:node:6232955923 | osm:node:6232955943
-Hồ Chí Minh,chua buu long,5,osm:node:3164015111 | osm:way:1225233361 | osm:way:323379917 | osm:way:736162150 | osm:way:744244414
-Hải Phòng,chua linh quang,5,osm:node:2477239340 | osm:node:6950716585 | osm:way:1120513537 | osm:way:240654953 | osm:way:242260491
-Hồ Chí Minh,mieu ba,5,osm:node:5601072999 | osm:node:7391413433 | osm:way:691444122 | osm:way:727756317 | osm:way:743798632
-Đà Nẵng,starbucks,5,osm:node:13619314947 | osm:node:13853214801 | osm:node:13990162778 | osm:node:5652771521 | osm:way:212215308
-Đà Nẵng,,5,osm:node:12686191701 | osm:node:4171971589 | osm:node:4352264489 | osm:node:5136805421 | osm:node:6482020184
-An Giang,chua thom mit,5,osm:way:695260226 | osm:way:695260227 | osm:way:695260228 | osm:way:695260229 | osm:way:696752473
-Đồng Tháp,chua que huong,5,osm:way:695260214 | osm:way:695260215 | osm:way:695260216 | osm:way:695260217 | osm:way:695260218
 Hồ Chí Minh,chua quang minh,5,osm:node:11056355060 | osm:node:6499373254 | osm:way:1538958794 | osm:way:225528466 | osm:way:485859145
-Hà Nội,ca phe anan,5,osm:node:1629328703 | osm:node:4217845890 | osm:node:4217848289 | osm:node:4898407622 | osm:node:733355066
-Hồ Chí Minh,chua an lac,5,osm:node:11538581577 | osm:node:8787772762 | osm:node:9584838626 | osm:way:1241794322 | osm:way:589903345
-Hồ Chí Minh,chua buu quang,5,osm:node:11054448200 | osm:way:1313916526 | osm:way:503373118 | osm:way:569352581 | osm:way:572666281
-Hà Nội,,5,osm:node:11521920516 | osm:node:12654222689 | osm:node:13915583550 | osm:node:4133218490 | osm:node:5370525523
-Hồ Chí Minh,chua lien hoa,5,osm:node:12188488691 | osm:node:6538573183 | osm:node:6969093918 | osm:way:1003660713 | osm:way:1210315498
-Hồ Chí Minh,chua pho quang,5,osm:node:12250712276 | osm:node:7104079399 | osm:way:493174173 | osm:way:574069757 | osm:way:728723462
-Hồ Chí Minh,chua phuoc quang,5,osm:node:9585091206 | osm:way:366651480 | osm:way:566356390 | osm:way:691040962 | osm:way:746297307
-Hà Nội,kafa cafe,5,osm:node:11662204177 | osm:node:11868107987 | osm:node:12244336365 | osm:node:6432355685 | osm:node:7055937763
-An Giang,dinh than nguyen trung truc,5,osm:way:1209246880 | osm:way:1276298008 | osm:way:1276298011 | osm:way:684391534 | osm:way:686288573
-Hà Nội,pizza 4p s,5,osm:node:12098955280 | osm:node:12118199554 | osm:node:12277048845 | osm:node:13806229591 | osm:node:6987030985
-Đồng Tháp,chua tam thanh,5,osm:way:696698308 | osm:way:696698309 | osm:way:696698310 | osm:way:696698311 | osm:way:696698312
+Đồng Tháp,chua que huong,5,osm:way:695260214 | osm:way:695260215 | osm:way:695260216 | osm:way:695260217 | osm:way:695260218
+Hà Nội,bun,5,osm:node:13632874402 | osm:node:13632874403 | osm:node:13632874701 | osm:node:14074419965 | osm:node:14086736701
 Hà Nội,dookki,5,osm:node:12098955282 | osm:node:12240739576 | osm:way:1331658992 | osm:way:892577299 | osm:way:899514953
 Hà Nội,kichi kichi,5,osm:node:11212216796 | osm:node:12098955283 | osm:way:1331658937 | osm:way:892577330 | osm:way:899514944
-Hà Nội,bun,5,osm:node:13632874402 | osm:node:13632874403 | osm:node:13632874701 | osm:node:14074419965 | osm:node:14086736701
-Lâm Đồng,to quoc ghi cong,4,osm:node:11670719092 | osm:node:11906834440 | osm:node:3305270302 | osm:node:5924017558
-An Giang,chua phat lon,4,osm:node:1276747548 | osm:node:6542793086 | osm:way:686296020 | osm:way:934549622
-Hồ Chí Minh,cong vien hoa binh,4,osm:way:1036030790 | osm:way:1036030791 | osm:way:164922736 | osm:way:567825928
-Tây Ninh,cong vien tran thi viet,4,osm:way:1062070364 | osm:way:1062070365 | osm:way:1062070366 | osm:way:1062070367
-Hà Nội,ca phe kafa,4,osm:node:423736651 | osm:node:5729394302 | osm:node:6684647589 | osm:node:7055903537
-Hà Nội,king bbq,4,osm:way:1330098165 | osm:way:1331658944 | osm:way:892577307 | osm:way:899514947
-Hà Nội,koi the,4,osm:node:11478449864 | osm:way:1329845909 | osm:way:1331658978 | osm:way:892577121
-Hà Nội,popeyes,4,osm:node:11335544623 | osm:node:11655061818 | osm:node:12540668604 | osm:way:1331668355
-Hà Nội,bun cha nem cua be,4,osm:node:11500070708 | osm:node:5323152623 | osm:node:6146935685 | osm:node:7090725785
-Hà Nội,pepper lunch,4,osm:node:13806229592 | osm:way:1234867619 | osm:way:892577332 | osm:way:899514985
-Hà Nội,ca phe moc,4,osm:node:4532459296 | osm:node:5485733700 | osm:node:6388936746 | osm:node:7178810031
-Hà Nội,pho ga,4,osm:node:13631246007 | osm:node:4366360798 | osm:node:5340681121 | osm:node:8360897923
+Hồ Chí Minh,chua phuoc quang,5,osm:node:9585091206 | osm:way:366651480 | osm:way:566356390 | osm:way:691040962 | osm:way:746297307
+Hồ Chí Minh,chua pho quang,5,osm:node:12250712276 | osm:node:7104079399 | osm:way:493174173 | osm:way:574069757 | osm:way:728723462
+Hà Nội,kafa cafe,5,osm:node:11662204177 | osm:node:11868107987 | osm:node:12244336365 | osm:node:6432355685 | osm:node:7055937763
+Hà Nội,,5,osm:node:11521920516 | osm:node:12654222689 | osm:node:13915583550 | osm:node:4133218490 | osm:node:5370525523
+Hà Nội,pizza 4p s,5,osm:node:12098955280 | osm:node:12118199554 | osm:node:12277048845 | osm:node:13806229591 | osm:node:6987030985
+Hồ Chí Minh,chua an lac,5,osm:node:11538581577 | osm:node:8787772762 | osm:node:9584838626 | osm:way:1241794322 | osm:way:589903345
+Hải Phòng,chua linh quang,5,osm:node:2477239340 | osm:node:6950716585 | osm:way:1120513537 | osm:way:240654953 | osm:way:242260491
+Hà Nội,ca phe anan,5,osm:node:1629328703 | osm:node:4217845890 | osm:node:4217848289 | osm:node:4898407622 | osm:node:733355066
+Đồng Tháp,chua tam thanh,5,osm:way:696698308 | osm:way:696698309 | osm:way:696698310 | osm:way:696698311 | osm:way:696698312
+Hồ Chí Minh,chua lien hoa,5,osm:node:12188488691 | osm:node:6538573183 | osm:node:6969093918 | osm:way:1003660713 | osm:way:1210315498
+Hồ Chí Minh,chua buu long,5,osm:node:3164015111 | osm:way:1225233361 | osm:way:323379917 | osm:way:736162150 | osm:way:744244414
+An Giang,dinh than nguyen trung truc,5,osm:way:1209246880 | osm:way:1276298008 | osm:way:1276298011 | osm:way:684391534 | osm:way:686288573
+An Giang,chua thom mit,5,osm:way:695260226 | osm:way:695260227 | osm:way:695260228 | osm:way:695260229 | osm:way:696752473
+Đà Nẵng,,5,osm:node:12686191701 | osm:node:4171971589 | osm:node:4352264489 | osm:node:5136805421 | osm:node:6482020184
+Đà Nẵng,starbucks,5,osm:node:13619314947 | osm:node:13853214801 | osm:node:13990162778 | osm:node:5652771521 | osm:way:212215308
+Hồ Chí Minh,mieu ba,5,osm:node:5601072999 | osm:node:7391413433 | osm:way:691444122 | osm:way:727756317 | osm:way:743798632
+Hồ Chí Minh,chua buu quang,5,osm:node:11054448200 | osm:way:1313916526 | osm:way:503373118 | osm:way:569352581 | osm:way:572666281
 Lâm Đồng,cong vien tran hung dao,4,osm:way:1235353536 | osm:way:1330850745 | osm:way:148033228 | osm:way:148033230
 Hồ Chí Minh,dai liet si,4,osm:node:2297147235 | osm:node:6968740810 | osm:node:7049373211 | osm:way:743778551
-Vĩnh Long,cong vien,4,osm:way:1134555860 | osm:way:1134556127 | osm:way:659304582 | osm:way:675089668
-Đà Nẵng,nha hang,4,osm:node:13634157802 | osm:node:4908254926 | osm:way:320722815 | osm:way:565277229
-Đà Nẵng,cong ca phe,4,osm:node:12383633201 | osm:node:4352240896 | osm:node:5400164124 | osm:node:5920056999
-Đà Nẵng,dac san hoi an,4,osm:node:11583782969 | osm:node:12635894501 | osm:node:2076855790 | osm:node:9921282484
+Lâm Đồng,to quoc ghi cong,4,osm:node:11670719092 | osm:node:11906834440 | osm:node:3305270302 | osm:node:5924017558
 Đà Nẵng,banh mi,4,osm:node:12839791079 | osm:node:4656790491 | osm:node:5461718921 | osm:node:6911968086
-Hà Nội,gogi house,4,osm:node:11217641981 | osm:way:1234955627 | osm:way:1331658927 | osm:way:899514987
-Hà Nội,chua phuc khanh,4,osm:way:1140667038 | osm:way:1527119265 | osm:way:1556744167 | osm:way:659860818
-An Giang,chua reachatuasnaram sdach toth,4,osm:way:695260222 | osm:way:695260223 | osm:way:695260224 | osm:way:695260225
 An Giang,chua thoi son,4,osm:way:694351744 | osm:way:696931906 | osm:way:696931907 | osm:way:696931908
-Hà Nội,chops,4,osm:node:11505669845 | osm:node:13580421901 | osm:node:9912896146 | osm:node:9912980443
-Hà Nội,ca phe sach,4,osm:node:5485653510 | osm:node:5913097285 | osm:node:7176633879 | osm:node:8171527917
-Hà Nội,jollibee,4,osm:node:10293406415 | osm:node:13645114301 | osm:node:13806229569 | osm:way:899514955
-Hồ Chí Minh,chua thien phuoc,4,osm:node:11225288584 | osm:node:11248390446 | osm:node:4593932295 | osm:node:8787772757
+Đà Nẵng,nha hang,4,osm:node:13634157802 | osm:node:4908254926 | osm:way:320722815 | osm:way:565277229
+Đà Nẵng,dac san hoi an,4,osm:node:11583782969 | osm:node:12635894501 | osm:node:2076855790 | osm:node:9921282484
+Vĩnh Long,cong vien,4,osm:way:1134555860 | osm:way:1134556127 | osm:way:659304582 | osm:way:675089668
+Đà Nẵng,cong ca phe,4,osm:node:12383633201 | osm:node:4352240896 | osm:node:5400164124 | osm:node:5920056999
+Tây Ninh,cong vien tran thi viet,4,osm:way:1062070364 | osm:way:1062070365 | osm:way:1062070366 | osm:way:1062070367
+Hồ Chí Minh,cong vien hoa binh,4,osm:way:1036030790 | osm:way:1036030791 | osm:way:164922736 | osm:way:567825928
 Hồ Chí Minh,chua long hoa,4,osm:way:149904629 | osm:way:570394687 | osm:way:572666288 | osm:way:740984138
 Hồ Chí Minh,chua phuoc duyen,4,osm:node:5450290966 | osm:way:569653426 | osm:way:683917145 | osm:way:691040890
-Hồ Chí Minh,chua linh son,4,osm:way:264587852 | osm:way:577760668 | osm:way:580493816 | osm:way:683697179
-Hà Nội,burger king,4,osm:node:11867796889 | osm:node:12540668703 | osm:node:5151048421 | osm:node:9952062617
-Hà Nội,soya garden,4,osm:node:5485779587 | osm:node:5485877092 | osm:node:7113898085 | osm:way:892577374
-Hà Nội,thai express,4,osm:node:11164095942 | osm:way:1330098163 | osm:way:1331668374 | osm:way:892577148
-Hà Nội,chua linh quang,4,osm:node:4750059323 | osm:node:4750059324 | osm:way:1287926808 | osm:way:1454630438
-Hà Nội,cang tin,4,osm:node:11655877372 | osm:way:1253898522 | osm:way:1303713404 | osm:way:691424466
-Hà Nội,bun cha sinh tu,4,osm:node:13671676601 | osm:node:7056027929 | osm:node:7516955870 | osm:node:7516955871
-Hồ Chí Minh,chua bat nha,4,osm:node:4618137889 | osm:node:9585091203 | osm:way:39622285 | osm:way:684156656
+Hồ Chí Minh,chua thien phuoc,4,osm:node:11225288584 | osm:node:11248390446 | osm:node:4593932295 | osm:node:8787772757
+Hồ Chí Minh,chua tan hoa,4,osm:node:9593386621 | osm:way:1234609610 | osm:way:498042943 | osm:way:605281193
+Hà Nội,popeyes,4,osm:node:11335544623 | osm:node:11655061818 | osm:node:12540668604 | osm:way:1331668355
+Hà Nội,koi the,4,osm:node:11478449864 | osm:way:1329845909 | osm:way:1331658978 | osm:way:892577121
+Hà Nội,pepper lunch,4,osm:node:13806229592 | osm:way:1234867619 | osm:way:892577332 | osm:way:899514985
+Hà Nội,pho ga,4,osm:node:13631246007 | osm:node:4366360798 | osm:node:5340681121 | osm:node:8360897923
 Hải Phòng,vuon hoa cheo,4,osm:relation:19474639 | osm:way:240539264 | osm:way:240539265 | osm:way:319046751
 Hồ Chí Minh,chua bao an,4,osm:way:1225234972 | osm:way:293824496 | osm:way:690984664 | osm:way:691227601
+Hồ Chí Minh,chua bat nha,4,osm:node:4618137889 | osm:node:9585091203 | osm:way:39622285 | osm:way:684156656
+Hồ Chí Minh,chua linh son,4,osm:way:264587852 | osm:way:577760668 | osm:way:580493816 | osm:way:683697179
 Hà Nội,youone hotdog,4,osm:node:10098130619 | osm:node:10098130620 | osm:node:10098130621 | osm:node:10098130622
+Hà Nội,soya garden,4,osm:node:5485779587 | osm:node:5485877092 | osm:node:7113898085 | osm:way:892577374
+Hà Nội,thai express,4,osm:node:11164095942 | osm:way:1330098163 | osm:way:1331668374 | osm:way:892577148
 Hải Phòng,cong vien cau rao,4,osm:way:1108576026 | osm:way:1108576027 | osm:way:1108576028 | osm:way:241797017
-Hồ Chí Minh,chua tan hoa,4,osm:node:9593386621 | osm:way:1234609610 | osm:way:498042943 | osm:way:605281193
+Hà Nội,king bbq,4,osm:way:1330098165 | osm:way:1331658944 | osm:way:892577307 | osm:way:899514947
+Hà Nội,ca phe sach,4,osm:node:5485653510 | osm:node:5913097285 | osm:node:7176633879 | osm:node:8171527917
+Hà Nội,chops,4,osm:node:11505669845 | osm:node:13580421901 | osm:node:9912896146 | osm:node:9912980443
+Hà Nội,cang tin,4,osm:node:11655877372 | osm:way:1253898522 | osm:way:1303713404 | osm:way:691424466
+Hà Nội,chua phuc khanh,4,osm:way:1140667038 | osm:way:1527119265 | osm:way:1556744167 | osm:way:659860818
+Hà Nội,gogi house,4,osm:node:11217641981 | osm:way:1234955627 | osm:way:1331658927 | osm:way:899514987
+Hà Nội,jollibee,4,osm:node:10293406415 | osm:node:13645114301 | osm:node:13806229569 | osm:way:899514955
+Hà Nội,chua linh quang,4,osm:node:4750059323 | osm:node:4750059324 | osm:way:1287926808 | osm:way:1454630438
+Hà Nội,bun cha nem cua be,4,osm:node:11500070708 | osm:node:5323152623 | osm:node:6146935685 | osm:node:7090725785
+Hà Nội,bun cha sinh tu,4,osm:node:13671676601 | osm:node:7056027929 | osm:node:7516955870 | osm:node:7516955871
+Hà Nội,burger king,4,osm:node:11867796889 | osm:node:12540668703 | osm:node:5151048421 | osm:node:9952062617
+Hà Nội,ca phe moc,4,osm:node:4532459296 | osm:node:5485733700 | osm:node:6388936746 | osm:node:7178810031
+Hà Nội,ca phe kafa,4,osm:node:423736651 | osm:node:5729394302 | osm:node:6684647589 | osm:node:7055903537
 Đồng Tháp,chua thien,4,osm:way:696931911 | osm:way:696931912 | osm:way:696931913 | osm:way:696931914
-Hồ Chí Minh,nha tho an phu,3,osm:node:5777165478 | osm:node:9585091201 | osm:way:1225233356
-Hồ Chí Minh,ngu hanh mieu,3,osm:way:1536912834 | osm:way:682250584 | osm:way:792920103
-Hồ Chí Minh,nha tho thanh giuse,3,osm:node:9593946650 | osm:way:1041090695 | osm:way:682412611
-Hồ Chí Minh,mieu quan am,3,osm:node:6021312106 | osm:way:570394684 | osm:way:691227546
-Hồ Chí Minh,tu vien man coi,3,osm:way:495697589 | osm:way:495698484 | osm:way:578136730
-Hồ Chí Minh,tinh xa quan am,3,osm:node:9587016889 | osm:way:1449964794 | osm:way:696075747
-Bắc Ninh,vuon hoa de nhu nguyet,3,osm:node:13017414156 | osm:node:13233020194 | osm:node:13233020195
-Hồ Chí Minh,mieu ba ngu hanh,3,osm:way:259380043 | osm:way:291493807 | osm:way:569352739
-Đà Nẵng,phuc long,3,osm:node:12167609718 | osm:node:13300836210 | osm:node:13990162759
-Đồng Nai,phao 130 k 59 1,3,osm:node:9960625535 | osm:node:9960625540 | osm:node:9960625544
+An Giang,chua reachatuasnaram sdach toth,4,osm:way:695260222 | osm:way:695260223 | osm:way:695260224 | osm:way:695260225
+An Giang,chua phat lon,4,osm:node:1276747548 | osm:node:6542793086 | osm:way:686296020 | osm:way:934549622
+Đà Nẵng,quan chay,3,osm:node:12704382801 | osm:node:13826146101 | osm:node:6257200887
+Cần Thơ,tuong dai chien thang,3,osm:node:2334067501 | osm:node:5256962158 | osm:node:6284154242
+Đồng Tháp,chua dong hoa tu,3,osm:way:696698304 | osm:way:696698305 | osm:way:696698306
+An Giang,cong vien binh khanh,3,osm:way:777891292 | osm:way:777891293 | osm:way:777891294
+An Giang,cong vien ben nhut,3,osm:way:1107308686 | osm:way:1158936961 | osm:way:1158936962
 Đà Nẵng,pho 29,3,osm:node:5400169223 | osm:node:5484776621 | osm:node:7095259597
+Đà Nẵng,pho,3,osm:node:13075369202 | osm:node:13848478903 | osm:node:7095259615
+Đà Nẵng,nha hang hancook,3,osm:node:4339674598 | osm:node:4464451389 | osm:node:4464451390
 Đà Nẵng,my quang ba mua,3,osm:node:10957072405 | osm:node:6466304585 | osm:node:7210857787
 Đà Nẵng,mixue,3,osm:node:10300504394 | osm:node:11563407269 | osm:node:11566583269
 Đà Nẵng,katinat,3,osm:node:12167716636 | osm:node:12839284943 | osm:node:13546039219
 Đà Nẵng,hu tieu,3,osm:node:10111472817 | osm:node:12925720801 | osm:node:13901304302
-Đà Nẵng,quan chay,3,osm:node:12704382801 | osm:node:13826146101 | osm:node:6257200887
-Đà Nẵng,nha hang hancook,3,osm:node:4339674598 | osm:node:4464451389 | osm:node:4464451390
-Đà Nẵng,pho,3,osm:node:13075369202 | osm:node:13848478903 | osm:node:7095259615
-An Giang,pepper farm,3,osm:node:2590497234 | osm:node:5227336425 | osm:way:1281353957
-An Giang,dinh thoi son,3,osm:way:694351743 | osm:way:696931903 | osm:way:696931904
-An Giang,cong vien binh khanh,3,osm:way:777891292 | osm:way:777891293 | osm:way:777891294
-An Giang,cong vien ben nhut,3,osm:way:1107308686 | osm:way:1158936961 | osm:way:1158936962
-Đồng Tháp,chua dong hoa tu,3,osm:way:696698304 | osm:way:696698305 | osm:way:696698306
-Bắc Ninh,cong vien ngo gia tu,3,osm:node:7104497585 | osm:way:1063227185 | osm:way:647397162
-Lâm Đồng,chua linh quang,3,osm:way:1014986358 | osm:way:1253658488 | osm:way:232458166
-Lâm Đồng,cong vien nguyen tat thanh,3,osm:way:675609183 | osm:way:675609191 | osm:way:675609192
-Lâm Đồng,linh quy phap an,3,osm:node:4330925790 | osm:node:4398306991 | osm:node:5577650721
-Quảng Ngãi,to quoc ghi cong,3,osm:node:11443633856 | osm:node:11445446947 | osm:node:11445799012
-Hồ Chí Minh,video show place,3,osm:node:4695553190 | osm:node:5922616535 | osm:node:5922616536
-Hồ Chí Minh,vuon hoa huong duong,3,osm:way:1234926599 | osm:way:1234926600 | osm:way:1234939217
-Khánh Hoà,chua phuoc long,3,osm:node:13951401254 | osm:node:3384220433 | osm:way:1467031021
-Lào Cai,impossible to pass blocked,3,osm:node:13513865201 | osm:node:13513865301 | osm:node:13513865302
-Phú Thọ,chua phat quang,3,osm:node:5641363079 | osm:way:591475526 | osm:way:591480162
-Đà Nẵng,bun thit nuong,3,osm:node:12603966960 | osm:node:13853226001 | osm:node:5985205286
 Đà Nẵng,hongan coffee,3,osm:node:729406453 | osm:node:729406488 | osm:node:729406731
 Đà Nẵng,ducmetrakieu,3,osm:node:6366523385 | osm:node:7298327487 | osm:node:7300993186
-An Giang,ngoc mai monastic,3,osm:way:696705913 | osm:way:696705914 | osm:way:696705915
 Đà Nẵng,cay me,3,osm:node:4568161390 | osm:node:5076808721 | osm:node:6348033625
+Đà Nẵng,bun thit nuong,3,osm:node:12603966960 | osm:node:13853226001 | osm:node:5985205286
 Tây Ninh,can cu xu uy nam bo,3,osm:way:1160002195 | osm:way:1160002197 | osm:way:1180996208
-Bắc Ninh,cong vien,3,osm:way:1519326479 | osm:way:964418689 | osm:way:964419534
-Hồ Chí Minh,cong vien bo song sai gon,3,osm:node:5388462723 | osm:relation:17524765 | osm:way:366105823
-Hồ Chí Minh,cong vien tan cang,3,osm:way:842688454 | osm:way:842707445 | osm:way:843094659
-Hồ Chí Minh,dinh than binh hoa,3,osm:way:1533167254 | osm:way:322871158 | osm:way:907748975
-Hồ Chí Minh,dinh ham rong,3,osm:node:13685861401 | osm:node:13690101201 | osm:node:13690260203
-Hồ Chí Minh,dinh than tan long,3,osm:way:138901021 | osm:way:288952959 | osm:way:907749195
-Hồ Chí Minh,mieu ong ho,3,osm:node:6933136829 | osm:way:728723468 | osm:way:740984130
-Hồ Chí Minh,mieu ba thien hau thanh mau,3,osm:node:6315692186 | osm:way:497979471 | osm:way:497979523
-Hà Nội,quan pho,3,osm:node:11152960193 | osm:node:8360208002 | osm:node:8361022010
-Hà Nội,quan an,3,osm:node:13340636131 | osm:node:8347965394 | osm:way:934950869
-Hồ Chí Minh,chua hoang phap,3,osm:node:9593386625 | osm:way:1314396510 | osm:way:366069915
-Hồ Chí Minh,chua di lac,3,osm:node:5621311782 | osm:way:1171510655 | osm:way:1309219514
-Hồ Chí Minh,,3,osm:node:4355457194 | osm:node:5397202421 | osm:node:9587486341
-Hồ Chí Minh,bach van dong,3,osm:node:13685861301 | osm:node:13690101102 | osm:node:13690260401
-Hồ Chí Minh,chua thich ca,3,osm:node:9584888588 | osm:way:734151483 | osm:way:742865912
-Hồ Chí Minh,chua van duc,3,osm:node:4531908000 | osm:way:1306372812 | osm:way:576360470
-Hồ Chí Minh,chua vinh nghiem,3,osm:node:5753951289 | osm:way:494789249 | osm:way:637402928
-Cần Thơ,tuong dai chien thang,3,osm:node:2334067501 | osm:node:5256962158 | osm:node:6284154242
-Hồ Chí Minh,chua phuoc thanh,3,osm:node:12192371514 | osm:way:577760727 | osm:way:761235177
-Hồ Chí Minh,chua quan am,3,osm:node:4818216280 | osm:way:1221686024 | osm:way:691040923
-Hồ Chí Minh,chua phuoc tuong,3,osm:node:4131725795 | osm:way:1518080758 | osm:way:499420815
-Hồ Chí Minh,chua sung duc,3,osm:node:5430822321 | osm:node:7729019395 | osm:way:680569931
-Hồ Chí Minh,chua phung son,3,osm:node:9587486349 | osm:way:327192426 | osm:way:806860786
-Hồ Chí Minh,chua phap hoa,3,osm:way:369668989 | osm:way:736945174 | osm:way:961345426
-Hồ Chí Minh,chua phuoc an,3,osm:node:9587329641 | osm:way:746959098 | osm:way:806359774
-Hồ Chí Minh,chua long buu,3,osm:node:4715404591 | osm:node:4715422690 | osm:way:166264577
-Hồ Chí Minh,chua phap bao,3,osm:node:4527079991 | osm:way:1308839165 | osm:way:290483746
-Hồ Chí Minh,chua hung long,3,osm:node:1606185451 | osm:way:740264483 | osm:way:743798626
-Hồ Chí Minh,chua hung phuoc,3,osm:node:9585091204 | osm:way:1221371378 | osm:way:1308720681
-Hồ Chí Minh,chua hue nghiem,3,osm:way:493155224 | osm:way:499426670 | osm:way:505295889
-Hồ Chí Minh,chua hue lam,3,osm:way:420287564 | osm:way:576709126 | osm:way:675760353
 Huế,mieu am hon,3,osm:node:1335374816 | osm:node:1335374895 | osm:way:695810696
 Huế,chua hoa quang,3,osm:node:4425212173 | osm:way:816359263 | osm:way:816359264
-Hồ Chí Minh,chua vien giac,3,osm:node:12187452756 | osm:node:7017406575 | osm:way:316829173
-Hồ Chí Minh,chua thanh long,3,osm:node:5770166510 | osm:node:9593240661 | osm:way:744898302
-Hà Nội,sua chua tran chau ha long,3,osm:node:11569613664 | osm:node:8442251582 | osm:node:8736185445
-Hà Nội,aha coffee,3,osm:node:11568902933 | osm:node:12055579963 | osm:way:1329845837
-Hà Nội,bami king,3,osm:node:11240624141 | osm:node:11829544969 | osm:node:13605534101
-Hà Tĩnh,lua nuoc,3,osm:way:557276626 | osm:way:557276629 | osm:way:557276631
+An Giang,ngoc mai monastic,3,osm:way:696705913 | osm:way:696705914 | osm:way:696705915
+An Giang,dinh thoi son,3,osm:way:694351743 | osm:way:696931903 | osm:way:696931904
+Quảng Ngãi,to quoc ghi cong,3,osm:node:11443633856 | osm:node:11445446947 | osm:node:11445799012
+Phú Thọ,chua phat quang,3,osm:node:5641363079 | osm:way:591475526 | osm:way:591480162
+Lâm Đồng,linh quy phap an,3,osm:node:4330925790 | osm:node:4398306991 | osm:node:5577650721
+Lâm Đồng,cong vien nguyen tat thanh,3,osm:way:675609183 | osm:way:675609191 | osm:way:675609192
+Lâm Đồng,chua linh quang,3,osm:way:1014986358 | osm:way:1253658488 | osm:way:232458166
+Lào Cai,impossible to pass blocked,3,osm:node:13513865201 | osm:node:13513865301 | osm:node:13513865302
+Khánh Hoà,chua phuoc long,3,osm:node:13951401254 | osm:node:3384220433 | osm:way:1467031021
+Hồ Chí Minh,vuon hoa huong duong,3,osm:way:1234926599 | osm:way:1234926600 | osm:way:1234939217
+Hồ Chí Minh,video show place,3,osm:node:4695553190 | osm:node:5922616535 | osm:node:5922616536
+Hồ Chí Minh,tu vien man coi,3,osm:way:495697589 | osm:way:495698484 | osm:way:578136730
+Hồ Chí Minh,tinh xa quan am,3,osm:node:9587016889 | osm:way:1449964794 | osm:way:696075747
+Hồ Chí Minh,nha tho thanh giuse,3,osm:node:9593946650 | osm:way:1041090695 | osm:way:682412611
 Hà Nội,banh mi,3,osm:node:11360043569 | osm:node:13415150801 | osm:way:1196690243
 Hà Nội,banh cuon gia an,3,osm:node:5030033123 | osm:node:5485808073 | osm:way:1231374576
-Hồ Chí Minh,chua ba,3,osm:way:578136738 | osm:way:737854344 | osm:way:740984204
-Hà Nội,khi vang,3,osm:node:12492265364 | osm:node:12492265366 | osm:node:4716178797
-Hà Nội,laika cafe,3,osm:node:11655444080 | osm:node:11883399469 | osm:node:6433573987
-Hà Nội,ca phe maxx,3,osm:node:5485664399 | osm:node:5485810344 | osm:node:6657842582
-Hà Nội,bo to quan moc,3,osm:node:5485647547 | osm:way:1214358075 | osm:way:1553343147
+Hà Nội,bami king,3,osm:node:11240624141 | osm:node:11829544969 | osm:node:13605534101
+Hà Nội,aha coffee,3,osm:node:11568902933 | osm:node:12055579963 | osm:way:1329845837
+Hồ Chí Minh,nha tho an phu,3,osm:node:5777165478 | osm:node:9585091201 | osm:way:1225233356
+Hồ Chí Minh,ngu hanh mieu,3,osm:way:1536912834 | osm:way:682250584 | osm:way:792920103
+Hồ Chí Minh,mieu quan am,3,osm:node:6021312106 | osm:way:570394684 | osm:way:691227546
+Hồ Chí Minh,mieu ong ho,3,osm:node:6933136829 | osm:way:728723468 | osm:way:740984130
+Hồ Chí Minh,mieu ba thien hau thanh mau,3,osm:node:6315692186 | osm:way:497979471 | osm:way:497979523
+Hồ Chí Minh,mieu ba ngu hanh,3,osm:way:259380043 | osm:way:291493807 | osm:way:569352739
+Hồ Chí Minh,dinh than tan long,3,osm:way:138901021 | osm:way:288952959 | osm:way:907749195
+Hồ Chí Minh,dinh than binh hoa,3,osm:way:1533167254 | osm:way:322871158 | osm:way:907748975
+Hồ Chí Minh,dinh ham rong,3,osm:node:13685861401 | osm:node:13690101201 | osm:node:13690260203
+Hồ Chí Minh,cong vien tan cang,3,osm:way:842688454 | osm:way:842707445 | osm:way:843094659
+Hồ Chí Minh,cong vien bo song sai gon,3,osm:node:5388462723 | osm:relation:17524765 | osm:way:366105823
+Hồ Chí Minh,chua vinh nghiem,3,osm:node:5753951289 | osm:way:494789249 | osm:way:637402928
+Hồ Chí Minh,chua vien giac,3,osm:node:12187452756 | osm:node:7017406575 | osm:way:316829173
 Hà Nội,bun cha,3,osm:node:13340704387 | osm:node:13632874604 | osm:node:7025965385
+Hà Nội,bo to quan moc,3,osm:node:5485647547 | osm:way:1214358075 | osm:way:1553343147
+Hồ Chí Minh,chua van duc,3,osm:node:4531908000 | osm:way:1306372812 | osm:way:576360470
+Hồ Chí Minh,chua thich ca,3,osm:node:9584888588 | osm:way:734151483 | osm:way:742865912
+Hồ Chí Minh,chua thanh long,3,osm:node:5770166510 | osm:node:9593240661 | osm:way:744898302
+Hồ Chí Minh,chua sung duc,3,osm:node:5430822321 | osm:node:7729019395 | osm:way:680569931
+Hồ Chí Minh,chua quan am,3,osm:node:4818216280 | osm:way:1221686024 | osm:way:691040923
+Hồ Chí Minh,chua phuoc tuong,3,osm:node:4131725795 | osm:way:1518080758 | osm:way:499420815
+Hồ Chí Minh,chua phuoc thanh,3,osm:node:12192371514 | osm:way:577760727 | osm:way:761235177
+Hồ Chí Minh,chua phuoc an,3,osm:node:9587329641 | osm:way:746959098 | osm:way:806359774
+Hồ Chí Minh,chua phung son,3,osm:node:9587486349 | osm:way:327192426 | osm:way:806860786
+Hồ Chí Minh,chua phap hoa,3,osm:way:369668989 | osm:way:736945174 | osm:way:961345426
+Hồ Chí Minh,chua phap bao,3,osm:node:4527079991 | osm:way:1308839165 | osm:way:290483746
+Hồ Chí Minh,chua long buu,3,osm:node:4715404591 | osm:node:4715422690 | osm:way:166264577
+An Giang,pepper farm,3,osm:node:2590497234 | osm:node:5227336425 | osm:way:1281353957
+Hồ Chí Minh,chua hung phuoc,3,osm:node:9585091204 | osm:way:1221371378 | osm:way:1308720681
+Hồ Chí Minh,chua hung long,3,osm:node:1606185451 | osm:way:740264483 | osm:way:743798626
+Hồ Chí Minh,chua hue nghiem,3,osm:way:493155224 | osm:way:499426670 | osm:way:505295889
+Hồ Chí Minh,chua hue lam,3,osm:way:420287564 | osm:way:576709126 | osm:way:675760353
+Hồ Chí Minh,chua hoang phap,3,osm:node:9593386625 | osm:way:1314396510 | osm:way:366069915
+Hồ Chí Minh,chua di lac,3,osm:node:5621311782 | osm:way:1171510655 | osm:way:1309219514
+Hồ Chí Minh,chua ba,3,osm:way:578136738 | osm:way:737854344 | osm:way:740984204
+Hồ Chí Minh,bach van dong,3,osm:node:13685861301 | osm:node:13690101102 | osm:node:13690260401
+Hồ Chí Minh,,3,osm:node:4355457194 | osm:node:5397202421 | osm:node:9587486341
+Hà Tĩnh,lua nuoc,3,osm:way:557276626 | osm:way:557276629 | osm:way:557276631
+Bắc Ninh,cong vien ngo gia tu,3,osm:node:7104497585 | osm:way:1063227185 | osm:way:647397162
+Bắc Ninh,cong vien,3,osm:way:1519326479 | osm:way:964418689 | osm:way:964419534
+Hà Nội,sua chua tran chau ha long,3,osm:node:11569613664 | osm:node:8442251582 | osm:node:8736185445
+Hà Nội,quan pho,3,osm:node:11152960193 | osm:node:8360208002 | osm:node:8361022010
+Hà Nội,quan an,3,osm:node:13340636131 | osm:node:8347965394 | osm:way:934950869
 Hà Nội,nha hang gecko,3,osm:node:2256217984 | osm:node:4158540590 | osm:node:723642244
+Hà Nội,ca phe maxx,3,osm:node:5485664399 | osm:node:5485810344 | osm:node:6657842582
 Hà Nội,mr dakgalbi,3,osm:node:12589868468 | osm:way:1330108345 | osm:way:892577199
+Hà Nội,laika cafe,3,osm:node:11655444080 | osm:node:11883399469 | osm:node:6433573987
+Hà Nội,khi vang,3,osm:node:12492265364 | osm:node:12492265366 | osm:node:4716178797
 Hà Nội,katinat,3,osm:node:12331430864 | osm:node:13039615010 | osm:node:13617030701
-Hà Nội,den thuong,3,osm:node:13860996058 | osm:node:8681483062 | osm:way:1308852108
-Hà Nội,chua dau,3,osm:way:1180466134 | osm:way:1213872795 | osm:way:548826269
-Hà Nội,dinh lang tien tao,3,osm:way:1552224970 | osm:way:1552224971 | osm:way:1552224972
 Hà Nội,hotpot story,3,osm:way:1331658938 | osm:way:892577261 | osm:way:899514958
 Hà Nội,gong cha,3,osm:node:13806229589 | osm:node:5485690545 | osm:node:6919616659
+Bắc Ninh,vuon hoa de nhu nguyet,3,osm:node:13017414156 | osm:node:13233020194 | osm:node:13233020195
 Hà Nội,dinh thon thuong,3,osm:way:1475629306 | osm:way:659860808 | osm:way:762456424
+Hà Nội,dinh lang tien tao,3,osm:way:1552224970 | osm:way:1552224971 | osm:way:1552224972
+Hà Nội,den thuong,3,osm:node:13860996058 | osm:node:8681483062 | osm:way:1308852108
 Hà Nội,dairy queen,3,osm:way:1331658968 | osm:way:892577365 | osm:way:899387339
-Hà Nội,chua thien phuc,3,osm:way:1028823316 | osm:way:1147629014 | osm:way:704134611
-Hà Nội,com van phong,3,osm:node:11463192514 | osm:node:11846922569 | osm:way:1234095160
-Hà Nội,cong vien long bien,3,osm:node:12458510813 | osm:node:12473783268 | osm:way:908417669
 Hà Nội,cua hang doner kebab,3,osm:node:6290450885 | osm:node:6348643186 | osm:node:6581613985
+Hà Nội,cong vien long bien,3,osm:node:12458510813 | osm:node:12473783268 | osm:way:908417669
+Hà Nội,com van phong,3,osm:node:11463192514 | osm:node:11846922569 | osm:way:1234095160
+Hà Nội,chua thien phuc,3,osm:way:1028823316 | osm:way:1147629014 | osm:way:704134611
+Hà Nội,chua dau,3,osm:way:1180466134 | osm:way:1213872795 | osm:way:548826269
 Hà Nội,chua bo de,3,osm:node:7676180461 | osm:relation:14048545 | osm:way:764553901
-An Giang,chua long son,3,osm:node:7234681285 | osm:way:1189393346 | osm:way:694327318
+Đồng Nai,phao 130 k 59 1,3,osm:node:9960625535 | osm:node:9960625540 | osm:node:9960625544
 Đồng Nai,chua quan am,3,osm:node:12860085261 | osm:node:12860085343 | osm:way:1178305808
+An Giang,chua long son,3,osm:node:7234681285 | osm:way:1189393346 | osm:way:694327318
 An Giang,chua 3 co buu vien tinh xa,3,osm:node:6423768568 | osm:way:685471008 | osm:way:685471009
-Đồng Nai,vuon amber,2,osm:way:1207058388 | osm:way:1322435231
-An Giang,bai rach vem,2,osm:way:1493885005 | osm:way:451772442
-Đắk Lắk,cong vien truong dai hoc phu yen,2,osm:way:1272649342 | osm:way:1272649343
-Đà Nẵng,van,2,osm:node:4520425992 | osm:node:729406705
-Đà Nẵng,tigoncoffee,2,osm:node:729406440 | osm:node:729406474
-Đà Nẵng,tian patisserie,2,osm:node:12860787925 | osm:node:12866278357
-An Giang,dinh tho quan thuong dang nguyen huu canh,2,osm:node:6423768403 | osm:way:685470979
-An Giang,dinh than vinh gia,2,osm:node:10932765436 | osm:way:1176733808
-An Giang,dinh than cau dai,2,osm:node:9963236669 | osm:way:1176733792
-An Giang,dien tho phat mau binh khanh,2,osm:node:6423768461 | osm:way:685470988
+Đà Nẵng,phuc long,3,osm:node:12167609718 | osm:node:13300836210 | osm:node:13990162759
+An Giang,,2,osm:node:13357233094 | osm:node:6117199886
+Đồng Tháp,thanh that phu cuong,2,osm:way:695260221 | osm:way:696698313
+An Giang,chi hoa tu,2,osm:node:3738797066 | osm:way:370138210
+An Giang,chua an phuoc,2,osm:way:681265511 | osm:way:685445004
+An Giang,chua coc,2,osm:way:694352945 | osm:way:694352946
+An Giang,chua hang,2,osm:node:4374995102 | osm:way:1189409894
+An Giang,chua huynh dao,2,osm:way:1108261874 | osm:way:1153950441
+An Giang,chua lien hoa,2,osm:node:1814503058 | osm:way:170058709
+An Giang,chua luc linh,2,osm:node:9963236668 | osm:way:1176733807
+Gia Lai,cong vien trung tam,2,osm:way:230797836 | osm:way:685452011
+Gia Lai,cong vien,2,osm:way:1340529393 | osm:way:1340586473
+Gia Lai,chua long khanh,2,osm:node:1532249206 | osm:way:300672242
+Gia Lai,bao tang binh doan tay nguyen,2,osm:way:1019040796 | poi-google:b5ec2cd317a507240311efd8
+Đồng Tháp,hoi thanh tin lanh go cong,2,osm:way:1272644787 | osm:way:1272644832
+Đồng Tháp,cv thieu nhi,2,osm:node:3763530582 | osm:way:374223819
+Đồng Tháp,chua phuoc an,2,osm:node:1606145436 | osm:way:744909320
+Đồng Tháp,chua khanh an,2,osm:node:1814703624 | osm:node:5628669721
+Đồng Tháp,chua hoa an tu,2,osm:way:695260213 | poi-google:f689f14b52b97cc52ca91061
+Đồng Tháp,chua cao minh,2,osm:node:5619122121 | osm:node:5628391024
+Đồng Tháp,chua,2,osm:node:3766738152 | osm:node:4533660892
+Đồng Nai,vuon crimson,2,osm:way:1207058389 | osm:way:1322435232
+Đồng Nai,vuon celine,2,osm:way:1207058390 | osm:way:1322435233
+Đồng Nai,cay tung co thu,2,osm:node:10729928005 | poi-google:c6d0e839e6d389bb59523158
 An Giang,cong vien vinh thong,2,osm:way:1176733779 | osm:way:1176733780
 An Giang,cong vien tran quang khai,2,osm:way:1064303921 | osm:way:1064303922
-An Giang,cong vien nguyen trung truc,2,osm:way:684600801 | osm:way:686288578
-An Giang,cong vien cau ong hien,2,osm:way:1349608593 | osm:way:1349608594
-An Giang,chua lien hoa,2,osm:node:1814503058 | osm:way:170058709
-Đồng Nai,tinh xa ngoc khanh,2,osm:way:659079915 | osm:way:978353559
+Hà Nội,chua linh thong,2,osm:way:1193271461 | osm:way:1240363497
+Hà Nội,chua kim quy,2,osm:way:765975781 | poi-google:e6b70333001763ba5800523f
+Hà Nội,chua kim lien,2,osm:node:4544230189 | osm:way:1264135486
+Hà Nội,chua khai nguyen,2,osm:node:4020097320 | osm:way:527709325
+Hà Nội,chua huong van,2,osm:way:430133742 | osm:way:762882338
+Hà Nội,chua hung phuc,2,osm:way:1537614282 | osm:way:1540178622
+Hà Nội,chua hung khanh,2,osm:node:4900741321 | poi-google:708c163cd5a5579e8546bec6
+Hà Nội,chua ha,2,osm:way:1118494921 | osm:way:769948478
+Hà Nội,chua dien khanh,2,osm:way:642096217 | osm:way:768696776
+Hà Nội,chua ca,2,osm:way:1229270358 | osm:way:1360062833
+Hà Nội,chua but moc,2,osm:way:1287926794 | osm:way:595185896
+Hà Nội,chua bao an,2,osm:way:1213885335 | osm:way:1314278481
+Hà Nội,cho vinh tuy,2,osm:way:1253565814 | osm:way:1527121724
+Hà Nội,cho kim giang,2,osm:way:755377951 | osm:way:957452577
+Đồng Tháp,nha tho thien phuoc the cathedral of the blessed,2,osm:way:695260210 | osm:way:695260211
 Đồng Nai,nha tho giao xu xuan kito,2,osm:node:12452511544 | osm:way:1346312053
-Đồng Nai,nha tho giao xu thien trieu,2,osm:way:982158092 | osm:way:988842983
+Hà Nội,cong vien hoa hong,2,osm:way:1446455180 | osm:way:1558489101
+Hà Nội,cong ty cp thep viet xo,2,osm:node:10856178304 | osm:way:1167382429
+Hà Nội,com tho anh nguyen,2,osm:node:12860550503 | osm:node:13033490186
+Hà Nội,com ngon,2,osm:node:10219253935 | osm:node:10258564255
+Hà Nội,com ga hai nam,2,osm:way:863472429 | osm:way:892577135
 Hà Nội,com binh dan,2,osm:node:10213906581 | osm:node:10255708092
 Hà Nội,coffe chill,2,osm:node:10219271554 | osm:node:10255708094
 Hà Nội,citi coffee,2,osm:node:11510364562 | osm:node:13033490187
 Hà Nội,chua tieu giao,2,osm:way:1450094984 | osm:way:660703580
 Hà Nội,chua thay,2,osm:node:718681996 | osm:way:550537567
 Hà Nội,chua tay phuong,2,osm:node:718681985 | osm:node:847878471
+Hà Nội,chua tang phuc,2,osm:way:1213628318 | poi-google:098591c16b59519e5ca05564
 Hà Nội,chua phuc long,2,osm:way:1231813013 | osm:way:503604053
 Hà Nội,chua phuc lam,2,osm:way:1289252435 | osm:way:764094817
 Hà Nội,chua phap van,2,osm:node:847468798 | osm:way:1488891322
-An Giang,chua thanh luong,2,osm:node:10932654353 | osm:way:1108263300
-An Giang,chua tay son,2,osm:way:696705910 | osm:way:696705911
-An Giang,chua tay an,2,osm:node:1814474832 | osm:way:1159104318
-An Giang,chua ta pa,2,osm:node:1812082284 | osm:way:1176760615
-An Giang,chua quan thanh de quan,2,osm:node:6423768502 | osm:way:685470996
-An Giang,chua phuoc linh,2,osm:node:6542774616 | osm:way:695306820
-An Giang,chua phi lai,2,osm:node:7915869485 | osm:way:1176733782
+Hà Nội,chua lu,2,osm:way:777200131 | osm:way:777200332
+Hà Nội,den thien hoa,2,osm:node:4664696291 | osm:node:4664732689
+Hà Nội,den nhan noi,2,osm:way:1507957173 | osm:way:700853379
+Hà Nội,den khai thanh,2,osm:way:1192418437 | osm:way:1192418438
+Hà Nội,den dai lo,2,osm:node:10709724415 | osm:node:10709738014
+Hà Nội,den ba chua,2,osm:way:1554222198 | osm:way:699218417
 Hà Nội,dai tuong niem liet si van canh,2,osm:node:5295283535 | osm:way:548086177
 Hà Nội,dai tuong niem liet si,2,osm:node:6612640826 | osm:way:1481550728
 Hà Nội,dai tuong niem cac anh hung liet si,2,osm:relation:17877970 | osm:way:1313406166
@@ -245,29 +273,9 @@ Hà Nội,cong vien ven ho,2,osm:way:1446967932 | osm:way:1458358677
 Hà Nội,cong vien trung tam,2,osm:way:479832644 | osm:way:840934114
 Hà Nội,cong vien the manor,2,osm:way:1510322144 | osm:way:1510322146
 Hà Nội,cong vien ngoc thuy,2,osm:node:13100959743 | osm:way:1175724558
-Hà Nội,cong vien hoa hong,2,osm:way:1446455180 | osm:way:1558489101
-Hà Nội,cong ty cp thep viet xo,2,osm:node:10856178304 | osm:way:1167382429
-Hà Nội,com tho anh nguyen,2,osm:node:12860550503 | osm:node:13033490186
-Hà Nội,com ngon,2,osm:node:10219253935 | osm:node:10258564255
-Hà Nội,com ga hai nam,2,osm:way:863472429 | osm:way:892577135
-Hà Nội,den nhan noi,2,osm:way:1507957173 | osm:way:700853379
-Hà Nội,den khai thanh,2,osm:way:1192418437 | osm:way:1192418438
-Hà Nội,den dai lo,2,osm:node:10709724415 | osm:node:10709738014
-Hà Nội,den ba chua,2,osm:way:1554222198 | osm:way:699218417
-Hà Nội,chua lu,2,osm:way:777200131 | osm:way:777200332
-Hà Nội,chua linh thong,2,osm:way:1193271461 | osm:way:1240363497
-Hà Nội,chua kim quy,2,osm:way:765975781 | poi-google:e6b70333001763ba5800523f
-Hà Nội,chua kim lien,2,osm:node:4544230189 | osm:way:1264135486
-Hà Nội,chua khai nguyen,2,osm:node:4020097320 | osm:way:527709325
-Hà Nội,chua huong van,2,osm:way:430133742 | osm:way:762882338
-Hà Nội,chua hung phuc,2,osm:way:1537614282 | osm:way:1540178622
-Hà Nội,chua ha,2,osm:way:1118494921 | osm:way:769948478
-Hà Nội,chua dien khanh,2,osm:way:642096217 | osm:way:768696776
-Hà Nội,chua ca,2,osm:way:1229270358 | osm:way:1360062833
-Hà Nội,chua but moc,2,osm:way:1287926794 | osm:way:595185896
-Hà Nội,chua bao an,2,osm:way:1213885335 | osm:way:1314278481
-Hà Nội,joma bakery cafe,2,osm:node:10651129981 | osm:way:1015725828
-Hà Nội,ivegan supershop,2,osm:node:11422445326 | osm:node:4869278321
+Bắc Ninh,vuon hoa 10 kha le,2,osm:node:12319043888 | osm:way:1331423729
+Bắc Ninh,mieu,2,osm:way:1498699596 | osm:way:661161573
+Bắc Ninh,lang nguyen phi y lan,2,osm:node:13324564232 | osm:way:649534603
 Hà Nội,ga xu,2,osm:node:10219253940 | osm:way:1121625791
 Hà Nội,ga manh hoach,2,osm:node:5485756823 | osm:node:7055939503
 Hà Nội,fin house buffet lau thai,2,osm:node:10240244246 | osm:node:10258564247
@@ -281,12 +289,38 @@ Hà Nội,dinh kim quan,2,osm:way:1187726804 | osm:way:659837204
 Hà Nội,dinh dong ngac,2,osm:way:1556744163 | osm:way:1556744186
 Hà Nội,dinh chua vang,2,osm:node:11387469601 | osm:way:909833203
 Hà Nội,den voi phuc,2,osm:way:1481550721 | osm:way:699905206
-Hà Nội,den thien hoa,2,osm:node:4664696291 | osm:node:4664732689
-Hà Nội,kopee coffee,2,osm:node:11254919074 | osm:node:11782452951
 Hà Nội,kombo,2,osm:way:1330108349 | osm:way:708550660
 Hà Nội,khu vui choi giai tri cong cong,2,osm:way:589969496 | osm:way:590074862
-Hà Nội,cho vinh tuy,2,osm:way:1253565814 | osm:way:1527121724
-Hà Nội,cho kim giang,2,osm:way:755377951 | osm:way:957452577
+Hà Nội,joma bakery cafe,2,osm:node:10651129981 | osm:way:1015725828
+Hà Nội,ivegan supershop,2,osm:node:11422445326 | osm:node:4869278321
+Cần Thơ,chua ong,2,osm:node:1924771927 | osm:way:671060394
+Cần Thơ,chua linh quang tu,2,osm:way:695039561 | osm:way:695039562
+Cần Thơ,chua la han,2,osm:way:669124973 | osm:way:669125008
+Cần Thơ,chua huong son,2,osm:node:3867252201 | osm:way:668869864
+Cần Thơ,chua ba,2,osm:node:6247192354 | osm:node:6528661009
+Cà Mau,phat ba nam hai,2,osm:node:4407485889 | osm:way:225533933
+Cà Mau,nha tho ho dao cai cam,2,osm:way:1301999309 | osm:way:1301999329
+Cà Mau,lang ong nam hai,2,osm:node:5452836123 | osm:node:6275635220
+Cà Mau,dinh tan hung,2,osm:way:907748881 | osm:way:907748974
+Cao Bằng,paper manufacture,2,osm:node:13378657608 | osm:node:13378657680
+Cao Bằng,den ba hoang,2,osm:node:9956193980 | osm:way:1383798860
+Bắc Ninh,vuon hoa cang dap cau,2,osm:way:1442165949 | osm:way:962685567
+Hà Nội,nha hang,2,osm:node:5397611521 | osm:node:5485660041
+Hà Nội,nha an,2,osm:way:1119581547 | osm:way:1350647805
+Hà Nội,ngong,2,osm:node:12492282610 | osm:node:9667623721
+Hà Nội,nem lui hue,2,osm:node:11633344446 | osm:node:7622285286
+Hà Nội,nai,2,osm:node:12492312457 | osm:node:12492312473
+Hà Nội,moc,2,osm:node:13688591630 | osm:node:14074419959
+Hà Nội,mieu lang bang a,2,osm:node:6282134029 | osm:way:1082227920
+Hà Nội,meiwei,2,osm:node:12098955284 | osm:way:892577430
+Hà Nội,manwah,2,osm:way:1331658926 | osm:way:899221538
+Hà Nội,mai,2,osm:node:9667843499 | osm:node:9669924735
+Hà Nội,loving hut,2,osm:node:5375190021 | osm:node:5892138785
+Hà Nội,lau de nhat ly,2,osm:node:11683982775 | osm:node:4586351390
+Hà Nội,lam cafe,2,osm:node:12645524101 | osm:node:9931538819
+Hà Nội,la viet coffee,2,osm:node:11832123091 | osm:node:13530641701
+Hà Nội,la boong,2,osm:node:11832117000 | osm:way:1464442037
+Hà Nội,kopee coffee,2,osm:node:11254919074 | osm:node:11782452951
 Hà Nội,cho dem,2,osm:node:4532462397 | osm:node:4572907889
 Hà Nội,chay via he,2,osm:node:12343563164 | osm:node:13592363601
 Hà Nội,chay tam khoi,2,osm:node:12692463221 | osm:node:13981899117
@@ -298,44 +332,11 @@ Hà Nội,cafe moc,2,osm:node:11254919071 | osm:node:5140817327
 Hà Nội,cafe dinh,2,osm:node:11103953634 | osm:node:4486828192
 Hà Nội,ca sau,2,osm:node:12492282607 | osm:node:4716178989
 Hà Nội,ca phe van,2,osm:node:10682748805 | osm:node:4741290223
-Hà Nội,mai,2,osm:node:9667843499 | osm:node:9669924735
-Hà Nội,loving hut,2,osm:node:5375190021 | osm:node:5892138785
 Hà Nội,ca phe la studio,2,osm:node:4327575692 | osm:node:6009497185
 Hà Nội,ca phe kok,2,osm:node:3746853894 | osm:node:6424773086
-Hà Nội,ca phe helio,2,osm:node:5233487022 | osm:node:7178813096
-Hà Nội,ca phe heaven,2,osm:node:4185463513 | osm:node:7095806776
-Hà Nội,ca phe hai bon,2,osm:node:12116589721 | osm:node:7040037486
-Hà Nội,ca phe goc pho,2,osm:node:6483376386 | osm:node:6691284967
-Hà Nội,ca phe giang,2,osm:node:2523425211 | osm:node:4306911795
-Hà Nội,ca phe blackbird,2,osm:node:6835375013 | osm:node:7257100185
-Hà Nội,ca phe aroi,2,osm:node:4738001522 | osm:node:5485663097
-Hà Nội,ca phe an,2,osm:node:7019049229 | osm:node:7055989888
-Hà Nội,lau de nhat ly,2,osm:node:11683982775 | osm:node:4586351390
-Hà Nội,lam cafe,2,osm:node:12645524101 | osm:node:9931538819
-Hà Nội,la viet coffee,2,osm:node:11832123091 | osm:node:13530641701
-Hà Nội,la boong,2,osm:node:11832117000 | osm:way:1464442037
-Hà Nội,nha hang net hue,2,osm:node:4800023939 | osm:node:5485768199
-Hà Nội,nha hang mon hue,2,osm:node:5485760264 | osm:node:6681348985
-Hà Nội,nha hang highway 4,2,osm:node:2175084765 | osm:node:4358971989
-Hà Nội,nha hang hanoi tan tan,2,osm:node:5309704611 | osm:node:5319295035
-Hà Nội,nha hang hanoi taco bar,2,osm:node:5822647453 | osm:node:8083779134
-Hà Nội,nha hang bit tet ngon,2,osm:node:5485670670 | osm:node:8357763620
+Cần Thơ,thoi long co tu,2,osm:node:5256988878 | osm:way:166553255
+Cần Thơ,orchard with fruit tasting,2,osm:node:12334098401 | osm:way:1455066448
 Hà Nội,nha hang al fresco s,2,osm:node:4790082725 | osm:node:6611606687
-Hà Nội,nha hang,2,osm:node:5397611521 | osm:node:5485660041
-Hà Nội,nha an,2,osm:way:1119581547 | osm:way:1350647805
-Hà Nội,ngong,2,osm:node:12492282610 | osm:node:9667623721
-Hà Nội,nem lui hue,2,osm:node:11633344446 | osm:node:7622285286
-Hà Nội,nai,2,osm:node:12492312457 | osm:node:12492312473
-Hà Nội,moc,2,osm:node:13688591630 | osm:node:14074419959
-Hà Nội,mieu lang bang a,2,osm:node:6282134029 | osm:way:1082227920
-Hà Nội,meiwei,2,osm:node:12098955284 | osm:way:892577430
-Hà Nội,manwah,2,osm:way:1331658926 | osm:way:899221538
-Hà Nội,pho ly quoc su,2,osm:node:12415047802 | osm:node:6679712288
-Hà Nội,pho lam,2,osm:node:10298693329 | osm:node:4885271521
-Hà Nội,pho hung,2,osm:node:5698458608 | osm:node:6602496036
-Hà Nội,pho ha noi,2,osm:node:10298717234 | osm:node:12540668601
-Hà Nội,pho ga ta,2,osm:node:11697674105 | osm:node:7966645588
-Hà Nội,pho cuon huong mai,2,osm:node:5384986723 | osm:way:1330098167
 Hà Nội,pho co,2,osm:node:11563394778 | osm:node:5485723847
 Hà Nội,pho bo,2,osm:node:12164856901 | osm:node:12313923069
 Hà Nội,phe la,2,osm:node:11212195506 | osm:way:697572020
@@ -346,22 +347,32 @@ Hà Nội,nha truyen thong,2,osm:node:6369688515 | osm:way:680261892
 Hà Nội,nha tho thuong lam,2,osm:way:762125891 | osm:way:762456707
 Hà Nội,nha luu niem chu tich ho chi minh,2,osm:way:1519545465 | osm:way:867981976
 Hà Nội,nha hang phuong nam,2,osm:node:12105870160 | osm:node:5485710758
+Hà Nội,nha hang net hue,2,osm:node:4800023939 | osm:node:5485768199
+Hà Nội,nha hang mon hue,2,osm:node:5485760264 | osm:node:6681348985
+Hà Nội,nha hang highway 4,2,osm:node:2175084765 | osm:node:4358971989
+Hà Nội,nha hang hanoi tan tan,2,osm:node:5309704611 | osm:node:5319295035
+Hà Nội,nha hang hanoi taco bar,2,osm:node:5822647453 | osm:node:8083779134
+Hà Nội,nha hang bit tet ngon,2,osm:node:5485670670 | osm:node:8357763620
+Hà Nội,refined,2,osm:node:13617118603 | osm:way:944825022
+Hà Nội,quan thi met,2,osm:node:3684899299 | osm:node:3684980414
+Hà Nội,quan nhau tu do,2,osm:node:12628841472 | osm:way:1255503501
+Hà Nội,quan co restaurant,2,osm:node:10240244250 | osm:way:1121390716
 Hà Nội,quan ca phe,2,osm:node:11152981270 | osm:node:4532490893
 Hà Nội,quan bun bac bang,2,osm:node:10254828329 | osm:node:10255192017
 Hà Nội,quan an ngon,2,osm:node:3496893646 | osm:way:892577282
-Hà Nội,ca phe 82,2,osm:node:7540706334 | osm:node:8939472330
-Hà Nội,bun rieu ca truong sa,2,osm:node:10255192016 | osm:node:10257020099
-Hà Nội,bun dau,2,osm:node:11152959980 | osm:node:14054774703
-Hà Nội,bun cha que tre,2,osm:node:12657776443 | osm:node:8527541117
-Hà Nội,bun cha dac kim,2,osm:node:4151407589 | osm:node:6957667188
-Hà Nội,bun bo hue o xuan,2,osm:node:11500070701 | osm:node:7213953186
-Hà Nội,bo de quan,2,osm:node:4611124990 | osm:node:6699204786
-Hà Nội,bingxue,2,osm:node:12981698362 | osm:way:1329845915
-Hà Nội,big bowl,2,osm:node:12540668712 | osm:node:13284316426
-Hà Nội,banh trang be my,2,osm:node:11212195531 | osm:node:12644690080
 Hà Nội,phuc long,2,osm:node:6603990855 | osm:node:8929706309
 Hà Nội,pho tu lun,2,osm:node:11683507069 | osm:node:5459555822
 Hà Nội,pho thin,2,osm:node:4186819465 | osm:node:7217547685
+Hà Nội,pho ly quoc su,2,osm:node:12415047802 | osm:node:6679712288
+Hà Nội,pho lam,2,osm:node:10298693329 | osm:node:4885271521
+Hà Nội,pho hung,2,osm:node:5698458608 | osm:node:6602496036
+Hà Nội,pho ha noi,2,osm:node:10298717234 | osm:node:12540668601
+Hà Nội,pho ga ta,2,osm:node:11697674105 | osm:node:7966645588
+Hà Nội,pho cuon huong mai,2,osm:node:5384986723 | osm:way:1330098167
+Bắc Ninh,chua phat tich,2,osm:node:4172408414 | osm:relation:18542793
+Bắc Ninh,chua linh quang,2,osm:node:13038645753 | osm:node:6545871181
+Bắc Ninh,chua lim,2,osm:node:4573262427 | osm:way:651631885
+Bắc Ninh,chua hung phuc khu pho ha lieu,2,osm:node:12313213499 | osm:way:1324009704
 Hà Nội,the alley,2,osm:node:11659995709 | osm:node:7178800608
 Hà Nội,texas chicken,2,osm:node:12589868466 | osm:node:9738784253
 Hà Nội,tam chay,2,osm:node:6842653487 | osm:node:8602235218
@@ -374,10 +385,28 @@ Hà Nội,shogun,2,osm:way:1249564975 | osm:way:1331668369
 Hà Nội,shang chi,2,osm:node:12245679310 | osm:way:1331668370
 Hà Nội,royaltea,2,osm:node:11618650227 | osm:node:5485791237
 Hà Nội,roll house,2,osm:way:1330108346 | osm:way:1331658951
-Hà Nội,refined,2,osm:node:13617118603 | osm:way:944825022
-Hà Nội,quan thi met,2,osm:node:3684899299 | osm:node:3684980414
-Hà Nội,quan nhau tu do,2,osm:node:12628841472 | osm:way:1255503501
-Hà Nội,quan co restaurant,2,osm:node:10240244250 | osm:way:1121390716
+Hà Nội,tra sua lofi,2,osm:node:10219271553 | osm:node:10255708095
+Hà Nội,to quoc ghi cong,2,osm:node:8772191067 | osm:way:1135119283
+Hà Nội,tiem banh mi,2,osm:node:5288964825 | osm:node:7189825573
+Hà Nội,thung lung hoa ho tay,2,osm:node:8318010619 | osm:way:194445558
+Hà Nội,the sipping bar,2,osm:node:11521920520 | osm:node:9669902669
+Hà Nội,the root boardgame cafe,2,osm:node:11308694306 | osm:node:12300636545
+Bắc Ninh,hau dien,2,osm:way:1498699577 | osm:way:1498699579
+Bắc Ninh,dinh lang tho khe,2,osm:node:13556032881 | osm:way:1477812280
+Bắc Ninh,dinh lang phu xa,2,osm:node:14075933898 | osm:way:1547591319
+Bắc Ninh,dinh lang dong xuat,2,osm:node:13556032966 | osm:way:1477812293
+Bắc Ninh,den dong ky,2,osm:way:1498699580 | osm:way:1498699582
+Bắc Ninh,den ba chua kho,2,osm:node:4713519694 | osm:way:1402174620
+Bắc Ninh,cong vien tam lu,2,osm:way:1256790914 | osm:way:1256790915
+Bắc Ninh,cong vien nguyen phi y lan,2,osm:way:808726355 | osm:way:962686041
+Bắc Ninh,cong vien nguyen nhan bi,2,osm:node:8904957855 | osm:way:962675095
+Bắc Ninh,cong vien giang lieu,2,osm:way:1427623601 | osm:way:1427623603
+Hưng Yên,chua keo,2,osm:node:4225615789 | osm:node:5586197821
+Hưng Yên,chua chuong,2,osm:way:1286518056 | osm:way:1429688836
+Hà Tĩnh,mau ky anh,2,osm:node:4346788489 | osm:node:4348556912
+Hà Tĩnh,den vo mieu,2,osm:node:5373874858 | osm:way:556942842
+Hà Nội,yutang,2,osm:node:8357763622 | osm:way:1331668337
+Hà Nội,yi he tang,2,osm:node:11389436637 | osm:node:11462471455
 Hà Nội,xuong cafe,2,osm:node:5485852162 | osm:node:8171527817
 Hà Nội,xoi yen,2,osm:node:4210706604 | osm:node:5966485585
 Hà Nội,wrap roll,2,osm:node:5044649521 | osm:way:899514942
@@ -388,28 +417,7 @@ Hà Nội,vuon hoa dang thuy tram,2,osm:way:1120491144 | osm:way:1120491145
 Hà Nội,veggie castle,2,osm:node:6127555185 | osm:node:6698890634
 Hà Nội,valhalla grill,2,osm:node:6136355785 | osm:node:6288275185
 Hà Nội,tuong dai ly tu trong,2,osm:node:5025409279 | osm:node:5630770368
-Hà Nội,tra sua lofi,2,osm:node:10219271553 | osm:node:10255708095
-Hà Nội,to quoc ghi cong,2,osm:node:8772191067 | osm:way:1135119283
-Hà Nội,tiem banh mi,2,osm:node:5288964825 | osm:node:7189825573
-Hà Nội,thung lung hoa ho tay,2,osm:node:8318010619 | osm:way:194445558
-Hà Nội,the sipping bar,2,osm:node:11521920520 | osm:node:9669902669
-Hà Nội,the root boardgame cafe,2,osm:node:11308694306 | osm:node:12300636545
-Hưng Yên,chua chuong,2,osm:way:1286518056 | osm:way:1429688836
-Hà Tĩnh,mau ky anh,2,osm:node:4346788489 | osm:node:4348556912
-Hà Tĩnh,den vo mieu,2,osm:node:5373874858 | osm:way:556942842
-Hà Nội,yutang,2,osm:node:8357763622 | osm:way:1331668337
-Hà Nội,banh mi sai gon,2,osm:node:10213826362 | osm:node:13640024701
-Hà Nội,banh mi pho,2,osm:node:10786488995 | osm:node:11212149493
-Hà Nội,banh cuon nong,2,osm:node:11345867151 | osm:node:11590640359
-Hà Nội,banh cuon gia truyen thanh van,2,osm:node:10298693328 | osm:node:11591740419
-Hà Nội,ba ba son dong,2,osm:node:7055985628 | osm:way:1219438153
-Hà Nội,an vat me sua,2,osm:node:11452175807 | osm:node:12651100308
-Hà Nội,an cafe,2,osm:node:12768414701 | osm:node:6938840285
-Hà Nội,al fresco s,2,osm:node:4659379693 | osm:way:899514956
-Hà Nội,aha,2,osm:node:10120064768 | osm:node:14074419963
-Hà Nội,1992 quan,2,osm:node:10240190081 | osm:node:10258564244
-Hà Nội,1,2,osm:node:11655592469 | osm:way:548079302
-Hà Nội,yi he tang,2,osm:node:11389436637 | osm:node:11462471455
+Hồ Chí Minh,chua an linh,2,osm:way:1144380325 | osm:way:569352623
 Hồ Chí Minh,bach van dien,2,osm:node:13684278301 | osm:node:13690260201
 Hải Phòng,vuon hoa dong khe,2,osm:way:1123723059 | osm:way:1126747039
 Hải Phòng,vuon hoa an bien,2,osm:node:7306070102 | osm:way:236743183
@@ -425,9 +433,9 @@ Hưng Yên,chua thon kim nguu,2,osm:way:1479833525 | poi-google:f77ffe2372f6cae4
 Hưng Yên,chua sam khuc,2,osm:way:1429645007 | osm:way:1429645056
 Hưng Yên,chua phuoc hung,2,osm:node:13137758093 | osm:way:1429183246
 Hưng Yên,chua nom,2,osm:node:13140314973 | osm:way:1429436252
-Hưng Yên,chua keo,2,osm:node:4225615789 | osm:node:5586197821
-Gia Lai,thap banh it,2,osm:way:252581207 | osm:way:677227553
-Gia Lai,nha tho phu my,2,osm:node:6437358550 | poi-google:2deeef8ef32bb2c16fd0ef00
+Hồ Chí Minh,chua hung phu,2,osm:way:561873630 | osm:way:612643951
+Hồ Chí Minh,chua hue quang,2,osm:node:2975431334 | osm:way:747273570
+Hồ Chí Minh,chua hoi phuoc,2,osm:way:594479802 | poi-google:348eb7e8c25790b64d09ecbb
 Hồ Chí Minh,chua ho phap,2,osm:way:270569234 | osm:way:744898250
 Hồ Chí Minh,chua hai quang,2,osm:way:1225163272 | osm:way:155103538
 Hồ Chí Minh,chua giac tam,2,osm:node:11225280530 | osm:way:744059375
@@ -441,26 +449,39 @@ Hồ Chí Minh,chua chau hung,2,osm:way:740984104 | osm:way:750619593
 Hồ Chí Minh,chua buu thanh,2,osm:node:9593386635 | osm:way:608345310
 Hồ Chí Minh,chua buu lam,2,osm:way:1309219495 | osm:way:750088159
 Hồ Chí Minh,chua bo de,2,osm:node:7561041146 | osm:way:792193848
-Hồ Chí Minh,chua an linh,2,osm:way:1144380325 | osm:way:569352623
-Hồ Chí Minh,chua linh son hai hoi,2,osm:node:11058996842 | osm:way:1308615194
-Hồ Chí Minh,chua kim lien,2,osm:way:683113618 | osm:way:786450853
-Hồ Chí Minh,chua hung phu,2,osm:way:561873630 | osm:way:612643951
-Hồ Chí Minh,chua hue quang,2,osm:node:2975431334 | osm:way:747273570
-Hồ Chí Minh,chua hoi phuoc,2,osm:way:594479802 | poi-google:348eb7e8c25790b64d09ecbb
-Huế,trung tam thanh thieu nhi hue,2,osm:way:118541971 | osm:way:695775607
-Huế,to quoc ghi cong,2,osm:node:4791640322 | osm:node:5326790724
-Huế,mieu xom khe,2,osm:node:1335374765 | osm:node:1335374875
-Huế,mieu ngai khai,2,osm:node:1335374751 | osm:node:1335374795
-Huế,mieu con cop,2,osm:node:1335374742 | osm:node:1335374903
-Huế,mieu ba,2,osm:node:1335374763 | osm:node:1335374872
-Huế,huu truong lang,2,osm:way:617944738 | osm:way:695810789
-Huế,chua kim quang,2,osm:node:13663930534 | osm:node:13664799314
-Huế,boi tran garden,2,osm:node:9518711737 | osm:way:1050684699
-Gia Lai,tinh xa ngoc hoa,2,osm:node:12121873209 | osm:node:5336909223
-Gia Lai,thap duong long,2,osm:node:11784634071 | osm:way:231894919
+Cần Thơ,nha tho an thanh,2,osm:node:5177654983 | osm:way:166671405
+Cần Thơ,mieu ba chua xu,2,osm:node:6387581401 | osm:way:671242029
+Cần Thơ,giao xu den thanh giuse an binh,2,osm:node:3737011402 | osm:way:369966234
+Cần Thơ,cong vien song hau,2,osm:node:5177612395 | osm:way:1062498634
+Cần Thơ,cong vien luu huu phuoc,2,osm:node:5211512490 | osm:way:119276473
+Cần Thơ,cong vien co do,2,osm:way:1107303481 | osm:way:777891299
 Cần Thơ,cong vien 178,2,osm:way:543238430 | osm:way:543238431
 Cần Thơ,chua soai con,2,osm:node:6382054187 | osm:way:682076325
 Cần Thơ,chua se ray vong sa,2,osm:way:695039563 | osm:way:695039564
+Cần Thơ,chua quan am,2,osm:node:1777889652 | osm:way:1462254702
+Cần Thơ,chua phuoc thanh,2,osm:node:1806798967 | osm:way:1436325301
+Cần Thơ,chua phuoc lam,2,osm:way:1515168293 | osm:way:667662290
+Cần Thơ,chua phat hoc,2,osm:way:543313532 | osm:way:668869945
+Cần Thơ,chua ong bon,2,osm:way:668449712 | osm:way:682095541
+Hà Nội,ca phe helio,2,osm:node:5233487022 | osm:node:7178813096
+Hà Nội,ca phe heaven,2,osm:node:4185463513 | osm:node:7095806776
+An Giang,tinh xa ngoc long,2,osm:node:6423768537 | osm:way:685471004
+An Giang,tinh xa buu vien,2,osm:node:6423768559 | osm:way:685471006
+An Giang,thien mon nghiem tinh,2,osm:way:694327317 | osm:way:696931902
+An Giang,thap xa loi,2,osm:node:12747321063 | osm:way:1376695093
+An Giang,thanh that long kien,2,osm:node:6423768436 | osm:way:685470985
+An Giang,thanh that huyen linh dan,2,osm:way:685664950 | osm:way:685664963
+An Giang,tam buu pagoda,2,osm:node:6423768396 | osm:way:685470978
+An Giang,san cong co tu,2,osm:way:696931900 | osm:way:696931901
+An Giang,quang truong huu nghi,2,osm:way:1159194090 | osm:way:1159194091
+An Giang,phuoc dien tu,2,osm:way:696698294 | osm:way:696698299
+An Giang,nha tho tin lanh,2,osm:node:6423768508 | osm:way:681175689
+An Giang,nha tho tan binh,2,osm:node:5114065523 | osm:way:871112695
+An Giang,nha tho minh chau,2,osm:node:5114065527 | osm:way:871572485
+An Giang,nha tho cai doi,2,osm:node:6423768445 | osm:way:685470986
+Hồ Chí Minh,chua la,2,osm:node:4903937022 | poi-google:71933771e8bfc064013b04eb
+Hồ Chí Minh,chua kim lien,2,osm:way:683113618 | osm:way:786450853
+Hồ Chí Minh,chua quan the am,2,osm:node:4813074237 | osm:way:355866759
 Hồ Chí Minh,chua phuoc long,2,osm:way:1209795107 | osm:way:691227614
 Hồ Chí Minh,chua phuoc hoa,2,osm:node:2677242469 | osm:node:5001800277
 Hồ Chí Minh,chua phuoc hai,2,osm:way:518720097 | osm:way:757223925
@@ -474,25 +495,8 @@ Hồ Chí Minh,chua mot cot,2,osm:node:3230436393 | osm:way:589315585
 Hồ Chí Minh,chua long van,2,osm:node:12733263316 | osm:way:1415343216
 Hồ Chí Minh,chua long quy,2,osm:node:1276315503 | osm:way:740984122
 Hồ Chí Minh,chua long an,2,osm:way:466316397 | osm:way:572666287
-Hồ Chí Minh,chua sac tu truong tho,2,osm:node:4131719809 | osm:way:1518080737
-Hồ Chí Minh,chua quang duc,2,osm:node:9584911962 | osm:way:748986258
-Hồ Chí Minh,chua quang buu,2,osm:node:9593386633 | osm:way:605281192
-Hồ Chí Minh,chua quan the am,2,osm:node:4813074237 | osm:way:355866759
-Gia Lai,cong vien trung tam,2,osm:way:230797836 | osm:way:685452011
-Gia Lai,cong vien,2,osm:way:1340529393 | osm:way:1340586473
-Gia Lai,chua long khanh,2,osm:node:1532249206 | osm:way:300672242
-Gia Lai,bao tang binh doan tay nguyen,2,osm:way:1019040796 | poi-google:b5ec2cd317a507240311efd8
-Cần Thơ,thoi long co tu,2,osm:node:5256988878 | osm:way:166553255
-Cần Thơ,orchard with fruit tasting,2,osm:node:12334098401 | osm:way:1455066448
-Cần Thơ,nha tho an thanh,2,osm:node:5177654983 | osm:way:166671405
-Cần Thơ,mieu ba chua xu,2,osm:node:6387581401 | osm:way:671242029
-Cần Thơ,giao xu den thanh giuse an binh,2,osm:node:3737011402 | osm:way:369966234
-Cần Thơ,cong vien song hau,2,osm:node:5177612395 | osm:way:1062498634
-Cần Thơ,cong vien luu huu phuoc,2,osm:node:5211512490 | osm:way:119276473
-Cần Thơ,cong vien co do,2,osm:way:1107303481 | osm:way:777891299
-Hồ Chí Minh,chua van tho,2,osm:node:5568791023 | osm:way:1216840362
-Hồ Chí Minh,chua van phuoc,2,osm:node:5595863031 | osm:way:744585760
-Hồ Chí Minh,chua tuong quang,2,osm:way:1309219494 | osm:way:683910665
+Hồ Chí Minh,chua linh son hai hoi,2,osm:node:11058996842 | osm:way:1308615194
+Bắc Ninh,chua co phap,2,osm:way:577155250 | osm:way:577203288
 Hồ Chí Minh,chua tu an,2,osm:way:421970912 | osm:way:612643954
 Hồ Chí Minh,chua truong thanh,2,osm:node:9584838627 | osm:way:806860835
 Hồ Chí Minh,chua truc lam,2,osm:way:675750811 | osm:way:744059382
@@ -506,11 +510,29 @@ Hồ Chí Minh,chua tay thien,2,osm:way:1144380314 | osm:way:420287567
 Hồ Chí Minh,chua tam buu,2,osm:node:11056339475 | osm:way:1219698159
 Hồ Chí Minh,chua tam bao,2,osm:node:9584833488 | osm:way:792193852
 Hồ Chí Minh,chua sung chinh,2,osm:node:4813074210 | osm:way:489019402
-Cà Mau,nha tho ho dao cai cam,2,osm:way:1301999309 | osm:way:1301999329
-Cà Mau,lang ong nam hai,2,osm:node:5452836123 | osm:node:6275635220
-Cà Mau,dinh tan hung,2,osm:way:907748881 | osm:way:907748974
-Cao Bằng,paper manufacture,2,osm:node:13378657608 | osm:node:13378657680
-Cao Bằng,den ba hoang,2,osm:node:9956193980 | osm:way:1383798860
+Hồ Chí Minh,chua sac tu truong tho,2,osm:node:4131719809 | osm:way:1518080737
+Hồ Chí Minh,chua quang duc,2,osm:node:9584911962 | osm:way:748986258
+Hồ Chí Minh,chua quang buu,2,osm:node:9593386633 | osm:way:605281192
+Hà Nội,ca phe goc pho,2,osm:node:6483376386 | osm:node:6691284967
+Hà Nội,ca phe giang,2,osm:node:2523425211 | osm:node:4306911795
+Hà Nội,ca phe blackbird,2,osm:node:6835375013 | osm:node:7257100185
+Hà Nội,ca phe aroi,2,osm:node:4738001522 | osm:node:5485663097
+Hà Nội,ca phe an,2,osm:node:7019049229 | osm:node:7055989888
+Hà Nội,ca phe 82,2,osm:node:7540706334 | osm:node:8939472330
+Hà Nội,bun rieu ca truong sa,2,osm:node:10255192016 | osm:node:10257020099
+Hà Nội,bun dau,2,osm:node:11152959980 | osm:node:14054774703
+Hà Nội,bun cha que tre,2,osm:node:12657776443 | osm:node:8527541117
+Hà Nội,bun cha dac kim,2,osm:node:4151407589 | osm:node:6957667188
+Hà Nội,bun bo hue o xuan,2,osm:node:11500070701 | osm:node:7213953186
+Hà Nội,bo de quan,2,osm:node:4611124990 | osm:node:6699204786
+Hà Nội,bingxue,2,osm:node:12981698362 | osm:way:1329845915
+Hồ Chí Minh,chua van tho,2,osm:node:5568791023 | osm:way:1216840362
+Hồ Chí Minh,chua van phuoc,2,osm:node:5595863031 | osm:way:744585760
+Hồ Chí Minh,chua tuong quang,2,osm:way:1309219494 | osm:way:683910665
+Hồ Chí Minh,dia dao ben duoc,2,osm:node:4171787601 | osm:way:973258391
+Hồ Chí Minh,cong vien vo van kiet,2,osm:way:189027787 | osm:way:189027797
+Hồ Chí Minh,cong vien vo thi sau,2,osm:way:259046004 | osm:way:751056604
+Hồ Chí Minh,cong vien van hoa lang le bau co,2,osm:node:6539155592 | osm:way:493251141
 Hồ Chí Minh,cong vien van hoa dam sen,2,osm:way:1168427916 | osm:way:32735046
 Hồ Chí Minh,cong vien thanh nien,2,osm:way:119409664 | osm:way:809399808
 Hồ Chí Minh,cong vien noi khu,2,osm:way:1307726692 | osm:way:307668924
@@ -522,23 +544,7 @@ Hồ Chí Minh,cong vien cuu long,2,osm:way:189027781 | osm:way:741547860
 Hồ Chí Minh,cong vien ben bach dang,2,osm:way:1056572948 | osm:way:472074784
 Hồ Chí Minh,chua vinh phuoc,2,osm:node:6319111467 | osm:way:675572227
 Hồ Chí Minh,chua vien quang,2,osm:node:5770166507 | osm:way:729092308
-Hồ Chí Minh,dia dao phu tho hoa,2,osm:node:4131725789 | osm:way:612890930
-Hồ Chí Minh,dia dao ben duoc,2,osm:node:4171787601 | osm:way:973258391
-Hồ Chí Minh,cong vien vo van kiet,2,osm:way:189027787 | osm:way:189027797
-Hồ Chí Minh,cong vien vo thi sau,2,osm:way:259046004 | osm:way:751056604
-Hồ Chí Minh,cong vien van hoa lang le bau co,2,osm:node:6539155592 | osm:way:493251141
-Cần Thơ,chua quan am,2,osm:node:1777889652 | osm:way:1462254702
-Cần Thơ,chua phuoc thanh,2,osm:node:1806798967 | osm:way:1436325301
-Cần Thơ,chua phuoc lam,2,osm:way:1515168293 | osm:way:667662290
-Cần Thơ,chua phat hoc,2,osm:way:543313532 | osm:way:668869945
-Cần Thơ,chua ong bon,2,osm:way:668449712 | osm:way:682095541
-Cần Thơ,chua ong,2,osm:node:1924771927 | osm:way:671060394
-Cần Thơ,chua linh quang tu,2,osm:way:695039561 | osm:way:695039562
-Cần Thơ,chua la han,2,osm:way:669124973 | osm:way:669125008
-Cần Thơ,chua huong son,2,osm:node:3867252201 | osm:way:668869864
-Cần Thơ,chua ba,2,osm:node:6247192354 | osm:node:6528661009
-Cà Mau,phat ba nam hai,2,osm:node:4407485889 | osm:way:225533933
-Hồ Chí Minh,dinh than vinh phu,2,osm:way:907748789 | osm:way:907749131
+Hà Nội,ca phe hai bon,2,osm:node:12116589721 | osm:node:7040037486
 Hồ Chí Minh,dinh than tan hoi,2,osm:way:907749130 | osm:way:907749140
 Hồ Chí Minh,dinh than tan an,2,osm:way:1344367131 | osm:way:907749132
 Hồ Chí Minh,dinh than my thanh,2,osm:way:604136715 | osm:way:898412304
@@ -554,7 +560,7 @@ Hồ Chí Minh,dinh phong phu,2,osm:way:604897393 | osm:way:910459936
 Hồ Chí Minh,dinh binh khanh,2,osm:way:1344043010 | osm:way:1389035107
 Hồ Chí Minh,dinh binh hoa,2,osm:relation:20714368 | osm:way:1210468034
 Hồ Chí Minh,dinh an phu,2,osm:way:604845950 | osm:way:907749184
-Hồ Chí Minh,nha tho hung phu,2,osm:node:9584599328 | osm:way:420287581
+Hồ Chí Minh,dia dao phu tho hoa,2,osm:node:4131725789 | osm:way:612890930
 Hồ Chí Minh,nha tho giao xu suoi rao,2,osm:way:574069811 | poi-google:3d1240e4b3e1de1489b555c6
 Hồ Chí Minh,nha tho dac lo,2,osm:node:9587309958 | osm:way:1235472350
 Hồ Chí Minh,nha tho binh thuan,2,osm:node:9593358313 | osm:way:1215518803
@@ -570,8 +576,28 @@ Hồ Chí Minh,giao xu dat do,2,osm:way:259046009 | osm:way:569352562
 Hồ Chí Minh,dong co lau 3,2,osm:way:751042596 | osm:way:751042597
 Hồ Chí Minh,dinh vinh phuoc,2,osm:way:612114943 | osm:way:907749137
 Hồ Chí Minh,dinh vinh hoi,2,osm:way:187949842 | osm:way:420287800
-Bắc Ninh,cong vien nguyen nhan bi,2,osm:node:8904957855 | osm:way:962675095
-Bắc Ninh,cong vien giang lieu,2,osm:way:1427623601 | osm:way:1427623603
+Hồ Chí Minh,dinh than vinh phu,2,osm:way:907748789 | osm:way:907749131
+Hà Nội,big bowl,2,osm:node:12540668712 | osm:node:13284316426
+Hà Nội,banh trang be my,2,osm:node:11212195531 | osm:node:12644690080
+Hà Nội,banh mi sai gon,2,osm:node:10213826362 | osm:node:13640024701
+Hà Nội,banh mi pho,2,osm:node:10786488995 | osm:node:11212149493
+Hà Nội,banh cuon nong,2,osm:node:11345867151 | osm:node:11590640359
+Hà Nội,banh cuon gia truyen thanh van,2,osm:node:10298693328 | osm:node:11591740419
+Hà Nội,ba ba son dong,2,osm:node:7055985628 | osm:way:1219438153
+Hà Nội,an vat me sua,2,osm:node:11452175807 | osm:node:12651100308
+Hà Nội,an cafe,2,osm:node:12768414701 | osm:node:6938840285
+Hà Nội,al fresco s,2,osm:node:4659379693 | osm:way:899514956
+Hà Nội,aha,2,osm:node:10120064768 | osm:node:14074419963
+Hà Nội,1992 quan,2,osm:node:10240190081 | osm:node:10258564244
+Hồ Chí Minh,nha tho sao mai,2,osm:way:237612655 | osm:way:495697577
+Hồ Chí Minh,nha tho lang son,2,osm:node:9593240655 | osm:way:327447647
+Hồ Chí Minh,nha tho khanh hoi,2,osm:way:1474294608 | osm:way:192214961
+Hồ Chí Minh,nha tho hung phu,2,osm:node:9584599328 | osm:way:420287581
+Hồ Chí Minh,tinh xa ngoc hai,2,osm:way:691444067 | osm:way:736669973
+Hồ Chí Minh,tinh xa ngoc duc,2,osm:way:1314190866 | osm:way:744059366
+Hồ Chí Minh,tinh xa ngoc binh,2,osm:node:9593196286 | osm:way:1144380328
+Hồ Chí Minh,tinh that buu hoa,2,osm:node:12188483628 | osm:way:748916976
+Hồ Chí Minh,thien vien nguyen thuy,2,osm:node:9587204850 | osm:way:1306624189
 Hồ Chí Minh,the commons thu thiem,2,osm:node:14014006893 | osm:way:1540771314
 Hồ Chí Minh,tanaka tei,2,osm:node:5382283921 | poi-google:3396c45d9aae3215351f2b33
 Hồ Chí Minh,song vi dai chet vinh quang,2,osm:relation:4589744 | osm:way:328191705
@@ -583,25 +609,7 @@ Hồ Chí Minh,nha tho thanh tam,2,osm:way:683917144 | osm:way:691040903
 Hồ Chí Minh,nha tho thanh mau,2,osm:node:9586838815 | osm:way:495698482
 Hồ Chí Minh,nha tho thanh giuse tho,2,osm:node:9587536843 | osm:way:682250552
 Hồ Chí Minh,nha tho thanh an ton,2,osm:way:684291658 | osm:way:806860809
-Hồ Chí Minh,nha tho sao mai,2,osm:way:237612655 | osm:way:495697577
-Hồ Chí Minh,nha tho lang son,2,osm:node:9593240655 | osm:way:327447647
-Hồ Chí Minh,nha tho khanh hoi,2,osm:way:1474294608 | osm:way:192214961
-Hồ Chí Minh,tinh xa ngoc duc,2,osm:way:1314190866 | osm:way:744059366
-Hồ Chí Minh,tinh xa ngoc binh,2,osm:node:9593196286 | osm:way:1144380328
-Hồ Chí Minh,tinh that buu hoa,2,osm:node:12188483628 | osm:way:748916976
-Hồ Chí Minh,thien vien nguyen thuy,2,osm:node:9587204850 | osm:way:1306624189
-Bắc Ninh,vuon hoa cang dap cau,2,osm:way:1442165949 | osm:way:962685567
-Bắc Ninh,vuon hoa 10 kha le,2,osm:node:12319043888 | osm:way:1331423729
-Bắc Ninh,mieu,2,osm:way:1498699596 | osm:way:661161573
-Bắc Ninh,lang nguyen phi y lan,2,osm:node:13324564232 | osm:way:649534603
-Bắc Ninh,hau dien,2,osm:way:1498699577 | osm:way:1498699579
-Bắc Ninh,dinh lang tho khe,2,osm:node:13556032881 | osm:way:1477812280
-Bắc Ninh,dinh lang phu xa,2,osm:node:14075933898 | osm:way:1547591319
-Bắc Ninh,dinh lang dong xuat,2,osm:node:13556032966 | osm:way:1477812293
-Bắc Ninh,den dong ky,2,osm:way:1498699580 | osm:way:1498699582
-Bắc Ninh,den ba chua kho,2,osm:node:4713519694 | osm:way:1402174620
-Bắc Ninh,cong vien tam lu,2,osm:way:1256790914 | osm:way:1256790915
-Bắc Ninh,cong vien nguyen phi y lan,2,osm:way:808726355 | osm:way:962686041
+Lào Cai,,2,osm:node:13357269011 | osm:relation:19808367
 Khánh Hoà,ruong muoi,2,osm:node:13118872106 | osm:node:13118872107
 Khánh Hoà,nha lam viec cua bac si yersin,2,osm:way:1545639452 | osm:way:1545639453
 Khánh Hoà,nam mo da bao phat,2,osm:node:11527158960 | osm:node:11527179496
@@ -617,7 +625,7 @@ Hồ Chí Minh,tinh xa ngoc tien,2,osm:node:6969093892 | osm:node:6969093920
 Hồ Chí Minh,tinh xa ngoc thanh,2,osm:node:3377464221 | osm:node:5432952098
 Hồ Chí Minh,tinh xa ngoc son,2,osm:node:8787772760 | osm:way:578136741
 Hồ Chí Minh,tinh xa ngoc lam,2,osm:node:5537927428 | osm:way:691968380
-Hồ Chí Minh,tinh xa ngoc hai,2,osm:way:691444067 | osm:way:736669973
+Lâm Đồng,thap po sah inu,2,osm:node:491586802 | osm:node:5933150585
 Lâm Đồng,thac pongour,2,osm:node:11847045481 | osm:node:4961718824
 Lâm Đồng,ga da lat,2,osm:node:5661470624 | osm:relation:17877171
 Lâm Đồng,cong vien vo van kiet,2,osm:way:261181197 | osm:way:669630370
@@ -633,7 +641,7 @@ Lâm Đồng,bia tuong niem,2,osm:node:13624524401 | osm:node:7108856813
 Lâm Đồng,bao tang ho chi minh,2,osm:node:2673080246 | osm:way:541543886
 Lào Cai,waterfall,2,osm:node:12357597944 | osm:node:4252023719
 Lào Cai,muong hoa valley,2,osm:node:11377884269 | osm:node:5918784285
-Lào Cai,,2,osm:node:13357269011 | osm:relation:19808367
+Phú Thọ,den mau,2,osm:node:5641365646 | osm:way:591475533
 Phú Thọ,cong vien doi cao,2,osm:node:8980937102 | osm:way:970449051
 Phú Thọ,chua an son,2,osm:node:5628801046 | osm:way:588322161
 Phú Thọ,bao tang hung vuong,2,osm:node:7189828683 | osm:way:1450794207
@@ -649,9 +657,9 @@ Ninh Bình,dien quan am,2,osm:way:1386126640 | osm:way:449266754
 Nghệ An,ong hoang muoi 2,2,osm:node:14131061102 | osm:node:14131078101
 Nghệ An,lang noi dat tru son,2,osm:node:9959749517 | osm:node:9959751217
 Lâm Đồng,vuon hoa thanh pho da lat,2,osm:node:11916349146 | osm:way:473547263
-Lâm Đồng,thap po sah inu,2,osm:node:491586802 | osm:node:5933150585
-An Giang,quang truong huu nghi,2,osm:way:1159194090 | osm:way:1159194091
-An Giang,phuoc dien tu,2,osm:way:696698294 | osm:way:696698299
+Tuyên Quang,beautiful view,2,osm:node:10314270710 | osm:node:6899543085
+Tuyên Quang,,2,osm:node:12470652010 | osm:way:822407460
+Thái Nguyên,nha tho thai nguyen,2,osm:node:9028513689 | osm:way:888793494
 Thanh Hoá,pagoda,2,osm:node:6330279018 | osm:node:6330280389
 Sơn La,ta xua,2,osm:node:4842817621 | osm:node:5132908921
 Quảng Trị,to quoc ghi cong,2,osm:node:8079921350 | osm:way:87200823
@@ -665,23 +673,43 @@ Quảng Ngãi,cong vien uhome kdc bac le loi,2,osm:node:14182622490 | osm:way:15
 Phú Thọ,nam xuyen,2,osm:node:5031705622 | osm:node:5040126121
 Phú Thọ,go lao waterfall,2,osm:node:4142686008 | poi-google:d0d59d4a52a9bfb7345e007c
 Phú Thọ,den thuong,2,osm:node:11395352271 | osm:node:1758539342
-Phú Thọ,den mau,2,osm:node:5641365646 | osm:way:591475533
-Tuyên Quang,beautiful view,2,osm:node:10314270710 | osm:node:6899543085
-Tuyên Quang,,2,osm:node:12470652010 | osm:way:822407460
-Thái Nguyên,nha tho thai nguyen,2,osm:node:9028513689 | osm:way:888793494
-Bắc Ninh,chua phat tich,2,osm:node:4172408414 | osm:relation:18542793
-Bắc Ninh,chua linh quang,2,osm:node:13038645753 | osm:node:6545871181
-Bắc Ninh,chua lim,2,osm:node:4573262427 | osm:way:651631885
-Bắc Ninh,chua hung phuc khu pho ha lieu,2,osm:node:12313213499 | osm:way:1324009704
-Bắc Ninh,chua co phap,2,osm:way:577155250 | osm:way:577203288
-An Giang,tinh xa ngoc long,2,osm:node:6423768537 | osm:way:685471004
-An Giang,tinh xa buu vien,2,osm:node:6423768559 | osm:way:685471006
-An Giang,thien mon nghiem tinh,2,osm:way:694327317 | osm:way:696931902
-An Giang,thap xa loi,2,osm:node:12747321063 | osm:way:1376695093
-An Giang,thanh that long kien,2,osm:node:6423768436 | osm:way:685470985
-An Giang,thanh that huyen linh dan,2,osm:way:685664950 | osm:way:685664963
-An Giang,tam buu pagoda,2,osm:node:6423768396 | osm:way:685470978
-An Giang,san cong co tu,2,osm:way:696931900 | osm:way:696931901
+An Giang,mai son pagoda,2,osm:way:694296716 | osm:way:696705917
+An Giang,lang thoai ngoc hau,2,osm:node:1814474846 | osm:way:1159104315
+An Giang,khu tuong dai doi sim,2,osm:node:13657036294 | osm:way:1521115214
+An Giang,khu trung bay toi ac chien tranh cua poltpot,2,osm:node:9991869767 | osm:way:1176733783
+An Giang,kdl lam vien nui cam,2,osm:node:11046777432 | osm:way:1189688534
+An Giang,hung phuoc tu,2,osm:node:6423768452 | osm:way:685470987
+An Giang,hoi thanh tin lanh chi hoi long xuyen,2,osm:node:6423768514 | osm:way:685470998
+An Giang,guangji temple,2,osm:way:684861250 | osm:way:684861251
+An Giang,dinh tho quan thuong dang nguyen huu canh,2,osm:node:6423768403 | osm:way:685470979
+An Giang,dinh than vinh gia,2,osm:node:10932765436 | osm:way:1176733808
+An Giang,dinh than cau dai,2,osm:node:9963236669 | osm:way:1176733792
+Tây Ninh,buu phap dau su,2,osm:node:10820761946 | osm:node:6232955942
+Tuyên Quang,scooter,2,osm:node:6202400185 | osm:node:6202400186
+Tuyên Quang,nui co tien,2,osm:node:3108058417 | osm:node:4427121492
+Tuyên Quang,dinh tan trao,2,osm:way:1392297985 | poi-google:5560ab68fff4a4c0650537ad
+Tuyên Quang,bia di tich trung uong doan tai ban don huyen son duong tinh tuyen quang,2,osm:node:8322238172 | osm:way:1291950403
+Hà Nội,1,2,osm:node:11655592469 | osm:way:548079302
+Huế,trung tam thanh thieu nhi hue,2,osm:way:118541971 | osm:way:695775607
+Huế,to quoc ghi cong,2,osm:node:4791640322 | osm:node:5326790724
+Huế,mieu xom khe,2,osm:node:1335374765 | osm:node:1335374875
+Huế,mieu ngai khai,2,osm:node:1335374751 | osm:node:1335374795
+Huế,mieu con cop,2,osm:node:1335374742 | osm:node:1335374903
+Huế,mieu ba,2,osm:node:1335374763 | osm:node:1335374872
+Huế,huu truong lang,2,osm:way:617944738 | osm:way:695810789
+Huế,chua kim quang,2,osm:node:13663930534 | osm:node:13664799314
+Huế,boi tran garden,2,osm:node:9518711737 | osm:way:1050684699
+Gia Lai,tinh xa ngoc hoa,2,osm:node:12121873209 | osm:node:5336909223
+Gia Lai,thap duong long,2,osm:node:11784634071 | osm:way:231894919
+Gia Lai,thap banh it,2,osm:way:252581207 | osm:way:677227553
+Gia Lai,nha tho phu my,2,osm:node:6437358550 | poi-google:2deeef8ef32bb2c16fd0ef00
+An Giang,nha tho an binh,2,osm:node:5114065530 | osm:way:871112696
+An Giang,masjid salamat,2,osm:node:6423768507 | osm:way:685470997
+Điện Biên,doi d1,2,osm:node:5492241221 | osm:way:640295913
+Vĩnh Long,vong xoay tan thanh,2,osm:node:10311880272 | osm:way:764092577
+Vĩnh Long,vong xoay binh nguyen,2,osm:node:10311880271 | osm:way:764092578
+Vĩnh Long,thanh that huu dinh,2,osm:node:10574508512 | osm:node:10799695714
+Vĩnh Long,thanh duong giao xu mac bac,2,osm:node:12814525335 | osm:way:1384066075
 Vĩnh Long,nha tho dinh thuan,2,osm:node:12819732620 | osm:way:1384656098
 Vĩnh Long,dinh dai dinh,2,osm:node:10574519041 | osm:way:1134510624
 Vĩnh Long,den tho liet si xa huu dinh,2,osm:node:10574606584 | osm:way:1134520817
@@ -693,27 +721,26 @@ Tây Ninh,cong vien thang loi,2,osm:way:336053458 | osm:way:336053459
 Tây Ninh,cong vien 30 thang 4,2,osm:way:335039126 | osm:way:336053457
 Tây Ninh,chua linh phuoc,2,osm:node:11093760288 | osm:node:11112363004
 Tây Ninh,chua linh buu,2,osm:node:11097098444 | osm:way:664573960
-Tây Ninh,buu phap dau su,2,osm:node:10820761946 | osm:node:6232955942
-Tuyên Quang,scooter,2,osm:node:6202400185 | osm:node:6202400186
-Tuyên Quang,nui co tien,2,osm:node:3108058417 | osm:node:4427121492
-Tuyên Quang,dinh tan trao,2,osm:way:1392297985 | poi-google:5560ab68fff4a4c0650537ad
-Tuyên Quang,bia di tich trung uong doan tai ban don huyen son duong tinh tuyen quang,2,osm:node:8322238172 | osm:way:1291950403
+Đà Nẵng,cafelong,2,osm:node:729406668 | osm:node:729406940
+Đà Nẵng,cafe9x,2,osm:node:729406693 | osm:node:729406895
+Đà Nẵng,cafe153,2,osm:node:729406439 | osm:node:729406607
+Đà Nẵng,cafe anh,2,osm:node:7282442185 | osm:node:729406637
 Đà Nẵng,cafe,2,osm:node:4312279989 | osm:node:4345669518
 Đà Nẵng,ca phe trung nguyen,2,osm:node:729406475 | osm:node:729406759
 Đà Nẵng,ca phe muoi,2,osm:node:10617495454 | osm:node:13293652523
 Đà Nẵng,boulevard,2,osm:node:14089289793 | osm:node:4166771189
 Đà Nẵng,bo ne 3 ngon,2,osm:node:13040636501 | osm:node:7298660639
 Đà Nẵng,bo ne,2,osm:node:12592577201 | osm:node:5942230789
+Đà Nẵng,bai tam man thai,2,poi-google:433657c5c0911e563865e7fc | poi-google:af0d624892b6750e416557b8
 Đà Nẵng,bacama,2,osm:node:12603307807 | osm:node:7262851085
 Đà Nẵng,anhlinh coffee,2,osm:node:729406411 | osm:node:729406417
 Đà Nẵng,an gia cottage,2,osm:node:4810067542 | osm:node:5023232354
 Điện Biên,french 105 mm cannon,2,osm:node:12299561532 | osm:node:12299561533
 Điện Biên,doi him lam,2,osm:node:4411036591 | osm:way:1204347952
-Điện Biên,doi d1,2,osm:node:5492241221 | osm:way:640295913
-Vĩnh Long,vong xoay tan thanh,2,osm:node:10311880272 | osm:way:764092577
-Vĩnh Long,vong xoay binh nguyen,2,osm:node:10311880271 | osm:way:764092578
-Vĩnh Long,thanh that huu dinh,2,osm:node:10574508512 | osm:node:10799695714
-Vĩnh Long,thanh duong giao xu mac bac,2,osm:node:12814525335 | osm:way:1384066075
+Đà Nẵng,cong vien an nhon,2,osm:way:962129077 | osm:way:962129078
+Đà Nẵng,com ga,2,osm:node:5947469391 | osm:node:5977978686
+Đà Nẵng,coffee house,2,osm:node:5662897536 | osm:node:7095169373
+Đà Nẵng,chua quan the am,2,osm:node:12702192801 | osm:node:2093848428
 Đà Nẵng,chua long tho,2,osm:node:2091401445 | osm:way:760601272
 Đà Nẵng,chua linh ung,2,osm:way:1205388457 | osm:way:746227054
 Đà Nẵng,chua ky vien,2,osm:way:1378265221 | osm:way:532520404
@@ -726,11 +753,8 @@ Vĩnh Long,thanh duong giao xu mac bac,2,osm:node:12814525335 | osm:way:13840660
 Đà Nẵng,caphe sao mai,2,osm:node:729406397 | osm:node:729406450
 Đà Nẵng,caphe phuong nam,2,osm:node:729406736 | osm:node:729406752
 Đà Nẵng,cao lau,2,osm:node:6518159608 | osm:node:7279545186
-Đà Nẵng,cafelong,2,osm:node:729406668 | osm:node:729406940
-Đà Nẵng,cafe9x,2,osm:node:729406693 | osm:node:729406895
-Đà Nẵng,cafe153,2,osm:node:729406439 | osm:node:729406607
-Đà Nẵng,cafe anh,2,osm:node:7282442185 | osm:node:729406637
-An Giang,guangji temple,2,osm:way:684861250 | osm:way:684861251
+Đà Nẵng,ikigai,2,osm:node:13368831101 | osm:node:13853226101
+Đà Nẵng,huongque coffee,2,osm:node:729406600 | osm:node:729406911
 Đà Nẵng,hop dua,2,osm:node:5107806021 | osm:node:5292796421
 Đà Nẵng,hong,2,osm:node:5484963321 | osm:node:5485868225
 Đà Nẵng,hoang thu,2,osm:node:6087404572 | osm:node:6237489387
@@ -740,29 +764,11 @@ An Giang,guangji temple,2,osm:way:684861250 | osm:way:684861251
 Đà Nẵng,doi gio,2,osm:node:5293335937 | osm:node:6966288909
 Đà Nẵng,dinh que,2,osm:node:5747015021 | osm:node:5899363276
 Đà Nẵng,dinh my khe,2,osm:way:693441028 | poi-google:78002295d143a1fc643c8687
+Đà Nẵng,dinh ban co,2,osm:node:1538334281 | poi-google:0d78192558cd42efde612465
 Đà Nẵng,detroit style pizza,2,osm:node:12862167224 | osm:node:6108958605
 Đà Nẵng,cua dai beach,2,osm:node:5403993021 | poi-google:6cb2d1ceadc0b57fc43ed25b
-Đà Nẵng,cong vien an nhon,2,osm:way:962129077 | osm:way:962129078
-Đà Nẵng,com ga,2,osm:node:5947469391 | osm:node:5977978686
-Đà Nẵng,coffee house,2,osm:node:5662897536 | osm:node:7095169373
-Đà Nẵng,chua quan the am,2,osm:node:12702192801 | osm:node:2093848428
-Đà Nẵng,it ca phe,2,osm:node:7705143488 | osm:node:7705143985
-Đà Nẵng,ikigai,2,osm:node:13368831101 | osm:node:13853226101
-Đà Nẵng,huongque coffee,2,osm:node:729406600 | osm:node:729406911
-An Giang,nha tho tin lanh,2,osm:node:6423768508 | osm:way:681175689
-An Giang,nha tho tan binh,2,osm:node:5114065523 | osm:way:871112695
-An Giang,nha tho minh chau,2,osm:node:5114065527 | osm:way:871572485
-An Giang,nha tho cai doi,2,osm:node:6423768445 | osm:way:685470986
-An Giang,nha tho an binh,2,osm:node:5114065530 | osm:way:871112696
-An Giang,masjid salamat,2,osm:node:6423768507 | osm:way:685470997
-An Giang,mai son pagoda,2,osm:way:694296716 | osm:way:696705917
-An Giang,lang thoai ngoc hau,2,osm:node:1814474846 | osm:way:1159104315
-An Giang,khu tuong dai doi sim,2,osm:node:13657036294 | osm:way:1521115214
-An Giang,khu trung bay toi ac chien tranh cua poltpot,2,osm:node:9991869767 | osm:way:1176733783
-An Giang,kdl lam vien nui cam,2,osm:node:11046777432 | osm:way:1189688534
-An Giang,hung phuoc tu,2,osm:node:6423768452 | osm:way:685470987
-An Giang,hoi thanh tin lanh chi hoi long xuyen,2,osm:node:6423768514 | osm:way:685470998
-Đà Nẵng,ngoclan coffee,2,osm:node:729406727 | osm:node:729406751
+Đà Nẵng,cong vien thanh nien,2,osm:way:966750005 | poi-google:4be563d872732c20923e7dc5
+Đà Nẵng,cong vien apec,2,osm:way:675604354 | poi-google:ce4ac990f49853c1a445272d
 Đà Nẵng,ngocanh coffee,2,osm:node:729406451 | osm:node:729406885
 Đà Nẵng,ngoc cam,2,osm:way:565583657 | osm:way:565593787
 Đà Nẵng,minhanh coffee,2,osm:node:729406503 | osm:node:729406959
@@ -778,7 +784,29 @@ An Giang,hoi thanh tin lanh chi hoi long xuyen,2,osm:node:6423768514 | osm:way:6
 Đà Nẵng,kurumi healthy vegan food desserts,2,osm:node:10310109109 | osm:node:13360620516
 Đà Nẵng,kichi kichi,2,osm:node:12176034355 | osm:node:6652587510
 Đà Nẵng,karma waters,2,osm:node:3888954278 | osm:node:3893467887
-Đồng Nai,mieu quan am,2,osm:way:659038461 | osm:way:659087194
+Đà Nẵng,it ca phe,2,osm:node:7705143488 | osm:node:7705143985
+An Giang,cong vien nguyen trung truc,2,osm:way:684600801 | osm:way:686288578
+An Giang,cong vien cau ong hien,2,osm:way:1349608593 | osm:way:1349608594
+An Giang,chua van linh,2,osm:node:6542793085 | osm:way:934549623
+An Giang,chua truc lam,2,osm:node:6423768544 | osm:way:685471005
+An Giang,chua thanh luong,2,osm:node:10932654353 | osm:way:1108263300
+An Giang,chua tay son,2,osm:way:696705910 | osm:way:696705911
+An Giang,chua tay an,2,osm:node:1814474832 | osm:way:1159104318
+An Giang,chua ta pa,2,osm:node:1812082284 | osm:way:1176760615
+Đà Nẵng,pho long hoi,2,osm:node:12114045301 | osm:node:12622667701
+Đà Nẵng,pho lien,2,osm:node:13893913112 | osm:node:4588674490
+Đà Nẵng,pho bien,2,osm:node:13417562201 | osm:node:9921316241
+Đà Nẵng,phi lu,2,osm:node:5684863921 | osm:way:118672480
+Đà Nẵng,olivia pizza,2,osm:node:11906566169 | osm:node:11906566170
+Đà Nẵng,nha tho tin lanh,2,osm:way:372196690 | osm:way:780484947
+Đà Nẵng,nha hang chay,2,osm:node:3850502770 | osm:node:5796473953
+Đà Nẵng,ngoclan coffee,2,osm:node:729406727 | osm:node:729406751
+An Giang,chua phi lai,2,osm:node:7915869485 | osm:way:1176733782
+Đắk Lắk,dam o loan,2,osm:node:11779827836 | osm:node:4472649089
+Đắk Lắk,cong vien truong dai hoc phu yen,2,osm:way:1272649342 | osm:way:1272649343
+Đà Nẵng,van,2,osm:node:4520425992 | osm:node:729406705
+Đà Nẵng,tigoncoffee,2,osm:node:729406440 | osm:node:729406474
+Đà Nẵng,tian patisserie,2,osm:node:12860787925 | osm:node:12866278357
 Đà Nẵng,the pizza company,2,osm:node:12167609715 | osm:node:5699718559
 Đà Nẵng,the coffee house,2,osm:node:7076714787 | osm:way:698776690
 Đà Nẵng,thanhhuong coffee,2,osm:node:729406415 | osm:node:729406436
@@ -787,33 +815,10 @@ An Giang,hoi thanh tin lanh chi hoi long xuyen,2,osm:node:6423768514 | osm:way:6
 Đà Nẵng,sakura,2,osm:node:12850675085 | osm:node:2076855999
 Đà Nẵng,quan an,2,osm:node:10601272420 | osm:node:4353913989
 Đà Nẵng,phuonguyen coffee,2,osm:node:729406913 | osm:node:729406916
-Đà Nẵng,pho long hoi,2,osm:node:12114045301 | osm:node:12622667701
-Đà Nẵng,pho lien,2,osm:node:13893913112 | osm:node:4588674490
-Đà Nẵng,pho bien,2,osm:node:13417562201 | osm:node:9921316241
-Đà Nẵng,phi lu,2,osm:node:5684863921 | osm:way:118672480
-Đà Nẵng,olivia pizza,2,osm:node:11906566169 | osm:node:11906566170
-Đà Nẵng,nha tho tin lanh,2,osm:way:372196690 | osm:way:780484947
-Đà Nẵng,nha hang chay,2,osm:node:3850502770 | osm:node:5796473953
-An Giang,chi hoa tu,2,osm:node:3738797066 | osm:way:370138210
-Đồng Nai,tuong dai chien thang,2,osm:node:5595862925 | osm:way:308426622
-Đồng Tháp,thanh that phu cuong,2,osm:way:695260221 | osm:way:696698313
-An Giang,chua van linh,2,osm:node:6542793085 | osm:way:934549623
-An Giang,chua truc lam,2,osm:node:6423768544 | osm:way:685471005
-An Giang,,2,osm:node:13357233094 | osm:node:6117199886
-Đồng Tháp,chua phuoc an,2,osm:node:1606145436 | osm:way:744909320
-Đồng Tháp,chua khanh an,2,osm:node:1814703624 | osm:node:5628669721
-Đồng Tháp,chua hoa an tu,2,osm:way:695260213 | poi-google:f689f14b52b97cc52ca91061
-Đồng Tháp,chua cao minh,2,osm:node:5619122121 | osm:node:5628391024
-Đồng Tháp,chua,2,osm:node:3766738152 | osm:node:4533660892
-Đồng Nai,vuon crimson,2,osm:way:1207058389 | osm:way:1322435232
-Đồng Nai,vuon celine,2,osm:way:1207058390 | osm:way:1322435233
-An Giang,chua huynh dao,2,osm:way:1108261874 | osm:way:1153950441
-Đắk Lắk,deo ca,2,osm:node:4472607491 | osm:node:6084023485
-Đắk Lắk,dam o loan,2,osm:node:11779827836 | osm:node:4472649089
-An Giang,chua luc linh,2,osm:node:9963236668 | osm:way:1176733807
-Đồng Tháp,nha tho thien phuoc the cathedral of the blessed,2,osm:way:695260210 | osm:way:695260211
-Đồng Tháp,hoi thanh tin lanh go cong,2,osm:way:1272644787 | osm:way:1272644832
-Đồng Tháp,cv thieu nhi,2,osm:node:3763530582 | osm:way:374223819
+Đồng Nai,vuon amber,2,osm:way:1207058388 | osm:way:1322435231
+An Giang,dien tho phat mau binh khanh,2,osm:node:6423768461 | osm:way:685470988
+Đồng Nai,nha tho giao xu thien trieu,2,osm:way:982158092 | osm:way:988842983
+Đồng Nai,mieu quan am,2,osm:way:659038461 | osm:way:659087194
 Đồng Nai,den tho liet si huyen thong nhat,2,osm:way:1388911940 | osm:way:544361624
 Đồng Nai,den thanh vicente,2,osm:way:1327467909 | osm:way:977138975
 Đồng Nai,chua tinh hoi,2,osm:way:1038732495 | poi-google:7ae5a8f62d8fc3ede1c611f7
@@ -822,7 +827,9 @@ An Giang,chua luc linh,2,osm:node:9963236668 | osm:way:1176733807
 Đồng Nai,chua long phu,2,osm:way:583931649 | osm:way:659079695
 Đồng Nai,chua buu son,2,osm:way:1053356896 | osm:way:984178029
 Đồng Nai,chua bao quang,2,osm:way:669256070 | osm:way:690221414
-Đồng Nai,cay tung co thu,2,osm:node:10729928005 | poi-google:c6d0e839e6d389bb59523158
-An Giang,chua hang,2,osm:node:4374995102 | osm:way:1189409894
-An Giang,chua coc,2,osm:way:694352945 | osm:way:694352946
-An Giang,chua an phuoc,2,osm:way:681265511 | osm:way:685445004
+Đắk Lắk,deo ca,2,osm:node:4472607491 | osm:node:6084023485
+An Giang,bai rach vem,2,osm:way:1493885005 | osm:way:451772442
+Đồng Nai,tuong dai chien thang,2,osm:node:5595862925 | osm:way:308426622
+Đồng Nai,tinh xa ngoc khanh,2,osm:way:659079915 | osm:way:978353559
+An Giang,chua quan thanh de quan,2,osm:node:6423768502 | osm:way:685470996
+An Giang,chua phuoc linh,2,osm:node:6542774616 | osm:way:695306820

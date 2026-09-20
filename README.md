@@ -1,3 +1,9 @@
+<!-- DANANG_CURRENT_START -->
+> Dữ liệu đang phục vụ: `v2-c3ad315d02c5356a`. Đợt Đà Nẵng–Hội An có trạng thái **paused**, 2625 POI trong phạm vi (bao gồm dữ liệu cũ). Các số liệu baseline bên dưới vẫn là kết quả lịch sử của snapshot được ghi kèm; xem báo cáo chiến dịch và notebook đã cập nhật để đối chiếu snapshot mới.
+
+[Báo cáo chiến dịch hiện tại](data/reports/v2/danang_campaign/report.md)
+<!-- DANANG_CURRENT_END -->
+
 # Where2Go DSS — POI Recommendation System
 
 Hệ gợi ý POI **dựa trên nội dung và ngữ cảnh, kết hợp ra quyết định đa tiêu chí** tại Hà Nội/Đà Nẵng. Nhập sở thích, vị trí, ngày đi và mẫu ưu tiên để nhận Top-10 có giải thích. Có thêm trang khám phá toàn quốc và lập lịch cho tối đa 12 địa điểm đã chọn.
@@ -15,6 +21,7 @@ Thuật toán: taxonomy + TF-IDF/cosine → ứng viên từ ba nguồn → AHP�
 | **[Báo cáo dự án hoàn chỉnh](docs/bao_cao_du_an_poi.md)** | Bài toán, kiến trúc, nguồn/crawl/ghép dữ liệu, chất lượng, công thức, lý do lựa chọn, thực nghiệm và đối chiếu hai paper |
 | **[Hướng dẫn chạy](docs/huong_dan_chay.md)** | Chạy từ catalog có sẵn, dựng mới, OSRM, notebook, kiểm thử, thu thập và xử lý lỗi |
 | **[Kịch bản bảo vệ 25–30 phút](docs/kich_ban_bao_ve.md)** | 18 slide, 27 phút, lời nói, demo, phụ lục và câu hỏi phản biện |
+| **[29 ca demo Đà Nẵng đã chạy thật](docs/demo_da_nang_thuc_nghiem.md)** | Thao tác người dùng, kết quả thực tế, ảnh và bằng chứng, đối chiếu các thay đổi, đánh giá hạn chế |
 | **[Notebook đã thực thi](notebooks/phan_tich_du_lieu_poi.ipynb)** | Phân tích dữ liệu thực, 14 biểu đồ, bảng kết quả và kiểm chứng toán |
 | [Biểu đồ PNG](docs/assets/poi/) · [Bảng/JSON phân tích](data/reports/analysis/) | Tài nguyên đưa vào báo cáo/slide, checksum đầu vào |
 | [Hai bài báo gốc](paper/) | LORE 2014 và Contextualized Point-of-Interest Recommendation 2020 |

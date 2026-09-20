@@ -1,9 +1,9 @@
 {
-  "version": "v2-ae66988a1053d0de",
-  "created_at": "2026-09-18T08:05:16.805404+00:00",
+  "version": "v2-c3ad315d02c5356a",
+  "created_at": "2026-09-19T13:40:44.846910+00:00",
   "schema_version": "2.1",
   "model_version": "where2go-v2.0.0",
-  "input_hash": "ae66988a1053d0dea27f59b4bc5bd7370865ee180f61356b92fdeebce53e6c6b",
+  "input_hash": "c3ad315d02c5356a9c9e1db8b1f9bc7864cf2a244119c61ff71cb1ff1524560b",
   "v1_dataset_version": "osm-4f7244d59895-7ea9ed33-390f398e-e118cf0e",
   "osm": {
     "sha256": "4f7244d59895803a521b8f6ef0b86629bf4470565ad329ed5d3336676db047e7",
@@ -13,7 +13,7 @@
     "license": "ODbL-1.0"
   },
   "stats": {
-    "poi_count": 16018,
+    "poi_count": 16129,
     "osm_supplement": {
       "Hà Nội:cafe": 1188,
       "inserted": 5509,
@@ -28,39 +28,39 @@
     },
     "google": {
       "rows": 25621,
-      "unmatched": 20714,
-      "new_pois": 304,
-      "confirmed": 4853,
-      "selected_fields_recovered": 8153,
-      "image_candidates": 4096,
+      "unmatched": 20612,
+      "new_pois": 334,
+      "confirmed": 4955,
+      "selected_fields_recovered": 8238,
+      "image_candidates": 4180,
       "ambiguous": 54,
       "spatial_assignments": 1,
       "unique_legacy_ids": 8710,
-      "linked_unique_pois": 1569,
+      "linked_unique_pois": 1602,
       "sources": {
         "vietnam_destinations_google_maps_browser_hotosm.xlsx": {
           "rows": 8201,
-          "unmatched": 6575,
-          "new_pois": 304,
-          "confirmed": 1608,
-          "selected_fields_recovered": 8149,
-          "image_candidates": 1358,
+          "unmatched": 6541,
+          "new_pois": 334,
+          "confirmed": 1642,
+          "selected_fields_recovered": 8234,
+          "image_candidates": 1386,
           "ambiguous": 18,
           "spatial_assignments": 1
         },
         "vietnam_destinations_google_maps_browser_hotosm_backup_20260915_163012.xlsx": {
           "rows": 8710,
-          "unmatched": 7069,
-          "confirmed": 1623,
-          "image_candidates": 1369,
+          "unmatched": 7035,
+          "confirmed": 1657,
+          "image_candidates": 1397,
           "ambiguous": 18,
           "selected_fields_recovered": 4
         },
         "vietnam_destinations_google_maps_browser_hotosm_backup_20260916_150600.xlsx": {
           "rows": 8710,
-          "unmatched": 7070,
-          "confirmed": 1622,
-          "image_candidates": 1369,
+          "unmatched": 7036,
+          "confirmed": 1656,
+          "image_candidates": 1397,
           "ambiguous": 18
         }
       }
@@ -83,32 +83,32 @@
       "imported": 11
     },
     "focus_category_curation": {
-      "unchanged": 29,
-      "category_updated": 3,
+      "unchanged": 27,
+      "category_updated": 5,
       "missing_or_new_poi": 7,
       "location_updated": 1
     },
     "collected": {
-      "attempts": 149,
-      "rating_pairs": 84,
-      "structured_hours": 58,
-      "image_candidates": 88,
-      "accepted": 89,
-      "new_pois": 1
+      "attempts": 265,
+      "image_candidates": 203,
+      "accepted": 205,
+      "new_pois": 82,
+      "rating_pairs": 199,
+      "structured_hours": 124
     },
     "images": {
-      "selected": 1048,
+      "selected": 1196,
       "shared_urls_held_for_review": 2,
-      "cached_checks": 1127
+      "cached_checks": 1295
     },
     "resolved_spatial_statuses": 2,
-    "review_queue": 20840,
+    "review_queue": 20738,
     "focus_coverage": [
       {
         "location": "Hà Nội",
-        "total": 4499,
-        "usable": 4485,
-        "attractions": 1508,
+        "total": 4505,
+        "usable": 4491,
+        "attractions": 1514,
         "food_rest": 2977,
         "with_rating_pair": 39,
         "with_structured_hours": 623,
@@ -119,12 +119,12 @@
       },
       {
         "location": "Đà Nẵng",
-        "total": 2752,
-        "usable": 2691,
-        "attractions": 426,
+        "total": 2832,
+        "usable": 2771,
+        "attractions": 506,
         "food_rest": 2265,
-        "with_rating_pair": 47,
-        "with_structured_hours": 429,
+        "with_rating_pair": 137,
+        "with_structured_hours": 477,
         "with_specific_duration": 18,
         "with_verified_duration": 0,
         "with_curated_duration_estimate": 18,

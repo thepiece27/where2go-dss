@@ -1,0 +1,291 @@
+{
+  "run": "artifacts/danang-demo/20260919-231136",
+  "case_count": 29,
+  "check_count": 232,
+  "passed_checks": 221,
+  "failed_checks": [
+    {
+      "case": "R19",
+      "check": "danang_geographic_region"
+    },
+    {
+      "case": "T01",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T02",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T03",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T04",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T05",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T06",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T07",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T08",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T09",
+      "check": "no_javascript_errors"
+    },
+    {
+      "case": "T10",
+      "check": "no_javascript_errors"
+    }
+  ],
+  "comparisons": [
+    {
+      "from_case": "R02",
+      "to_case": "R03",
+      "changed_fields": [
+        "preset"
+      ],
+      "overlap": 10,
+      "same_order": false
+    },
+    {
+      "from_case": "R02",
+      "to_case": "R04",
+      "changed_fields": [
+        "preset"
+      ],
+      "overlap": 9,
+      "same_order": false
+    },
+    {
+      "from_case": "R02",
+      "to_case": "R05",
+      "changed_fields": [
+        "interests"
+      ],
+      "overlap": 0,
+      "same_order": false
+    },
+    {
+      "from_case": "R02",
+      "to_case": "R06",
+      "changed_fields": [
+        "preferred_categories",
+        "preset"
+      ],
+      "overlap": 10,
+      "same_order": false
+    },
+    {
+      "from_case": "R06",
+      "to_case": "R07",
+      "changed_fields": [
+        "start"
+      ],
+      "overlap": 2,
+      "same_order": false
+    },
+    {
+      "from_case": "R07",
+      "to_case": "R08",
+      "changed_fields": [
+        "radius_km"
+      ],
+      "overlap": 3,
+      "same_order": false
+    },
+    {
+      "from_case": "R11",
+      "to_case": "R12",
+      "changed_fields": [
+        "interests"
+      ],
+      "overlap": 10,
+      "same_order": true
+    },
+    {
+      "from_case": "R13",
+      "to_case": "R14",
+      "changed_fields": [
+        "tourism_only"
+      ],
+      "overlap": 0,
+      "same_order": false
+    },
+    {
+      "from_case": "R05",
+      "to_case": "R15",
+      "changed_fields": [
+        "date"
+      ],
+      "overlap": 9,
+      "same_order": false
+    },
+    {
+      "from_case": "R02",
+      "to_case": "R16",
+      "changed_fields": [
+        "selected_poi_ids"
+      ],
+      "overlap": 9,
+      "same_order": false
+    },
+    {
+      "from_case": "R02",
+      "to_case": "R17",
+      "changed_fields": [
+        "radius_km"
+      ],
+      "overlap": 8,
+      "same_order": false
+    },
+    {
+      "from_case": "R02",
+      "to_case": "R18",
+      "changed_fields": [
+        "preset"
+      ],
+      "overlap": 10,
+      "same_order": false
+    },
+    {
+      "from_case": "R10",
+      "to_case": "R19",
+      "changed_fields": [
+        "radius_km"
+      ],
+      "overlap": 7,
+      "same_order": false
+    }
+  ],
+  "editorial_reviews": {
+    "R01": {
+      "verdict": "HỢP LÝ",
+      "review": "Không khai báo sở thích thì API trả personalized=false. Các tiêu chí vị trí, chất lượng và bằng chứng quyết định thứ hạng; không có cơ sở nói hệ thống đã học sở thích cá nhân. Danh sách pha trộn nhiều loại hình là hợp lý cho bước khám phá ban đầu."
+    },
+    "R02": {
+      "verdict": "ĐẠT MỘT PHẦN",
+      "review": "Công viên và biển chiếm danh sách, phù hợp mong muốn thiên nhiên. Tuy nhiên Funny Games Vincom Đà Nẵng cũng xuất hiện: dữ liệu gán category=park và các tag thiên nhiên/ngoài trời. Đây là dấu hiệu cần kiểm duyệt loại hình, không nên dùng điểm thuật toán để bảo đảm nơi đó thực sự phù hợp đi thiên nhiên. Chưa xác minh thực địa địa điểm này."
+    },
+    "R03": {
+      "verdict": "HỢP LÝ",
+      "review": "Công viên 29 tháng 3, cách 0,936 km, từ hạng 4 lên hạng 1. Trọng số di chuyển tăng từ 0,20 lên 0,40. Cả tập 10 địa điểm vẫn giống R02 nên khoảng cách trung bình không giảm; điều cải thiện quan sát được là vị trí của điểm gần ở đầu danh sách, không phải mọi thống kê đều tốt hơn."
+    },
+    "R04": {
+      "verdict": "HỢP LÝ",
+      "review": "Đường hoa Bạch Đằng lên đầu vì chất lượng hiệu chỉnh 0,9249 cao hơn Bãi Biển Thiên Đường 0,8708; trọng số chất lượng tăng từ 0,30 lên 0,45. Chất lượng trung bình tăng nhẹ nhưng đi xa hơn một chút. Đây là đánh đổi đúng với mẫu ưu tiên, không phải chứng minh điểm đó tốt nhất ngoài đời."
+    },
+    "R05": {
+      "verdict": "HỢP LÝ",
+      "review": "Top đầu chuyển sang bảo tàng, Top-10 không còn điểm chung với R02. Đây là tín hiệu cá nhân hóa theo sở thích khai báo có tác dụng. Các vị trí cuối như chợ và đường dạo là kết quả ưu tiên mềm, không phải lọc chỉ bảo tàng. Ho Chi Minh Museum thiếu thông tin giờ Chủ nhật nên cần kiểm tra giờ trước khi đi."
+    },
+    "R06": {
+      "verdict": "ĐẠT MỘT PHẦN",
+      "review": "Chỉ 2/10 kết quả thuộc beach dù đã chọn Bãi biển. Muốn cô lập tác động chọn loại hình, đối chiếu R18: cùng thiên nhiên, Hợp sở thích và bán kính 15 km; chỉ thêm preferred_categories=beach. Công viên đã khớp toàn bộ tag thiên nhiên nên taxonomy cũng đạt 1; chọn beach không tạo thưởng độc quyền vượt mức 1. Người thật muốn chuyên biển có thể thất vọng. Dùng ô Nhu cầu nhập biển như R11 phù hợp hơn trong ca đã thử."
+    },
+    "R07": {
+      "verdict": "HỢP LÝ",
+      "review": "Chỉ đổi tọa độ so với R06, các điểm ven biển phía đông lên đầu. Khoảng cách trung bình của danh sách mới giảm rõ. Bán kính cũng được tính lại quanh tâm mới, làm tập ứng viên thay đổi; vì vậy không quy mọi thay đổi điểm TOPSIS chỉ cho quãng đường."
+    },
+    "R08": {
+      "verdict": "ĐẠT MỘT PHẦN",
+      "review": "Lọc bán kính đúng: chỉ còn 4 kết quả, đều không quá 1 km; không lấy điểm xa để đủ 10. OSRM có dữ liệu đầy đủ cho pool nhỏ nên chuyển từ km đường chim bay sang giây lái xe. Tuy nhiên Chợ Phước Mỹ có preference_match=0 vẫn được điền vào danh sách: hệ thống chưa có ngưỡng loại gợi ý không hợp sở thích. Công viên gần nhất theo tọa độ không nhất thiết có thời gian ô tô thấp nhất do điểm tiếp cận/mạng đường."
+    },
+    "R09": {
+      "verdict": "HỢP LÝ",
+      "review": "Không tìm được ứng viên và web giải thích cần đổi vị trí, ngày hoặc bán kính. Đây là hành vi đúng trong ca không có dữ liệu đáp ứng. Không suy ra khu vực thực địa hoàn toàn không có điểm tham quan; chỉ biết catalog và điều kiện hiện tại không trả được điểm."
+    },
+    "R10": {
+      "verdict": "ĐẠT MỘT PHẦN",
+      "review": "7 kết quả đầu là museum, phù hợp hướng tìm bảo tàng. Nhưng hệ thống điền thêm Công viên 29 tháng 3, Chợ Cồn, Công viên Nam Dương ở cuối; hai công viên có preference_match=0. Với người tránh mưa, đó là gợi ý chưa tốt. Hệ thống không đọc dự báo thời tiết và tag trong nhà không bảo đảm toàn bộ trải nghiệm ở nơi có mái che."
+    },
+    "R11": {
+      "verdict": "HỢP LÝ",
+      "review": "9/10 kết quả thuộc beach. Từ biển có trong tên/nội dung nên TF-IDF tạo khác biệt rõ giữa biển và loại hình khác. Điểm số vẫn tương đối trong pool; nhiều thực thể Mỹ Khê cần mở bản đồ xem vị trí, không mặc định là các trải nghiệm hoàn toàn khác nhau."
+    },
+    "R12": {
+      "verdict": "CHƯA TỐT",
+      "review": "10/10 POI và thứ tự giống R11, vẫn có 9 bãi biển. Cụm không thích không được chuyển thành điều kiện loại trừ; TF-IDF vẫn giữ tín hiệu từ biển. Điểm số có thay đổi nhỏ nhưng không sửa được ý định bị hiểu ngược. Đây là lỗi về chất lượng hiểu nhu cầu, dù HTTP và render đều thành công."
+    },
+    "R13": {
+      "verdict": "CHƯA TỐT",
+      "review": "Người dùng muốn cà phê nhưng bộ lọc Tham quan và ngoài trời loại cafe trước khi xếp hạng. Không có quán cà phê nào trong kết quả, web vẫn trả 10 điểm khác. Công viên cá voi còn đạt score khoảng 0,915 dù sở thích chỉ khớp 0,0428. Thiếu cảnh báo xung đột giữa bộ lọc và nhu cầu; không được biện minh điểm cao là độ phù hợp cao tuyệt đối."
+    },
+    "R14": {
+      "verdict": "ĐẠT MỘT PHẦN",
+      "review": "Chỉ đổi Nhóm địa điểm sang Tất cả loại hình, cả 10 kết quả trở thành cafe: phục hồi được ý định tìm quán. Tuy nhiên 9/10 không có cặp rating–review đủ bằng chứng và dùng chất lượng trung tính 0,5. Trình cà phê có quan sát rating hợp lệ; không nên nói mọi quán trong danh sách đã được đánh giá chất lượng tốt."
+    },
+    "R15": {
+      "verdict": "HỢP LÝ",
+      "review": "Đổi riêng Chủ nhật 20/09 sang thứ Hai 21/09 khiến Ho Chi Minh Museum bị loại. Chi tiết POI lưu hours_weekly[0]=[] (thứ Hai đóng), còn Chủ nhật là null (chưa biết), nên giải thích bám dữ liệu là: thứ Hai có bằng chứng đóng cửa trong catalog. Không nói đã kiểm tra lịch mở cửa trực tiếp tại bảo tàng."
+    },
+    "R16": {
+      "verdict": "HỢP LÝ VỀ LỰA CHỌN",
+      "review": "Sau khi thêm Bãi Biển Thiên Đường, lần gợi ý tiếp không trả lại POI đó; danh sách đã chọn vẫn còn sau sang Lịch trình và tải lại. Đây là kiểm tra tính liên tục của hành trình người dùng. Lỗi bản đồ ở trang Lịch trình được đánh giá riêng trong nhóm T; ca này không chứng minh cả trang Lịch trình không có lỗi."
+    },
+    "R17": {
+      "verdict": "HỢP LÝ, CÓ ĐÁNH ĐỔI",
+      "review": "Bán kính giảm từ 15 xuống 5 km, pool còn 47 ứng viên và đủ đường OSRM; web dùng thời gian lái xe. Top-1 là Công viên Nam Dương, không phải điểm gần nhất theo đường chim bay. Khoảng cách trung bình Top-10 còn tăng từ khoảng 2,475 lên 2,804 km: vừa đổi pool, vừa đổi thước đo di chuyển nên không có quy luật thu hẹp bán kính luôn làm trung bình Top-10 giảm."
+    },
+    "R18": {
+      "verdict": "HỢP LÝ",
+      "review": "Tăng trọng số sở thích lên 0,55 không thay ba vị trí đầu trong ca này; cùng 10 POI nhưng một số vị trí phía sau đổi. Điều này hợp lý khi các điểm đầu vốn đã có điểm sở thích tốt. Không dựng câu chuyện rằng cứ thay mẫu ưu tiên là toàn bộ danh sách phải khác."
+    },
+    "R19": {
+      "verdict": "CHƯA ĐẠT PHẠM VI",
+      "review": "Mở từ 15 lên 30 km làm xuất hiện Bảo tàng Hội An, Di San Vô Giá và Terracotta Park; đối chiếu tọa độ cho region=hoi_an dù cả ba ghi location=Đà Nẵng. Nhãn hành chính không đủ diễn đạt ý định khu vực Đà Nẵng, không Hội An. Ca này là phép thử âm phát hiện vượt phạm vi, không phải kịch bản dẫn người dùng đi Hội An. Bộ demo chính R01–R18 và T01–T10 đã đối chiếu tất cả điểm trả về ở region=danang."
+    },
+    "T01": {
+      "verdict": "LOGIC LỊCH HỢP LÝ; WEB CÒN LỖI",
+      "review": "Ba phương án ghé đủ hai điểm. Thuận đường dùng 120 phút tại Mỹ Khê và 90 phút tại Phạm Văn Đồng, về 12:28. Ghé nhiều hơn dùng 60/45 phút, về 10:43; Thong thả dùng 240/150 phút, về 15:28. Tên phương án nói nhịp tham quan, không cam kết khác số điểm khi người dùng chỉ chọn hai điểm. Cả ba cùng đường ô tô khoảng 17,17 phút, thời gian tiếp cận hai chiều là phần cộng riêng."
+    },
+    "T02": {
+      "verdict": "RÀNG BUỘC ĐƯỢC CÔNG KHAI; WEB CÒN LỖI",
+      "review": "Không có lịch đủ hai điểm trong đúng 08:00–09:00 với thời lượng tham khảo. Hệ thống đề xuất 08:00–10:43 hoặc xuất phát sớm 06:00/05:00; cả ba cần xác nhận. Đã bấm Quay lại và kiểm tra chưa chọn nhầm, sau đó mở lại và Chấp nhận điều chỉnh. Đề xuất không đồng nghĩa đã đáp ứng yêu cầu ban đầu."
+    },
+    "T03": {
+      "verdict": "ĐÁNH ĐỔI RÕ; WEB CÒN LỖI",
+      "review": "Hai lần ghé 10 phút vẫn cần 20 phút tham quan + 40 phút tiếp cận vào/ra + khoảng 17,17 phút lái xe, tổng khoảng 77,17 phút. Một phương án ghé Mỹ Khê và về 08:44, thiếu một điểm bắt buộc; phương án đủ hai điểm về 09:18. Cả hai phải xác nhận đúng loại điều chỉnh. Không kết luận hệ thống tính sai chỉ vì 10+10 nhỏ hơn 60."
+    },
+    "T04": {
+      "verdict": "HỢP LÝ NHƯNG CHƯA GIẢI QUYẾT KHUNG GIỜ",
+      "review": "Chỉ bỏ bắt buộc Phạm Văn Đồng, vẫn để thời lượng tham khảo. Riêng Mỹ Khê theo nhịp ngắn đã cần 60 phút tham quan + thời gian vào/ra và lái xe, nên chưa thể vừa 1 giờ. Kết quả vẫn đề xuất đổi giờ. Ca T10 mới cho thấy bỏ bắt buộc kết hợp thời lượng 10 phút tạo được phương án đúng khung."
+    },
+    "T05": {
+      "verdict": "THAY ĐỔI ĐÚNG THEO TỌA ĐỘ; WEB CÒN LỖI",
+      "review": "Cùng hai điểm và nhịp tham quan nhưng xuất phát gần Mỹ Khê: lái xe giảm từ khoảng 17,17 xuống 7,86 phút, Thuận đường về 12:18 thay vì 12:28. Dữ liệu tuyến thật được vẽ lại. Khoảng cách gần không loại bỏ 40 phút tiếp cận đang nằm trong dữ liệu hai địa điểm."
+    },
+    "T06": {
+      "verdict": "GIỮ ĐÚNG THỨ TỰ; WEB CÒN LỖI",
+      "review": "Nhấn đưa Phạm Văn Đồng lên trước khiến cả ba phương án giữ Phạm Văn Đồng → Mỹ Khê. Thời gian lái xe tăng từ khoảng 17,17 lên 18,73 phút và Thuận đường về 12:29. Đây là tác động của thứ tự và mạng đường ô tô, không nhất thiết đối xứng. Không khẳng định thứ tự ban đầu tối ưu toàn cục vì planner tìm kiếm có giới hạn."
+    },
+    "T07": {
+      "verdict": "CÓ NGHỈ, CHƯA ĐỒNG ĐỀU MỌI PHƯƠNG ÁN",
+      "review": "Thuận đường thêm nghỉ 10:28–10:48 và ăn trưa 12:40–13:25, về 13:33 thay vì 12:28. Đó là nghỉ/ăn tự túc tại điểm dừng, không phải đã chọn một quán cụ thể. Phương án Ghé nhiều hơn kết thúc 10:43 không chèn khối ăn/nghỉ; các lựa chọn này là linh hoạt, không bảo đảm xuất hiện trong mọi phương án. Cần đọc từng timeline."
+    },
+    "T08": {
+      "verdict": "BỔ SUNG CÓ ÍCH; CẦN NGƯỜI DÙNG CHỌN",
+      "review": "Tự thêm tối đa ba POI. Thuận đường thêm Trình cà phê, Đường hoa Bạch Đằng, Cầu Trần Thị Lý; giữ hai bãi biển, về 15:33. Phương án đầu tiên lại là Thong thả: thêm chỉ Cầu Trần Thị Lý và về 16:49. Thứ tự thẻ không có nghĩa phương án đầu ghé nhiều nhất. Auto-add trong Lịch trình không kế thừa bộ lọc Tham quan và ngoài trời của trang Gợi ý, nên có thể thêm cà phê."
+    },
+    "T09": {
+      "verdict": "KHÔNG ÂM THẦM CẮT THỜI LƯỢNG; WEB CÒN LỖI",
+      "review": "Yêu cầu 6 giờ mỗi biển vượt khung 10 giờ ngay từ thời gian ghé. Hệ thống giữ đúng 360 phút: chọn một biển, về 14:34 và báo thiếu điểm bắt buộc; hoặc đủ hai biển, về 20:58 và đề nghị kéo dài. Cả hai cần xác nhận. Sai số 360,0000000000001 trong JSON là số thực, không phải thay đổi thời lượng."
+    },
+    "T10": {
+      "verdict": "PHÂN BIỆT ĐÚNG BẮT BUỘC VÀ TÙY CHỌN",
+      "review": "So với T03 chỉ bỏ bắt buộc Phạm Văn Đồng. Phương án ghé Mỹ Khê 10 phút, về 08:44, đạt 1/1 điểm bắt buộc trong giờ nên không cần xác nhận điều chỉnh; danh sách chưa xếp công khai Phạm Văn Đồng. Phương án ghé đủ hai nơi vẫn về 09:18 và cần xác nhận. Đây là ca minh họa rõ nhất tác dụng điểm bắt buộc."
+    }
+  },
+  "human_relevance": "NOT GRADED"
+}

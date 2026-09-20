@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-18T09:16:41.456320+00:00",
-  "dataset_version": "v2-ae66988a1053d0de",
+  "generated_at": "2026-09-19T13:45:04.332587+00:00",
+  "dataset_version": "v2-c3ad315d02c5356a",
   "routing_version": "1e1d2ec5e5a86240",
   "scope": "Seven targeted scenarios, not a representative quality benchmark; old planner may add unselected places.",
   "human_usability": "NOT RUN",
@@ -12,51 +12,20 @@
         "poi-google:9f6b613e52c6d0f34461666b"
       ],
       "legacy": {
-        "status": "insufficient_data",
-        "reason": "Có điểm bắt buộc không thỏa điều kiện dữ liệu, category, khoảng cách hoặc hoạt động",
+        "status": "routing_unavailable",
+        "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
         "has_schedule": false,
         "must_fraction": 0.0,
-        "elapsed_ms": 15.9
+        "elapsed_ms": 2518.5
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 519.1,
-        "best_must_fraction": 1.0,
-        "full_must_without_time_change": true,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 1,
-            "must": 1,
-            "departure": "08:00",
-            "return": "10:06",
-            "drive_minutes": 15.2,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "more",
-            "selected": 1,
-            "must": 1,
-            "departure": "08:00",
-            "return": "09:21",
-            "drive_minutes": 15.2,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "relaxed",
-            "selected": 1,
-            "must": 1,
-            "departure": "08:00",
-            "return": "11:06",
-            "drive_minutes": 15.2,
-            "requires_confirmation": false,
-            "changes": []
-          }
-        ]
+        "elapsed_ms": 2445.5,
+        "best_must_fraction": 0,
+        "full_must_without_time_change": false,
+        "options": []
       }
     },
     {
@@ -67,51 +36,20 @@
         "poi-google:9f6b613e52c6d0f34461666b"
       ],
       "legacy": {
-        "status": "insufficient_data",
-        "reason": "Có điểm bắt buộc không thỏa điều kiện dữ liệu, category, khoảng cách hoặc hoạt động",
+        "status": "routing_unavailable",
+        "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
         "has_schedule": false,
         "must_fraction": 0.0,
-        "elapsed_ms": 20.5
+        "elapsed_ms": 2539.7
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 512.2,
-        "best_must_fraction": 1.0,
-        "full_must_without_time_change": true,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 2,
-            "must": 2,
-            "departure": "08:00",
-            "return": "13:13",
-            "drive_minutes": 17.2,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "more",
-            "selected": 2,
-            "must": 2,
-            "departure": "08:00",
-            "return": "10:43",
-            "drive_minutes": 17.2,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "relaxed",
-            "selected": 2,
-            "must": 2,
-            "departure": "08:00",
-            "return": "16:13",
-            "drive_minutes": 17.2,
-            "requires_confirmation": false,
-            "changes": []
-          }
-        ]
+        "elapsed_ms": 2501.9,
+        "best_must_fraction": 0,
+        "full_must_without_time_change": false,
+        "options": []
       }
     },
     {
@@ -122,66 +60,20 @@
         "poi-google:9f6b613e52c6d0f34461666b"
       ],
       "legacy": {
-        "status": "insufficient_data",
-        "reason": "Có điểm bắt buộc không thỏa điều kiện dữ liệu, category, khoảng cách hoặc hoạt động",
+        "status": "routing_unavailable",
+        "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
         "has_schedule": false,
         "must_fraction": 0.0,
-        "elapsed_ms": 20.3
+        "elapsed_ms": 2465.3
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 217.4,
-        "best_must_fraction": 1.0,
+        "elapsed_ms": 2427.3,
+        "best_must_fraction": 0,
         "full_must_without_time_change": false,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 2,
-            "must": 2,
-            "departure": "06:00",
-            "return": "09:28",
-            "drive_minutes": 17.2,
-            "requires_confirmation": true,
-            "changes": [
-              {
-                "code": "time_changed",
-                "message": "Đề xuất đi lúc 06:00, về lúc 09:28 (yêu cầu 08:00–09:00)."
-              }
-            ]
-          },
-          {
-            "profile": "convenient",
-            "selected": 2,
-            "must": 2,
-            "departure": "08:00",
-            "return": "11:28",
-            "drive_minutes": 17.2,
-            "requires_confirmation": true,
-            "changes": [
-              {
-                "code": "time_changed",
-                "message": "Đề xuất đi lúc 08:00, về lúc 11:28 (yêu cầu 08:00–09:00)."
-              }
-            ]
-          },
-          {
-            "profile": "convenient",
-            "selected": 2,
-            "must": 2,
-            "departure": "05:00",
-            "return": "08:28",
-            "drive_minutes": 17.2,
-            "requires_confirmation": true,
-            "changes": [
-              {
-                "code": "time_changed",
-                "message": "Đề xuất đi lúc 05:00, về lúc 08:28 (yêu cầu 08:00–09:00)."
-              }
-            ]
-          }
-        ]
+        "options": []
       }
     },
     {
@@ -191,51 +83,20 @@
         "osm:way:28912942"
       ],
       "legacy": {
-        "status": "provisional",
-        "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-        "has_schedule": true,
-        "must_fraction": 1.0,
-        "elapsed_ms": 846.2
+        "status": "routing_unavailable",
+        "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "has_schedule": false,
+        "must_fraction": 0.0,
+        "elapsed_ms": 2621.1
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 427.9,
-        "best_must_fraction": 1.0,
-        "full_must_without_time_change": true,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 1,
-            "must": 1,
-            "departure": "08:00",
-            "return": "09:07",
-            "drive_minutes": 6.8,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "more",
-            "selected": 1,
-            "must": 1,
-            "departure": "08:00",
-            "return": "08:47",
-            "drive_minutes": 6.8,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "relaxed",
-            "selected": 1,
-            "must": 1,
-            "departure": "08:00",
-            "return": "09:27",
-            "drive_minutes": 6.8,
-            "requires_confirmation": false,
-            "changes": []
-          }
-        ]
+        "elapsed_ms": 2464.5,
+        "best_must_fraction": 0,
+        "full_must_without_time_change": false,
+        "options": []
       }
     },
     {
@@ -247,51 +108,20 @@
         "osm:way:178995262"
       ],
       "legacy": {
-        "status": "provisional",
-        "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-        "has_schedule": true,
-        "must_fraction": 1.0,
-        "elapsed_ms": 776.1
+        "status": "routing_unavailable",
+        "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "has_schedule": false,
+        "must_fraction": 0.0,
+        "elapsed_ms": 2509.7
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 486.2,
-        "best_must_fraction": 1.0,
-        "full_must_without_time_change": true,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 3,
-            "must": 3,
-            "departure": "08:00",
-            "return": "13:51",
-            "drive_minutes": 5.5,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "more",
-            "selected": 3,
-            "must": 3,
-            "departure": "08:00",
-            "return": "11:36",
-            "drive_minutes": 5.5,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "relaxed",
-            "selected": 3,
-            "must": 3,
-            "departure": "08:00",
-            "return": "16:21",
-            "drive_minutes": 5.5,
-            "requires_confirmation": false,
-            "changes": []
-          }
-        ]
+        "elapsed_ms": 2671.1,
+        "best_must_fraction": 0,
+        "full_must_without_time_change": false,
+        "options": []
       }
     },
     {
@@ -303,72 +133,20 @@
         "osm:way:704147278"
       ],
       "legacy": {
-        "status": "insufficient_data",
-        "reason": "Không có seed nào thỏa giờ, dwell, ăn/nghỉ, đường về và dự phòng",
+        "status": "routing_unavailable",
+        "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
         "has_schedule": false,
         "must_fraction": 0.0,
-        "elapsed_ms": 549.7
+        "elapsed_ms": 2896.7
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 1377.3,
-        "best_must_fraction": 1.0,
+        "elapsed_ms": 2460.2,
+        "best_must_fraction": 0,
         "full_must_without_time_change": false,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 2,
-            "must": 2,
-            "departure": "13:00",
-            "return": "16:46",
-            "drive_minutes": 5.3,
-            "requires_confirmation": true,
-            "changes": [
-              {
-                "code": "missing_must_visit",
-                "poi_ids": [
-                  "osm:way:339936730"
-                ],
-                "message": "Chưa ghé được điểm bắt buộc: Bảo tàng Dân tộc học Việt Nam"
-              }
-            ]
-          },
-          {
-            "profile": "convenient",
-            "selected": 3,
-            "must": 3,
-            "departure": "10:00",
-            "return": "16:50",
-            "drive_minutes": 19.7,
-            "requires_confirmation": true,
-            "changes": [
-              {
-                "code": "time_changed",
-                "message": "Đề xuất đi lúc 10:00, về lúc 16:50 (yêu cầu 13:00–18:00)."
-              }
-            ]
-          },
-          {
-            "profile": "more",
-            "selected": 2,
-            "must": 2,
-            "departure": "13:00",
-            "return": "15:46",
-            "drive_minutes": 5.3,
-            "requires_confirmation": true,
-            "changes": [
-              {
-                "code": "missing_must_visit",
-                "poi_ids": [
-                  "osm:way:339936730"
-                ],
-                "message": "Chưa ghé được điểm bắt buộc: Bảo tàng Dân tộc học Việt Nam"
-              }
-            ]
-          }
-        ]
+        "options": []
       }
     },
     {
@@ -382,60 +160,29 @@
         "reason": "Có điểm bắt buộc không thỏa điều kiện dữ liệu, category, khoảng cách hoặc hoạt động",
         "has_schedule": false,
         "must_fraction": 0.0,
-        "elapsed_ms": 16.6
+        "elapsed_ms": 40.7
       },
       "suggestions": {
-        "status": "suggestions",
-        "has_schedule": true,
+        "status": "routing_unavailable",
+        "has_schedule": false,
         "has_next_step": true,
-        "elapsed_ms": 488.3,
-        "best_must_fraction": 1.0,
-        "full_must_without_time_change": true,
-        "options": [
-          {
-            "profile": "convenient",
-            "selected": 1,
-            "must": 1,
-            "departure": "11:30",
-            "return": "12:58",
-            "drive_minutes": 7.8,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "more",
-            "selected": 1,
-            "must": 1,
-            "departure": "11:30",
-            "return": "12:43",
-            "drive_minutes": 7.8,
-            "requires_confirmation": false,
-            "changes": []
-          },
-          {
-            "profile": "relaxed",
-            "selected": 1,
-            "must": 1,
-            "departure": "11:30",
-            "return": "13:28",
-            "drive_minutes": 7.8,
-            "requires_confirmation": false,
-            "changes": []
-          }
-        ]
+        "elapsed_ms": 2458.1,
+        "best_must_fraction": 0,
+        "full_must_without_time_change": false,
+        "options": []
       }
     }
   ],
   "summary": {
     "scenario_count": 7,
-    "legacy_schedule_count": 2,
-    "new_schedule_count": 7,
+    "legacy_schedule_count": 0,
+    "new_schedule_count": 0,
     "new_actionable_count": 7,
-    "new_full_must_original_window": 5,
-    "new_full_must_any_window": 7,
-    "legacy_median_ms": 20.5,
-    "new_median_ms": 488.3,
-    "new_max_ms": 1377.3,
+    "new_full_must_original_window": 0,
+    "new_full_must_any_window": 0,
+    "legacy_median_ms": 2518.5,
+    "new_median_ms": 2460.2,
+    "new_max_ms": 2671.1,
     "timeline_route_consistency": "PASS"
   }
 }

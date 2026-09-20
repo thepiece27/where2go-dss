@@ -25,6 +25,8 @@ function restore() {
   $("interests").value = r.text ?? d.fields.interests;
   $("radius").value = r.radius || 30;
   $("preset").value = r.preset || "balanced";
+  $("tourismScope").value = r.scope ?? (city === "Đà Nẵng" ? "danang_hoian" : "");
+  $("tourismOnly").value = String(r.tourismOnly ?? true);
   activeTopics = new Set(r.topics || []);
   for (const option of $("categories").options)
     option.selected = (r.categories || [d.fields.tripTheme]).includes(
@@ -73,6 +75,8 @@ function save() {
     categories: [...$("categories").selectedOptions].map((o) => o.value),
     radius: Number($("radius").value),
     preset: $("preset").value,
+    scope: $("tourismScope").value,
+    tourismOnly: $("tourismOnly").value === "true",
   };
   if (moved) d.startLabel = "Vị trí đã chọn trong yêu cầu gợi ý";
   if (previous !== JSON.stringify(d.fields)) d.stale = !!(d.result || d.chosen);
@@ -132,6 +136,8 @@ async function recommend() {
       "/api/v2/recommendations",
       {
         location: city,
+        scope: r.scope,
+        tourism_only: r.tourismOnly,
         date: d.fields.tripDate,
         start: {
           latitude: Number(d.fields.latitude),

@@ -68,6 +68,7 @@ function setOffline(value) {
   else clearBasemap();
 }
 async function loadBasemap(location) {
+  if (location === "danang_hoian") location = "Đà Nẵng";
   if (!map) return;
   const version = ++state.basemapVersion,
     config = basemapConfig[location];
@@ -196,8 +197,7 @@ async function loadMapPois() {
       Math.min(180, b.getEast()),
       Math.min(90, b.getNorth()),
     ].join(","),
-    location: $("locationFilter").value,
-    category: $("typeFilter").value,
+    ...exploreFilters(),
     query: $("searchInput").value,
   });
   try {

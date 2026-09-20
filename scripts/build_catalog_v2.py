@@ -639,6 +639,7 @@ def build(args):
     if args.manual.exists():
         input_paths.append(args.manual)
     input_paths.extend(path for path in [geometry_path, image_checks, *collected_paths] if path.exists())
+    input_paths.append(ROOT / "data/curation/danang_hoian_scope.geojson")
     code_paths = [
         Path(__file__),
         ROOT / "where2go/hours.py",
@@ -654,6 +655,7 @@ def build(args):
         ROOT / "scripts/export_dataset_v2.py",
         ROOT / "scripts/merge_sources_v2.py",
         ROOT / "where2go/v2/google_collector.py",
+        ROOT / "where2go/v2/discovery.py",
     ]
     input_hash = pipeline_hash(input_paths + code_paths)
     build_version = "v2-" + input_hash[:16]

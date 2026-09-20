@@ -17,6 +17,121 @@ rating:a9a0cf0c1410ca6836b31585,osm:way:1148571536,Google Maps,4.5,12776,2026-09
 rating:d477a5ce18d586c274024704,osm:way:178995262,Google Maps,,24,2026-09-17T18:19:07.806990+00:00,0,obs:c0be81d5366351dc6da28e88
 rating:59168da1edfe53f113f7e854,osm:way:220302249,Google Maps,4.4,47407,2026-09-17T18:07:38.923818+00:00,1,obs:a2d2748a8a56bc93bece9b4d
 rating:d5d38416dd91b65613631ac1,osm:way:28912942,Google Maps,4.5,24288,2026-09-17T18:07:46.204013+00:00,1,obs:8737d7307c8ead703673dcad
+rating:a29bdfc81cf1ac53158578de,poi-google:736d4e08506d80cd51320786,Google Maps,4.4,229,2026-09-19T12:57:32.138576+00:00,1,obs:0ff72fe01ef1ff105b8aa104
+rating:8780e1bec895b7ba9dd48945,poi-google:9f6b613e52c6d0f34461666b,Google Maps,4.6,790,2026-09-19T12:57:38.638671+00:00,1,obs:01714158aae9f8b83aa11fbd
+rating:4720949f621672fb4abf2362,poi-google:778bc1f6ad86906ad361ea00,Google Maps,4.3,20407,2026-09-19T12:57:45.788724+00:00,1,obs:7553b213129eee0c0240a8e3
+rating:d965a6f06865df212133bd62,poi-google:ce4ac990f49853c1a445272d,Google Maps,4.4,1905,2026-09-19T12:57:51.567757+00:00,1,obs:77389851db487ded5298b678
+rating:19c1ea0f392a7bcddf82b2b5,poi-google:d6565b2cea1890f2a4dca6c0,Google Maps,4.6,2577,2026-09-19T12:57:58.541508+00:00,1,obs:207bf52d820d46a65a6f6576
+rating:6f3716c67de5e10de99a931e,poi-google:c7cf76efd90a14e904ff03a1,Google Maps,4.4,368,2026-09-19T12:58:04.242155+00:00,1,obs:41d09a928fe870275ceba199
+rating:3cef301d250572ad281bab9a,poi-google:4be563d872732c20923e7dc5,Google Maps,4.7,127,2026-09-19T13:08:53.661481+00:00,1,obs:e134ade6a8ccc0a44612ee75
+rating:6e0feb55f5c981b74d6db95b,osm:relation:8552348,Google Maps,4.4,42828,2026-09-19T12:59:13.957303+00:00,1,obs:65eea71cad02b6d033e51576
+rating:5bdc01c00a5a6f26c2a4eab9,poi-google:0d78192558cd42efde612465,Google Maps,4.7,720,2026-09-19T12:59:20.445090+00:00,1,obs:c16ba28142014ba77c04e00a
+rating:87d4ba2dfeffc1940d5b2dfb,poi-google:d7a8dbb1ed512ffe31b401c8,Google Maps,3.5,149,2026-09-19T12:59:33.802282+00:00,1,obs:7764126baa3c40556a06dea0
+rating:0da0102da3916c344569433c,osm:way:359114064,Google Maps,4.5,71727,2026-09-19T12:59:40.932560+00:00,1,obs:5c0f775b5085437276ea6cb0
+rating:51293830abe52f5ea15b0648,poi-google:ffb47bfbdaad001797941c2e,Google Maps,4.3,3203,2026-09-19T13:00:51.240612+00:00,1,obs:8aefd8708f8c0dfc00192aa3
+rating:7dea5635f6f65df1f33dee4a,osm:way:302872188,Google Maps,4.2,8192,2026-09-19T13:01:06.988478+00:00,1,obs:0aa7c147cef9f8d96a8d2a41
+rating:5338983b982f659fd71020fa,osm:way:1368599361,Google Maps,4.3,3691,2026-09-19T13:01:14.281573+00:00,1,obs:5df99fcbd0dcdfab5752d073
+rating:86f575e35087ba36046dbd2b,osm:way:759913076,Google Maps,4.5,1648,2026-09-19T13:01:21.258361+00:00,1,obs:bb78f9749b102925029102e2
+rating:62930512cf01f5136867687f,osm:node:4171964390,Google Maps,4.3,10385,2026-09-19T13:01:28.686281+00:00,1,obs:283aa02dade2fd69abb42244
+rating:a0445fcb36b441995990edc3,poi-google:fb65138477020d96c1ac1463,Google Maps,4.4,76,2026-09-19T13:09:00.239106+00:00,1,obs:65f93c66f50cb4ab7176caf5
+rating:761a0a5c3efe407274151677,poi-google:20e9ae55cd5e26b30254e56b,Google Maps,4.2,3410,2026-09-19T13:09:17.611409+00:00,1,obs:e9f1c0914e6b1cee1510c8c2
+rating:c876303e08c728e25b845358,osm:relation:19000664,Google Maps,4.7,4647,2026-09-19T13:11:12.691103+00:00,1,obs:b1f3de9fcfbd39be669df7e4
+rating:82f0213139606a920bae1101,poi-google:433657c5c0911e563865e7fc,Google Maps,4.4,662,2026-09-19T13:11:19.078801+00:00,1,obs:619159e67e2309625bfe5147
+rating:41916eb38f2a5e3063eb1ef1,poi-google:9f6b613e52c6d0f34461666b,Google Maps,4.6,790,2026-09-19T13:11:25.472267+00:00,1,obs:bf563d58f2af672ba2c8a648
+rating:013c73c42d1128bdc73806f4,poi-google:44589dd0fee354e42160f01b,Google Maps,4.7,201,2026-09-19T13:11:32.739209+00:00,1,obs:33b735e2c5cab7b57a413251
+rating:d2de900fc0ec2a43aa8bf704,poi-google:097516ae1819b8c9e6ae899d,Google Maps,4.5,147,2026-09-19T13:11:38.774604+00:00,1,obs:49c1de336317a6084f4022b5
+rating:fc7d8f9666238b395cf1f896,poi-google:a656101db03a62ca2415442f,Google Maps,4.5,3082,2026-09-19T13:11:45.108562+00:00,1,obs:c1ad67c55b6de2d42de3c0c5
+rating:45424b0d89f83b5a835e9d95,poi-google:9c82e6c8558ba33b3f9ec70a,Google Maps,4.9,202,2026-09-19T13:11:51.225539+00:00,1,obs:7e4f87eeb2554547b713c55f
+rating:e4b27bac6af05cbbaba5f6a4,poi-google:6fe02f0d54698ccdc8e5fc46,Google Maps,3.5,55,2026-09-19T13:11:57.162903+00:00,1,obs:b9d5e4dcf2abb81cb8db88a3
+rating:c5ce503bed2fd01021737ebf,osm:way:630377259,Google Maps,4.0,326,2026-09-19T13:12:08.999180+00:00,1,obs:0fab3d587f512896ccff39bc
+rating:0a3baed0522c9cb511587e6e,poi-google:998e9a8c14e1719dfcc113bb,Google Maps,4.2,386,2026-09-19T13:12:22.227049+00:00,1,obs:7e600488b9421faa9ab28e0b
+rating:d6c640ce000271b8402177ab,osm:node:12647208262,Google Maps,4.8,436,2026-09-19T13:12:29.038290+00:00,1,obs:52ac3f21b53fc7cda30bb27e
+rating:96e8e053a0ff89fbad2f356f,osm:way:1204900824,Google Maps,4.5,183,2026-09-19T13:12:35.883504+00:00,1,obs:28e082469e08509c981f193c
+rating:00d6b1ad98542627f24530f8,poi-google:65dd50a3316d5f4bbe68a58b,Google Maps,4.8,37,2026-09-19T13:12:41.616915+00:00,1,obs:9bd8b28374149c9d6297b0c8
+rating:3b79dfb2da8b88446f284f77,osm:node:13040467529,Google Maps,4.1,1047,2026-09-19T13:12:53.559617+00:00,1,obs:9aa21ef8483eb975d785f798
+rating:1ad800b511102297f8d3766b,poi-google:e961b3dee73a6dfbc87c86de,Google Maps,4.3,7,2026-09-19T13:12:59.546688+00:00,1,obs:01300cff0710a06d249b0abf
+rating:c3ec6dcbd7b008ffc95ae124,poi-google:736d4e08506d80cd51320786,Google Maps,4.4,229,2026-09-19T13:13:05.173941+00:00,1,obs:9423c80317e38c03dc655a69
+rating:3162a1f6b8eab07332de4ab1,poi-google:493f91c7d64272fd01a9b41b,Google Maps,3.4,141,2026-09-19T13:13:10.884696+00:00,1,obs:d78fb20aa75db66487e56fa9
+rating:1ea38ab06add7124dd16d451,poi-google:c3bbfbd7bec3b184f49639b7,Google Maps,4.3,60,2026-09-19T13:13:23.409843+00:00,1,obs:f8e6fd50724bd46522d48728
+rating:e01645fd0e4d70e1ee12b9fa,osm:relation:19000664,Google Maps,4.6,12833,2026-09-19T13:13:41.450025+00:00,1,obs:181883d3c7616120c1ad7b71
+rating:f5ce62e93cd1ee05b9c35bd1,poi-google:a5e26a17b144b3122a2c0ffe,Google Maps,4.0,31,2026-09-19T13:13:53.917292+00:00,1,obs:8f84b5da6570e1756113a49e
+rating:54eeddb001bba019990b114a,poi-google:3f4a179ef8edb5fa07b7a1a3,Google Maps,4.7,89,2026-09-19T13:14:05.368145+00:00,1,obs:2add55667e14d28287465813
+rating:65ec94dfd0269ae1d219b63b,poi-google:086dbd4075f8029f486a6ded,Google Maps,4.2,430,2026-09-19T13:15:01.882626+00:00,1,obs:e573075386a46685ca3cdb96
+rating:b9b27cc9437686ff643eca62,poi-google:14256836840dee41128344c8,Google Maps,4.2,178,2026-09-19T13:15:08.856991+00:00,1,obs:340c3c3a75200e7d77e47c32
+rating:15475ee205fa9bddcbf0c7c3,poi-google:ffb47bfbdaad001797941c2e,Google Maps,4.3,3203,2026-09-19T13:15:15.705969+00:00,1,obs:a6141a3cbd445ee7a047b54b
+rating:d79fae98ed2622575beb1363,poi-google:6261b7f482ce74be8529ece3,Google Maps,4.6,12,2026-09-19T13:15:21.551637+00:00,1,obs:db554f21fa3bb7a30cd8c13d
+rating:28ffede124b1a90114c28127,poi-google:30c347c1d55d721da55e5268,Google Maps,4.2,58,2026-09-19T13:15:28.680436+00:00,1,obs:a1570b72ecddcf895c7bf097
+rating:6a23d9e79005cc028b8414e2,poi-google:10e7cdc97e87555377d90d71,Google Maps,4.0,162,2026-09-19T13:15:35.892649+00:00,1,obs:bacf0a5622cb6133c0706ed1
+rating:f77b257f8a3e4d38554eaa6d,osm:node:11176025737,Google Maps,3.9,890,2026-09-19T13:15:42.842573+00:00,1,obs:27ee77ddf59764e59e860614
+rating:508715b5131718855e9926f9,poi-google:ce4ac990f49853c1a445272d,Google Maps,4.4,1905,2026-09-19T13:15:48.676981+00:00,1,obs:e235eeb0138d80f5c9c85bf7
+rating:fd28df93e4ccc5e563958d56,poi-google:d6565b2cea1890f2a4dca6c0,Google Maps,4.6,2577,2026-09-19T13:15:55.606959+00:00,1,obs:e56f69eac9bb77e83adf51bc
+rating:f69b371b249798d727f3e88e,poi-google:ad16e3c56ab01b415a3bce36,Google Maps,4.8,39,2026-09-19T13:16:02.484886+00:00,1,obs:95227af6655b0a19f69e86fd
+rating:afcbe7f7e00e37aa071a0a21,poi-google:06fd7684a756790c4e7cb15a,Google Maps,4.6,217,2026-09-19T13:16:08.212067+00:00,1,obs:64e8661dae8be1da8dee5fcf
+rating:4e49c384318318e323fd8a22,poi-google:cb408a9f9680098e49e55cfe,Google Maps,4.5,1432,2026-09-19T13:16:15.372540+00:00,1,obs:092b0b2444d98d2794553a2c
+rating:961d39d3ae3c432bc50f4bce,poi-google:bcdc26372d6b4215d4917d47,Google Maps,4.7,147,2026-09-19T13:16:22.338471+00:00,1,obs:ea42b70d2dbdbe48cf2eb385
+rating:4b7ef00725ff323784354391,poi-google:842961083df2d09d44c6c919,Google Maps,5.0,1,2026-09-19T13:17:03.064168+00:00,1,obs:8fd9d6e79af585d6cdcdf235
+rating:d13dcd0b16bc38ad9eaf6eda,osm:way:1384907056,Google Maps,4.5,17,2026-09-19T13:17:22.901357+00:00,1,obs:985380cef1aa5ccfc5ec1708
+rating:e91e6bad144e111045e25954,poi-google:20e9ae55cd5e26b30254e56b,Google Maps,4.2,3410,2026-09-19T13:17:30.211423+00:00,1,obs:73a2eefb6ce0f994185f9e85
+rating:14a098b05be76fad6b9eb265,osm:relation:8552348,Google Maps,4.4,42829,2026-09-19T13:17:37.213546+00:00,1,obs:8df52463ed1b696da0d964fc
+rating:079d96f708ae8f2554f4e006,osm:way:962130353,Google Maps,4.5,130,2026-09-19T13:17:50.568880+00:00,1,obs:f77a300272247e6196060cc1
+rating:ab4b2519b5d7efcb1a17c08c,poi-google:5f4830143ea064085bd78b52,Google Maps,4.7,24,2026-09-19T13:17:56.336563+00:00,1,obs:b4f7bc07521dcbd49c998352
+rating:40a194d8d4cbb2d425e7226b,poi-google:3b5cd70d6b7f942685ca3c09,Google Maps,4.0,80,2026-09-19T13:18:03.115590+00:00,1,obs:9fa4308b0590fcf793680231
+rating:434aec05e3ebec81383d97a9,poi-google:7a51b48e55ac4376c0224819,Google Maps,4.3,270,2026-09-19T13:18:15.620184+00:00,1,obs:e10c95bef674640dc2bae0a3
+rating:19b64e8c25f3545e2266d9ce,poi-google:b74ba86b934986c0af360ab1,Google Maps,4.7,106,2026-09-19T13:18:22.606939+00:00,1,obs:7a7f3d8eba6c3f767cf63d67
+rating:f00c204f9f71efd64d5d9a63,osm:way:302872188,Google Maps,4.2,8192,2026-09-19T13:20:46.588646+00:00,1,obs:51bbc020dd962066001ccc33
+rating:19c1eb8639f637008abe5172,poi-google:3540cb76454a2dddabf74b4c,Google Maps,4.9,22,2026-09-19T13:20:53.234599+00:00,1,obs:44351482e9c0a9cc58a2d6c9
+rating:71e9048ca2ea240517f047d3,poi-google:58a9ee978ea54208647f7d40,Google Maps,4.1,5769,2026-09-19T13:21:00.899126+00:00,1,obs:ed0321535a36f433f29be6d3
+rating:f7ec7a626d7dec78f77572a1,osm:way:759913076,Google Maps,4.5,1648,2026-09-19T13:21:08.467964+00:00,1,obs:9b0d1202112f3ee0bb6cb5cc
+rating:fcb5e6b92d591e34eeb2ab8e,poi-google:8617d848944c924d30b5c956,Google Maps,4.8,99,2026-09-19T13:21:14.894830+00:00,1,obs:b043dc965f8d89b9b17432e7
+rating:74201f2883d6304adf38bb3b,poi-google:b0df4ad36e2811bdabcf19b5,Google Maps,4.0,75,2026-09-19T13:21:29.152790+00:00,1,obs:d83a4194533106523e9efa63
+rating:b16d4852999e310e9e8ec224,poi-google:6b6960c7f95fa35203f4a939,Google Maps,4.6,9,2026-09-19T13:21:35.366073+00:00,1,obs:95a7b970091bb920a54eb9ec
+rating:2137f43db40e4a94eddbe304,poi-google:f300365d20dfc26c09a203a2,Google Maps,4.3,1604,2026-09-19T13:21:55.934537+00:00,1,obs:0e03824e640fb75d6f9c2420
+rating:fccd7ec3f9ef9c051ebaae60,osm:way:1368599361,Google Maps,4.3,3691,2026-09-19T13:22:10.092724+00:00,1,obs:141778bbca7be2edd37e9d1b
+rating:9490840e43eaf902529cdae0,poi-google:54f6c1d76c715ccf3460f85c,Google Maps,4.0,28,2026-09-19T13:22:23.572144+00:00,1,obs:4043bdc639a3d7dda9659e3b
+rating:06b65fb1dbb8907f1661a38b,poi-google:421264fff28e4864f00687ae,Google Maps,4.4,183,2026-09-19T13:22:30.027163+00:00,1,obs:608a94d039c59b0de94ed792
+rating:57d76dc11a0c99cfe56e41e2,poi-google:5fe82be03ab7e639f3ffa3cc,Google Maps,4.6,4868,2026-09-19T13:22:37.677932+00:00,1,obs:6104770ad173c647c0aee2f4
+rating:92be708d7e69dd0ae128b0a6,poi-google:3c58c75ee6571161c757dcf9,Google Maps,4.4,2144,2026-09-19T13:22:57.730593+00:00,1,obs:a1f8a2fe4f406d8f275e4689
+rating:b394a5806b278a4b5be096e8,poi-google:7da6c8281bdfbd5d0c39a52f,Google Maps,3.7,235,2026-09-19T13:23:10.701073+00:00,1,obs:d17dbfb499a20bfafaba6295
+rating:0a609665211e0cac9c0205d5,poi-google:d7a8dbb1ed512ffe31b401c8,Google Maps,3.5,149,2026-09-19T13:23:31.365179+00:00,1,obs:321b69be7023a4fb39a2e200
+rating:dd74e0538fd5050a14014c4b,osm:way:359114064,Google Maps,4.5,71727,2026-09-19T13:23:59.500543+00:00,1,obs:5082e047399295196a3176fb
+rating:af6ef68ee28b82d5bca0da54,poi-google:77726493c07f4ffbb0a7434f,Google Maps,4.3,4811,2026-09-19T13:24:35.147696+00:00,1,obs:d0089083eb9e74ac5a143152
+rating:6994243e6585b3606c2c8e92,poi-google:6d698f62b590c54346ad832a,Google Maps,4.4,25,2026-09-19T13:24:42.578557+00:00,1,obs:dad16b36cd6292b9bd4d9b85
+rating:e238fb2bf825fd03fb0d6a24,poi-google:f5e88b06c12ed32589031e47,Google Maps,4.4,5,2026-09-19T13:24:48.621076+00:00,1,obs:ebb5044cbb7dfbd974217547
+rating:83c2e6a3e1b08c15860daaeb,poi-google:ca4f9cd188045f95668279fa,Google Maps,4.5,245,2026-09-19T13:24:55.683583+00:00,1,obs:f01f0b2cb6e33ccfc2048d23
+rating:82a5892684719279d709134b,osm:node:5383428522,Google Maps,3.9,1663,2026-09-19T13:25:01.928028+00:00,1,obs:045e4d72712fa1509c1fd6d9
+rating:151e54561646f597f2c3f5d2,poi-google:bf2824fb0db1bbed8775e338,Google Maps,4.6,41,2026-09-19T13:25:07.808759+00:00,1,obs:78e52c29f62d079a1051f395
+rating:e0099fd3fef122762f2c1195,poi-google:521000d0e66da73ae4f9b6ff,Google Maps,4.5,63,2026-09-19T13:25:15.063811+00:00,1,obs:63dcdef171e441e7ec335c16
+rating:a4d1eb60f7a4eaaddc71a321,poi-google:5607a70c46795183de00dbe0,Google Maps,4.3,153,2026-09-19T13:25:27.254691+00:00,1,obs:c94a12101b0a5ebf59d1ba25
+rating:bceb559466d4420667d117f9,poi-google:c69f307ab4206664bf1a4923,Google Maps,4.5,1156,2026-09-19T13:25:34.485009+00:00,1,obs:4af806cda21a1f550bc886f8
+rating:034aa8560a9fc500a4c82a35,poi-google:772c9aaffddae3fa546180eb,Google Maps,4.9,32,2026-09-19T13:26:01.861405+00:00,1,obs:c0b08a7696508ae1dea2fff7
+rating:bb197aabcf54ceb697c4c87b,poi-google:394a5b600c264b6a13896254,Google Maps,4.5,216,2026-09-19T13:26:15.642380+00:00,1,obs:11dc9973b79ec069bb3e6a97
+rating:4a271ccc67c8b14f945e8478,poi-google:8d884d56ec6941a539ca5206,Google Maps,4.8,39,2026-09-19T13:26:29.052524+00:00,1,obs:e10a7f86954a93215d699c1d
+rating:785b6b8abccea1c70378ebca,poi-google:89740ab6d7ec7732c00fa5ef,Google Maps,4.5,1127,2026-09-19T13:26:36.011451+00:00,1,obs:dde9f55834aff4e796ddbf86
+rating:29ee7c83eaa9eab6017743f8,poi-google:9fcb3d12cf8dc2789dbd17be,Google Maps,4.3,475,2026-09-19T13:26:43.066066+00:00,1,obs:ac61594dfcf10d5cf964191d
+rating:88dfe561f2490f4eb31362cf,poi-google:c65194808af589eb023098b0,Google Maps,4.5,40,2026-09-19T13:26:50.289625+00:00,1,obs:22bcc363ad9262e6b03af76d
+rating:7180a6e8cc343c94b9c0d910,poi-google:ddeb5e663c459ffe827f9b34,Google Maps,4.4,1440,2026-09-19T13:27:24.524578+00:00,1,obs:06f8a3878a7a99beac443902
+rating:65a1d842679890415e32621c,poi-google:94fe56282cbce6151cb0f160,Google Maps,4.5,33,2026-09-19T13:27:30.536890+00:00,1,obs:e10915a2cf2ea4f557e674d6
+rating:61d23686c742a5d58c7489b2,poi-google:7f69b6e695dc5f4e6b42447a,Google Maps,4.3,131,2026-09-19T13:27:36.914856+00:00,1,obs:d341372a9d2ca0048606f36a
+rating:94a5d804fcb0d9bc9783ebc3,poi-google:07808f89028d3f46a34ffa87,Google Maps,4.2,1162,2026-09-19T13:28:03.391920+00:00,1,obs:4de5093de3d8ef556ca4f4a3
+rating:6e8ff36b0299be7657e7b3cb,osm:way:1474583779,Google Maps,4.6,414,2026-09-19T13:28:10.513719+00:00,1,obs:d93c7205bb04ff597fd26fc6
+rating:5595b0035052a6391eed68a6,osm:node:8474743417,Google Maps,4.8,23,2026-09-19T13:28:24.829390+00:00,1,obs:5ad8e791d64e2f8b970d8e2a
+rating:15ef23d314be7213128b5f0f,poi-google:213a7020d00931869d51e9c1,Google Maps,4.4,209,2026-09-19T13:28:31.792841+00:00,1,obs:8ae57cc962d88a2abbed9df3
+rating:c3cda96fcf41a37a6a553357,poi-google:2e7f69fb55e2a0db06b76ca8,Google Maps,4.0,339,2026-09-19T13:28:39.164328+00:00,1,obs:f722f6a78a863d1ef36184e2
+rating:54ecc012c186e1bdc59aee42,poi-google:526b2b20016eb1de5533d5fe,Google Maps,4.3,70,2026-09-19T13:28:45.226981+00:00,1,obs:c6e990bb4434ef7f9c3f1c18
+rating:18b31e54e1e1bea0c28ad43a,poi-google:30d49ba30108437ac7f52313,Google Maps,4.3,814,2026-09-19T13:28:58.637547+00:00,1,obs:54f67610771d2ad5b39c9cc8
+rating:971e35416f1ce2300f35b9b3,osm:node:2076855954,Google Maps,4.3,401,2026-09-19T13:29:12.624602+00:00,1,obs:e10b727ee87dcd53117e8371
+rating:ffbba066c8edc8fa7bf65522,osm:node:2076856032,Google Maps,4.1,208,2026-09-19T13:29:19.761937+00:00,1,obs:69db36f067123555d5a7d4de
+rating:a6ec786a01e3b5073ce3aaf8,poi-google:82a88775641ea2336484d593,Google Maps,4.6,4467,2026-09-19T13:29:26.830082+00:00,1,obs:ce7d22b282fc29d8a463d8b5
+rating:ebbd49b7ac22501d7d148dde,poi-google:b791504c992c0abe3b3e6c17,Google Maps,4.7,123,2026-09-19T13:29:43.845148+00:00,1,obs:cfd53ec0ae0b86235c08bdae
+rating:08c9af242e1bbf55670712b8,poi-google:183431090e55bb6426c6b964,Google Maps,4.4,43,2026-09-19T13:29:57.083438+00:00,1,obs:ddff0f5bc216c03197f70102
+rating:622cf87a9793f6153789d6f9,poi-google:6d973efb974e368df3807632,Google Maps,4.7,30,2026-09-19T13:30:03.550555+00:00,1,obs:44cb603d1de9ad69fcece5b6
+rating:c1fd6e117b7a7b7ff330c372,osm:node:5273998823,Google Maps,4.7,75,2026-09-19T13:30:15.737564+00:00,1,obs:b57b41e7be26808763ddb41b
+rating:e1743abfc39bf0f2d688598e,poi-google:5d675953ee6379f755940b59,Google Maps,4.6,355,2026-09-19T13:30:22.936175+00:00,1,obs:904cd3ad11bc918e0e4df2f3
+rating:455fa18377505063ae2347f7,poi-google:96fd68df4dc2cab5e610d373,Google Maps,4.5,28,2026-09-19T13:30:51.825557+00:00,1,obs:b05a6cc08a25e4bc02fe23cf
+rating:2b122d3ecfaf67239936ef47,poi-google:425da5752eae0ae37d75d144,Google Maps,4.1,117,2026-09-19T13:30:59.008100+00:00,1,obs:23f00942c3dfc84b5bf324b3
+rating:5ff65abccb94d2ad41654d9c,poi-google:1c7f749f3ec420427df4f967,Google Maps,4.7,32,2026-09-19T13:31:18.801162+00:00,1,obs:9a6522075343a5a5d7520451
+rating:23da8652fae3ce603d3eaecb,poi-google:554cc747f07be61990b2e682,Google Maps,4.9,7,2026-09-19T13:31:25.724730+00:00,1,obs:def8fcea7a9314fb00af9ca6
+rating:0ebe020382189032b2d87621,poi-google:af0d624892b6750e416557b8,Google Maps,5.0,5,2026-09-19T13:31:32.029630+00:00,1,obs:bef43cee9c0ce17994f54e3d
 rating:c3b0b1349a1f51dde851e2e4,osm:way:37625751,Google Maps,4.5,21185,2026-09-18T07:21:52.987040+00:00,1,obs:c16ab8edb55afb2f7fef5abe
 rating:feb4ec9dd871b2c56653b01b,osm:way:339936730,Google Maps,4.6,15550,2026-09-18T07:22:06.290626+00:00,1,obs:a07a03353711d9a1c54f7c14
 rating:a0b11d97300668c866baedc8,osm:way:340128580,Google Maps,4.5,23337,2026-09-18T07:22:12.976051+00:00,1,obs:d009dfe13476318b4cb9e3de
@@ -101,26 +216,35 @@ rating:9dc092577f775c9c67976ab5,osm:node:4171971289,Google Maps,4.6,214,2026-09-
 rating:6540a1b5c391cb64c15477ea,osm:node:10709724107,Google Maps,4.8,4,2026-09-18T06:54:20.551383+00:00,1,obs:4e8d814e690439b184e43960
 rating:8c0cda4567656a42884a539f,poi-google:3aac3427ee25b18a817027e9,Google Maps,4.8,634,2026-09-18T06:54:27.448352+00:00,1,obs:9538f46935d410738875ae0f
 rating:72fdbc807517d29c0fe56371,poi-google:270efa89c4fa1b1bdeb4cdcd,Google Maps,4.3,29255,2026-09-18T06:54:34.166023+00:00,1,obs:225fded0b4682f8cbe5736e6
+legacy-rating:69f19767f6018c696a5ee8fb,poi-google:788efe58974f3d1e6306e11f,Google Maps (legacy unverified),4.4,,,0,obs:f90450c82f8bc10dbf5f8b26
 legacy-rating:c510048b921930c5e6d6eef9,poi-google:f223d1f53b76f5b16f98148c,Google Maps (legacy unverified),4.6,12,,0,obs:a38ea51b40e8c8d3e25d587a
 legacy-rating:7cdd149c4f06f6db1702265e,osm:node:2706917665,Google Maps (legacy unverified),4.5,140,,0,obs:afdb76d684dbb450c0704f64
 legacy-rating:b1bf7282d9a15f0912feb688,poi-google:5a6340209990c3b4f70fea89,Google Maps (legacy unverified),4.2,27,,0,obs:9842d6813eba17b20adebf56
+legacy-rating:5040e9cb9855d3b3fed1aa3f,poi-google:0b67330ff178a2ed90009d2c,Google Maps (legacy unverified),4.5,231,,0,obs:91a68e5477f608d2073ccdfd
+legacy-rating:ab9c74d440f337cb34c4dc0e,poi-google:8610ddfe7a7528420c0430ae,Google Maps (legacy unverified),4.3,12,,0,obs:a4644b57ca6daf12dcbc8361
+legacy-rating:05f03846b66b2435ba5022f4,poi-google:fdd1ad2656bae8eb93a51f14,Google Maps (legacy unverified),4.3,308,,0,obs:208ddb39b0555667687b46de
 legacy-rating:17b77f778abfdc9b37d7a29c,osm:way:804729100,Google Maps (legacy unverified),4.5,19,,0,obs:6d5075aa8be2b4d3b9a55933
+legacy-rating:97c6bf5404bac059d9e4695f,poi-google:778bc1f6ad86906ad361ea00,Google Maps (legacy unverified),4.0,20368,,0,obs:b40a2d85a1647c9e328c2645
 legacy-rating:36260510d2c019fd6ca79226,osm:node:5747015021,Google Maps (legacy unverified),4.0,602,,0,obs:fe96700a337033f0f89279a5
 legacy-rating:eb1f4ee0329115b8dbd8a0be,poi-google:a1fefb2cd928caec6a5184b4,Google Maps (legacy unverified),4.0,272,,0,obs:45c3cb50c0aa0cebf1c79861
 legacy-rating:6038076a5b3d8334f24a61a3,osm:node:6285930895,Google Maps (legacy unverified),4.0,74,,0,obs:e69e161e4c81225cf375a018
 legacy-rating:1b75be68f5809d4c3e17f861,poi-google:e0c560a9f7361c3c23ca9af7,Google Maps (legacy unverified),4.2,117,,0,obs:3eb9285eab3d115d2c9b2191
 legacy-rating:232334ec43ac72da7764ce7c,poi-google:1771275300dc6341f789cf45,Google Maps (legacy unverified),4.6,1890,,0,obs:53f40db05db49634a1eb6d03
+legacy-rating:340def8bb2c242b12aa24bee,poi-google:bc79b8bc8a580d58ad7577ca,Google Maps (legacy unverified),4.0,6,,0,obs:840395dd79c83cd8feb2639f
 legacy-rating:549aa1c5ab9ef9daae98ce67,poi-google:fb4f0cfd0ac4fcab86677678,Google Maps (legacy unverified),4.0,2,,0,obs:52f608f8f3a6c44f8213fcf3
 legacy-rating:d6e6c0438c873ef9428032e9,osm:way:205794912,Google Maps (legacy unverified),4.5,20171,,0,obs:6b79755a3e05c01adceb6e70
 legacy-rating:54b94b1bdbcef88e9732e0ee,osm:way:39514795,Google Maps (legacy unverified),4.5,86544,,0,obs:9da3954516703ecd9dbb9e82
 legacy-rating:f78fb646a85723759d3788fe,osm:way:39598493,Google Maps (legacy unverified),5.0,48389,,0,obs:db29f0fee618391effb6f04e
 legacy-rating:fba31e2d4b35171b29688ddf,poi-google:38d1cd9a05069e449be83086,Google Maps (legacy unverified),4.6,178,,0,obs:2b8494094b84eaa2f7e6fd51
+legacy-rating:bd1fc6a574ff4984d7616c90,poi-google:a36fbd54da13c28bf3e8cdf8,Google Maps (legacy unverified),4.8,70,,0,obs:801b7608b4a2ca598174c537
 legacy-rating:378ea339d2b94c6582d5f4e9,poi-google:a829fc126851aa4cbd08297f,Google Maps (legacy unverified),4.8,23,,0,obs:75b5ccdd3665f2781f03c9a7
 legacy-rating:8b4606e14c73dbf57a087023,osm:node:4172408414,Google Maps (legacy unverified),4.3,3019,,0,obs:209c9a8f704f81a4592aabc8
 legacy-rating:68376a55b159a0b3bbd17e6f,osm:way:500751368,Google Maps (legacy unverified),4.6,499,,0,obs:834889882d09c97ede27f67f
 legacy-rating:7c8d3db4ec44e7f6b5a7bd09,poi-google:2e2c1e04bc7eaf7942853098,Google Maps (legacy unverified),4.6,49,,0,obs:5f394f6f155f89e9c63d56fe
 legacy-rating:fc53872a80d835c9b0379858,osm:node:5027534021,Google Maps (legacy unverified),4.7,1290,,0,obs:8c2ec3141d58af22a0c6f7b9
 legacy-rating:06608b440976910984fa99a6,osm:way:973931178,Google Maps (legacy unverified),4.6,6201,,0,obs:d5b9c1e69e386d3100fcd1b1
+legacy-rating:ba0f53ed8caf1a402d24cce1,poi-google:44e22e1b3b2a391054c7cfe3,Google Maps (legacy unverified),4.7,1755,,0,obs:b02cd3de20a4ae17911121d2
+legacy-rating:405542264f8c9f8afa11e4f0,poi-google:bcc47fdb768b0e554397278e,Google Maps (legacy unverified),4.7,206,,0,obs:fcaadb31c1354f9b4038ed98
 legacy-rating:9f9fb4f4a06bfc90163bcf4d,poi-google:e0ebadac85acf6bf99b5d125,Google Maps (legacy unverified),3.9,1777,,0,obs:6f9de7f85e6cd22e747dd1de
 legacy-rating:90c3b44edd59a03ee8d34864,osm:node:4457979489,Google Maps (legacy unverified),4.6,1266,,0,obs:6fcbd0e0db6893d6b5f3025c
 legacy-rating:0722f5cb4b27c2d8710622d0,osm:relation:8552348,Google Maps (legacy unverified),4.7,42744,,0,obs:d5536da49070c597ed54b366
@@ -128,6 +252,7 @@ legacy-rating:3ec1966b548949eada7b2fd7,osm:relation:19000664,Google Maps (legacy
 legacy-rating:2956468afe821707f9a6b421,osm:node:11620842769,Google Maps (legacy unverified),4.2,530,,0,obs:8bc5dda26633e5d3394aa2a8
 legacy-rating:0a11fc5cf84aed613f7daa3c,poi-google:0089dfb8b9cbb71d1f61c72b,Google Maps (legacy unverified),4.8,,,0,obs:def787db67c75b6cfb3aec56
 legacy-rating:d3114341485d6013bb8d1530,osm:node:11630422969,Google Maps (legacy unverified),3.9,2197,,0,obs:3120421e63db96e31cac785c
+legacy-rating:ccb99fd05ed4afc67a8651df,poi-google:a4a3893d87dc0d7c86b96ea2,Google Maps (legacy unverified),4.6,15,,0,obs:1344ea2059add3da44cc0d4c
 legacy-rating:deda5a53748fa53147091246,osm:node:3294335517,Google Maps (legacy unverified),4.8,1255,,0,obs:1763c94e041b571b29c095a2
 legacy-rating:026c686345531af7639b892e,poi-google:e3d4304fc90179c00b63ef5e,Google Maps (legacy unverified),3.7,101,,0,obs:19963d161b6ce785fe8b6d8b
 legacy-rating:b8d4b8d9e953cc1533ee735b,osm:node:4275610390,Google Maps (legacy unverified),4.1,1392,,0,obs:95cd79b02d829554a8f648d0
@@ -136,6 +261,7 @@ legacy-rating:5d86934a32d37d61ba8d808b,osm:way:504649258,Google Maps (legacy unv
 legacy-rating:125663be42e1c95fa573c336,osm:node:7961606192,Google Maps (legacy unverified),5.0,,,0,obs:1627939c2dac3d0d8aa31b5e
 legacy-rating:d9a5594cb41cbe8dd406fa4b,osm:node:4900690486,Google Maps (legacy unverified),4.9,497,,0,obs:38496cc6452c6a6d269dd483
 legacy-rating:fa14314e6e3b1045b377b679,osm:way:37625751,Google Maps (legacy unverified),4.2,21146,,0,obs:fb3a25b833f661f9a45f5ea3
+legacy-rating:1155be7893df55ad54184e51,poi-google:3d6e630147467a50cd3305ec,Google Maps (legacy unverified),3.5,101,,0,obs:02e36303589b0df9e96c1436
 legacy-rating:0989854a56e7d324396c5e8d,osm:way:1456837244,Google Maps (legacy unverified),3.2,1067,,0,obs:bc915e627e8affe7b4d4067a
 legacy-rating:b46a0b9c9d53933b3517c1b9,osm:node:8615755117,Google Maps (legacy unverified),3.5,686,,0,obs:6e4ddd64bfe42bf51bf5b043
 legacy-rating:29effc5e1eadd3be1cb7a745,osm:way:1549018362,Google Maps (legacy unverified),3.1,2963,,0,obs:9355459d1f30eb0a98a64510
@@ -224,8 +350,7 @@ legacy-rating:3a393a8e5ff00668cfe95016,osm:node:5406262022,Google Maps (legacy u
 legacy-rating:0883797428b3e8950471d320,osm:way:807297567,Google Maps (legacy unverified),4.6,65,,0,obs:fead8fc1daf81608fb5a9029
 legacy-rating:183d1466499193fb35ec5365,osm:way:1159206296,Google Maps (legacy unverified),4.1,616,,0,obs:7f51886cbe57621b292d80bf
 legacy-rating:60d0ced9765e041056802344,osm:node:2940218996,Google Maps (legacy unverified),4.7,92,,0,obs:4b230d28926d28fe4a570aee
-legacy-rating:426635407f0063ddcba486fe,osm:way:1383011682,Google Maps (legacy unverified),4.3,535,,0,obs:4a60d0a819b5ab9d901a8fc0
-legacy-rating:21405c7d81d9e60eefaa844d,osm:way:1131961992,Google Maps (legacy unverified),,40,,0,obs:5e823fb2a8a5f8f86c8bad52
+legacy-rating:afc29db294504508813f229b,poi-google:5fe82be03ab7e639f3ffa3cc,Google Maps (legacy unverified),4.6,4865,,0,obs:65674c7ae9fa2c9b508c313d
 legacy-rating:e6c2b1487343ecbfadf78068,osm:node:13556032966,Google Maps (legacy unverified),5.0,2,,0,obs:93ee3160167eaf0ffd3e9b83
 legacy-rating:89cdb50c79ce5bbe14e6f829,osm:node:1778803114,Google Maps (legacy unverified),4.4,713,,0,obs:5259a830da2c1c5b94570762
 legacy-rating:31a89747ac0b308edd3a541f,osm:way:651520358,Google Maps (legacy unverified),,221,,0,obs:d4f06d7305d7dab7d6adeb20
@@ -325,6 +450,7 @@ legacy-rating:c74bebca63f13eba31b2cb44,osm:way:1433975464,Google Maps (legacy un
 legacy-rating:66e8076ceb02dc94bd64ca49,osm:way:1452360872,Google Maps (legacy unverified),,10,,0,obs:ee1685908f38fee49ca080e8
 legacy-rating:e41994d5ef4c4f9c9d22287a,osm:node:2076856032,Google Maps (legacy unverified),4.1,207,,0,obs:647665d163863debd4b17418
 legacy-rating:73ace879a61f6b4201fb05a8,poi-google:3396c45d9aae3215351f2b33,Google Maps (legacy unverified),4.4,591,,0,obs:81e6598f73342a354d72ed40
+legacy-rating:f5b6d627fa5154380399037b,poi-google:30d49ba30108437ac7f52313,Google Maps (legacy unverified),4.3,813,,0,obs:45140e8ad29dc23f48009548
 legacy-rating:eb6efcece8edf8f5bcf55bf0,osm:node:11365555079,Google Maps (legacy unverified),4.5,10581,,0,obs:06b270293866472fd0459224
 legacy-rating:25631deaac7305cfa0d214d8,osm:node:11929829169,Google Maps (legacy unverified),4.7,1293,,0,obs:e055aacce220faa643aa0d60
 legacy-rating:c2bab05a2a9e12753d35367d,osm:node:4228397491,Google Maps (legacy unverified),4.1,577,,0,obs:4f1b6b30d09655463ba88e56
@@ -985,10 +1111,12 @@ legacy-rating:84c32ea49294a67a7aa01a11,osm:node:11913629654,Google Maps (legacy 
 legacy-rating:9b9f3dbc4fc3c7778034b99d,osm:node:13415760108,Google Maps (legacy unverified),5.0,2362,,0,obs:abc568b08a7515af641e0159
 legacy-rating:485d9dba7ed866f19653c54a,poi-google:6cb2d1ceadc0b57fc43ed25b,Google Maps (legacy unverified),4.3,233,,0,obs:dbb19140bdf8cd65008ff3eb
 legacy-rating:dcef812408fc9628daeb9c28,osm:node:7130126788,Google Maps (legacy unverified),4.9,8,,0,obs:4d0daf9997b859f88b69780f
+legacy-rating:6c066b5d03517b4f8ef20c48,poi-google:778bc1f6ad86906ad361ea00,Google Maps (legacy unverified),4.3,20369,,0,obs:c076c0f3806926e468ecb310
 legacy-rating:cb3e335d83a11b369975fd70,osm:node:13503143701,Google Maps (legacy unverified),4.6,966,,0,obs:f18285088c18441b99ab3578
 legacy-rating:03f33fbf912f1136587ebd43,osm:way:1415191977,Google Maps (legacy unverified),,281,,0,obs:0edceea1ee6927b3864d61b0
 legacy-rating:7d180fc56e84918274447309,osm:way:683639731,Google Maps (legacy unverified),3.9,1900,,0,obs:98f83ebc401e74ec800b4931
 legacy-rating:6a0d1edccc89bc3ae8eaf7b7,osm:node:7554177585,Google Maps (legacy unverified),4.7,3414,,0,obs:5ef4eee140e847bfea8c02f5
+legacy-rating:43238e4e63722e3a0c28fe21,poi-google:bc730f42965d4c5085398a1b,Google Maps (legacy unverified),4.4,23,,0,obs:3d71a2a1704bd88b40bccb73
 legacy-rating:0b2f4b9821c7e7430a619110,osm:node:10856207127,Google Maps (legacy unverified),,195,,0,obs:092ac2375cab522c660befcd
 legacy-rating:51040d9a59f07aa2f405e9f9,osm:node:5614527823,Google Maps (legacy unverified),4.5,94,,0,obs:8a4e7e683ffe94e6f694617a
 legacy-rating:e91955c721380736ce314551,osm:way:768410220,Google Maps (legacy unverified),4.6,92,,0,obs:038da7008b085bc9efe3f0e1
@@ -1035,6 +1163,7 @@ legacy-rating:00fbe6f3593bf295476039a1,osm:way:384652653,Google Maps (legacy unv
 legacy-rating:20a970bec5aa98022673ff24,poi-google:43be5863e2da7c49d5ba3603,Google Maps (legacy unverified),4.9,215,,0,obs:72d2626d201e048113b74f00
 legacy-rating:00cfdb045d16ef418a0199b8,osm:way:944100695,Google Maps (legacy unverified),4.5,157,,0,obs:1f3991fd0ce6db5d97ae2300
 legacy-rating:6d72d1754aa9e439abc77e67,poi-google:1e61aec944c1210047c458de,Google Maps (legacy unverified),4.8,28,,0,obs:0882e8ab2820907ca3cfc946
+legacy-rating:42954673edd4e688899b6768,poi-google:cb408a9f9680098e49e55cfe,Google Maps (legacy unverified),4.5,1430,,0,obs:b40c4b1c428d3c0d42232a25
 legacy-rating:e267520812a0fdaad4190df0,osm:node:13040467529,Google Maps (legacy unverified),4.1,104,,0,obs:25f852c4e0844b4ae650df35
 legacy-rating:7d94f6d0627d200783d71428,poi-google:c409e4aa1a49c97a64d2fb90,Google Maps (legacy unverified),5.0,1,,0,obs:dd0b0de927e2335096a480dd
 legacy-rating:66daff0fbd55ef9ae0aa8a2a,poi-google:d0f94083a862ff21647f6a34,Google Maps (legacy unverified),4.5,1398,,0,obs:8902101671ca233647fd65b7
@@ -1055,6 +1184,8 @@ legacy-rating:b3ced0b1b3d88efc16cde229,poi-google:d11a3228a861fa7cd7214296,Googl
 legacy-rating:ff7f983272246236fd32daed,poi-google:bddac68b6fd4d78b216401b8,Google Maps (legacy unverified),4.3,2159,,0,obs:8b0f09107e848819a2308b34
 legacy-rating:443f9384b3f0cded854d9dc1,poi-google:b7d2aea529bac4020a8b07d0,Google Maps (legacy unverified),4.0,367,,0,obs:7f0149e7040e9b7b27b2ad29
 legacy-rating:bcf39b84a7022c8d533ebb70,poi-google:55e6d3bc60d1dfb2c150de82,Google Maps (legacy unverified),4.1,308,,0,obs:cd5d995d0bc810e9abc50b8b
+legacy-rating:4c5b8f9628664041155831ec,poi-google:1e69c72e3d6e883900834f89,Google Maps (legacy unverified),4.8,102,,0,obs:432ab19a1cbb25dd270cd9fd
+legacy-rating:638abcd4f7f755ab6a069f4f,poi-google:ac5d5d1c75bc5fdbab4c548a,Google Maps (legacy unverified),4.8,110,,0,obs:975c7a044335b62bc355042a
 legacy-rating:a83ff8466a7b165c44264c57,poi-google:fae5114f339634ba688afbc7,Google Maps (legacy unverified),3.9,152,,0,obs:784812a050f11c51bba707f7
 legacy-rating:f320f6bf80d884d48debcd43,poi-google:d8b3ad5cedb655ab5b0de9c3,Google Maps (legacy unverified),4.1,180,,0,obs:922bce52cf44115946cf337e
 legacy-rating:130c9216b9c5e05ea18d730d,osm:node:6422678433,Google Maps (legacy unverified),4.1,34,,0,obs:68df4ae82fcb88cbf2927929
@@ -1089,6 +1220,7 @@ legacy-rating:b60793c0ee2c9a4f5b36f847,poi-google:5840ad68bc95ef822c4eebdd,Googl
 legacy-rating:f3b8453524d7468a99a5de17,poi-google:aba3f5aa556bd46e466c6709,Google Maps (legacy unverified),4.4,31,,0,obs:9c9a9914738bba2bc39e809b
 legacy-rating:d144d49bcbdd5a0445d9b83b,poi-google:7fd9a26b9e4754627932f064,Google Maps (legacy unverified),,122,,0,obs:02028baa9fe21c3562732418
 legacy-rating:5eea1aef6ad683382258f728,poi-google:50547b7601c81dad2846f771,Google Maps (legacy unverified),4.2,153,,0,obs:f284b4c864834f5199ffb4e0
+legacy-rating:41af3917cb80739841573b74,poi-google:bbbe5663edefc83abbc043e4,Google Maps (legacy unverified),3.1,98,,0,obs:42b232d5edb967e8c2e7f535
 legacy-rating:005ed0d1bc612178ef4e799c,poi-google:e4a09bd3c3d116c936a9ea12,Google Maps (legacy unverified),4.9,181,,0,obs:187261d868ce9efa87677c04
 legacy-rating:faf992f93d39435cc41316bc,osm:node:5485665267,Google Maps (legacy unverified),4.0,50,,0,obs:6ab48f91243033433e91fa9c
 legacy-rating:12932d16df2102835d0e7d6a,poi-google:994eb43e86928d0dbcae69d7,Google Maps (legacy unverified),4.4,45,,0,obs:2aef6766debfbe01fd45ac50
@@ -1268,11 +1400,14 @@ legacy-rating:a91ac9acd140038a8a2a06db,osm:way:1192808464,Google Maps (legacy un
 legacy-rating:b6eba8d64085aacd5879d3ac,poi-google:7d7ef21456577f75ee54b9e9,Google Maps (legacy unverified),5.0,3,,0,obs:2422c6e272783771a8283b3b
 legacy-rating:8d7d6f24be0a6432dc6e5d5a,poi-google:a19f07e879047bca578bc2a9,Google Maps (legacy unverified),3.9,141,,0,obs:7980a07237c3bc6d0dd08dd9
 legacy-rating:527bbe3f6046d4d4a5b1279e,poi-google:c89e255d3e22e840f0e879dc,Google Maps (legacy unverified),3.9,1276,,0,obs:8a4bb89ddcc02cc074994716
+legacy-rating:ceb6550ec060e9d821a7eeb6,poi-google:e8fbf8a47d5800345bf9566b,Google Maps (legacy unverified),3.0,1,,0,obs:004dce183a5fe5c2242deaa8
 legacy-rating:dfced48b23c2586dcd4dd4d6,osm:way:565186618,Google Maps (legacy unverified),4.2,230,,0,obs:986bef0f86811878e7a91c06
 legacy-rating:f6a87606db1b45925afa14fe,osm:way:1551522690,Google Maps (legacy unverified),4.3,3,,0,obs:7188c302c5536acaf2929024
 legacy-rating:156c3e78beccdf26f4b1ef6c,poi-google:192593754abdefc490d73cd6,Google Maps (legacy unverified),4.1,10544,,0,obs:a4fc88fe687917f36cdf1eed
 legacy-rating:ec9bee09bccdf92d4bdd78ca,poi-google:16e8f329ea73b338f65d0342,Google Maps (legacy unverified),4.1,1024,,0,obs:e4dd5e11eff6e15a6b047533
+legacy-rating:14118adc381e7437bf57c963,poi-google:73fa706af8c068e70994e0ee,Google Maps (legacy unverified),3.0,2,,0,obs:c59687ff0a73d9cf69f56a24
 legacy-rating:90650ce9a6c71ca54bc62a5b,poi-google:1b974702bf3afd5824fd313e,Google Maps (legacy unverified),4.0,31,,0,obs:d25e027613d5ec486627bb44
+legacy-rating:3e70547283f378fa8c5a57e8,poi-google:3a55eb4dc4ab76b9e07b9a95,Google Maps (legacy unverified),4.2,96,,0,obs:d2d41cbcf6f5211aa72dbd66
 legacy-rating:00fa3f9acca3b078599db9f0,poi-google:6f8baf6b46b10beba59cbbe9,Google Maps (legacy unverified),4.8,362,,0,obs:53f6ff521767236de2c2e312
 legacy-rating:d8a808e97c2ffad75b98bf78,osm:way:1159206296,Google Maps (legacy unverified),4.5,616,,0,obs:b2e533a73ee4a152aa08bab6
 legacy-rating:6adbf613cf6739dd5dba1d8c,osm:way:941812629,Google Maps (legacy unverified),4.8,,,0,obs:a09951a57474459d71c50668

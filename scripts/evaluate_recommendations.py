@@ -232,6 +232,9 @@ def evaluate(output, geographic_only=False):
             },
         },
     )
+    # A new pool invalidates metrics of the previous pool. Recompute explicitly
+    # from the blank template; real owner labels live in a separate input file.
+    grade(output, output / "grading_template.csv")
     return len(results)
 
 

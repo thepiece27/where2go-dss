@@ -1,5 +1,5 @@
 {
-  "dataset_version": "v2-ae66988a1053d0de",
+  "dataset_version": "v2-c3ad315d02c5356a",
   "scenario_sha256": "d04664c76d1f4a27ccdb3e3f7a80a9ce17574fbcd8f4096c6f5ee4b94c403235",
   "methods": [
     "nearby",
@@ -13,3626 +13,1473 @@
       "scenario_id": "HN-DEV-01",
       "split": "development",
       "method": "nearby",
-      "runtime_seconds": 1.8051,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:node:4489385889",
-        "osm:node:4499978190",
-        "osm:way:879841441"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Chợ Đêm Hàng Đào – Đồng Xuân",
-        "Bảo tàng Địa chất Việt Nam",
-        "Vườn hoa Diên Hồng"
-      ],
-      "categories": [
-        "temple",
-        "attraction",
-        "museum",
-        "park"
-      ],
-      "drive_minutes": 8.37,
-      "return_time": "13:49",
-      "reserve_minutes": 15,
-      "objective": 4.244724922271969,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4532,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
       "method": "equal",
-      "runtime_seconds": 0.7874,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:696913691",
-        "osm:way:340128580",
-        "osm:way:704147278"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Hoàng thành Thăng Long",
-        "Di tích Nhà tù Hỏa Lò",
-        "Bảo tàng Phụ nữ Việt Nam"
-      ],
-      "categories": [
-        "temple",
-        "historic",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 12.22,
-      "return_time": "16:13",
-      "reserve_minutes": 15,
-      "objective": 3.843266011462751,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng."
-      ],
+      "runtime_seconds": 2.4896,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
       "method": "crisp",
-      "runtime_seconds": 0.7804,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:696913691",
-        "osm:way:340128580",
-        "osm:way:704147278"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Hoàng thành Thăng Long",
-        "Di tích Nhà tù Hỏa Lò",
-        "Bảo tàng Phụ nữ Việt Nam"
-      ],
-      "categories": [
-        "temple",
-        "historic",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 12.22,
-      "return_time": "16:13",
-      "reserve_minutes": 15,
-      "objective": 3.8359462785067815,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng."
-      ],
+      "runtime_seconds": 2.4102,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
       "method": "fuzzy",
-      "runtime_seconds": 0.7645,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:696913691",
-        "osm:way:340128580",
-        "osm:way:704147278"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Hoàng thành Thăng Long",
-        "Di tích Nhà tù Hỏa Lò",
-        "Bảo tàng Phụ nữ Việt Nam"
-      ],
-      "categories": [
-        "temple",
-        "historic",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 12.22,
-      "return_time": "16:13",
-      "reserve_minutes": 15,
-      "objective": 3.8359462785067815,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng."
-      ],
+      "runtime_seconds": 2.7438,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
       "method": "nearby",
-      "runtime_seconds": 1.4814,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:way:37629143",
-        "osm:way:700145152",
-        "osm:way:340128580"
-      ],
-      "selected_names": [
-        "Bảo tàng Hồ Chí Minh",
-        "Bảo tàng Mỹ thuật Việt Nam",
-        "Di tích Nhà tù Hỏa Lò"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 13.46,
-      "return_time": "16:14",
-      "reserve_minutes": 15,
-      "objective": 2.847928354996161,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.3477,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 12,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
       "method": "equal",
-      "runtime_seconds": 0.6119,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:way:704147278",
-        "osm:way:700145152",
-        "osm:way:340128580"
-      ],
-      "selected_names": [
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Bảo tàng Mỹ thuật Việt Nam",
-        "Di tích Nhà tù Hỏa Lò"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 15.42,
-      "return_time": "16:46",
-      "reserve_minutes": 15,
-      "objective": 2.4669268155792032,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category.",
-        "Có khối ăn/nghỉ tự túc vì chưa chọn được địa điểm đủ dữ liệu trong cửa sổ giờ."
-      ],
+      "runtime_seconds": 2.316,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 12,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
       "method": "crisp",
-      "runtime_seconds": 0.601,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 2,
-      "block_count": 3,
-      "selected_poi_ids": [
-        "osm:way:340128580",
-        "osm:way:339936730"
-      ],
-      "selected_names": [
-        "Di tích Nhà tù Hỏa Lò",
-        "Bảo tàng Dân tộc học Việt Nam"
-      ],
-      "categories": [
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 20.57,
-      "return_time": "16:56",
-      "reserve_minutes": 15,
-      "objective": 1.6120884449364252,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng."
-      ],
+      "runtime_seconds": 2.365,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 12,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
       "method": "fuzzy",
-      "runtime_seconds": 0.5889,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 2,
-      "block_count": 3,
-      "selected_poi_ids": [
-        "osm:way:340128580",
-        "osm:way:339936730"
-      ],
-      "selected_names": [
-        "Di tích Nhà tù Hỏa Lò",
-        "Bảo tàng Dân tộc học Việt Nam"
-      ],
-      "categories": [
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 20.57,
-      "return_time": "16:56",
-      "reserve_minutes": 15,
-      "objective": 1.612088444936425,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng."
-      ],
+      "runtime_seconds": 2.3772,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 12,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 1.6644,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:480826771",
-        "osm:way:223798542",
-        "osm:way:28945667"
-      ],
-      "selected_names": [
-        "Bảo tàng Văn học Việt Nam",
-        "Vườn hoa Lý Tự Trọng",
-        "Công viên Thủ Lệ"
-      ],
-      "categories": [
-        "museum",
-        "park",
-        "zoo"
-      ],
-      "drive_minutes": 28.52,
-      "return_time": "17:29",
-      "reserve_minutes": 15,
-      "objective": 3.005697116224877,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4949,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.7487,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:223798542",
-        "osm:way:1510802054",
-        "osm:node:5406262022"
-      ],
-      "selected_names": [
-        "Vườn hoa Lý Tự Trọng",
-        "Phố Sách Hà Nội",
-        "Lotte Observation Deck"
-      ],
-      "categories": [
-        "park",
-        "park",
-        "viewpoint"
-      ],
-      "drive_minutes": 29.06,
-      "return_time": "16:30",
-      "reserve_minutes": 15,
-      "objective": 2.4166898073871454,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.446,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.6877,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:223798542",
-        "osm:way:1510802054",
-        "osm:way:1103182086"
-      ],
-      "selected_names": [
-        "Vườn hoa Lý Tự Trọng",
-        "Phố Sách Hà Nội",
-        "Công viên Võ Thị Sáu"
-      ],
-      "categories": [
-        "park",
-        "park",
-        "park"
-      ],
-      "drive_minutes": 35.49,
-      "return_time": "16:36",
-      "reserve_minutes": 15,
-      "objective": 2.533257942692235,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4364,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.6853,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:223798542",
-        "osm:way:1510802054",
-        "osm:way:1103182086"
-      ],
-      "selected_names": [
-        "Vườn hoa Lý Tự Trọng",
-        "Phố Sách Hà Nội",
-        "Công viên Võ Thị Sáu"
-      ],
-      "categories": [
-        "park",
-        "park",
-        "park"
-      ],
-      "drive_minutes": 35.49,
-      "return_time": "16:36",
-      "reserve_minutes": 15,
-      "objective": 2.533257942692235,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4677,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 1.4581,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:node:4489385889",
-        "osm:way:879841441",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Chợ Đêm Hàng Đào – Đồng Xuân",
-        "Vườn hoa Diên Hồng",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "temple",
-        "attraction",
-        "park",
-        "gallery"
-      ],
-      "drive_minutes": 8.16,
-      "return_time": "13:49",
-      "reserve_minutes": 15,
-      "objective": 4.252176654940839,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.6965,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.6209,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:700840711",
-        "osm:way:696913691",
-        "osm:way:37933256"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Đền Bạch Mã",
-        "Hoàng thành Thăng Long",
-        "Viện Bảo tàng Lịch sử Việt Nam"
-      ],
-      "categories": [
-        "temple",
-        "temple",
-        "historic",
-        "museum"
-      ],
-      "drive_minutes": 16.11,
-      "return_time": "15:02",
-      "reserve_minutes": 15,
-      "objective": 3.639488422892487,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5377,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.6358,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:28912942",
-        "osm:way:696913691",
-        "osm:way:37933256"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Nhà thờ Lớn Hà Nội",
-        "Hoàng thành Thăng Long",
-        "Viện Bảo tàng Lịch sử Việt Nam"
-      ],
-      "categories": [
-        "temple",
-        "temple",
-        "historic",
-        "museum"
-      ],
-      "drive_minutes": 16.43,
-      "return_time": "14:57",
-      "reserve_minutes": 15,
-      "objective": 3.683913080372509,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5039,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.7508,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:28912942",
-        "osm:way:696913691",
-        "osm:way:37933256"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Nhà thờ Lớn Hà Nội",
-        "Hoàng thành Thăng Long",
-        "Viện Bảo tàng Lịch sử Việt Nam"
-      ],
-      "categories": [
-        "temple",
-        "temple",
-        "historic",
-        "museum"
-      ],
-      "drive_minutes": 16.43,
-      "return_time": "14:57",
-      "reserve_minutes": 15,
-      "objective": 3.683913080372509,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4854,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 1.6567,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:12876453886",
-        "osm:way:1296795442",
-        "osm:way:1307631429",
-        "osm:node:9237323772"
-      ],
-      "selected_names": [
-        "Đền Thiên Vương Thịnh",
-        "Vietgangz Farm",
-        "Vườn hoa Nghè Ngô",
-        "Chợ Tư Đình"
-      ],
-      "categories": [
-        "temple",
-        "zoo",
-        "park",
-        "market"
-      ],
-      "drive_minutes": 55.45,
-      "return_time": "15:21",
-      "reserve_minutes": 15,
-      "objective": 3.7781178925970265,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5166,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.4842,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:696913691",
-        "osm:way:697326496",
-        "osm:way:228075195",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Hoàng thành Thăng Long",
-        "Chùa Một Cột",
-        "Cung Văn hóa Lao động Hữu nghị Việt Xô",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "historic",
-        "temple",
-        "attraction",
-        "gallery"
-      ],
-      "drive_minutes": 50.62,
-      "return_time": "15:26",
-      "reserve_minutes": 15,
-      "objective": 2.904307357570288,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4854,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.2862,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:696913691",
-        "osm:way:697326496",
-        "osm:way:340128580",
-        "osm:way:228075195"
-      ],
-      "selected_names": [
-        "Hoàng thành Thăng Long",
-        "Chùa Một Cột",
-        "Di tích Nhà tù Hỏa Lò",
-        "Cung Văn hóa Lao động Hữu nghị Việt Xô"
-      ],
-      "categories": [
-        "historic",
-        "temple",
-        "museum",
-        "attraction"
-      ],
-      "drive_minutes": 49.11,
-      "return_time": "15:55",
-      "reserve_minutes": 15,
-      "objective": 3.0581941378162836,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5207,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.3075,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:696913691",
-        "osm:way:697326496",
-        "osm:way:340128580",
-        "osm:way:228075195"
-      ],
-      "selected_names": [
-        "Hoàng thành Thăng Long",
-        "Chùa Một Cột",
-        "Di tích Nhà tù Hỏa Lò",
-        "Cung Văn hóa Lao động Hữu nghị Việt Xô"
-      ],
-      "categories": [
-        "historic",
-        "temple",
-        "museum",
-        "attraction"
-      ],
-      "drive_minutes": 49.11,
-      "return_time": "15:55",
-      "reserve_minutes": 15,
-      "objective": 3.0581941378162836,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5515,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.8487,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:570587788",
-        "osm:way:28945667",
-        "osm:way:1481550721",
-        "osm:way:339936730",
-        "osm:node:5406262022"
-      ],
-      "selected_names": [
-        "Chợ Đồng Xa",
-        "Công viên Thủ Lệ",
-        "Đền Voi Phục",
-        "Bảo tàng Dân tộc học Việt Nam",
-        "Lotte Observation Deck"
-      ],
-      "categories": [
-        "market",
-        "zoo",
-        "temple",
-        "museum",
-        "viewpoint"
-      ],
-      "drive_minutes": 21.67,
-      "return_time": "14:17",
-      "reserve_minutes": 15,
-      "objective": 4.955941425313121,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4752,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.3015,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:28945667",
-        "osm:way:223798542",
-        "osm:way:1510802054",
-        "osm:node:5406262022",
-        "osm:way:339936730"
-      ],
-      "selected_names": [
-        "Công viên Thủ Lệ",
-        "Vườn hoa Lý Tự Trọng",
-        "Phố Sách Hà Nội",
-        "Lotte Observation Deck",
-        "Bảo tàng Dân tộc học Việt Nam"
-      ],
-      "categories": [
-        "zoo",
-        "park",
-        "park",
-        "viewpoint",
-        "museum"
-      ],
-      "drive_minutes": 22.22,
-      "return_time": "14:28",
-      "reserve_minutes": 15,
-      "objective": 4.042305755114906,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4893,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.3518,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:223798542",
-        "osm:way:1510802054",
-        "osm:way:1103182086",
-        "osm:way:28945667",
-        "osm:node:5406262022"
-      ],
-      "selected_names": [
-        "Vườn hoa Lý Tự Trọng",
-        "Phố Sách Hà Nội",
-        "Công viên Võ Thị Sáu",
-        "Công viên Thủ Lệ",
-        "Lotte Observation Deck"
-      ],
-      "categories": [
-        "park",
-        "park",
-        "park",
-        "zoo",
-        "viewpoint"
-      ],
-      "drive_minutes": 30.63,
-      "return_time": "13:36",
-      "reserve_minutes": 15,
-      "objective": 4.0617491738909095,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4946,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.3356,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:223798542",
-        "osm:way:1510802054",
-        "osm:way:1103182086",
-        "osm:way:28945667",
-        "osm:node:5406262022"
-      ],
-      "selected_names": [
-        "Vườn hoa Lý Tự Trọng",
-        "Phố Sách Hà Nội",
-        "Công viên Võ Thị Sáu",
-        "Công viên Thủ Lệ",
-        "Lotte Observation Deck"
-      ],
-      "categories": [
-        "park",
-        "park",
-        "park",
-        "zoo",
-        "viewpoint"
-      ],
-      "drive_minutes": 30.63,
-      "return_time": "13:36",
-      "reserve_minutes": 15,
-      "objective": 4.061749173890909,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5011,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.7713,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:node:4489385889",
-        "osm:way:1234036432",
-        "osm:way:879841441"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Chợ Đêm Hàng Đào – Đồng Xuân",
-        "Đông Phong Art Gallery",
-        "Vườn hoa Diên Hồng"
-      ],
-      "categories": [
-        "temple",
-        "attraction",
-        "gallery",
-        "park"
-      ],
-      "drive_minutes": 6.91,
-      "return_time": "13:17",
-      "reserve_minutes": 15,
-      "objective": 4.253221099385283,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5031,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.2789,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:704147278",
-        "osm:way:340128580",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Di tích Nhà tù Hỏa Lò",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "temple",
-        "museum",
-        "museum",
-        "gallery"
-      ],
-      "drive_minutes": 7.9,
-      "return_time": "14:18",
-      "reserve_minutes": 15,
-      "objective": 3.8015516056639442,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5107,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.297,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:704147278",
-        "osm:way:340128580",
-        "osm:way:37933050",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Di tích Nhà tù Hỏa Lò",
-        "Nhà hát Lớn",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "performance_venue",
-        "gallery"
-      ],
-      "drive_minutes": 10.45,
-      "return_time": "14:51",
-      "reserve_minutes": 15,
-      "objective": 3.8646616499188178,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5051,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.3079,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:704147278",
-        "osm:way:340128580",
-        "osm:way:37933050",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Di tích Nhà tù Hỏa Lò",
-        "Nhà hát Lớn",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "performance_venue",
-        "gallery"
-      ],
-      "drive_minutes": 10.45,
-      "return_time": "14:51",
-      "reserve_minutes": 15,
-      "objective": 3.8646616499188178,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5391,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.8211,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:879841441",
-        "osm:way:178995262",
-        "osm:node:4489385889",
-        "osm:node:4499978190",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Vườn hoa Diên Hồng",
-        "Đền Ngọc Sơn",
-        "Chợ Đêm Hàng Đào – Đồng Xuân",
-        "Bảo tàng Địa chất Việt Nam",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "park",
-        "temple",
-        "attraction",
-        "museum",
-        "gallery"
-      ],
-      "drive_minutes": 10.69,
-      "return_time": "12:31",
-      "reserve_minutes": 15,
-      "objective": 5.1055211709196096,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5867,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.4223,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:1510802054",
-        "osm:way:704147278",
-        "osm:way:1234036432",
-        "osm:node:4489385889"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Phố Sách Hà Nội",
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Đông Phong Art Gallery",
-        "Chợ Đêm Hàng Đào – Đồng Xuân"
-      ],
-      "categories": [
-        "temple",
-        "park",
-        "museum",
-        "gallery",
-        "attraction"
-      ],
-      "drive_minutes": 11.49,
-      "return_time": "13:02",
-      "reserve_minutes": 15,
-      "objective": 4.888945943692176,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4615,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.3293,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:696913691",
-        "osm:way:1510802054",
-        "osm:way:704147278",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Hoàng thành Thăng Long",
-        "Phố Sách Hà Nội",
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "temple",
-        "historic",
-        "park",
-        "museum",
-        "gallery"
-      ],
-      "drive_minutes": 13.81,
-      "return_time": "13:54",
-      "reserve_minutes": 15,
-      "objective": 4.862256516321007,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5295,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.3231,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:178995262",
-        "osm:way:696913691",
-        "osm:way:1510802054",
-        "osm:way:704147278",
-        "osm:way:1234036432"
-      ],
-      "selected_names": [
-        "Đền Ngọc Sơn",
-        "Hoàng thành Thăng Long",
-        "Phố Sách Hà Nội",
-        "Bảo tàng Phụ nữ Việt Nam",
-        "Đông Phong Art Gallery"
-      ],
-      "categories": [
-        "temple",
-        "historic",
-        "park",
-        "museum",
-        "gallery"
-      ],
-      "drive_minutes": 13.81,
-      "return_time": "13:54",
-      "reserve_minutes": 15,
-      "objective": 4.862256516321007,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5142,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
       "method": "nearby",
-      "runtime_seconds": 0.7312,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:19000664",
-        "osm:way:302872188",
-        "osm:way:694831926",
-        "osm:way:204790989"
-      ],
-      "selected_names": [
-        "Bãi biển Mỹ Khê",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Cầu Rồng Đà Nẵng",
-        "Chợ Cồn"
-      ],
-      "categories": [
-        "beach",
-        "museum",
-        "attraction",
-        "market"
-      ],
-      "drive_minutes": 20.51,
-      "return_time": "16:31",
-      "reserve_minutes": 15,
-      "objective": 4.232891972427852,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng."
-      ],
+      "runtime_seconds": 2.5354,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
       "method": "equal",
-      "runtime_seconds": 0.3186,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:8552348",
-        "osm:node:5273998823",
-        "osm:way:694831926",
-        "osm:relation:19000664"
-      ],
-      "selected_names": [
-        "Ngũ Hành Sơn",
-        "Cầu Trần Thị Lý",
-        "Cầu Rồng Đà Nẵng",
-        "Bãi biển Mỹ Khê"
-      ],
-      "categories": [
-        "nature_area",
-        "attraction",
-        "attraction",
-        "beach"
-      ],
-      "drive_minutes": 35.59,
-      "return_time": "17:16",
-      "reserve_minutes": 15,
-      "objective": 2.9575599520324065,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4982,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
       "method": "crisp",
-      "runtime_seconds": 0.3783,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:8552348",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:node:5273998823",
-        "osm:relation:19000664"
-      ],
-      "selected_names": [
-        "Ngũ Hành Sơn",
-        "Chùa Cầu Hội An",
-        "Cầu Trần Thị Lý",
-        "Bãi biển Mỹ Khê"
-      ],
-      "categories": [
-        "nature_area",
-        "historic",
-        "attraction",
-        "beach"
-      ],
-      "drive_minutes": 76.82,
-      "return_time": "17:37",
-      "reserve_minutes": 15,
-      "objective": 2.935092317050841,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4912,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
       "method": "fuzzy",
-      "runtime_seconds": 0.3114,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:8552348",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:node:5273998823",
-        "osm:relation:19000664"
-      ],
-      "selected_names": [
-        "Ngũ Hành Sơn",
-        "Chùa Cầu Hội An",
-        "Cầu Trần Thị Lý",
-        "Bãi biển Mỹ Khê"
-      ],
-      "categories": [
-        "nature_area",
-        "historic",
-        "attraction",
-        "beach"
-      ],
-      "drive_minutes": 76.82,
-      "return_time": "17:37",
-      "reserve_minutes": 15,
-      "objective": 2.935092317050841,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4844,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
       "method": "nearby",
-      "runtime_seconds": 0.7374,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:565592419",
-        "osm:way:35952591",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd"
-      ],
-      "selected_names": [
-        "Bảo tàng Hội An",
-        "Chợ vải Hội An",
-        "Chùa Cầu Hội An"
-      ],
-      "categories": [
-        "museum",
-        "attraction",
-        "historic"
-      ],
-      "drive_minutes": 4.95,
-      "return_time": "15:20",
-      "reserve_minutes": 15,
-      "objective": 3.2739347784962507,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4862,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 27,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
       "method": "equal",
-      "runtime_seconds": 0.2734,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:2617007574",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:way:565186618"
-      ],
-      "selected_names": [
-        "Kazimierz Kwiatkowski",
-        "Chùa Cầu Hội An",
-        "Đình Cẩm Phô"
-      ],
-      "categories": [
-        "historic",
-        "historic",
-        "temple"
-      ],
-      "drive_minutes": 5.7,
-      "return_time": "14:06",
-      "reserve_minutes": 15,
-      "objective": 2.4867397297043445,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4616,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 27,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
       "method": "crisp",
-      "runtime_seconds": 0.2716,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:2617007574",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:way:565186618"
-      ],
-      "selected_names": [
-        "Kazimierz Kwiatkowski",
-        "Chùa Cầu Hội An",
-        "Đình Cẩm Phô"
-      ],
-      "categories": [
-        "historic",
-        "historic",
-        "temple"
-      ],
-      "drive_minutes": 5.7,
-      "return_time": "14:06",
-      "reserve_minutes": 15,
-      "objective": 2.4136641969991586,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5164,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 27,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
       "method": "fuzzy",
-      "runtime_seconds": 0.259,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:2617007574",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:way:565186618"
-      ],
-      "selected_names": [
-        "Kazimierz Kwiatkowski",
-        "Chùa Cầu Hội An",
-        "Đình Cẩm Phô"
-      ],
-      "categories": [
-        "historic",
-        "historic",
-        "temple"
-      ],
-      "drive_minutes": 5.7,
-      "return_time": "14:06",
-      "reserve_minutes": 15,
-      "objective": 2.4136641969991586,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.6277,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 27,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.7054,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:10709724107",
-        "osm:node:8474743417",
-        "osm:node:4280016689",
-        "osm:relation:8552348"
-      ],
-      "selected_names": [
-        "Làng đá mỹ nghệ Non Nước",
-        "Bảo tàng Phật giáo",
-        "Chùa Giác Hoàng Viên",
-        "Ngũ Hành Sơn"
-      ],
-      "categories": [
-        "craft_village",
-        "museum",
-        "temple",
-        "nature_area"
-      ],
-      "drive_minutes": 17.76,
-      "return_time": "16:43",
-      "reserve_minutes": 15,
-      "objective": 4.2262991555268075,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.6508,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.3108,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:8552348",
-        "osm:way:302944359",
-        "osm:node:4280016689",
-        "osm:node:10709724107"
-      ],
-      "selected_names": [
-        "Ngũ Hành Sơn",
-        "Chùa Trung Lương",
-        "Chùa Giác Hoàng Viên",
-        "Làng đá mỹ nghệ Non Nước"
-      ],
-      "categories": [
-        "nature_area",
-        "temple",
-        "temple",
-        "craft_village"
-      ],
-      "drive_minutes": 28.07,
-      "return_time": "16:39",
-      "reserve_minutes": 15,
-      "objective": 3.5364072382486205,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4966,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.2977,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:8552348",
-        "osm:way:302944359",
-        "osm:node:4280016689",
-        "osm:node:10709724107"
-      ],
-      "selected_names": [
-        "Ngũ Hành Sơn",
-        "Chùa Trung Lương",
-        "Chùa Giác Hoàng Viên",
-        "Làng đá mỹ nghệ Non Nước"
-      ],
-      "categories": [
-        "nature_area",
-        "temple",
-        "temple",
-        "craft_village"
-      ],
-      "drive_minutes": 28.07,
-      "return_time": "16:39",
-      "reserve_minutes": 15,
-      "objective": 3.5624237795767133,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5342,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.302,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:relation:8552348",
-        "osm:way:302944359",
-        "osm:node:4280016689",
-        "osm:node:10709724107"
-      ],
-      "selected_names": [
-        "Ngũ Hành Sơn",
-        "Chùa Trung Lương",
-        "Chùa Giác Hoàng Viên",
-        "Làng đá mỹ nghệ Non Nước"
-      ],
-      "categories": [
-        "nature_area",
-        "temple",
-        "temple",
-        "craft_village"
-      ],
-      "drive_minutes": 28.07,
-      "return_time": "16:39",
-      "reserve_minutes": 15,
-      "objective": 3.5624237795767133,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5067,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.5224,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:way:759913076",
-        "osm:way:1368599361",
-        "osm:way:302872188"
-      ],
-      "selected_names": [
-        "Bảo tàng Mỹ thuật Đà Nẵng",
-        "Bảo tàng Đà Nẵng",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 13.96,
-      "return_time": "13:44",
-      "reserve_minutes": 15,
-      "objective": 2.688862275985663,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5043,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 4,
+        "attractions": 7,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.2536,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:759913076",
-        "osm:way:1368599361",
-        "osm:way:302872188",
-        "osm:node:8474743417"
-      ],
-      "selected_names": [
-        "Bảo tàng Mỹ thuật Đà Nẵng",
-        "Bảo tàng Đà Nẵng",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Bảo tàng Phật giáo"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 33.58,
-      "return_time": "15:14",
-      "reserve_minutes": 15,
-      "objective": 2.710427589328688,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5129,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 4,
+        "attractions": 7,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.2835,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:759913076",
-        "osm:way:1368599361",
-        "osm:way:302872188",
-        "osm:node:8474743417"
-      ],
-      "selected_names": [
-        "Bảo tàng Mỹ thuật Đà Nẵng",
-        "Bảo tàng Đà Nẵng",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Bảo tàng Phật giáo"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 33.58,
-      "return_time": "15:14",
-      "reserve_minutes": 15,
-      "objective": 2.672867750258737,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5278,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 4,
+        "attractions": 7,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.2589,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:way:759913076",
-        "osm:way:1368599361",
-        "osm:way:302872188",
-        "osm:node:8474743417"
-      ],
-      "selected_names": [
-        "Bảo tàng Mỹ thuật Đà Nẵng",
-        "Bảo tàng Đà Nẵng",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Bảo tàng Phật giáo"
-      ],
-      "categories": [
-        "museum",
-        "museum",
-        "museum",
-        "museum"
-      ],
-      "drive_minutes": 33.58,
-      "return_time": "15:14",
-      "reserve_minutes": 15,
-      "objective": 2.672867750258737,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4936,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 4,
+        "attractions": 7,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.6912,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "poi-google:3aac3427ee25b18a817027e9",
-        "osm:way:35952591",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:way:565592419"
-      ],
-      "selected_names": [
-        "Phố cổ Hội An",
-        "Chợ vải Hội An",
-        "Chùa Cầu Hội An",
-        "Bảo tàng Hội An"
-      ],
-      "categories": [
-        "old_quarter",
-        "attraction",
-        "historic",
-        "museum"
-      ],
-      "drive_minutes": 6.29,
-      "return_time": "16:27",
-      "reserve_minutes": 15,
-      "objective": 4.376571807788895,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5516,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.2993,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:4171964390",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:node:7127464285",
-        "osm:node:11896339273"
-      ],
-      "selected_names": [
-        "Làng gốm Thanh Hà",
-        "Chùa Cầu Hội An",
-        "Hoi An Museum of Traditional Medicine",
-        "CSO Gallery"
-      ],
-      "categories": [
-        "craft_village",
-        "historic",
-        "museum",
-        "gallery"
-      ],
-      "drive_minutes": 16.49,
-      "return_time": "15:37",
-      "reserve_minutes": 15,
-      "objective": 3.8754031445085313,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4982,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.3089,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:5513474821",
-        "osm:node:4171964390",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:node:8883385553"
-      ],
-      "selected_names": [
-        "Terracotta Park",
-        "Làng gốm Thanh Hà",
-        "Chùa Cầu Hội An",
-        "TASY STUDIO"
-      ],
-      "categories": [
-        "museum",
-        "craft_village",
-        "historic",
-        "gallery"
-      ],
-      "drive_minutes": 30.2,
-      "return_time": "15:51",
-      "reserve_minutes": 15,
-      "objective": 3.8137164088726387,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.484,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.3058,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:5513474821",
-        "osm:node:4171964390",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:node:8883385553"
-      ],
-      "selected_names": [
-        "Terracotta Park",
-        "Làng gốm Thanh Hà",
-        "Chùa Cầu Hội An",
-        "TASY STUDIO"
-      ],
-      "categories": [
-        "museum",
-        "craft_village",
-        "historic",
-        "gallery"
-      ],
-      "drive_minutes": 30.2,
-      "return_time": "15:51",
-      "reserve_minutes": 15,
-      "objective": 3.8137164088726387,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5156,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 0.724,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:node:6422678433",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd",
-        "osm:way:627379326"
-      ],
-      "selected_names": [
-        "Chợ Nam Phước market",
-        "Chùa Cầu Hội An",
-        "My Son Museum"
-      ],
-      "categories": [
-        "market",
-        "historic",
-        "museum"
-      ],
-      "drive_minutes": 86.25,
-      "return_time": "15:42",
-      "reserve_minutes": 15,
-      "objective": 1.7360224944324634,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.6155,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.2931,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:way:627379326",
-        "osm:node:2617007574",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd"
-      ],
-      "selected_names": [
-        "My Son Museum",
-        "Kazimierz Kwiatkowski",
-        "Chùa Cầu Hội An"
-      ],
-      "categories": [
-        "museum",
-        "historic",
-        "historic"
-      ],
-      "drive_minutes": 86.56,
-      "return_time": "15:27",
-      "reserve_minutes": 15,
-      "objective": 1.946817431977688,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5215,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.5328,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:node:12344125229",
-        "osm:node:2617007574",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd"
-      ],
-      "selected_names": [
-        "Di San Vô Giá",
-        "Kazimierz Kwiatkowski",
-        "Chùa Cầu Hội An"
-      ],
-      "categories": [
-        "museum",
-        "historic",
-        "historic"
-      ],
-      "drive_minutes": 88.62,
-      "return_time": "15:29",
-      "reserve_minutes": 15,
-      "objective": 2.12173531223696,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.511,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.6597,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 3,
-      "block_count": 4,
-      "selected_poi_ids": [
-        "osm:node:12344125229",
-        "osm:node:2617007574",
-        "poi-google:270efa89c4fa1b1bdeb4cdcd"
-      ],
-      "selected_names": [
-        "Di San Vô Giá",
-        "Kazimierz Kwiatkowski",
-        "Chùa Cầu Hội An"
-      ],
-      "categories": [
-        "museum",
-        "historic",
-        "historic"
-      ],
-      "drive_minutes": 88.62,
-      "return_time": "15:29",
-      "reserve_minutes": 15,
-      "objective": 2.12173531223696,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5108,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 1.4602,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:302872188",
-        "osm:node:4807957148",
-        "osm:way:694831926",
-        "osm:node:5216168822",
-        "osm:way:204790989"
-      ],
-      "selected_names": [
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Trung tâm Giải trí Phức hợp Helio Center",
-        "Cầu Rồng Đà Nẵng",
-        "Thánh thất Cao Đài",
-        "Chợ Cồn"
-      ],
-      "categories": [
-        "museum",
-        "theme_park",
-        "attraction",
-        "temple",
-        "market"
-      ],
-      "drive_minutes": 21.76,
-      "return_time": "16:02",
-      "reserve_minutes": 15,
-      "objective": 5.372116709167611,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4979,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.6671,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:4807957148",
-        "osm:relation:19000664",
-        "osm:relation:8552348",
-        "osm:node:13040467529"
-      ],
-      "selected_names": [
-        "Trung tâm Giải trí Phức hợp Helio Center",
-        "Bãi biển Mỹ Khê",
-        "Ngũ Hành Sơn",
-        "Bãi Đá"
-      ],
-      "categories": [
-        "theme_park",
-        "beach",
-        "nature_area",
-        "beach"
-      ],
-      "drive_minutes": 64.49,
-      "return_time": "17:30",
-      "reserve_minutes": 15,
-      "objective": 3.21594425660184,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.5075,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.712,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:4807957148",
-        "osm:relation:19000664",
-        "osm:relation:8552348",
-        "osm:node:13040467529"
-      ],
-      "selected_names": [
-        "Trung tâm Giải trí Phức hợp Helio Center",
-        "Bãi biển Mỹ Khê",
-        "Ngũ Hành Sơn",
-        "Bãi Đá"
-      ],
-      "categories": [
-        "theme_park",
-        "beach",
-        "nature_area",
-        "beach"
-      ],
-      "drive_minutes": 64.49,
-      "return_time": "17:30",
-      "reserve_minutes": 15,
-      "objective": 3.414974587898769,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.512,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.7403,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 4,
-      "block_count": 5,
-      "selected_poi_ids": [
-        "osm:node:4807957148",
-        "osm:relation:19000664",
-        "osm:relation:8552348",
-        "osm:node:13040467529"
-      ],
-      "selected_names": [
-        "Trung tâm Giải trí Phức hợp Helio Center",
-        "Bãi biển Mỹ Khê",
-        "Ngũ Hành Sơn",
-        "Bãi Đá"
-      ],
-      "categories": [
-        "theme_park",
-        "beach",
-        "nature_area",
-        "beach"
-      ],
-      "drive_minutes": 64.49,
-      "return_time": "17:30",
-      "reserve_minutes": 15,
-      "objective": 3.414974587898769,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.3897,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
         "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
       "method": "nearby",
-      "runtime_seconds": 1.3133,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:204790989",
-        "osm:node:5216168822",
-        "osm:way:694831926",
-        "osm:way:302872188",
-        "osm:node:4807957148"
-      ],
-      "selected_names": [
-        "Chợ Cồn",
-        "Thánh thất Cao Đài",
-        "Cầu Rồng Đà Nẵng",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Trung tâm Giải trí Phức hợp Helio Center"
-      ],
-      "categories": [
-        "market",
-        "temple",
-        "attraction",
-        "museum",
-        "theme_park"
-      ],
-      "drive_minutes": 20.93,
-      "return_time": "16:01",
-      "reserve_minutes": 15,
-      "objective": 5.194387047616493,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4571,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 28,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "nearby",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
       "method": "equal",
-      "runtime_seconds": 0.6348,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:1326219930",
-        "osm:way:1422444084",
-        "osm:way:204790989",
-        "osm:way:302872188",
-        "osm:node:5273998823"
-      ],
-      "selected_names": [
-        "Chợ Kỳ Đồng",
-        "Chùa Thuận Thành",
-        "Chợ Cồn",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Cầu Trần Thị Lý"
-      ],
-      "categories": [
-        "market",
-        "temple",
-        "market",
-        "museum",
-        "attraction"
-      ],
-      "drive_minutes": 23.23,
-      "return_time": "13:34",
-      "reserve_minutes": 15,
-      "objective": 4.922447633341501,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.4365,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 28,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "equal",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.25,
-          "place_quality": 0.25,
-          "drive_time": 0.25,
-          "data_confidence": 0.25
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
       "method": "crisp",
-      "runtime_seconds": 0.6519,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:1422444084",
-        "osm:way:204790989",
-        "osm:way:302872188",
-        "osm:relation:19000664",
-        "osm:node:5273998823"
-      ],
-      "selected_names": [
-        "Chùa Thuận Thành",
-        "Chợ Cồn",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Bãi biển Mỹ Khê",
-        "Cầu Trần Thị Lý"
-      ],
-      "categories": [
-        "temple",
-        "market",
-        "museum",
-        "beach",
-        "attraction"
-      ],
-      "drive_minutes": 27.39,
-      "return_time": "14:08",
-      "reserve_minutes": 15,
-      "objective": 4.897097831826638,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.426,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 28,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "crisp",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.39999999999999997,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.19999999999999998,
-          "data_confidence": 0.09999999999999999
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     },
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
       "method": "fuzzy",
-      "runtime_seconds": 0.6858,
-      "status": "provisional",
-      "reason": "Lịch trình gợi ý theo dữ liệu v2 hiện có",
-      "attraction_count": 5,
-      "block_count": 6,
-      "selected_poi_ids": [
-        "osm:way:1422444084",
-        "osm:way:204790989",
-        "osm:way:302872188",
-        "osm:relation:19000664",
-        "osm:node:5273998823"
-      ],
-      "selected_names": [
-        "Chùa Thuận Thành",
-        "Chợ Cồn",
-        "Bảo tàng Điêu khắc Chăm Đà Nẵng",
-        "Bãi biển Mỹ Khê",
-        "Cầu Trần Thị Lý"
-      ],
-      "categories": [
-        "temple",
-        "market",
-        "museum",
-        "beach",
-        "attraction"
-      ],
-      "drive_minutes": 27.39,
-      "return_time": "14:08",
-      "reserve_minutes": 15,
-      "objective": 4.897097831826638,
-      "warnings": [
-        "Thời gian OSRM không phải dự báo giao thông trực tiếp.",
-        "Điểm tiếp cận chưa xác minh thực địa được hiển thị là ước lượng.",
-        "Một số thời lượng tham quan vẫn dùng fallback theo category."
-      ],
+      "runtime_seconds": 2.376,
+      "status": "routing_unavailable",
+      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
+      "attraction_count": 0,
+      "block_count": 0,
+      "selected_poi_ids": [],
+      "selected_names": [],
+      "categories": [],
+      "drive_minutes": 0.0,
+      "return_time": null,
+      "reserve_minutes": null,
+      "objective": null,
+      "warnings": [],
       "candidate_counts": {
-        "attractions": 28,
+        "attractions": 40,
         "food_rest": 20
       },
-      "ranking": {
-        "method": "fuzzy",
-        "criteria_order": [
-          "preference_match",
-          "place_quality",
-          "drive_time",
-          "data_confidence"
-        ],
-        "weights": {
-          "preference_match": 0.4,
-          "place_quality": 0.29999999999999993,
-          "drive_time": 0.2,
-          "data_confidence": 0.10000000000000002
-        },
-        "cr": 0.0
-      }
+      "ranking": null
     }
   ]
 }

@@ -1,17 +1,17 @@
 {
   "status": "PASS",
-  "created_at": "2026-09-18T08:05:55.133429+00:00",
-  "dataset_version": "v2-ae66988a1053d0de",
+  "created_at": "2026-09-19T13:41:55.184872+00:00",
+  "dataset_version": "v2-c3ad315d02c5356a",
   "catalog_path": "artifacts/dataset-build/catalog_v2.sqlite",
-  "poi_count": 16018,
-  "serviceable_count": 1475,
+  "poi_count": 16129,
+  "serviceable_count": 1564,
   "hard_error_count": 0,
-  "warning_count": 4599,
+  "warning_count": 4818,
   "errors": [],
   "warnings": [
     {
       "code": "duplicate_serviceable_attraction_name_in_location",
-      "count": 1,
+      "count": 2,
       "examples": [
         [
           "('An Giang', 'cong vien binh khanh')",
@@ -19,12 +19,19 @@
             "osm:way:777891292",
             "osm:way:777891293"
           ]
+        ],
+        [
+          "('Đà Nẵng', 'bai tam man thai')",
+          [
+            "poi-google:433657c5c0911e563865e7fc",
+            "poi-google:af0d624892b6750e416557b8"
+          ]
         ]
       ]
     },
     {
       "code": "serviceable_hours_unknown",
-      "count": 257,
+      "count": 298,
       "examples": [
         "osm:node:10225121259",
         "osm:node:10295139993",
@@ -40,7 +47,7 @@
     },
     {
       "code": "serviceable_rating_missing",
-      "count": 1389,
+      "count": 1388,
       "examples": [
         "osm:node:10011953034",
         "osm:node:10082412846",
@@ -56,7 +63,7 @@
     },
     {
       "code": "serviceable_duration_unverified",
-      "count": 1475,
+      "count": 1564,
       "examples": [
         "osm:node:10011953034",
         "osm:node:10082412846",
@@ -72,7 +79,7 @@
     },
     {
       "code": "serviceable_access_unverified",
-      "count": 1475,
+      "count": 1564,
       "examples": [
         "osm:node:10011953034",
         "osm:node:10082412846",
@@ -98,9 +105,9 @@
   "coverage": [
     {
       "location": "Hà Nội",
-      "total": 4499,
-      "usable": 4485,
-      "attractions": 1508,
+      "total": 4505,
+      "usable": 4491,
+      "attractions": 1514,
       "food_rest": 2977,
       "serviceable": 742,
       "serviceable_attractions": 71,
@@ -114,8 +121,8 @@
       "with_verified_access": 0,
       "coverage_percent": {
         "rating_pair": 0.87,
-        "structured_hours": 13.89,
-        "full_week_hours": 13.24,
+        "structured_hours": 13.87,
+        "full_week_hours": 13.23,
         "specific_duration": 0.33,
         "verified_duration": 0.0,
         "verified_access": 0.0
@@ -152,25 +159,25 @@
     },
     {
       "location": "Đà Nẵng",
-      "total": 2752,
-      "usable": 2691,
-      "attractions": 426,
+      "total": 2832,
+      "usable": 2771,
+      "attractions": 506,
       "food_rest": 2265,
-      "serviceable": 493,
-      "serviceable_attractions": 63,
+      "serviceable": 582,
+      "serviceable_attractions": 152,
       "serviceable_food_rest": 430,
-      "with_rating_pair": 47,
-      "with_structured_hours": 428,
-      "with_full_week_hours": 407,
+      "with_rating_pair": 137,
+      "with_structured_hours": 476,
+      "with_full_week_hours": 451,
       "with_specific_duration": 18,
       "with_verified_duration": 0,
       "with_curated_duration_estimate": 18,
       "with_verified_access": 0,
       "coverage_percent": {
-        "rating_pair": 1.75,
-        "structured_hours": 15.9,
-        "full_week_hours": 15.12,
-        "specific_duration": 0.67,
+        "rating_pair": 4.94,
+        "structured_hours": 17.18,
+        "full_week_hours": 16.28,
+        "specific_duration": 0.65,
         "verified_duration": 0.0,
         "verified_access": 0.0
       },
@@ -179,14 +186,14 @@
         "attractions": 50,
         "food_rest": 20,
         "serviceable": 70,
-        "with_structured_hours": 59,
+        "with_structured_hours": 60,
         "with_full_week_hours": 57,
         "with_specific_duration": 18,
         "with_verified_duration": 0,
         "with_curated_duration_estimate": 18,
-        "with_rating_pair": 47,
+        "with_rating_pair": 57,
         "with_verified_access": 0,
-        "hours_percent": 84.29,
+        "hours_percent": 85.71,
         "specific_duration_percent": 36.0,
         "verified_duration_percent": 0.0,
         "targets": {

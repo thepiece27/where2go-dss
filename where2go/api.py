@@ -18,6 +18,8 @@ from .v2.recommendations import RecommendationRequest
 from .v2.service import ItineraryService
 from .v2.dataset import dataset_summary
 from .v2.quality import explorable, itinerary_eligible, manual_trip_quality, recommendation_eligible
+from .v2.discovery import matches_scope
+from .v2.taxonomy import CATEGORIES
 
 
 DATASET_EXPORT_DIR = ROOT / "data/reports/v2/dataset"
@@ -63,12 +65,21 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             raise HTTPException(503, "Catalog chưa sẵn sàng. Chạy scripts/build_catalog.py") from error
 
     @lru_cache(maxsize=1)
-    def v2_service():
+    def cached_v2_service(signature):
         try:
             rows, meta = v2_data if v2_data is not None else load_catalog_v2(Path(v2_catalog_path))
             return ItineraryService(rows, meta, app.state.router)
         except Exception as error:
             raise HTTPException(503, "Catalog v2 chưa sẵn sàng. Chạy scripts/build_catalog_v2.py") from error
+
+    def v2_service():
+        if v2_data is not None:
+            return cached_v2_service(None)
+        try:
+            stat = Path(v2_catalog_path).stat()
+        except OSError as error:
+            raise HTTPException(503, "Catalog v2 chưa sẵn sàng") from error
+        return cached_v2_service((stat.st_mtime_ns, stat.st_size))
 
     @lru_cache(maxsize=1)
     def basemap_manifest():
@@ -137,6 +148,7 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
 
     @app.get("/api/v2/pois")
     def pois_v2(location: str = "", category: str = "", query: str = "",
+                scope: Literal["", "danang_hoian"] = "", tourism_only: bool = False,
                 include_unserviceable: bool = False,
                 view: Literal["explore", "itinerary"] = "itinerary",
                 offset: int = Query(0, ge=0), limit: int = Query(500, ge=1, le=20000)):
@@ -149,6 +161,7 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
         ]
         selected = [poi for poi in visible
                     if (not location or poi["location"] == location)
+                    and matches_scope(poi, scope, tourism_only)
                     and (not category or poi["category"] == category)
                     and (not text or text in normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", "")])))]
         selected.sort(key=lambda poi: (poi["location"] or "", poi["name"], poi["poi_id"]))
@@ -159,10 +172,13 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
             "dataset_version": service.manifest["version"],
             "locations": sorted({poi["location"] for poi in visible if poi.get("location")}),
             "categories": sorted({poi["category"] for poi in visible if poi.get("category")}),
+            "category_labels": CATEGORIES,
+            "scopes": {"danang_hoian": "Đà Nẵng – Hội An – Cù Lao Chàm"},
         }
 
     @app.get("/api/v2/map-pois")
-    def map_pois(bbox: str = "", location: str = "", category: str = "", query: str = ""):
+    def map_pois(bbox: str = "", location: str = "", category: str = "", query: str = "",
+                 scope: Literal["", "danang_hoian"] = "", tourism_only: bool = False):
         bounds = None
         if bbox:
             try:
@@ -176,6 +192,8 @@ def create_app(catalog_path=CATALOG, router=None, v2_catalog_path=CATALOG_V2, v2
         features = []
         service = v2_service()
         for poi in service.pois:
+            if not matches_scope(poi, scope, tourism_only):
+                continue
             if not explorable(poi) or (location and poi["location"] != location) or (category and poi["category"] != category):
                 continue
             if text and text not in normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", "")])):
