@@ -67,11 +67,22 @@
             placeholder="Ví dụ: tìm hiểu lịch sử, ngắm cảnh biển…"
         /></label>
         <details class="extra-settings">
-          <summary>Loại hình và điểm xuất phát</summary>
+          <summary>Điều kiện loại hình, dữ liệu và điểm xuất phát</summary>
           <div class="form-grid">
             <label
               >Loại hình ưu tiên (có thể chọn nhiều)<select
                 id="categories"
+                multiple
+                size="5"
+              ></select></label
+            ><label
+              >Cách áp dụng loại hình<select id="categoryMode">
+                <option value="preferred">Ưu tiên khi xếp hạng</option>
+                <option value="only">Chỉ tìm các loại đã chọn</option>
+              </select></label
+            ><label
+              >Loại hình không muốn xem<select
+                id="excludedCategories"
                 multiple
                 size="5"
               ></select></label
@@ -93,6 +104,10 @@
                 required
             /></label>
           </div>
+          <div class="check-options">
+            <label><input id="requireKnownHours" type="checkbox" /> Chỉ lấy nơi có giờ mở cửa đã ghi nhận</label>
+            <label><input id="allowNonMatching" type="checkbox" /> Cho phép kết quả ít khớp để đủ danh sách</label>
+          </div>
           <div class="actions">
             <button id="locate" type="button">Dùng vị trí của tôi</button
             ><a href="/explore?pick=start">Chọn điểm xuất phát trên bản đồ</a>
@@ -103,9 +118,8 @@
           kết quả gần với nhu cầu hơn.
         </p>
         <p class="muted">
-          Chọn “tâm linh” sẽ xét thêm đền/chùa. Loại hình ưu tiên bạn chọn được
-          xét cả khi nhóm mặc định là “Tham quan và ngoài trời”. Sau khi đổi
-          nhu cầu, bấm Nhận gợi ý để cập nhật danh sách.
+          Điều kiện loại trừ và “chỉ tìm” luôn được áp dụng trước xếp hạng. Sau
+          khi đổi nhu cầu, bấm Nhận gợi ý để cập nhật danh sách.
         </p>
         <button id="recommendButton" class="primary" type="submit">
           Nhận gợi ý

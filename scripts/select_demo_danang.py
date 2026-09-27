@@ -19,7 +19,9 @@ from where2go.v2.discovery import region_for  # noqa: E402
 
 BASE = dict(location="Đà Nẵng", scope="danang_hoian", tourism_only=True,
             date="2026-09-21", start=dict(latitude=16.0544, longitude=108.2022),
-            interests=[], preferred_categories=[], preset="balanced",
+            interests=[], experience_topics=[], preferred_categories=[], excluded_categories=[],
+            category_mode="preferred", require_known_hours=False, allow_non_matching=False,
+            preset="balanced",
             radius_km=15, top_k=10, selected_poi_ids=[])
 POSITIONS = {"center": BASE["start"], "coast": dict(latitude=16.063, longitude=108.245),
              "south": dict(latitude=16.015, longitude=108.25)}
@@ -64,7 +66,7 @@ def sweep(args):
               "relax": ["thư giãn"], "food": ["ẩm thực"]}
     add("default")
     for topic, preset in itertools.product(topics, ["balanced", "interests", "nearby", "quality"]):
-        add(f"topic_{topic}_{preset}", interests=topics[topic], preset=preset)
+        add(f"topic_{topic}_{preset}", experience_topics=topics[topic], preset=preset)
     texts = {"sea": "biển", "museum": "bảo tàng", "indoor": "trong nhà", "museum_indoor": "bảo tàng, trong nhà",
              "avoid_sea": "không thích biển", "spiritual_ascii": "tam linh"}
     for key, preset in itertools.product(texts, ["balanced", "interests", "nearby", "quality"]):
@@ -73,9 +75,9 @@ def sweep(args):
         add(f"category_{category}_{preset}", preferred_categories=[category], preset=preset)
     for position, radius, profile in itertools.product(POSITIONS, [1, 3, 5, 10, 15], ["nature", "sea"]):
         add(f"geo_{position}_{radius}_{profile}", start=POSITIONS[position], radius_km=radius,
-            interests=["thiên nhiên"] if profile == "nature" else ["biển"], preset="nearby")
-    add("nature_with_beach", interests=["thiên nhiên"], preferred_categories=["beach"], preset="interests")
-    add("sea_with_beach", interests=["biển"], preferred_categories=["beach"], preset="interests")
+            experience_topics=["thiên nhiên"] if profile == "nature" else ["biển"], preset="nearby")
+    add("nature_with_beach", experience_topics=["thiên nhiên"], preferred_categories=["beach"], preset="interests")
+    add("sea_with_beach", experience_topics=["biển"], preferred_categories=["beach"], preset="interests")
     for date in ["2026-09-22", "2026-09-27"]:
         add(f"date_{date}", interests=["lịch sử", "văn hóa"], date=date)
     add("spiritual_radius_1", interests=["tâm linh"], radius_km=1)
@@ -137,7 +139,8 @@ def browser_run(args):
                 target = source[step["case"]]["request"]
                 # User-visible fields only; retain local draft and the browser session.
                 for selector, val in [("location", target["location"]), ("tourismScope", target["scope"]),
-                                      ("tourismOnly", str(target["tourism_only"]).lower()), ("preset", target["preset"])]:
+                                      ("tourismOnly", str(target["tourism_only"]).lower()),
+                                      ("categoryMode", target["category_mode"]), ("preset", target["preset"])]:
                     if page.locator("#" + selector).input_value() != val:
                         page.locator("#" + selector).select_option(val)
                 for selector, val in [("date", target["date"]), ("radius", str(target["radius_km"])),
@@ -146,7 +149,10 @@ def browser_run(args):
                         page.locator("#" + selector).fill(val)
                         page.locator("#" + selector).blur()
                 page.locator("#categories").select_option(target["preferred_categories"])
-                wanted_topics = step.get("topics", [])
+                page.locator("#excludedCategories").select_option(target["excluded_categories"])
+                page.locator("#requireKnownHours").set_checked(target["require_known_hours"])
+                page.locator("#allowNonMatching").set_checked(target["allow_non_matching"])
+                wanted_topics = target["experience_topics"]
                 for text in page.locator('#topics button[aria-pressed="true"]').all_text_contents():
                     if text not in wanted_topics:
                         page.get_by_role("button", name=text, exact=True).click()

@@ -4,10 +4,9 @@
   "methods": [
     "nearby",
     "equal",
-    "crisp",
-    "fuzzy"
+    "ahp"
   ],
-  "note": "Case study; owner grading is NOT RUN until worksheet is completed.",
+  "note": "Historical planner observations, retained only for the three supported methods. Ordinary AHP label normalized to ahp; scores and timings are unchanged. Not a new routing or relevance verification.",
   "results": [
     {
       "scenario_id": "HN-DEV-01",
@@ -58,31 +57,8 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.4102,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-DEV-01",
-      "split": "development",
-      "method": "fuzzy",
-      "runtime_seconds": 2.7438,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -150,31 +126,8 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.365,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 12,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-DEV-02",
-      "split": "development",
-      "method": "fuzzy",
-      "runtime_seconds": 2.3772,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -242,31 +195,8 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.4364,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-HOLD-01",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.4677,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -334,31 +264,8 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5039,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-HOLD-02",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.4854,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -426,31 +333,8 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5207,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-HOLD-03",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5515,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -518,31 +402,8 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.4946,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-HOLD-04",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5011,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -610,31 +471,8 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5051,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-HOLD-05",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5391,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -702,31 +540,8 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5295,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "HN-HOLD-06",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5142,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -794,31 +609,8 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.4912,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-DEV-01",
-      "split": "development",
-      "method": "fuzzy",
-      "runtime_seconds": 2.4844,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -886,31 +678,8 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5164,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-DEV-02",
-      "split": "development",
-      "method": "fuzzy",
-      "runtime_seconds": 2.6277,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -978,31 +747,8 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5342,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-HOLD-01",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5067,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -1070,31 +816,8 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.5278,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 7,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-HOLD-02",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.4936,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -1162,31 +885,8 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.484,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-HOLD-03",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5156,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -1254,31 +954,8 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.511,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-HOLD-04",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.5108,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -1346,31 +1023,8 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.512,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
-    },
-    {
-      "scenario_id": "DN-HOLD-05",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.3897,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
       "attraction_count": 0,
@@ -1438,7 +1092,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "crisp",
+      "method": "ahp",
       "runtime_seconds": 2.426,
       "status": "routing_unavailable",
       "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
@@ -1457,29 +1111,7 @@
         "food_rest": 20
       },
       "ranking": null
-    },
-    {
-      "scenario_id": "DN-HOLD-06",
-      "split": "holdout",
-      "method": "fuzzy",
-      "runtime_seconds": 2.376,
-      "status": "routing_unavailable",
-      "reason": "Không lấy được tuyến đường OSRM: [WinError 10061] No connection could be made because the target machine actively refused it",
-      "attraction_count": 0,
-      "block_count": 0,
-      "selected_poi_ids": [],
-      "selected_names": [],
-      "categories": [],
-      "drive_minutes": 0.0,
-      "return_time": null,
-      "reserve_minutes": null,
-      "objective": null,
-      "warnings": [],
-      "candidate_counts": {
-        "attractions": 40,
-        "food_rest": 20
-      },
-      "ranking": null
     }
-  ]
+  ],
+  "evidence_status": "HISTORICAL_SUBSET_NOT_RERUN"
 }

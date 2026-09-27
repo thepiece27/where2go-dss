@@ -1,5 +1,7 @@
 # Kiểm thử đổi sở thích tại Đà Nẵng — 21/09/2026
 
+> Bản ghi lịch sử của policy 1.1. Policy 3.0 đã thay hợp đồng ý định và được kiểm chứng riêng; không dùng số bên dưới như kết quả hiện hành.
+
 Đã sửa lỗi chọn **tâm linh** nhưng nhóm mặc định loại hết đền/chùa trước khi xếp hạng. Đây là xung đột bộ lọc, không phải cache danh sách gợi ý. Local storage lưu nháp lựa chọn; mỗi lần bấm **Nhận gợi ý**, web gửi yêu cầu mới. Đổi tiêu chí xóa kết quả cũ và yêu cầu bấm nút để cập nhật.
 
 ## Thay đổi

@@ -1,0 +1,83 @@
+{
+  "verified_on": "2026-09-25",
+  "scope": "User-intent filters, three-criterion recommendation ranking, retrieval evaluation, report notebook and responsive browser flow",
+  "dataset_version": "v2-c3ad315d02c5356a",
+  "policy_versions": {
+    "recommendation": "poi-recommendation-3.0",
+    "intent": "poi-intent-1.0",
+    "trip_choice": "trip-choice-1.1"
+  },
+  "source_data_changed": false,
+  "runtime": {
+    "catalog_poi_count": 16129,
+    "python_environment": "Existing sibling Where2Go virtual environment; application and tests imported from this checkout",
+    "live_url": "http://127.0.0.1:8010"
+  },
+  "checks": {
+    "pytest": {
+      "status": "PASS",
+      "passed": 141,
+      "warnings": 1,
+      "warning_scope": "Starlette TestClient dependency deprecation"
+    },
+    "ruff": "PASS",
+    "pip_check": "PASS",
+    "javascript_syntax": "PASS",
+    "git_diff_check": "PASS",
+    "core_markdown_local_links": {
+      "status": "PASS",
+      "files": 7,
+      "scope": "Current README, technical report, run guide, defense script, plan, documentation index and user-evaluation protocol"
+    },
+    "notebook": {
+      "status": "PASS",
+      "executed_code_cells": 14,
+      "figures": 15
+    },
+    "recommendation_evaluation": {
+      "status": "PASS",
+      "runs": 112,
+      "scenarios": 16,
+      "methods": [
+        "nearby",
+        "quality",
+        "taxonomy",
+        "text",
+        "weighted_sum",
+        "topsis_no_quality",
+        "topsis"
+      ],
+      "travel_metric": "geographic_distance",
+      "constraint_violations": 0,
+      "shortlist_candidate_recall_mean": 0.9689220134651787,
+      "shortlist_top10_recall_mean": 1.0,
+      "evaluation_sha256": "a27c374453b72da5b3c14e752ca7f4ccd9542871e0a4b82fc1bce8c7964aae2b",
+      "human_relevance": "NOT GRADED"
+    },
+    "browser": {
+      "status": "PASS",
+      "desktop_viewport": [1440, 1000],
+      "mobile_viewport": [390, 844],
+      "negative_intent": "PASS",
+      "natural_only_category": "PASS",
+      "explicit_exclusion_and_known_hours": "PASS",
+      "draft_persistence": "PASS",
+      "mobile_no_horizontal_overflow": "PASS",
+      "javascript_errors": [],
+      "artifact": "artifacts/policy-v3/verification.json"
+    },
+    "live_api": {
+      "catalog": "ready",
+      "policy_and_three_criteria": "PASS",
+      "routing": "unavailable",
+      "basemap": "version_mismatch"
+    }
+  },
+  "not_run": [
+    "Independent user study and relevance grading",
+    "Field verification",
+    "Real OSRM itinerary verification for policy 3.0",
+    "Matching basemap browser verification",
+    "Full catalog rebuild"
+  ]
+}

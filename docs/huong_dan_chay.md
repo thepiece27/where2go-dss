@@ -124,7 +124,7 @@ Lệnh chạy tất cả code cell bằng chính Python hiện tại và ghi out
 | Đường dẫn | Nội dung |
 |---|---|
 | [`notebooks/phan_tich_du_lieu_poi.ipynb`](../notebooks/phan_tich_du_lieu_poi.ipynb) | Notebook nguồn và kết quả đã chạy |
-| [`docs/assets/poi/`](assets/poi/) | 14 biểu đồ PNG dùng trực tiếp trong slide |
+| [`docs/assets/poi/`](assets/poi/) | 15 biểu đồ PNG dùng trực tiếp trong slide |
 | [`data/reports/analysis/`](../data/reports/analysis/) | Bảng CSV phân bổ, độ phủ, rating, nguồn, crawler, evaluator; JSON tổng hợp và checksum |
 
 Mở tương tác:
@@ -255,7 +255,7 @@ Node cần cho ba lệnh kiểm tra cú pháp, không cần cho API. Pytest ch�
 .venv\Scripts\python.exe scripts\evaluate_trip_choices.py --output artifacts\report-validation\trip_choices_evaluation.json
 ```
 
-Evaluator thứ nhất chạy 64 lượt; thứ hai bảy kịch bản cũ/mới. Xuất riêng để giữ phiếu chấm đã có: mặc định `evaluate_v2.py` ghi `data/manual/v2_owner_grading.xlsx`, có thể ghi đè kết quả chấm nếu dùng không chú ý. Không chạy hai evaluator cùng lúc nếu muốn đo latency so sánh.
+Evaluator thứ nhất chạy 48 lượt (gần nhất, trọng số đều, AHP thường); thứ hai bảy kịch bản cũ/mới. Xuất riêng để giữ phiếu chấm đã có: mặc định `evaluate_v2.py` ghi `data/manual/v2_owner_grading.xlsx`, có thể ghi đè kết quả chấm nếu dùng không chú ý. Không chạy hai evaluator cùng lúc nếu muốn đo latency so sánh.
 
 Notebook đọc báo cáo chuẩn trong `data/reports/v2/`, không tự thay bằng một lượt thực nghiệm trong artifacts. Khi đổi snapshot và chấp nhận kết quả mới, cập nhật bộ báo cáo chuẩn nhất quán rồi chạy notebook lại. Phiếu chưa chấm nghĩa là đánh giá người dùng **NOT RUN**.
 
@@ -297,12 +297,12 @@ Không xóa workbook backup, PDF paper, dữ liệu curation, cache nguồn cầ
 Chạy khi đã có catalog, độc lập với server web. OSRM là tùy chọn; metadata ghi rõ mỗi bối cảnh dùng mode nào.
 
 ```powershell
-.venv\Scripts\python.exe -X utf8 scripts\evaluate_recommendations.py
-# Nếu chủ động đánh giá chỉ với khoảng cách địa lý, lưu thành một đợt riêng:
-.venv\Scripts\python.exe -X utf8 scripts\evaluate_recommendations.py --geographic-only --output artifacts\recommendation-geographic
+.venv\Scripts\python.exe -X utf8 scripts\evaluate_recommendations.py --geographic-only
+# Chỉ chạy đối chiếu OSRM thành đợt riêng khi service và manifest đúng snapshot:
+.venv\Scripts\python.exe -X utf8 scripts\evaluate_recommendations.py --output artifacts\recommendation-osrm
 ```
 
-Đợt mặc định xuất `data/reports/recommendations/`: `evaluation.json` (96 lượt), `matrices.json`, `sensitivity.json`, `grading_template.csv`, `grading_manifest.json`. Sáu phương pháp dùng cùng ma trận trong một bối cảnh. Template được tái tạo nhưng script không ghi đè phiếu đã chấm mang tên khác.
+Đợt hiện tại xuất `data/reports/recommendations/`: `evaluation.json` (112 lượt), `matrices.json`, `sensitivity.json`, `grading_template.csv`, `grading_manifest.json`. Bảy phương pháp gồm gần nhất, rating, taxonomy, TF-IDF, tổng trọng số, TOPSIS bỏ rating và TOPSIS ba tiêu chí. Policy `poi-recommendation-3.0` dùng đúng điều kiện của từng kịch bản, kiểm tra vi phạm và so shortlist với pool đầy đủ. Template được tái tạo nhưng script không ghi đè phiếu đã chấm mang tên khác.
 
 **Trình tự chấm:** giữ nguyên đợt đánh giá; sao chép template thành `data/manual/recommendation_grades.csv`. Nhóm chấm đồng thuận `relevance_0_3`: 0 không phù hợp, 1 ít phù hợp, 2 phù hợp, 3 rất phù hợp; bổ sung `notes`. Giữ nguyên các cột ngữ cảnh/POI và không xem `evaluation.json` để tránh biết phương pháp trước khi chấm. Không điền nhãn dựa vào score tự động.
 

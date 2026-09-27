@@ -1,9 +1,8 @@
-"""Three-criterion fuzzy AHP weights and crisp TOPSIS, shared by API/evaluation."""
-import math
+"""Three-criterion AHP weights and TOPSIS for the legacy planner."""
 import re
 import unicodedata
 import numpy as np
-from .config import CRITERIA, GAMMA, CATEGORY_TEXT
+from .config import CRITERIA, CATEGORY_TEXT
 
 
 def normalize(text):
@@ -16,29 +15,22 @@ def pairwise_matrix(p):
     return np.array([[1, a, b], [1/a, 1, c], [1/b, 1/c, 1]], dtype=float)
 
 
-def matrix_weights(matrix, gamma=GAMMA):
+def matrix_weights(matrix):
     a = np.asarray(matrix, dtype=float)
     if a.shape != (3, 3) or not np.isfinite(a).all() or (a <= 0).any():
         raise ValueError("Ma trận AHP phải là 3×3, hữu hạn và dương")
     if not np.allclose(np.diag(a), 1) or not np.allclose(a * a.T, 1):
         raise ValueError("Ma trận AHP phải có đường chéo 1 và reciprocal")
-    if not math.isfinite(gamma) or gamma < 1:
-        raise ValueError("gamma phải >= 1; gamma=1 là baseline crisp")
     eigenvalue = float(np.max(np.linalg.eigvals(a).real))
     cr = max(0.0, (eigenvalue - 3) / 2 / 0.58)
     if cr > 0.1 + 1e-10:
         raise ValueError(f"Phán đoán chưa nhất quán: CR={cr:.3f} > 0.1. Hãy sửa ưu tiên.")
-    lower, upper = a / gamma, a * gamma
-    np.fill_diagonal(lower, 1)
-    np.fill_diagonal(upper, 1)
-    gm = np.exp(np.log(np.stack([lower, a, upper], axis=2)).mean(axis=1))
-    fuzzy = gm / gm.sum(axis=0)[::-1]
-    crisp = fuzzy.mean(axis=1)
-    return crisp / crisp.sum(), cr
+    geometric = np.exp(np.log(a).mean(axis=1))
+    return geometric / geometric.sum(), cr
 
 
-def weights(pairwise, gamma=GAMMA):
-    return matrix_weights(pairwise_matrix(pairwise), gamma)
+def weights(pairwise):
+    return matrix_weights(pairwise_matrix(pairwise))
 
 
 def topsis(values, weight, benefits=(True, False, True)):
@@ -68,8 +60,10 @@ def preference(poi, interests):
     return len(wanted & tokens) / len(wanted)
 
 
-def rank_pois(pois, durations_from_start, request, method="fuzzy"):
-    w, cr = weights(request.pairwise_preferences, gamma=1 if method == "crisp" else GAMMA)
+def rank_pois(pois, durations_from_start, request, method="ahp"):
+    if method not in ("ahp", "nearby", "equal_sum"):
+        raise ValueError("Unknown legacy ranking method")
+    w, cr = weights(request.pairwise_preferences)
     values = [[preference(p, request.interests), float(t), p["data_confidence"]]
               for p, t in zip(pois, durations_from_start, strict=True)]
     if method == "nearby":

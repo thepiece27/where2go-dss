@@ -6,7 +6,7 @@
 
 # Kịch bản bảo vệ — Hệ gợi ý POI dựa trên nội dung và ngữ cảnh, kết hợp ra quyết định đa tiêu chí
 
-Dùng cùng [báo cáo kỹ thuật](bao_cao_du_an_poi.md), [hướng dẫn chạy](huong_dan_chay.md) và [notebook đã thực thi](../notebooks/phan_tich_du_lieu_poi.ipynb). Snapshot `v2-ae66988a1053d0de`, policy `poi-recommendation-1.0`. Đây là khung nội dung để dựng slide và luyện nói; không đưa nguyên các đoạn văn dài lên slide.
+Dùng cùng [báo cáo kỹ thuật](bao_cao_du_an_poi.md), [hướng dẫn chạy](huong_dan_chay.md) và [notebook đã thực thi](../notebooks/phan_tich_du_lieu_poi.ipynb). Snapshot `v2-c3ad315d02c5356a`, policy `poi-recommendation-3.0`. Đây là khung nội dung để dựng slide và luyện nói; không đưa nguyên các đoạn văn dài lên slide.
 
 Thông điệp: **Từ dữ liệu POI nhiều nguồn và chưa đồng đều, nhóm xây dựng hệ gợi ý theo nhu cầu khai báo, kết hợp ngữ cảnh và đa tiêu chí, giải thích được kết quả và công bố rõ giới hạn.** Người dùng có thể chuyển POI đã chọn sang chức năng lập lịch.
 
@@ -23,8 +23,8 @@ Thông điệp: **Từ dữ liệu POI nhiều nguồn và chưa đồng đều,
 | 7 | Contextualized POI: ngữ cảnh và regularization | 1:30 | 10:00 |
 | 8 | Đối chiếu và lựa chọn phương pháp | 1:00 | 11:00 |
 | 9 | Biểu diễn nội dung và lấy ứng viên | 1:30 | 12:30 |
-| 10 | Bốn tiêu chí và ngữ cảnh | 1:30 | 14:00 |
-| 11 | Mẫu ưu tiên, AHP và Fuzzy AHP | 1:30 | 15:30 |
+| 10 | Ba tiêu chí và điều kiện cứng | 1:30 | 14:00 |
+| 11 | Trọng số preset và đối chứng đơn giản | 1:30 | 15:30 |
 | 12 | TOPSIS và giải thích | 1:30 | 17:00 |
 | 13 | Demo gợi ý → chọn → lịch trình | 3:00 | 20:00 |
 | 14 | Thiết kế thực nghiệm | 1:30 | 21:30 |
@@ -65,7 +65,7 @@ Không dùng ảnh timeline làm hình trung tâm của slide bài toán.
 
 **Hình:** OSM PBF + ba workbook kế thừa + quan sát bổ sung → chuẩn hóa → ghép thực thể → chọn giá trị có provenance → SQLite → API/CSV/notebook.
 
-**Lời nói:** “Các workbook là phiên bản quan sát chồng lặp, không phải ba tập POI độc lập để cộng số dòng. Chúng em giữ bằng chứng nguồn theo từng trường, ghép về canonical ID và tách dữ liệu gốc khỏi catalog phục vụ. Snapshot có 16.018 POI; số này mô tả dữ liệu nhóm có, không phải tổng POI thật của Việt Nam.”
+**Lời nói:** “Các workbook là phiên bản quan sát chồng lặp, không phải ba tập POI độc lập để cộng số dòng. Chúng em giữ bằng chứng nguồn theo từng trường, ghép về canonical ID và tách dữ liệu gốc khỏi catalog phục vụ. Snapshot có 16.129 POI; số này mô tả dữ liệu nhóm có, không phải tổng POI thật của Việt Nam.”
 
 Chỉ rõ địa giới snapshot khi nói Hà Nội/Đà Nẵng, nhất là dữ liệu Hội An thuộc địa bàn Quảng Nam cũ.
 
@@ -75,7 +75,7 @@ Chỉ rõ địa giới snapshot khi nói Hà Nội/Đà Nẵng, nhất là dữ
 
 **Lời nói:** “Pipeline thu thập theo địa điểm mục tiêu, lưu quan sát và bằng chứng; khâu review kiểm tra tên, vị trí, loại hình, rating và ảnh. Tên trùng, ảnh đại diện hoặc tọa độ khung nhìn có thể làm dữ liệu sai dù request thành công. Vì thế chỉ quan sát đủ bằng chứng được chọn vào catalog; phần chưa rõ giữ trạng thái cần kiểm tra.”
 
-Rating chỉ phủ khoảng 0,54% toàn catalog theo snapshot; mẫu số này khác tập đủ điều kiện đề xuất. Sau cổng phục vụ, Hà Nội có 742 và Đà Nẵng có 493 POI đề xuất, trước lọc ngày/bán kính. Thiếu dữ liệu mô tả, rating, giờ hoặc lối tiếp cận là hạn chế thực của hệ thống.
+Snapshot hiện có 179 POI có rating được chọn trong 16.129 POI (khoảng 1,11%); mẫu số này khác tập phục vụ. Tập tham quan qua cổng metadata, chưa lọc ngày/bán kính, có 71 POI Hà Nội và 152 POI Đà Nẵng; nhóm Đà Nẵng có 128/152 POI có rating. Thiếu dữ liệu mô tả, rating, giờ hoặc lối tiếp cận là hạn chế thực của hệ thống.
 
 **Chốt:** “Làm sạch danh tính và minh bạch dữ liệu thiếu có giá trị trực tiếp với chất lượng gợi ý; thêm thuật toán không tự chữa được dữ liệu nguồn.”
 
@@ -103,27 +103,25 @@ Nguồn: PDF Contextualized POI, §3–5; báo cáo §11. Không gọi phương 
 
 ### Slide 9 — Nội dung và truy hồi ứng viên
 
-**Trên slide:** tên/bí danh/mô tả/loại hình/tags → TF-IDF + cosine; công thức $P=0,7P_{tax}+0,3P_{text}$; hợp 40 nội dung + 40 gần + 40 chất lượng.
+**Trên slide:** ý định có từ điển; taxonomy riêng; tên/bí danh/mô tả nguồn → TF-IDF + cosine; $P=0,75P_{tax}+0,25P_{text}$; hợp 40 nội dung + 40 gần + 40 chất lượng.
 
-**Lời nói:** “TF-IDF biểu diễn các từ phân biệt trong metadata; cosine đo tương đồng với yêu cầu. Taxonomy bổ sung chủ đề có cấu trúc. Hệ số 0,7/0,3 do nhóm thiết kế, chưa tối ưu trên nhãn. Nếu chỉ lấy ba mươi điểm gần trước khi xếp hạng, có thể bỏ sót nơi rất hợp sở thích. Vì vậy nhóm hợp ba nhánh truy hồi rồi khử trùng, tối đa 120 ứng viên.”
+**Lời nói:** “TF-IDF chỉ dùng văn bản nguồn để không tính lại tags do category sinh ra; taxonomy xử lý chủ đề có cấu trúc. Phủ định, loại trừ và ‘chỉ tìm’ được áp dụng trước xếp hạng. Hệ số 0,75/0,25 là thiết kế, chưa tối ưu trên nhãn. Nhóm hợp ba nhánh truy hồi rồi đo lại với pool đầy đủ.”
 
-Nêu hạn chế: mô tả thưa, bỏ dấu, khớp từ chưa hiểu đầy đủ đồng nghĩa/phủ định; shortlist vẫn có thể bỏ sót POI.
+Nêu hạn chế: từ điển chỉ hiểu các cụm được hỗ trợ; mô tả thưa, bỏ dấu và TF-IDF chưa hiểu ngữ nghĩa sâu; shortlist vẫn có thể bỏ sót POI.
 
-### Slide 10 — Bốn tiêu chí và điều kiện bắt buộc
+### Slide 10 — Ba tiêu chí và điều kiện bắt buộc
 
-**Trên slide:** sở thích ↑; rating có shrinkage ↑; chi phí đi lại ↓; bằng chứng dữ liệu ↑.
+**Trên slide:** lọc bắt buộc → sở thích ↑; rating/prior ↑; chi phí đi lại ↓; bằng chứng dữ liệu chỉ cảnh báo.
 
-**Lời nói:** “Đóng cửa và ngoài phạm vi là điều kiện lọc. Các ứng viên còn lại được đánh đổi qua bốn tiêu chí. Rating hiệu chỉnh theo số lượt và prior để giảm tác động mẫu nhỏ; thiếu rating nhận giá trị trung tính theo chính sách, không tạo đánh giá giả. OSRM đầy đủ thì dùng giây; thiếu đường cho một phần pool thì cả lượt dùng km đường chim bay có nhãn.”
+**Lời nói:** “Đóng cửa, bán kính, chỉ loại hình, loại trừ và giờ bắt buộc được lọc trước. TOPSIS chỉ đánh đổi ba tiêu chí. Rating có quan sát được shrinkage; thiếu rating dùng prior nhóm nhưng ghi rõ `observed=false`. Độ đầy đủ dữ liệu không còn được cộng như độ hấp dẫn. OSRM đầy đủ dùng giây; nếu thiếu, cả lượt dùng km đường chim bay có nhãn.”
 
 Không đặt giây của một POI và km của POI khác trong cùng cột. Giờ mở cửa chưa biết không được trình bày thành đang mở.
 
-### Slide 11 — Trọng số, AHP và điều phải nói về fuzzy
+### Slide 11 — Trọng số preset và đối chứng đơn giản
 
-**Trên slide:** bốn mẫu ưu tiên; ma trận $a_{ij}=w_i/w_j$; $CR\le0,1$; ghi chú “bất định đồng đều ⇒ fuzzy/crisp cùng trọng số”.
+**Trên slide:** bốn preset ba tiêu chí; trọng số dùng trực tiếp; tổng trọng số và TOPSIS dùng cùng ma trận/chuẩn hóa.
 
-**Lời nói:** “Giao diện dùng mẫu có sẵn để người dùng không cần hiểu sáu so sánh cặp. Các trọng số là chính sách nhóm đề xuất. Ma trận dựng từ tỷ số trọng số nhất quán theo cấu trúc; CR thấp không chứng minh trọng số đúng với mọi người. Fuzzy AHP có trong mã nghiên cứu, nhưng khi bất định bằng nhau trên mọi cặp, chuẩn hóa làm ảnh hưởng fuzzy triệt tiêu. Thực nghiệm của nhóm thể hiện đúng tính chất này.”
-
-Không tuyên bố fuzzy giảm mơ hồ và tăng chất lượng nếu chưa có phán đoán bất định hoặc nhãn chứng minh.
+**Lời nói:** “Trọng số là chính sách thiết kế, chưa phải kết quả khảo sát chuyên gia. Trang gợi ý dùng trực tiếp trọng số này. Chúng em thêm tổng trọng số làm đối chứng để kiểm tra liệu TOPSIS có đem lại lợi ích so với cách đơn giản hơn. AHP thường chỉ nằm ở API planner nghiên cứu có đầu vào so sánh cặp; CR không chứng minh chất lượng sở thích.”
 
 ### Slide 12 — TOPSIS và lý do hiển thị
 
@@ -145,25 +143,25 @@ Không tuyên bố fuzzy giảm mơ hồ và tăng chất lượng nếu chưa c
 
 ### Slide 14 — Đánh giá cái gì và bằng cách nào?
 
-**Trên slide:** 16 bối cảnh, 4 development/12 holdout; sáu phương pháp; ba tầng kiểm chứng: phần mềm / đặc tính kết quả / relevance.
+**Trên slide:** policy `poi-recommendation-3.0`, snapshot `v2-c3ad315d02c5356a`; 16 bối cảnh × 7 phương pháp.
 
-**Lời nói:** “Đây là chia kịch bản yêu cầu, không phải huấn luyện từ check-in. Mỗi bối cảnh dùng cùng pool/ma trận cho Nearby, Quality, Content, Equal TOPSIS, AHP và Fuzzy AHP. Nhóm đã chạy 96 lượt. Để đo relevance, công cụ gộp Top-10, xáo trộn và ẩn phương pháp để nhóm chấm 0–3.”
+**Lời nói:** “Chúng em chạy cùng pool cho gần nhất, rating, taxonomy, TF-IDF, tổng trọng số, TOPSIS bỏ rating và TOPSIS đầy đủ. Có 0 vi phạm điều kiện trong 112 lượt; shortlist giữ 100% Top-10 của pool đầy đủ trong các ca này. Đây là kiểm tra kỹ thuật trên kịch bản, không phải lịch sử người dùng hay bằng chứng relevance.”
 
-Nếu phiếu chưa chấm, nói **chưa có Precision/NDCG**. Nếu đã chấm, thay slide bằng số thật, số bối cảnh đủ nhãn và hash đợt tương ứng; nêu nhóm tác giả là người chấm.
+Không trình bày kiểm thử phần mềm hay việc danh sách thay đổi như độ chính xác gợi ý. Nhãn chưa chấm thì giữ `NOT GRADED`.
 
 ### Slide 15 — Kết quả quan sát được
 
-**Hình:** `11_goi_y_top_k.png`; bảng sáu phương pháp trong báo cáo §9.0.
+**Hình:** `11_goi_y_top_k.png`; số liệu hiện tại trong `data/reports/analysis/recommendation_by_split.csv`.
 
-**Lời nói:** “Trên holdout, Nearby gần nhất trung bình 2,31 km đường chim bay; Content là 8,61 km; AHP là 6,69 km. AHP có trung bình 3,67 loại hình trong Top-10. Những con số thể hiện đánh đổi thiết kế. Không thể kết luận AHP chính xác hơn chỉ vì khoảng cách hoặc độ đa dạng nằm giữa hai baseline.”
+**Lời nói:** “Khoảng cách và độ đa dạng mô tả đánh đổi của các phương pháp. Chúng chưa trả lời người dùng thích danh sách nào hơn. Điểm giá trị của đối chứng tổng trọng số là kiểm tra xem độ phức tạp của TOPSIS có cần thiết hay không sau khi có nhãn.”
 
-12/16 bối cảnh có đủ đường OSRM; bốn bối cảnh fallback địa lý. Fuzzy và crisp trùng Top-10 trong 16/16. Không dùng số phương án lịch làm “accuracy” của gợi ý.
+Không dùng các con số OSRM hoặc bảng snapshot lịch sử để diễn giải bộ kết quả hiện tại. Chưa có đánh giá người dùng độc lập.
 
-### Slide 16 — Độ nhạy giúp hiểu giới hạn
+### Slide 16 — Độ nhạy và giới hạn
 
-**Hình:** `13_do_nhay_goi_y.png`, có thể thêm `14_ngu_canh_duong_di.png` ở phụ lục.
+**Hình:** `13_do_nhay_goi_y.png`; bảng `recommendation_summary.json` sau chạy notebook.
 
-**Lời nói:** “So với Cân bằng, mẫu Đi gần có overlap Top-10 trung bình khoảng 0,769, chứng tỏ chính sách ưu tiên tạo khác biệt. Đổi pool 20 hoặc 80 so với 40 có overlap khoảng 0,938 và 0,963. Chỉ trên 12 ca có OSRM, đổi sang chi phí địa lý có overlap khoảng 0,942. Overlap không đo thứ tự hay độ đúng; độ nhạy cho biết kết quả phụ thuộc lựa chọn thiết kế.”
+**Lời nói:** “Đổi preset và pool có thể làm đổi Top-10. Overlap chỉ đo thành phần trùng nhau, không đo độ đúng hoặc thứ tự. Đợt hiện tại không có ca đường bộ để kết luận tác động của OSRM. Phủ định và điều kiện bắt buộc đã có test, nhưng thử người dùng độc lập và xác minh thực địa vẫn chưa chạy.”
 
 ### Slide 17 — Điểm tốt, chưa tốt và phát triển
 
@@ -189,21 +187,20 @@ Nếu phiếu chưa chấm, nói **chưa có Precision/NDCG**. Nếu đã chấm
 | Là lọc nội dung hay cộng tác? | Nội dung và ngữ cảnh với MCDM. Chưa có ma trận tương tác user–item để gọi là CF. Rating Google không thay ma trận đó. |
 | TF-IDF có phải học máy không? | Fit từ vựng và IDF của corpus là biểu diễn thống kê nội dung; chưa học mô hình hành vi hay sở thích từ nhãn. |
 | Cá nhân hóa ở đâu? | Theo sở thích người dùng khai báo cho yêu cầu hiện tại; không tuyên bố học cá nhân hóa dài hạn. |
-| AHP sinh từ trọng số có vòng tròn không? | Mẫu trọng số là chính sách; tạo tỷ số để đi qua cơ chế AHP nhất quán. Không dùng CR=0 làm bằng chứng elicitation khách quan. |
-| Vậy fuzzy có ích gì? | Cấu hình đồng đều hiện tại không đổi trọng số. Được giữ để nghiên cứu bất định theo cặp, chưa chứng minh giá trị gia tăng. |
+| Vì sao không tính AHP cho preset? | Trọng số đã biết được dùng trực tiếp. AHP thường chỉ còn ở planner nghiên cứu khi nhận so sánh cặp. |
 | Sao không dùng LORE/graph của paper? | Thiếu chuỗi check-in/social/context hành vi. Nhóm so sánh điều kiện dữ liệu và kế thừa cách đánh giá, chưa tái hiện mô hình đó. |
-| Tại sao 0,7/0,3, prior 50, shortlist 40? | Tham số thiết kế ban đầu; đã có sensitivity pool/trọng số, cần nhãn để chọn/tối ưu có căn cứ. |
-| Thiếu rating dùng 0,5 có công bằng không? | Đây là mặc định có rủi ro, có thể thấp hơn nhóm có rating; công bố missingness và cần ablation/nhãn để kiểm tra thiên lệch. |
+| Tại sao 0,75/0,25, prior 50, shortlist 40? | Tham số thiết kế ban đầu; đã có sensitivity và đối chiếu pool đầy đủ, vẫn cần nhãn để chọn/tối ưu có căn cứ. |
+| Thiếu rating xử lý thế nào? | Dùng prior theo địa phương–category/category/provider khi đủ mẫu, ghi `observed=false`; có ablation bỏ rating nhưng chưa có nhãn để kết luận công bằng. |
 | Không có OSRM còn là context-aware không? | Có vị trí, bán kính, ngày và chi phí địa lý có nhãn. Không giả có thời gian lái xe hoặc lịch khả thi. |
 | Precision/NDCG đâu? | Khi chưa chấm: chưa có. Sau chấm: relevance ≥2; NDCG trên pooled set đã chấm, không suy Recall toàn catalog. |
 | 4/12 có phải train/test không? | Development/holdout theo yêu cầu, không phải check-in training/test. Holdout đã xem không được dùng tối ưu rồi tuyên bố đánh giá độc lập. |
-| Tại sao có POI xa hoặc khác loại trong Top-K? | Category là ưu tiên mềm, bốn tiêu chí có bù trừ; xem ma trận và trọng số cụ thể. Không bảo đảm mọi POI đều đúng ý khi metadata thưa. |
+| Tại sao có POI xa hoặc khác loại trong Top-K? | Category có thể là ưu tiên mềm; “chỉ tìm” và loại trừ là điều kiện cứng. Trong tập còn lại, ba tiêu chí có bù trừ; xem `interpreted_request` và ma trận. |
 | Điểm cao nhất có đi đầu lịch trình không? | Không. Thứ tự ghé còn phụ thuộc đường, giờ mở cửa, thời lượng và điểm bắt buộc. |
 | Kết quả có tối ưu toàn cục không? | Không: truy hồi giới hạn và planner beam search có giới hạn. TOPSIS chỉ xếp hạng tập được đưa vào. |
 
 ## 4. Phụ lục và chuẩn bị trước buổi bảo vệ
 
-Chuẩn bị phụ lục công thức TF-IDF/cosine, taxonomy, shrinkage rating, Haversine, confidence, AHP/CR, fuzzy geometric mean/giải mờ, TOPSIS, Precision/NDCG, entropy/coverage/overlap. Mỗi công thức ghi biến, đơn vị, giả định và vị trí mã nguồn trong báo cáo. Phần paper ghi đúng số phương trình/trang PDF; không gán công thức paper thành phương pháp đã triển khai.
+Chuẩn bị phụ lục công thức TF-IDF/cosine, taxonomy, shrinkage/prior rating, Haversine, mức đầy đủ bằng chứng, AHP thường/CR của planner, tổng trọng số, TOPSIS, Precision/NDCG, coverage/overlap. Mỗi công thức ghi biến, đơn vị, giả định và vị trí mã nguồn trong báo cáo. Không gán công thức paper thành phương pháp đã triển khai.
 
 Chạy lại notebook và smoke trước buổi demo; dùng cùng dataset/policy với số trên slide. Kiểm tra riêng routing, ảnh và bản đồ; chuẩn bị ảnh đã chụp trong `artifacts/recommendations/`. Nếu đã có nhãn nhóm chấm, chạy `--grades`, kiểm tra hash rồi cập nhật cả notebook và slide. Nếu chưa có, giữ nhãn NOT GRADED.
 

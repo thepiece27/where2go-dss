@@ -151,7 +151,7 @@ def test_v2_rejects_inconsistent_ahp():
         response = api.post("/api/v2/itineraries", json={
             "start": {"latitude": 21.03, "longitude": 105.85}, "date": "2026-09-17",
             "ahp": {"criteria_order": ["preference_match", "place_quality", "drive_time", "data_confidence"],
-                    "comparisons": [9, 9, 1 / 9, 9, 1 / 9, 9], "uncertainty": [1.2] * 6},
+                    "comparisons": [9, 9, 1 / 9, 9, 1 / 9, 9]},
         })
         assert response.status_code == 422
         assert "CR=" in response.text

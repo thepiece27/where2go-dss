@@ -13,6 +13,7 @@ const topics = [
   "nghệ thuật",
   "chụp ảnh",
   "tâm linh",
+  "biển",
 ];
 let activeTopics = new Set();
 function restore() {
@@ -27,11 +28,16 @@ function restore() {
   $("preset").value = r.preset || "balanced";
   $("tourismScope").value = r.scope ?? (city === "Đà Nẵng" ? "danang_hoian" : "");
   $("tourismOnly").value = String(r.tourismOnly ?? true);
+  $("categoryMode").value = r.categoryMode || "preferred";
+  $("requireKnownHours").checked = !!r.requireKnownHours;
+  $("allowNonMatching").checked = !!r.allowNonMatching;
   activeTopics = new Set(r.topics || []);
   for (const option of $("categories").options)
     option.selected = (r.categories || [d.fields.tripTheme]).includes(
       option.value,
     );
+  for (const option of $("excludedCategories").options)
+    option.selected = (r.excludedCategories || []).includes(option.value);
   renderTopics();
   tripStore.nav(city, d.selected.length);
 }
@@ -77,6 +83,12 @@ function save() {
     preset: $("preset").value,
     scope: $("tourismScope").value,
     tourismOnly: $("tourismOnly").value === "true",
+    categoryMode: $("categoryMode").value,
+    excludedCategories: [...$("excludedCategories").selectedOptions].map(
+      (o) => o.value,
+    ),
+    requireKnownHours: $("requireKnownHours").checked,
+    allowNonMatching: $("allowNonMatching").checked,
   };
   if (moved) d.startLabel = "Vị trí đã chọn trong yêu cầu gợi ý";
   if (previous !== JSON.stringify(d.fields)) d.stale = !!(d.result || d.chosen);
@@ -125,13 +137,10 @@ async function recommend() {
   $("resultSummary").textContent =
     "Đang đối chiếu sở thích, vị trí và dữ liệu địa điểm…";
   try {
-    const interests = [
-      ...activeTopics,
-      ...r.text
+    const interests = r.text
         .split(/[,;\n]/)
         .map((x) => x.trim())
-        .filter(Boolean),
-    ];
+        .filter(Boolean);
     const data = await post(
       "/api/v2/recommendations",
       {
@@ -144,7 +153,12 @@ async function recommend() {
           longitude: Number(d.fields.longitude),
         },
         interests,
+        experience_topics: [...activeTopics],
         preferred_categories: r.categories,
+        excluded_categories: r.excludedCategories,
+        category_mode: r.categoryMode,
+        require_known_hours: r.requireKnownHours,
+        allow_non_matching: r.allowNonMatching,
         preset: r.preset,
         radius_km: r.radius,
         top_k: 10,
@@ -156,11 +170,25 @@ async function recommend() {
     lastResult = data;
     render();
     $("resultSummary").textContent = data.items.length
-      ? `${data.items.length} gợi ý · xếp hạng từ ${data.candidate_count} ứng viên trong ${data.eligible_count} POI đáp ứng điều kiện.`
+      ? `${data.items.length} gợi ý · xếp hạng từ ${data.candidate_count} ứng viên có bằng chứng phù hợp (${data.matching_count}/${data.eligible_count} POI qua điều kiện cứng).`
       : data.message;
+    const understood = data.interpreted_request,
+      understoodParts = [
+        understood.positive_concepts.length
+          ? `chủ đề ${understood.positive_concepts.join(", ")}`
+          : "",
+        understood.preferred_categories.length
+          ? `${understood.category_mode === "only" ? "chỉ " : "ưu tiên "}${understood.preferred_categories.map((x) => labels[x] || x).join(", ")}`
+          : "",
+        understood.excluded_categories.length
+          ? `loại ${understood.excluded_categories.map((x) => labels[x] || x).join(", ")}`
+          : "",
+      ].filter(Boolean);
     tell(
-      (data.personalized
-        ? "Gợi ý theo sở thích bạn khai báo. "
+      (understoodParts.length
+        ? `Hệ thống hiểu: ${understoodParts.join("; ")}. `
+        : data.personalized
+          ? "Gợi ý theo nhu cầu bạn khai báo. "
         : "Chưa khai báo sở thích: gợi ý theo vị trí và mẫu ưu tiên. ") +
         (data.filter_message ? `${data.filter_message} ` : "") +
         data.routing_message,
@@ -179,6 +207,9 @@ for (const [value, text] of Object.entries(labels)) {
   const option = node("option", text);
   option.value = value;
   $("categories").append(option);
+  const excluded = node("option", text);
+  excluded.value = value;
+  $("excludedCategories").append(excluded);
 }
 restore();
 $("recommendForm").onsubmit = (e) => {

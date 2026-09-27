@@ -1,4 +1,4 @@
-"""Run 16 v2 scenarios on four ranking methods through the shared service."""
+"""Run 16 v2 scenarios on three ranking methods through the shared service."""
 import argparse
 from datetime import date
 import hashlib
@@ -19,7 +19,7 @@ from where2go.v2.models import ItineraryRequestV2
 from where2go.v2.service import ItineraryService
 
 
-METHODS = ("nearby", "equal", "crisp", "fuzzy")
+METHODS = ("nearby", "equal", "ahp")
 
 
 def scenario_request(row):
@@ -94,7 +94,7 @@ def run(args):
     rng = random.Random(20260917)
     method_key = {}
     for scenario in scenarios:
-        codes = ["A", "B", "C", "D"]
+        codes = [chr(ord("A") + i) for i in range(len(METHODS))]
         rng.shuffle(codes)
         method_key[scenario["scenario_id"]] = dict(zip(METHODS, codes))
     payload = {

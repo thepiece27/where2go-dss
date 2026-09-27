@@ -1,24 +1,36 @@
 {
   "dataset_version": "v2-c3ad315d02c5356a",
-  "policy_version": "poi-recommendation-1.0",
-  "runs": 96,
+  "policy_version": "poi-recommendation-3.0",
+  "runs": 112,
   "scenarios": 16,
   "travel_modes": {
     "geographic_distance": 16
   },
-  "same_crisp_fuzzy_top10": 16,
+  "methods": [
+    "nearby",
+    "quality",
+    "taxonomy",
+    "text",
+    "weighted_sum",
+    "topsis_no_quality",
+    "topsis"
+  ],
   "quality_status": "NOT GRADED",
   "preset_overlap": {
     "balanced": 1.0,
-    "interests": 0.9125,
-    "nearby": 0.75625,
-    "quality": 0.8250000000000001
+    "interests": 0.98125,
+    "nearby": 0.86875,
+    "quality": 0.91875
   },
   "pool_overlap": {
-    "20": 0.86875,
+    "20": 0.98125,
     "40": 1.0,
-    "80": 0.9375
+    "80": 1.0
   },
   "road_geo_overlap_mean": null,
-  "evaluation_sha256": "3ea0d407e54cc7d0d39035237285c0e2dbdcf6ffe6efe113f361ded6383810f5"
+  "shortlist_candidate_recall_mean": 0.9689220134651787,
+  "shortlist_top10_recall_mean": 1.0,
+  "constraint_violations": 0,
+  "independent_user_study": "NOT RUN",
+  "evaluation_sha256": "a27c374453b72da5b3c14e752ca7f4ccd9542871e0a4b82fc1bce8c7964aae2b"
 }

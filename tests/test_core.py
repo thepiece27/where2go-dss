@@ -55,9 +55,10 @@ def test_permutations():
         assert np.allclose(actual,expected[list(p)])
 
 
-def test_common_fuzzy_spread_equals_crisp_weights():
-    a=np.array([[1,3,2],[1/3,1,1/2],[1/2,2,1]])
-    assert np.allclose(matrix_weights(a,1)[0],matrix_weights(a,1.2)[0])
+def test_ahp_recovers_consistent_pairwise_judgments():
+    expected=np.array([.6,.3,.1])
+    actual,cr=matrix_weights(expected[:,None]/expected[None,:])
+    assert np.allclose(actual,expected) and cr < 1e-10
 
 
 def test_lunch_break_and_directed_return():

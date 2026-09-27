@@ -15,7 +15,6 @@ DEFAULT_COMPARISONS = [DEFAULT_WEIGHTS[i] / DEFAULT_WEIGHTS[j] for i in range(4)
 class AHPPreferences(StrictModel):
     criteria_order: list[str] = Field(default_factory=lambda: list(CRITERIA), min_length=4, max_length=4)
     comparisons: list[float] = Field(default_factory=lambda: DEFAULT_COMPARISONS.copy(), min_length=6, max_length=6)
-    uncertainty: list[float] = Field(default_factory=lambda: [1.2] * 6, min_length=6, max_length=6)
 
     @model_validator(mode="after")
     def validate_judgments(self):
@@ -23,10 +22,8 @@ class AHPPreferences(StrictModel):
             raise ValueError("criteria_order phải đúng hợp đồng API v2")
         if any(not 1 / 9 <= value <= 9 for value in self.comparisons):
             raise ValueError("Mỗi phán đoán AHP phải thuộc [1/9, 9]")
-        if any(not 1 <= value <= 2 for value in self.uncertainty):
-            raise ValueError("Mỗi hệ số bất định phải thuộc [1, 2]")
         from .ranking import ahp_weights
-        ahp_weights(self.comparisons, self.uncertainty)
+        ahp_weights(self.comparisons)
         return self
 
 

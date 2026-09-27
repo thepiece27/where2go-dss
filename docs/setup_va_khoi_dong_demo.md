@@ -291,7 +291,7 @@ $demoRecommendation | Select-Object dataset_version,policy_version,eligible_coun
 $demoRecommendation.items | Select-Object rank,name,category
 ```
 
-Ca này trả 10 POI từ 78 ứng viên trong 87 POI đủ điều kiện, chính sách `poi-recommendation-1.1`. Ba điểm đầu: **Bãi Biển Thiên Đường**, **Đường hoa Bạch Đằng**, **Công viên Nam Dương**.
+Kết quả đếm và tên POI phụ thuộc snapshot/policy. Với checkout hiện tại phải thấy policy `poi-recommendation-3.0`; kiểm tra `matching_count`, `interpreted_request` và không dùng số lịch sử policy 1.1 làm kết quả hiện hành.
 
 Ngay cả khi health báo routing ready, ca này vẫn có thể dùng `geographic_distance`: toàn bộ tập ứng viên không có ma trận tuyến hợp lệ thì thuật toán dùng một đơn vị khoảng cách thống nhất. Đây là phân biệt giữa “dịch vụ OSRM đang chạy” và “mọi POI trong lượt này có đường đi đầy đủ”. Kịch bản K2 đã chọn tập có `road_time` để minh họa chi phí đường ô tô.
 

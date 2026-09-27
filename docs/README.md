@@ -2,19 +2,22 @@
 
 Đọc theo thứ tự dưới đây để chuẩn bị báo cáo và buổi bảo vệ:
 
+[Kế hoạch chỉnh sửa 25/09/2026](ke_hoach_chinh_sua.md): phạm vi sản phẩm, những phần giữ lại, thay đổi đã làm và điều kiện nghiệm thu các đợt tiếp theo.
+
 1. **[Báo cáo dự án POI](bao_cao_du_an_poi.md)** — tài liệu nội dung chính: bài toán, nguồn/crawler, EDA, toàn bộ công thức cốt lõi, thuật toán, thực nghiệm, hai paper và hướng phát triển.
 2. **[Kịch bản bảo vệ](kich_ban_bao_ve.md)** — 18 slide, phần nói chính 27 phút, lời nói và hình nên dùng, demo ba phút, phụ lục và câu hỏi phản biện.
 3. **[Hướng dẫn chạy](huong_dan_chay.md)** — môi trường, API/OSRM, dựng dữ liệu, notebook, kiểm thử và vận hành.
 4. **[Thu thập Đà Nẵng – Hội An](thu_thap_danang_hoian.md)** — phạm vi mới, crawler có checkpoint, ảnh, kiểm duyệt và báo cáo trước/sau.
 5. **[29 ca demo Đà Nẵng đã chạy thật](demo_da_nang_thuc_nghiem.md)** — thao tác theo người dùng, kết quả trên web, ảnh/request/response, thay đổi sở thích–tọa độ–lịch trình và đánh giá cả điểm tốt lẫn lỗi.
+6. **[Quy trình đánh giá người dùng](quy_trinh_danh_gia_nguoi_dung.md)** — phiếu mù, rubric 0–3, chỉ số, bootstrap và quy tắc kết luận; hiện `NOT RUN`.
 
-[Notebook có kết quả](../notebooks/phan_tich_du_lieu_poi.ipynb) · [14 biểu đồ PNG](assets/poi/) · [Bảng phân tích và kiểm chứng](../data/reports/analysis/) · [PDF nguồn](../paper/).
+[Notebook có kết quả](../notebooks/phan_tich_du_lieu_poi.ipynb) · [15 biểu đồ PNG](assets/poi/) · [Bảng phân tích và kiểm chứng](../data/reports/analysis/) · [PDF nguồn](../paper/).
 
 ## Tài liệu cũ đã được hợp nhất
 
 | Tài liệu đã xóa | Nội dung chuyển đến |
 |---|---|
-| `fuzzy_ahp.md` | Báo cáo §7–8: tiêu chí, công thức, hai planner và giới hạn |
+| Tài liệu công thức cũ | Báo cáo §7–8: tiêu chí, công thức, hai planner và giới hạn |
 | `huong_dan_trien_khai.md` | Hướng dẫn chạy: runtime, dữ liệu, kiểm tra và xử lý lỗi |
 | `ket_qua_trien_khai_v2.md` | Báo cáo §5–6, §9: thu thập, EDA, thực nghiệm và mức bằng chứng |
 | `du_lieu_hop_nhat_va_ban_do.md` | Báo cáo §4–5; hướng dẫn build, ảnh, publish/rollback và bản đồ |

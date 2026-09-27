@@ -67,6 +67,8 @@ def test_single_unknown_hours_missing_rating_and_no_auto_add():
     assert result["status"] == "suggestions"
     assert all(o["scheduled_poi_ids"] == ["1"] and o["all_must_visits"] for o in result["options"])
     assert all(visits(o)[0]["hours_status"] == "unknown" and visits(o)[0]["warnings"] for o in result["options"])
+    assert all(o["evidence"]["label"] == "tham_khao" and o["evidence"]["unknown_hours_poi_ids"] == ["1"]
+               for o in result["options"])
     assert result["auto_added_poi_ids"] == []
 
 

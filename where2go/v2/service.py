@@ -12,7 +12,7 @@ class ItineraryService:
         self.router = router
         self.ranking_context = RankingContext(pois)
 
-    def plan(self, request, method="fuzzy"):
+    def plan(self, request, method="ahp"):
         return plan_itinerary(
             self.pois, self.manifest, request, self.router,
             self.ranking_context, method=method,

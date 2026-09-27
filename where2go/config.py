@@ -5,7 +5,6 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = Path(os.getenv("WHERE2GO_CATALOG", str(ROOT / "data/catalog.sqlite")))
 OSRM_URL = os.getenv("OSRM_URL", "http://127.0.0.1:5001").rstrip("/")
 CRITERIA = ("preference_match", "drive_time", "data_confidence")
-GAMMA = 1.2
 CANDIDATE_LIMIT = 40
 SNAP_LIMIT_METERS = 300
 DURATIONS = {"museum": 60, "historic": 45, "attraction": 60,

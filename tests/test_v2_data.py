@@ -102,6 +102,8 @@ def test_serving_quality_blocks_generic_and_evidence_free_pois():
     numeric_distance = dict(base, name="1.5 km", hours_weekly=[[(0, 1440)]] * 7)
     assert "weak_or_generic_name" in serving_quality(numeric_distance)["reasons"]
     improved = dict(base, name="Bảo tàng kiểm thử", website="https://example.test")
+    assert not serving_quality(improved)["eligible"]
+    improved["description"] = "Mô tả địa điểm có nguồn và đủ phân biệt"
     assert serving_quality(improved)["eligible"]
     improved["hours_weekly"] = [[(480, 1020)]] * 7
     assert serving_quality(improved)["eligible"]

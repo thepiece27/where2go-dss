@@ -72,11 +72,21 @@ def serving_quality(poi):
     weights = {"rating_pair": 2, "structured_hours": 2, "website": 2, "description": 1,
                "specific_duration": 3, "verified_access": 3}
     score = sum(weights[key] for key, present in components.items() if present)
-    # A free-text description alone is not enough to recommend a meal stop.
-    # Score 2 requires at least structured hours, a valid rating pair, or a
-    # website; attractions already used the same minimum.
+    # A website proves contactability, not that a POI is useful for a trip.
+    # Outdoor places may pass without a website when another substantive
+    # observation (hours, description, duration or access) is present.
     minimum = 2
-    if score < minimum:
+    substantive = any(
+        components[key]
+        for key in (
+            "rating_pair",
+            "structured_hours",
+            "description",
+            "specific_duration",
+            "verified_access",
+        )
+    )
+    if score < minimum or not substantive:
         reasons.append("insufficient_service_evidence")
     return {
         "eligible": not reasons,
@@ -126,4 +136,6 @@ def manual_trip_quality(poi, location=None):
 
 
 def recommendation_eligible(poi, location=None):
-    return manual_trip_quality(poi, location)["eligible"] and itinerary_eligible(poi)
+    # Re-evaluate the recommendation gate under the current policy instead of
+    # trusting a possibly older materialized serving_quality field.
+    return manual_trip_quality(poi, location)["eligible"] and serving_quality(poi)["eligible"]
