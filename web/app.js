@@ -669,7 +669,7 @@ function renderResult() {
       node("h3", option.label + (chosen ? " · Đã chọn" : "")),
       node(
         "p",
-        `${option.coverage.selected}/${option.coverage.selected_total} điểm · ${option.coverage.must}/${option.coverage.must_total} điểm bắt buộc`,
+        `Lịch tham khảo · ${option.coverage.selected}/${option.coverage.selected_total} điểm · ${option.coverage.must}/${option.coverage.must_total} điểm bắt buộc`,
         "coverage",
       ),
       node(

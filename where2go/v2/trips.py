@@ -14,8 +14,20 @@ from .hours import intervals_on_date
 from .planner import access_point, clock, overlap
 from .quality import manual_trip_quality
 
-POLICY_VERSION = "trip-choice-1.0"
-TripContextFields = ("start", "date", "location", "selected_poi_ids", "interests", "preferred_categories")
+POLICY_VERSION = "trip-choice-1.1"
+TripContextFields = (
+    "start",
+    "date",
+    "location",
+    "selected_poi_ids",
+    "interests",
+    "experience_topics",
+    "preferred_categories",
+    "excluded_categories",
+    "category_mode",
+    "require_known_hours",
+    "allow_non_matching",
+)
 BEAM_WIDTH = 64
 MAX_ROUTE_CHECKS = 18
 SEARCH_BUDGET_SECONDS = 12
@@ -389,6 +401,15 @@ def suggest_trips(pois, manifest, request, router, context):
             if reserve < recommended:
                 warnings.append("Lịch khá sát: thời gian đệm thấp hơn mức khuyến nghị.")
             visits = [t for t in result["timeline"] if t["role"] == "visit"]
+            unknown_hours = [t["poi_id"] for t in visits if t["hours_status"] == "unknown"]
+            unverified_access = [
+                t["poi_id"] for t in visits
+                if not items[t["poi_id"]]["access"].get("verified")
+            ]
+            estimated_durations = [
+                t["poi_id"] for t in visits
+                if t["duration_source"] != "user_override"
+            ]
             option = {**result, "profile": key, "label": label, "start_time": clock(window_start),
                       "date": request.date.isoformat(), "location": request.location, "start": request.start.model_dump(),
                       "window": {"start_time": clock(window_start), "end_time": clock(effective_end)},
@@ -399,11 +420,17 @@ def suggest_trips(pois, manifest, request, router, context):
                                    "must": len(request.must_visit_poi_ids) - len(missing_must), "must_total": len(request.must_visit_poi_ids)},
                       "changes": changes, "requires_confirmation": bool(changes), "warnings": warnings,
                       "reserve_minutes": round(reserve, 1), "recommended_reserve_minutes": round(recommended, 1),
+                      "evidence": {
+                          "label": "tham_khao",
+                          "routing": "osrm_static_without_live_traffic",
+                          "unknown_hours_poi_ids": unknown_hours,
+                          "unverified_access_poi_ids": unverified_access,
+                          "estimated_duration_poi_ids": estimated_durations,
+                      },
                       "geometry": route["geometry"], "legs": route["legs"],
                       "stops": [{"poi_id": i, "name": items[i]["name"], "latitude": items[i]["access"]["latitude"],
                                  "longitude": items[i]["access"]["longitude"]} for i in order],
-                      "status": "provisional" if any(t["hours_status"] == "unknown" or not items[t["poi_id"]]["access"].get("verified")
-                                                       for t in visits) else "ready"}
+                      "status": "provisional" if unknown_hours or unverified_access else "ready"}
             signature = json.dumps([manifest["version"], router.version, request.date.isoformat(), coords[0], list(order),
                                     [(t["start_seconds"], t["end_seconds"]) for t in visits], window_start,
                                     result["return_seconds"], request.selected_poi_ids, request.must_visit_poi_ids,

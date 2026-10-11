@@ -13,6 +13,7 @@ from where2go.v2.recommendations import (
     score_candidates,
 )
 from where2go.v2.recommendation_evaluation import judged_metrics
+from where2go.v2.quality import recommendation_eligible
 from test_trip_suggestions import poi, Router, MANIFEST, request
 
 
@@ -60,10 +61,13 @@ def test_preference_and_preset_change_controlled_ranking():
         )["items"][0]["poi_id"]
         == "2"
     )
-    p["rows"][0]["values"] = [0.95, 0.5, 600, 0.5]
-    p["rows"][1]["values"] = [0.2, 0.5, 60, 0.5]
-    assert score_candidates(p, req(preset="interests"))[0][0][0]["poi"]["poi_id"] == "1"
-    assert score_candidates(p, req(preset="nearby"))[0][0][0]["poi"]["poi_id"] == "2"
+    mixed = prepare_candidates(
+        rows, MANIFEST, req(allow_non_matching=True), Router(), ctx
+    )
+    mixed["rows"][0]["values"] = [0.95, 0.5, 600]
+    mixed["rows"][1]["values"] = [0.2, 0.5, 60]
+    assert score_candidates(mixed, req(preset="interests"))[0][0][0]["poi"]["poi_id"] == "1"
+    assert score_candidates(mixed, req(preset="nearby"))[0][0][0]["poi"]["poi_id"] == "2"
 
 
 @pytest.mark.parametrize(
@@ -89,7 +93,7 @@ def test_explicit_preference_overrides_default_tourism_category_filter(preferenc
     changed = base.model_copy(update=preferences)
     prepared = prepare_candidates(rows, MANIFEST, changed, Router(), context)
     expected = "cafe" if preferences.get("preferred_categories") == ["cafe"] else "temple"
-    assert {r["poi"]["category"] for r in prepared["rows"]} == {"beach", expected}
+    assert {r["poi"]["category"] for r in prepared["rows"]} == {expected}
     result = recommendation_response(prepared, changed)
     assert result["items"][0]["category"] == expected
     assert result["items"][0]["criteria"]["preference_match"] >= 0.7
@@ -155,17 +159,111 @@ def test_topk_parity_missing_data_closed_selection_and_no_mutation():
     assert before == rows
 
 
-def test_empty_ties_and_uniform_fuzzy():
+def test_empty_ties_and_direct_preset_weights():
     rows = [poi(1), poi(2)]
     r = req()
     p = prepare_candidates(rows, MANIFEST, r, Router(), RankingContext(rows))
-    a, b = recommendation_response(p, r), recommendation_response(p, r, "fuzzy")
-    assert [x["poi_id"] for x in a["items"]] == [x["poi_id"] for x in b["items"]]
+    a = recommendation_response(p, r)
+    assert a["ranking"]["method"] == "topsis"
+    assert a["ranking"]["weight_source"] == "preset"
+    assert list(a["ranking"]["weights"].values()) == pytest.approx([4 / 9, 3 / 9, 2 / 9])
+    assert "cr" not in a["ranking"]
+    assert a["ranking"]["data_evidence_role"] == "eligibility_warning_only"
+    assert "data_confidence" not in a["items"][0]["criteria"]
     assert all(math.isfinite(x["score"]) for x in a["items"])
     empty = prepare_candidates(
         rows, MANIFEST, req(selected_poi_ids=["1", "2"]), Router(), RankingContext(rows)
     )
     assert recommendation_response(empty, r)["items"] == []
+
+
+def test_weighted_sum_baseline_respects_cost_and_handles_empty_pool():
+    rows = [poi(1), poi(2)]
+    r = req()
+    prepared = prepare_candidates(rows, MANIFEST, r, Router(), RankingContext(rows))
+    prepared["rows"][0]["values"] = [0.8, 0.5, 60]
+    prepared["rows"][1]["values"] = [0.8, 0.5, 600]
+    result = recommendation_response(prepared, r, "weighted_sum")
+    assert [p["poi_id"] for p in result["items"]] == ["1", "2"]
+    assert result["items"][0]["score"] > result["items"][1]["score"]
+    prepared["rows"] = []
+    assert recommendation_response(prepared, r, "weighted_sum")["items"] == []
+
+
+def test_unknown_recommendation_method_is_rejected():
+    with pytest.raises(ValueError, match="Unknown recommendation method"):
+        score_candidates({"rows": []}, req(), "unsupported")
+
+
+def test_negative_only_and_unknown_negation_are_not_silently_positive():
+    rows = [
+        poi(1, category="temple", name="Chùa", description="điểm tâm linh"),
+        poi(2, category="park", name="Công viên", description="cây xanh"),
+    ]
+    context = RankingContext(rows)
+    negative = req(interests=["không thích tâm linh"])
+    prepared = prepare_candidates(rows, MANIFEST, negative, Router(), context)
+    assert [row["poi"]["poi_id"] for row in prepared["rows"]] == ["2"]
+    assert prepared["interpreted_request"]["excluded_categories"] == ["temple"]
+    with pytest.raises(ValueError, match="Chưa hiểu điều kiện phủ định"):
+        req(interests=["không thích đông đúc"])
+
+
+def test_natural_only_category_and_explicit_conflict_are_enforced():
+    rows = [poi(1, category="museum"), poi(2, category="park")]
+    context = RankingContext(rows)
+    only = req(interests=["chỉ bảo tàng"])
+    prepared = prepare_candidates(rows, MANIFEST, only, Router(), context)
+    assert [row["poi"]["category"] for row in prepared["rows"]] == ["museum"]
+    assert prepared["interpreted_request"]["category_mode"] == "only"
+    with pytest.raises(ValueError, match="vừa được chọn vừa bị loại trừ"):
+        req(preferred_categories=["museum"], excluded_categories=["museum"])
+
+
+def test_sea_concept_requires_sea_evidence_and_no_result_is_honest():
+    rows = [
+        poi(1, category="beach", name="Bãi biển", description="bờ biển yên tĩnh"),
+        poi(2, category="bridge", name="Cầu thành phố", description="ngắm cảnh chụp ảnh"),
+    ]
+    context = RankingContext(rows)
+    sea = req(interests=["ngắm cảnh biển"])
+    prepared = prepare_candidates(rows, MANIFEST, sea, Router(), context)
+    assert [row["poi"]["poi_id"] for row in prepared["rows"]] == ["1"]
+    no_match = req(interests=["tâm linh"])
+    result = recommendation_response(
+        prepare_candidates(rows, MANIFEST, no_match, Router(), context), no_match
+    )
+    assert result["items"] == [] and "không tự nới" in result["message"]
+
+
+def test_known_hours_filter_is_hard_and_relaxation_is_explicit():
+    rows = [poi(1, hours_weekly=None), poi(2)]
+    context = RankingContext(rows)
+    strict = req(require_known_hours=True)
+    prepared = prepare_candidates(rows, MANIFEST, strict, Router(), context)
+    assert [row["poi"]["poi_id"] for row in prepared["rows"]] == ["2"]
+    assert prepared["filter_counts"]["unknown_hours"] == 1
+
+
+def test_recommendation_gate_does_not_treat_website_as_attractiveness():
+    website_only = poi(
+        1,
+        description="",
+        hours_weekly=None,
+        duration_profile=None,
+        website="https://example.org",
+    )
+    outdoor = poi(
+        2,
+        category="viewpoint",
+        description="Điểm ngắm cảnh có mô tả nguồn",
+        hours_weekly=None,
+        duration_profile=None,
+        website=None,
+        access_points=[{"verified": True}],
+    )
+    assert not recommendation_eligible(website_only, "Đà Nẵng")
+    assert recommendation_eligible(outdoor, "Đà Nẵng")
 
 
 @pytest.mark.parametrize(

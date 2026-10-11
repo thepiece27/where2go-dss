@@ -10,9 +10,11 @@ Hệ gợi ý POI **dựa trên nội dung và ngữ cảnh, kết hợp ra quy�
 
 Ba trang: **Gợi ý POI `/` → Khám phá `/explore` → Lịch trình `/itinerary`**. Danh sách đã chọn dùng chung, nháp lưu theo địa phương trên trình duyệt. Giao diện sáng, responsive, không cần Node build.
 
-Thuật toán: taxonomy + TF-IDF/cosine → ứng viên từ ba nguồn → AHP–TOPSIS trên sở thích, chất lượng, di chuyển và bằng chứng. OSRM đầy đủ dùng giây; thiếu dữ liệu dùng km đường chim bay cho toàn pool và ghi rõ. Chưa học từ lịch sử tương tác. Fuzzy AHP mặc định trùng AHP thường, không được coi là cải thiện đã chứng minh.
+Thuật toán: diễn giải ý định có từ điển → lọc điều kiện bắt buộc → taxonomy + TF-IDF/cosine → shortlist từ ba nguồn → TOPSIS với trọng số preset trực tiếp trên sở thích, chất lượng và di chuyển. Độ đầy đủ bằng chứng chỉ dùng cho cổng/cảnh báo. OSRM đầy đủ dùng giây; thiếu dữ liệu dùng km đường chim bay cho toàn pool và ghi rõ. Chưa học từ lịch sử tương tác. AHP thường chỉ còn ở API planner nghiên cứu.
 
-Đã có 96 lượt đối chiếu trên 16 bối cảnh và notebook có output. **Phiếu relevance của nhóm chưa chấm; chất lượng gợi ý với người dùng chưa được kiểm chứng.**
+Policy hiện tại: `poi-recommendation-3.0`. Đã chạy lại 112 lượt trên 16 bối cảnh bằng khoảng cách địa lý, gồm taxonomy, TF-IDF, tổng trọng số, TOPSIS và ablation bỏ rating. Không có vi phạm điều kiện trong các ca này; shortlist giữ 100% Top-10 của pool đầy đủ. **Phiếu relevance chưa chấm và thử nghiệm người dùng độc lập `NOT RUN`; chưa có bằng chứng phương pháp nào cho gợi ý tốt hơn.**
+
+[Kế hoạch chỉnh sửa theo nhu cầu người dùng](docs/ke_hoach_chinh_sua.md) ghi rõ phần đã triển khai và phần bắt buộc cần người chấm/kiểm chứng thực địa.
 
 ## Tài liệu cho báo cáo và bảo vệ
 
@@ -22,8 +24,9 @@ Thuật toán: taxonomy + TF-IDF/cosine → ứng viên từ ba nguồn → AHP�
 | **[Hướng dẫn chạy](docs/huong_dan_chay.md)** | Chạy từ catalog có sẵn, dựng mới, OSRM, notebook, kiểm thử, thu thập và xử lý lỗi |
 | **[Setup và khởi động demo đầy đủ](docs/setup_va_khoi_dong_demo.md)** | Lệnh PowerShell theo từng terminal, setup lần đầu, chạy nhanh, kiểm tra ba trang và xử lý lỗi |
 | **[Kịch bản bảo vệ 25–30 phút](docs/kich_ban_bao_ve.md)** | 18 slide, 27 phút, lời nói, demo, phụ lục và câu hỏi phản biện |
+| **[Quy trình đánh giá người dùng](docs/quy_trinh_danh_gia_nguoi_dung.md)** | Thiết kế chấm mù, rubric, metric và ranh giới `NOT RUN` |
 | **[29 ca demo Đà Nẵng đã chạy thật](docs/demo_da_nang_thuc_nghiem.md)** | Thao tác người dùng, kết quả thực tế, ảnh và bằng chứng, đối chiếu các thay đổi, đánh giá hạn chế |
-| **[Notebook đã thực thi](notebooks/phan_tich_du_lieu_poi.ipynb)** | Phân tích dữ liệu thực, 14 biểu đồ, bảng kết quả và kiểm chứng toán |
+| **[Notebook đã thực thi](notebooks/phan_tich_du_lieu_poi.ipynb)** | Phân tích dữ liệu thực, 14 code cell, 15 biểu đồ, bảng kết quả và kiểm chứng toán |
 | [Biểu đồ PNG](docs/assets/poi/) · [Bảng/JSON phân tích](data/reports/analysis/) | Tài nguyên đưa vào báo cáo/slide, checksum đầu vào |
 | [Hai bài báo gốc](paper/) | LORE 2014 và Contextualized Point-of-Interest Recommendation 2020 |
 
@@ -53,7 +56,7 @@ OSRM dùng **127.0.0.1:5001**. Hướng dẫn dựng catalog đầy đủ và kh
 .venv\Scripts\python.exe -X utf8 scripts\run_analysis.py
 ```
 
-Notebook đọc CSV và artifact thực nghiệm đã xuất, không cần Docker/API/crawl. Snapshot **`v2-ae66988a1053d0de`**: 16.018 POI, 15.245 khám phá được, 1.475 qua cổng chất lượng trên toàn catalog; luồng gợi ý hai địa bàn có 1.235 POI trước lọc ngày/bán kính. Chỉ 86 POI có rating–review hợp lệ. Đây là dữ liệu prototype có giới hạn, chưa được xác minh thực địa đầy đủ.
+Notebook đọc CSV và artifact thực nghiệm đã xuất, không cần Docker/API/crawl. Snapshot **`v2-c3ad315d02c5356a`**: 16.129 POI, 15.356 khám phá được, 1.564 qua cổng chất lượng đã lưu; 179 POI có rating–review hợp lệ. Policy runtime kiểm tra lại cổng gợi ý nên website đơn lẻ không đủ làm bằng chứng. Đây là dữ liệu prototype, chưa được xác minh thực địa đầy đủ.
 
 ## Cấu trúc
 
@@ -89,6 +92,6 @@ node --check web\map.js
 node --check web\dataset.js
 ```
 
-Các bài kiểm tra dùng dữ liệu local cần các fixture/runtime tương ứng. Evaluator với OSRM thật và smoke trình duyệt được hướng dẫn riêng; kiểm thử phần mềm không thay đánh giá người dùng. Kết quả lần làm sạch nằm trong [bản ghi kiểm chứng](data/reports/analysis/verification.json).
+Các bài kiểm tra dùng dữ liệu local cần fixture/runtime tương ứng. Kiểm thử phần mềm không thay đánh giá người dùng. Kết quả policy hiện hành nằm trong [bản ghi kiểm chứng](data/reports/analysis/implementation_verification.json); các file verification cũ là bằng chứng lịch sử của policy/snapshot ghi bên trong.
 
 Giữ bất biến các workbook nguồn/backup, PBF, địa giới, curation và quan sát cần tái lập. Catalog là dữ liệu phục vụ; CSV/XLSX trong `data/reports/v2/dataset/` là dẫn xuất. Dữ liệu Google giữ **`restricted_internal`**; không coi export nội bộ là dataset được phép phát hành. Dữ liệu OSM giữ attribution và ODbL 1.0.

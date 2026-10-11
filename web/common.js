@@ -230,7 +230,6 @@ function poiCard(p, { selected = false, onToggle, onDetail, metric } = {}) {
       place_quality: "Chất lượng tham khảo",
       travel_cost:
         metric === "road_time" ? "Lái xe (phút)" : "Đường chim bay (km)",
-      data_confidence: "Bằng chứng dữ liệu",
     };
     const dl = node("dl");
     for (const [key, value] of Object.entries(p.criteria)) {
@@ -252,7 +251,7 @@ function poiCard(p, { selected = false, onToggle, onDetail, metric } = {}) {
         "p",
         r
           ? `${r.provider}: ${r.rating}/5, ${r.review_count} lượt; quan sát ${r.observed_at || "chưa rõ ngày"}.`
-          : "Chưa có rating đủ bằng chứng. Giá trị trung tính không phải điểm đánh giá thực.",
+          : `Chưa có rating đủ bằng chứng. Giá trị đang dùng là prior ${p.explanation?.rating?.prior?.toFixed(2) || "không xác định"}/5 của nhóm, không phải điểm quan sát của địa điểm.`,
       ),
     );
     for (const warning of p.warnings || [])

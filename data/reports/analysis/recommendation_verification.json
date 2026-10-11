@@ -25,7 +25,6 @@
       "road_time": 12,
       "geographic_distance": 4
     },
-    "same_crisp_fuzzy_top10": 16,
     "evaluation_sha256": "18ad5a22832e2dc7f540c51a4fdcb5cf3df91a9b26ad4c01ae8becb6d7482d1c"
   },
   "browser": {
@@ -53,5 +52,7 @@
     "scripts/evaluate_recommendations.py": "4edd06d6d3b0aeeba509f1a2d1d7c66f30da25f4c392c5ea0d36e9a7af77294b",
     "scripts/smoke_recommendations.py": "762c1d9e93ef08eee343d52a0ba07b02792a97292fa1487ceb28814cd87444da",
     "notebooks/phan_tich_du_lieu_poi.ipynb": "a058f5920724a8a57a9f8b13a8c2c90686c04b2676feb1c04e93f24902e5bf76"
-  }
+  },
+  "evidence_status": "HISTORICAL_NOT_CURRENT_POLICY",
+  "note": "Original historical checks remain tied to the recorded dataset, policy and source hashes. A retired-method comparison field was removed; this file is not verification of policy 2.0."
 }

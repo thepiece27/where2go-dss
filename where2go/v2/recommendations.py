@@ -4,7 +4,6 @@ Scores are relative to the complete retrieved pool, never to the displayed top K
 No behavioral labels are inferred from these scores.
 """
 
-import re
 from typing import Literal
 
 import numpy as np
@@ -12,25 +11,33 @@ from pydantic import Field
 
 from where2go.catalog import haversine
 from where2go.config import SNAP_LIMIT_METERS
-from where2go.ranking import normalize, topsis
+from where2go.ranking import topsis
 from where2go.routing import RoutingUnavailable
 from .hours import intervals_on_date
-from .models import AHPPreferences
+from .intent import interpret_request, poi_concepts
 from .quality import recommendation_eligible
-from .ranking import ahp_weights, confidence
+from .ranking import confidence
 from .trip_models import TripContext
 from .discovery import EXCLUDED, matches_scope
 from .taxonomy import CATEGORIES
 
-POLICY_VERSION = "poi-recommendation-1.1"
-CRITERIA = ("preference_match", "place_quality", "travel_cost", "data_confidence")
+POLICY_VERSION = "poi-recommendation-3.0"
+CRITERIA = ("preference_match", "place_quality", "travel_cost")
 PRESETS = {
-    "balanced": (0.40, 0.30, 0.20, 0.10),
-    "interests": (0.55, 0.20, 0.15, 0.10),
-    "nearby": (0.30, 0.20, 0.40, 0.10),
-    "quality": (0.25, 0.45, 0.20, 0.10),
+    "balanced": (4 / 9, 3 / 9, 2 / 9),
+    "interests": (11 / 18, 2 / 9, 1 / 6),
+    "nearby": (1 / 3, 2 / 9, 4 / 9),
+    "quality": (5 / 18, 1 / 2, 2 / 9),
 }
-METHODS = ("nearby", "quality", "content", "equal", "crisp", "fuzzy")
+METHODS = (
+    "nearby",
+    "quality",
+    "taxonomy",
+    "text",
+    "weighted_sum",
+    "topsis_no_quality",
+    "topsis",
+)
 
 
 class RecommendationRequest(TripContext):
@@ -40,58 +47,85 @@ class RecommendationRequest(TripContext):
     radius_km: float = Field(default=30, ge=1, le=80)
     top_k: int = Field(default=10, ge=1, le=20, strict=True)
 
-    @property
-    def ahp(self):
-        w = PRESETS[self.preset]
-        return AHPPreferences(
-            comparisons=[w[i] / w[j] for i in range(4) for j in range(i + 1, 4)]
-        )
-
 
 def prepare_candidates(
     pois, manifest, request, router, context, *, pool_size=40, geographic_only=False
 ):
     """Compute one fixed decision matrix for all methods in an experiment."""
-    if pool_size < 1:
+    if pool_size is not None and pool_size < 1:
         raise ValueError("pool_size must be positive")
+    intent = interpret_request(request)
     origin = (request.start.latitude, request.start.longitude)
     selected = set(request.selected_poi_ids)
-    # A default tourism group must not silently defeat an explicit preference.
-    included_categories = set(request.preferred_categories) & EXCLUDED
-    if any(re.search(r"\btam linh\b", normalize(text)) for text in request.interests):
-        included_categories.add("temple")
+    # A default tourism group must not silently defeat an explicit category.
+    included_categories = set(intent.preferred_categories) & EXCLUDED
     if not request.tourism_only:
         included_categories.clear()
     eligible, distances = [], {}
+    filtered = {
+        "scope": 0,
+        "quality_or_location": 0,
+        "selected": 0,
+        "excluded_category_or_topic": 0,
+        "required_category": 0,
+        "closed_on_date": 0,
+        "unknown_hours": 0,
+        "outside_radius": 0,
+    }
     for poi in pois:
         if not matches_scope(poi, request.scope, request.tourism_only,
                              include_categories=included_categories):
+            filtered["scope"] += 1
             continue
-        if poi["poi_id"] in selected or not recommendation_eligible(
-            poi, request.location
-        ):
+        if poi["poi_id"] in selected:
+            filtered["selected"] += 1
             continue
-        if (
-            intervals_on_date(
-                poi.get("hours_weekly"), poi.get("hours_exceptions"), request.date
-            )
-            == []
-        ):
+        if not recommendation_eligible(poi, request.location):
+            filtered["quality_or_location"] += 1
+            continue
+        concepts = poi_concepts(poi)
+        if poi["category"] in intent.excluded_categories or concepts & set(intent.negative_concepts):
+            filtered["excluded_category_or_topic"] += 1
+            continue
+        if (intent.category_mode == "only"
+                and poi["category"] not in intent.preferred_categories):
+            filtered["required_category"] += 1
+            continue
+        intervals = intervals_on_date(
+            poi.get("hours_weekly"), poi.get("hours_exceptions"), request.date
+        )
+        if intervals == []:
+            filtered["closed_on_date"] += 1
+            continue
+        if request.require_known_hours and intervals is None:
+            filtered["unknown_hours"] += 1
             continue
         distance = haversine(origin, (poi["latitude"], poi["longitude"]))
         if distance <= request.radius_km:
             eligible.append(poi)
             distances[poi["poi_id"]] = distance
-    preference = context.preference_components(eligible, request)
-    quality = {p["poi_id"]: context.adjusted_quality(p) for p in eligible}
+        else:
+            filtered["outside_radius"] += 1
+    preference = context.preference_components(eligible, request, intent)
+    matching = [
+        poi for poi in eligible
+        if not intent.has_positive_intent
+        or request.allow_non_matching
+        or preference[poi["poi_id"]]["has_evidence"]
+    ]
+    quality = {p["poi_id"]: context.adjusted_quality(p) for p in matching}
     groups = (
         sorted(
-            eligible, key=lambda p: (-preference[p["poi_id"]]["score"], p["poi_id"])
+            matching, key=lambda p: (-preference[p["poi_id"]]["score"], p["poi_id"])
         ),
-        sorted(eligible, key=lambda p: (distances[p["poi_id"]], p["poi_id"])),
-        sorted(eligible, key=lambda p: (-quality[p["poi_id"]][0], p["poi_id"])),
+        sorted(matching, key=lambda p: (distances[p["poi_id"]], p["poi_id"])),
+        sorted(matching, key=lambda p: (-quality[p["poi_id"]][0], p["poi_id"])),
     )
-    union = {p["poi_id"]: p for group in groups for p in group[:pool_size]}
+    union = {
+        p["poi_id"]: p
+        for group in groups
+        for p in (group if pool_size is None else group[:pool_size])
+    }
     pool = [union[i] for i in sorted(union)]
     costs = [distances[p["poi_id"]] for p in pool]
     mode, routing_reason = (
@@ -143,7 +177,7 @@ def prepare_candidates(
     rows = []
     for poi, cost in zip(pool, costs, strict=True):
         ident = poi["poi_id"]
-        data_confidence, evidence = confidence(poi, request.date)
+        _, evidence = confidence(poi, request.date)
         rows.append(
             {
                 "poi": poi,
@@ -151,7 +185,6 @@ def prepare_candidates(
                     preference[ident]["score"],
                     quality[ident][0],
                     cost,
-                    data_confidence,
                 ],
                 "content": preference[ident],
                 "rating": quality[ident][1],
@@ -169,30 +202,44 @@ def prepare_candidates(
         "travel_unit": "seconds" if mode == "road_time" else "km",
         "routing_message": routing_reason,
         "eligible_count": len(eligible),
+        "matching_count": len(matching),
+        "excluded_non_matching_count": len(eligible) - len(matching),
         "candidate_count": len(rows),
         "pool_size_per_source": pool_size,
         "dataset_version": manifest["version"],
+        "interpreted_request": intent.as_dict(),
+        "filter_counts": filtered,
         "included_categories": sorted(included_categories),
         "filter_message": (
-            "Đã xét thêm " + ", ".join(CATEGORIES[c] for c in sorted(included_categories))
-            + " theo sở thích hoặc loại hình bạn chọn."
-            if included_categories else ""
+            "Đã áp dụng điều kiện: "
+            + "; ".join(
+                part
+                for part in (
+                    "chỉ " + ", ".join(CATEGORIES[c] for c in intent.preferred_categories)
+                    if intent.category_mode == "only" else "",
+                    "loại " + ", ".join(CATEGORIES[c] for c in intent.excluded_categories)
+                    if intent.excluded_categories else "",
+                    "phải có giờ mở cửa" if request.require_known_hours else "",
+                    "cho phép kết quả ít khớp" if request.allow_non_matching else "",
+                )
+                if part
+            )
+            + "."
+            if any((intent.category_mode == "only", intent.excluded_categories,
+                    request.require_known_hours, request.allow_non_matching))
+            else ""
         ),
     }
 
 
-def score_candidates(prepared, request, method="crisp"):
+def score_candidates(prepared, request, method="topsis"):
     """Pure scoring; API and evaluator call exactly this function."""
     if method not in METHODS:
         raise ValueError("Unknown recommendation method")
-    weights, cr = ahp_weights(
-        request.ahp.comparisons,
-        request.ahp.uncertainty if method == "fuzzy" else [1.0] * 6,
-    )
-    if method == "equal":
-        weights = np.full(4, 0.25)
+    weights = np.asarray(PRESETS[request.preset], dtype=float)
     rows = prepared["rows"]
-    values = np.asarray([r["values"] for r in rows], dtype=float).reshape((-1, 4))
+    values = np.asarray([r["values"] for r in rows], dtype=float).reshape((-1, 3))
+    active_criteria = CRITERIA
     if method == "nearby":
         cost = values[:, 2]
         spread = float(np.ptp(cost)) if len(cost) else 0
@@ -201,24 +248,40 @@ def score_candidates(prepared, request, method="crisp"):
             if spread > 1e-12
             else np.full(len(cost), 0.5)
         )
-    elif method in ("content", "quality"):
-        scores = values[:, 0 if method == "content" else 1]
+    elif method == "quality":
+        scores = values[:, 1]
+    elif method in ("taxonomy", "text"):
+        key = "taxonomy" if method == "taxonomy" else "cosine"
+        scores = np.asarray([row["content"][key] for row in rows], dtype=float)
+    elif method == "weighted_sum":
+        # Same vector normalization and weights as TOPSIS isolate aggregation.
+        norms = np.linalg.norm(values, axis=0)
+        normalized = np.divide(values, norms, out=np.zeros_like(values), where=norms > 0)
+        scores = normalized @ (weights * np.array([1, 1, -1]))
+    elif method == "topsis_no_quality":
+        active_criteria = (CRITERIA[0], CRITERIA[2])
+        reduced = values[:, (0, 2)]
+        reduced_weights = weights[[0, 2]]
+        reduced_weights = reduced_weights / reduced_weights.sum()
+        scores = topsis(reduced, reduced_weights, (True, False))
+        weights = reduced_weights
     else:
-        scores = topsis(values, weights, (True, True, False, True))
+        scores = topsis(values, weights, (True, True, False))
     ranked = sorted(
         zip(rows, scores, strict=True),
         key=lambda pair: (-float(pair[1]), pair[0]["poi"]["poi_id"]),
     )
     return ranked, {
         "method": method,
-        "weights": dict(zip(CRITERIA, map(float, weights))),
-        "cr": cr,
+        "weights": dict(zip(active_criteria, map(float, weights))),
+        "weight_source": "preset",
         "preset": request.preset,
-        "criteria_order": list(CRITERIA),
+        "criteria_order": list(active_criteria),
+        "data_evidence_role": "eligibility_warning_only",
     }
 
 
-def recommendation_response(prepared, request, method="crisp"):
+def recommendation_response(prepared, request, method="topsis"):
     from .trips import card
 
     ranked, ranking = score_candidates(prepared, request, method)
@@ -228,18 +291,8 @@ def recommendation_response(prepared, request, method="crisp"):
         content = row["content"]
         if content["category_match"]:
             reasons.append("Thuộc loại hình bạn ưu tiên.")
-        elif content["matched_tokens"]:
-            matched = [
-                text
-                for text in request.interests
-                if set(normalize(text).split())
-                and set(normalize(text).split()) <= set(content["matched_tokens"])
-            ]
-            reasons.append(
-                "Khớp sở thích: " + ", ".join(matched) + "."
-                if matched
-                else "Có từ khóa trùng với sở thích bạn nhập."
-            )
+        elif content["matched_concepts"]:
+            reasons.append("Khớp chủ đề: " + ", ".join(content["matched_concepts"]) + ".")
         elif content["cosine"] > 0:
             reasons.append("Nội dung địa điểm có từ ngữ tương đồng với nhu cầu.")
         if prepared["travel_metric"] == "road_time":
@@ -260,7 +313,7 @@ def recommendation_response(prepared, request, method="crisp"):
         warnings = []
         if not observation:
             warnings.append(
-                "Chưa có cặp điểm và số lượt đánh giá đủ bằng chứng; tiêu chí chất lượng dùng giá trị trung tính."
+                "Chưa có cặp điểm và số lượt đánh giá; chất lượng dùng prior của nhóm và vẫn được ghi là thiếu quan sát."
             )
         if not row["hours_known"]:
             warnings.append(
@@ -274,6 +327,7 @@ def recommendation_response(prepared, request, method="crisp"):
                 "rank": index,
                 "score": float(score),
                 "criteria": dict(zip(CRITERIA, row["values"])),
+                "evidence_completeness": row["confidence_evidence"],
                 "reasons": reasons[:3],
                 "warnings": warnings,
                 "source_url": poi.get("source_url"),
@@ -295,10 +349,15 @@ def recommendation_response(prepared, request, method="crisp"):
         "ranking": ranking,
         "policy_version": POLICY_VERSION,
         **{k: v for k, v in prepared.items() if k != "rows"},
-        "personalized": bool(request.interests or request.preferred_categories),
+        "personalized": bool(
+            request.interests
+            or request.experience_topics
+            or request.preferred_categories
+            or request.excluded_categories
+        ),
         "message": ""
         if items
-        else "Chưa có POI đáp ứng điều kiện. Hãy đổi vị trí, ngày hoặc mở rộng bán kính; hệ thống không tự nới điều kiện.",
+        else "Chưa có POI có bằng chứng đáp ứng nhu cầu và điều kiện đã chọn. Hệ thống không tự nới điều kiện; hãy sửa bộ lọc hoặc bật cho phép kết quả ít khớp.",
     }
 
 

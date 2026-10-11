@@ -1,8 +1,8 @@
 {
   "dataset_version": "v2-c3ad315d02c5356a",
-  "policy_version": "poi-recommendation-1.0",
-  "evaluation_sha256": "3ea0d407e54cc7d0d39035237285c0e2dbdcf6ffe6efe113f361ded6383810f5",
-  "labels_sha256": "ffaa3832ece5722a882931a1d5b5a5758de90eca1c897b07aa459417c8f3b7c5",
+  "policy_version": "poi-recommendation-3.0",
+  "evaluation_sha256": "a27c374453b72da5b3c14e752ca7f4ccd9542871e0a4b82fc1bce8c7964aae2b",
+  "labels_sha256": "fb91e161bd2f38fa204ffd7acbe1329ce07a10ad0021485430b1abe1d03a2f2f",
   "design": "Group/owner case study, pooled top-10, relevance 0..3, binary relevance >=2; not independent users.",
   "results": [
     {
@@ -44,7 +44,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -53,7 +53,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -62,7 +62,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -71,7 +71,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -80,7 +80,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -89,7 +89,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -98,7 +98,7 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -107,7 +107,25 @@
     {
       "scenario_id": "HN-DEV-01",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-01",
+      "split": "development",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -152,7 +170,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -161,7 +179,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -170,7 +188,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -179,7 +197,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -188,7 +206,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -197,7 +215,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -206,7 +224,7 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -215,7 +233,25 @@
     {
       "scenario_id": "HN-DEV-02",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-DEV-02",
+      "split": "development",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -260,7 +296,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -269,7 +305,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -278,7 +314,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -287,7 +323,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -296,7 +332,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -305,7 +341,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -314,7 +350,7 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -323,7 +359,25 @@
     {
       "scenario_id": "HN-HOLD-01",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-01",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -368,7 +422,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -377,7 +431,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -386,7 +440,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -395,7 +449,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -404,7 +458,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -413,7 +467,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -422,7 +476,7 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -431,7 +485,25 @@
     {
       "scenario_id": "HN-HOLD-02",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-02",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -476,7 +548,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -485,7 +557,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -494,7 +566,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -503,7 +575,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -512,7 +584,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -521,7 +593,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -530,7 +602,7 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -539,7 +611,25 @@
     {
       "scenario_id": "HN-HOLD-03",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-03",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -584,7 +674,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -593,7 +683,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -602,7 +692,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -611,7 +701,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -620,7 +710,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -629,7 +719,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -638,7 +728,7 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -647,7 +737,25 @@
     {
       "scenario_id": "HN-HOLD-04",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-04",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -692,7 +800,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -701,7 +809,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -710,7 +818,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -719,7 +827,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -728,7 +836,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -737,7 +845,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -746,7 +854,7 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -755,7 +863,25 @@
     {
       "scenario_id": "HN-HOLD-05",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-05",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -800,7 +926,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -809,7 +935,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -818,7 +944,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -827,7 +953,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -836,7 +962,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -845,7 +971,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -854,7 +980,7 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -863,7 +989,25 @@
     {
       "scenario_id": "HN-HOLD-06",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "HN-HOLD-06",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -908,7 +1052,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -917,7 +1061,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -926,7 +1070,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -935,7 +1079,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -944,7 +1088,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -953,7 +1097,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -962,7 +1106,7 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -971,7 +1115,25 @@
     {
       "scenario_id": "DN-DEV-01",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-01",
+      "split": "development",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1016,7 +1178,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1025,7 +1187,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1034,7 +1196,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1043,7 +1205,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1052,7 +1214,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1061,7 +1223,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1070,7 +1232,7 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1079,7 +1241,25 @@
     {
       "scenario_id": "DN-DEV-02",
       "split": "development",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-DEV-02",
+      "split": "development",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1124,7 +1304,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1133,7 +1313,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1142,7 +1322,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1151,7 +1331,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1160,7 +1340,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1169,7 +1349,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1178,7 +1358,7 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1187,7 +1367,25 @@
     {
       "scenario_id": "DN-HOLD-01",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-01",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1232,7 +1430,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1241,7 +1439,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1250,7 +1448,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1259,7 +1457,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1268,7 +1466,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1277,7 +1475,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1286,7 +1484,7 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1295,7 +1493,25 @@
     {
       "scenario_id": "DN-HOLD-02",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-02",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1340,7 +1556,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1349,7 +1565,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1358,7 +1574,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1367,7 +1583,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1376,7 +1592,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1385,7 +1601,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1394,7 +1610,7 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1403,7 +1619,25 @@
     {
       "scenario_id": "DN-HOLD-03",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-03",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1448,7 +1682,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1457,7 +1691,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1466,7 +1700,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1475,7 +1709,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1484,7 +1718,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1493,7 +1727,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1502,7 +1736,7 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1511,7 +1745,25 @@
     {
       "scenario_id": "DN-HOLD-04",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-04",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1556,7 +1808,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1565,7 +1817,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1574,7 +1826,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1583,7 +1835,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1592,7 +1844,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1601,7 +1853,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1610,7 +1862,7 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1619,7 +1871,25 @@
     {
       "scenario_id": "DN-HOLD-05",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-05",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1664,7 +1934,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1673,7 +1943,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "content",
+      "method": "taxonomy",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1682,7 +1952,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1691,7 +1961,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "equal",
+      "method": "text",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1700,7 +1970,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1709,7 +1979,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "crisp",
+      "method": "weighted_sum",
       "k": 10,
       "precision": null,
       "ndcg": null,
@@ -1718,7 +1988,7 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
       "k": 5,
       "precision": null,
       "ndcg": null,
@@ -1727,7 +1997,25 @@
     {
       "scenario_id": "DN-HOLD-06",
       "split": "holdout",
-      "method": "fuzzy",
+      "method": "topsis_no_quality",
+      "k": 10,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "topsis",
+      "k": 5,
+      "precision": null,
+      "ndcg": null,
+      "status": "NOT GRADED"
+    },
+    {
+      "scenario_id": "DN-HOLD-06",
+      "split": "holdout",
+      "method": "topsis",
       "k": 10,
       "precision": null,
       "ndcg": null,

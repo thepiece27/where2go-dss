@@ -5,6 +5,7 @@ from typing import Annotated, Literal
 from pydantic import Field, model_validator
 from where2go.models import Coordinate, StrictModel
 from .models import AHPPreferences
+from .intent import EXPERIENCE_TOPICS, interpret_intent
 from .taxonomy import CATEGORIES
 
 
@@ -14,7 +15,12 @@ class TripContext(StrictModel):
     location: Literal["Hà Nội", "Đà Nẵng"]
     selected_poi_ids: list[str] = Field(default_factory=list, max_length=12)
     interests: list[Annotated[str, Field(max_length=100)]] = Field(default_factory=list, max_length=12)
+    experience_topics: list[str] = Field(default_factory=list, max_length=10)
     preferred_categories: list[str] = Field(default_factory=list, max_length=18)
+    excluded_categories: list[str] = Field(default_factory=list, max_length=18)
+    category_mode: Literal["preferred", "only"] = "preferred"
+    require_known_hours: bool = False
+    allow_non_matching: bool = False
 
     @property
     def ahp(self):
@@ -26,8 +32,23 @@ class TripContext(StrictModel):
             raise ValueError("Mỗi địa điểm chỉ được chọn một lần")
         if any(not ident or len(ident) > 200 for ident in self.selected_poi_ids):
             raise ValueError("Mã địa điểm không hợp lệ")
-        if set(self.preferred_categories) - set(CATEGORIES):
+        if (set(self.preferred_categories) | set(self.excluded_categories)) - set(CATEGORIES):
             raise ValueError("Loại hình địa điểm chưa được hỗ trợ")
+        if set(self.experience_topics) - set(EXPERIENCE_TOPICS):
+            raise ValueError("Chủ đề trải nghiệm chưa được hỗ trợ")
+        intent = interpret_intent(
+            self.interests,
+            self.experience_topics,
+            self.preferred_categories,
+            self.excluded_categories,
+            self.category_mode,
+        )
+        if intent.unsupported_negations:
+            raise ValueError(
+                "Chưa hiểu điều kiện phủ định: "
+                + ", ".join(intent.unsupported_negations)
+                + ". Hãy dùng bộ lọc loại trừ rõ ràng."
+            )
         return self
 
 

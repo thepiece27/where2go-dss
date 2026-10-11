@@ -1,0 +1,58 @@
+{
+  "verified_on": "2026-09-25",
+  "scope": "Ranking simplification, revision plan, regenerated recommendation evaluation and notebook",
+  "dataset_version": "v2-c3ad315d02c5356a",
+  "policy_version": "poi-recommendation-2.0",
+  "source_checkout": "project2/where2go-dss",
+  "runtime_data": {
+    "catalog_origin": "Matching local snapshot copied from the sibling GKI-Project checkout after checking manifest and POI count",
+    "poi_count": 16129,
+    "catalog_rebuilt": false,
+    "source_data_changed": false,
+    "python_environment": "Existing sibling Python environment; imported application and tests from this checkout"
+  },
+  "checks": {
+    "pytest": {"status": "PASS", "passed": 136, "warnings": 1},
+    "ruff": "PASS",
+    "diff_check": "PASS",
+    "retired_method_reference_scan": {"status": "PASS", "tracked_text_matches": 0},
+    "notebook": {"status": "PASS", "executed_code_cells": 14, "figures": 15, "figure_scope": "14 core report figures and one campaign coverage figure"},
+    "recommendation_evaluation": {
+      "status": "PASS",
+      "runs": 96,
+      "scenarios": 16,
+      "methods": ["nearby", "quality", "content", "equal", "weighted_sum", "topsis"],
+      "travel_metric": "geographic_distance",
+      "request_defaults_match_web": true,
+      "evaluation_sha256": "68e428e0bb73dacd062b46a45bfe40d8c613b7980be6cff5964b810602fef28d"
+    },
+    "browser": {
+      "status": "PASS",
+      "desktop_viewport": [1440, 1000],
+      "mobile_viewport": [390, 844],
+      "api_policy_and_weight_metadata": "PASS",
+      "dom_matches_api_count": "PASS",
+      "cross_page_selection": "PASS",
+      "explore_and_dataset_pages": "PASS",
+      "mobile_no_horizontal_overflow": "PASS",
+      "page_errors": [],
+      "external_resources": "Blocked for this check; external image availability NOT RUN",
+      "local_artifact": "artifacts/simplification/browser.json"
+    },
+    "markdown_local_links": {"status": "PASS", "new_missing_targets": 0}
+  },
+  "historical_planner_evaluation": {
+    "status": "HISTORICAL_SUBSET_NOT_RERUN",
+    "retained_runs": 48,
+    "retired_method_rows_removed": 16,
+    "recovery": "Original tracked results remain in Git history"
+  },
+  "human_relevance": "NOT GRADED",
+  "not_run": [
+    "Real OSRM itinerary verification",
+    "Full catalog rebuild",
+    "Field verification",
+    "Independent user study",
+    "Implementation of plan phases 2 through 5"
+  ]
+}

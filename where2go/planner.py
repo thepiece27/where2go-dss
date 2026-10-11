@@ -58,7 +58,7 @@ def simulate(order, by_id, matrix, request):
             "status": "provisional" if provisional else "ready"}
 
 
-def plan_itinerary(pois, manifest, request, router, method="fuzzy"):
+def plan_itinerary(pois, manifest, request, router, method="ahp"):
     result = {"status": "insufficient_data", "reason": "Không đủ địa điểm trong điều kiện yêu cầu",
               "dataset_version": manifest["version"], "model_version": MODEL_VERSION,
               "routing_version": router.version, "stops": [], "legs": [], "warnings": [], "excluded": []}

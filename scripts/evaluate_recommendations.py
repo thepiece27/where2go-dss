@@ -30,6 +30,29 @@ def dump(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def constraint_violations(data, request):
+    intent = data["interpreted_request"]
+    excluded = set(intent["excluded_categories"])
+    preferred = set(intent["preferred_categories"])
+    violations = []
+    for item in data["items"]:
+        reasons = []
+        if item["category"] in excluded:
+            reasons.append("excluded_category")
+        if intent["category_mode"] == "only" and item["category"] not in preferred:
+            reasons.append("required_category")
+        if request.require_known_hours and not item["explanation"]["hours_known"]:
+            reasons.append("unknown_hours")
+        if (not request.allow_non_matching
+                and (intent["positive_concepts"] or intent["preferred_categories"]
+                     or intent["query_texts"])
+                and not item["explanation"]["content"]["has_evidence"]):
+            reasons.append("missing_preference_evidence")
+        if reasons:
+            violations.append({"poi_id": item["poi_id"], "reasons": reasons})
+    return violations
+
+
 def evaluate(output, geographic_only=False):
     scenarios_path = ROOT / "data/evaluation/v2_scenarios.json"
     scenarios = json.loads(scenarios_path.read_text(encoding="utf-8"))
@@ -49,20 +72,59 @@ def evaluate(output, geographic_only=False):
                     "radius_km",
                 )
             }
-            | {"date": "2026-09-20"}
+            | {
+                "date": scenario.get("date", "2026-09-20"),
+                "scope": scenario.get("scope", "danang_hoian" if scenario["location"] == "Đà Nẵng" else ""),
+                "tourism_only": scenario.get("tourism_only", True),
+                "preset": scenario.get("preset", "balanced"),
+                "experience_topics": scenario.get("experience_topics", []),
+                "excluded_categories": scenario.get("excluded_categories", []),
+                "category_mode": scenario.get("category_mode", "preferred"),
+                "require_known_hours": scenario.get("require_known_hours", False),
+                "allow_non_matching": scenario.get("allow_non_matching", False),
+            }
         )
         started = perf_counter()
         prepared = prepare_candidates(
             pois, manifest, req, router, context, geographic_only=geographic_only
         )
         preparation_seconds = perf_counter() - started
+        full_prepared = prepare_candidates(
+            pois,
+            manifest,
+            req,
+            router,
+            context,
+            pool_size=None,
+            geographic_only=True,
+        )
+        full_top = [
+            item["poi_id"]
+            for item in recommendation_response(full_prepared, req)["items"]
+        ]
+        served_top = [
+            item["poi_id"]
+            for item in recommendation_response(prepared, req)["items"]
+        ]
         common = {
             "scenario_id": scenario["scenario_id"],
             "split": scenario["split"],
             "travel_metric": prepared["travel_metric"],
             "eligible_count": prepared["eligible_count"],
             "candidate_count": prepared["candidate_count"],
+            "matching_count": prepared["matching_count"],
+            "full_candidate_count": full_prepared["candidate_count"],
+            "shortlist_candidate_recall": (
+                prepared["candidate_count"] / full_prepared["candidate_count"]
+                if full_prepared["candidate_count"] else 1.0
+            ),
+            "shortlist_top10_recall": (
+                len(set(served_top) & set(full_top)) / len(full_top)
+                if full_top else 1.0
+            ),
+            "full_pool_metric": "geographic_distance",
             "request": req.model_dump(mode="json"),
+            "interpreted_request": prepared["interpreted_request"],
         }
         matrices.append(
             common
@@ -73,6 +135,9 @@ def evaluate(output, geographic_only=False):
                         "category": r["poi"]["category"],
                         "values": r["values"],
                         "distance_km": r["distance_km"],
+                        "has_preference_evidence": r["content"]["has_evidence"],
+                        "rating_observed": r["rating"]["observed"],
+                        "evidence_completeness": r["confidence_evidence"],
                     }
                     for r in prepared["rows"]
                 ]
@@ -82,12 +147,15 @@ def evaluate(output, geographic_only=False):
         for method in METHODS:
             started = perf_counter()
             data = recommendation_response(prepared, req, method)
+            violations = constraint_violations(data, req)
             results.append(
                 common
                 | {
                     "method": method,
                     "items": data["items"],
                     "ranking": data["ranking"],
+                    "constraint_violations": violations,
+                    "constraint_violation_count": len(violations),
                     "preparation_seconds": preparation_seconds,
                     "scoring_seconds": perf_counter() - started,
                 }
@@ -100,10 +168,17 @@ def evaluate(output, geographic_only=False):
                 "location": req.location,
                 "date": req.date.isoformat(),
                 "interests": ", ".join(req.interests),
+                "experience_topics": ", ".join(req.experience_topics),
                 "categories": ", ".join(req.preferred_categories),
+                "excluded_categories": ", ".join(req.excluded_categories),
+                "category_mode": req.category_mode,
+                "require_known_hours": req.require_known_hours,
                 "origin_latitude": req.start.latitude,
                 "origin_longitude": req.start.longitude,
                 "radius_km": req.radius_km,
+                "scope": req.scope,
+                "tourism_only": req.tourism_only,
+                "preset": req.preset,
                 "poi_id": p["poi_id"],
                 "name": p["name"],
                 "category": p["category"],
@@ -198,6 +273,9 @@ def evaluate(output, geographic_only=False):
         "grading_design": "Group/owner case study, pooled top-10, relevance 0..3, binary relevance >=2; not independent users.",
         "recommendation_quality": "NOT GRADED",
         "geographic_only_requested": geographic_only,
+        "request_policy": "Explicit scenario overrides; otherwise the same tourism scope and group defaults as the web form.",
+        "retrieval_evaluation": "The served three-source shortlist is compared with the complete hard-filtered geographic pool.",
+        "constraint_policy": "Category, exclusion, known-hours and recognized-intent violations are counted per returned item.",
     }
     dump(output / "evaluation.json", metadata | {"results": results})
     dump(output / "sensitivity.json", sensitivity)

@@ -1,4 +1,4 @@
-"""Four-criterion Fuzzy AHP and TOPSIS shared by API and evaluator."""
+"""Content criteria and ordinary AHP weights for the research planner."""
 from datetime import date
 import math
 import numpy as np
@@ -6,8 +6,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from where2go.ranking import normalize, topsis
 from .hours import intervals_on_date
+from .intent import interpret_request, poi_concepts
 from .models import CRITERIA
-from .taxonomy import CATEGORY_TAGS, CATEGORIES
 
 
 PAIR_ORDER = tuple((i, j) for i in range(4) for j in range(i + 1, 4))
@@ -21,37 +21,19 @@ def ahp_matrix(comparisons):
     return matrix
 
 
-def fuzzy_matrix(comparisons, uncertainty):
-    crisp = ahp_matrix(comparisons)
-    gamma = np.ones((4, 4), dtype=float)
-    for (i, j), value in zip(PAIR_ORDER, uncertainty, strict=True):
-        gamma[i, j] = gamma[j, i] = value
-    lower, upper = crisp / gamma, crisp * gamma
-    np.fill_diagonal(lower, 1)
-    np.fill_diagonal(upper, 1)
-    return lower, crisp, upper
-
-
-def ahp_weights(comparisons, uncertainty=None):
+def ahp_weights(comparisons):
     comparisons = np.asarray(comparisons, dtype=float)
-    uncertainty = np.ones(6) if uncertainty is None else np.asarray(uncertainty, dtype=float)
-    if comparisons.shape != (6,) or uncertainty.shape != (6,):
+    if comparisons.shape != (6,):
         raise ValueError("AHP v2 cần đúng sáu cặp phán đoán")
     if not np.isfinite(comparisons).all() or (comparisons <= 0).any():
         raise ValueError("Phán đoán AHP phải hữu hạn và dương")
-    if not np.isfinite(uncertainty).all() or (uncertainty < 1).any():
-        raise ValueError("Bất định fuzzy phải hữu hạn và >= 1")
-    lower, crisp, upper = fuzzy_matrix(comparisons, uncertainty)
-    eigenvalue = float(np.linalg.eigvals(crisp).real.max())
+    matrix = ahp_matrix(comparisons)
+    eigenvalue = float(np.linalg.eigvals(matrix).real.max())
     cr = max(0.0, (eigenvalue - 4) / 3 / 0.90)
     if cr > 0.1 + 1e-10:
         raise ValueError(f"Phán đoán chưa nhất quán: CR={cr:.3f} > 0,1")
-    geometric = np.stack((lower, crisp, upper), axis=2)
-    row_means = np.exp(np.log(geometric).mean(axis=1))
-    fuzzy_weights = row_means / row_means.sum(axis=0)[::-1]
-    result = fuzzy_weights.mean(axis=1)
-    result /= result.sum()
-    return result, cr
+    geometric = np.exp(np.log(matrix).mean(axis=1))
+    return geometric / geometric.sum(), cr
 
 
 def valid_rating(poi):
@@ -67,9 +49,9 @@ class RankingContext:
     def __init__(self, pois):
         self.pois = pois
         self.index = {poi["poi_id"]: index for index, poi in enumerate(pois)}
-        corpus = [normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", ""),
-                  CATEGORIES.get(poi.get("category"), ""), *poi.get("tags", []),
-                  *CATEGORY_TAGS.get(poi.get("category"), ())])) or "unknown"
+        # TF-IDF uses source-backed text. Category-derived tags are handled once
+        # by the taxonomy component instead of being duplicated in this corpus.
+        corpus = [normalize(" ".join([poi["name"], *poi.get("aliases", []), poi.get("description", "")])) or "unknown"
                   for poi in pois]
         self.vectorizer = TfidfVectorizer(ngram_range=(1, 2), max_features=20000)
         self.matrix = self.vectorizer.fit_transform(corpus)
@@ -83,42 +65,51 @@ class RankingContext:
                  if candidate["category"] == poi["category"] and candidate["location"] == poi["location"]]
         category = [rating["rating"] for candidate, rating in rows if candidate["category"] == poi["category"]]
         values = local if len(local) >= 10 else category if len(category) >= 10 else [rating["rating"] for _, rating in rows]
+        prior_basis = "location_category" if len(local) >= 10 else "category" if len(category) >= 10 else "provider"
         if not values:
-            return 0.5, {"method": "neutral_no_rating_data", "observation": None}
+            return 0.5, {"method": "neutral_no_rating_data", "observation": None,
+                         "observed": False, "prior_basis": "none"}
         prior = float(np.mean(values))
         if current:
             score = (current["review_count"] * current["rating"] + m * prior) / (current["review_count"] + m)
             method = "bayesian_adjusted"
         else:
-            # Missing data is not evidence that a place has average quality.
-            # Keep the criterion neutral while retaining the provider prior in
-            # the explanation for audit/debugging.
-            score, method = 2.5, "neutral_missing_rating"
-        return score / 5, {"method": method, "prior": prior, "m": m, "observation": current}
+            # This is an explicit estimate, never presented as an observation.
+            score, method = prior, "group_prior_missing_rating"
+        return score / 5, {"method": method, "prior": prior, "prior_basis": prior_basis,
+                           "m": m, "observation": current, "observed": current is not None}
 
     def preference_scores(self, pool, request):
         return {ident: detail["score"] for ident, detail in self.preference_components(pool, request).items()}
 
-    def preference_components(self, pool, request):
-        wanted = set(normalize(" ".join(request.interests)).split())
-        if not wanted and not request.preferred_categories:
+    def preference_components(self, pool, request, intent=None):
+        intent = intent or interpret_request(request)
+        wanted_concepts = set(intent.positive_concepts)
+        preferred = set(intent.preferred_categories)
+        if not intent.has_positive_intent:
             return {poi["poi_id"]: {"score": 1.0, "taxonomy": 0.0, "cosine": 0.0,
-                    "category_match": False, "matched_tokens": [], "unspecified": True} for poi in pool}
-        query_parts = list(request.interests)
-        for category in request.preferred_categories:
-            query_parts.extend(CATEGORY_TAGS[category])
+                    "category_match": False, "matched_concepts": [], "matched_tokens": [],
+                    "has_evidence": True, "unspecified": True} for poi in pool}
+        query_parts = [*intent.query_texts, *intent.positive_concepts]
         vector = self.vectorizer.transform([normalize(" ".join(query_parts)) or "unknown"])
         result = {}
         for poi in pool:
-            tags = set(normalize(" ".join(poi.get("tags", []) + list(CATEGORY_TAGS.get(poi["category"], ())))).split())
-            taxonomy = len(tags & wanted) / len(wanted) if wanted else 0.0
-            if poi["category"] in request.preferred_categories:
-                taxonomy = 1.0
+            concepts = poi_concepts(poi)
+            matched = concepts & wanted_concepts
+            category_match = poi["category"] in preferred
+            concept_score = len(matched) / len(wanted_concepts) if wanted_concepts else 0.0
+            taxonomy = max(concept_score, float(category_match))
             similarity = float((self.matrix[self.index[poi["poi_id"]]] @ vector.T).toarray()[0, 0])
-            result[poi["poi_id"]] = {"score": 0.7 * taxonomy + 0.3 * similarity,
+            structured = bool(wanted_concepts or preferred)
+            has_evidence = bool(matched or category_match or (intent.unmapped_texts and similarity > 1e-12))
+            score = ((0.75 * taxonomy + 0.25 * similarity) if structured
+                     else similarity)
+            result[poi["poi_id"]] = {"score": score,
                     "taxonomy": taxonomy, "cosine": similarity,
-                    "category_match": poi["category"] in request.preferred_categories,
-                    "matched_tokens": sorted(tags & wanted), "unspecified": False}
+                    "category_match": category_match,
+                    "matched_concepts": sorted(matched),
+                    "matched_tokens": sorted(matched),
+                    "has_evidence": has_evidence, "unspecified": False}
         return result
 
 
@@ -137,11 +128,12 @@ def confidence(poi, request_date):
     return sum(evidence.values()) / len(evidence), evidence
 
 
-def rank(pool, drive_times, request, context, method="fuzzy"):
+def rank(pool, drive_times, request, context, method="ahp"):
+    if method not in ("ahp", "nearby", "equal"):
+        raise ValueError("Unknown planner ranking method")
     if len(pool) != len(drive_times):
         raise ValueError("Mỗi POI phải có một thời gian lái xe")
-    uncertainty = [1.0] * 6 if method == "crisp" else request.ahp.uncertainty
-    weights, cr = ahp_weights(request.ahp.comparisons, uncertainty)
+    weights, cr = ahp_weights(request.ahp.comparisons)
     if method == "equal":
         weights = np.full(4, 0.25)
     preference = context.preference_scores(pool, request)

@@ -1,5 +1,4 @@
 ﻿method,runs,provisional,mean_attractions,mean_drive_minutes,median_runtime_seconds
-crisp,16,0,0.0,0.0,2.5045
+ahp,16,0,0.0,0.0,2.5045
 equal,16,0,0.0,0.0,2.4931
-fuzzy,16,0,0.0,0.0,2.5039
 nearby,16,0,0.0,0.0,2.5037000000000003

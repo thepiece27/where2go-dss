@@ -33,20 +33,21 @@ def upper_values(matrix):
 
 
 def test_default_ahp_is_consistent_and_permutation_invariant():
-    base, cr = ahp_weights(DEFAULT_COMPARISONS, [1.2] * 6)
+    base, cr = ahp_weights(DEFAULT_COMPARISONS)
     assert cr < 1e-9
     permutation = [2, 0, 3, 1]
-    crisp = ahp_matrix(DEFAULT_COMPARISONS)
-    permuted = crisp[np.ix_(permutation, permutation)]
-    weights, permuted_cr = ahp_weights(upper_values(permuted), [1.2] * 6)
+    matrix = ahp_matrix(DEFAULT_COMPARISONS)
+    permuted = matrix[np.ix_(permutation, permutation)]
+    weights, permuted_cr = ahp_weights(upper_values(permuted))
     assert permuted_cr < 1e-9
     assert np.allclose(weights, base[permutation])
 
 
-def test_uniform_fuzzy_uncertainty_has_same_weights_as_crisp_ahp():
-    crisp, _ = ahp_weights(DEFAULT_COMPARISONS, [1.0] * 6)
-    fuzzy, _ = ahp_weights(DEFAULT_COMPARISONS, [1.2] * 6)
-    assert np.allclose(fuzzy, crisp)
+def test_ahp_recovers_consistent_pairwise_judgments():
+    expected = np.array([.5, .25, .15, .1])
+    matrix = expected[:, None] / expected[None, :]
+    actual, cr = ahp_weights(upper_values(matrix))
+    assert np.allclose(actual, expected) and cr < 1e-10
 
 
 def test_inconsistent_ahp_is_rejected_by_request_validation():
@@ -72,11 +73,12 @@ def test_rank_handles_constant_columns_and_drive_is_cost():
     assert tuple(info["criteria_order"]) == ("preference_match", "place_quality", "drive_time", "data_confidence")
 
 
-def test_missing_rating_is_neutral_and_not_displayed_as_invented_observation():
+def test_missing_rating_uses_labeled_group_prior_not_invented_observation():
     rows = [poi("rated", rating=4.5, count=100), poi("missing")]
     context = RankingContext(rows)
     score, detail = context.adjusted_quality(rows[1])
-    assert score == 0.5
-    assert detail["method"] == "neutral_missing_rating"
+    assert score == 0.9
+    assert detail["method"] == "group_prior_missing_rating"
     assert detail["prior"] == 4.5
     assert detail["observation"] is None
+    assert detail["observed"] is False

@@ -2,97 +2,81 @@
   "HN-DEV-01": {
     "nearby": "A",
     "equal": "D",
-    "crisp": "C",
-    "fuzzy": "B"
+    "ahp": "C"
   },
   "HN-DEV-02": {
     "nearby": "B",
     "equal": "A",
-    "crisp": "D",
-    "fuzzy": "C"
+    "ahp": "D"
   },
   "HN-HOLD-01": {
     "nearby": "C",
     "equal": "B",
-    "crisp": "D",
-    "fuzzy": "A"
+    "ahp": "D"
   },
   "HN-HOLD-02": {
     "nearby": "B",
     "equal": "A",
-    "crisp": "D",
-    "fuzzy": "C"
+    "ahp": "D"
   },
   "HN-HOLD-03": {
     "nearby": "A",
     "equal": "C",
-    "crisp": "D",
-    "fuzzy": "B"
+    "ahp": "D"
   },
   "HN-HOLD-04": {
     "nearby": "C",
     "equal": "D",
-    "crisp": "B",
-    "fuzzy": "A"
+    "ahp": "B"
   },
   "HN-HOLD-05": {
     "nearby": "D",
     "equal": "A",
-    "crisp": "C",
-    "fuzzy": "B"
+    "ahp": "C"
   },
   "HN-HOLD-06": {
     "nearby": "D",
     "equal": "B",
-    "crisp": "A",
-    "fuzzy": "C"
+    "ahp": "A"
   },
   "DN-DEV-01": {
     "nearby": "C",
     "equal": "D",
-    "crisp": "B",
-    "fuzzy": "A"
+    "ahp": "B"
   },
   "DN-DEV-02": {
     "nearby": "D",
     "equal": "A",
-    "crisp": "B",
-    "fuzzy": "C"
+    "ahp": "B"
   },
   "DN-HOLD-01": {
     "nearby": "A",
     "equal": "C",
-    "crisp": "D",
-    "fuzzy": "B"
+    "ahp": "D"
   },
   "DN-HOLD-02": {
     "nearby": "C",
     "equal": "D",
-    "crisp": "A",
-    "fuzzy": "B"
+    "ahp": "A"
   },
   "DN-HOLD-03": {
     "nearby": "C",
     "equal": "D",
-    "crisp": "A",
-    "fuzzy": "B"
+    "ahp": "A"
   },
   "DN-HOLD-04": {
     "nearby": "B",
     "equal": "A",
-    "crisp": "D",
-    "fuzzy": "C"
+    "ahp": "D"
   },
   "DN-HOLD-05": {
     "nearby": "B",
     "equal": "C",
-    "crisp": "A",
-    "fuzzy": "D"
+    "ahp": "A"
   },
   "DN-HOLD-06": {
     "nearby": "C",
     "equal": "D",
-    "crisp": "B",
-    "fuzzy": "A"
+    "ahp": "B"
   }
 }

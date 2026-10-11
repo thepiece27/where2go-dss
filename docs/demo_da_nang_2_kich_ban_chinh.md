@@ -6,6 +6,8 @@
 
 **Phiên bản:** catalog `v2-c3ad315d02c5356a`; chính sách `poi-recommendation-1.1`; routing `1e1d2ec5e5a86240`; Chromium `151.0.7922.34`. Không chỉnh thuật toán, trọng số, dữ liệu hay phản hồi API trong phiên chọn kịch bản này.
 
+> Đây là bằng chứng lịch sử của policy 1.1, không phải kết quả policy 3.0. Dùng kịch bản thao tác, nhưng phải chạy lại và lấy tên/đếm hiện tại trước khi trình bày.
+
 ## 1. Chọn kịch bản theo thời lượng
 
 | Kịch bản | Nên dùng | Thay đổi mạnh nhất quan sát được | Điều chứng minh được |
@@ -241,7 +243,7 @@ Giữ Ctrl và bấm dòng **Bãi biển** đang chọn để bỏ, vẫn giữ 
 | Chọn tâm linh nhưng còn công viên/chợ? | Thuật toán dùng sở thích như ưu tiên mềm và vẫn trả thêm phương án theo tiêu chí khác. Các POI cuối có điểm khớp 0 là hạn chế, không có chứng cứ để gọi chúng là điểm tâm linh. |
 | Vì sao cùng Mỹ Khê có nhiều tên? | Catalog có nhiều bản ghi/điểm tọa độ. Chưa thể bảo đảm chúng đại diện cho những nơi vật lý độc lập; không cộng chúng thành số thắng cảnh riêng đã được xác minh. |
 | K20 được nhóm như bảo tàng, NICKY KIDS được gợi ý văn hóa có đúng không? | Đây là phân loại/thẻ nội dung hiện có. Bộ thử cho thấy chúng tác động đến gợi ý; tính chính xác ngữ nghĩa của các bản ghi còn cần rà soát. Không tạo câu chuyện văn hóa không có bằng chứng. |
-| Vì sao ảnh trống? | Có POI chưa có ảnh hoặc ảnh nguồn tải lỗi; web có ô dự phòng. Ảnh không nằm trong bốn tiêu chí xếp hạng này. Không nói ảnh trống là do nơi đó chưa mở cửa. |
+| Vì sao ảnh trống? | Có POI chưa có ảnh hoặc ảnh nguồn tải lỗi; web có ô dự phòng. Ảnh không nằm trong ba tiêu chí xếp hạng hiện hành. Không nói ảnh trống là do nơi đó chưa mở cửa. |
 | Có hiểu “không thích biển” không? | Chưa đáng tin cậy: thử trực tiếp cho cùng Top-10 như nhập biển. Không trình bày ô nhập là hệ thống hiểu đầy đủ câu phủ định. |
 | Đã chứng minh hệ thống tốt với mọi người chưa? | Chưa. Đây là bộ demo có chọn lọc và kiểm tra kỹ thuật. Chưa có chấm mức hài lòng độc lập để suy ra độ chính xác ngoài thực tế. |
 

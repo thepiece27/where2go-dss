@@ -356,7 +356,7 @@ def improve(seed, ranked, environment, max_stops, cache):
     return order, schedule, utility(order, schedule, by_id, environment.request)
 
 
-def plan_itinerary(pois, manifest, request, router, context, method="fuzzy"):
+def plan_itinerary(pois, manifest, request, router, context, method="ahp"):
     base = {
         "status": "insufficient_data", "reason": "Không tạo được lịch khả thi theo dữ liệu và ràng buộc đã chọn",
         "dataset_version": manifest["version"], "model_version": MODEL_VERSION,
